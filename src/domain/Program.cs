@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace domain
+namespace profile4d.domain
 {
     class Program
     {

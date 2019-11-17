@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace data
+namespace profile4d.data
 {
     class Program
     {

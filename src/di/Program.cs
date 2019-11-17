@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace di
+namespace profile4d.di
 {
     class Program
     {
