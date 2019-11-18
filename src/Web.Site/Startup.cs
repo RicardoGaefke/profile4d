@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Profile4d.DI;
+using Profile4d.Domain;
 
 namespace Web.Site
 {
@@ -25,28 +27,60 @@ namespace Web.Site
     {
       // Add your AppInsights ID here to make it globally available //
       // services.AddApplicationInsightsTelemetry("465f47b3-8d7a-46ee-a81e-e51182c12296");
+
+      // Inject config
+      services.Configure<Secrets.ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
+      services.Configure<Secrets.Login>(Configuration.GetSection("ConnectionStrings"));
         
-        services.AddRazorPages();
-        Bootstrap.DataProtection(services, Configuration);
+      //  DI config
+      Bootstrap.DataProtection(services, Configuration);
+      Bootstrap.ConsentCookie(services, Configuration, HostingEnvironment.IsDevelopment());
+      
+      services.AddNodeServices();
+
+      services.AddRazorPages();
+
+      Bootstrap.Compression(services);
     }
 
     public void Configure(IApplicationBuilder app, IHostEnvironment env)
     {
+        // var configuration = app.ApplicationServices.GetService<Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration>();
+        var cachePeriod = env.IsDevelopment() ? "600" : "31557600";
+
         if (env.IsDevelopment())
         {
-            app.UseDeveloperExceptionPage();
+          app.UseDeveloperExceptionPage();
+          // configuration.DisableTelemetry = true;
+          // configuration.InstrumentationKey = "";
         }
         else
         {
-            app.UseExceptionHandler("/Error");
-            // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-            app.UseHsts();
+          app.UseExceptionHandler("/Error");
+          app.UseHsts();
         }
 
+        app.UseResponseCompression();
         app.UseHttpsRedirection();
-        app.UseStaticFiles();
+        app.UseCookiePolicy();
+
+        app.UseStaticFiles(new StaticFileOptions
+        {
+          OnPrepareResponse = ctx =>
+          {
+            ctx.Context.Response.Headers.Append("Cache-Control", $"public, max-age={cachePeriod}");
+          }
+        });
 
         app.UseRouting();
+
+        app.Use((context, next) =>
+        {
+          context.Response.Headers["Author"] = "Ricardo Gaefke";
+          context.Response.Headers["Author_email"] = "ricardogaefke@gmail.com";
+          context.Response.Headers["Author_URL"] = "www.ricardogaefke.com";
+          return next.Invoke();
+        });
 
         app.UseAuthorization();
 
