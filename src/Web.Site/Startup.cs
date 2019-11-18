@@ -45,49 +45,51 @@ namespace Web.Site
 
     public void Configure(IApplicationBuilder app, IHostEnvironment env)
     {
-        // var configuration = app.ApplicationServices.GetService<Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration>();
-        var cachePeriod = env.IsDevelopment() ? "600" : "31557600";
+      // var configuration = app.ApplicationServices.GetService<Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration>();
+      var cachePeriod = env.IsDevelopment() ? "600" : "31557600";
 
-        if (env.IsDevelopment())
+      if (env.IsDevelopment())
+      {
+        app.UseDeveloperExceptionPage();
+        // configuration.DisableTelemetry = true;
+        // configuration.InstrumentationKey = "";
+      }
+      else
+      {
+        app.UseExceptionHandler("/Error");
+        app.UseHsts();
+      }
+
+      app.UseResponseCompression();
+      app.UseHttpsRedirection();
+      app.UseCookiePolicy();
+
+      app.UseStaticFiles(new StaticFileOptions
+      {
+        OnPrepareResponse = ctx =>
         {
-          app.UseDeveloperExceptionPage();
-          // configuration.DisableTelemetry = true;
-          // configuration.InstrumentationKey = "";
+          ctx.Context.Response.Headers.Append("Cache-Control", $"public, max-age={cachePeriod}");
         }
-        else
-        {
-          app.UseExceptionHandler("/Error");
-          app.UseHsts();
-        }
+      });
 
-        app.UseResponseCompression();
-        app.UseHttpsRedirection();
-        app.UseCookiePolicy();
+      app.UseRouting();
 
-        app.UseStaticFiles(new StaticFileOptions
-        {
-          OnPrepareResponse = ctx =>
-          {
-            ctx.Context.Response.Headers.Append("Cache-Control", $"public, max-age={cachePeriod}");
-          }
-        });
+      app.Use((context, next) =>
+      {
+        context.Response.Headers["Author"] = "Ricardo Gaefke";
+        context.Response.Headers["Author_email"] = "ricardogaefke@gmail.com";
+        context.Response.Headers["Author_URL"] = "www.ricardogaefke.com";
+        return next.Invoke();
+      });
 
-        app.UseRouting();
+      app.UseAuthorization();
 
-        app.Use((context, next) =>
-        {
-          context.Response.Headers["Author"] = "Ricardo Gaefke";
-          context.Response.Headers["Author_email"] = "ricardogaefke@gmail.com";
-          context.Response.Headers["Author_URL"] = "www.ricardogaefke.com";
-          return next.Invoke();
-        });
-
-        app.UseAuthorization();
-
-        app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapRazorPages();
-        });
+      app.UseEndpoints(endpoints =>
+      {
+        endpoints.MapControllerRoute(
+          name: "default",
+          pattern: "{controller=Home}/{action=Index}/{id?}");
+      });
     }
   }
 }
