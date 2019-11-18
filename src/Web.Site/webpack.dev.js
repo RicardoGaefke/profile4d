@@ -37,7 +37,7 @@ module.exports = () => {
       contentBase: './wwwwroot/dist',
     },
     entry: {
-      server: path.resolve(__dirname, './React/server.jsx'),
+      server: path.resolve(__dirname, './React/server.tsx'),
     },
     output: {
       libraryTarget: 'commonjs',
