@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Web.Teste.Models;
+using Profile4d.Web.Site.Models;
 
 namespace Web.Teste.Controllers
 {
