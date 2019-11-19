@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Profile4d.DI;
 using Profile4d.Domain;
+using Profile4d.Email;
 
 namespace Web.Site
 {
@@ -29,7 +30,10 @@ namespace Web.Site
       // Inject config
       services.Configure<Secrets.ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
       services.Configure<Secrets.Login>(Configuration.GetSection("ConnectionStrings"));
-        
+
+      //  project's DI
+      services.AddSingleton<MyEmail>();
+
       //  DI config
       Bootstrap.DataProtection(services, Configuration);
       Bootstrap.ConsentCookie(services, Configuration, HostingEnvironment.IsDevelopment());
