@@ -10,6 +10,8 @@
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="3.0.10" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Host.Storage" Version="3.0.14" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.0.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.0.1" />
   </ItemGroup>
 
@@ -21,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Email\Email.csproj" />
   </ItemGroup>
 
 </Project>

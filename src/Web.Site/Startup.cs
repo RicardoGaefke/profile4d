@@ -9,7 +9,7 @@ using Profile4d.DI;
 using Profile4d.Domain;
 using Profile4d.Email;
 
-namespace Web.Site
+namespace Profile4d.Web.Site
 {
   public class Startup
   {
