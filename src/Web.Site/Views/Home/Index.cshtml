@@ -5,8 +5,6 @@
     var consentFeature = Context.Features.Get<ITrackingConsentFeature>();
     var showBanner = !consentFeature?.CanTrack ?? false;
     var cookieString = consentFeature?.CreateConsentCookie();
-
-    var Auth = Context.User.Identity.IsAuthenticated;
 }
 
 <!DOCTYPE html>
@@ -25,9 +23,7 @@
             asp-prerender-module="./React/ssr/server.js"
             asp-prerender-data="new {
                 page = @ViewBag.Page,
-                consentCookie = @showBanner,
-                authenticated = @Auth,
-                name = @User.Identity.Name
+                consentCookie = @showBanner
             }"
         ></div>
         <script src="/dist/app.js" asp-append-version="true"></script>

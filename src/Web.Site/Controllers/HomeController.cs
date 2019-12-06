@@ -21,16 +21,20 @@ namespace Web.Teste.Controllers
 
     public IActionResult Index()
     {
-      ViewData["Title"] = "Ricardo Gaefke";
+      ViewData["Title"] = "Profile4D";
 
       Request.HttpContext.Response.Headers.Add("Title", "Profile 4D");
       Request.HttpContext.Response.Headers.Add("Description", "Profile 4D description");
 
       ViewBag.Page = JsonSerializer.Serialize(new
       {
-        Title = "Ricardo Gaefke",
-        Description = "Ricardo Gaefke's boilerplate",
-        Authenticated = HttpContext.User.Identity.IsAuthenticated
+        Title = "Profile4D",
+        Description = "Profile4d description",
+        IsAuthenticated = false,
+        Name = "",
+        Email = "",
+        Language = "PT",
+        Theme = "dark"
       });
       
       return View();
