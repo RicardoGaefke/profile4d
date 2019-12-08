@@ -1,5 +1,5 @@
 import React from 'react';
-import { Drawer } from '@material-ui/core';
+import { Drawer, Button } from '@material-ui/core';
 import { useStateValue } from '../../Initial/Context/StateProvider';
 import Styles from './Styles';
 import ConfigTheme from './ChangeTheme/Theme';
@@ -26,6 +26,13 @@ export default (): React.ReactElement<any> => {
       <div className={classes.root}>
         <ConfigTheme />
         <ConfigLanguage />
+        <Button
+          onClick={toggle}
+          fullWidth
+          variant="contained"
+        >
+          Concluir
+        </Button>
       </div>
     </Drawer>
   );

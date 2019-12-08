@@ -3,9 +3,12 @@ import {
   Radio, RadioGroup, FormControl, FormLabel, FormControlLabel, Divider,
 } from '@material-ui/core';
 import { useStateValue } from '../../../Initial/Context/StateProvider';
+import styles from '../Styles';
 
 export default (): React.ReactElement<any> => {
   const [{ Theme }, dispatch] = useStateValue();
+
+  const classes = styles({});
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     dispatch({
@@ -25,7 +28,7 @@ export default (): React.ReactElement<any> => {
           <FormControlLabel value="light" control={<Radio />} label="Light" />
         </RadioGroup>
       </FormControl>
-      <Divider />
+      <Divider className={classes.divider} />
     </>
   );
 };
