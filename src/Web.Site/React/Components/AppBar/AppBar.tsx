@@ -23,6 +23,7 @@ export default (): React.ReactElement<{}> => {
               underline="none"
               component={RLink}
               to="/"
+              id="myProfile"
             >
               Profile4d
             </Link>

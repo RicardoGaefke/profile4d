@@ -2,7 +2,7 @@ import React from 'react';
 import { Link as RLink } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 
-interface IErrorProps {
+export interface IErrorProps {
   clearError: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void
 }
 
