@@ -54,6 +54,11 @@ const MyStateProvider = (props: IMyStateProvider): React.ReactElement<any> => {
           ...state,
           Drawer: action.value,
         };
+      case 'changeConfig':
+        return {
+          ...state,
+          Config: action.value,
+        };
       default:
         return state;
     }
