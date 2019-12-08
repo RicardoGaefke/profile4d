@@ -8,6 +8,7 @@ import myTheme from './Theme/Theme';
 import RootRouter from '../Router/Root';
 import AppBar from '../Components/AppBar/AppBar';
 import ConfigDrawer from '../Components/ConfigDrawer/Drawer';
+import Footer from '../Components/Footer/Footer';
 
 const MyApp = (): React.ReactElement<any> => {
   const [{ Theme, Language }] = useStateValue();
@@ -21,6 +22,7 @@ const MyApp = (): React.ReactElement<any> => {
     <ThemeProvider theme={myTheme(Theme)}>
       <AppBar />
       <RootRouter />
+      <Footer />
       <ConfigDrawer />
       <CssBaseline />
     </ThemeProvider>
