@@ -34,7 +34,7 @@ namespace Web.Teste.Controllers
         Name = "",
         Email = "",
         Language = "PT",
-        Theme = "dark"
+        Theme = "light"
       });
       
       return View();
