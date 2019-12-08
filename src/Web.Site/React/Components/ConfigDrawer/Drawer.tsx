@@ -1,9 +1,10 @@
 import React from 'react';
-import { Drawer, Button } from '@material-ui/core';
+import { Drawer } from '@material-ui/core';
 import { useStateValue } from '../../Initial/Context/StateProvider';
 import Styles from './Styles';
 import ConfigTheme from './ChangeTheme/Theme';
 import ConfigLanguage from './ChangeLanguage/Language';
+import Button from './SaveButton/Button';
 
 export default (): React.ReactElement<any> => {
   const [{ Config }, dispatch] = useStateValue();
@@ -27,12 +28,8 @@ export default (): React.ReactElement<any> => {
         <ConfigTheme />
         <ConfigLanguage />
         <Button
-          onClick={toggle}
-          fullWidth
-          variant="contained"
-        >
-          Concluir
-        </Button>
+          toggle={toggle}
+        />
       </div>
     </Drawer>
   );
