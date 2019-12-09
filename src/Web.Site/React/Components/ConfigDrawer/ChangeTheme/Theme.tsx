@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import i18next from 'i18next';
+// eslint-disable-next-line no-unused-vars
+import { withTranslation, WithTranslation } from 'react-i18next';
 import {
   Radio, RadioGroup, FormControl, FormLabel, FormControlLabel, Divider,
 } from '@material-ui/core';
-// eslint-disable-next-line no-unused-vars
-import { withTranslation, WithTranslation } from 'react-i18next';
 import { useStateValue } from '../../../Initial/Context/StateProvider';
 import styles from '../Styles';
 import LanguagePT from './LanguagePT';
