@@ -3,11 +3,10 @@ import i18next from 'i18next';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
+import './Language';
 import { useStateValue } from '../../../Initial/Context/StateProvider';
 import { Href } from '../../../Utils/Domain';
 import Button from '../Button/Button';
-import LanguagePT from './LanguagePT';
-import LanguageENG from './LanguageENG';
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
@@ -24,9 +23,6 @@ export default withTranslation()(
 
     useEffect((): void => {
       i18next.changeLanguage(Language);
-
-      i18next.addResourceBundle('PT', 'LoginBtnConfig', LanguagePT);
-      i18next.addResourceBundle('ENG', 'LoginBtnConfig', LanguageENG);
       // return type void != (): void... so as unknown as void
       return ((): void => {
         i18next.removeResourceBundle('PT', 'LoginBtnConfig');

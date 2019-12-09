@@ -2,5 +2,9 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Personalize esta experiência',
+  title: 'Know it better',
+  btn: {
+    label: 'Know it',
+    title: 'Know it better clicking here',
+  },
 } as ILanguage;
