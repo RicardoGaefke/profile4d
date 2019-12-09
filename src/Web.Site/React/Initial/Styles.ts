@@ -14,7 +14,7 @@ export default makeStyles((theme: Theme): IStyles => ({
   },
   main: {
     flexGrow: 1,
-    marginTop: '65px',
+    marginTop: 0,
     marginBotton: theme.spacing(6),
     paddingTop: theme.spacing(0),
     paddingBottom: theme.spacing(2),
