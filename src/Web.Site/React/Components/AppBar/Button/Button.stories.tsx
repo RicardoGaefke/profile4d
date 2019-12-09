@@ -12,8 +12,6 @@ storiesOf('Button', module)
   ))
   .add('With alert', (): React.ReactElement => (
     <>
-      <Button onClick={(): HandlerFunction => action('click')}>Click Me</Button>
-      <br />
       <Button onClick={(): void => alert('Clicked!')}>Alert Me</Button>
     </>
   ))
