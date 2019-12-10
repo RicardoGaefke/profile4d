@@ -5,6 +5,7 @@ import { withTranslation, useTranslation } from 'react-i18next';
 import { useStateValue } from './Context/StateProvider';
 import './i18n/language';
 import myTheme from './Theme/Theme';
+import ErrorBoundary from '../Components/ErrorBoundary/ErrorBoundary';
 import RootRouter from '../Router/Root';
 import AppBar from '../Components/AppBar/AppBar';
 import ConfigDrawer from '../Components/ConfigDrawer/Drawer';
@@ -26,7 +27,9 @@ const MyApp = (): React.ReactElement<any> => {
       <div className={classes.body}>
         <AppBar />
         <div className={classes.main}>
-          <RootRouter />
+          <ErrorBoundary>
+            <RootRouter />
+          </ErrorBoundary>
         </div>
         <Footer />
         <ConfigDrawer />
