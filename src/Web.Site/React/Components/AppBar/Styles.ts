@@ -10,6 +10,7 @@ interface IStyles {
 export default makeStyles((theme: Theme): IStyles => ({
   root: {
     flexGrow: 0,
+    marginTop: 65,
   },
   title: {
     flexGrow: 1,

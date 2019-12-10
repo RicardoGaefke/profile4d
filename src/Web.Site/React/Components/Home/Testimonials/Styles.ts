@@ -10,7 +10,6 @@ interface IStyles {
 // eslint-disable-next-line no-unused-vars
 export default makeStyles((theme: Theme): IStyles => ({
   main: {
-    minHeight: 400,
     paddingTop: 50,
     paddingBottom: 50,
   },
