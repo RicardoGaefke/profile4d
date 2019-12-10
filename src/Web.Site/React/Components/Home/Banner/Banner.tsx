@@ -8,6 +8,8 @@ import {
 import { useStateValue } from '../../../Initial/Context/StateProvider';
 import useStyles from './Styles';
 import './Language';
+import LanguagePT from './LanguagePT';
+import LanguageENG from './LanguageENG';
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
@@ -16,6 +18,12 @@ export default withTranslation()(
     const classes = useStyles({});
 
     useEffect((): void => {
+      if (!i18next.hasResourceBundle('PT', 'HomeBanner')) {
+        i18next.addResourceBundle('PT', 'HomeBanner', LanguagePT);
+      }
+      if (!i18next.hasResourceBundle('ENG', 'HomeBanner')) {
+        i18next.addResourceBundle('ENG', 'HomeBanner', LanguageENG);
+      }
       i18next.changeLanguage(Language);
       // return type void != (): void... so as unknown as void
       return ((): void => {
