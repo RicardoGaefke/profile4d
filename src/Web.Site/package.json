@@ -9,7 +9,7 @@
     "start": "dotnet run --urls=https://localhost:5060/",
     "build": "webpack --config webpack.dev.js --progress --color",
     "production": "webpack --config webpack.prod.js",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "start-storybook -p 9001 -c .storybook -s ./wwwroot",
     "test": "mocha -r ts-mocha React/Components/**/**/**.test.tsx --require @babel/polyfill",
     "test:coverage": "nyc npm run test",
     "coveralls": "npm run lint-fix && npm run test && nyc report --reporter=lcov | coveralls"

@@ -10,8 +10,8 @@ const resources = {
 export default i18n
   .use(initReactI18next as Module)
   .init({
-    lng: 'ENG',
-    fallbackLng: 'ENG',
+    lng: 'PT',
+    fallbackLng: 'PT',
     resources,
     keySeparator: '.',
     interpolation: {

@@ -1,7 +1,8 @@
 import React from 'react';
+import Home from '../../Components/Home/Banner/Banner';
 
 export default (): React.ReactElement<any> => (
-  <p>
-    Home page
-  </p>
+  <>
+    <Home />
+  </>
 );

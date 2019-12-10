@@ -5,6 +5,7 @@ import { withTranslation, WithTranslation } from 'react-i18next';
 import {
   Radio, RadioGroup, FormControl, FormLabel, FormControlLabel, Divider,
 } from '@material-ui/core';
+import './Language';
 import { useStateValue } from '../../../Initial/Context/StateProvider';
 import styles from '../Styles';
 import LanguagePT from './LanguagePT';
@@ -18,7 +19,6 @@ export default withTranslation()(
 
     useEffect((): void => {
       i18next.changeLanguage(Language);
-
       i18next.addResourceBundle('PT', 'LanguageConfig', LanguagePT);
       i18next.addResourceBundle('ENG', 'LanguageConfig', LanguageENG);
       // return type void != (): void... so as unknown as void
