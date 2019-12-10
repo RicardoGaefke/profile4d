@@ -4,7 +4,7 @@ import { ILanguage } from './ILanguage';
 export default {
   title: 'Know it better',
   btn: {
-    label: 'Know it',
+    label: 'About us',
     title: 'Know it better clicking here',
   },
 } as ILanguage;

@@ -1,4 +1,3 @@
-
 import i18next from 'i18next';
 import LanguagePT from './LanguagePT';
 import LanguageENG from './LanguageENG';

@@ -8,6 +8,8 @@ import {
 import './Language';
 import { useStateValue } from '../../../Initial/Context/StateProvider';
 import styles from '../Styles';
+import LanguagePT from './LanguagePT';
+import LanguageENG from './LanguageENG';
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
@@ -17,6 +19,8 @@ export default withTranslation()(
 
     useEffect((): void => {
       i18next.changeLanguage(Language);
+      i18next.addResourceBundle('PT', 'LanguageConfig', LanguagePT);
+      i18next.addResourceBundle('ENG', 'LanguageConfig', LanguageENG);
       // return type void != (): void... so as unknown as void
       return ((): void => {
         i18next.removeResourceBundle('PT', 'LanguageConfig');
