@@ -4,6 +4,7 @@ import { Button } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import { useStateValue } from '../../../Initial/Context/StateProvider';
+import './Language';
 import LanguagePT from './LanguagePT';
 import LanguageENG from './LanguageENG';
 
@@ -17,10 +18,13 @@ export default withTranslation()(
     const [{ Language }] = useStateValue();
 
     useEffect((): void => {
+      if (!i18next.hasResourceBundle('PT', 'ButtonCloseConfig')) {
+        i18next.addResourceBundle('PT', 'ButtonCloseConfig', LanguagePT);
+      }
+      if (!i18next.hasResourceBundle('ENG', 'ButtonCloseConfig')) {
+        i18next.addResourceBundle('ENG', 'ButtonCloseConfig', LanguageENG);
+      }
       i18next.changeLanguage(Language);
-
-      i18next.addResourceBundle('PT', 'ButtonCloseConfig', LanguagePT);
-      i18next.addResourceBundle('ENG', 'ButtonCloseConfig', LanguageENG);
       // return type void != (): void... so as unknown as void
       return ((): void => {
         i18next.removeResourceBundle('PT', 'ButtonCloseConfig');

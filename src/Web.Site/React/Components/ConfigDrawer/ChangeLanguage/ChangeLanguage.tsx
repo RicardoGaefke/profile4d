@@ -18,9 +18,13 @@ export default withTranslation()(
     const classes = styles({});
 
     useEffect((): void => {
+      if (!i18next.hasResourceBundle('PT', 'LanguageConfig')) {
+        i18next.addResourceBundle('PT', 'LanguageConfig', LanguagePT);
+      }
+      if (!i18next.hasResourceBundle('ENG', 'LanguageConfig')) {
+        i18next.addResourceBundle('ENG', 'LanguageConfig', LanguageENG);
+      }
       i18next.changeLanguage(Language);
-      i18next.addResourceBundle('PT', 'LanguageConfig', LanguagePT);
-      i18next.addResourceBundle('ENG', 'LanguageConfig', LanguageENG);
       // return type void != (): void... so as unknown as void
       return ((): void => {
         i18next.removeResourceBundle('PT', 'LanguageConfig');

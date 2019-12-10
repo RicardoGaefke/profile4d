@@ -6,6 +6,8 @@ import TuneIcon from '@material-ui/icons/Tune';
 import './Language';
 import { useStateValue } from '../../../Initial/Context/StateProvider';
 import Button from '../Button/Button';
+import LanguagePT from './LanguagePT';
+import LanguageENG from './LanguageENG';
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
@@ -20,6 +22,12 @@ export default withTranslation()(
     };
 
     useEffect((): void => {
+      if (!i18next.hasResourceBundle('PT', 'CustomBtnConfig')) {
+        i18next.addResourceBundle('PT', 'CustomBtnConfig', LanguagePT);
+      }
+      if (!i18next.hasResourceBundle('ENG', 'CustomBtnConfig')) {
+        i18next.addResourceBundle('ENG', 'CustomBtnConfig', LanguageENG);
+      }
       i18next.changeLanguage(Language);
       // return type void != (): void... so as unknown as void
       return ((): void => {

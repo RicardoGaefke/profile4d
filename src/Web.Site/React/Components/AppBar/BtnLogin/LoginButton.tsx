@@ -7,6 +7,8 @@ import './Language';
 import { useStateValue } from '../../../Initial/Context/StateProvider';
 import { Href } from '../../../Utils/Domain';
 import Button from '../Button/Button';
+import LanguagePT from './LanguagePT';
+import LanguageENG from './LanguageENG';
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
@@ -22,6 +24,12 @@ export default withTranslation()(
     };
 
     useEffect((): void => {
+      if (!i18next.hasResourceBundle('PT', 'LoginBtnConfig')) {
+        i18next.addResourceBundle('PT', 'LoginBtnConfig', LanguagePT);
+      }
+      if (!i18next.hasResourceBundle('ENG', 'LoginBtnConfig')) {
+        i18next.addResourceBundle('ENG', 'LoginBtnConfig', LanguageENG);
+      }
       i18next.changeLanguage(Language);
       // return type void != (): void... so as unknown as void
       return ((): void => {
