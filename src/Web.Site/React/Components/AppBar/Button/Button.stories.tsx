@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 // eslint-disable-next-line no-unused-vars
 import { action, HandlerFunction } from '@storybook/addon-actions';
@@ -11,9 +11,7 @@ storiesOf('Button', module)
     <Button>Hello Button</Button>
   ))
   .add('With alert', (): React.ReactElement => (
-    <>
-      <Button onClick={(): void => alert('Clicked!')}>Alert Me</Button>
-    </>
+    <Button onClick={(): void => alert('Clicked!')}>Alert Me</Button>
   ))
   .add('Default View', (): React.ReactElement => (
     <Button onClick={action('button-click')}>Hello World</Button>
