@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link as RLink } from 'react-router-dom';
 import i18next from 'i18next';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
@@ -45,6 +46,8 @@ export default withTranslation()(
               size="large"
               className={classes.btn}
               title={t('HomeBanner:btn.title')}
+              component={RLink}
+              to="/about/"
             >
               {t('HomeBanner:btn.label')}
             </Button>
