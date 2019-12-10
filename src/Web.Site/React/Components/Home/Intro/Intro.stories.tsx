@@ -5,15 +5,15 @@ import { withConsole } from '@storybook/addon-console';
 // eslint-disable-next-line no-unused-vars
 import { action, HandlerFunction } from '@storybook/addon-actions';
 import MyThemeHoc from '../../../Initial/Theme/StoryBookHOC';
-import Banner from './Banner';
+import Intro from './Intro';
 
 const App = (): React.ReactElement => (
   <MyThemeHoc>
-    <Banner />
+    <Intro />
   </MyThemeHoc>
 );
 
-storiesOf('Home-Banner', module)
+storiesOf('Home-Intro', module)
   .addDecorator((story: any): React.ReactElement => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))
