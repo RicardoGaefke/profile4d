@@ -1,3 +1,5 @@
+[![BuildStatus](https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/status/dev-WebSite)]
+
 # Profile4d
 
 Profile4d project with ASP.NET Core 3.0, SSR React, Azure SQL, integration, TDD and Typescript.
