@@ -11,9 +11,10 @@ import AppBar from '../Components/AppBar/AppBar';
 import ConfigDrawer from '../Components/ConfigDrawer/Drawer';
 import Footer from '../Components/Footer/Footer';
 import useStyles from './Styles';
+import MyConsentCookie from '../Components/ConsentCookie/ConsentCookie';
 
 const MyApp = (): React.ReactElement<any> => {
-  const [{ Theme, Language }] = useStateValue();
+  const [{ Theme, Language, ConsentCookie }] = useStateValue();
   const { i18n } = useTranslation();
 
   useEffect((): void => {
@@ -32,6 +33,7 @@ const MyApp = (): React.ReactElement<any> => {
           </ErrorBoundary>
         </div>
         <Footer />
+        {(ConsentCookie) ? <MyConsentCookie /> : null}
         <ConfigDrawer />
       </div>
       <CssBaseline />
