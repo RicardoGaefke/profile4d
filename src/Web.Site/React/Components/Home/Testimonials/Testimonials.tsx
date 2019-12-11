@@ -46,7 +46,7 @@ export default withTranslation()(
             </Typography>
             <Chip
               icon={<RemoveIcon />}
-              label={t('HomeTestimonials:text2.author')}
+              label={t('HomeTestimonials:text1.author')}
             />
           </Grid>
           <Grid item sm={12} md={4} className={classes.divider}>
