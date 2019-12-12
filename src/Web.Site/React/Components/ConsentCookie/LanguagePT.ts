@@ -4,7 +4,7 @@ import { ILanguage } from './ILanguage';
 export default {
   text: 'Este site utiliza cookies',
   link: {
-    text: 'Veja a política de privacidade',
+    text: 'Leia nossa política de privacidade',
     label: 'Clique aqui para ler nossa política de privacidade',
   },
   btn: {
