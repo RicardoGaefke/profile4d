@@ -19,6 +19,7 @@ export default makeStyles((theme: Theme): IStyles => ({
   text: {
     fontWeight: 'normal',
     fontSize: '.9rem',
+    textAlign: 'justify',
     '&::first-letter': {
       fontSize: '7.5rem',
       lineHeight: '7rem',
