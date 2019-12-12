@@ -32,7 +32,7 @@ export default makeStyles((theme: Theme): IStyles => ({
   },
   title: {
     fontWeight: 'bold',
-    textShadow: '2px 2px 3px #FFFFFF',
+    textShadow: '3px 3px 4px lightgray',
 
     '@media screen and (max-width: 768px)': {
       fontSize: 50,
