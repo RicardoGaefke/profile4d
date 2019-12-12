@@ -3,7 +3,6 @@ import chai, { expect } from 'chai';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import chaiEnzyme from 'chai-enzyme';
-import AppBar, { Bowl } from './AppBar';
 
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
