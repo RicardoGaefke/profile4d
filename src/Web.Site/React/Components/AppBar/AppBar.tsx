@@ -35,3 +35,9 @@ export default (): React.ReactElement<{}> => {
     </div>
   );
 };
+
+export const Bowl = (): React.ReactElement<{}> => {
+  return(
+    <p>Oi</p>
+  );
+}

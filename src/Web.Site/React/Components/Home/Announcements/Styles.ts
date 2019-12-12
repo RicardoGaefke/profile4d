@@ -17,7 +17,7 @@ export default makeStyles((theme: Theme): IStyles => ({
   text: {
     fontWeight: 'normal',
     fontSize: '.9rem',
-    textAlign: 'justify'
+    textAlign: 'justify',
   },
   divider: {
     borderRight: `1px solid ${theme.palette.divider}`,
