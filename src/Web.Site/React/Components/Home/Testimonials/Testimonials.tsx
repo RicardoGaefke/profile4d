@@ -26,7 +26,7 @@ export default withTranslation()(
         i18next.addResourceBundle('ENG', 'HomeTestimonials', LanguageENG);
       }
       i18next.changeLanguage(Language);
-      // return type void != (): void... so as unknown as void
+      // return type void != (): void... so as unknown as void to avoid errors
       return ((): void => {
         i18next.removeResourceBundle('PT', 'HomeTestimonials');
         i18next.removeResourceBundle('ENG', 'HomeTestimonials');
@@ -46,7 +46,7 @@ export default withTranslation()(
             </Typography>
             <Chip
               icon={<RemoveIcon />}
-              label={t('HomeTestimonials:text2.author')}
+              label={t('HomeTestimonials:text1.author')}
             />
           </Grid>
           <Grid item sm={12} md={4} className={classes.divider}>

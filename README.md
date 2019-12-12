@@ -1,3 +1,6 @@
+![BuildStatus](https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/status/dev-WebSite)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 # Profile4d
 
 Profile4d project with ASP.NET Core 3.0, SSR React, Azure SQL, integration, TDD and Typescript.
