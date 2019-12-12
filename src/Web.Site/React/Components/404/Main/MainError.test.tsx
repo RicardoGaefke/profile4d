@@ -42,4 +42,6 @@
 //   });
 // });
 
-export const myLittleTeste: boolean = true;
+const myLittleTeste: boolean = true;
+
+export default myLittleTeste;
