@@ -40,7 +40,12 @@ namespace Profile4d.Web.Site
       Bootstrap.ConsentCookie(services, Configuration, HostingEnvironment.IsDevelopment());
       
       services.AddNodeServices(options =>
-        options.ProjectPath = Path.Combine(Directory.GetCurrentDirectory())
+        {
+          if (HostingEnvironment.IsDevelopment())
+          {
+            options.ProjectPath = "/opt/nodejs/12.13.0";
+          }
+        }
       );
 
       services.AddRazorPages();
