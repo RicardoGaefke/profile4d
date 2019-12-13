@@ -3,7 +3,7 @@
 
 # Profile4d
 
-Profile4d project with ASP.NET Core 3.0, SSR React, Azure SQL, integration, TDD and Typescript.
+Profile4d new project with ASP.NET Core 3.0, SSR React, Azure SQL, integration, TDD and Typescript.
 
 **Visit [https://github.com/RicardoGaefke/profile4d](https://github.com/RicardoGaefke/profile4d) to get started.**
 
