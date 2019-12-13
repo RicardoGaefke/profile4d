@@ -44,7 +44,7 @@ namespace Profile4d.Web.Site
           if (HostingEnvironment.IsDevelopment())
           {
             // options.ProjectPath = Path.Combine(Directory.GetCurrentDirectory(), "/home/site/wwwroot");
-            options.ProjectPath = Path.GetFullPath("/site/wwwroot");
+            options.ProjectPath = Path.GetFullPath("/home/site/wwwroot");
           }
         }
       );
