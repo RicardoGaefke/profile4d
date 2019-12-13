@@ -1,3 +1,4 @@
+using System.IO;
 using System.Linq;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -38,7 +39,9 @@ namespace Profile4d.Web.Site
       Bootstrap.DataProtection(services, Configuration);
       Bootstrap.ConsentCookie(services, Configuration, HostingEnvironment.IsDevelopment());
       
-      services.AddNodeServices();
+      services.AddNodeServices(options =>
+        options.ProjectPath = Path.Combine(Directory.GetCurrentDirectory())
+      );
 
       services.AddRazorPages();
 
