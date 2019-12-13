@@ -10,20 +10,21 @@ chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('ConsentAction', (): void => {
+  const close = (): void => {};
+
   describe('Smoke Tests', (): void => {
     it('Should exist ConsentAction', (): void => {
-      const wrapper: any = shallow(<ConsentAction text="" title="" close={(): void => {}} />);
-      // eslint-disable-next-line no-unused-expressions
-      expect(wrapper).to.exist;
+      const wrapper: any = shallow(<ConsentAction text="" title="" close={close} />);
+      expect(wrapper.find(Button)).to.have.length(1);
     });
   });
   describe('Childrens Tests', (): void => {
     it('Should ConsentAction: Button to have children equal text when is passed', (): void => {
       const wrapper: any = shallow(
         <ConsentAction
-          text="Hello World" 
-          title="" 
-          close={(): void => {}}
+          text="Hello World"
+          title=""
+          close={close}
         />,
       );
       expect(wrapper.find(Button).props().children).equal('Hello World');
@@ -31,19 +32,18 @@ describe('ConsentAction', (): void => {
     it('Should ConsentAction: Button to have title equal title when is passed', (): void => {
       const wrapper: any = shallow(
         <ConsentAction
-          text="" 
-          title="MyHelloWorld" 
-          close={(): void => {}}
+          text=""
+          title="MyHelloWorld"
+          close={close}
         />,
       );
       expect(wrapper.find(Button).props().title).equal('MyHelloWorld');
     });
     it('Should ConsentAction: Button to have onClick Event when is passed', (): void => {
-      const close = (): void => {};
       const wrapper: any = shallow(
         <ConsentAction
-          text="" 
-          title="" 
+          text=""
+          title=""
           close={close}
         />,
       );
