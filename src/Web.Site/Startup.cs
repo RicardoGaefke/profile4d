@@ -43,7 +43,7 @@ namespace Profile4d.Web.Site
         {
           if (HostingEnvironment.IsDevelopment())
           {
-            options.ProjectPath = "../../opt/nodejs/12.13.0";
+            options.ProjectPath = Path.Combine(Directory.GetCurrentDirectory(), "site/wwwroot");
           }
         }
       );
