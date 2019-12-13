@@ -43,10 +43,8 @@ namespace Profile4d.Web.Site
         {
           if (HostingEnvironment.IsDevelopment())
           {
-            options.ProjectPath = Path.Combine(Directory.GetCurrentDirectory(), "site/wwwroot");
-            options.LaunchWithDebugging = true;
-            options.EnvironmentVariables.Add("PATH", "/usr/local/bin/node");
-            // options.ProjectPath = Directory.GetCurrentDirectory();
+            // options.ProjectPath = Path.Combine(Directory.GetCurrentDirectory(), "site/wwwroot");
+            options.ProjectPath = "site/wwwroot";
             // options.ProjectPath = Path.GetFullPath("/usr/local/bin/node");
           }
         }
