@@ -4,7 +4,7 @@ import { Button } from '@material-ui/core';
 interface IProps {
   text: string,
   title: string,
-  close: ()=>void,
+  close: () => void,
 }
 
 export default (props: IProps): React.ReactElement<IProps> => {
