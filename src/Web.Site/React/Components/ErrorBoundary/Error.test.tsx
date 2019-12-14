@@ -1,3 +1,4 @@
+import React from 'react';
 import chai, { expect } from 'chai';
 // eslint-disable-next-line no-unused-vars
 import Enzyme, { shallow } from 'enzyme';
@@ -10,9 +11,11 @@ chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('Error', (): void => {
+  const clearError = (): void => {};
+
   describe('Smoke Tests', (): void => {
     it('Should exist a module Error', (): void => {
-      const wrapper = Error;
+      const wrapper = shallow(<Error clearError={clearError} />);
       // eslint-disable-next-line no-unused-expressions
       expect(wrapper).to.exist;
     });
