@@ -26,5 +26,5 @@ describe('AppBar.Button Tests', (): void => {
       const wrapper = shallow(<Button disabled={false} />);
       expect(wrapper.props().disabled).equal(false);
     });
-  })
+  });
 });
