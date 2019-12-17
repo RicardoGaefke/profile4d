@@ -14,7 +14,7 @@ export default (): React.ReactElement<any> => {
           {' '}
           {date.getFullYear()}
           {' '}
-by Ricardo Gaefke
+          by Ricardo Gaefke
         </Typography>
       </Container>
     </footer>
