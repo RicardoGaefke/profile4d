@@ -8,7 +8,7 @@ import ErrorBoundary from './ErrorBoundary';
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('ErrorBoundary Tests', (): void => {
+describe('ErrorBoundary', (): void => {
   describe('Smoke Tests', (): void => {
     it('Should exist a module ErrorBoundary', (): void => {
       const wrapper = shallow(<ErrorBoundary />);
@@ -16,7 +16,7 @@ describe('ErrorBoundary Tests', (): void => {
       expect(wrapper).to.exist;
     });
   });
-  describe('ErrorBoundary Return', (): void => {
+  describe('Childrens Tests', (): void => {
     it('Should exist a module ErrorBoundary with state hasError equal false by default', (): void => {
       const wrapper = shallow(<ErrorBoundary />);
       expect(wrapper.state()).eql({ hasError: false });
