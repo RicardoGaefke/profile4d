@@ -1,9 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import { makeStyles, Theme } from '@material-ui/core';
 
-interface IStyles {
-  body: {},
-  main: {},
+export interface IStyles {
+  body: any,
+  main: any,
 }
 
 export default makeStyles((theme: Theme): IStyles => ({
