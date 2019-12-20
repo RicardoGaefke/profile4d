@@ -1,6 +1,6 @@
 import React from 'react';
 import chai, { expect } from 'chai';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { shallow, render } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import chaiEnzyme from 'chai-enzyme';
 import appData from '../../../Initial/Context/InitialContext';
@@ -66,7 +66,14 @@ describe('Home.Banner', (): void => {
   });
   describe('Childrens Return', (): void => {
     it('Should exist Typography', (): void => {
-      const wrapper = shallow(<App />);
+      const wrapper = render(
+        <MyStateProvider initialContext={appData}>
+          <MyApp>
+            <Banner />
+          </MyApp>
+        </MyStateProvider>
+      );
+      expect(wrapper).equal(true);
     });
   });
 });
