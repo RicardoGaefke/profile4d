@@ -1,4 +1,4 @@
-### Dev: [![Build status](https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/status/dev-WebSite)](https://dev.azure.com/ricardogaefke/Profile4D/_build/latest?definitionId=15)
+Dev: [![Build status](https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/status/dev-WebSite)](https://dev.azure.com/ricardogaefke/Profile4D/_build/latest?definitionId=15)
 ![BuildStatus](https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/status/dev-WebSite)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
