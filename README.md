@@ -3,7 +3,8 @@
 
 |Branch|Status|
 |---|---|
-|   |   |
+|master|   |
+|staging|[![Build status](https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/status/staging-WebSite)](https://dev.azure.com/ricardogaefke/Profile4D/_build/latest?definitionId=16)|
 |dev|[![Build status](https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/status/dev-WebSite)](https://dev.azure.com/ricardogaefke/Profile4D/_build/latest?definitionId=15)|
 
 # Profile4d
