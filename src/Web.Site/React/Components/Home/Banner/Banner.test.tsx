@@ -64,9 +64,9 @@ describe('Home.Banner', (): void => {
       expect(wrapper.props().initialContext.IsAuthenticated).equal(false);
     });
   });
-  // describe('Childrens Return', (): void => {
-  //   it('Should exist Typography', (): void => {
-  //     const wrapper = shallow(<App />);
-  //   });
-  // });
+  describe('Childrens Return', (): void => {
+    it('Should exist Typography', (): void => {
+      const wrapper = shallow(<App />);
+    });
+  });
 });
