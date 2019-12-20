@@ -16,4 +16,10 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="React/ssr/**/*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
