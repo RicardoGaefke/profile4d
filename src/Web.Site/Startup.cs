@@ -39,9 +39,6 @@ namespace Profile4d.Web.Site
       Bootstrap.DataProtection(services, Configuration);
       Bootstrap.ConsentCookie(services, Configuration, HostingEnvironment.IsDevelopment());
       
-<<<<<<< HEAD
-      services.AddNodeServices();
-=======
       services.AddNodeServices(options =>
         {
           if (HostingEnvironment.IsDevelopment())
@@ -52,7 +49,6 @@ namespace Profile4d.Web.Site
           }
         }
       );
->>>>>>> staging
 
       services.AddRazorPages();
 
