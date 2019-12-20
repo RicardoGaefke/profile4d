@@ -39,7 +39,20 @@ namespace Profile4d.Web.Site
       Bootstrap.DataProtection(services, Configuration);
       Bootstrap.ConsentCookie(services, Configuration, HostingEnvironment.IsDevelopment());
       
+<<<<<<< HEAD
       services.AddNodeServices();
+=======
+      services.AddNodeServices(options =>
+        {
+          if (HostingEnvironment.IsDevelopment())
+          {
+            // options.ProjectPath = Path.Combine(Directory.GetCurrentDirectory(), "site/wwwroot");
+            options.ProjectPath = Path.GetFullPath("/home/site/wwwroot");
+            // options.ProjectPath = Path.GetFullPath("/usr/local/bin/node");
+          }
+        }
+      );
+>>>>>>> staging
 
       services.AddRazorPages();
 
