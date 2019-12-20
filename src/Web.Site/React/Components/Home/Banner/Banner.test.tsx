@@ -7,7 +7,6 @@ import appData from '../../../Initial/Context/InitialContext';
 import MyStateProvider from '../../../Initial/Context/AppContext';
 import MyApp from '../../../Initial/Tests/TestsApp';
 import Banner from './Banner';
-import { Button } from '@material-ui/core';
 
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
@@ -68,8 +67,6 @@ describe('Home.Banner', (): void => {
   // describe('Childrens Return', (): void => {
   //   it('Should exist Typography', (): void => {
   //     const wrapper = shallow(<App />);
-  //     const myTests = wrapper.find(Banner);
-  //     expect(myTests.find('#myBanner').props().children).to.be.equal('');
   //   });
   // });
 });
