@@ -2,6 +2,11 @@ Dev: [![Build status](https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/
 ![BuildStatus](https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/status/dev-WebSite)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+<figure>
+  <img src="https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/status/dev-WebSite" alt="dev branch status">
+  <figcaption>dev branch status</figcaption>
+</figure>
+
 # Profile4d
 
 Profile4d new project with ASP.NET Core 3.0, SSR React, Azure SQL, integration, TDD and Typescript.
