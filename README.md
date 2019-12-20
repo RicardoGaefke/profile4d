@@ -2,10 +2,10 @@ Dev: [![Build status](https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/
 ![BuildStatus](https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/status/dev-WebSite)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-<figure>
-  <img src="https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/status/dev-WebSite" alt="dev branch status">
-  <figcaption>dev branch status</figcaption>
-</figure>
+|   |   |
+|---|---|
+|   |   |
+|dev branch   |   |
 
 # Profile4d
 
