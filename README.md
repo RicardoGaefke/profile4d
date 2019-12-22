@@ -2,7 +2,7 @@
 |---|:---:|:---:|:---:|:---:|
 |master|-|-|-|-|
 |staging|[![Build status](https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/status/Staging-WebSite/Staging-WebSite-Windows)](https://dev.azure.com/ricardogaefke/Profile4D/_build/latest?definitionId=17)|[![Build status](https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/status/Staging-WebSite/Staging-WebSite-Linux)](https://dev.azure.com/ricardogaefke/Profile4D/_build/latest?definitionId=16)|[![Release status](https://vsrm.dev.azure.com/ricardogaefke/_apis/public/Release/badge/e46778d8-1105-4e15-980d-a3279674dab7/2/2)](https://dev.azure.com/ricardogaefke/Profile4D/_release?view=all&_a=releases&definitionId=2)|[![Release status](https://vsrm.dev.azure.com/ricardogaefke/_apis/public/Release/badge/e46778d8-1105-4e15-980d-a3279674dab7/1/1)](https://dev.azure.com/ricardogaefke/Profile4D/_release?view=all&_a=releases&definitionId=1)|
-|dev|[![Build status](https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/status/dev-WebSite)](https://dev.azure.com/ricardogaefke/Profile4D/_release?_a=releases&view=mine&definitionId=2)|-|-|-|
+|dev|[![Build status](https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/status/dev-WebSite)](https://dev.azure.com/ricardogaefke/Profile4D/_release?_a=releases&view=mine&definitionId=2)|[![Build status](https://dev.azure.com/ricardogaefke/Profile4D/_apis/build/status/dev/dev-Build-Windows)](https://dev.azure.com/ricardogaefke/Profile4D/_build/latest?definitionId=18)|-|-|
 
 
 # Profile4d
