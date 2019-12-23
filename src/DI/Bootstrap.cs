@@ -53,6 +53,7 @@ namespace Profile4d.DI
               "text/plain",
               // "image/png",
               "image/jpg",
+              "image/png",
               "image/jpeg",
               "image/jp2",
               "text/css",
