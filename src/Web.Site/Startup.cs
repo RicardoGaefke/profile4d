@@ -1,5 +1,6 @@
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SpaServices.Extensions;
@@ -41,7 +42,7 @@ namespace Profile4d.Web.Site
       
       services.AddNodeServices(options =>
         {
-          if (HostingEnvironment.IsDevelopment())
+          if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
           {
             // options.ProjectPath = Path.Combine(Directory.GetCurrentDirectory(), "site/wwwroot");
             options.ProjectPath = Path.GetFullPath("/home/site/wwwroot");
