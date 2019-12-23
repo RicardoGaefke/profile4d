@@ -6,22 +6,22 @@ import Adapter from 'enzyme-adapter-react-16';
 import appData from '../../Initial/Context/InitialContext';
 import MyStateProvider from '../../Initial/Context/AppContext';
 import MyApp from '../../Initial/Tests/TestsApp';
-import ConsentCookie from './ConsentCookie';
+import Drawer from './Drawer';
 
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('ConsentCookie.ConsentCookie', (): void => {
+describe('ConfigDrawer.Drawer', (): void => {
   const App = (): React.ReactElement => (
     <MyStateProvider initialContext={appData}>
       <MyApp>
-        <ConsentCookie />
+        <Drawer />
       </MyApp>
     </MyStateProvider>
   );
 
   describe('Smoke Tests', (): void => {
-    it('Should exist ConsentCookie', (): void => {
+    it('Should exist Drawer', (): void => {
       const wrapper = shallow(<App />);
       // eslint-disable-next-line no-unused-expressions
       expect(wrapper).to.exist;

@@ -1,27 +1,27 @@
 import React from 'react';
 import chai, { expect } from 'chai';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
 import chaiEnzyme from 'chai-enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import appData from '../../Initial/Context/InitialContext';
-import MyStateProvider from '../../Initial/Context/AppContext';
-import MyApp from '../../Initial/Tests/TestsApp';
-import ConsentCookie from './ConsentCookie';
+import appData from '../../../Initial/Context/InitialContext';
+import MyStateProvider from '../../../Initial/Context/AppContext';
+import MyApp from '../../../Initial/Tests/TestsApp';
+import Button from './Button';
 
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('ConsentCookie.ConsentCookie', (): void => {
+describe('ConfigDrawer.Button', (): void => {
   const App = (): React.ReactElement => (
     <MyStateProvider initialContext={appData}>
       <MyApp>
-        <ConsentCookie />
+        <Button toggle={(): void => {}} />
       </MyApp>
     </MyStateProvider>
   );
 
   describe('Smoke Tests', (): void => {
-    it('Should exist ConsentCookie', (): void => {
+    it('Should exist Button', (): void => {
       const wrapper = shallow(<App />);
       // eslint-disable-next-line no-unused-expressions
       expect(wrapper).to.exist;
@@ -65,4 +65,10 @@ describe('ConsentCookie.ConsentCookie', (): void => {
       expect(wrapper.props().initialContext.IsAuthenticated).equal(false);
     });
   });
+  // describe('Childrens Return', (): void => {
+  //   it('Should return...', (): void => {
+  //     const wrapper = mount(<App />);
+  //     expect(wrapper.find('#saveButton').props().onClick).equal((): void => {});
+  //   });
+  // });
 });
