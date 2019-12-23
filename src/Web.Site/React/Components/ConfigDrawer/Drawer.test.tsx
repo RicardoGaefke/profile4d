@@ -1,31 +1,30 @@
 import React from 'react';
 import chai, { expect } from 'chai';
-// eslint-disable-next-line no-unused-vars
-import Enzyme, { shallow, mount } from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
 import chaiEnzyme from 'chai-enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import appData from '../../../Initial/Context/InitialContext';
-import MyStateProvider from '../../../Initial/Context/AppContext';
-import MyApp from '../../../Initial/Tests/TestsApp';
-import Announcements from './Announcements';
+import appData from '../../Initial/Context/InitialContext';
+import MyStateProvider from '../../Initial/Context/AppContext';
+import MyApp from '../../Initial/Tests/TestsApp';
+import Drawer from './Drawer';
 
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('Home.Announcements', (): void => {
+describe('ConfigDrawer.Drawer', (): void => {
   const App = (): React.ReactElement => (
     <MyStateProvider initialContext={appData}>
       <MyApp>
-        <Announcements />
+        <Drawer />
       </MyApp>
     </MyStateProvider>
   );
 
   describe('Smoke Tests', (): void => {
-    it('Should exist Announcements', (): void => {
+    it('Should exist Drawer', (): void => {
       const wrapper = shallow(<App />);
       // eslint-disable-next-line no-unused-expressions
-      expect(wrapper).exist;
+      expect(wrapper).to.exist;
     });
   });
   describe('InitialContext Provider', (): void => {
@@ -66,10 +65,4 @@ describe('Home.Announcements', (): void => {
       expect(wrapper.props().initialContext.IsAuthenticated).equal(false);
     });
   });
-  // describe('Childrens Return', (): void => {
-  //   it('Should return...', (): void => {
-  //     const wrapper = mount(<App />);
-  //     expect(wrapper.find(Announcements)).equal('');
-  //   });
-  // });
 });
