@@ -13,7 +13,7 @@ export default i18n
     lng: 'PT',
     fallbackLng: 'PT',
     resources,
-    debug: true, // inserted to try debug with Mocha
+    debug: true,
     keySeparator: '.',
     interpolation: {
       escapeValue: false,
