@@ -34,8 +34,8 @@ export default withTranslation()(
     }, []);
 
     return (
-      <div className={classes.main} id="myBanner">
-        <Container maxWidth="md">
+      <div className={classes.main}>
+        <Container maxWidth="md" id="MyNestedContainer">
           <Typography variant="h1" className={classes.title}>
             {t('HomeBanner:title')}
           </Typography>

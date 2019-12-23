@@ -1,12 +1,15 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router';
 import chai, { expect } from 'chai';
-import Enzyme, { shallow, render } from 'enzyme';
+import Enzyme, { shallow, mount, render } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import chaiEnzyme from 'chai-enzyme';
 import appData from '../../../Initial/Context/InitialContext';
 import MyStateProvider from '../../../Initial/Context/AppContext';
 import MyApp from '../../../Initial/Tests/TestsApp';
+import MyThemeHOC from '../../../Initial/Tests/TestsHOC';
 import Banner from './Banner';
+import { Container, Button } from '@material-ui/core';
 
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
@@ -19,6 +22,13 @@ describe('Home.Banner', (): void => {
       </MyApp>
     </MyStateProvider>
   );
+
+  const HOCApp = (): React.ReactElement<any> => (
+    <MyThemeHOC>
+      <Banner />
+    </MyThemeHOC>
+  );
+
   describe('Smoke Tests', (): void => {
     it('Should exist Banner', (): void => {
       const wrapper = shallow(<App />);
@@ -64,16 +74,15 @@ describe('Home.Banner', (): void => {
       expect(wrapper.props().initialContext.IsAuthenticated).equal(false);
     });
   });
-  describe('Childrens Return', (): void => {
+  describe('Childrens Return', (): any => {
     it('Should exist Typography', (): void => {
-      const wrapper = render(
-        <MyStateProvider initialContext={appData}>
-          <MyApp>
-            <Banner />
-          </MyApp>
-        </MyStateProvider>
-      );
-      expect(wrapper).equal(true);
+      const wrapper = shallow(<Banner />);
+      const testWrap = wrapper.findWhere((btn) => btn.type() === Button);
+      expect(testWrap).to.have.length(1);
     });
+    // it('Should exist Typography', (): void => {
+    //   const wrapper = shallow(<App />);
+    //   expect(wrapper.props().Container).to.have.length(1);
+    // });
   });
 });
