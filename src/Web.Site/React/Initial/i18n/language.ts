@@ -13,7 +13,6 @@ export default i18n
     lng: 'PT',
     fallbackLng: 'PT',
     resources,
-    debug: true,
     keySeparator: '.',
     interpolation: {
       escapeValue: false,
