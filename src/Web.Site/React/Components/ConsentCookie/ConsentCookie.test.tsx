@@ -1,33 +1,27 @@
 import React from 'react';
 import chai, { expect } from 'chai';
 import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import chaiEnzyme from 'chai-enzyme';
-import appData from '../../../Initial/Context/InitialContext';
-import MyStateProvider from '../../../Initial/Context/AppContext';
-import MyApp from '../../../Initial/Tests/TestsApp';
-import Banner from './Banner';
+import Adapter from 'enzyme-adapter-react-16';
+import appData from '../../Initial/Context/InitialContext';
+import MyStateProvider from '../../Initial/Context/AppContext';
+import MyApp from '../../Initial/Tests/TestsApp';
+import ConsentCookie from './ConsentCookie';
 
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('Home.Banner', (): void => {
-  const App = (): React.ReactElement<any> => (
+describe('ConsentCookie', (): void => {
+  const App = (): React.ReactElement => (
     <MyStateProvider initialContext={appData}>
       <MyApp>
-        <Banner />
+        <ConsentCookie />
       </MyApp>
     </MyStateProvider>
   );
 
-  // const HOCApp = (): React.ReactElement<any> => (
-  //   <MyThemeHOC>
-  //     <Banner />
-  //   </MyThemeHOC>
-  // );
-
   describe('Smoke Tests', (): void => {
-    it('Should exist Banner', (): void => {
+    it('Should exist ConsentCookie', (): void => {
       const wrapper = shallow(<App />);
       // eslint-disable-next-line no-unused-expressions
       expect(wrapper).to.exist;
@@ -70,15 +64,5 @@ describe('Home.Banner', (): void => {
       const wrapper = shallow(<App />);
       expect(wrapper.props().initialContext.IsAuthenticated).equal(false);
     });
-  });
-  describe('Childrens Return', (): any => {
-    // it('Should exist Typography', (): void => {
-    //   const wrapper = shallow(<Banner />);
-    //   expect(testWrap).to.have.length(1);
-    // });
-    // it('Should exist Typography', (): void => {
-    //   const wrapper = shallow(<App />);
-    //   expect(wrapper.props().Container).to.have.length(1);
-    // });
   });
 });
