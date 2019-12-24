@@ -11,7 +11,7 @@ import Main from './Main';
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('404.Main', (): void => {
+describe('About.Main', (): void => {
   const App = (): React.ReactElement => (
     <MyStateProvider initialContext={appData}>
       <MyApp>
@@ -28,7 +28,7 @@ describe('404.Main', (): void => {
     });
   });
   describe('InitialContext Provider', (): void => {
-    it('Should exist Main', (): void => {
+    it('Should return App with Ready context like "false" by default', (): void => {
       const wrapper = shallow(<App />);
       expect(wrapper.find(MyStateProvider).props().initialContext.Ready).equal(false);
     });
