@@ -12,7 +12,7 @@ import LanguageENG from './LanguageENG';
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
     const { t } = props;
-    const [{ Config, Language }, dispatch] = useStateValue();
+    const [{ Config }, dispatch] = useStateValue();
 
     const toggleConfig = (): void => {
       dispatch({

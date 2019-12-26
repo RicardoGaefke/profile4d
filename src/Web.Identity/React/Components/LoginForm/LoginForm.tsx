@@ -3,7 +3,7 @@ import i18next from 'i18next';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import { withFormik } from 'formik';
-import { Typography } from '@material-ui/core';
+import { Typography, Divider } from '@material-ui/core';
 import useStyles from './Styles';
 import './Language';
 import LoginForm from './Form/Form';
@@ -54,6 +54,7 @@ export default withTranslation()(
           {t('LoginForm:button.text')}
         </Typography>
         <Login />
+        <Divider />
       </div>
     );
   },
