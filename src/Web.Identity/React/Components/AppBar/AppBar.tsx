@@ -8,7 +8,7 @@ import useStyles from './Styles';
 import LoginButton from './BtnLogin/LoginButton';
 import ConfigButton from './BtnConfig/ConfigButton';
 
-export default (): React.ReactElement<{}> => {
+export default (): React.ReactElement => {
   const [{ language }] = useStateValue();
   const classes = useStyles({});
 
@@ -25,7 +25,10 @@ export default (): React.ReactElement<{}> => {
               to="/"
               id="myProfile"
             >
-              Profile4d
+              <img
+                src="/img/logo.png"
+                alt="Profile4d"
+              />
             </Link>
           </Typography>
           <LoginButton />
