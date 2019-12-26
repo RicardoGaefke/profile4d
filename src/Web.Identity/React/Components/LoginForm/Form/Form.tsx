@@ -30,7 +30,6 @@ export default (props: IForm): React.ReactElement<IForm> => {
 
   i18n.on('languageChanged', (): void => {
     Object.keys(errors).forEach((fieldName): void => {
-      console.log(fieldName);
       setFieldTouched(fieldName as any);
     });
   });

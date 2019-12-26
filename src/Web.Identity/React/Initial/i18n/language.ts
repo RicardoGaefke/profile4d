@@ -18,7 +18,7 @@ export default i18n
       escapeValue: false,
     },
     react: {
-      // bindI18n: 'languageChanged',
+      bindI18n: 'languageChanged',
     },
   })
   .then((t): TFunction => t);

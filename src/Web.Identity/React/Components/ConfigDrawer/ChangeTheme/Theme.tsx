@@ -14,8 +14,11 @@ import LanguageENG from './LanguageENG';
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
     const { t } = props;
-    const [{ Theme, Language }, dispatch] = useStateValue();
+    const [{ Theme }, dispatch] = useStateValue();
     const classes = styles({});
+
+    i18next.addResourceBundle('PT', 'ThemeConfig', LanguagePT);
+    i18next.addResourceBundle('ENG', 'ThemeConfig', LanguageENG);
 
     useEffect((): void => {
       if (!i18next.hasResourceBundle('PT', 'ThemeConfig')) {
@@ -24,7 +27,6 @@ export default withTranslation()(
       if (!i18next.hasResourceBundle('ENG', 'ThemeConfig')) {
         i18next.addResourceBundle('ENG', 'ThemeConfig', LanguageENG);
       }
-      i18next.changeLanguage(Language);
 
       // return type void != (): void... so as unknown as void
       return ((): void => {

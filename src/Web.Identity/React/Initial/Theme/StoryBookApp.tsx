@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../i18n/language';
 import { ThemeProvider } from '@material-ui/styles';
 import { CssBaseline } from '@material-ui/core';
@@ -13,13 +13,8 @@ import Footer from '../../Components/Footer/Footer';
 import useStyles from '../Styles';
 
 const MyApp = (props: React.PropsWithChildren<any>): React.ReactElement<any> => {
-  const [{ Theme, Language }] = useStateValue();
-  const { i18n } = useTranslation();
+  const [{ Theme }] = useStateValue();
   const { children } = props;
-
-  useEffect((): void => {
-    i18n.changeLanguage(Language);
-  }, [Language]);
 
   const classes = useStyles({});
 

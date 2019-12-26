@@ -4,7 +4,6 @@ import i18next from 'i18next';
 import { withTranslation, WithTranslation } from 'react-i18next';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import './Language';
-import { useStateValue } from '../../../Initial/Context/StateProvider';
 import { Href } from '../../../Utils/Domain';
 import Button from '../Button/Button';
 import LanguagePT from './LanguagePT';
@@ -13,7 +12,6 @@ import LanguageENG from './LanguageENG';
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
     const { t } = props;
-    const [{ Language }] = useStateValue();
 
     const myLogin = (): void => {
       // const url = new Href(window.location.href.replace(/https?:\/\//i, ''));
@@ -30,7 +28,6 @@ export default withTranslation()(
       if (!i18next.hasResourceBundle('ENG', 'LoginBtnConfig')) {
         i18next.addResourceBundle('ENG', 'LoginBtnConfig', LanguageENG);
       }
-      i18next.changeLanguage(Language);
       // return type void != (): void... so as unknown as void
       return ((): void => {
         i18next.removeResourceBundle('PT', 'LoginBtnConfig');

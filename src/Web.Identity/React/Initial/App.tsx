@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { ThemeProvider } from '@material-ui/styles';
 import { CssBaseline } from '@material-ui/core';
-import { withTranslation, useTranslation } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import { useStateValue } from './Context/StateProvider';
 import './i18n/language';
 import myTheme from './Theme/Theme';
@@ -14,14 +14,9 @@ import useStyles from './Styles';
 import MyConsentCookie from '../Components/ConsentCookie/ConsentCookie';
 
 const MyApp = (): React.ReactElement<any> => {
-  const [{ Theme, Language, ConsentCookie }] = useStateValue();
-  const { i18n } = useTranslation();
+  const [{ Theme, ConsentCookie }] = useStateValue();
 
-  useEffect((): void => {
-    i18n.changeLanguage(Language);
-  }, [Language]);
-
-  const classes = useStyles();
+  const classes = useStyles({});
 
   return (
     <ThemeProvider theme={myTheme(Theme)}>
