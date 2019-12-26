@@ -11,7 +11,7 @@ import Main from './Main';
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('404.Main', (): void => {
+describe('About.Main', (): void => {
   const App = (): React.ReactElement => (
     <MyStateProvider initialContext={appData}>
       <MyApp>
@@ -20,39 +20,6 @@ describe('404.Main', (): void => {
     </MyStateProvider>
   );
 
-<<<<<<< HEAD
-// i18next.addResourceBundle('PT', '404Main', LanguagePT);
-// i18next.addResourceBundle('ENG', '404Main', LanguageENG);
-
-// describe('MainError', (): void => {
-//   // beforeEach(() => {
-//   //   const [{ Language }] = useStateValue();
-
-//   //   useEffect((): void => {
-//   //     if (!i18next.hasResourceBundle('PT', '404Main')) {
-//   //       i18next.addResourceBundle('PT', '404Main', LanguagePT);
-//   //     }
-//   //     if (!i18next.hasResourceBundle('ENG', '404Main')) {
-//   //       i18next.addResourceBundle('ENG', '404Main', LanguageENG);
-//   //     }
-//   //     // return type void != (): void... so as unknown as void
-//   //     return ((): void => {
-//   //       i18next.removeResourceBundle('PT', '404Main');
-//   //       i18next.removeResourceBundle('ENG', '404Main');
-//   //     }) as unknown as void;
-//   //   }, []);
-//   // });
-
-//   it('Should exist MainError', (): void => {
-//     const wrapper = mount(<MyError />);
-//     expect(wrapper).to.exist;
-//   });
-// });
-
-const myLittleTeste: boolean = true;
-
-export default myLittleTeste;
-=======
   describe('Smoke Tests', (): void => {
     it('Should exist Main', (): void => {
       const wrapper = shallow(<App />);
@@ -61,7 +28,7 @@ export default myLittleTeste;
     });
   });
   describe('InitialContext Provider', (): void => {
-    it('Should exist Main', (): void => {
+    it('Should return App with Ready context like "false" by default', (): void => {
       const wrapper = shallow(<App />);
       expect(wrapper.find(MyStateProvider).props().initialContext.Ready).equal(false);
     });
@@ -99,4 +66,3 @@ export default myLittleTeste;
     });
   });
 });
->>>>>>> ea118a47d154a37850670faed407d7a2e8e02125
