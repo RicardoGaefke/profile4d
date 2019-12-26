@@ -27,7 +27,6 @@
 //   //     if (!i18next.hasResourceBundle('ENG', '404Main')) {
 //   //       i18next.addResourceBundle('ENG', '404Main', LanguageENG);
 //   //     }
-//   //     i18next.changeLanguage(Language);
 //   //     // return type void != (): void... so as unknown as void
 //   //     return ((): void => {
 //   //       i18next.removeResourceBundle('PT', '404Main');

@@ -13,10 +13,12 @@ export default i18n
     lng: 'PT',
     fallbackLng: 'PT',
     resources,
-    debug: false, // inserted to try debug with Mocha
     keySeparator: '.',
     interpolation: {
       escapeValue: false,
+    },
+    react: {
+      // bindI18n: 'languageChanged',
     },
   })
   .then((t): TFunction => t);

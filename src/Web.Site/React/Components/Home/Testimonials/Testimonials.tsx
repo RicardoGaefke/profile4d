@@ -6,7 +6,6 @@ import {
   Typography, Grid, Container, Chip,
 } from '@material-ui/core';
 import RemoveIcon from '@material-ui/icons/Remove';
-import { useStateValue } from '../../../Initial/Context/StateProvider';
 import useStyles from './Styles';
 import './Language';
 import LanguagePT from './LanguagePT';
@@ -15,7 +14,6 @@ import LanguageENG from './LanguageENG';
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
     const { t } = props;
-    const [{ Language }] = useStateValue();
     const classes = useStyles({});
 
     useEffect((): void => {
@@ -25,7 +23,6 @@ export default withTranslation()(
       if (!i18next.hasResourceBundle('ENG', 'HomeTestimonials')) {
         i18next.addResourceBundle('ENG', 'HomeTestimonials', LanguageENG);
       }
-      i18next.changeLanguage(Language);
       // return type void != (): void... so as unknown as void to avoid errors
       return ((): void => {
         i18next.removeResourceBundle('PT', 'HomeTestimonials');

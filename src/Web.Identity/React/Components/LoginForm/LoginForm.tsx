@@ -52,7 +52,7 @@ export default withTranslation()(
       <div className={classes.main}>
         <Typography
           align="center"
-          variant="h6"
+          variant="h5"
         >
           {t('LoginForm:button.text')}
         </Typography>

@@ -5,7 +5,6 @@ import { withTranslation, WithTranslation } from 'react-i18next';
 import {
   Typography, Container,
 } from '@material-ui/core';
-import { useStateValue } from '../../../Initial/Context/StateProvider';
 import useStyles from './Styles';
 import './Language';
 import LanguagePT from './LanguagePT';
@@ -14,7 +13,6 @@ import LanguageENG from './LanguageENG';
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
     const { t } = props;
-    const [{ Language }] = useStateValue();
     const classes = useStyles({});
 
     useEffect((): void => {
@@ -24,7 +22,6 @@ export default withTranslation()(
       if (!i18next.hasResourceBundle('ENG', 'HomeIntro')) {
         i18next.addResourceBundle('ENG', 'HomeIntro', LanguageENG);
       }
-      i18next.changeLanguage(Language);
       // return type void != (): void... so as unknown as void
       return ((): void => {
         i18next.removeResourceBundle('PT', 'HomeIntro');

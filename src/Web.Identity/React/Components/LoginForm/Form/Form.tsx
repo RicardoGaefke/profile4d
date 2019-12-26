@@ -4,10 +4,9 @@ import {
   Grid, TextField, Button, FormControl, FormControlLabel, Switch,
 } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
-import { WithTranslation, withTranslation, useTranslation } from 'react-i18next';
+import { WithTranslation, useTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
 import { FormikProps } from 'formik';
-import i18n from 'i18next';
 // eslint-disable-next-line no-unused-vars
 import { ILoginForm } from '../../../../../TypeScript/Interfaces/ILoginForm';
 import useStyles from './Form.Styles';
@@ -15,8 +14,9 @@ import useStyles from './Form.Styles';
 type IForm = FormikProps<ILoginForm> & WithTranslation;
 
 export default (props: IForm): React.ReactElement<IForm> => {
-  const { t } = props;
   const classes = useStyles({});
+  // eslint-disable-next-line no-unused-vars
+  const { t, i18n } = useTranslation('LoginForm');
   const {
     values,
     touched,
@@ -30,6 +30,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
 
   i18n.on('languageChanged', (): void => {
     Object.keys(errors).forEach((fieldName): void => {
+      console.log(fieldName);
       setFieldTouched(fieldName as any);
     });
   });

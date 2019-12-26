@@ -28,7 +28,6 @@ export default withTranslation()(
       if (!i18next.hasResourceBundle('ENG', 'CustomBtnConfig')) {
         i18next.addResourceBundle('ENG', 'CustomBtnConfig', LanguageENG);
       }
-      i18next.changeLanguage(Language);
       // return type void != (): void... so as unknown as void
       return ((): void => {
         i18next.removeResourceBundle('PT', 'CustomBtnConfig');
