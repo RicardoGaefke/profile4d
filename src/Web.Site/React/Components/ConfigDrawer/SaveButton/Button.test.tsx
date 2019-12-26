@@ -6,22 +6,24 @@ import Adapter from 'enzyme-adapter-react-16';
 import MyStateProvider from '../../../Initial/Context/AppContext';
 import appData from '../../../Initial/Context/InitialContext';
 import MyApp from '../../../Initial/Tests/TestsApp';
-import Policy from './Main';
+import SaveButton from './Button';
 
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('Policy', (): void => {
+describe('ConfigDrawer.SaveButton', (): void => {
+  const toggle = (): void => {};
+
   const App = (): React.ReactElement => (
     <MyStateProvider initialContext={appData}>
       <MyApp>
-        <Policy />
+        <SaveButton toggle={toggle} />
       </MyApp>
     </MyStateProvider>
   );
 
   describe('Smoke Tests', (): void => {
-    it('Should exist Policy', (): void => {
+    it('Should exist SaveButton', (): void => {
       const wrapper = shallow(<App />);
       // eslint-disable-next-line no-unused-expressions
       expect(wrapper).to.exist;

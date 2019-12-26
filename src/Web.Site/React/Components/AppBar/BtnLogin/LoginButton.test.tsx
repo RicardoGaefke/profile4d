@@ -1,67 +1,34 @@
 import React from 'react';
 import chai, { expect } from 'chai';
 import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import chaiEnzyme from 'chai-enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import MyStateProvider from '../../../Initial/Context/AppContext';
 import appData from '../../../Initial/Context/InitialContext';
 import MyApp from '../../../Initial/Tests/TestsApp';
-import Main from './Main';
+import LoginButton from './LoginButton';
 
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('404.Main', (): void => {
+describe('AppBar.LoginButton', (): void => {
   const App = (): React.ReactElement => (
     <MyStateProvider initialContext={appData}>
       <MyApp>
-        <Main />
+        <LoginButton />
       </MyApp>
     </MyStateProvider>
   );
 
-<<<<<<< HEAD
-// i18next.addResourceBundle('PT', '404Main', LanguagePT);
-// i18next.addResourceBundle('ENG', '404Main', LanguageENG);
-
-// describe('MainError', (): void => {
-//   // beforeEach(() => {
-//   //   const [{ Language }] = useStateValue();
-
-//   //   useEffect((): void => {
-//   //     if (!i18next.hasResourceBundle('PT', '404Main')) {
-//   //       i18next.addResourceBundle('PT', '404Main', LanguagePT);
-//   //     }
-//   //     if (!i18next.hasResourceBundle('ENG', '404Main')) {
-//   //       i18next.addResourceBundle('ENG', '404Main', LanguageENG);
-//   //     }
-//   //     // return type void != (): void... so as unknown as void
-//   //     return ((): void => {
-//   //       i18next.removeResourceBundle('PT', '404Main');
-//   //       i18next.removeResourceBundle('ENG', '404Main');
-//   //     }) as unknown as void;
-//   //   }, []);
-//   // });
-
-//   it('Should exist MainError', (): void => {
-//     const wrapper = mount(<MyError />);
-//     expect(wrapper).to.exist;
-//   });
-// });
-
-const myLittleTeste: boolean = true;
-
-export default myLittleTeste;
-=======
   describe('Smoke Tests', (): void => {
-    it('Should exist Main', (): void => {
+    it('Should exist LoginButton', (): void => {
       const wrapper = shallow(<App />);
       // eslint-disable-next-line no-unused-expressions
       expect(wrapper).to.exist;
     });
   });
   describe('InitialContext Provider', (): void => {
-    it('Should exist Main', (): void => {
+    it('Should return App with Ready context like "false" by default', (): void => {
       const wrapper = shallow(<App />);
       expect(wrapper.find(MyStateProvider).props().initialContext.Ready).equal(false);
     });
@@ -99,4 +66,3 @@ export default myLittleTeste;
     });
   });
 });
->>>>>>> ea118a47d154a37850670faed407d7a2e8e02125

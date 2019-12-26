@@ -1,8 +1,9 @@
 import React from 'react';
 import chai, { expect } from 'chai';
 import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+
 import chaiEnzyme from 'chai-enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import MyStateProvider from '../../../Initial/Context/AppContext';
 import appData from '../../../Initial/Context/InitialContext';
 import MyApp from '../../../Initial/Tests/TestsApp';
