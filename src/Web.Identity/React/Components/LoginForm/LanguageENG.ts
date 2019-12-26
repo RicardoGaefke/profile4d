@@ -2,6 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
+  title: 'Already a member?',
   email: {
     text: 'Your email',
     title: 'Type your email',

@@ -16,6 +16,9 @@ export default withTranslation()(
     const { t } = props;
     const classes = useStyles({});
 
+    i18next.addResourceBundle('PT', '404Main', LanguagePT);
+    i18next.addResourceBundle('ENG', '404Main', LanguageENG);
+
     useEffect((): void => {
       if (!i18next.hasResourceBundle('PT', '404Main')) {
         i18next.addResourceBundle('PT', '404Main', LanguagePT);

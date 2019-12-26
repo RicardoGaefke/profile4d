@@ -15,6 +15,9 @@ export default withTranslation()(
     const { t } = props;
     const classes = useStyles({});
 
+    i18next.addResourceBundle('PT', 'PolicyMain', LanguagePT);
+    i18next.addResourceBundle('ENG', 'PolicyMain', LanguageENG);
+
     useEffect((): void => {
       if (!i18next.hasResourceBundle('PT', 'PolicyMain')) {
         i18next.addResourceBundle('PT', 'PolicyMain', LanguagePT);

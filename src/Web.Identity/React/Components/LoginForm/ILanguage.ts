@@ -1,4 +1,5 @@
 export interface ILanguage {
+  title: string,
   email: {
     title: string,
     text: string,

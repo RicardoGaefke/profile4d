@@ -19,6 +19,9 @@ export default withTranslation()(
     const [dispatch] = useStateValue();
     const classes = useStyles({});
 
+    i18next.addResourceBundle('PT', 'ConsentCookie', LanguagePT);
+    i18next.addResourceBundle('ENG', 'ConsentCookie', LanguageENG);
+
     useEffect((): void => {
       if (!i18next.hasResourceBundle('PT', 'ConsentCookie')) {
         i18next.addResourceBundle('PT', 'ConsentCookie', LanguagePT);

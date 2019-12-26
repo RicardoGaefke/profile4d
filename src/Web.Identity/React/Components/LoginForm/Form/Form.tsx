@@ -88,20 +88,15 @@ export default (props: IForm): React.ReactElement<IForm> => {
             fullWidth
           />
         </Grid>
-      </Grid>
-      <Grid
-        container
-        spacing={2}
-      >
         <Grid
           item
           xs={12}
           md={12}
         >
           <Button
+            className={classes.button}
             color="primary"
             variant="contained"
-            style={{ color: 'white' }}
             type="submit"
             title={t('LoginForm:button.title')}
             disabled={isSubmitting}

@@ -9,6 +9,7 @@ export default (): React.ReactElement<any> => (
   <Switch>
     <Route exact path="/" component={MyHome} />
     <Route path="/home/" component={MyHome} />
+    <Route path="/create/" component={MyHome} />
     <Route path="/about/" component={MyAbout} />
     <Route path="/policy/" component={MyPolicy} />
     <Route path="/404/" component={MyNotFound} />

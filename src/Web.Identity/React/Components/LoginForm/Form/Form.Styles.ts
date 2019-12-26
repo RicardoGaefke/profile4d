@@ -2,11 +2,12 @@
 import { makeStyles, Theme } from '@material-ui/core/styles';
 
 export interface IStyles {
-  root: any,
-  container: any,
-  item: any,
-  divider: any,
-  icon: any,
+  root: {},
+  container: {},
+  item: {},
+  button: {},
+  divider: {},
+  icon: {},
 }
 
 const useStyles = makeStyles((theme: Theme): IStyles => ({
@@ -21,6 +22,10 @@ const useStyles = makeStyles((theme: Theme): IStyles => ({
     marginBottom: theme.spacing(1),
     marginTop: theme.spacing(1),
     width: '100%',
+  },
+  button: {
+    marginBottom: theme.spacing(1),
+    marginTop: theme.spacing(1),
   },
   divider: {
     marginBottom: theme.spacing(1),
