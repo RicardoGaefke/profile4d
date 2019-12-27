@@ -1,44 +1,68 @@
-// // eslint-disable-next-line no-unused-vars
-// import React from 'react';
-// // eslint-disable-next-line no-unused-vars
-// import i18next from 'i18next';
-// // eslint-disable-next-line no-unused-vars
-// import { withTranslation } from 'react-i18next';
-// import chai, { expect } from 'chai';
-// // eslint-disable-next-line no-unused-vars
-// import './Language';
-// import Enzyme, { mount } from 'enzyme';
-// import Adapter from 'enzyme-adapter-react-16';
-// import chaiEnzyme from 'chai-enzyme';
+import React from 'react';
+import chai, { expect } from 'chai';
+import Enzyme, { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import MyStateProvider from '../../../Initial/Context/AppContext';
+import appData from '../../../Initial/Context/InitialContext';
+import MyApp from '../../../Initial/Tests/TestsApp';
+import Policy from './Main';
 
-// import { BrowserRouter } from 'react-router-dom';
-// // eslint-disable-next-line no-unused-vars
-// import { ICustomWindow } from '../../../../../TypeScript/Interfaces/ICustomWindow';
-// import MyStateProvider from '../../../Initial/Context/AppContext';
+chai.use(chaiEnzyme());
+Enzyme.configure({ adapter: new Adapter() });
 
-// import MyPolicy from './Main';
+describe('Policy', (): void => {
+  const App = (): React.ReactElement => (
+    <MyStateProvider initialContext={appData}>
+      <MyApp>
+        <Policy />
+      </MyApp>
+    </MyStateProvider>
+  );
 
-// const App = (): React.ReactElement<any> => {
-//   const appData = (window as unknown as ICustomWindow).MyInitialState;
-//   delete (window as unknown as ICustomWindow).MyInitialState;
-
-//   return (
-//     <BrowserRouter>
-//       <MyStateProvider initialContext={appData}>
-//         <MyPolicy />
-//       </MyStateProvider>
-//     </BrowserRouter>
-//   );
-// };
-
-// chai.use(chaiEnzyme());
-// Enzyme.configure({ adapter: new Adapter() });
-
-// describe('Policy Tests', (): void => {
-//   describe('Smoke Tests', (): void => {
-//     it('Should exist Policy', (): void => {
-//       const wrapper = mount(<App />);
-//       expect(wrapper.props()).equal('');
-//     });
-//   });
-// });
+  describe('Smoke Tests', (): void => {
+    it('Should exist Policy', (): void => {
+      const wrapper = shallow(<App />);
+      // eslint-disable-next-line no-unused-expressions
+      expect(wrapper).to.exist;
+    });
+  });
+  describe('InitialContext Provider', (): void => {
+    it('Should return App with Ready context like "false" by default', (): void => {
+      const wrapper = shallow(<App />);
+      expect(wrapper.find(MyStateProvider).props().initialContext.Ready).equal(false);
+    });
+    it('Should return App with Theme context like "light" by default', (): void => {
+      const wrapper = shallow(<App />);
+      expect(wrapper.props().initialContext.Theme).equal('light');
+    });
+    it('Should return App with Language context like "PT" by default', (): void => {
+      const wrapper = shallow(<App />);
+      expect(wrapper.props().initialContext.Language).equal('PT');
+    });
+    it('Should return App with ConsentCookie context like "true" by default', (): void => {
+      const wrapper = shallow(<App />);
+      expect(wrapper.props().initialContext.ConsentCookie).equal(true);
+    });
+    it('Should return App with Name context like "Profile4d" by default', (): void => {
+      const wrapper = shallow(<App />);
+      expect(wrapper.props().initialContext.Name).equal('Profile4d');
+    });
+    it('Should return App with Email context like "empty" by default', (): void => {
+      const wrapper = shallow(<App />);
+      expect(wrapper.props().initialContext.Email).equal('');
+    });
+    it('Should return App with KeepConnected context like "false" by default', (): void => {
+      const wrapper = shallow(<App />);
+      expect(wrapper.props().initialContext.KeepConnected).equal(false);
+    });
+    it('Should return App with Drawer context like "false" by default', (): void => {
+      const wrapper = shallow(<App />);
+      expect(wrapper.props().initialContext.Drawer).equal(false);
+    });
+    it('Should return App with IsAuthenticated context like "false" by default', (): void => {
+      const wrapper = shallow(<App />);
+      expect(wrapper.props().initialContext.IsAuthenticated).equal(false);
+    });
+  });
+});

@@ -9,7 +9,7 @@ import Button from './Button';
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('AppBar.Button Tests', (): void => {
+describe('AppBar.Button', (): void => {
   describe('Smoke Tests', (): void => {
     it('Should exist Button', (): void => {
       const wrapper = shallow(<Button />);
@@ -17,7 +17,7 @@ describe('AppBar.Button Tests', (): void => {
       expect(wrapper).to.exist;
     });
   });
-  describe('Childrens Tests', (): void => {
+  describe('Props Tests', (): void => {
     it('Should exist Button with props.color equal default when is passed', (): void => {
       const wrapper = shallow(<Button color="default" />);
       expect(wrapper.props().color).equal('default');

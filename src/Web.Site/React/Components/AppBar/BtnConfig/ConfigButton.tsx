@@ -12,7 +12,7 @@ import LanguageENG from './LanguageENG';
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
     const { t } = props;
-    const [{ Config, Language }, dispatch] = useStateValue();
+    const [{ Config }, dispatch] = useStateValue();
 
     const toggleConfig = (): void => {
       dispatch({
@@ -28,7 +28,6 @@ export default withTranslation()(
       if (!i18next.hasResourceBundle('ENG', 'CustomBtnConfig')) {
         i18next.addResourceBundle('ENG', 'CustomBtnConfig', LanguageENG);
       }
-      i18next.changeLanguage(Language);
       // return type void != (): void... so as unknown as void
       return ((): void => {
         i18next.removeResourceBundle('PT', 'CustomBtnConfig');

@@ -13,7 +13,7 @@ const App = (): React.ReactElement => (
   </MyThemeHoc>
 );
 
-storiesOf('Main', module)
+storiesOf('Login form', module)
   .addDecorator((story: any): React.ReactElement => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))
