@@ -35,8 +35,8 @@ export default {
     invalid: 'Please type exactly same password',
   },
   button: {
-    text: 'Login',
-    title: 'Click here to start a new session',
+    text: 'Create account',
+    title: 'Click here to create an account',
   },
   return: {
     text: 'Cancel and go back home',

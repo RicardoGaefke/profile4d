@@ -5,7 +5,7 @@ import { WithTranslation } from 'react-i18next';
 export default (props: WithTranslation): object => Yup.object().shape({
   Email: Yup.string()
     .required(props.t('LoginForm:email.required'))
-    .email(props.t('Name.Required')),
+    .email(props.t('LoginForm:email.invalid')),
   Password: Yup.string()
     .required(props.t('LoginForm:password.required'))
     .min(6, props.t('LoginForm:password.min'))

@@ -14,7 +14,7 @@ export default withTranslation()(
         underline="always"
         title={t('LoginForm:forgot.title')}
         component={RLink}
-        to="/forgot/"
+        to="/account/forgot/"
       >
         {t('LoginForm:forgot.text')}
       </Link>

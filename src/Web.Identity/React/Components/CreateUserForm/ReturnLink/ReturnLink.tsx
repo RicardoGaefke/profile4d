@@ -12,16 +12,16 @@ export default withTranslation()(
 
     return (
       <Typography variant="h6">
-        {t('LoginCreateLink:or')}
+        {t('ReturnLink:or')}
         &nbsp;
         <Link
           variant="inherit"
           underline="always"
-          title={t('LoginCreateLink:title')}
+          title={t('ReturnLink:title')}
           component={RLink}
-          to="/account/create/"
+          to="/"
         >
-          {t('LoginCreateLink:text')}
+          {t('ReturnLink:text')}
         </Link>
         .
       </Typography>

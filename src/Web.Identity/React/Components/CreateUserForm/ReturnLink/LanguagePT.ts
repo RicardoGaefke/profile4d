@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  or: 'Or',
-  text: 'click here to create an account',
-  title: 'create an account',
+  or: 'Ou',
+  text: 'volte ao início',
+  title: 'clique aqui para cancelar e voltar ao início',
 } as ILanguage;
