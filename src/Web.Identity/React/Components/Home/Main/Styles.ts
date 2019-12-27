@@ -17,5 +17,6 @@ export default makeStyles((theme: Theme): IStyles => ({
   },
   img: {
     maxWidth: '85%',
+    marginTop: theme.spacing(1),
   },
 }));

@@ -2,34 +2,44 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Already a member?',
+  title: 'Create a new account',
+  name: {
+    text: 'Your name',
+    title: 'Please inform your name',
+    min: '5 character minimum',
+    max: '20 characters maximum',
+  },
   email: {
     text: 'Your email',
     title: 'Type your email',
     required: 'This field is required',
     invalid: 'Please inform a valid email',
   },
+  confirmEmail: {
+    text: 'Confirm your email',
+    title: 'Please confirm your email',
+    required: 'This field is required',
+    invalid: 'Please type exactly same email',
+  },
   password: {
     text: 'Your password',
-    title: 'Type your password',
+    title: 'Create a password',
     required: 'This field is required',
     min: '6 character minimum',
     max: '20 characters maximum',
   },
-  forgot: {
-    text: 'Forgot your password?',
-    title: 'Click here to create new credentials',
+  confirmPassword: {
+    text: 'Confirm password',
+    title: 'Please confirm your password',
+    required: 'This field is required',
+    invalid: 'Please type exactly same password',
   },
   button: {
     text: 'Login',
     title: 'Click here to start a new session',
   },
-  keep: {
-    text: 'Keep me connected?',
-    title: 'Check this option to keep connection alive',
-  },
-  create: {
-    text: 'Create new credentials',
-    title: 'Click here to create new credentials',
+  return: {
+    text: 'Cancel and go back home',
+    title: 'Cancel and go back home',
   },
 } as ILanguage;

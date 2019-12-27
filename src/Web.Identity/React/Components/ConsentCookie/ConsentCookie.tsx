@@ -13,7 +13,7 @@ import setLanguage from './Language';
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
     const { t } = props;
-    const [dispatch] = useStateValue();
+    const [{ ConsentCookie }, dispatch] = useStateValue();
     const classes = useStyles({});
     setLanguage();
 
@@ -23,7 +23,7 @@ export default withTranslation()(
 
       dispatch({
         type: 'changeConsent',
-        value: false,
+        value: !ConsentCookie,
       });
     };
 

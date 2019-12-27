@@ -2,34 +2,45 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Já é um usuário?',
+  title: 'Criar conta de usuário',
+  name: {
+    text: 'Informe teu nome',
+    title: 'Informe teu nome',
+    required: 'O campo nome é obrigatório',
+    min: 'Mínimo de 5 caracteres',
+    max: 'Máximo de 20 caracteres',
+  },
   email: {
-    text: 'Teu email',
+    text: 'Informe teu email',
     title: 'Informe teu email',
     required: 'Este campo é obrigatório',
     invalid: 'Email inválido',
   },
+  confirmEmail: {
+    text: 'Confirme teu email',
+    title: 'Confirme teu email',
+    required: 'Este campo é obrigatório',
+    invalid: 'Digite exatamente o mesmo email',
+  },
   password: {
-    text: 'Tua senha',
-    title: 'Informe tua senha',
+    text: 'Crie uma senha',
+    title: 'Crie uma senha',
     required: 'Este campo é obrigatório',
     min: 'Tamanho mínimo de 6 caracteres',
     max: 'Tamanho mínimo de 20 caracteres',
   },
-  forgot: {
-    text: 'Esqueceu a senha?',
-    title: 'Clique aqui para gerar uma nova senha',
+  confirmPassword: {
+    text: 'Confirme a tua senha',
+    title: 'Confirme a tua senha',
+    required: 'Este campo é obrigatório',
+    invalid: 'Digite exatamente a mesma senha',
   },
   button: {
     text: 'Entrar no sistema',
     title: 'Clique aqui para iniciar a sessão',
   },
-  keep: {
-    text: 'Manter-me conectado?',
-    title: 'Marque esta opção para permanecer conectado',
-  },
-  create: {
-    text: 'Criar credenciais de acesso',
-    title: 'Clique aqui para fazer teu cadastro',
+  return: {
+    text: 'Cancelar e voltar ao início',
+    title: 'Cancelar e voltar ao início',
   },
 } as ILanguage;
