@@ -12,7 +12,7 @@ import ConfigDrawer from '../../Components/ConfigDrawer/Drawer';
 import Footer from '../../Components/Footer/Footer';
 import useStyles from '../Styles';
 
-const MyApp = (props: React.PropsWithChildren<any>): React.ReactElement<any> => {
+const MyApp = (props: React.PropsWithChildren<any>): React.ReactElement => {
   const [{ Theme }] = useStateValue();
   const { children } = props;
 
