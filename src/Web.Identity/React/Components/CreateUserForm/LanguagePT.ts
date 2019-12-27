@@ -36,8 +36,8 @@ export default {
     invalid: 'Digite exatamente a mesma senha',
   },
   button: {
-    text: 'Entrar no sistema',
-    title: 'Clique aqui para iniciar a sessão',
+    text: 'Criar conta',
+    title: 'Clique aqui para criar uma conta',
   },
   return: {
     text: 'Cancelar e voltar ao início',

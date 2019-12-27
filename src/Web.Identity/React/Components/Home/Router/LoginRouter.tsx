@@ -7,6 +7,7 @@ import {
   withRouter,
 } from 'react-router-dom';
 import LoginForm from '../../LoginForm/LoginForm';
+import CreateForm from '../../CreateUserForm/CreateForm';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement => {
@@ -15,6 +16,7 @@ export default withRouter(
     return (
       <Switch>
         <Route exact path={`${match.url}/`} component={LoginForm} />
+        <Route exact path={`${match.url}/create/`} component={CreateForm} />
       </Switch>
     );
   },
