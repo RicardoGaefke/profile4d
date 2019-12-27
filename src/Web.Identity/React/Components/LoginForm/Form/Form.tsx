@@ -1,7 +1,6 @@
 import React from 'react';
 import {
-  // eslint-disable-next-line no-unused-vars
-  Grid, TextField, Button, FormControl, FormControlLabel, Switch,
+  Grid, TextField, Button, FormControlLabel, Checkbox,
 } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
@@ -26,6 +25,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
     handleBlur,
     handleSubmit,
     setFieldTouched,
+    setFieldValue,
   } = props;
 
   i18n.on('languageChanged', (): void => {
@@ -33,6 +33,13 @@ export default (props: IForm): React.ReactElement<IForm> => {
       setFieldTouched(fieldName as any);
     });
   });
+
+  const handleCheck = (
+    event: React.ChangeEvent<HTMLInputElement>,
+    checked: boolean,
+  ): void => {
+    setFieldValue('Keep', !checked);
+  };
 
   return (
     <form
@@ -62,7 +69,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
             onChange={handleChange}
             onBlur={handleBlur}
             helperText={(errors.Email && touched.Email) && errors.Email}
-            variant="filled"
+            variant="outlined"
             className={classes.item}
             fullWidth
           />
@@ -83,9 +90,29 @@ export default (props: IForm): React.ReactElement<IForm> => {
             onChange={handleChange}
             onBlur={handleBlur}
             helperText={(errors.Password && touched.Password) && errors.Password}
-            variant="filled"
+            variant="outlined"
             className={classes.item}
             fullWidth
+          />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={12}
+        >
+          <FormControlLabel
+            control={
+              (
+                <Checkbox
+                  checked={values.Keep}
+                  onChange={(event): void => handleCheck(event, values.Keep)}
+                  value={values.Keep}
+                  color="primary"
+                  title={t('LoginForm:keep.title')}
+                />
+              )
+            }
+            label={t('LoginForm:keep.text')}
           />
         </Grid>
         <Grid
