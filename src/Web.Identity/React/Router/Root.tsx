@@ -7,11 +7,11 @@ import MyPolicy from '../Views/Policy/Policy';
 
 export default (): React.ReactElement => (
   <Switch>
-    <Route exact path="/" component={MyHome} />
-    <Route exact path="/home/" component={MyHome} />
-    <Route path="/about/" component={MyAbout} />
-    <Route path="/policy/" component={MyPolicy} />
-    <Route path="/404/" component={MyNotFound} />
+    <Route path="/" exact component={MyHome} />
+    <Route path="/account/" component={MyHome} />
+    <Route path="/about" component={MyAbout} />
+    <Route path="/policy" component={MyPolicy} />
+    <Route path="/404" component={MyNotFound} />
     <Route component={MyNotFound} />
   </Switch>
 );

@@ -19,7 +19,7 @@ export default withTranslation()(
           underline="always"
           title={t('LoginCreateLink:title')}
           component={RLink}
-          to="/create/"
+          to="/account/create/"
         >
           {t('LoginCreateLink:text')}
         </Link>
