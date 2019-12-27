@@ -18,7 +18,7 @@ export default {
   },
   forgot: {
     text: 'Forgot your password?',
-    title: 'Click here to create new credentials',
+    title: 'Click here to create a new password',
   },
   button: {
     text: 'Login',

@@ -7,6 +7,7 @@ import useStyles from './Styles';
 import setLanguage from './Language';
 import LoginForm from './Form/Form';
 import CreateUserLink from './CreateUserLink/CreateUserLink';
+import ForgotPassword from './ForgotPassword/ForgotPassword';
 import InitialValues from './Form/Form.InitialValues';
 import Validation from './Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
@@ -40,6 +41,7 @@ export default withTranslation()(
           {t('LoginForm:title')}
         </Typography>
         <Login />
+        <ForgotPassword />
         <Divider className={classes.divider} />
         <CreateUserLink />
       </div>

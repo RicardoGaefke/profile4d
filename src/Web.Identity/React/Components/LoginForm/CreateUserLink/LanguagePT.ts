@@ -3,6 +3,6 @@ import { ILanguage } from './ILanguage';
 
 export default {
   or: 'Ou',
-  text: 'clique aqui para criar uma conta',
+  text: 'crie uma conta',
   title: 'clique aqui para criar uma conta',
 } as ILanguage;

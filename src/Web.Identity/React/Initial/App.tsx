@@ -22,13 +22,13 @@ const MyApp = (): React.ReactElement<any> => {
     <ThemeProvider theme={myTheme(Theme)}>
       <div className={classes.body}>
         <AppBar />
+        {(ConsentCookie) ? <MyConsentCookie /> : null}
         <div className={classes.main}>
           <ErrorBoundary>
             <RootRouter />
           </ErrorBoundary>
         </div>
         <Footer />
-        {(ConsentCookie) ? <MyConsentCookie /> : null}
         <ConfigDrawer />
       </div>
       <CssBaseline />

@@ -26,19 +26,17 @@ export interface ILanguage {
     min: string,
     max: string,
   },
-  keep: {
+  confirmPassword: {
     title: string,
     text: string,
+    required: string,
+    invalid: string,
   },
   button: {
     title: string,
     text: string,
   },
-  forgot: {
-    title: string,
-    text: string,
-  },
-  create: {
+  return: {
     title: string,
     text: string,
   },
