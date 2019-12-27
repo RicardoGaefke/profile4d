@@ -22,12 +22,13 @@ storiesOf('Forms', module)
     <App />
   ));
 
+/* this stories has double header and footer because I imported HOC + App to use full router
+I don't mind as I just want to see the form */
 storiesOf('Forms', module)
   .addDecorator((storyFn, context): React.ReactElement => withConsole()(storyFn)(context))
   .add('Create User', (): React.ReactElement => (
     <MemoryRouter
-      initialEntries={['/', '/account/', '/account/create/']}
-      initialIndex={2}
+      initialEntries={['/account/create/']}
     >
       <App />
     </MemoryRouter>
