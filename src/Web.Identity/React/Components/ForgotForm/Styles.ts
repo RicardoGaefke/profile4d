@@ -1,4 +1,5 @@
-import { Theme, makeStyles } from '@material-ui/styles';
+// eslint-disable-next-line no-unused-vars
+import { Theme, makeStyles } from '@material-ui/core/styles';
 
 interface IStyles {
   main: {},
@@ -12,5 +13,5 @@ export default makeStyles((theme: Theme): IStyles => ({
   divider: {
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3),
-  }
+  },
 }));

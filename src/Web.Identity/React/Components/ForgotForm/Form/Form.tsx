@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  Grid, TextField, Button, FormControlLabel, Checkbox,
-} from '@material-ui/core';
+import { Grid, TextField, Button } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars

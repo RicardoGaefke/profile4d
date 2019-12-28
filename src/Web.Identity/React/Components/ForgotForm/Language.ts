@@ -15,9 +15,9 @@ export default (): void => {
       i18next.addResourceBundle('ENG', 'ForgotForm', LanguageENG);
     }
 
-    return((): void => {
+    return ((): void => {
       i18next.removeResourceBundle('PT', 'ForgotForm');
       i18next.removeResourceBundle('ENG', 'ForgotForm');
     }) as unknown as void;
   }, []);
-}
+};

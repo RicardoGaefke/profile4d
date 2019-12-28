@@ -12,5 +12,5 @@ export default {
   button: {
     text: 'Recuperar senha',
     title: 'Clique aqui para recuperar sua senha',
-  }
+  },
 } as ILanguage;

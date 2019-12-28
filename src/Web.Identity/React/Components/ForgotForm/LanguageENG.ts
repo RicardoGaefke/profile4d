@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { ILanguage } from './ILanguage';
 
 export default {
@@ -11,5 +12,5 @@ export default {
   button: {
     text: 'Recover password',
     title: 'Click here to recover your password',
-  }
+  },
 } as ILanguage;
