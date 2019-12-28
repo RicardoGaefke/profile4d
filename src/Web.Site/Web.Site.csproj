@@ -22,4 +22,10 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="start.sh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
