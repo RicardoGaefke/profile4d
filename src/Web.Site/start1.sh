@@ -5,6 +5,6 @@ curl -sL https://deb.nodesource.com/setup_12.x | bash
 apt-get install -y nodejs
 
 set -e
-export PORT=8080
+export PORT=80
 export ASPNETCORE_URLS=http://*:$PORT
 dotnet "Web.Site.dll"
