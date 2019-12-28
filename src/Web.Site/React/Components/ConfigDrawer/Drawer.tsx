@@ -15,7 +15,7 @@ import LanguageENG from './LanguageENG';
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
     const { t } = props;
-    const [{ Config, Language }, dispatch] = useStateValue();
+    const [{ Config }, dispatch] = useStateValue();
     const classes = Styles({});
 
     useEffect((): void => {
@@ -25,7 +25,6 @@ export default withTranslation()(
       if (!i18next.hasResourceBundle('ENG', 'DrawerConfig')) {
         i18next.addResourceBundle('ENG', 'DrawerConfig', LanguageENG);
       }
-      i18next.changeLanguage(Language);
 
       // return type void != (): void... so as unknown as void
       return ((): void => {

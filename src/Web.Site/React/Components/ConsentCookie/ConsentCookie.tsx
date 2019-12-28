@@ -16,7 +16,7 @@ import LanguageENG from './LanguageENG';
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
     const { t } = props;
-    const [{ Language }, dispatch] = useStateValue();
+    const [dispatch] = useStateValue();
     const classes = useStyles({});
 
     useEffect((): void => {
@@ -26,7 +26,6 @@ export default withTranslation()(
       if (!i18next.hasResourceBundle('ENG', 'ConsentCookie')) {
         i18next.addResourceBundle('ENG', 'ConsentCookie', LanguageENG);
       }
-      i18next.changeLanguage(Language);
       // return type void != (): void... so as unknown as void
       return ((): void => {
         i18next.removeResourceBundle('PT', 'ConsentCookie');

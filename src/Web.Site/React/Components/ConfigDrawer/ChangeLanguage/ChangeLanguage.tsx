@@ -24,7 +24,6 @@ export default withTranslation()(
       if (!i18next.hasResourceBundle('ENG', 'LanguageConfig')) {
         i18next.addResourceBundle('ENG', 'LanguageConfig', LanguageENG);
       }
-      i18next.changeLanguage(Language);
       // return type void != (): void... so as unknown as void
       return ((): void => {
         i18next.removeResourceBundle('PT', 'LanguageConfig');
