@@ -33,3 +33,13 @@ storiesOf('Forms', module)
       <App />
     </MemoryRouter>
   ));
+
+storiesOf('Forms', module)
+  .addDecorator((storyFn, context): React.ReactElement => withConsole()(storyFn)(context))
+  .add('Forgot Form', (): React.ReactElement => (
+    <MemoryRouter
+      initialEntries={['/account/forgot/']}
+    >
+      <App />
+    </MemoryRouter>
+  ));
