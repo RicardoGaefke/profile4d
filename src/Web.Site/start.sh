@@ -7,4 +7,4 @@ apt-get install -y nodejs
 set -e
 export PORT=8080
 export ASPNETCORE_URLS=http://*:$PORT
-dotnet "/home/site/wwwroot/Web.Site.dll"
+dotnet "Web.Site.dll"
