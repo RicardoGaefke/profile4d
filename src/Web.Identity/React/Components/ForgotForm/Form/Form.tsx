@@ -23,7 +23,6 @@ export default (props: IForm): React.ReactElement<IForm> => {
     handleBlur,
     handleSubmit,
     setFieldTouched,
-    // setFieldValue,
   } = props;
 
   i18n.on('languageChanged', (): void => {
@@ -31,13 +30,6 @@ export default (props: IForm): React.ReactElement<IForm> => {
       setFieldTouched(fieldName as any);
     });
   });
-
-  // const handleCheck = (
-  //   event: React.ChangeEvent<HTMLInputElement>,
-  //   checked: boolean,
-  // ): void => {
-  //   setFieldValue('Keep', !checked);
-  // };
 
   return (
     <form
