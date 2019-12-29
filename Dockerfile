@@ -21,5 +21,4 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine AS runtime
 WORKDIR /
 COPY --from=build /app/src/Web.Site/out ./
-# ENTRYPOINT ["dotnet", "Web.Site.dll"]
-ENTRYPOINT ["start.sh"]
+ENTRYPOINT ["dotnet", "Web.Site.dll"]
