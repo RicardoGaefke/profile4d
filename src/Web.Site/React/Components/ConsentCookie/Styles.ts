@@ -9,12 +9,13 @@ interface IStyles {
 export default makeStyles((theme: Theme): IStyles => ({
   snackbar: {
     margin: theme.spacing(1),
-    // backgroundColor: amber[700],
-    // backgroundColor: '#c7e4e2',
-    maxWidth: 500,
-    position: 'fixed',
-    bottom: 40,
-    right: 40,
     color: (theme.palette.type === 'dark') ? '#000' : '#fff',
+
+    '@media screen and (min-width: 768px)': {
+      maxWidth: 500,
+      position: 'fixed',
+      bottom: 40,
+      right: 40,
+    },
   },
 }));
