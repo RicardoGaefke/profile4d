@@ -6,8 +6,7 @@ import { Typography, Divider } from '@material-ui/core';
 import useStyles from './Styles';
 import setLanguage from './Language';
 import ForgotForm from './Form/Form';
-import CreateUserLink from '../LoginForm/CreateUserLink/CreateUserLink';
-import ReturnLink from '../CreateUserForm/ReturnLink/ReturnLink';
+import ReturnOrCreate from './ReturnOrCreate/ReturnOrCreate';
 import InitialValues from './Form/Form.InitialValues';
 import Validation from './Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
@@ -42,8 +41,7 @@ export default withTranslation()(
         </Typography>
         <Forgot />
         <Divider className={classes.divider} />
-        <ReturnLink />
-        <CreateUserLink />
+        <ReturnOrCreate />
       </div>
     );
   },
