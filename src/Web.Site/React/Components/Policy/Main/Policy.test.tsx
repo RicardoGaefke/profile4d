@@ -11,7 +11,7 @@ import Policy from './Main';
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('Policy', (): void => {
+describe('Web.Site -> Policy', (): void => {
   const App = (): React.ReactElement => (
     <MyStateProvider initialContext={appData}>
       <MyApp>
@@ -34,35 +34,35 @@ describe('Policy', (): void => {
     });
     it('Should return App with Theme context like "light" by default', (): void => {
       const wrapper = shallow(<App />);
-      expect(wrapper.props().initialContext.Theme).equal('light');
+      expect(wrapper.find(MyStateProvider).props().initialContext.Theme).equal('light');
     });
     it('Should return App with Language context like "PT" by default', (): void => {
       const wrapper = shallow(<App />);
-      expect(wrapper.props().initialContext.Language).equal('PT');
+      expect(wrapper.find(MyStateProvider).props().initialContext.Language).equal('PT');
     });
     it('Should return App with ConsentCookie context like "true" by default', (): void => {
       const wrapper = shallow(<App />);
-      expect(wrapper.props().initialContext.ConsentCookie).equal(true);
+      expect(wrapper.find(MyStateProvider).props().initialContext.ConsentCookie).equal(true);
     });
     it('Should return App with Name context like "Profile4d" by default', (): void => {
       const wrapper = shallow(<App />);
-      expect(wrapper.props().initialContext.Name).equal('Profile4d');
+      expect(wrapper.find(MyStateProvider).props().initialContext.Name).equal('Profile4d');
     });
     it('Should return App with Email context like "empty" by default', (): void => {
       const wrapper = shallow(<App />);
-      expect(wrapper.props().initialContext.Email).equal('');
+      expect(wrapper.find(MyStateProvider).props().initialContext.Email).equal('');
     });
     it('Should return App with KeepConnected context like "false" by default', (): void => {
       const wrapper = shallow(<App />);
-      expect(wrapper.props().initialContext.KeepConnected).equal(false);
+      expect(wrapper.find(MyStateProvider).props().initialContext.KeepConnected).equal(false);
     });
     it('Should return App with Drawer context like "false" by default', (): void => {
       const wrapper = shallow(<App />);
-      expect(wrapper.props().initialContext.Drawer).equal(false);
+      expect(wrapper.find(MyStateProvider).props().initialContext.Drawer).equal(false);
     });
     it('Should return App with IsAuthenticated context like "false" by default', (): void => {
       const wrapper = shallow(<App />);
-      expect(wrapper.props().initialContext.IsAuthenticated).equal(false);
+      expect(wrapper.find(MyStateProvider).props().initialContext.IsAuthenticated).equal(false);
     });
   });
 });
