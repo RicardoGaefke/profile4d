@@ -20,5 +20,9 @@ namespace Profile4d.Domain
       this.Password = password;
       this.KeepConnected = keepConnected;
     }
+
+    public User()
+    {
+    }
   }
 }

@@ -4,5 +4,5 @@ import { ILoginForm } from '../../../../../TypeScript/Interfaces/ILoginForm';
 export default {
   Email: '',
   Password: '',
-  Keep: false,
+  KeepConnected: false,
 } as ILoginForm;

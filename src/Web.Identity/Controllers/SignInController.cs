@@ -7,14 +7,15 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Profile4d.Domain;
 
-namespace MyApp.Web.Login.Controllers
+namespace MyApp.Web.Identity.Controllers
 {
   [Route("api/sign")]
   [ApiController]
   public class SignInController : ControllerBase
   {
     [HttpPost("in")]
-    public async Task<ActionResult<bool>> In()
+    [Consumes("application/json")]
+    public async Task<ActionResult<bool>> In(User user)
     {
       try
       {
@@ -44,8 +45,7 @@ namespace MyApp.Web.Login.Controllers
           // value set here overrides the ExpireTimeSpan option of 
           // CookieAuthenticationOptions set with AddCookie.
 
-          // IsPersistent = user.KeepConnected,
-          IsPersistent = true
+          IsPersistent = user.KeepConnected,
           // Whether the authentication session is persisted across 
           // multiple requests. When used with cookies, controls
           // whether the cookie's lifetime is absolute (matching the

@@ -8,8 +8,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Profile4d.DI;
 using Profile4d.Domain;
-using Profile4d.Email;
-
 namespace Profile4d.Web.Identity
 {
   public class Startup
@@ -31,9 +29,6 @@ namespace Profile4d.Web.Identity
       // Inject config
       services.Configure<Secrets.ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
       services.Configure<Secrets.Login>(Configuration.GetSection("ConnectionStrings"));
-
-      //  project's DI
-      services.AddSingleton<MyEmail>();
 
       //  add cors
       Bootstrap.ConfigCors(services, Configuration, HostingEnvironment.IsDevelopment());
@@ -89,6 +84,7 @@ namespace Profile4d.Web.Identity
       });
 
       app.UseRouting();
+      app.UseCors();
 
       app.Use((context, next) =>
       {
