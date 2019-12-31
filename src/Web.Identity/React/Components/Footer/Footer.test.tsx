@@ -9,7 +9,7 @@ import MyFooter from './Footer';
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('Footer', (): void => {
+describe('Web.Identity -> Footer', (): void => {
   describe('Smoke Tests', (): void => {
     it('Should exist Footer', (): void => {
       const wrapper = shallow(<MyFooter />);
