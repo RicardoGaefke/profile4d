@@ -41,7 +41,16 @@ namespace Profile4d.Web.Identity
       Bootstrap.ConsentCookie(services, Configuration, HostingEnvironment.IsDevelopment());
       Bootstrap.CookiesAuth(services, Configuration, HostingEnvironment.IsDevelopment());
       
-      services.AddNodeServices();
+      services.AddNodeServices(options =>
+        {
+          if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+          {
+            // options.ProjectPath = Path.Combine(Directory.GetCurrentDirectory(), "site/wwwroot");
+            options.ProjectPath = Path.GetFullPath("/home/site/wwwroot");
+            // options.ProjectPath = Path.GetFullPath("/usr/local/bin/node");
+          }
+        }
+      );
 
       services.AddRazorPages();
 
