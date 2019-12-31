@@ -12,13 +12,21 @@ import InitialValues from './Form/Form.InitialValues';
 import Validation from './Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
 import { ILoginForm } from '../../../../TypeScript/Interfaces/ILoginForm';
+import myAxios from '../../Utils/MyAxios';
+// eslint-disable-next-line no-unused-vars
+import { IInitialContext } from '../../../../TypeScript/Interfaces/IInitialContext';
 
 const MyForm = withFormik<WithTranslation, ILoginForm>({
   displayName: 'LoginForm',
   enableReinitialize: true,
   mapPropsToValues: (): ILoginForm => (InitialValues),
   validationSchema: Validation,
-  handleSubmit: (values, { setSubmitting }): void => {
+  handleSubmit: async (values, { setSubmitting }): Promise<void> => {
+    await myAxios.post<IInitialContext>('sign/in', {
+      Email: values.Email,
+      Password: values.Password,
+      KeepConnected: values.Keep,
+    });
     setSubmitting(false);
   },
 })(LoginForm);

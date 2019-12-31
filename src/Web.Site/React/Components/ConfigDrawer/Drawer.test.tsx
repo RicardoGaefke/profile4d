@@ -3,8 +3,8 @@ import chai, { expect } from 'chai';
 import Enzyme, { shallow } from 'enzyme';
 import chaiEnzyme from 'chai-enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import MyStateProvider from '../../Initial/Context/AppContext';
 import appData from '../../Initial/Context/InitialContext';
+import MyStateProvider from '../../Initial/Context/AppContext';
 import MyApp from '../../Initial/Tests/TestsApp';
 import Drawer from './Drawer';
 
@@ -30,7 +30,11 @@ describe('ConfigDrawer.Drawer', (): void => {
   describe('InitialContext Provider', (): void => {
     it('Should return App with Ready context like "false" by default', (): void => {
       const wrapper = shallow(<App />);
+<<<<<<< HEAD
       expect(wrapper.find(MyStateProvider).props().initialContext.Ready).equal(false);
+=======
+      expect(wrapper.props().initialContext.Ready).equal(false);
+>>>>>>> 95020df55caefc9861b1fcc3a2201cd274774b84
     });
     it('Should return App with Theme context like "light" by default', (): void => {
       const wrapper = shallow(<App />);

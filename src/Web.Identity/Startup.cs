@@ -3,7 +3,6 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.SpaServices.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -36,9 +35,13 @@ namespace Profile4d.Web.Identity
       //  project's DI
       services.AddSingleton<MyEmail>();
 
+      //  add cors
+      Bootstrap.ConfigCors(services, Configuration, HostingEnvironment.IsDevelopment());
+
       //  DI config
       Bootstrap.DataProtection(services, Configuration);
       Bootstrap.ConsentCookie(services, Configuration, HostingEnvironment.IsDevelopment());
+      Bootstrap.CookiesAuth(services, Configuration, HostingEnvironment.IsDevelopment());
       
       services.AddNodeServices(options =>
         {
@@ -95,6 +98,7 @@ namespace Profile4d.Web.Identity
         return next.Invoke();
       });
 
+      app.UseAuthentication();
       app.UseAuthorization();
 
       app.UseEndpoints(endpoints =>

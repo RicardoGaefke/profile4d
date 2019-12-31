@@ -11,7 +11,7 @@ import ConsentCookie from './ConsentCookie';
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('ConsentCookie', (): void => {
+describe('ConsentCookie.ConsentCookie', (): void => {
   const App = (): React.ReactElement => (
     <MyStateProvider initialContext={appData}>
       <MyApp>
