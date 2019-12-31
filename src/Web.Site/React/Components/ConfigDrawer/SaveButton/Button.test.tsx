@@ -1,12 +1,12 @@
 import React from 'react';
 import chai, { expect } from 'chai';
-import Enzyme, { shallow, mount } from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
 import chaiEnzyme from 'chai-enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import appData from '../../../Initial/Context/InitialContext';
 import MyStateProvider from '../../../Initial/Context/AppContext';
 import MyApp from '../../../Initial/Tests/TestsApp';
-import Button from './Button';
+import SaveButton from './Button';
 
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
@@ -18,17 +18,12 @@ describe('ConfigDrawer.SaveButton', (): void => {
     <MyStateProvider initialContext={appData}>
       <MyApp>
         <SaveButton toggle={toggle} />
-describe('ConfigDrawer.Button', (): void => {
-  const App = (): React.ReactElement => (
-    <MyStateProvider initialContext={appData}>
-      <MyApp>
-        <Button toggle={(): void => {}} />
       </MyApp>
     </MyStateProvider>
   );
 
   describe('Smoke Tests', (): void => {
-    it('Should exist Button', (): void => {
+    it('Should exist SaveButton', (): void => {
       const wrapper = shallow(<App />);
       // eslint-disable-next-line no-unused-expressions
       expect(wrapper).to.exist;

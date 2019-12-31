@@ -30,11 +30,7 @@ describe('ConfigDrawer.Drawer', (): void => {
   describe('InitialContext Provider', (): void => {
     it('Should return App with Ready context like "false" by default', (): void => {
       const wrapper = shallow(<App />);
-<<<<<<< HEAD
-      expect(wrapper.find(MyStateProvider).props().initialContext.Ready).equal(false);
-=======
       expect(wrapper.props().initialContext.Ready).equal(false);
->>>>>>> 95020df55caefc9861b1fcc3a2201cd274774b84
     });
     it('Should return App with Theme context like "light" by default', (): void => {
       const wrapper = shallow(<App />);

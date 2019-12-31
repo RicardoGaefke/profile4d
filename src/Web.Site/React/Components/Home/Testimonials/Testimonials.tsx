@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import i18next from 'i18next';
+import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import {
@@ -7,28 +6,13 @@ import {
 } from '@material-ui/core';
 import RemoveIcon from '@material-ui/icons/Remove';
 import useStyles from './Styles';
-import './Language';
-import LanguagePT from './LanguagePT';
-import LanguageENG from './LanguageENG';
+import setLanguage from './Language';
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
     const { t } = props;
     const classes = useStyles({});
-
-    useEffect((): void => {
-      if (!i18next.hasResourceBundle('PT', 'HomeTestimonials')) {
-        i18next.addResourceBundle('PT', 'HomeTestimonials', LanguagePT);
-      }
-      if (!i18next.hasResourceBundle('ENG', 'HomeTestimonials')) {
-        i18next.addResourceBundle('ENG', 'HomeTestimonials', LanguageENG);
-      }
-      // return type void != (): void... so as unknown as void to avoid errors
-      return ((): void => {
-        i18next.removeResourceBundle('PT', 'HomeTestimonials');
-        i18next.removeResourceBundle('ENG', 'HomeTestimonials');
-      }) as unknown as void;
-    }, []);
+    setLanguage();
 
     return (
       <Container maxWidth="lg" className={classes.main}>
