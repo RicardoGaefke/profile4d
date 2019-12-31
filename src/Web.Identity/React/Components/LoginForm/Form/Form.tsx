@@ -38,7 +38,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
     event: React.ChangeEvent<HTMLInputElement>,
     checked: boolean,
   ): void => {
-    setFieldValue('Keep', !checked);
+    setFieldValue('KeepConnected', !checked);
   };
 
   return (
@@ -104,9 +104,9 @@ export default (props: IForm): React.ReactElement<IForm> => {
             control={
               (
                 <Checkbox
-                  checked={values.Keep}
-                  onChange={(event): void => handleCheck(event, values.Keep)}
-                  value={values.Keep}
+                  checked={values.KeepConnected}
+                  onChange={(event): void => handleCheck(event, values.KeepConnected)}
+                  value={values.KeepConnected}
                   color="primary"
                   title={t('LoginForm:keep.title')}
                 />

@@ -25,7 +25,7 @@ const MyForm = withFormik<WithTranslation, ILoginForm>({
     await myAxios.post<IInitialContext>('sign/in', {
       Email: values.Email,
       Password: values.Password,
-      KeepConnected: values.Keep,
+      KeepConnected: values.KeepConnected,
     });
     setSubmitting(false);
   },
