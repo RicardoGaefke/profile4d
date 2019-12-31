@@ -12,11 +12,18 @@ export default withTranslation()(
     setLanguage();
 
     const myLogin = (): void => {
-      // const url = new Href(window.location.href.replace(/https?:\/\//i, ''));
-      const url = new Href('www.staging.profile4d.com');
-      // window.location.href = url.toLogin();
-      // eslint-disable-next-line no-console
-      console.log(url.toLogin());
+      if (window.location.href.includes('localhost')) {
+        window.location.href = 'https://localhost:5055/';
+        return;
+      }
+
+      if (window.location.href.includes('staging')) {
+        const loginUrl = new Href('www.staging.profile4d.com');
+        window.location.href = loginUrl.toLogin();
+        return;
+      }
+
+      window.location.href = 'https://identity.profile4d.com';
     };
 
     return (

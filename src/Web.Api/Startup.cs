@@ -32,8 +32,6 @@ namespace Profile4d.Web.Api
       // Add your AppInsights ID here to make it globally available //
       // services.AddApplicationInsightsTelemetry("9e5cc6db-d8d8-49c5-aa18-d60b4d06196b");
 
-      // string hostCors = Configuration.GetSection("ConnectionStrings")["Cors"];
-
       //  project's DI
       // services.AddSingleton<MyEmail>();
 
@@ -62,10 +60,11 @@ namespace Profile4d.Web.Api
 
       app.UseRouting();
 
+      app.UseCors();
+      app.UseStaticFiles();
+
       app.UseOpenApi();
       app.UseSwaggerUi3();
-
-      app.UseCors();
 
       app.UseAuthentication();
       app.UseAuthorization();

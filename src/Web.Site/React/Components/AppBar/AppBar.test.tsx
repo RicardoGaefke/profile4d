@@ -13,7 +13,7 @@ import MyAppBar from './AppBar';
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('AppBar', (): void => {
+describe('Web.Site -> AppBar', (): void => {
   const App = (): React.ReactElement => (
     <MyStateProvider initialContext={appData}>
       <MyApp>

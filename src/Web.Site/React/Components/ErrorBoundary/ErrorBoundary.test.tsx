@@ -8,7 +8,7 @@ import ErrorBoundary from './ErrorBoundary';
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('ErrorBoundary', (): void => {
+describe('Web.Site -> ErrorBoundary', (): void => {
   describe('Smoke Tests', (): void => {
     it('Should exist a module ErrorBoundary', (): void => {
       const wrapper = shallow(<ErrorBoundary />);
