@@ -11,7 +11,7 @@ import Error from './Error';
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('ErrorBoundary.Error', (): void => {
+describe('Web.Site -> ErrorBoundary.Error', (): void => {
   const clearError = (): void => {};
 
   describe('Smoke Tests', (): void => {
