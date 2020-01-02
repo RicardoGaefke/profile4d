@@ -9,4 +9,5 @@ export interface IInitialContext {
   Ready: boolean,
   Drawer?: boolean,
   Config?: boolean,
+  UTC?: string,
 }
