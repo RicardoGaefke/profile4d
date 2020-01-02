@@ -21,6 +21,15 @@ namespace Profile4d.Domain
       this.KeepConnected = keepConnected;
     }
 
+    public User(string email, string password)
+    {
+      DomainException.When(!string.IsNullOrEmpty(email), "Email is required!");
+      DomainException.When(!string.IsNullOrEmpty(password), "Password is required!");
+
+      this.Email = email;
+      this.Password = password;
+    }
+
     public User()
     {
     }
