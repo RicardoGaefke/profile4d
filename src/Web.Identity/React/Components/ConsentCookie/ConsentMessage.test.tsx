@@ -10,7 +10,7 @@ import ConsentMessage from './ConsentMessage';
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('ConsentMessage', (): void => {
+describe('Web.Identity -> ConsentCookie.ConsentMessage', (): void => {
   describe('Smoke Tests', (): void => {
     it('Should exist ConsentMessage', (): void => {
       const wrapper: any = shallow(<ConsentMessage message="" text="" title="" />);
