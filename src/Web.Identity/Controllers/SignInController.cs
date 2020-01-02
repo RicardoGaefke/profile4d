@@ -24,7 +24,7 @@ namespace MyApp.Web.Identity.Controllers
           new Claim(ClaimTypes.Name, "Ricardo Gaefke"),
           new Claim(ClaimTypes.Email, "ricardogaefke@gmail.com"),
           new Claim("LastChanged", System.DateTime.UtcNow.ToString()),
-          new Claim("Custom", "Ricardo Gaefke"),
+          new Claim("userID", "123"),
           new Claim(ClaimTypes.Role, "Master"),
         };
 
