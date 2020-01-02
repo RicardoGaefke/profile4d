@@ -38,7 +38,7 @@ namespace Profile4d.Web.Api.Controllers
           new Claim(ClaimTypes.Name, _myUser.Name),
           new Claim(ClaimTypes.Email, _myUser.Email),
           new Claim("LastChanged", _myUser.LastChanged),
-          new Claim("userID", _myUser.Id.ToString())
+          new Claim("UserID", _myUser.Id.ToString())
         };
 
         for (int i = 0; i < _myUser.Roles.Count; i++)
