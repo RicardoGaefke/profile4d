@@ -1,32 +1,50 @@
+using System;
+using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Mvc;
-using Profile4d.Domain;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Profile4d.Data;
+using Profile4d.Domain;
 
-namespace MyApp.Web.Identity.Controllers
+namespace Profile4d.Web.Api.Controllers
 {
-  [Route("api/sign")]
   [ApiController]
-  public class SignInController : ControllerBase
-  {
-    [HttpPost("in")]
-    [Consumes("application/json")]
-    public async Task<ActionResult<bool>> In(User user)
+  [Route("[controller]")]
+  public class IdentityController : ControllerBase
+    {
+    private readonly ILogger<WeatherForecastController> _logger;
+    private readonly MyIdentity _myIdentity;
+
+    public IdentityController(ILogger<WeatherForecastController> logger, MyIdentity myIdentity)
+    {
+      _logger = logger;
+      _myIdentity = myIdentity;
+    }
+
+    [HttpGet("SignIn")]
+    public async Task<ActionResult<bool>> SingIn(User user)
     {
       try
       {
+        User _myUser = _myIdentity.Login(user.Email, user.Password);
+
         var claims = new List<Claim>
         {
-          new Claim(ClaimTypes.Name, "Ricardo Gaefke"),
-          new Claim(ClaimTypes.Email, "ricardogaefke@gmail.com"),
-          new Claim("LastChanged", System.DateTime.UtcNow.ToString()),
-          new Claim("userID", "123"),
-          new Claim(ClaimTypes.Role, "Master"),
+          new Claim(ClaimTypes.Name, _myUser.Name),
+          new Claim(ClaimTypes.Email, _myUser.Email),
+          new Claim("LastChanged", _myUser.LastChanged),
+          new Claim("userID", _myUser.Id.ToString())
         };
+
+        for (int i = 0; i < _myUser.Roles.Count; i++)
+        {
+          claims.Add(new Claim(ClaimTypes.Role, _myUser.Roles[i]));
+        }
 
         var claimsIdentity = new ClaimsIdentity(
           claims,
@@ -69,34 +87,8 @@ namespace MyApp.Web.Identity.Controllers
       }
       catch (System.Exception)
       {
-          return false;
+        return false;
       }
-    }
-
-    // [HttpGet("check")]
-    // public InitialState Check()
-    // {
-    //   var consentFeature = HttpContext.Features.Get<ITrackingConsentFeature>();
-    //   var showBanner = !consentFeature?.CanTrack ?? false;
-      
-    //   InitialState MyInitialState = new InitialState();
-
-    //   MyInitialState.isAuthenticated = HttpContext.User.Identity.IsAuthenticated;
-    //   MyInitialState.Name = User.Identity.Name;
-    //   MyInitialState.Email = User.FindFirst(claim => claim.Type == System.Security.Claims.ClaimTypes.Email)?.Value;
-    //   MyInitialState.language = "ENG";
-    //   MyInitialState.theme = "dark";
-    //   MyInitialState.consentCookie = showBanner;
-
-    //   return MyInitialState;
-    // }
-
-    [HttpGet("out")]
-    public async Task<ActionResult<string>> Out()
-    {
-      await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-
-      return "saiu";
     }
   }
 }
