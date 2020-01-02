@@ -1,8 +1,8 @@
-using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json.Serialization;
 using Profile4d.DI;
 using Profile4d.Data;
 using Profile4d.Domain;
@@ -41,7 +41,14 @@ namespace Profile4d.Web.Api
 
       services.AddSingleton<MyIdentity>();
       
-      services.AddControllers();
+      services
+        .AddControllers()
+        .AddNewtonsoftJson(options => {
+          options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+          options.SerializerSettings.DefaultValueHandling = Newtonsoft.Json.DefaultValueHandling.Ignore;
+          options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+        })
+      ;
 
       services.AddSwaggerDocument();
     }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.Extensions.Options;
 using System.Data;
 using System.Data.SqlClient;
@@ -36,6 +37,8 @@ namespace Profile4d.Data
           {
             if (MyDR.HasRows)
             {
+              List<string> _roles = new List<string>();
+              
               MyDR.Read();
 
               _myUser.Id = MyDR.GetInt32(0);
@@ -47,9 +50,10 @@ namespace Profile4d.Data
 
               while (MyDR.Read())
               {
-                _myUser.Roles.Add(MyDR.GetString(0));
+                _roles.Add(MyDR.GetString(0));
               }
 
+              _myUser.Roles = _roles;
               _myUser.Success = true;
 
               return _myUser;
