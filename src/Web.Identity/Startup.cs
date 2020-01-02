@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Profile4d.DI;
 using Profile4d.Domain;
+using Profile4d.Data;
 namespace Profile4d.Web.Identity
 {
   public class Startup
@@ -29,6 +30,8 @@ namespace Profile4d.Web.Identity
       // Inject config
       services.Configure<Secrets.ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
       services.Configure<Secrets.Login>(Configuration.GetSection("ConnectionStrings"));
+      // Config data before config cookies so logged users can be checked on SqlServer
+      services.AddSingleton<MyIdentity>();
 
       //  add cors
       Bootstrap.ConfigCors(services, Configuration, HostingEnvironment.IsDevelopment());

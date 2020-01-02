@@ -1,16 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Profile4d.DI;
-// using Profile4d.Email;
+using Profile4d.Data;
+using Profile4d.Domain;
 
 namespace Profile4d.Web.Api
 {
@@ -32,8 +27,9 @@ namespace Profile4d.Web.Api
       // Add your AppInsights ID here to make it globally available //
       // services.AddApplicationInsightsTelemetry("9e5cc6db-d8d8-49c5-aa18-d60b4d06196b");
 
-      //  project's DI
-      // services.AddSingleton<MyEmail>();
+      // Config data before config cookies so logged users can be checked on SqlServer
+      services.Configure<Secrets.ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
+      services.AddSingleton<MyIdentity>();
 
       // add cors
       Bootstrap.ConfigCors(services, Configuration, HostEnvironment.IsDevelopment());
@@ -42,6 +38,8 @@ namespace Profile4d.Web.Api
       Bootstrap.DataProtection(services, Configuration);
       Bootstrap.ConsentCookie(services, Configuration, HostEnvironment.IsDevelopment());
       Bootstrap.CookiesAuth(services, Configuration, HostEnvironment.IsDevelopment());
+
+      services.AddSingleton<MyIdentity>();
       
       services.AddControllers();
 

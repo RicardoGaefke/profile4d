@@ -9,7 +9,7 @@ import Button from './Button';
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('AppBar.Button Tests', (): void => {
+describe('Web.Identity -> AppBar.Button', (): void => {
   describe('Smoke Tests', (): void => {
     it('Should exist Button', (): void => {
       const wrapper = shallow(<Button />);

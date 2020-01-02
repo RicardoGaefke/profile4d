@@ -6,22 +6,22 @@ import Adapter from 'enzyme-adapter-react-16';
 import MyStateProvider from '../../../Initial/Context/AppContext';
 import appData from '../../../Initial/Context/InitialContext';
 import MyApp from '../../../Initial/Tests/TestsApp';
-import Policy from './Main';
+import LoginButton from './LoginButton';
 
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('Web.Identity -> Policy', (): void => {
+describe('Web.Identity -> AppBar.LoginButton', (): void => {
   const App = (): React.ReactElement => (
     <MyStateProvider initialContext={appData}>
       <MyApp>
-        <Policy />
+        <LoginButton />
       </MyApp>
     </MyStateProvider>
   );
 
   describe('Smoke Tests', (): void => {
-    it('Should exist Policy', (): void => {
+    it('Should exist LoginButton', (): void => {
       const wrapper = shallow(<App />);
       // eslint-disable-next-line no-unused-expressions
       expect(wrapper).to.exist;

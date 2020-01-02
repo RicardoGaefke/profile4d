@@ -9,7 +9,7 @@ import ConsentAction from './ConsentAction';
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('ConsentAction', (): void => {
+describe('Web.Identity -> ConsentCookie.ConsentAction', (): void => {
   const close = (): void => {};
 
   describe('Smoke Tests', (): void => {
