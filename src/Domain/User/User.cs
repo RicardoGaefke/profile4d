@@ -9,6 +9,7 @@ namespace Profile4d.Domain
     public string Email {get; set;}
     public string Password {get; set;}
     public bool KeepConnected {get; set;}
+    public string LastChanged {get; set;}
     public List<string> Roles {get; set;}
 
     public User(string email, string password, bool keepConnected)

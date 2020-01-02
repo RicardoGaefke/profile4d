@@ -15,7 +15,7 @@ namespace Profile4d.Data
       _connStr = ConnectionStrings;
     }
 
-    public bool Login(string email, string password)
+    public User Login(string email, string password)
     {
       using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
       {
@@ -36,11 +36,25 @@ namespace Profile4d.Data
             {
               MyDR.Read();
 
-              return MyDR.GetBoolean(0);
+              User MyUser = new User();
+
+              MyUser.Id = MyDR.GetInt32(0);
+              MyUser.Name = MyDR.GetString(1);
+              MyUser.Email = MyDR.GetString(2);
+              MyUser.LastChanged = MyDR.GetDateTime(3).ToString();
+
+              MyDR.NextResult();
+
+              while (MyDR.Read())
+              {
+                MyUser.Roles.Add(MyDR.GetString(0));
+              }
+
+              return MyUser;
             }
             else
             {
-              return false;
+              return new User();
             }
           }
         }
