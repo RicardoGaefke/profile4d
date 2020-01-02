@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Profile4d.Domain
 {
-  public class User
+  public class User : BasicReturn
   {
     public int Id {get; set;}
     public string Name {get; set;}

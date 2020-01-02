@@ -17,6 +17,8 @@ namespace Profile4d.Data
 
     public User Login(string email, string password)
     {
+      User _myUser = new User();
+      
       using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
       {
         using (SqlCommand Cmd = new SqlCommand())
@@ -36,42 +38,39 @@ namespace Profile4d.Data
             {
               MyDR.Read();
 
-              User MyUser = new User();
-
-              MyUser.Id = MyDR.GetInt32(0);
-              MyUser.Name = MyDR.GetString(1);
-              MyUser.Email = MyDR.GetString(2);
-              MyUser.LastChanged = MyDR.GetDateTime(3).ToString();
+              _myUser.Id = MyDR.GetInt32(0);
+              _myUser.Name = MyDR.GetString(1);
+              _myUser.Email = MyDR.GetString(2);
+              _myUser.LastChanged = MyDR.GetDateTime(3).ToString();
 
               MyDR.NextResult();
 
               while (MyDR.Read())
               {
-                MyUser.Roles.Add(MyDR.GetString(0));
+                _myUser.Roles.Add(MyDR.GetString(0));
               }
 
-              return MyUser;
+              _myUser.Success = true;
+
+              return _myUser;
             }
             else
             {
-              return new User();
+              _myUser.Success = false;
+
+              return _myUser;
             }
           }
         }
       }
     }
 
-    public bool ValidateLastChanged(string user, string lastChanged)
+    public BasicReturn ValidateLastChanged(string user, string lastChanged)
     {
-      try
-      {
-        int _user = Convert.ToInt32(user);
-        DateTime _lastChanged = new DateTime(Convert.ToInt32(lastChanged));
-      }
-      catch(System.Exception)
-      {
-          return false;
-      }
+      BasicReturn _return = new BasicReturn();
+
+      int _user = Convert.ToInt32(user);
+      DateTime _lastChanged = new DateTime(Convert.ToInt32(lastChanged));
 
       using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
       {
@@ -92,15 +91,17 @@ namespace Profile4d.Data
             {
               MyDR.Read();
 
-              return MyDR.GetBoolean(0);
+              _return.Success = MyDR.GetBoolean(0);
             }
             else
             {
-              return false;
+              _return.Success = false;
             }
           }
         }
       }
+
+      return _return;
     }
   }
 }

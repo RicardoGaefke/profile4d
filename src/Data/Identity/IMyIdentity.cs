@@ -5,6 +5,6 @@ namespace Profile4d.Data
   public interface IMyIdentity
   {
     public User Login(string email, string password);
-    public bool ValidateLastChanged(string user, string lastChanged);
+    public BasicReturn ValidateLastChanged(string user, string lastChanged);
   }
 }
