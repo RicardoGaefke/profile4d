@@ -110,5 +110,26 @@ namespace Profile4d.Web.Api.Controllers
         return _return;
       }
     }
+
+    [HttpGet("SignOut")]
+    public async Task<ActionResult<BasicReturn>> SignOut()
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+        _return.Success = true;
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+          _return.Success = false;
+          _return.Message = ex.Message;
+
+          return _return;
+      }
+    }
   }
 }
