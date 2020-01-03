@@ -5,9 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Profile4d.Data;
 using Profile4d.Domain;
 
@@ -27,11 +25,20 @@ namespace Profile4d.Web.Api.Controllers
     }
 
     [HttpGet("SignIn")]
-    public async Task<ActionResult<bool>> SingIn(User user)
+    public async Task<ActionResult<User>> SignIn(User user)
     {
+      User _return = new User();
+
       try
       {
-        User _myUser = _myIdentity.Login(user.Email, user.Password);
+        User _myUser = _myIdentity.SignIn(user.Email, user.Password);
+
+        if (!_myUser.Success)
+        {
+          _return.Success = false;
+
+          return _return;
+        }
 
         var claims = new List<Claim>
         {
@@ -83,11 +90,48 @@ namespace Profile4d.Web.Api.Controllers
           authProperties
         );
 
-        return true;
+        _return.Name = _myUser.Name;
+        _return.Email = _myUser.Email;
+        _return.IsAuthenticated = HttpContext.User.Identity.IsAuthenticated;
+        _return.Success = true;
+        _return.Message = "SignIn ok";
+
+        return _return;
       }
-      catch (System.Exception)
+      catch (System.Exception ex)
       {
-        return false;
+        _return.Success = false;
+        _return.Code = "Error";
+        _return.Message = ex.Message;
+        _return.Email = "Error";
+        _return.Name = ex.Message;
+        _return.Password = ex.StackTrace;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("SignOut")]
+    public async Task<ActionResult<BasicReturn>> SignOut()
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        int _userID = Convert.ToInt32(User.FindFirst(claim => claim.Type == "UserID")?.Value);
+        _myIdentity.SignOut(_userID);
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
       }
     }
   }

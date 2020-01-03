@@ -4,6 +4,7 @@ namespace Profile4d.Domain
   {
     public bool Success;
     public string Message;
+    public string Details;
     public string Code;
     public string Url;
   }
