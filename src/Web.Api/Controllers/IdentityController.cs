@@ -31,7 +31,7 @@ namespace Profile4d.Web.Api.Controllers
 
       try
       {
-        User _myUser = _myIdentity.Login(user.Email, user.Password);
+        User _myUser = _myIdentity.SignIn(user.Email, user.Password);
 
         if (!_myUser.Success)
         {
@@ -118,17 +118,20 @@ namespace Profile4d.Web.Api.Controllers
 
       try
       {
+        int _userID = Convert.ToInt32(User.FindFirst(claim => claim.Type == "UserID")?.Value);
+        _myIdentity.SignOut(_userID);
         await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
         _return.Success = true;
+
         return _return;
       }
       catch (System.Exception ex)
       {
-          _return.Success = false;
-          _return.Message = ex.Message;
+        _return.Success = false;
+        _return.Message = ex.Message;
 
-          return _return;
+        return _return;
       }
     }
   }
