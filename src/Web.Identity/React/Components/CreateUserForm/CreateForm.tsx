@@ -31,7 +31,7 @@ export default withTranslation()(
     setLanguage();
 
     return (
-      <div className={classes.main}>
+      <div className={classes.main} id="teste">
         <Typography
           gutterBottom
           align="center"
