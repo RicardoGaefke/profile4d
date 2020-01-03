@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.Extensions.Options;
 using System.Data;
 using System.Data.SqlClient;
@@ -15,7 +16,7 @@ namespace Profile4d.Data
       _connStr = ConnectionStrings;
     }
 
-    public User Login(string email, string password)
+    public User SignIn(string email, string password)
     {
       User _myUser = new User();
       
@@ -25,7 +26,7 @@ namespace Profile4d.Data
         {
           Cmd.CommandType = CommandType.StoredProcedure;
           Cmd.Connection = Con;
-          Cmd.CommandText = "[sp_LOGIN]";
+          Cmd.CommandText = "[sp_SIGNIN]";
 
           Cmd.Parameters.AddWithValue("@EMAIL", email);
           Cmd.Parameters.AddWithValue("@PASSWORD", password);
@@ -36,6 +37,8 @@ namespace Profile4d.Data
           {
             if (MyDR.HasRows)
             {
+              List<string> _roles = new List<string>();
+              
               MyDR.Read();
 
               _myUser.Id = MyDR.GetInt32(0);
@@ -47,9 +50,10 @@ namespace Profile4d.Data
 
               while (MyDR.Read())
               {
-                _myUser.Roles.Add(MyDR.GetString(0));
+                _roles.Add(MyDR.GetString(0));
               }
 
+              _myUser.Roles = _roles;
               _myUser.Success = true;
 
               return _myUser;
@@ -102,6 +106,25 @@ namespace Profile4d.Data
       }
 
       return _return;
+    }
+
+    public void SignOut(int UserID)
+    {
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_SIGNOUT]";
+
+          Cmd.Parameters.AddWithValue("@USER", UserID);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
     }
   }
 }
