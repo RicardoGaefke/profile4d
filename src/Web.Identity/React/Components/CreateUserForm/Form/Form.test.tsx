@@ -3,7 +3,7 @@ import chai, { expect } from 'chai';
 import Enzyme, { mount } from 'enzyme';
 import chaiEnzyme from 'chai-enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { withFormik } from 'formik';
+import { withFormik, validateYupSchema } from 'formik';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
@@ -74,6 +74,12 @@ describe('Web.Identity -> CreateUserForm.Form', (): void => {
       });
     });
   });
+  describe('ValidationSchema Tests', (): void => {
+    it('Should MyForm with ValidationSchema return equal Validation by default', (): void => {
+      const wrapper = mount(<CreateUser />);
+      expect(wrapper.find(MyForm).props())
+    });
+  });
   describe('Values Tests', (): void => {
     it('Should MyForm with Name initialValue equal empty by default', (): void => {
       const wrapper = mount(<CreateUser />);
@@ -138,6 +144,12 @@ describe('Web.Identity -> CreateUserForm.Form', (): void => {
     it('Should MyForm with touched.ConfirmPassword equal undefined by default', (): void => {
       const wrapper = mount(<CreateUser />);
       expect(wrapper.find(CreateUserForm).props().touched.ConfirmPassword).equal(undefined);
+    });
+  });
+  describe('Touched Tests', (): void => {
+    it('Should MyForm with touched.Name equal undefined by default', (): void => {
+      const wrapper = mount(<CreateUser />);
+      expect(wrapper.find(CreateUserForm).props().i18n.getFixedT).eql({ setSubmitting: false });
     });
   });
 });
