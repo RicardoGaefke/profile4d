@@ -32,4 +32,8 @@ export default {
     text: 'Criar credenciais de acesso',
     title: 'Clique aqui para fazer teu cadastro',
   },
+  feedback: {
+    success: 'Você fez login com sucesso',
+    failure: 'Não foi possível fazer login',
+  },
 } as ILanguage;

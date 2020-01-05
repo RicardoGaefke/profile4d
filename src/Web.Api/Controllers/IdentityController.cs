@@ -15,16 +15,16 @@ namespace Profile4d.Web.Api.Controllers
   [Route("[controller]")]
   public class IdentityController : ControllerBase
     {
-    private readonly ILogger<WeatherForecastController> _logger;
+    private readonly ILogger<IdentityController> _logger;
     private readonly MyIdentity _myIdentity;
 
-    public IdentityController(ILogger<WeatherForecastController> logger, MyIdentity myIdentity)
+    public IdentityController(ILogger<IdentityController> logger, MyIdentity myIdentity)
     {
       _logger = logger;
       _myIdentity = myIdentity;
     }
 
-    [HttpGet("SignIn")]
+    [HttpPost("SignIn")]
     public async Task<ActionResult<User>> SignIn(User user)
     {
       User _return = new User();
@@ -36,6 +36,7 @@ namespace Profile4d.Web.Api.Controllers
         if (!_myUser.Success)
         {
           _return.Success = false;
+          _return.Message = "failed";
 
           return _return;
         }

@@ -1,8 +1,18 @@
-import axios from 'axios';
+// eslint-disable-next-line no-unused-vars
+import axios, { AxiosInstance } from 'axios';
 
-axios.defaults.withCredentials = true;
+export default (host: string): AxiosInstance => {
+  let myHost;
 
-export default axios.create({
-  baseURL: '/api/',
-  withCredentials: true,
-});
+  if (host.includes('localhost')) {
+    myHost = 'https://localhost:5065/';
+  } else if (host.includes('staging')) {
+    myHost = 'https://api.staging.profile4d.com/';
+  } else {
+    myHost = 'https://api.profile4d.com/';
+  }
+  return axios.create({
+    baseURL: myHost,
+    withCredentials: true,
+  });
+};

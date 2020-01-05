@@ -69,7 +69,7 @@ namespace Profile4d.Data
       }
     }
 
-    public BasicReturn ValidateLastChanged(string user, string lastChanged)
+    public BasicReturn ValidateLastChanged(string user, string lastChanged, string url)
     {
       BasicReturn _return = new BasicReturn();
 
@@ -86,6 +86,7 @@ namespace Profile4d.Data
 
           Cmd.Parameters.AddWithValue("@USER", user);
           Cmd.Parameters.AddWithValue("@LAST_CHANGED", lastChanged);
+          Cmd.Parameters.AddWithValue("@URL", url);
 
           Con.Open();
 

@@ -1,6 +1,7 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+// eslint-disable-next-line no-unused-vars
+import { createMuiTheme, Theme } from '@material-ui/core/styles';
 
-const MyTheme = (t: string = 'dark'): any => {
+const MyTheme = (t: string = 'dark'): Theme => {
   const myThemeDark = createMuiTheme({
     shape: {
       borderRadius: 0,
@@ -20,7 +21,6 @@ const MyTheme = (t: string = 'dark'): any => {
   });
 
   return (t === 'light') ? myThemeLight : myThemeDark;
-  // return myThemeLight;
 };
 
 export default MyTheme;

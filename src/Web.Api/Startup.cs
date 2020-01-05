@@ -11,7 +11,7 @@ namespace Profile4d.Web.Api
 {
   public class Startup
   {
-    public Startup(IConfiguration configuration, Microsoft.Extensions.Hosting.IHostEnvironment hostEnvironment)
+    public Startup(IConfiguration configuration, IHostEnvironment hostEnvironment)
     {
         Configuration = configuration;
         HostEnvironment = hostEnvironment;
@@ -19,7 +19,7 @@ namespace Profile4d.Web.Api
 
     // readonly string RicardoGaefkeCors = "_ricardoGaefkeCors";
     public IConfiguration Configuration { get; }
-    public Microsoft.Extensions.Hosting.IHostEnvironment HostEnvironment { get; }
+    public IHostEnvironment HostEnvironment { get; }
 
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
@@ -50,7 +50,9 @@ namespace Profile4d.Web.Api
         })
       ;
 
-      services.AddSwaggerDocument();
+      services.AddSwaggerDocument(options => {
+        options.Title = "API for Profile4d";
+      });
     }
 
       // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -76,7 +78,6 @@ namespace Profile4d.Web.Api
 
       app.UseEndpoints(endpoints =>
       {
-        // endpoints.MapControllers().RequireCors(RicardoGaefkeCors);
         endpoints.MapControllers();
       });
     }

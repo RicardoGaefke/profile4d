@@ -1,4 +1,6 @@
-export interface IInitialContext {
+import { IBasicReturn } from './IBasicReturn';
+
+export interface IInitialContext extends IBasicReturn {
   Language: string,
   Theme: string,
   ConsentCookie: boolean,
