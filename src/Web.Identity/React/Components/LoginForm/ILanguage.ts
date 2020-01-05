@@ -29,4 +29,8 @@ export interface ILanguage {
     title: string,
     text: string,
   },
+  feedback: {
+    success: string,
+    failure: string,
+  },
 }

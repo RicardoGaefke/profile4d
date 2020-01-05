@@ -92,6 +92,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
             helperText={(errors.Password && touched.Password) && errors.Password}
             variant="outlined"
             className={classes.item}
+            type="password"
             fullWidth
           />
         </Grid>
