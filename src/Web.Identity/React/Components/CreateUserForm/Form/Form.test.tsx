@@ -3,7 +3,8 @@ import chai, { expect } from 'chai';
 import Enzyme, { mount } from 'enzyme';
 import chaiEnzyme from 'chai-enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { withFormik, validateYupSchema } from 'formik';
+import { TextField, Button } from '@material-ui/core';
+import { withFormik } from 'formik';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
@@ -11,9 +12,6 @@ import { ICreateUser } from '../../../../../TypeScript/Interfaces/ICreateUser';
 import Validation from './Form.Validation';
 import InitialValues from './Form.InitialValues';
 import CreateUserForm from './Form';
-// import MyStateProvider from '../../../Initial/Context/AppContext';
-// import appData from '../../../Initial/Context/InitialContext';
-// import MyApp from '../../../Initial/Tests/TestsApp';
 
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
@@ -48,6 +46,62 @@ describe('Web.Identity -> CreateUserForm.Form', (): void => {
       expect(wrapper.find(CreateUserForm)).to.exist;
     });
   });
+  describe('Tags Existence', (): void => {
+    it('Should MyForm return a tag form equal 1 when is called', (): void => {
+      const wrapper = mount(<CreateUser />);
+      expect(wrapper.find(MyForm).find('form')).to.have.length(1);
+    });
+    it('Should MyForm return a tag TextField equal 5 when is called', (): void => {
+      const wrapper = mount(<CreateUser />);
+      expect(wrapper.find(MyForm).find(TextField)).to.have.length(5);
+    });
+    it('Should MyForm return a tag Button equal 1 when is called', (): void => {
+      const wrapper = mount(<CreateUser />);
+      expect(wrapper.find(MyForm).find(Button)).to.have.length(1);
+    });
+  });
+  describe('Form Properties', (): void => {
+    describe('TextField Properties', (): void => {
+      it('Should return a TextField in node 0 with correct name by default', (): void => {
+        const wrapper = mount(<CreateUser />);
+        expect(wrapper.find(MyForm).find(TextField).get(0).props.name).equal('Name');
+      });
+      it('Should return a TextField in node 1 with correct name by default', (): void => {
+        const wrapper = mount(<CreateUser />);
+        expect(wrapper.find(MyForm).find(TextField).get(1).props.name).equal('Email');
+      });
+      it('Should return a TextField in node 2 with correct name by default', (): void => {
+        const wrapper = mount(<CreateUser />);
+        expect(wrapper.find(MyForm).find(TextField).get(2).props.name).equal('ConfirmEmail');
+      });
+      it('Should return a TextField in node 3 with correct name by default', (): void => {
+        const wrapper = mount(<CreateUser />);
+        expect(wrapper.find(MyForm).find(TextField).get(3).props.name).equal('Password');
+      });
+      it('Should return a TextField in node 4 with correct name by default', (): void => {
+        const wrapper = mount(<CreateUser />);
+        expect(wrapper.find(MyForm).find(TextField).get(4).props.name).equal('ConfirmPassword');
+      });
+    });
+    describe('Button Properties', (): void => {
+      it('Should return a Button with type "submit" by default', (): void => {
+        const wrapper = mount(<CreateUser />);
+        expect(wrapper.find(MyForm).find(Button).props().type).equal('submit');
+      });
+      it('Should return a Button with correct title by default', (): void => {
+        const wrapper = mount(<CreateUser />);
+        expect(wrapper.find(MyForm).find(Button).props().title).equal('button.title');
+      });
+      it('Should return a Button with type disabled: isSubmitting equal "false" by default', (): void => {
+        const wrapper = mount(<CreateUser />);
+        expect(wrapper.find(MyForm).find(Button).props().disabled).equal(false);
+      });
+      it('Should return a Button with correct children by default', (): void => {
+        const wrapper = mount(<CreateUser />);
+        expect(wrapper.find(MyForm).find(Button).props().children).equal('button.text');
+      });
+    });
+  });
   describe('Props Tests', (): void => {
     describe('Props -> i18n', (): void => {
       it('Should MyForm with i18n has been initialized by default', (): void => {
@@ -72,12 +126,6 @@ describe('Web.Identity -> CreateUserForm.Form', (): void => {
         const wrapper = mount(<CreateUser />);
         expect(wrapper.find(MyForm).props().tReady.valueOf()).equal(true);
       });
-    });
-  });
-  describe('ValidationSchema Tests', (): void => {
-    it('Should MyForm with ValidationSchema return equal Validation by default', (): void => {
-      const wrapper = mount(<CreateUser />);
-      expect(wrapper.find(MyForm).props())
     });
   });
   describe('Values Tests', (): void => {
@@ -144,12 +192,6 @@ describe('Web.Identity -> CreateUserForm.Form', (): void => {
     it('Should MyForm with touched.ConfirmPassword equal undefined by default', (): void => {
       const wrapper = mount(<CreateUser />);
       expect(wrapper.find(CreateUserForm).props().touched.ConfirmPassword).equal(undefined);
-    });
-  });
-  describe('Touched Tests', (): void => {
-    it('Should MyForm with touched.Name equal undefined by default', (): void => {
-      const wrapper = mount(<CreateUser />);
-      expect(wrapper.find(CreateUserForm).props().i18n.getFixedT).eql({ setSubmitting: false });
     });
   });
 });
