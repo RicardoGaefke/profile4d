@@ -32,4 +32,8 @@ export default {
     text: 'Create new credentials',
     title: 'Click here to create new credentials',
   },
+  feedback: {
+    success: 'Successfully logged in',
+    failure: 'You were not able to log in',
+  },
 } as ILanguage;

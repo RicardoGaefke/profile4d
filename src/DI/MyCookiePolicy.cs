@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
@@ -29,8 +30,7 @@ public class CustomCookieAuthenticationEvents : CookieAuthenticationEvents
                        select c.Value).FirstOrDefault()
     ;
 
-    // if (string.IsNullOrEmpty(lastChanged))
-    if (string.IsNullOrEmpty(lastChanged) || !_myIdentity.ValidateLastChanged(userID, lastChanged).Success)
+    if (string.IsNullOrEmpty(lastChanged) || !_myIdentity.ValidateLastChanged(userID, lastChanged, context.Request.Host.ToString()).Success)
     {
       context.RejectPrincipal();
 

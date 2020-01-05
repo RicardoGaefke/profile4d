@@ -1,6 +1,8 @@
 import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
+// eslint-disable-next-line no-unused-vars
+import { withSnackbar, WithSnackbarProps } from 'notistack';
 import { withFormik } from 'formik';
 import { Typography, Divider } from '@material-ui/core';
 import useStyles from './Styles';
@@ -16,22 +18,40 @@ import myAxios from '../../Utils/MyAxios';
 // eslint-disable-next-line no-unused-vars
 import { IInitialContext } from '../../../../TypeScript/Interfaces/IInitialContext';
 
-const MyForm = withFormik<WithTranslation, ILoginForm>({
+const MyForm = withFormik<WithTranslation & WithSnackbarProps, ILoginForm>({
   displayName: 'LoginForm',
   enableReinitialize: true,
   mapPropsToValues: (): ILoginForm => (InitialValues),
   validationSchema: Validation,
-  handleSubmit: async (values, { setSubmitting }): Promise<void> => {
-    await myAxios.post<IInitialContext>('sign/in', {
+  handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
+    const { enqueueSnackbar, t } = props;
+
+    await myAxios(window.location.href).post<IInitialContext>('Identity/SignIn', {
       Email: values.Email,
       Password: values.Password,
       KeepConnected: values.KeepConnected,
+    }).then((response): void => {
+      const { data } = response;
+
+      if (data.Success) {
+        enqueueSnackbar(t('LoginForm:feedback.success'), {
+          variant: 'success',
+        });
+      } else {
+        enqueueSnackbar(t('LoginForm:feedback.failure'), {
+          variant: 'error',
+        });
+      }
+    }).catch((): void => {
+      enqueueSnackbar(t('LoginForm:feedback.failure'), {
+        variant: 'error',
+      });
     });
     setSubmitting(false);
   },
 })(LoginForm);
 
-const Login = withTranslation()(MyForm);
+const Login = withTranslation()(withSnackbar(MyForm));
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
