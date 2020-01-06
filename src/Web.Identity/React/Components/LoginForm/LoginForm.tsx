@@ -17,6 +17,7 @@ import { ILoginForm } from '../../../../TypeScript/Interfaces/ILoginForm';
 import myAxios from '../../Utils/MyAxios';
 // eslint-disable-next-line no-unused-vars
 import { IInitialContext } from '../../../../TypeScript/Interfaces/IInitialContext';
+import StateContext from '../../Initial/Context/StateProvider';
 
 const MyForm = withFormik<WithTranslation & WithSnackbarProps, ILoginForm>({
   displayName: 'LoginForm',
@@ -25,7 +26,6 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps, ILoginForm>({
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-
     await myAxios(window.location.href).post<IInitialContext>('Identity/SignIn', {
       Email: values.Email,
       Password: values.Password,
@@ -37,6 +37,19 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps, ILoginForm>({
         enqueueSnackbar(t('LoginForm:feedback.success'), {
           variant: 'success',
         });
+
+        // dispatch({
+        //   type: 'changeAuth',
+        //   value: data.IsAuthenticated,
+        // });
+        // dispatch({
+        //   type: 'changeName',
+        //   value: data.Name,
+        // });
+        // dispatch({
+        //   type: 'changeEmail',
+        //   value: data.Email,
+        // });
       } else {
         enqueueSnackbar(t('LoginForm:feedback.failure'), {
           variant: 'error',
