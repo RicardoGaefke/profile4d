@@ -1,15 +1,14 @@
-// eslint-disable-next-line no-unused-vars
-import React, { ReactElement } from 'react';
+import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { IInitialContext } from '../../../../TypeScript/Interfaces/IInitialContext';
 import { StateProvider } from './StateProvider';
 
 interface IMyStateProvider {
-  children: ReactElement,
+  children: React.ReactElement,
   initialContext: IInitialContext,
 }
 
-const MyStateProvider = (props: IMyStateProvider): React.ReactElement<any> => {
+const MyStateProvider = (props: IMyStateProvider): React.ReactElement => {
   const { children, initialContext } = props;
 
   const reducer = (state: IInitialContext, action: any): IInitialContext => {
