@@ -37,15 +37,15 @@ describe('Web.Identity -> ForgotForm.Form', (): void => {
     });
   });
   describe('Tags Existence', (): void => {
-    it('Should ForgotForm return a tag form equal 1 when is called', (): void => {
+    it('Should ForgotForm return a tag form length equal 1 when is called', (): void => {
       const wrapper = mount(<Forgot />);
       expect(wrapper.find(ForgotForm).find('form')).to.have.length(1);
     });
-    it('Should ForgotForm return a tag TextField equal 5 when is called', (): void => {
+    it('Should ForgotForm return a tag TextField length equal 5 when is called', (): void => {
       const wrapper = mount(<Forgot />);
       expect(wrapper.find(ForgotForm).find(TextField)).to.have.length(1);
     });
-    it('Should ForgotForm return a tag Button equal 1 when is called', (): void => {
+    it('Should ForgotForm return a tag Button length equal 1 when is called', (): void => {
       const wrapper = mount(<Forgot />);
       expect(wrapper.find(ForgotForm).find(Button)).to.have.length(1);
     });
