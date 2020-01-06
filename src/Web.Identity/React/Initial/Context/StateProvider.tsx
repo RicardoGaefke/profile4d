@@ -4,7 +4,7 @@ import React, {
 // eslint-disable-next-line no-unused-vars
 import { IInitialContext } from '../../../../TypeScript/Interfaces/IInitialContext';
 
-const StateContext = createContext<IInitialContext | any>({});
+export const StateContext = createContext<IInitialContext | any>({});
 
 interface IStateProvider {
   reducer: React.Reducer<{}, {}>,
@@ -12,7 +12,7 @@ interface IStateProvider {
   MyInitialState: IInitialContext,
 }
 
-export const StateProvider = (props: IStateProvider): React.ReactElement<any> => {
+export const StateProvider = (props: IStateProvider): React.ReactElement => {
   const { reducer, children, MyInitialState } = props;
 
   return (

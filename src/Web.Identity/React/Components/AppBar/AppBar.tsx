@@ -9,11 +9,11 @@ import LoginButton from './BtnLogin/LoginButton';
 import ConfigButton from './BtnConfig/ConfigButton';
 
 export default (): React.ReactElement => {
-  const [{ language }] = useStateValue();
+  const [{ Language, IsAuthenticated }] = useStateValue();
   const classes = useStyles({});
 
   return (
-    <div className={classes.root} key={language}>
+    <div className={classes.root} key={Language}>
       <AppBar position="fixed">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
@@ -31,7 +31,9 @@ export default (): React.ReactElement => {
               />
             </Link>
           </Typography>
-          <LoginButton />
+          {
+            (IsAuthenticated) ? (<LoginButton />) : null
+          }
           <ConfigButton />
         </Toolbar>
       </AppBar>
