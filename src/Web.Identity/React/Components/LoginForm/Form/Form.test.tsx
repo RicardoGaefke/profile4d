@@ -8,6 +8,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import { withFormik } from 'formik';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
+import { TextField, Checkbox, Button } from '@material-ui/core';
 import InitialValues from './Form.InitialValues';
 import Validation from './Form.Validation';
 // eslint-disable-next-line no-unused-vars
@@ -16,7 +17,6 @@ import myAxios from '../../../Utils/MyAxios';
 // eslint-disable-next-line no-unused-vars
 import { IInitialContext } from '../../../../../TypeScript/Interfaces/IInitialContext';
 import LoginFormUser from './Form';
-import { TextField, Checkbox, Button } from '@material-ui/core';
 
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
