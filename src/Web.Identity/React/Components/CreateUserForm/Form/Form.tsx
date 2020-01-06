@@ -10,7 +10,7 @@ import { FormikProps } from 'formik';
 import { ICreateUser } from '../../../../../TypeScript/Interfaces/ICreateUser';
 import useStyles from './Form.Styles';
 
-type IForm = FormikProps<ICreateUser> & WithTranslation;
+export type IForm = FormikProps<ICreateUser> & WithTranslation;
 
 export default (props: IForm): React.ReactElement<IForm> => {
   const classes = useStyles({});
