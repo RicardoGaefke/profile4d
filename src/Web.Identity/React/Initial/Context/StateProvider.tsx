@@ -23,3 +23,11 @@ export const StateProvider = (props: IStateProvider): React.ReactElement => {
 };
 
 export const useStateValue = (): IInitialContext | any => useContext(StateContext);
+
+export const withContext = (Component): any => (props: React.Props<any>): React.ReactElement => (
+  <StateContext.Consumer>
+    {(context): React.ReactElement => (
+      <Component {...props} context={context} />
+    )}
+  </StateContext.Consumer>
+);
