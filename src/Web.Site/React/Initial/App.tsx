@@ -27,15 +27,6 @@ const MyApp = (): React.ReactElement<any> => {
   return (
     <ThemeProvider theme={myTheme(Theme)}>
       <div className={classes.body}>
-        {/* <AppBar />
-        <div className={classes.main}>
-          <ErrorBoundary>
-            <RootRouter />
-          </ErrorBoundary>
-        </div>
-        <Footer />
-        {(ConsentCookie) ? <MyConsentCookie /> : null}
-        <ConfigDrawer /> */}
         <SnackbarProvider
           maxSnack={3}
           hideIconVariant={false}
