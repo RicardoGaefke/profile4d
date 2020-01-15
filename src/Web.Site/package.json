@@ -65,6 +65,7 @@
     "jsdom": "^15.2.1",
     "jsdom-global": "^3.0.2",
     "material-ui-dropzone": "^2.4.5",
+    "notistack": "^0.9.7",
     "prop-types": "^15.7.2",
     "psl": "^1.6.0",
     "react": "^16.12.0",
