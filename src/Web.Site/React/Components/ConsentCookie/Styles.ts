@@ -15,7 +15,7 @@ export default makeStyles((theme: Theme): IStyles => ({
       maxWidth: 500,
       position: 'fixed',
       bottom: 40,
-      right: 40,
+      left: 2,
     },
   },
 }));
