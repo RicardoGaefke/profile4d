@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { ThemeProvider } from '@material-ui/styles';
 import { CssBaseline } from '@material-ui/core';
 import { withTranslation, useTranslation } from 'react-i18next';
+import { SnackbarProvider } from 'notistack';
 import { useStateValue } from './Context/StateProvider';
 import './i18n/language';
 import myTheme from './Theme/Theme';
@@ -26,7 +27,7 @@ const MyApp = (): React.ReactElement<any> => {
   return (
     <ThemeProvider theme={myTheme(Theme)}>
       <div className={classes.body}>
-        <AppBar />
+        {/* <AppBar />
         <div className={classes.main}>
           <ErrorBoundary>
             <RootRouter />
@@ -34,7 +35,27 @@ const MyApp = (): React.ReactElement<any> => {
         </div>
         <Footer />
         {(ConsentCookie) ? <MyConsentCookie /> : null}
-        <ConfigDrawer />
+        <ConfigDrawer /> */}
+        <SnackbarProvider
+          maxSnack={3}
+          hideIconVariant={false}
+          anchorOrigin={{
+            horizontal: 'right',
+            vertical: 'bottom',
+          }}
+          autoHideDuration={6000}
+          dense
+        >
+          <AppBar />
+          {(ConsentCookie) ? <MyConsentCookie /> : null}
+          <div className={classes.main}>
+            <ErrorBoundary>
+              <RootRouter />
+            </ErrorBoundary>
+          </div>
+          <Footer />
+          <ConfigDrawer />
+        </SnackbarProvider>
       </div>
       <CssBaseline />
     </ThemeProvider>
