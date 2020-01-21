@@ -37,7 +37,12 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps, ILoginForm>({
           variant: 'success',
         });
 
-        //  window.location = admin
+        const UrlParams = new URLSearchParams(window.location.search);
+        const MyUrl = UrlParams.get('ReturnUrl');
+
+        if (MyUrl !== null) {
+          window.location.href = MyUrl;
+        }
       } else {
         enqueueSnackbar(t('LoginForm:feedback.failure'), {
           variant: 'error',

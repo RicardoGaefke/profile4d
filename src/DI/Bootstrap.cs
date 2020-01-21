@@ -136,7 +136,7 @@ namespace Profile4d.DI
             {
               OnRedirectToLogin = (context) =>
               {
-                context.HttpContext.Response.Redirect("https://localhost:5055?ReturnUrl=" + context.Request.Host.Value);
+                context.HttpContext.Response.Redirect("https://localhost:5055?ReturnUrl=https://" + context.Request.Host.Value);
                 // context.HttpContext.Response.StatusCode = 401;
                 return Task.CompletedTask;
               },
