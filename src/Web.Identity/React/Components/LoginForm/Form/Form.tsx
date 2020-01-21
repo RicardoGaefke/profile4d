@@ -14,7 +14,6 @@ export type IForm = FormikProps<ILoginForm> & WithTranslation;
 
 export default (props: IForm): React.ReactElement<IForm> => {
   const classes = useStyles({});
-  // eslint-disable-next-line no-unused-vars
   const { t, i18n } = useTranslation('LoginForm');
   const {
     values,

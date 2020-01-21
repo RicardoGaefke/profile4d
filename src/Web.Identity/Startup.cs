@@ -45,9 +45,7 @@ namespace Profile4d.Web.Identity
         {
           if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
           {
-            // options.ProjectPath = Path.Combine(Directory.GetCurrentDirectory(), "site/wwwroot");
             options.ProjectPath = Path.GetFullPath("/home/site/wwwroot");
-            // options.ProjectPath = Path.GetFullPath("/usr/local/bin/node");
           }
         }
       );

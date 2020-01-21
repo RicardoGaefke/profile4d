@@ -37,18 +37,7 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps, ILoginForm>({
           variant: 'success',
         });
 
-        // dispatch({
-        //   type: 'changeAuth',
-        //   value: data.IsAuthenticated,
-        // });
-        // dispatch({
-        //   type: 'changeName',
-        //   value: data.Name,
-        // });
-        // dispatch({
-        //   type: 'changeEmail',
-        //   value: data.Email,
-        // });
+        //  window.location = admin
       } else {
         enqueueSnackbar(t('LoginForm:feedback.failure'), {
           variant: 'error',
