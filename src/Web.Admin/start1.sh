@@ -7,4 +7,4 @@ apt-get install -y nodejs
 set -e
 export PORT=8080
 export ASPNETCORE_URLS=http://*:$PORT
-dotnet "Web.Identity.dll"
+dotnet "Web.Admin.dll"
