@@ -19,7 +19,7 @@ export default withTranslation()(
 
       if (window.location.href.includes('staging')) {
         const loginUrl = new Href('www.staging.profile4d.com');
-        window.location.href = loginUrl.toLogin();
+        window.location.href = `https://${loginUrl.toLogin()}`;
         return;
       }
 
