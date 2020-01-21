@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Grid, Typography } from '@material-ui/core';
 import useStyles from './Styles';
-import LoginRouter from '../Router/LoginRouter';
+// import LoginRouter from '../Router/LoginRouter';
 
 export default (): React.ReactElement => {
   const classes = useStyles({});
@@ -31,13 +31,15 @@ export default (): React.ReactElement => {
             />
           </Typography>
         </Grid>
-        <Grid
+        {/* <Grid
           item
           md={6}
           xs={12}
         >
-          <LoginRouter />
-        </Grid>
+          <p>
+            Teste
+          </p>
+        </Grid> */}
       </Grid>
     </Container>
   );
