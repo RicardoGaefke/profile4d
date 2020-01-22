@@ -11,6 +11,7 @@ export default makeStyles((theme: Theme): IStyles => ({
   root: {
     flexGrow: 0,
     marginTop: 65,
+    zIndex: theme.zIndex.drawer + 1,
   },
   title: {
     flexGrow: 1,

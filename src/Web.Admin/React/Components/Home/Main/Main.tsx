@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Grid, Typography } from '@material-ui/core';
+import MyDrawer from '../../Drawer/Drawer';
 import useStyles from './Styles';
 // import LoginRouter from '../Router/LoginRouter';
 
@@ -7,7 +8,8 @@ export default (): React.ReactElement => {
   const classes = useStyles({});
 
   return (
-    <Container maxWidth="md" className={classes.container}>
+    <Container className={classes.container}>
+      <MyDrawer />
       <Grid
         container
         spacing={2}

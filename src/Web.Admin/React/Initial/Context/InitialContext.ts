@@ -9,6 +9,6 @@ export default {
   Name: 'Profile4d',
   Email: '',
   KeepConnected: false,
-  Drawer: false,
+  Drawer: true,
   IsAuthenticated: false,
 } as IInitialContext;
