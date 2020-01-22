@@ -1,14 +1,14 @@
 import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
-import { Typography, Divider, Drawer as MyDrawer } from '@material-ui/core';
+import { Divider, Drawer as MyDrawer } from '@material-ui/core';
 import setLanguage from './Language';
 import { useStateValue } from '../../Initial/Context/StateProvider';
 import Styles from './Styles';
+import FixedContentList from './FixedItemsList/FixedContentList';
 
 export default withTranslation()(
-  (props: WithTranslation): React.ReactElement<WithTranslation> => {
-    const { t } = props;
+  (): React.ReactElement<WithTranslation> => {
     const [{ Drawer }, dispatch] = useStateValue();
     const classes = Styles({});
     setLanguage();
@@ -27,9 +27,7 @@ export default withTranslation()(
         onClose={toggle}
       >
         <div className={classes.root}>
-          <Typography variant="h6">
-            {t('DrawerAdmin:title')}
-          </Typography>
+          <FixedContentList />
           <Divider className={classes.divider} />
         </div>
       </MyDrawer>

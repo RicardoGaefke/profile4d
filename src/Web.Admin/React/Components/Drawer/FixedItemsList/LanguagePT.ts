@@ -2,5 +2,5 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Config content',
+  title: 'Conteúdo fixo',
 } as ILanguage;
