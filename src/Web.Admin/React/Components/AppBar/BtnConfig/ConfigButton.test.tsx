@@ -56,9 +56,9 @@ describe('Web.Identity -> AppBar.ConfigButton', (): void => {
       const wrapper = shallow(<App />);
       expect(wrapper.find(MyStateProvider).props().initialContext.KeepConnected).equal(false);
     });
-    it('Should return App with Drawer context like "false" by default', (): void => {
+    it('Should return App with Drawer context like "true" by default', (): void => {
       const wrapper = shallow(<App />);
-      expect(wrapper.find(MyStateProvider).props().initialContext.Drawer).equal(false);
+      expect(wrapper.find(MyStateProvider).props().initialContext.Drawer).equal(true);
     });
     it('Should return App with IsAuthenticated context like "false" by default', (): void => {
       const wrapper = shallow(<App />);
