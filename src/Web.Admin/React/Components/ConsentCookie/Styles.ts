@@ -10,6 +10,8 @@ export default makeStyles((theme: Theme): IStyles => ({
   snackbar: {
     margin: theme.spacing(1),
     color: (theme.palette.type === 'dark') ? '#000' : '#fff',
+    zIndex: theme.zIndex.drawer + 1,
+    flexGrow: 0,
 
     '@media screen and (min-width: 768px)': {
       maxWidth: 500,

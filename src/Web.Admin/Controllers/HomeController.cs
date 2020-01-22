@@ -37,7 +37,7 @@ namespace Profile4d.Web.Admin.Controllers
         Email = "",
         Language = "PT",
         Theme = "light",
-        Drawer = false,
+        Drawer = true,
         Config = false
       });
       
