@@ -26,7 +26,10 @@ export default withTranslation()(
         className={classes.root}
       >
         <ListItem button>
-          <ListItemText primary="Drafts" />
+          <ListItemText primary="Primeira página" />
+        </ListItem>
+        <ListItem button>
+          <ListItemText primary="Segunda página" />
         </ListItem>
       </List>
     );
