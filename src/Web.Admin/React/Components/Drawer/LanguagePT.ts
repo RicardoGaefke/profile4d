@@ -2,5 +2,5 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Administração',
+  title: 'Conteúdo do sistema',
 } as ILanguage;

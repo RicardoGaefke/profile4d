@@ -9,7 +9,6 @@ interface IStyles {
 export default makeStyles((theme: Theme): IStyles => ({
   root: {
     minWidth: 200,
-    margin: theme.spacing(2),
     paddingTop: 65,
   },
   divider: {
