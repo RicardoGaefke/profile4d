@@ -30,7 +30,7 @@ export default withTranslation()(
       >
         {
           FixedItems.map((item: IStaticMenuItem): React.ReactNode => (
-            <ListItem button component={NavLink} to={`/fixedcontent/${item.link}`} title={t(`DrawerAdminFixed:${item.title}`)}>
+            <ListItem key={item.link} button component={NavLink} to={`/fixedcontent/${item.link}`} title={t(`DrawerAdminFixed:${item.title}`)}>
               <ListItemText primary={t(`DrawerAdminFixed:${item.title}`)} />
             </ListItem>
           ))
