@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Grid, Typography } from '@material-ui/core';
 import MyDrawer from '../../Drawer/Drawer';
 import useStyles from './Styles';
-// import LoginRouter from '../Router/LoginRouter';
 
 export default (): React.ReactElement => {
   const classes = useStyles({});
@@ -33,15 +32,6 @@ export default (): React.ReactElement => {
             />
           </Typography>
         </Grid>
-        {/* <Grid
-          item
-          md={6}
-          xs={12}
-        >
-          <p>
-            Teste
-          </p>
-        </Grid> */}
       </Grid>
     </Container>
   );

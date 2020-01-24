@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import {
@@ -25,11 +26,8 @@ export default withTranslation()(
         )}
         className={classes.root}
       >
-        <ListItem button>
+        <ListItem button component={NavLink} to="/fixedcontent/firstpage" title="Primeira página">
           <ListItemText primary="Primeira página" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary="Segunda página" />
         </ListItem>
       </List>
     );
