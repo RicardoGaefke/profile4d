@@ -52,6 +52,7 @@ namespace Profile4d.Web.Api
 
       services.AddSwaggerDocument(options => {
         options.Title = "API for Profile4d";
+        options.Version = "1.1";
       });
     }
 

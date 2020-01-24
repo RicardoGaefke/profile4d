@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import {
@@ -6,6 +7,8 @@ import {
 } from '@material-ui/core';
 import setLanguage from './Language';
 import Styles from './Styles';
+// eslint-disable-next-line no-unused-vars
+import FixedItems, { IStaticMenuItem } from './FixedItems';
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
@@ -25,12 +28,13 @@ export default withTranslation()(
         )}
         className={classes.root}
       >
-        <ListItem button>
-          <ListItemText primary="Primeira página" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary="Segunda página" />
-        </ListItem>
+        {
+          FixedItems.map((item: IStaticMenuItem): React.ReactNode => (
+            <ListItem key={item.link} button component={NavLink} to={`/fixedcontent/${item.link}`} title={t(`DrawerAdminFixed:${item.title}`)}>
+              <ListItemText primary={t(`DrawerAdminFixed:${item.title}`)} />
+            </ListItem>
+          ))
+        }
       </List>
     );
   },
