@@ -7,6 +7,8 @@ import {
 } from '@material-ui/core';
 import setLanguage from './Language';
 import Styles from './Styles';
+// eslint-disable-next-line no-unused-vars
+import FixedItems, { IStaticMenuItem } from './FixedItems';
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
@@ -26,9 +28,13 @@ export default withTranslation()(
         )}
         className={classes.root}
       >
-        <ListItem button component={NavLink} to="/fixedcontent/firstpage" title="Primeira página">
-          <ListItemText primary="Primeira página" />
-        </ListItem>
+        {
+          FixedItems.map((item: IStaticMenuItem): React.ReactNode => (
+            <ListItem button component={NavLink} to={`/fixedcontent/${item.link}`} title={t(`DrawerAdminFixed:${item.title}`)}>
+              <ListItemText primary={t(`DrawerAdminFixed:${item.title}`)} />
+            </ListItem>
+          ))
+        }
       </List>
     );
   },

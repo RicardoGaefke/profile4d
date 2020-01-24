@@ -3,4 +3,5 @@ import { ILanguage } from './ILanguage';
 
 export default {
   title: 'Fixed content',
+  firstpage: 'Fisrt page',
 } as ILanguage;
