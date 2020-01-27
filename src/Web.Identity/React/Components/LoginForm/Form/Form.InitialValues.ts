@@ -5,4 +5,5 @@ export default {
   Email: '',
   Password: '',
   KeepConnected: false,
+  ShowPassword: false,
 } as ILoginForm;

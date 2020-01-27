@@ -1,7 +1,8 @@
 import React from 'react';
 import {
-  Grid, TextField, Button, FormControlLabel, Checkbox,
+  Grid, TextField, Button, FormControlLabel, Checkbox, FormControl, InputLabel, OutlinedInput, IconButton, InputAdornment,
 } from '@material-ui/core';
+import { Visibility, VisibilityOff } from '@material-ui/icons';
 // eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
@@ -38,6 +39,13 @@ export default (props: IForm): React.ReactElement<IForm> => {
     checked: boolean,
   ): void => {
     setFieldValue('KeepConnected', !checked);
+  };
+
+  const handleClickShowPassword = (
+    event: React.MouseEvent,
+    checked: boolean,
+  ): void => {
+    setFieldValue('ShowPassword', !checked);
   };
 
   return (
@@ -78,22 +86,35 @@ export default (props: IForm): React.ReactElement<IForm> => {
           xs={12}
           md={12}
         >
-          <TextField
-            margin="dense"
-            error={errors.Password as any && touched.Password as any}
-            label={t('LoginForm:password.title')}
-            title={t('LoginForm:password.text')}
-            name="Password"
-            id="Family-Password"
-            value={values.Password}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            helperText={(errors.Password && touched.Password) && errors.Password}
-            variant="outlined"
-            className={classes.item}
-            type="password"
-            fullWidth
-          />
+          <FormControl variant="outlined" className={classes.item}>
+            <InputLabel>{t('LoginForm:password.title')}</InputLabel>
+            <OutlinedInput
+              id="Family-Password"
+              name="Password"
+              type={values.ShowPassword ? 'text' : 'password'}
+              value={values.Password}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={errors.Password as any && touched.Password as any}
+              inputProps={{
+                helperText: (errors.Password && touched.Password) && errors.Password,
+                label: t('LoginForm:password.title'),
+                title: t('LoginForm:password.text'),
+              }}
+              endAdornment={(
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label={t('LoginForm:password.title')}
+                    onClick={(event): void => handleClickShowPassword(event, values.ShowPassword)}
+                    edge="end"
+                  >
+                    {values.ShowPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                </InputAdornment>
+              )}
+              labelWidth={(i18n.language === 'PT') ? 130 : 145}
+            />
+          </FormControl>
         </Grid>
         <Grid
           item

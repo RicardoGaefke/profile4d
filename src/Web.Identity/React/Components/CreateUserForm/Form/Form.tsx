@@ -1,7 +1,8 @@
 import React from 'react';
 import {
-  Grid, TextField, Button,
+  Grid, TextField, Button, InputLabel, FormControl, OutlinedInput, IconButton, InputAdornment,
 } from '@material-ui/core';
+import { Visibility, VisibilityOff } from '@material-ui/icons';
 // eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
@@ -25,6 +26,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
     handleBlur,
     handleSubmit,
     setFieldTouched,
+    setFieldValue,
   } = props;
 
   i18n.on('languageChanged', (): void => {
@@ -32,6 +34,20 @@ export default (props: IForm): React.ReactElement<IForm> => {
       setFieldTouched(fieldName as any);
     });
   });
+
+  const handleClickShowPassword = (
+    event: React.MouseEvent,
+    checked: boolean,
+  ): void => {
+    setFieldValue('ShowPassword', !checked);
+  };
+
+  const handleClickShowConfirmPassword = (
+    event: React.MouseEvent,
+    checked: boolean,
+  ): void => {
+    setFieldValue('ShowConfirmPassword', !checked);
+  };
 
   return (
     <form
@@ -113,7 +129,36 @@ export default (props: IForm): React.ReactElement<IForm> => {
           xs={12}
           md={12}
         >
-          <TextField
+          <FormControl variant="outlined" fullWidth>
+            <InputLabel>{t('CreateUserForm:password.title')}</InputLabel>
+            <OutlinedInput
+              id="Create-Password"
+              name="Password"
+              type={values.ShowPassword ? 'text' : 'password'}
+              value={values.Password}
+              error={touched.Password as any && errors.Password as any}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              inputProps={{
+                helperText: (errors.Password && touched.Password) && errors.Password,
+                title: t('CreateUserForm:password.text'),
+                label: t('CreateUserForm:password.title'),
+              }}
+              endAdornment={(
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label={t('CreateUserForm:password.title')}
+                    onClick={(event): void => handleClickShowPassword(event, values.ShowPassword)}
+                    edge="end"
+                  >
+                    {values.ShowPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                </InputAdornment>
+              )}
+              labelWidth={(i18n.language === 'PT') ? 110 : 135}
+            />
+          </FormControl>
+          {/* <TextField
             type="password"
             margin="dense"
             error={errors.Password as any && touched.Password as any}
@@ -128,14 +173,43 @@ export default (props: IForm): React.ReactElement<IForm> => {
             variant="outlined"
             className={classes.item}
             fullWidth
-          />
+          /> */}
         </Grid>
         <Grid
           item
           xs={12}
           md={12}
         >
-          <TextField
+          <FormControl variant="outlined" fullWidth>
+            <InputLabel>{t('CreateUserForm:confirmPassword.title')}</InputLabel>
+            <OutlinedInput
+              id="Create-ConfirmPassword"
+              name="ConfirmPassword"
+              type={values.ShowConfirmPassword ? 'text' : 'password'}
+              value={values.ConfirmPassword}
+              error={touched.ConfirmPassword as any && errors.ConfirmPassword as any}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              inputProps={{
+                helperText: (errors.ConfirmPassword && touched.ConfirmPassword) && errors.ConfirmPassword,
+                title: t('CreateUserForm:confirmPassword.text'),
+                label: t('CreateUserForm:confirmPassword.title'),
+              }}
+              endAdornment={(
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label={t('CreateUserForm:confirmPassword.title')}
+                    onClick={(event): void => handleClickShowConfirmPassword(event, values.ShowConfirmPassword)}
+                    edge="end"
+                  >
+                    {values.ShowConfirmPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                </InputAdornment>
+              )}
+              labelWidth={(i18n.language === 'PT') ? 155 : 220}
+            />
+          </FormControl>
+          {/* <TextField
             type="password"
             margin="dense"
             error={errors.ConfirmPassword as any && touched.ConfirmPassword as any}
@@ -150,7 +224,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
             variant="outlined"
             className={classes.item}
             fullWidth
-          />
+          /> */}
         </Grid>
         <Grid
           item
