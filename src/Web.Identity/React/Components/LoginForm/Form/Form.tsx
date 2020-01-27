@@ -97,7 +97,6 @@ export default (props: IForm): React.ReactElement<IForm> => {
               onBlur={handleBlur}
               error={errors.Password as any && touched.Password as any}
               inputProps={{
-                helperText: (errors.Password && touched.Password) && errors.Password,
                 label: t('LoginForm:password.title'),
                 title: t('LoginForm:password.text'),
               }}

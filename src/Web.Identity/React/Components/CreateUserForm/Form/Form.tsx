@@ -140,7 +140,6 @@ export default (props: IForm): React.ReactElement<IForm> => {
               onChange={handleChange}
               onBlur={handleBlur}
               inputProps={{
-                helperText: (errors.Password && touched.Password) && errors.Password,
                 title: t('CreateUserForm:password.text'),
                 label: t('CreateUserForm:password.title'),
               }}
@@ -158,22 +157,6 @@ export default (props: IForm): React.ReactElement<IForm> => {
               labelWidth={(i18n.language === 'PT') ? 110 : 135}
             />
           </FormControl>
-          {/* <TextField
-            type="password"
-            margin="dense"
-            error={errors.Password as any && touched.Password as any}
-            label={t('CreateUserForm:password.title')}
-            title={t('CreateUserForm:password.text')}
-            name="Password"
-            id="Create-Password"
-            value={values.Password}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            helperText={(errors.Password && touched.Password) && errors.Password}
-            variant="outlined"
-            className={classes.item}
-            fullWidth
-          /> */}
         </Grid>
         <Grid
           item
@@ -191,7 +174,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
               onChange={handleChange}
               onBlur={handleBlur}
               inputProps={{
-                helperText: (errors.ConfirmPassword && touched.ConfirmPassword) && errors.ConfirmPassword,
+                // helperText: (errors.Password && touched.Password) && errors.Password,
                 title: t('CreateUserForm:confirmPassword.text'),
                 label: t('CreateUserForm:confirmPassword.title'),
               }}
@@ -209,22 +192,6 @@ export default (props: IForm): React.ReactElement<IForm> => {
               labelWidth={(i18n.language === 'PT') ? 155 : 220}
             />
           </FormControl>
-          {/* <TextField
-            type="password"
-            margin="dense"
-            error={errors.ConfirmPassword as any && touched.ConfirmPassword as any}
-            label={t('CreateUserForm:confirmPassword.title')}
-            title={t('CreateUserForm:confirmPassword.text')}
-            name="ConfirmPassword"
-            id="Create-ConfirmPassword"
-            value={values.ConfirmPassword}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            helperText={(errors.ConfirmPassword && touched.ConfirmPassword) && errors.ConfirmPassword}
-            variant="outlined"
-            className={classes.item}
-            fullWidth
-          /> */}
         </Grid>
         <Grid
           item

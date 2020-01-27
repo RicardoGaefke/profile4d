@@ -8,7 +8,9 @@ import Adapter from 'enzyme-adapter-react-16';
 import { withFormik } from 'formik';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
-import { TextField, Checkbox, Button } from '@material-ui/core';
+import {
+  TextField, Checkbox, Button, OutlinedInput,
+} from '@material-ui/core';
 import InitialValues from './Form.InitialValues';
 import Validation from './Form.Validation';
 // eslint-disable-next-line no-unused-vars
@@ -63,11 +65,6 @@ describe('Web.Identity -> LoginForm.Form', (): void => {
   );
 
   describe('Smoke Tests', (): void => {
-    // it('Should exist Login', async (): Promise<void> => {
-    //   const wrapper = mount(<Login />);
-    //   // eslint-disable-next-line no-unused-expressions
-    //   expect(wrapper).to.exist;
-    // });
     it('Should exist Login', (): void => {
       const wrapper = mount(<SnackedLogin />);
       // eslint-disable-next-line no-unused-expressions
@@ -79,9 +76,13 @@ describe('Web.Identity -> LoginForm.Form', (): void => {
       const wrapper = mount(<SnackedLogin />);
       expect(wrapper.find(LoginFormUser).find('form')).to.have.length(1);
     });
-    it('Should LoginForm return a tag TextField equal 2 when is called', (): void => {
+    it('Should LoginForm return a tag TextField equal 1 when is called', (): void => {
       const wrapper = mount(<SnackedLogin />);
-      expect(wrapper.find(LoginFormUser).find(TextField)).to.have.length(2);
+      expect(wrapper.find(LoginFormUser).find(TextField)).to.have.length(1);
+    });
+    it('Should LoginForm return a tag OutlinedInput equal 2 when is called', (): void => {
+      const wrapper = mount(<SnackedLogin />);
+      expect(wrapper.find(LoginFormUser).find(OutlinedInput)).to.have.length(2);
     });
     it('Should LoginForm return a tag Checkbox equal 1 when is called', (): void => {
       const wrapper = mount(<SnackedLogin />);
@@ -98,9 +99,9 @@ describe('Web.Identity -> LoginForm.Form', (): void => {
         const wrapper = mount(<SnackedLogin />);
         expect(wrapper.find(LoginFormUser).find(TextField).get(0).props.name).equal('Email');
       });
-      it('Should return a TextField in node 1 with correct name by default', (): void => {
+      it('Should return a OutlinedInput in node 1 with correct name by default', (): void => {
         const wrapper = mount(<SnackedLogin />);
-        expect(wrapper.find(LoginFormUser).find(TextField).get(1).props.name).equal('Password');
+        expect(wrapper.find(LoginFormUser).find(OutlinedInput).get(1).props.name).equal('Password');
       });
     });
     describe('Button Properties', (): void => {
