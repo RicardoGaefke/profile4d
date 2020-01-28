@@ -1,7 +1,6 @@
 import React from 'react';
+import Images from './Images/Images';
 
 export default (): React.ReactElement => (
-  <div>
-    First page
-  </div>
+  <Images />
 );
