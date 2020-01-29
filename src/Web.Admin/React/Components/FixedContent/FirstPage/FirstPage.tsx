@@ -36,13 +36,6 @@ const MyFirstPage = withFormik<WithTranslation & WithSnackbarProps & IProps, ISt
         enqueueSnackbar(t('StaticFirstPage:feedback.success'), {
           variant: 'success',
         });
-
-        const UrlParams = new URLSearchParams(window.location.search);
-        const MyUrl = UrlParams.get('ReturnUrl');
-
-        if (MyUrl !== null) {
-          window.location.href = MyUrl;
-        }
       } else {
         enqueueSnackbar(t('StaticFirstPage:feedback.failure'), {
           variant: 'error',
