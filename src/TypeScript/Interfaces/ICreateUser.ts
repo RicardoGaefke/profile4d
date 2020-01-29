@@ -4,4 +4,6 @@ export interface ICreateUser {
   ConfirmEmail: string,
   Password: string,
   ConfirmPassword: string,
+  ShowPassword: boolean,
+  ShowConfirmPassword: boolean,
 }
