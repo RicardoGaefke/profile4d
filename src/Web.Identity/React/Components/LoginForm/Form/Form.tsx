@@ -81,7 +81,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
             className={classes.item}
             fullWidth
           /> */}
-          <FormControl variant="outlined" className={classes.item}>
+          {/* <FormControl variant="outlined" className={classes.item}>
             <InputLabel>{t('LoginForm:email.title')}</InputLabel>
             <OutlinedInput
               id="Family-Email"
@@ -108,7 +108,30 @@ export default (props: IForm): React.ReactElement<IForm> => {
               {
                 (errors.Email && touched.Email) && errors.Email
               }
-            </FormHelperText>
+            </FormHelperText> */}
+          <FormControl variant="outlined" className={classes.item}>
+            {/* <InputLabel>{t('LoginForm:email.title')}</InputLabel> */}
+            <TextField
+              id="Family-Email"
+              variant="outlined"
+              name="Email"
+              type="email"
+              label={t('LoginForm:email.title')}
+              title={t('LoginForm:email.text')}
+              value={values.Email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={errors.Email as any && touched.Email as any}
+              helperText={(errors.Email && touched.Email) && errors.Email}
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <MailOutlineIcon color="primary" />
+                  </InputAdornment>
+                ),
+              }}
+              // labelWidth={(i18n.language === 'PT') ? 130 : 145}
+            />
           </FormControl>
         </Grid>
         <Grid
@@ -117,7 +140,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <FormControl variant="outlined" className={classes.item}>
-            <InputLabel>{t('LoginForm:password.title')}</InputLabel>
+            {/* <InputLabel>{t('LoginForm:password.title')}</InputLabel>
             <OutlinedInput
               id="Family-Password"
               name="Password"
@@ -150,7 +173,34 @@ export default (props: IForm): React.ReactElement<IForm> => {
               {
                 (errors.Password && touched.Password) && errors.Password
               }
-            </FormHelperText>
+            </FormHelperText> */}
+            <TextField
+              id="Family-Password"
+              name="Password"
+              variant="outlined"
+              type={values.ShowPassword ? 'text' : 'password'}
+              value={values.Password}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={errors.Password as any && touched.Password as any}
+              label={t('LoginForm:password.title')}
+              title={t('LoginForm:password.text')}
+              helperText={(errors.Password && touched.Password) && errors.Password}
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label={t('LoginForm:password.title')}
+                      onClick={(event): void => handleClickShowPassword(event, values.ShowPassword)}
+                      edge="end"
+                      color="primary"
+                    >
+                      {values.ShowPassword ? <Visibility /> : <VisibilityOff />}
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              }}
+            />
           </FormControl>
         </Grid>
         <Grid
