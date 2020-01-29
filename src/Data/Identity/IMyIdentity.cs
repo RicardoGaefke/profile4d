@@ -1,4 +1,3 @@
-using System;
 using Profile4d.Domain;
 namespace Profile4d.Data
 {
