@@ -7,4 +7,6 @@ export default {
   ConfirmEmail: '',
   Password: '',
   ConfirmPassword: '',
+  ShowPassword: false,
+  ShowConfirmPassword: false,
 } as ICreateUser;
