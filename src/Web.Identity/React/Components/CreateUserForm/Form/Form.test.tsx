@@ -61,7 +61,7 @@ describe('Web.Identity -> CreateUserForm.Form', (): void => {
     });
   });
   describe('Form Properties', (): void => {
-    describe('TextField Properties', (): void => {
+    describe('Field Properties', (): void => {
       it('Should return a TextField in node 0 with correct name by default', (): void => {
         const wrapper = mount(<CreateUser />);
         expect(wrapper.find(MyForm).find(TextField).get(0).props.name).equal('Name');
