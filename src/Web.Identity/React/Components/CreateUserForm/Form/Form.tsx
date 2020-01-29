@@ -1,7 +1,8 @@
 import React from 'react';
 import {
-  Grid, TextField, Button,
+  Grid, TextField, Button, IconButton, InputAdornment,
 } from '@material-ui/core';
+import { Visibility, VisibilityOff } from '@material-ui/icons';
 // eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
@@ -25,6 +26,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
     handleBlur,
     handleSubmit,
     setFieldTouched,
+    setFieldValue,
   } = props;
 
   i18n.on('languageChanged', (): void => {
@@ -32,6 +34,20 @@ export default (props: IForm): React.ReactElement<IForm> => {
       setFieldTouched(fieldName as any);
     });
   });
+
+  const handleClickShowPassword = (
+    event: React.MouseEvent,
+    checked: boolean,
+  ): void => {
+    setFieldValue('ShowPassword', !checked);
+  };
+
+  const handleClickShowConfirmPassword = (
+    event: React.MouseEvent,
+    checked: boolean,
+  ): void => {
+    setFieldValue('ShowConfirmPassword', !checked);
+  };
 
   return (
     <form
@@ -51,7 +67,6 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <TextField
-            margin="dense"
             error={errors.Name as any && touched.Name as any}
             label={t('CreateUserForm:name.title')}
             title={t('CreateUserForm:name.text')}
@@ -72,7 +87,6 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <TextField
-            margin="dense"
             error={errors.Email as any && touched.Email as any}
             label={t('CreateUserForm:email.title')}
             title={t('CreateUserForm:email.text')}
@@ -93,7 +107,6 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <TextField
-            margin="dense"
             error={errors.ConfirmEmail as any && touched.ConfirmEmail as any}
             label={t('CreateUserForm:confirmEmail.title')}
             title={t('CreateUserForm:confirmEmail.text')}
@@ -114,19 +127,31 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <TextField
-            type="password"
-            margin="dense"
-            error={errors.Password as any && touched.Password as any}
-            label={t('CreateUserForm:password.title')}
-            title={t('CreateUserForm:password.text')}
-            name="Password"
             id="Create-Password"
+            name="Password"
+            variant="outlined"
+            type={values.ShowPassword ? 'text' : 'password'}
             value={values.Password}
+            error={touched.Password as any && errors.Password as any}
             onChange={handleChange}
             onBlur={handleBlur}
             helperText={(errors.Password && touched.Password) && errors.Password}
-            variant="outlined"
+            title={t('CreateUserForm:password.text')}
+            label={t('CreateUserForm:password.title')}
             className={classes.item}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label={t('CreateUserForm:password.title')}
+                    onClick={(event): void => handleClickShowPassword(event, values.ShowPassword)}
+                    edge="end"
+                  >
+                    {values.ShowPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
             fullWidth
           />
         </Grid>
@@ -136,19 +161,31 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <TextField
-            type="password"
-            margin="dense"
-            error={errors.ConfirmPassword as any && touched.ConfirmPassword as any}
-            label={t('CreateUserForm:confirmPassword.title')}
-            title={t('CreateUserForm:confirmPassword.text')}
-            name="ConfirmPassword"
             id="Create-ConfirmPassword"
+            name="ConfirmPassword"
+            variant="outlined"
+            type={values.ShowConfirmPassword ? 'text' : 'password'}
             value={values.ConfirmPassword}
+            error={touched.ConfirmPassword as any && errors.ConfirmPassword as any}
             onChange={handleChange}
             onBlur={handleBlur}
-            helperText={(errors.ConfirmPassword && touched.ConfirmPassword) && errors.ConfirmPassword}
-            variant="outlined"
+            title={t('CreateUserForm:confirmPassword.text')}
+            label={t('CreateUserForm:confirmPassword.title')}
+            helperText={(errors.Password && touched.Password) && errors.Password}
             className={classes.item}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label={t('CreateUserForm:confirmPassword.title')}
+                    onClick={(event): void => handleClickShowConfirmPassword(event, values.ShowConfirmPassword)}
+                    edge="end"
+                  >
+                    {values.ShowConfirmPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
             fullWidth
           />
         </Grid>

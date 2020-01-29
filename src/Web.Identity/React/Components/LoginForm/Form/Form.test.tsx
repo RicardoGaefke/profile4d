@@ -8,7 +8,9 @@ import Adapter from 'enzyme-adapter-react-16';
 import { withFormik } from 'formik';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
-import { TextField, Checkbox, Button } from '@material-ui/core';
+import {
+  TextField, Checkbox, Button,
+} from '@material-ui/core';
 import InitialValues from './Form.InitialValues';
 import Validation from './Form.Validation';
 // eslint-disable-next-line no-unused-vars
@@ -63,11 +65,6 @@ describe('Web.Identity -> LoginForm.Form', (): void => {
   );
 
   describe('Smoke Tests', (): void => {
-    // it('Should exist Login', async (): Promise<void> => {
-    //   const wrapper = mount(<Login />);
-    //   // eslint-disable-next-line no-unused-expressions
-    //   expect(wrapper).to.exist;
-    // });
     it('Should exist Login', (): void => {
       const wrapper = mount(<SnackedLogin />);
       // eslint-disable-next-line no-unused-expressions
