@@ -2,6 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Fixed content',
-  firstpage: 'First page',
+  title: 'Imagens',
+  logo: 'Logotipo',
+  default: 'Imagem padrão',
 } as ILanguage;

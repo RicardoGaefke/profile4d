@@ -30,6 +30,7 @@ namespace Profile4d.Web.Api
       // Config data before config cookies so logged users can be checked on SqlServer
       services.Configure<Secrets.ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
       services.AddSingleton<MyIdentity>();
+      services.AddSingleton<StaticContent>();
 
       // add cors
       Bootstrap.ConfigCors(services, Configuration, HostEnvironment.IsDevelopment());

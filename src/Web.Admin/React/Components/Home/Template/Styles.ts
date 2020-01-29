@@ -9,7 +9,7 @@ interface IStyles {
 
 export default makeStyles((theme: Theme): IStyles => ({
   container: {
-    padding: theme.spacing(1),
+    padding: theme.spacing(2),
     display: 'flex',
     flex: 1,
   },

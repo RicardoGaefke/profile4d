@@ -18,10 +18,10 @@ namespace Profile4d.Web.Api.Controllers
     private readonly ILogger<IdentityController> _logger;
     private readonly MyIdentity _myIdentity;
 
-    public IdentityController(ILogger<IdentityController> logger, MyIdentity myIdentity)
+    public IdentityController(ILogger<IdentityController> logger, MyIdentity MyIdentity)
     {
       _logger = logger;
-      _myIdentity = myIdentity;
+      _myIdentity = MyIdentity;
     }
 
     [HttpPost("SignIn")]
