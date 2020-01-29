@@ -1,8 +1,9 @@
 import React from 'react';
 import {
-  Grid, TextField, Button, FormControlLabel, Checkbox, FormControl, InputLabel, OutlinedInput, IconButton, InputAdornment,
+  Grid, TextField, Button, FormControlLabel, Checkbox, FormControl, InputLabel, OutlinedInput, IconButton, InputAdornment, FormHelperText,
 } from '@material-ui/core';
 import { Visibility, VisibilityOff } from '@material-ui/icons';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
 // eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
@@ -56,7 +57,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
     >
       <Grid
         container
-        spacing={2}
+        spacing={1}
         justify="center"
         alignItems="center"
       >
@@ -65,7 +66,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
           xs={12}
           md={12}
         >
-          <TextField
+          {/* <TextField
             margin="dense"
             error={errors.Email as any && touched.Email as any}
             label={t('LoginForm:email.title')}
@@ -79,7 +80,36 @@ export default (props: IForm): React.ReactElement<IForm> => {
             variant="outlined"
             className={classes.item}
             fullWidth
-          />
+          /> */}
+          <FormControl variant="outlined" className={classes.item}>
+            <InputLabel>{t('LoginForm:email.title')}</InputLabel>
+            <OutlinedInput
+              id="Family-Email"
+              name="Email"
+              type="email"
+              value={values.Email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={errors.Email as any && touched.Email as any}
+              inputProps={{
+                label: t('LoginForm:email.title'),
+                title: t('LoginForm:email.text'),
+              }}
+              endAdornment={(
+                <InputAdornment position="end">
+                  <MailOutlineIcon color="primary" />
+                </InputAdornment>
+              )}
+              labelWidth={(i18n.language === 'PT') ? 130 : 145}
+            />
+            <FormHelperText
+              className={classes.helper}
+            >
+              {
+                (errors.Email && touched.Email) && errors.Email
+              }
+            </FormHelperText>
+          </FormControl>
         </Grid>
         <Grid
           item
@@ -106,6 +136,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
                     aria-label={t('LoginForm:password.title')}
                     onClick={(event): void => handleClickShowPassword(event, values.ShowPassword)}
                     edge="end"
+                    color="primary"
                   >
                     {values.ShowPassword ? <Visibility /> : <VisibilityOff />}
                   </IconButton>
@@ -113,6 +144,13 @@ export default (props: IForm): React.ReactElement<IForm> => {
               )}
               labelWidth={(i18n.language === 'PT') ? 130 : 145}
             />
+            <FormHelperText
+              className={classes.helper}
+            >
+              {
+                (errors.Password && touched.Password) && errors.Password
+              }
+            </FormHelperText>
           </FormControl>
         </Grid>
         <Grid

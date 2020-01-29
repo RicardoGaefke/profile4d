@@ -8,6 +8,7 @@ export interface IStyles {
   button: {},
   divider: {},
   icon: {},
+  helper: {},
 }
 
 const useStyles = makeStyles((theme: Theme): IStyles => ({
@@ -30,6 +31,9 @@ const useStyles = makeStyles((theme: Theme): IStyles => ({
   divider: {
     marginBottom: theme.spacing(1),
     marginTop: theme.spacing(1),
+  },
+  helper: {
+    color: 'red',
   },
 }));
 
