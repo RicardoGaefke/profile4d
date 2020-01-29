@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core';
 import setLanguage from './Language';
 import Styles from './Styles';
-import MyImage from '../../../../Utils/MyImage';
+import MyImage from '../../../Utils/MyImage';
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {

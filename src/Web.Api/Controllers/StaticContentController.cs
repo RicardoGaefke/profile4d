@@ -1,10 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Security.Claims;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.Logging;
 using Profile4d.Data;
 using Profile4d.Domain;
@@ -33,6 +27,30 @@ namespace Profile4d.Web.Api.Controllers
       {
         _return = _myContent.FirstPage();
         
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("FirstPageEdit")]
+    public ActionResult<BasicReturn> FirstPageEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = "1";
+        
+        _myContent.FirstPageEdit(data);
+
         _return.Success = true;
 
         return _return;

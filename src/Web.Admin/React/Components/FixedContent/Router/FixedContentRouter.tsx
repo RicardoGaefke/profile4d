@@ -6,7 +6,7 @@ import {
   withRouter,
 } from 'react-router-dom';
 import MyTemplate from '../../Home/Template/Template';
-import FirstPage from '../FirstPage/FirstPage';
+import Page from '../FirstPage/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -14,7 +14,7 @@ export default withRouter(
 
     return (
       <MyTemplate>
-        <Route path={`${match.url}/firstpage`} component={FirstPage} />
+        <Route path={`${match.url}/firstpage`} component={Page} />
       </MyTemplate>
     );
   },
