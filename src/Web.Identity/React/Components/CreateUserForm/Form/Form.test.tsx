@@ -51,13 +51,9 @@ describe('Web.Identity -> CreateUserForm.Form', (): void => {
       const wrapper = mount(<CreateUser />);
       expect(wrapper.find(MyForm).find('form')).to.have.length(1);
     });
-    it('Should MyForm return a tag TextField length equal 3 when is called', (): void => {
+    it('Should MyForm return a tag TextField length equal 5 when is called', (): void => {
       const wrapper = mount(<CreateUser />);
-      expect(wrapper.find(MyForm).find(TextField)).to.have.length(3);
-    });
-    it('Should MyForm return a tag OutlinedInput length equal 5 when is called', (): void => {
-      const wrapper = mount(<CreateUser />);
-      expect(wrapper.find(MyForm).find(OutlinedInput)).to.have.length(5);
+      expect(wrapper.find(MyForm).find(TextField)).to.have.length(5);
     });
     it('Should MyForm return a tag Button length equal 1 when is called', (): void => {
       const wrapper = mount(<CreateUser />);
@@ -78,13 +74,13 @@ describe('Web.Identity -> CreateUserForm.Form', (): void => {
         const wrapper = mount(<CreateUser />);
         expect(wrapper.find(MyForm).find(TextField).get(2).props.name).equal('ConfirmEmail');
       });
-      it('Should return a OutlinedInput in node 3 with correct name by default', (): void => {
+      it('Should return a TextField in node 3 with correct name by default', (): void => {
         const wrapper = mount(<CreateUser />);
-        expect(wrapper.find(MyForm).find(OutlinedInput).get(3).props.name).equal('Password');
+        expect(wrapper.find(MyForm).find(TextField).get(3).props.name).equal('Password');
       });
-      it('Should return a OutlinedInput in node 4 with correct name by default', (): void => {
+      it('Should return a TextField in node 4 with correct name by default', (): void => {
         const wrapper = mount(<CreateUser />);
-        expect(wrapper.find(MyForm).find(OutlinedInput).get(4).props.name).equal('ConfirmPassword');
+        expect(wrapper.find(MyForm).find(TextField).get(4).props.name).equal('ConfirmPassword');
       });
     });
     describe('Button Properties', (): void => {

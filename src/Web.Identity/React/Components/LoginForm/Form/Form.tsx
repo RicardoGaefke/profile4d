@@ -66,94 +66,48 @@ export default (props: IForm): React.ReactElement<IForm> => {
           xs={12}
           md={12}
         >
-          {/* <TextField
-            margin="dense"
-            error={errors.Email as any && touched.Email as any}
+          <TextField
+            id="Family-Email"
+            variant="outlined"
+            name="Email"
+            type="email"
             label={t('LoginForm:email.title')}
             title={t('LoginForm:email.text')}
-            name="Email"
-            id="Family-Email"
             value={values.Email}
             onChange={handleChange}
             onBlur={handleBlur}
+            error={errors.Email as any && touched.Email as any}
             helperText={(errors.Email && touched.Email) && errors.Email}
-            variant="outlined"
             className={classes.item}
-            fullWidth
-          /> */}
-          {/* <FormControl variant="outlined" className={classes.item}>
-            <InputLabel>{t('LoginForm:email.title')}</InputLabel>
-            <OutlinedInput
-              id="Family-Email"
-              name="Email"
-              type="email"
-              value={values.Email}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              error={errors.Email as any && touched.Email as any}
-              inputProps={{
-                label: t('LoginForm:email.title'),
-                title: t('LoginForm:email.text'),
-              }}
-              endAdornment={(
+            InputProps={{
+              endAdornment: (
                 <InputAdornment position="end">
                   <MailOutlineIcon color="primary" />
                 </InputAdornment>
-              )}
-              labelWidth={(i18n.language === 'PT') ? 130 : 145}
-            />
-            <FormHelperText
-              className={classes.helper}
-            >
-              {
-                (errors.Email && touched.Email) && errors.Email
-              }
-            </FormHelperText> */}
-          <FormControl variant="outlined" className={classes.item}>
-            {/* <InputLabel>{t('LoginForm:email.title')}</InputLabel> */}
-            <TextField
-              id="Family-Email"
-              variant="outlined"
-              name="Email"
-              type="email"
-              label={t('LoginForm:email.title')}
-              title={t('LoginForm:email.text')}
-              value={values.Email}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              error={errors.Email as any && touched.Email as any}
-              helperText={(errors.Email && touched.Email) && errors.Email}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <MailOutlineIcon color="primary" />
-                  </InputAdornment>
-                ),
-              }}
-              // labelWidth={(i18n.language === 'PT') ? 130 : 145}
-            />
-          </FormControl>
+              ),
+            }}
+          />
         </Grid>
         <Grid
           item
           xs={12}
           md={12}
         >
-          <FormControl variant="outlined" className={classes.item}>
-            {/* <InputLabel>{t('LoginForm:password.title')}</InputLabel>
-            <OutlinedInput
-              id="Family-Password"
-              name="Password"
-              type={values.ShowPassword ? 'text' : 'password'}
-              value={values.Password}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              error={errors.Password as any && touched.Password as any}
-              inputProps={{
-                label: t('LoginForm:password.title'),
-                title: t('LoginForm:password.text'),
-              }}
-              endAdornment={(
+          <TextField
+            id="Family-Password"
+            name="Password"
+            variant="outlined"
+            type={values.ShowPassword ? 'text' : 'password'}
+            value={values.Password}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            error={errors.Password as any && touched.Password as any}
+            label={t('LoginForm:password.title')}
+            title={t('LoginForm:password.text')}
+            helperText={(errors.Password && touched.Password) && errors.Password}
+            className={classes.item}
+            InputProps={{
+              endAdornment: (
                 <InputAdornment position="end">
                   <IconButton
                     aria-label={t('LoginForm:password.title')}
@@ -164,44 +118,9 @@ export default (props: IForm): React.ReactElement<IForm> => {
                     {values.ShowPassword ? <Visibility /> : <VisibilityOff />}
                   </IconButton>
                 </InputAdornment>
-              )}
-              labelWidth={(i18n.language === 'PT') ? 130 : 145}
-            />
-            <FormHelperText
-              className={classes.helper}
-            >
-              {
-                (errors.Password && touched.Password) && errors.Password
-              }
-            </FormHelperText> */}
-            <TextField
-              id="Family-Password"
-              name="Password"
-              variant="outlined"
-              type={values.ShowPassword ? 'text' : 'password'}
-              value={values.Password}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              error={errors.Password as any && touched.Password as any}
-              label={t('LoginForm:password.title')}
-              title={t('LoginForm:password.text')}
-              helperText={(errors.Password && touched.Password) && errors.Password}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label={t('LoginForm:password.title')}
-                      onClick={(event): void => handleClickShowPassword(event, values.ShowPassword)}
-                      edge="end"
-                      color="primary"
-                    >
-                      {values.ShowPassword ? <Visibility /> : <VisibilityOff />}
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-            />
-          </FormControl>
+              ),
+            }}
+          />
         </Grid>
         <Grid
           item
