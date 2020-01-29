@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Grid, TextField, Button, FormControlLabel, Checkbox, FormControl, InputLabel, OutlinedInput, IconButton, InputAdornment, FormHelperText,
+  Grid, TextField, Button, FormControlLabel, Checkbox, IconButton, InputAdornment,
 } from '@material-ui/core';
 import { Visibility, VisibilityOff } from '@material-ui/icons';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';

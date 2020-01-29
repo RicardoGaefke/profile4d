@@ -1,9 +1,8 @@
 import React from 'react';
 import {
-  Grid, TextField, Button, FormControl, IconButton, InputAdornment,
+  Grid, TextField, Button, IconButton, InputAdornment,
 } from '@material-ui/core';
 import { Visibility, VisibilityOff } from '@material-ui/icons';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
 // eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars

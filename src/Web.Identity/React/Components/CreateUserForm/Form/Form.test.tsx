@@ -3,7 +3,7 @@ import chai, { expect } from 'chai';
 import Enzyme, { mount } from 'enzyme';
 import chaiEnzyme from 'chai-enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { TextField, Button, OutlinedInput } from '@material-ui/core';
+import { TextField, Button } from '@material-ui/core';
 import { withFormik } from 'formik';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
