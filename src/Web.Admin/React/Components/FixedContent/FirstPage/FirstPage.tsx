@@ -50,7 +50,7 @@ const MyFirstPage = withFormik<WithTranslation & WithSnackbarProps & IProps, ISt
   },
 })(FirstPage);
 
-const Login = withTranslation()(withSnackbar(MyFirstPage));
+export const Login = withTranslation()(withSnackbar(MyFirstPage));
 
 export default withTranslation()(
   (props: WithTranslation & IProps): React.ReactElement<WithTranslation & IProps> => {
