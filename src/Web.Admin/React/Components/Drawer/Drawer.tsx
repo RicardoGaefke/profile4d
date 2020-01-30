@@ -23,7 +23,7 @@ export default withTranslation()(
     return (
       <MyDrawer
         open={Drawer}
-        variant="permanent"
+        variant="persistent"
         onClose={toggle}
       >
         <div className={classes.root}>

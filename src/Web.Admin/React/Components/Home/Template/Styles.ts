@@ -3,7 +3,7 @@ import { makeStyles, Theme } from '@material-ui/core/styles';
 
 interface IStyles {
   container: {},
-  content: {},
+  grid: {},
   img: {},
 }
 
@@ -13,7 +13,8 @@ export default makeStyles((theme: Theme): IStyles => ({
     display: 'flex',
     flex: 1,
   },
-  content: {
+  grid: {
+    marginLeft: 200,
   },
   img: {
     maxWidth: '85%',

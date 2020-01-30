@@ -11,6 +11,7 @@ export default (props: React.PropsWithChildren<React.ReactNode>): React.ReactEle
     <Container className={classes.container}>
       <MyDrawer />
       <Grid
+        className={classes.grid}
         container
         spacing={2}
         direction="row"
