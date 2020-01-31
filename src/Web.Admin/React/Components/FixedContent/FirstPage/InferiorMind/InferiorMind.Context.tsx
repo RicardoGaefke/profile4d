@@ -2,10 +2,10 @@
 import React from 'react';
 import { withFormik } from 'formik';
 // eslint-disable-next-line no-unused-vars
-import { IStaticFirstPage } from '../../../../../../../TypeScript/Interfaces/IStaticContent';
-import initialValues from './InitialValues';
-import MyForm from '../Form';
-import useStyles from './Context.Styles';
+import { IStaticFirstPage } from '../../../../../../TypeScript/Interfaces/IStaticContent';
+import initialValues from './InferiorMind.InitialValues';
+import MyForm from './InferiorMind';
+import useStyles from './InferiorMind.Styles';
 
 const SuperForm = withFormik({
   displayName: 'Form',
