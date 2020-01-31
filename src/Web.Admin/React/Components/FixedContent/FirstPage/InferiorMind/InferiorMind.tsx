@@ -9,7 +9,7 @@ import { FormikProps } from 'formik';
 // eslint-disable-next-line no-unused-vars
 import { IStaticFirstPage } from '../../../../../../TypeScript/Interfaces/IStaticContent';
 import Createdby from '../../../Created/Created';
-import useStyles from './Form.Styles';
+import useStyles from './InferiorMind.Styles';
 
 export type IForm = FormikProps<IStaticFirstPage> & WithTranslation;
 
