@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import { IStaticFirstPage } from '../../../../../../../TypeScript/Interfaces/IStaticContent';
+import { IStaticFirstPage } from '../../../../../../TypeScript/Interfaces/IStaticContent';
 
 const initialValues: IStaticFirstPage = {
   Id: 1,

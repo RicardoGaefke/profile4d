@@ -171,7 +171,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
             onBlur={handleBlur}
             title={t('CreateUserForm:confirmPassword.text')}
             label={t('CreateUserForm:confirmPassword.title')}
-            helperText={(errors.Password && touched.Password) && errors.Password}
+            helperText={(errors.ConfirmPassword && touched.ConfirmPassword) && errors.ConfirmPassword}
             className={classes.item}
             InputProps={{
               endAdornment: (
