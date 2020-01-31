@@ -4,6 +4,7 @@ import { withFormik } from 'formik';
 // eslint-disable-next-line no-unused-vars
 import { IStaticFirstPage } from '../../../../../../TypeScript/Interfaces/IStaticContent';
 import initialValues from './InferiorMind.InitialValues';
+import Validation from './InferiorMind.Validation';
 import MyForm from './InferiorMind';
 import useStyles from './InferiorMind.Styles';
 
@@ -11,6 +12,7 @@ const SuperForm = withFormik({
   displayName: 'Form',
   enableReinitialize: true,
   mapPropsToValues: (): IStaticFirstPage => (initialValues),
+  validationSchema: Validation,
   handleSubmit: (values: IStaticFirstPage, { resetForm, setSubmitting }): void => {
     // eslint-disable-next-line no-alert
     alert(JSON.stringify(values));

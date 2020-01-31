@@ -108,8 +108,8 @@ export default (props: IForm): React.ReactElement<IForm> => {
             helperText={(errors.Text_PT && touched.Text_PT) && errors.Text_PT}
             variant="outlined"
             multiline
-            rows={6}
-            rowsMax={6}
+            rows={15}
+            rowsMax={30}
             className={classes.item}
             fullWidth
           />
@@ -133,8 +133,8 @@ export default (props: IForm): React.ReactElement<IForm> => {
             helperText={(errors.Text_ENG && touched.Text_ENG) && errors.Text_ENG}
             variant="outlined"
             multiline
-            rows={6}
-            rowsMax={6}
+            rows={15}
+            rowsMax={30}
             className={classes.item}
             fullWidth
           />
