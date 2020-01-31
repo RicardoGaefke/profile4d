@@ -8,4 +8,8 @@ export default [
     link: 'firstpage',
     title: 'firstpage',
   },
+  {
+    link: 'inferiormind',
+    title: 'inferior',
+  },
 ] as IStaticMenuItem[];
