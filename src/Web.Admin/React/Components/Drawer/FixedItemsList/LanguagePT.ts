@@ -10,4 +10,5 @@ export default {
   dominantstructure: 'Estrutura Profile Dominante',
   sabotagemode: 'Modo Sabotador',
   sabotagewhoiam: 'Sabotador Quem eu sou?',
+  sabotagedominant: 'Sabotador Dominante',
 } as ILanguage;

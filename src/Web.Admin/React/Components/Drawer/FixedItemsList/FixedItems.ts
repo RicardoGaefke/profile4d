@@ -32,4 +32,8 @@ export default [
     link: 'sabotagewhoiam',
     title: 'sabotagewhoiam',
   },
+  {
+    link: 'sabotagedominant',
+    title: 'sabotagedominant',
+  },
 ] as IStaticMenuItem[];
