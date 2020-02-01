@@ -52,4 +52,8 @@ export default [
     link: 'internalpartners',
     title: 'internalpartners',
   },
+  {
+    link: 'inamepartnerone',
+    title: 'inamepartnerone',
+  },
 ] as IStaticMenuItem[];
