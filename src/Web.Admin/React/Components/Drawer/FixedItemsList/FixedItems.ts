@@ -92,4 +92,12 @@ export default [
     link: 'sfourpowerstwo',
     title: 'sfourpowerstwo',
   },
+  {
+    link: 'pdi',
+    title: 'pdi',
+  },
+  {
+    link: 'threeintelligencecenters',
+    title: 'threeintelligencecenters',
+  },
 ] as IStaticMenuItem[];

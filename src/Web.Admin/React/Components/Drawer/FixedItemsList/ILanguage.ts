@@ -22,4 +22,6 @@ export interface ILanguage {
   sfourpowersone: string,
   namesaboteurtwo: string,
   sfourpowerstwo: string,
+  pdi: string,
+  threeintelligencecenters: string,
 }

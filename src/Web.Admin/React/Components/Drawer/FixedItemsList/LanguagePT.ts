@@ -25,4 +25,6 @@ export default {
   sfourpowersone: 'Primeiros Quatro Poderes Sabotador',
   namesaboteurtwo: 'Segundo Sabotador Interno',
   sfourpowerstwo: 'Segundos Quatro Poderes Sabotador',
+  pdi: 'Plano de Desenvolvimento Individual',
+  threeintelligencecenters: 'Três Centros de Inteligência',
 } as ILanguage;
