@@ -92,4 +92,8 @@ export default [
     link: 'sfourpowerstwo',
     title: 'sfourpowerstwo',
   },
+  {
+    link: 'pdi',
+    title: 'pdi',
+  },
 ] as IStaticMenuItem[];
