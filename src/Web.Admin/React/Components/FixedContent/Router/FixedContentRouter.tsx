@@ -26,6 +26,7 @@ import TrinityBehavioralSabotage from '../TrinityBehavioralSabotage/Page';
 import InternalEnemies from '../InternalEnemies/Page';
 import NameSaboteurOne from '../NameSaboteurOne/Page';
 import SFourPowersOne from '../SFourPowersOne/Page';
+import NameSaboteurTwo from '../NameSaboteurTwo/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -53,6 +54,7 @@ export default withRouter(
         <Route path={`${match.url}/internalenemies`} component={InternalEnemies} />
         <Route path={`${match.url}/namesaboteurone`} component={NameSaboteurOne} />
         <Route path={`${match.url}/sfourpowersone`} component={SFourPowersOne} />
+        <Route path={`${match.url}/namesaboteurtwo`} component={NameSaboteurTwo} />
       </MyTemplate>
     );
   },

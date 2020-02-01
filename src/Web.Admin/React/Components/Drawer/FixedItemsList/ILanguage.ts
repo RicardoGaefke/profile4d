@@ -20,4 +20,5 @@ export interface ILanguage {
   internalenemies: string,
   namesaboteurone: string,
   sfourpowersone: string,
+  namesaboteurtwo: string,
 }
