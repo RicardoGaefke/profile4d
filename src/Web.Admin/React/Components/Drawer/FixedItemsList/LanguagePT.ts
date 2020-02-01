@@ -24,4 +24,5 @@ export default {
   namesaboteurone: 'Primeiro Sabotador Interno',
   sfourpowersone: 'Primeiros Quatro Poderes Sabotador',
   namesaboteurtwo: 'Segundo Sabotador Interno',
+  sfourpowerstwo: 'Segundos Quatro Poderes Sabotador',
 } as ILanguage;

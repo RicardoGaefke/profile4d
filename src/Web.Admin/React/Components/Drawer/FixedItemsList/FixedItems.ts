@@ -88,4 +88,8 @@ export default [
     link: 'namesaboteurtwo',
     title: 'namesaboteurtwo',
   },
+  {
+    link: 'sfourpowerstwo',
+    title: 'sfourpowerstwo',
+  },
 ] as IStaticMenuItem[];
