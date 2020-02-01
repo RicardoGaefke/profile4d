@@ -9,7 +9,7 @@ export default [
     title: 'firstpage',
   },
   {
-    link: 'inferiormind',
-    title: 'inferior',
+    link: 'competentmind',
+    title: 'competent',
   },
 ] as IStaticMenuItem[];
