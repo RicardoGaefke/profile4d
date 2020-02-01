@@ -32,12 +32,12 @@ namespace Profile4d.Data
           {
             MyDR.Read();
 
+            _return.CreatedBy = MyDR.GetString(4);
+            _return.Created = MyDR.GetDateTime(5).ToLongDateString();
             _return.Title_PT = MyDR.GetString(0);
             _return.Text_PT = MyDR.GetString(2);
             _return.Title_ENG = MyDR.GetString(1);
             _return.Text_ENG = MyDR.GetString(3);
-            _return.CreatedBy = MyDR.GetString(4);
-            _return.Created = MyDR.GetDateTime(5).ToLongDateString();
           }
         }
       }
@@ -59,11 +59,11 @@ namespace Profile4d.Data
           Cmd.Connection = Con;
           Cmd.CommandText = "[sp_STATIC_FIRST_PAGE_EDIT]";
 
+          Cmd.Parameters.AddWithValue("@USER", data.CreatedBy);
           Cmd.Parameters.AddWithValue("@TITLE_PT", data.Title_PT);
           Cmd.Parameters.AddWithValue("@TEXT_PT", data.Text_PT);
           Cmd.Parameters.AddWithValue("@TITLE_ENG", data.Title_ENG);
           Cmd.Parameters.AddWithValue("@TEXT_ENG", data.Text_ENG);
-          Cmd.Parameters.AddWithValue("@USER", data.CreatedBy);
 
           Con.Open();
 

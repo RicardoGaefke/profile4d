@@ -4,5 +4,5 @@ import { ILanguage } from './ILanguage';
 export default {
   title: 'Fixed content',
   firstpage: 'First page',
-  inferior: 'Inferior mind',
+  competent: 'Competent mind',
 } as ILanguage;
