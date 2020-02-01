@@ -24,4 +24,5 @@ export interface ILanguage {
   sfourpowerstwo: string,
   pdi: string,
   threeintelligencecenters: string,
+  behavioursprofiles: string,
 }

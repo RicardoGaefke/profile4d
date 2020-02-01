@@ -100,4 +100,8 @@ export default [
     link: 'threeintelligencecenters',
     title: 'threeintelligencecenters',
   },
+  {
+    link: 'behavioursprofiles',
+    title: 'behavioursprofiles',
+  },
 ] as IStaticMenuItem[];
