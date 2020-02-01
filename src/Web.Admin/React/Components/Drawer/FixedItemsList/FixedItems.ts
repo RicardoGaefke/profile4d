@@ -48,4 +48,8 @@ export default [
     link: 'trinitybehavioralcompetent',
     title: 'trinitybehavioralcompetent',
   },
+  {
+    link: 'internalpartners',
+    title: 'internalpartners',
+  },
 ] as IStaticMenuItem[];
