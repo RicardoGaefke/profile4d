@@ -12,4 +12,5 @@ export default {
   sabotagewhoiam: 'Sabotador Quem eu sou?',
   sabotagedominant: 'Sabotador Dominante',
   sabotagename: 'Nome Profile Sabotador',
+  competentxsabotage: 'Modo Competente versus Modo Sabotador',
 } as ILanguage;
