@@ -9,4 +9,5 @@ export interface ILanguage {
   sabotagewhoiam: string,
   sabotagedominant: string,
   sabotagename: string,
+  competentxsabotage: string,
 }

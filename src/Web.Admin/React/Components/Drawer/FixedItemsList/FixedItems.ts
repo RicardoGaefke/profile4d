@@ -40,4 +40,8 @@ export default [
     link: 'sabotagename',
     title: 'sabotagename',
   },
+  {
+    link: 'competentxsabotage',
+    title: 'competentxsabotage',
+  },
 ] as IStaticMenuItem[];
