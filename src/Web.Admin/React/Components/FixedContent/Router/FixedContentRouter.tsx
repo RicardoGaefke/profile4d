@@ -18,6 +18,7 @@ import SabotageName from '../SabotageName/Page';
 import CompetentXSabotage from '../CompetentXSabotage/Page';
 import TrinityBehavioralCompetent from '../TrinityBehavioralCompetent/Page';
 import InternalPartners from '../InternalPartners/Page';
+import INamePartnerOne from '../INamePartnerOne/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -37,6 +38,7 @@ export default withRouter(
         <Route path={`${match.url}/competentxsabotage`} component={CompetentXSabotage} />
         <Route path={`${match.url}/trinitybehavioralcompetent`} component={TrinityBehavioralCompetent} />
         <Route path={`${match.url}/internalpartners`} component={InternalPartners} />
+        <Route path={`${match.url}/inamepartnerone`} component={INamePartnerOne} />
       </MyTemplate>
     );
   },

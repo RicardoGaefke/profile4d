@@ -12,4 +12,5 @@ export interface ILanguage {
   competentxsabotage: string,
   trinitybehavioralcompetent: string,
   internalpartners: string,
+  inamepartnerone: string,
 }
