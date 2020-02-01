@@ -22,6 +22,7 @@ import INamePartnerOne from '../INamePartnerOne/Page';
 import IFourPowersOne from '../IFourPowersOne/Page';
 import INamePartnerTwo from '../INamePartnerTwo/Page';
 import IFourPowersTwo from '../IFourPowersTwo/Page';
+import TrinityBehavioralSabotage from '../TrinityBehavioralSabotage/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -45,6 +46,7 @@ export default withRouter(
         <Route path={`${match.url}/ifourpowersone`} component={IFourPowersOne} />
         <Route path={`${match.url}/inamepartnertwo`} component={INamePartnerTwo} />
         <Route path={`${match.url}/ifourpowerstwo`} component={IFourPowersTwo} />
+        <Route path={`${match.url}/trinitybehavioralsabotage`} component={TrinityBehavioralSabotage} />
       </MyTemplate>
     );
   },
