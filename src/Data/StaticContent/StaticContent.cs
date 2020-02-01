@@ -32,12 +32,12 @@ namespace Profile4d.Data
           {
             MyDR.Read();
 
-            _return.CreatedBy = MyDR.GetString(4);
-            _return.Created = MyDR.GetDateTime(5).ToLongDateString();
-            _return.Title_PT = MyDR.GetString(0);
-            _return.Text_PT = MyDR.GetString(2);
-            _return.Title_ENG = MyDR.GetString(1);
-            _return.Text_ENG = MyDR.GetString(3);
+            _return.CreatedBy = MyDR.GetString(0);
+            _return.Created = MyDR.GetDateTime(1).ToLongDateString();
+            _return.Title_PT = MyDR.GetString(2);
+            _return.Text_PT = MyDR.GetString(3);
+            _return.Title_ENG = MyDR.GetString(4);
+            _return.Text_ENG = MyDR.GetString(5);
           }
         }
       }

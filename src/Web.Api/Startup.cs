@@ -65,6 +65,8 @@ namespace Profile4d.Web.Api
           app.UseDeveloperExceptionPage();
       }
 
+      app.UseCookiePolicy();
+
       app.UseHttpsRedirection();
 
       app.UseRouting();

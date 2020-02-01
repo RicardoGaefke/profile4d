@@ -166,22 +166,27 @@ namespace Profile4d.DI
         })
       ;
 
-    services.AddScoped<CustomCookieAuthenticationEvents>();
+      services.AddScoped<CustomCookieAuthenticationEvents>();
 
-    services.Configure<CookiePolicyOptions>(options =>
+      services.Configure<CookiePolicyOptions>(options =>
+      {
+        // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+        options.CheckConsentNeeded = context => true;
+
+        if (IsDev)
+        {
+          options.ConsentCookie.Domain = "localhost";
+        }
+        else
+        {
+          options.ConsentCookie.Domain = $".{Configuration.GetValue<string>("domain")}";
+        }
+      });
+    }
+
+    public static void CookieMiddleware(IApplicationBuilder app)
     {
-      // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-      options.CheckConsentNeeded = context => true;
-
-      if (IsDev)
-      {
-        options.ConsentCookie.Domain = "localhost";
-      }
-      else
-      {
-        options.ConsentCookie.Domain = $".{Configuration.GetValue<string>("domain")}";
-      }
-    });
+      app.UseCookiePolicy();
     }
   }
 }

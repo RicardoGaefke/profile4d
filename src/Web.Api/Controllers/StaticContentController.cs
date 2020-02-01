@@ -50,8 +50,10 @@ namespace Profile4d.Web.Api.Controllers
       try
       {
         data.CreatedBy = "1";
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
         
-        _myContent.FirstPageEdit(data);
+        _myContent.FirstPageEdit(_firstPage);
 
         _return.Success = true;
 
