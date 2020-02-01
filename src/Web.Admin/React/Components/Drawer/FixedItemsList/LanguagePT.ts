@@ -5,6 +5,11 @@ export default {
   title: 'Conteúdo fixo',
   firstpage: 'Primeira página',
   competent: 'Mente competente',
-  dominantwhoiam: 'Quem eu sou?',
+  dominantwhoiam: 'Competente Quem eu sou?',
   dominantname: 'Nome Profile Dominante',
+  dominantstructure: 'Estrutura Profile Dominante',
+  sabotagemode: 'Modo Sabotador',
+  sabotagewhoiam: 'Sabotador Quem eu sou?',
+  sabotagedominant: 'Sabotador Dominante',
+  sabotagename: 'Nome Profile Sabotador',
 } as ILanguage;
