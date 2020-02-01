@@ -10,4 +10,5 @@ export interface ILanguage {
   sabotagedominant: string,
   sabotagename: string,
   competentxsabotage: string,
+  trinitybehavioralcompetent: string,
 }

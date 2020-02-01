@@ -44,4 +44,8 @@ export default [
     link: 'competentxsabotage',
     title: 'competentxsabotage',
   },
+  {
+    link: 'trinitybehavioralcompetent',
+    title: 'trinitybehavioralcompetent',
+  },
 ] as IStaticMenuItem[];
