@@ -22,4 +22,6 @@ export default {
   trinitybehavioralsabotage: 'Trindade Sabotador Comportamental',
   internalenemies: 'Inimigos Internos',
   namesaboteurone: 'Primeiro Sabotador Interno',
+  sfourpowersone: 'Primeiros Quatro Poderes Sabotador',
+  namesaboteurtwo: 'Segundo Sabotador Interno',
 } as ILanguage;
