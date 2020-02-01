@@ -68,4 +68,12 @@ export default [
     link: 'ifourpowerstwo',
     title: 'ifourpowerstwo',
   },
+  {
+    link: 'trinitybehavioralsabotage',
+    title: 'trinitybehavioralsabotage',
+  },
+  {
+    link: 'internalenemies',
+    title: 'internalenemies',
+  },
 ] as IStaticMenuItem[];

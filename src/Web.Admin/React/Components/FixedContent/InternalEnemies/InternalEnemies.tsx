@@ -7,7 +7,7 @@ import { withFormik } from 'formik';
 import { Typography } from '@material-ui/core';
 import useStyles from './Styles';
 import setLanguage from './Language';
-import TrinityBehavioralCompetent from '../FirstPage/Form/Form';
+import InternalEnemies from '../FirstPage/Form/Form';
 import Validation from '../FirstPage/Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
 import { IStaticFirstPage } from '../../../../../TypeScript/Interfaces/IStaticContent';
@@ -17,14 +17,14 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MyTrinityBehavioralCompetent = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
-  displayName: 'Static Content Trinity Behavioral Competent',
+const MyInternalEnemies = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+  displayName: 'Static Content Internal Enemies',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticFirstPage>('StaticContent/TrinityBehavioralCompetentEdit', {
+    await myAxios(window.location.href).post<IStaticFirstPage>('StaticContent/InternalEnemiesEdit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,
@@ -33,24 +33,24 @@ const MyTrinityBehavioralCompetent = withFormik<WithTranslation & WithSnackbarPr
       const { data } = response;
 
       if (data.Success) {
-        enqueueSnackbar(t('StaticTrinityBehavioralCompetent:feedback.success'), {
+        enqueueSnackbar(t('StaticInternalEnemies:feedback.success'), {
           variant: 'success',
         });
       } else {
-        enqueueSnackbar(t('StaticTrinityBehavioralCompetent:feedback.failure'), {
+        enqueueSnackbar(t('StaticInternalEnemies:feedback.failure'), {
           variant: 'error',
         });
       }
     }).catch((): void => {
-      enqueueSnackbar(t('StaticTrinityBehavioralCompetent:feedback.failure'), {
+      enqueueSnackbar(t('StaticInternalEnemies:feedback.failure'), {
         variant: 'error',
       });
     });
     setSubmitting(false);
   },
-})(TrinityBehavioralCompetent);
+})(InternalEnemies);
 
-export const Login = withTranslation()(withSnackbar(MyTrinityBehavioralCompetent));
+export const Login = withTranslation()(withSnackbar(MyInternalEnemies));
 
 export default withTranslation()(
   (props: WithTranslation & IProps): React.ReactElement<WithTranslation & IProps> => {
