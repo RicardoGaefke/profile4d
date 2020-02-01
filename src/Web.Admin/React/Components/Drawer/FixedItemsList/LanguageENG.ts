@@ -22,4 +22,7 @@ export default {
   trinitybehavioralsabotage: 'Trinity Behavioral Sabotage',
   internalenemies: 'Internal Enemies',
   namesaboteurone: 'Name Saboteur One',
+  sfourpowersone: 'Sabotage Four Powers One',
+  namesaboteurtwo: 'Name Saboteur Two',
+  sfourpowerstwo: 'Sabotage Four Powers Two',
 } as ILanguage;
