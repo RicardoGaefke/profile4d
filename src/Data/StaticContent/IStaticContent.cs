@@ -15,5 +15,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage DominantName();
     public BasicReturn DominantNameEdit(StaticFirstPage data);
+
+    public StaticFirstPage DominantStructure();
+    public BasicReturn DominantStructureEdit(StaticFirstPage data);
   }
 }
