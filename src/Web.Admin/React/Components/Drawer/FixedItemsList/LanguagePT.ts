@@ -7,4 +7,6 @@ export default {
   competent: 'Mente competente',
   dominantwhoiam: 'Quem eu sou?',
   dominantname: 'Nome Profile Dominante',
+  dominantstructure: 'Estrutura Profile Dominante',
+  sabotagemode: 'Modo Sabotador',
 } as ILanguage;
