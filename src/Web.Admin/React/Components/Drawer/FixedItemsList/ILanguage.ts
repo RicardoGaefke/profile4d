@@ -16,4 +16,5 @@ export interface ILanguage {
   ifourpowersone: string,
   inamepartnertwo: string,
   ifourpowerstwo: string,
+  trinitybehavioralsabotage: string,
 }

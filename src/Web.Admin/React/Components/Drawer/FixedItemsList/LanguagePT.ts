@@ -19,4 +19,5 @@ export default {
   ifourpowersone: 'Primeiros Quatro Poderes Internos',
   inamepartnertwo: 'Nome do Segundo Parceiro Interno',
   ifourpowerstwo: 'Segundos Quatro Poderes Internos',
+  trinitybehavioralsabotage: 'Trindade Sabotador Comportamental',
 } as ILanguage;
