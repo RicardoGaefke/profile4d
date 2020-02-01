@@ -24,7 +24,7 @@ const MyCompetentMind = withFormik<WithTranslation & WithSnackbarProps & IProps,
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticFirstPage>('StaticContent/FirstPageEdit', {
+    await myAxios(window.location.href).post<IStaticFirstPage>('StaticContent/CompetentMindEdit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,
@@ -33,16 +33,16 @@ const MyCompetentMind = withFormik<WithTranslation & WithSnackbarProps & IProps,
       const { data } = response;
 
       if (data.Success) {
-        enqueueSnackbar(t('StaticFirstPage:feedback.success'), {
+        enqueueSnackbar(t('StaticCompetentMind:feedback.success'), {
           variant: 'success',
         });
       } else {
-        enqueueSnackbar(t('StaticFirstPage:feedback.failure'), {
+        enqueueSnackbar(t('StaticCompetentMind:feedback.failure'), {
           variant: 'error',
         });
       }
     }).catch((): void => {
-      enqueueSnackbar(t('StaticFirstPage:feedback.failure'), {
+      enqueueSnackbar(t('StaticCompetentMind:feedback.failure'), {
         variant: 'error',
       });
     });
@@ -65,7 +65,7 @@ export default withTranslation()(
           align="center"
           variant="h5"
         >
-          {t('StaticFirstPage:title')}
+          {t('StaticCompetentMind:title')}
         </Typography>
         <Login myValues={myValues} />
       </div>

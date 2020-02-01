@@ -10,7 +10,7 @@ export default (): React.ReactElement => {
 
   useEffect((): void => {
     MyAxios(window.location.href)
-      .get<IStaticFirstPage>('StaticContent/FirstPage')
+      .get<IStaticFirstPage>('StaticContent/WhoIAm')
       .then((response): void => setState(response.data));
   }, []);
 
