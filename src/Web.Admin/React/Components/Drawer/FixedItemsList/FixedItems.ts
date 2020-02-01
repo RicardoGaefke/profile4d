@@ -16,4 +16,8 @@ export default [
     link: 'dominantwhoiam',
     title: 'dominantwhoiam',
   },
+  {
+    link: 'dominantname',
+    title: 'dominantname',
+  },
 ] as IStaticMenuItem[];
