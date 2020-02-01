@@ -21,4 +21,5 @@ export interface ILanguage {
   namesaboteurone: string,
   sfourpowersone: string,
   namesaboteurtwo: string,
+  sfourpowerstwo: string,
 }
