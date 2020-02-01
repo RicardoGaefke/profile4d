@@ -11,4 +11,5 @@ export interface ILanguage {
   sabotagename: string,
   competentxsabotage: string,
   trinitybehavioralcompetent: string,
+  internalpartners: string,
 }

@@ -14,4 +14,5 @@ export default {
   sabotagename: 'Nome Profile Sabotador',
   competentxsabotage: 'Modo Competente versus Modo Sabotador',
   trinitybehavioralcompetent: 'Trindade Competencia Comportamental',
+  internalpartners: 'Parceiros Internos',
 } as ILanguage;
