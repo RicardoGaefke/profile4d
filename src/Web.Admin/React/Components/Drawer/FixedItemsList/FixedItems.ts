@@ -76,4 +76,12 @@ export default [
     link: 'internalenemies',
     title: 'internalenemies',
   },
+  {
+    link: 'namesaboteurone',
+    title: 'namesaboteurone',
+  },
+  {
+    link: 'sfourpowersone',
+    title: 'sfourpowersone',
+  },
 ] as IStaticMenuItem[];
