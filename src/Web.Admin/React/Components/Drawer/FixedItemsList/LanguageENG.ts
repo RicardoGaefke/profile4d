@@ -27,4 +27,5 @@ export default {
   sfourpowerstwo: 'Sabotage Four Powers Two',
   pdi: 'Individual Development Plan',
   threeintelligencecenters: 'Three Intelligence Centers',
+  behavioursprofiles: 'Behaviours Profiles',
 } as ILanguage;

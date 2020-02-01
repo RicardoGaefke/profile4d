@@ -30,6 +30,7 @@ import NameSaboteurTwo from '../NameSaboteurTwo/Page';
 import SFourPowersTwo from '../SFourPowersTwo/Page';
 import PDI from '../PDI/Page';
 import ThreeIntelligenceCenters from '../ThreeIntelligenceCenters/Page';
+import BehavioursProfiles from '../BehavioursProfiles/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -61,6 +62,7 @@ export default withRouter(
         <Route path={`${match.url}/sfourpowerstwo`} component={SFourPowersTwo} />
         <Route path={`${match.url}/pdi`} component={PDI} />
         <Route path={`${match.url}/threeintelligencecenters`} component={ThreeIntelligenceCenters} />
+        <Route path={`${match.url}/behavioursprofiles`} component={BehavioursProfiles} />
       </MyTemplate>
     );
   },

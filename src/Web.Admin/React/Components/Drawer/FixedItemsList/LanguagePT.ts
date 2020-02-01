@@ -27,4 +27,5 @@ export default {
   sfourpowerstwo: 'Segundos Quatro Poderes Sabotador',
   pdi: 'Plano de Desenvolvimento Individual',
   threeintelligencecenters: 'Três Centros de Inteligência',
+  behavioursprofiles: 'Perfis de Comportamento',
 } as ILanguage;
