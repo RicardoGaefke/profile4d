@@ -5,4 +5,5 @@ export interface ILanguage {
   dominantwhoiam: string,
   dominantname: string,
   dominantstructure: string,
+  sabotagemode: string,
 }
