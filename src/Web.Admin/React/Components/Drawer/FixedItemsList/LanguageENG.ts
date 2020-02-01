@@ -6,4 +6,5 @@ export default {
   firstpage: 'First page',
   competent: 'Competent mind',
   dominantwhoiam: 'Who am I?',
+  dominantname: 'Dominant Name',
 } as ILanguage;
