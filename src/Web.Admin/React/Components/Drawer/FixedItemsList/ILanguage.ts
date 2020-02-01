@@ -3,4 +3,5 @@ export interface ILanguage {
   firstpage: string,
   competent: string,
   dominantwhoiam: string,
+  dominantname: string,
 }
