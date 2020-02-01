@@ -15,5 +15,8 @@ export default {
   competentxsabotage: 'Mode Competent versus Mode Sabotage',
   trinitybehavioralcompetent: 'Trinity Behavioral Competent',
   internalpartners: 'Internal Partners',
-  inamepartnerone: 'Name of First Internal Partners',
+  inamepartnerone: 'Name of First Internal Partner',
+  ifourpowersone: 'Internal Four Powers One',
+  inamepartnertwo: 'Name of Second Internal Partner',
+  ifourpowerstwo: 'Internal Four Powers Two',
 } as ILanguage;

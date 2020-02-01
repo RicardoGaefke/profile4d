@@ -15,5 +15,8 @@ export default {
   competentxsabotage: 'Modo Competente versus Modo Sabotador',
   trinitybehavioralcompetent: 'Trindade Competencia Comportamental',
   internalpartners: 'Parceiros Internos',
-  inamepartnerone: 'Nome dos Primeiros Parceiros Internos',
+  inamepartnerone: 'Nome do Primeiro Parceiro Interno',
+  ifourpowersone: 'Primeiros Quatro Poderes Internos',
+  inamepartnertwo: 'Nome do Segundo Parceiro Interno',
+  ifourpowerstwo: 'Segundos Quatro Poderes Internos',
 } as ILanguage;

@@ -56,4 +56,16 @@ export default [
     link: 'inamepartnerone',
     title: 'inamepartnerone',
   },
+  {
+    link: 'ifourpowersone',
+    title: 'ifourpowersone',
+  },
+  {
+    link: 'inamepartnertwo',
+    title: 'inamepartnertwo',
+  },
+  {
+    link: 'ifourpowerstwo',
+    title: 'ifourpowerstwo',
+  },
 ] as IStaticMenuItem[];
