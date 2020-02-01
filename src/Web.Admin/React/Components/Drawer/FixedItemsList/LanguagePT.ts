@@ -11,4 +11,5 @@ export default {
   sabotagemode: 'Modo Sabotador',
   sabotagewhoiam: 'Sabotador Quem eu sou?',
   sabotagedominant: 'Sabotador Dominante',
+  sabotagename: 'Nome Profile Sabotador',
 } as ILanguage;
