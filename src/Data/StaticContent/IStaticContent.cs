@@ -12,5 +12,11 @@ namespace Profile4d.Data
 
     public StaticFirstPage WhoIAm();
     public BasicReturn WhoIAmEdit(StaticFirstPage data);
+
+    public StaticFirstPage DominantName();
+    public BasicReturn DominantNameEdit(StaticFirstPage data);
+
+    public StaticFirstPage DominantStructure();
+    public BasicReturn DominantStructureEdit(StaticFirstPage data);
   }
 }
