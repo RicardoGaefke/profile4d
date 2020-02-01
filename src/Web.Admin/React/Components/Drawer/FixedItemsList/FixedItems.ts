@@ -20,4 +20,36 @@ export default [
     link: 'dominantname',
     title: 'dominantname',
   },
+  {
+    link: 'dominantstructure',
+    title: 'dominantstructure',
+  },
+  {
+    link: 'sabotagemode',
+    title: 'sabotagemode',
+  },
+  {
+    link: 'sabotagewhoiam',
+    title: 'sabotagewhoiam',
+  },
+  {
+    link: 'sabotagedominant',
+    title: 'sabotagedominant',
+  },
+  {
+    link: 'sabotagename',
+    title: 'sabotagename',
+  },
+  {
+    link: 'competentxsabotage',
+    title: 'competentxsabotage',
+  },
+  {
+    link: 'trinitybehavioralcompetent',
+    title: 'trinitybehavioralcompetent',
+  },
+  {
+    link: 'internalpartners',
+    title: 'internalpartners',
+  },
 ] as IStaticMenuItem[];
