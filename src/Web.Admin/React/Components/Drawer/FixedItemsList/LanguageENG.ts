@@ -18,4 +18,5 @@ export default {
   inamepartnerone: 'Name of First Internal Partner',
   ifourpowersone: 'Internal Four Powers One',
   inamepartnertwo: 'Name of Second Internal Partner',
+  ifourpowerstwo: 'Internal Four Powers Two',
 } as ILanguage;

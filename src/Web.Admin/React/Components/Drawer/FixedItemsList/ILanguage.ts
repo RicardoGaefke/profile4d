@@ -15,4 +15,5 @@ export interface ILanguage {
   inamepartnerone: string,
   ifourpowersone: string,
   inamepartnertwo: string,
+  ifourpowerstwo: string,
 }
