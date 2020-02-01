@@ -11,9 +11,9 @@ const initialValues: IStaticFirstPage = {
   CreatedBy: 'R. Gaefke',
   Success: true,
   Message: 'Success',
-  Code: 'CODE',
-  Details: 'Hello Word',
-  Url: 'www.google.com.br',
+  Code: 'Undefined',
+  Details: 'Undefined',
+  Url: 'www.staging.profile4d.com',
 };
 
 export default initialValues;
