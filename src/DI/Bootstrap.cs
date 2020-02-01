@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Profile4d.Domain;
-using Profile4d.Data;
 
 namespace Profile4d.DI
 {
@@ -32,7 +31,6 @@ namespace Profile4d.DI
 
     public static void ConfigData(IServiceCollection Services, IConfiguration Configuration)
     {
-      Services.AddSingleton<MyIdentity>();
     }
 
     public static void ConsentCookie(IServiceCollection Services, IConfiguration Configuration, bool IsDev)

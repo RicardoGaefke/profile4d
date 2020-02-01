@@ -14,9 +14,9 @@ export default (props: WithTranslation): object => Yup.object().shape({
   Text_PT: Yup.string()
     .required(props.t('StaticFirstPage:textPT.required'))
     .min(5, props.t('StaticFirstPage:textPT.min'))
-    .max(9500, props.t('StaticFirstPage:textPT.max')),
+    .max(8000, props.t('StaticFirstPage:textPT.max')),
   Text_ENG: Yup.string()
     .required(props.t('StaticFirstPage:textENG.required'))
     .min(5, props.t('StaticFirstPage:textENG.min'))
-    .max(9500, props.t('StaticFirstPage:textENG.max')),
+    .max(8000, props.t('StaticFirstPage:textENG.max')),
 });
