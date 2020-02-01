@@ -20,4 +20,5 @@ export default {
   inamepartnertwo: 'Name of Second Internal Partner',
   ifourpowerstwo: 'Internal Four Powers Two',
   trinitybehavioralsabotage: 'Trinity Behavioral Sabotage',
+  internalenemies: 'Internal Enemies',
 } as ILanguage;
