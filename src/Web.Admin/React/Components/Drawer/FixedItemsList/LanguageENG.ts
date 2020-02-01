@@ -25,4 +25,5 @@ export default {
   sfourpowersone: 'Sabotage Four Powers One',
   namesaboteurtwo: 'Name Saboteur Two',
   sfourpowerstwo: 'Sabotage Four Powers Two',
+  pdi: 'Individual Development Plan',
 } as ILanguage;
