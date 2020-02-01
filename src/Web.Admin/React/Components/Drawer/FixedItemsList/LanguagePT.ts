@@ -16,4 +16,5 @@ export default {
   trinitybehavioralcompetent: 'Trindade Competencia Comportamental',
   internalpartners: 'Parceiros Internos',
   inamepartnerone: 'Nome dos Primeiros Parceiros Internos',
+  ifourpowersone: 'Primeiros Quatro Poderes Internos',
 } as ILanguage;

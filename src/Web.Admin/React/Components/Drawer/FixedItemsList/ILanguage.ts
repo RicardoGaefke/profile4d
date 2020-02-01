@@ -13,4 +13,5 @@ export interface ILanguage {
   trinitybehavioralcompetent: string,
   internalpartners: string,
   inamepartnerone: string,
+  ifourpowersone: string,
 }
