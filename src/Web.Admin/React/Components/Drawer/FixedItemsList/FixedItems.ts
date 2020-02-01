@@ -24,4 +24,8 @@ export default [
     link: 'dominantstructure',
     title: 'dominantstructure',
   },
+  {
+    link: 'sabotagemode',
+    title: 'sabotagemode',
+  },
 ] as IStaticMenuItem[];

@@ -8,4 +8,5 @@ export default {
   dominantwhoiam: 'Who am I?',
   dominantname: 'Dominant Profile Name',
   dominantstructure: 'Dominant Profile Structure',
+  sabotagemode: 'Sabotage Mode',
 } as ILanguage;

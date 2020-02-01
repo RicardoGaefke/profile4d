@@ -7,7 +7,7 @@ import { withFormik } from 'formik';
 import { Typography } from '@material-ui/core';
 import useStyles from './Styles';
 import setLanguage from './Language';
-import DominantStructure from '../FirstPage/Form/Form';
+import SabotageMode from '../FirstPage/Form/Form';
 import Validation from '../FirstPage/Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
 import { IStaticFirstPage } from '../../../../../TypeScript/Interfaces/IStaticContent';
@@ -17,14 +17,14 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MyDominantStructure = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
-  displayName: 'Static Content Dominant Structure',
+const MySabotageMode = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+  displayName: 'Static Content Sabotage Mode',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticFirstPage>('StaticContent/DominantStructureEdit', {
+    await myAxios(window.location.href).post<IStaticFirstPage>('StaticContent/SabotageModeEdit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,
@@ -33,24 +33,24 @@ const MyDominantStructure = withFormik<WithTranslation & WithSnackbarProps & IPr
       const { data } = response;
 
       if (data.Success) {
-        enqueueSnackbar(t('StaticDominantStructure:feedback.success'), {
+        enqueueSnackbar(t('StaticSabotageMode:feedback.success'), {
           variant: 'success',
         });
       } else {
-        enqueueSnackbar(t('StaticDominantStructure:feedback.failure'), {
+        enqueueSnackbar(t('StaticSabotageMode:feedback.failure'), {
           variant: 'error',
         });
       }
     }).catch((): void => {
-      enqueueSnackbar(t('StaticDominantStructure:feedback.failure'), {
+      enqueueSnackbar(t('StaticSabotageMode:feedback.failure'), {
         variant: 'error',
       });
     });
     setSubmitting(false);
   },
-})(DominantStructure);
+})(SabotageMode);
 
-export const Login = withTranslation()(withSnackbar(MyDominantStructure));
+export const Login = withTranslation()(withSnackbar(MySabotageMode));
 
 export default withTranslation()(
   (props: WithTranslation & IProps): React.ReactElement<WithTranslation & IProps> => {

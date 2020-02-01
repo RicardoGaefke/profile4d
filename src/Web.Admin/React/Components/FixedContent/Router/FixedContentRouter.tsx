@@ -11,6 +11,7 @@ import Competent from '../CompetentMind/Page';
 import DominantWhoIAm from '../DominantWhoIAm/Page';
 import DominantName from '../DominantName/Page';
 import DominantStructure from '../DominantStructure/Page';
+import SabotageMode from '../SabotageMode/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -23,6 +24,7 @@ export default withRouter(
         <Route path={`${match.url}/dominantwhoiam`} component={DominantWhoIAm} />
         <Route path={`${match.url}/dominantname`} component={DominantName} />
         <Route path={`${match.url}/dominantstructure`} component={DominantStructure} />
+        <Route path={`${match.url}/sabotagemode`} component={SabotageMode} />
       </MyTemplate>
     );
   },
