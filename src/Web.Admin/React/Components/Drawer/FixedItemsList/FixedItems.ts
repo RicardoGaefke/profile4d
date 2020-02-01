@@ -96,4 +96,8 @@ export default [
     link: 'pdi',
     title: 'pdi',
   },
+  {
+    link: 'threeintelligencecenters',
+    title: 'threeintelligencecenters',
+  },
 ] as IStaticMenuItem[];
