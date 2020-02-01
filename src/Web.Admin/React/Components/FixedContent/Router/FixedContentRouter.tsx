@@ -9,7 +9,7 @@ import MyTemplate from '../../Home/Template/Template';
 import Page from '../FirstPage/Page';
 import Competent from '../CompetentMind/Page';
 import DominantWhoIAm from '../DominantWhoIAm/Page';
-import DominantName from '../DominantName/DominantName';
+import DominantName from '../DominantName/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
