@@ -164,7 +164,7 @@ namespace Profile4d.Web.Api.Controllers
       }
     }
 
-    [HttpGet("DominantNameMind")]
+    [HttpGet("DominantName")]
     public ActionResult<StaticFirstPage> DominantName()
     {
       StaticFirstPage _return = new StaticFirstPage();
@@ -212,7 +212,7 @@ namespace Profile4d.Web.Api.Controllers
       }
     }
 
-    [HttpGet("DominantStructureMind")]
+    [HttpGet("DominantStructure")]
     public ActionResult<StaticFirstPage> DominantStructure()
     {
       StaticFirstPage _return = new StaticFirstPage();
