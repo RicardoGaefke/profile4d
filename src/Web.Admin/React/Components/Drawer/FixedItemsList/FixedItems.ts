@@ -72,4 +72,8 @@ export default [
     link: 'trinitybehavioralsabotage',
     title: 'trinitybehavioralsabotage',
   },
+  {
+    link: 'internalenemies',
+    title: 'internalenemies',
+  },
 ] as IStaticMenuItem[];

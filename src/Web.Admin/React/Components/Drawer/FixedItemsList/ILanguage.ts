@@ -17,4 +17,5 @@ export interface ILanguage {
   inamepartnertwo: string,
   ifourpowerstwo: string,
   trinitybehavioralsabotage: string,
+  internalenemies: string,
 }
