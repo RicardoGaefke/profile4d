@@ -4,19 +4,19 @@ import { WithTranslation } from 'react-i18next';
 
 export default (props: WithTranslation): object => Yup.object().shape({
   Title_PT: Yup.string()
-    .required(props.t('StaticFirstPage:titlePT.required'))
-    .min(5, props.t('StaticFirstPage:titlePT.min'))
-    .max(95, props.t('StaticFirstPage:titlePT.max')),
+    .required(props.t('StaticCompetentMind:titlePT.required'))
+    .min(5, props.t('StaticCompetentMind:titlePT.min'))
+    .max(95, props.t('StaticCompetentMind:titlePT.max')),
   Title_ENG: Yup.string()
-    .required(props.t('StaticFirstPage:titleENG.required'))
-    .min(5, props.t('StaticFirstPage:titleENG.min'))
-    .max(95, props.t('StaticFirstPage:titleENG.max')),
+    .required(props.t('StaticCompetentMind:titleENG.required'))
+    .min(5, props.t('StaticCompetentMind:titleENG.min'))
+    .max(95, props.t('StaticCompetentMind:titleENG.max')),
   Text_PT: Yup.string()
-    .required(props.t('StaticFirstPage:textPT.required'))
-    .min(5, props.t('StaticFirstPage:textPT.min'))
-    .max(8000, props.t('StaticFirstPage:textPT.max')),
+    .required(props.t('StaticCompetentMind:textPT.required'))
+    .min(5, props.t('StaticCompetentMind:textPT.min'))
+    .max(8000, props.t('StaticCompetentMind:textPT.max')),
   Text_ENG: Yup.string()
-    .required(props.t('StaticFirstPage:textENG.required'))
-    .min(5, props.t('StaticFirstPage:textENG.min'))
-    .max(8000, props.t('StaticFirstPage:textENG.max')),
+    .required(props.t('StaticCompetentMind:textENG.required'))
+    .min(5, props.t('StaticCompetentMind:textENG.min'))
+    .max(8000, props.t('StaticCompetentMind:textENG.max')),
 });

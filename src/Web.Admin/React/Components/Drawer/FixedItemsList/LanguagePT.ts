@@ -5,4 +5,5 @@ export default {
   title: 'Conteúdo fixo',
   firstpage: 'Primeira página',
   competent: 'Mente competente',
+  dominantwhoiam: 'Quem eu sou?',
 } as ILanguage;
