@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get install curl
-DEBIAN_FRONTEND=noninteractive curl -sL https://deb.nodesource.com/setup_12.x | bash
+curl -sL https://deb.nodesource.com/setup_12.x | bash
 apt-get install -y nodejs
 
 set -e
