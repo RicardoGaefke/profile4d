@@ -6,5 +6,11 @@ namespace Profile4d.Data
   {
     public StaticFirstPage FirstPage();
     public BasicReturn FirstPageEdit(StaticFirstPage data);
+
+    public StaticFirstPage CompetentMind();
+    public BasicReturn CompetentMindEdit(StaticFirstPage data);
+
+    public StaticFirstPage WhoIAm();
+    public BasicReturn WhoIAmEdit(StaticFirstPage data);
   }
 }
