@@ -8,6 +8,7 @@ import {
 import MyTemplate from '../../Home/Template/Template';
 import Page from '../FirstPage/Page';
 import Competent from '../CompetentMind/Page';
+import DominantWhoIAm from '../DominantWhoIAm/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -17,6 +18,7 @@ export default withRouter(
       <MyTemplate>
         <Route path={`${match.url}/firstpage`} component={Page} />
         <Route path={`${match.url}/competentmind`} component={Competent} />
+        <Route path={`${match.url}/dominantwhoiam`} component={DominantWhoIAm} />
       </MyTemplate>
     );
   },

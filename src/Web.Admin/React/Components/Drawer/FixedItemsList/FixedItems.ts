@@ -12,4 +12,8 @@ export default [
     link: 'competentmind',
     title: 'competent',
   },
+  {
+    link: 'dominantwhoiam',
+    title: 'dominantwhoiam',
+  },
 ] as IStaticMenuItem[];

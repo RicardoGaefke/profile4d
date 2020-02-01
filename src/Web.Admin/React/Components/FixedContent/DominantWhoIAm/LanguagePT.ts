@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos da Mente Competente do relatório',
+  title: 'Dados estáticos de Dominante Quem eu Sou? do relatório',
   titlePT: {
     text: 'Título em Português',
     title: 'Título do relatório em Português',
@@ -22,14 +22,14 @@ export default {
     title: 'Texto do relatório em Português',
     required: 'Este campo é obrigatório',
     min: 'Digite ao menos cinco caracteres',
-    max: 'Digite no máximo 8000 caracteres',
+    max: 'Digite no máximo 950 caracteres',
   },
   textENG: {
     text: 'Texto em Inglês',
     title: 'Texto do relatório em Inglês',
     required: 'Este campo é obrigatório',
     min: 'Digite ao menos cinco caracteres',
-    max: 'Digite no máximo 8000 caracteres',
+    max: 'Digite no máximo 950 caracteres',
   },
   button: {
     text: 'Salvar alterações',
