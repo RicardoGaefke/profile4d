@@ -7,4 +7,5 @@ export default {
   competent: 'Competent mind',
   dominantwhoiam: 'Who am I?',
   dominantname: 'Dominant Profile Name',
+  dominantstructure: 'Dominant Profile Structure',
 } as ILanguage;
