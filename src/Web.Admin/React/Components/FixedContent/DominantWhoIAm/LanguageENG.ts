@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Static data from the Competent Mind of the report',
+  title: 'Static data from the Dominant Who I Am of the report',
   titlePT: {
     text: 'Title in Portuguese',
     title: 'The title of the report in Portuguese',
@@ -22,14 +22,14 @@ export default {
     title: 'The text of the report in Portuguese',
     required: 'This field is required',
     min: '5 character minimum',
-    max: '950 characters maximum',
+    max: '8000 characters maximum',
   },
   textENG: {
     text: 'Text in English',
     title: 'The text of the report in English',
     required: 'This field is required',
     min: '5 character minimum',
-    max: '950 characters maximum',
+    max: '8000 characters maximum',
   },
   button: {
     text: 'Save changes',

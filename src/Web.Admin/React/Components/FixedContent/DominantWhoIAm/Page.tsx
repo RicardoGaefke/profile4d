@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { IStaticFirstPage } from '../../../../../TypeScript/Interfaces/IStaticContent';
 import Loading from '../../Loading/Loading';
 import MyAxios from '../../../Utils/MyAxios';
-import MyCompetentMind from './CompetentMind';
+import MyDominantWhoIAm from './DominantWhoIAm';
 
 export default (): React.ReactElement => {
   const [state, setState] = useState({} as IStaticFirstPage);
@@ -16,7 +16,7 @@ export default (): React.ReactElement => {
 
   return (
     <>
-      {(!state.Success) ? (<Loading />) : (<MyCompetentMind myValues={state} />)}
+      {(!state.Success) ? (<Loading />) : (<MyDominantWhoIAm myValues={state} />)}
     </>
   );
 };
