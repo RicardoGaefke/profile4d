@@ -8,4 +8,5 @@ export interface ILanguage {
   sabotagemode: string,
   sabotagewhoiam: string,
   sabotagedominant: string,
+  sabotagename: string,
 }

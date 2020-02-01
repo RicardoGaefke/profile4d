@@ -7,7 +7,7 @@ import { withFormik } from 'formik';
 import { Typography } from '@material-ui/core';
 import useStyles from './Styles';
 import setLanguage from './Language';
-import SabotageWhoIAm from '../FirstPage/Form/Form';
+import SabotageName from '../FirstPage/Form/Form';
 import Validation from '../FirstPage/Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
 import { IStaticFirstPage } from '../../../../../TypeScript/Interfaces/IStaticContent';
@@ -17,14 +17,14 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MySabotageWhoIAm = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
-  displayName: 'Static Content Sabotage Who I Am',
+const MySabotageName = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+  displayName: 'Static Content Sabotage Name',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticFirstPage>('StaticContent/SabotageWhoIAmEdit', {
+    await myAxios(window.location.href).post<IStaticFirstPage>('StaticContent/SabotageNameEdit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,
@@ -33,24 +33,24 @@ const MySabotageWhoIAm = withFormik<WithTranslation & WithSnackbarProps & IProps
       const { data } = response;
 
       if (data.Success) {
-        enqueueSnackbar(t('StaticSabotageWhoIAm:feedback.success'), {
+        enqueueSnackbar(t('StaticSabotageName:feedback.success'), {
           variant: 'success',
         });
       } else {
-        enqueueSnackbar(t('StaticSabotageWhoIAm:feedback.failure'), {
+        enqueueSnackbar(t('StaticSabotageName:feedback.failure'), {
           variant: 'error',
         });
       }
     }).catch((): void => {
-      enqueueSnackbar(t('StaticSabotageWhoIAm:feedback.failure'), {
+      enqueueSnackbar(t('StaticSabotageName:feedback.failure'), {
         variant: 'error',
       });
     });
     setSubmitting(false);
   },
-})(SabotageWhoIAm);
+})(SabotageName);
 
-export const Login = withTranslation()(withSnackbar(MySabotageWhoIAm));
+export const Login = withTranslation()(withSnackbar(MySabotageName));
 
 export default withTranslation()(
   (props: WithTranslation & IProps): React.ReactElement<WithTranslation & IProps> => {
