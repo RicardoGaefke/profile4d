@@ -128,4 +128,8 @@ export default [
     link: 'originalxadapted',
     title: 'originalxadapted',
   },
+  {
+    link: 'graphicimage',
+    title: 'graphicimage',
+  },
 ] as IStaticMenuItem[];
