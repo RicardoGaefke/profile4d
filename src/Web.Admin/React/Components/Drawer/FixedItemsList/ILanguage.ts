@@ -33,4 +33,5 @@ export interface ILanguage {
   trinitypersonified: string,
   trinityspecifics: string,
   originalxadapted: string,
+  graphicimage: string,
 }
