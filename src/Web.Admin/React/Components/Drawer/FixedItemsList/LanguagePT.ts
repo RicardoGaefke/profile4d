@@ -40,4 +40,5 @@ export default {
   personalizedtext: 'Texto Personalizado',
   explainedtext: 'Text Explicado',
   personalizedtable: 'Tabela Personalizada',
+  defaulttext: 'Texto Padrão',
 } as ILanguage;

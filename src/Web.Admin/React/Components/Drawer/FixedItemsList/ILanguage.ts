@@ -37,4 +37,5 @@ export interface ILanguage {
   personalizedtext: string,
   explainedtext: string,
   personalizedtable: string,
+  defaulttext: string,
 }

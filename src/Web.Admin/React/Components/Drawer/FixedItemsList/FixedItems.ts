@@ -144,4 +144,8 @@ export default [
     link: 'personalizedtable',
     title: 'personalizedtable',
   },
+  {
+    link: 'defaulttext',
+    title: 'defaulttext',
+  },
 ] as IStaticMenuItem[];
