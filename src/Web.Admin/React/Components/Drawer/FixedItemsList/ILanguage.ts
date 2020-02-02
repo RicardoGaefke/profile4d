@@ -36,4 +36,6 @@ export interface ILanguage {
   graphicimage: string,
   personalizedtext: string,
   explainedtext: string,
+  personalizedtable: string,
+  defaulttext: string,
 }

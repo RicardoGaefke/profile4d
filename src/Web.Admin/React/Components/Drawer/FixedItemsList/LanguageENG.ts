@@ -39,4 +39,6 @@ export default {
   graphicimage: 'Graphic Image',
   personalizedtext: 'Personalized Text',
   explainedtext: 'Explained Text',
+  personalizedtable: 'Personalized Table',
+  defaulttext: 'Default Text',
 } as ILanguage;

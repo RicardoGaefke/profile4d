@@ -140,4 +140,12 @@ export default [
     link: 'explainedtext',
     title: 'explainedtext',
   },
+  {
+    link: 'personalizedtable',
+    title: 'personalizedtable',
+  },
+  {
+    link: 'defaulttext',
+    title: 'defaulttext',
+  },
 ] as IStaticMenuItem[];
