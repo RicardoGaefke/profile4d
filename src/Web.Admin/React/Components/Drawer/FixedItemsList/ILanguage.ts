@@ -28,4 +28,5 @@ export interface ILanguage {
   threeintelligencecenters: string,
   behavioursprofiles: string,
   identifiedconflicts: string,
+  energyspikes: string,
 }

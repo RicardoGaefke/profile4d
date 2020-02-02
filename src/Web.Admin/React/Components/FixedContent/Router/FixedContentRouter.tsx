@@ -32,6 +32,7 @@ import PDI from '../PDI/Page';
 import ThreeIntelligenceCenters from '../ThreeIntelligenceCenters/Page';
 import BehavioursProfiles from '../BehavioursProfiles/Page';
 import IdentifiedConflicts from '../IdentifiedConflicts/Page';
+import EnergySpikes from '../EnergySpikes/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -65,6 +66,7 @@ export default withRouter(
         <Route path={`${match.url}/threeintelligencecenters`} component={ThreeIntelligenceCenters} />
         <Route path={`${match.url}/behavioursprofiles`} component={BehavioursProfiles} />
         <Route path={`${match.url}/identifiedconflicts`} component={IdentifiedConflicts} />
+        <Route path={`${match.url}/energyspikes`} component={EnergySpikes} />
       </MyTemplate>
     );
   },
