@@ -3,6 +3,8 @@ import { ILanguage } from './ILanguage';
 
 export default {
   title: 'Conteúdo fixo',
+  images: 'Lista de imagens',
+  dynamic: 'Conteúdo dinâmico',
   firstpage: 'Primeira página',
   competent: 'Mente competente',
   dominantwhoiam: 'Competente Quem eu sou?',

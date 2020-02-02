@@ -1,5 +1,7 @@
 export interface ILanguage {
   title: string,
+  images: string,
+  dynamic: string,
   firstpage: string,
   competent: string,
   dominantwhoiam: string,

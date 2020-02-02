@@ -18,5 +18,14 @@ namespace Profile4d.Data
 
     public StaticFirstPage DominantStructure();
     public BasicReturn DominantStructureEdit(StaticFirstPage data);
+
+    public StaticFirstPage SabotageMode();
+    public BasicReturn SabotageModeEdit(StaticFirstPage data);
+
+    public StaticFirstPage SabotageWhoIAm();
+    public BasicReturn SabotageWhoIAmEdit(StaticFirstPage data);
+
+    public StaticFirstPage SabotageDominant();
+    public BasicReturn SabotageDominantEdit(StaticFirstPage data);
   }
 }
