@@ -132,4 +132,8 @@ export default [
     link: 'graphicimage',
     title: 'graphicimage',
   },
+  {
+    link: 'personalizedtext',
+    title: 'personalizedtext',
+  },
 ] as IStaticMenuItem[];

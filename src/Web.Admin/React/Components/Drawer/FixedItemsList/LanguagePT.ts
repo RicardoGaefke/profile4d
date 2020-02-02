@@ -37,4 +37,5 @@ export default {
   trinityspecifics: 'Trindade Especificada',
   originalxadapted: 'Tríade Original X Tríade Adaptada',
   graphicimage: 'Imagem Gráfica',
+  personalizedtext: 'Texto Personalizado',
 } as ILanguage;

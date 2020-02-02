@@ -37,4 +37,5 @@ export default {
   trinityspecifics: 'Trinity Specifics',
   originalxadapted: 'Original Triad X Adapted Triad',
   graphicimage: 'Graphic Image',
+  personalizedtext: 'Personalized Text',
 } as ILanguage;
