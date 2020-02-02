@@ -30,4 +30,5 @@ export interface ILanguage {
   identifiedconflicts: string,
   energyspikes: string,
   columncharthreeprofiles: string,
+  trinitypersonified: string,
 }

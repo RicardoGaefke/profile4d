@@ -34,6 +34,7 @@ import BehavioursProfiles from '../BehavioursProfiles/Page';
 import IdentifiedConflicts from '../IdentifiedConflicts/Page';
 import EnergySpikes from '../EnergySpikes/Page';
 import ColumnChartThreeProfiles from '../ColumnChartThreeProfiles/Page';
+import TrinityPersonified from '../TrinityPersonified/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -69,6 +70,8 @@ export default withRouter(
         <Route path={`${match.url}/identifiedconflicts`} component={IdentifiedConflicts} />
         <Route path={`${match.url}/energyspikes`} component={EnergySpikes} />
         <Route path={`${match.url}/columncharthreeprofiles`} component={ColumnChartThreeProfiles} />
+        <Route path={`${match.url}/trinitypersonified`} component={TrinityPersonified} />
+
       </MyTemplate>
     );
   },
