@@ -120,4 +120,20 @@ export default [
     link: 'trinitypersonified',
     title: 'trinitypersonified',
   },
+  {
+    link: 'trinityspecifics',
+    title: 'trinityspecifics',
+  },
+  {
+    link: 'originalxadapted',
+    title: 'originalxadapted',
+  },
+  {
+    link: 'graphicimage',
+    title: 'graphicimage',
+  },
+  {
+    link: 'personalizedtext',
+    title: 'personalizedtext',
+  },
 ] as IStaticMenuItem[];

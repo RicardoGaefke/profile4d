@@ -34,4 +34,8 @@ export default {
   energyspikes: 'Picos de Energia',
   columncharthreeprofiles: 'Gráfico de Três Colunas do Perfil',
   trinitypersonified: 'Trindade Personificada',
+  trinityspecifics: 'Trindade Especificada',
+  originalxadapted: 'Tríade Original X Tríade Adaptada',
+  graphicimage: 'Imagem Gráfica',
+  personalizedtext: 'Texto Personalizado',
 } as ILanguage;

@@ -34,4 +34,8 @@ export default {
   energyspikes: 'Energy Spikes',
   columncharthreeprofiles: 'Column Chart Three Profiles',
   trinitypersonified: 'Trinity Personified',
+  trinityspecifics: 'Trinity Specifics',
+  originalxadapted: 'Original Triad X Adapted Triad',
+  graphicimage: 'Graphic Image',
+  personalizedtext: 'Personalized Text',
 } as ILanguage;
