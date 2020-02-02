@@ -549,5 +549,53 @@ namespace Profile4d.Web.Api.Controllers
         return _return;
       }
     }
+
+    [HttpGet("InternalPartners")]
+    public ActionResult<StaticFirstPage> InternalPartners()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.InternalPartners();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("InternalPartnersEdit")]
+    public ActionResult<BasicReturn> InternalPartnersEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.InternalPartnersEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
   }
 }

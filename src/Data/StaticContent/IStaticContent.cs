@@ -36,5 +36,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage TrinityBehavioralCompetent();
     public BasicReturn TrinityBehavioralCompetentEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalPartners();
+    public BasicReturn InternalPartnersEdit(StaticFirstPage data);
   }
 }
