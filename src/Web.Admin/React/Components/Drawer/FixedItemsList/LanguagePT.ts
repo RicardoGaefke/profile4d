@@ -31,4 +31,5 @@ export default {
   threeintelligencecenters: 'Três Centros de Inteligência',
   behavioursprofiles: 'Perfis de Comportamento',
   identifiedconflicts: 'Conflitos Identificados',
+  energyspikes: 'Picos de Energia',
 } as ILanguage;

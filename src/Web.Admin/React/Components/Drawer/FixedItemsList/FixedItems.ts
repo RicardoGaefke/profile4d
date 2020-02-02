@@ -108,4 +108,8 @@ export default [
     link: 'identifiedconflicts',
     title: 'identifiedconflicts',
   },
+  {
+    link: 'energyspikes',
+    title: 'energyspikes',
+  },
 ] as IStaticMenuItem[];
