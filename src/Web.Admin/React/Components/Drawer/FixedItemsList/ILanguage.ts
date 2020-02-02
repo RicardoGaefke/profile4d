@@ -35,4 +35,6 @@ export interface ILanguage {
   originalxadapted: string,
   graphicimage: string,
   personalizedtext: string,
+  explainedtext: string,
+  personalizedtable: string,
 }

@@ -38,4 +38,6 @@ export default {
   originalxadapted: 'Original Triad X Adapted Triad',
   graphicimage: 'Graphic Image',
   personalizedtext: 'Personalized Text',
+  explainedtext: 'Explained Text',
+  personalizedtable: 'Personalized Table',
 } as ILanguage;
