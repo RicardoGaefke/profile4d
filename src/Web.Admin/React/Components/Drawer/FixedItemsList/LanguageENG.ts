@@ -32,4 +32,5 @@ export default {
   behavioursprofiles: 'Behaviours Profiles',
   identifiedconflicts: 'Identified Conflicts',
   energyspikes: 'Energy Spikes',
+  columncharthreeprofiles: 'Column Chart Three Profiles',
 } as ILanguage;

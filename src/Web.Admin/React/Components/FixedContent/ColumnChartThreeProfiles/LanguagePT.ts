@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos dos Tríade Comportamental e os Picos de Energia do relatório',
+  title: 'Dados estáticos do Gráfico de Três Colunas do Perfil do relatório',
   titlePT: {
     text: 'Título em Português',
     title: 'Título do relatório em Português',

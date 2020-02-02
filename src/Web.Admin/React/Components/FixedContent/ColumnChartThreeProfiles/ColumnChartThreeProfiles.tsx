@@ -7,7 +7,7 @@ import { withFormik } from 'formik';
 import { Typography } from '@material-ui/core';
 import useStyles from './Styles';
 import setLanguage from './Language';
-import EnergySpikes from '../FirstPage/Form/Form';
+import ColumnChartThreeProfiles from '../FirstPage/Form/Form';
 import Validation from '../FirstPage/Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
 import { IStaticFirstPage } from '../../../../../TypeScript/Interfaces/IStaticContent';
@@ -17,14 +17,14 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MyEnergySpikes = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
-  displayName: 'Static Content Energy Spikes',
+const MyColumnChartThreeProfiles = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+  displayName: 'Static Content Column Chart Three Profiles',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticFirstPage>('StaticContent/EnergySpikesEdit', {
+    await myAxios(window.location.href).post<IStaticFirstPage>('StaticContent/ColumnChartThreeProfilesEdit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,
@@ -33,24 +33,24 @@ const MyEnergySpikes = withFormik<WithTranslation & WithSnackbarProps & IProps, 
       const { data } = response;
 
       if (data.Success) {
-        enqueueSnackbar(t('StaticEnergySpikes:feedback.success'), {
+        enqueueSnackbar(t('StaticColumnChartThreeProfiles:feedback.success'), {
           variant: 'success',
         });
       } else {
-        enqueueSnackbar(t('StaticEnergySpikes:feedback.failure'), {
+        enqueueSnackbar(t('StaticColumnChartThreeProfiles:feedback.failure'), {
           variant: 'error',
         });
       }
     }).catch((): void => {
-      enqueueSnackbar(t('StaticEnergySpikes:feedback.failure'), {
+      enqueueSnackbar(t('StaticColumnChartThreeProfiles:feedback.failure'), {
         variant: 'error',
       });
     });
     setSubmitting(false);
   },
-})(EnergySpikes);
+})(ColumnChartThreeProfiles);
 
-export const Login = withTranslation()(withSnackbar(MyEnergySpikes));
+export const Login = withTranslation()(withSnackbar(MyColumnChartThreeProfiles));
 
 export default withTranslation()(
   (props: WithTranslation & IProps): React.ReactElement<WithTranslation & IProps> => {

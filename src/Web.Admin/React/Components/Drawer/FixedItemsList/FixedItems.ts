@@ -112,4 +112,8 @@ export default [
     link: 'energyspikes',
     title: 'energyspikes',
   },
+  {
+    link: 'columncharthreeprofiles',
+    title: 'columncharthreeprofiles',
+  },
 ] as IStaticMenuItem[];
