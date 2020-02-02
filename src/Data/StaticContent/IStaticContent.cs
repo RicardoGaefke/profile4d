@@ -54,5 +54,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage TrinityBehaviourSabotage();
     public BasicReturn TrinityBehaviourSabotageEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalEnemies();
+    public BasicReturn InternalEnemiesEdit(StaticFirstPage data);
   }
 }
