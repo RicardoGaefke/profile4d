@@ -32,4 +32,5 @@ export interface ILanguage {
   columncharthreeprofiles: string,
   trinitypersonified: string,
   trinityspecifics: string,
+  originalxadapted: string,
 }

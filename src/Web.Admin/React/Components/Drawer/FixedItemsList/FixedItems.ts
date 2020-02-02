@@ -124,4 +124,8 @@ export default [
     link: 'trinityspecifics',
     title: 'trinityspecifics',
   },
+  {
+    link: 'originalxadapted',
+    title: 'originalxadapted',
+  },
 ] as IStaticMenuItem[];
