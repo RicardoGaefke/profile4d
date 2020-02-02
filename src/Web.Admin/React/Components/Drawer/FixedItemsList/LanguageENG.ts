@@ -35,4 +35,5 @@ export default {
   columncharthreeprofiles: 'Column Chart Three Profiles',
   trinitypersonified: 'Trinity Personified',
   trinityspecifics: 'Trinity Specifics',
+  originalxadapted: 'Original Triad X Adapted Triad',
 } as ILanguage;
