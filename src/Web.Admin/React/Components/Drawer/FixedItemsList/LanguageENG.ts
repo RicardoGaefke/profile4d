@@ -30,4 +30,9 @@ export default {
   pdi: 'Individual Development Plan',
   threeintelligencecenters: 'Three Intelligence Centers',
   behavioursprofiles: 'Behaviours Profiles',
+  identifiedconflicts: 'Identified Conflicts',
+  energyspikes: 'Energy Spikes',
+  columncharthreeprofiles: 'Column Chart Three Profiles',
+  trinitypersonified: 'Trinity Personified',
+  trinityspecifics: 'Trinity Specifics',
 } as ILanguage;

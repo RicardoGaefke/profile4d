@@ -104,4 +104,24 @@ export default [
     link: 'behavioursprofiles',
     title: 'behavioursprofiles',
   },
+  {
+    link: 'identifiedconflicts',
+    title: 'identifiedconflicts',
+  },
+  {
+    link: 'energyspikes',
+    title: 'energyspikes',
+  },
+  {
+    link: 'columncharthreeprofiles',
+    title: 'columncharthreeprofiles',
+  },
+  {
+    link: 'trinitypersonified',
+    title: 'trinitypersonified',
+  },
+  {
+    link: 'trinityspecifics',
+    title: 'trinityspecifics',
+  },
 ] as IStaticMenuItem[];
