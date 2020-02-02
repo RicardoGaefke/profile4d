@@ -39,6 +39,7 @@ import TrinitySpecifics from '../TrinitySpecifics/Page';
 import OriginalXAdapted from '../OriginalXAdapted/Page';
 import GraphicImage from '../GraphicImage/Page';
 import PersonalizedText from '../PersonalizedText/Page';
+import ExplainedText from '../ExplainedText/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -79,6 +80,7 @@ export default withRouter(
         <Route path={`${match.url}/originalxadapted`} component={OriginalXAdapted} />
         <Route path={`${match.url}/graphicimage`} component={GraphicImage} />
         <Route path={`${match.url}/personalizedtext`} component={PersonalizedText} />
+        <Route path={`${match.url}/explainedtext`} component={ExplainedText} />
       </MyTemplate>
     );
   },

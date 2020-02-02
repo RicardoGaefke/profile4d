@@ -38,4 +38,5 @@ export default {
   originalxadapted: 'Tríade Original X Tríade Adaptada',
   graphicimage: 'Imagem Gráfica',
   personalizedtext: 'Texto Personalizado',
+  explainedtext: 'Text Explicado',
 } as ILanguage;
