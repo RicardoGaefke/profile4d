@@ -51,5 +51,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage IntFourPowersTwo();
     public BasicReturn IntFourPowersTwoEdit(StaticFirstPage data);
+
+    public StaticFirstPage TrinityBehaviourSabotage();
+    public BasicReturn TrinityBehaviourSabotageEdit(StaticFirstPage data);
   }
 }
