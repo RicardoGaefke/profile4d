@@ -33,4 +33,5 @@ export default {
   identifiedconflicts: 'Identified Conflicts',
   energyspikes: 'Energy Spikes',
   columncharthreeprofiles: 'Column Chart Three Profiles',
+  trinitypersonified: 'Trinity Personified',
 } as ILanguage;

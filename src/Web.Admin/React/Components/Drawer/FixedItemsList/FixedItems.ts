@@ -116,4 +116,8 @@ export default [
     link: 'columncharthreeprofiles',
     title: 'columncharthreeprofiles',
   },
+  {
+    link: 'trinitypersonified',
+    title: 'trinitypersonified',
+  },
 ] as IStaticMenuItem[];
