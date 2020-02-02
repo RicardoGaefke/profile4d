@@ -39,5 +39,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage InternalPartners();
     public BasicReturn InternalPartnersEdit(StaticFirstPage data);
+
+    public StaticFirstPage IntNamePartnerOne();
+    public BasicReturn IntNamePartnerOneEdit(StaticFirstPage data);
   }
 }
