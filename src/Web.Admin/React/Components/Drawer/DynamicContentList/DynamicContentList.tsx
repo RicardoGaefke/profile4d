@@ -34,7 +34,7 @@ export default withTranslation()(
           button
           className={classes.navlink}
         >
-          <ListItemText primary="Aqui vão as imagens" />
+          <ListItemText primary="Conteúdos fixos" />
         </ListItem>
       </List>
     );

@@ -13,11 +13,13 @@ namespace Profile4d.Web.Api.Controllers
   {
     private readonly ILogger<IdentityController> _logger;
     private readonly StaticContent _myContent;
+    private string _user;
 
     public StaticContentController(ILogger<IdentityController> logger, StaticContent MyStaticContent)
     {
       _logger = logger;
       _myContent = MyStaticContent;
+      _user = "1";
     }
 
     [HttpGet("FirstPage")]
@@ -49,7 +51,7 @@ namespace Profile4d.Web.Api.Controllers
 
       try
       {
-        data.CreatedBy = "1";
+        data.CreatedBy = _user;
 
         StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
         
@@ -97,7 +99,7 @@ namespace Profile4d.Web.Api.Controllers
 
       try
       {
-        data.CreatedBy = "1";
+        data.CreatedBy = _user;
 
         StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
 
@@ -145,7 +147,7 @@ namespace Profile4d.Web.Api.Controllers
 
       try
       {
-        data.CreatedBy = "1";
+        data.CreatedBy = _user;
 
         StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
 
@@ -193,7 +195,7 @@ namespace Profile4d.Web.Api.Controllers
 
       try
       {
-        data.CreatedBy = "1";
+        data.CreatedBy = _user;
 
         StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
 
@@ -241,7 +243,7 @@ namespace Profile4d.Web.Api.Controllers
 
       try
       {
-        data.CreatedBy = "1";
+        data.CreatedBy = _user;
 
         StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
 
@@ -289,7 +291,7 @@ namespace Profile4d.Web.Api.Controllers
 
       try
       {
-        data.CreatedBy = "1";
+        data.CreatedBy = _user;
 
         StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
 
@@ -337,7 +339,7 @@ namespace Profile4d.Web.Api.Controllers
 
       try
       {
-        data.CreatedBy = "1";
+        data.CreatedBy = _user;
 
         StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
 
@@ -385,11 +387,155 @@ namespace Profile4d.Web.Api.Controllers
 
       try
       {
-        data.CreatedBy = "1";
+        data.CreatedBy = _user;
 
         StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
 
         _myContent.SabotageDominantEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("SabotageName")]
+    public ActionResult<StaticFirstPage> SabotageName()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.SabotageName();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("SabotageNameEdit")]
+    public ActionResult<BasicReturn> SabotageNameEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.SabotageNameEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("CompetentXSabotage")]
+    public ActionResult<StaticFirstPage> CompetentXSabotage()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.CompetentXSabotage();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("CompetentXSabotageEdit")]
+    public ActionResult<BasicReturn> CompetentXSabotageEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.CompetentXSabotageEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("TrinityBehavioralCompetent")]
+    public ActionResult<StaticFirstPage> TrinityBehavioralCompetent()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.TrinityBehavioralCompetent();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("TrinityBehavioralCompetentEdit")]
+    public ActionResult<BasicReturn> TrinityBehavioralCompetentEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.TrinityBehavioralCompetentEdit(_firstPage);
 
         _return.Success = true;
 
