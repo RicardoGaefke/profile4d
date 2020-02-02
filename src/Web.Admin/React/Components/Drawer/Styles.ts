@@ -8,8 +8,9 @@ interface IStyles {
 
 export default makeStyles((theme: Theme): IStyles => ({
   root: {
-    minWidth: 200,
+    width: 350,
     paddingTop: 65,
+    marginBottom: 40,
   },
   divider: {
     marginBottom: theme.spacing(1),

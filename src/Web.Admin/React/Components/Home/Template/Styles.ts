@@ -14,7 +14,7 @@ export default makeStyles((theme: Theme): IStyles => ({
     flex: 1,
   },
   grid: {
-    marginLeft: 200,
+    marginLeft: 350,
   },
   img: {
     maxWidth: '85%',

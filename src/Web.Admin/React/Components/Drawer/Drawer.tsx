@@ -6,6 +6,8 @@ import setLanguage from './Language';
 import { useStateValue } from '../../Initial/Context/StateProvider';
 import Styles from './Styles';
 import FixedContentList from './FixedItemsList/FixedContentList';
+import ImagesList from './ImagesList/ImagesList';
+import DynamicContent from './DynamicContentList/DynamicContentList';
 
 export default withTranslation()(
   (): React.ReactElement<WithTranslation> => {
@@ -29,6 +31,9 @@ export default withTranslation()(
         <div className={classes.root}>
           <FixedContentList />
           <Divider className={classes.divider} />
+          <ImagesList />
+          <Divider className={classes.divider} />
+          <DynamicContent />
         </div>
       </MyDrawer>
     );
