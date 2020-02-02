@@ -645,5 +645,101 @@ namespace Profile4d.Web.Api.Controllers
         return _return;
       }
     }
+
+    [HttpGet("IntFourPowersOne")]
+    public ActionResult<StaticFirstPage> IntFourPowersOne()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.IntFourPowersOne();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("IntFourPowersOneEdit")]
+    public ActionResult<BasicReturn> IntFourPowersOneEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.IntFourPowersOneEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("IntNamePartnerTwo")]
+    public ActionResult<StaticFirstPage> IntNamePartnerTwo()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.IntNamePartnerTwo();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("IntNamePartnerTwoEdit")]
+    public ActionResult<BasicReturn> IntNamePartnerTwoEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.IntNamePartnerTwoEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
   }
 }

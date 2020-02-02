@@ -42,5 +42,11 @@ namespace Profile4d.Data
 
     public StaticFirstPage IntNamePartnerOne();
     public BasicReturn IntNamePartnerOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage IntFourPowersOne();
+    public BasicReturn IntFourPowersOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage IntNamePartnerTwo();
+    public BasicReturn IntNamePartnerTwoEdit(StaticFirstPage data);
   }
 }
