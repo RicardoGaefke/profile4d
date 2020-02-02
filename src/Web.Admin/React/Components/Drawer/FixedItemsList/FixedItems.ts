@@ -120,4 +120,8 @@ export default [
     link: 'trinitypersonified',
     title: 'trinitypersonified',
   },
+  {
+    link: 'trinityspecifics',
+    title: 'trinityspecifics',
+  },
 ] as IStaticMenuItem[];
