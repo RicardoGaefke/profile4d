@@ -3,20 +3,20 @@ import React, { useState, useEffect } from 'react';
 import { IStaticFirstPage } from '../../../../../TypeScript/Interfaces/IStaticContent';
 import Loading from '../../Loading/Loading';
 import MyAxios from '../../../Utils/MyAxios';
-import MyEnergySpikes from './EnergySpikes';
+import MyColumnChartThreeProfiles from './ColumnChartThreeProfiles';
 
 export default (): React.ReactElement => {
   const [state, setState] = useState({} as IStaticFirstPage);
 
   useEffect((): void => {
     MyAxios(window.location.href)
-      .get<IStaticFirstPage>('StaticContent/EnergySpikes')
+      .get<IStaticFirstPage>('StaticContent/ColumnChartThreeProfiles')
       .then((response): void => setState(response.data));
   }, []);
 
   return (
     <>
-      {(!state.Success) ? (<Loading />) : (<MyEnergySpikes myValues={state} />)}
+      {(!state.Success) ? (<Loading />) : (<MyColumnChartThreeProfiles myValues={state} />)}
     </>
   );
 };

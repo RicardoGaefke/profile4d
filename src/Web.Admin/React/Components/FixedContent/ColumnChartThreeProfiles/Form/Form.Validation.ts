@@ -4,19 +4,19 @@ import { WithTranslation } from 'react-i18next';
 
 export default (props: WithTranslation): object => Yup.object().shape({
   Title_PT: Yup.string()
-    .required(props.t('StaticEnergySpikes:titlePT.required'))
-    .min(5, props.t('StaticEnergySpikes:titlePT.min'))
-    .max(95, props.t('StaticEnergySpikes:titlePT.max')),
+    .required(props.t('StaticColumnChartThreeProfiles:titlePT.required'))
+    .min(5, props.t('StaticColumnChartThreeProfiles:titlePT.min'))
+    .max(95, props.t('StaticColumnChartThreeProfiles:titlePT.max')),
   Title_ENG: Yup.string()
-    .required(props.t('StaticEnergySpikes:titleENG.required'))
-    .min(5, props.t('StaticEnergySpikes:titleENG.min'))
-    .max(95, props.t('StaticEnergySpikes:titleENG.max')),
+    .required(props.t('StaticColumnChartThreeProfiles:titleENG.required'))
+    .min(5, props.t('StaticColumnChartThreeProfiles:titleENG.min'))
+    .max(95, props.t('StaticColumnChartThreeProfiles:titleENG.max')),
   Text_PT: Yup.string()
-    .required(props.t('StaticEnergySpikes:textPT.required'))
-    .min(5, props.t('StaticEnergySpikes:textPT.min'))
-    .max(8000, props.t('StaticEnergySpikes:textPT.max')),
+    .required(props.t('StaticColumnChartThreeProfiles:textPT.required'))
+    .min(5, props.t('StaticColumnChartThreeProfiles:textPT.min'))
+    .max(8000, props.t('StaticColumnChartThreeProfiles:textPT.max')),
   Text_ENG: Yup.string()
-    .required(props.t('StaticEnergySpikes:textENG.required'))
-    .min(5, props.t('StaticEnergySpikes:textENG.min'))
-    .max(8000, props.t('StaticEnergySpikes:textENG.max')),
+    .required(props.t('StaticColumnChartThreeProfiles:textENG.required'))
+    .min(5, props.t('StaticColumnChartThreeProfiles:textENG.min'))
+    .max(8000, props.t('StaticColumnChartThreeProfiles:textENG.max')),
 });

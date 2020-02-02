@@ -9,7 +9,7 @@ import MyForm from '../../FirstPage/Form/Form';
 import useStyles from '../../FirstPage/Form/Form.Styles';
 
 const SuperForm = withFormik({
-  displayName: 'EnergySpikes',
+  displayName: 'ColumnChartThreeProfiles',
   enableReinitialize: true,
   mapPropsToValues: (): IStaticFirstPage => (initialValues),
   validationSchema: Validation,

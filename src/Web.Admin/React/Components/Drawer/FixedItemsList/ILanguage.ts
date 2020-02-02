@@ -29,4 +29,5 @@ export interface ILanguage {
   behavioursprofiles: string,
   identifiedconflicts: string,
   energyspikes: string,
+  columncharthreeprofiles: string,
 }
