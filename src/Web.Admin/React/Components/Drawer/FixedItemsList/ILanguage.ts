@@ -27,4 +27,8 @@ export interface ILanguage {
   pdi: string,
   threeintelligencecenters: string,
   behavioursprofiles: string,
+  identifiedconflicts: string,
+  energyspikes: string,
+  columncharthreeprofiles: string,
+  trinitypersonified: string,
 }
