@@ -30,4 +30,5 @@ export default {
   pdi: 'Individual Development Plan',
   threeintelligencecenters: 'Three Intelligence Centers',
   behavioursprofiles: 'Behaviours Profiles',
+  identifiedconflicts: 'Identified Conflicts',
 } as ILanguage;
