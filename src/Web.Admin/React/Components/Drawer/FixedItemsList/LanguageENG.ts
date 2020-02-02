@@ -34,4 +34,5 @@ export default {
   energyspikes: 'Energy Spikes',
   columncharthreeprofiles: 'Column Chart Three Profiles',
   trinitypersonified: 'Trinity Personified',
+  trinityspecifics: 'Trinity Specifics',
 } as ILanguage;
