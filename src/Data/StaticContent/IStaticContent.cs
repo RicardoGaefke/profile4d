@@ -63,5 +63,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage SFourPowersOne();
     public BasicReturn SFourPowersOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage NameSaboteurTwo();
+    public BasicReturn NameSaboteurTwoEdit(StaticFirstPage data);
   }
 }
