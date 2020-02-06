@@ -4,20 +4,24 @@ import { storiesOf } from '@storybook/react';
 import { withConsole } from '@storybook/addon-console';
 // eslint-disable-next-line no-unused-vars
 import { action, HandlerFunction } from '@storybook/addon-actions';
-import MyThemeHoc from '../../../Initial/Theme/StoryBookHOC';
-import Images from './Images';
+import MyImage from './Image';
 
-const App = (): React.ReactElement => (
-  <MyThemeHoc>
-    <Images />
-  </MyThemeHoc>
+const AppBasic = (): React.ReactElement => (
+  <MyImage alt="Este é um exemplo de imagem" image="/img/logo_original.png" />
 );
 
-storiesOf('Images', module)
+const AppPhoto = (): React.ReactElement => (
+  <MyImage alt="Este é um exemplo com foto" image="/img/team.jpg" />
+);
+
+storiesOf('Images.Show', module)
   .addDecorator((story: any): React.ReactElement => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))
   .addDecorator((storyFn, context): React.ReactElement => withConsole()(storyFn)(context))
   .add('Basic', (): React.ReactElement => (
-    <App />
+    <AppBasic />
+  ))
+  .add('With photo', (): React.ReactElement => (
+    <AppPhoto />
   ));

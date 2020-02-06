@@ -19,7 +19,8 @@ export default makeStyles((theme: Theme): IStyles => ({
     textDecoration: 'underline',
   },
   image: {
-    maxWidth: '90%',
+    maxHeight: 250,
+    maxWidth: '100%',
   },
   card: {
     maxWidth: 345,
