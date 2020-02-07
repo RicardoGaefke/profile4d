@@ -549,5 +549,485 @@ namespace Profile4d.Web.Api.Controllers
         return _return;
       }
     }
+
+    [HttpGet("InternalPartners")]
+    public ActionResult<StaticFirstPage> InternalPartners()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.InternalPartners();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("InternalPartnersEdit")]
+    public ActionResult<BasicReturn> InternalPartnersEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.InternalPartnersEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("IntNamePartnerOne")]
+    public ActionResult<StaticFirstPage> IntNamePartnerOne()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.IntNamePartnerOne();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("IntNamePartnerOneEdit")]
+    public ActionResult<BasicReturn> IntNamePartnerOneEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.IntNamePartnerOneEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("IntFourPowersOne")]
+    public ActionResult<StaticFirstPage> IntFourPowersOne()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.IntFourPowersOne();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("IntFourPowersOneEdit")]
+    public ActionResult<BasicReturn> IntFourPowersOneEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.IntFourPowersOneEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("IntNamePartnerTwo")]
+    public ActionResult<StaticFirstPage> IntNamePartnerTwo()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.IntNamePartnerTwo();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("IntNamePartnerTwoEdit")]
+    public ActionResult<BasicReturn> IntNamePartnerTwoEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.IntNamePartnerTwoEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("IntFourPowersTwo")]
+    public ActionResult<StaticFirstPage> IntFourPowersTwo()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.IntFourPowersTwo();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("IntFourPowersTwoEdit")]
+    public ActionResult<BasicReturn> IntFourPowersTwoEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.IntFourPowersTwoEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("TrinityBehavioralSabotage")]
+    public ActionResult<StaticFirstPage> TrinityBehavioralSabotage()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.TrinityBehaviourSabotage();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("TrinityBehavioralSabotageEdit")]
+    public ActionResult<BasicReturn> TrinityBehavioralSabotageEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.TrinityBehaviourSabotageEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("InternalEnemies")]
+    public ActionResult<StaticFirstPage> InternalEnemies()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.InternalEnemies();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("InternalEnemiesEdit")]
+    public ActionResult<BasicReturn> InternalEnemiesEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.InternalEnemiesEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("NameSaboteurOne")]
+    public ActionResult<StaticFirstPage> NameSaboteurOne()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.NameSaboteurOne();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("NameSaboteurOneEdit")]
+    public ActionResult<BasicReturn> NameSaboteurOneEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.NameSaboteurOneEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("SFourPowersOne")]
+    public ActionResult<StaticFirstPage> SFourPowersOne()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.SFourPowersOne();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("SFourPowersOneEdit")]
+    public ActionResult<BasicReturn> SFourPowersOneEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.SFourPowersOneEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("NameSaboteurTwo")]
+    public ActionResult<StaticFirstPage> NameSaboteurTwo()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.NameSaboteurTwo();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("NameSaboteurTwoEdit")]
+    public ActionResult<BasicReturn> NameSaboteurTwoEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.NameSaboteurTwoEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
   }
 }

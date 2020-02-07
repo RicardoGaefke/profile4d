@@ -3,11 +3,11 @@ import React from 'react';
 import { withTranslation, WithTranslation } from 'react-i18next';
 import {
   Typography, Card, CardMedia, CardContent,
-  CardActions, Button, Grid,
+  Grid,
 } from '@material-ui/core';
 import setLanguage from './Language';
 import Styles from './Styles';
-import MyImage from '../../../Utils/MyImage';
+import MyImage from '../../Utils/MyImage';
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
@@ -37,11 +37,12 @@ export default withTranslation()(
                 {t('FirstPageImages:logo')}
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small" color="primary">
-                Share
-              </Button>
-            </CardActions>
+            <CardContent>
+              <Typography variant="body2" color="textSecondary" component="p">
+                This impressive paella is a perfect party dish and a fun meal to cook together with your
+                guests. Add 1 cup of frozen peas along with the mussels, if you like.
+              </Typography>
+            </CardContent>
           </Card>
         </Grid>
 
@@ -59,11 +60,6 @@ export default withTranslation()(
                 {t('FirstPageImages:logo')}
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small" color="primary">
-                Share
-              </Button>
-            </CardActions>
           </Card>
         </Grid>
       </Grid>

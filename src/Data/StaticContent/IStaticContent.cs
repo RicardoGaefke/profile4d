@@ -36,5 +36,35 @@ namespace Profile4d.Data
 
     public StaticFirstPage TrinityBehavioralCompetent();
     public BasicReturn TrinityBehavioralCompetentEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalPartners();
+    public BasicReturn InternalPartnersEdit(StaticFirstPage data);
+
+    public StaticFirstPage IntNamePartnerOne();
+    public BasicReturn IntNamePartnerOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage IntFourPowersOne();
+    public BasicReturn IntFourPowersOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage IntNamePartnerTwo();
+    public BasicReturn IntNamePartnerTwoEdit(StaticFirstPage data);
+
+    public StaticFirstPage IntFourPowersTwo();
+    public BasicReturn IntFourPowersTwoEdit(StaticFirstPage data);
+
+    public StaticFirstPage TrinityBehaviourSabotage();
+    public BasicReturn TrinityBehaviourSabotageEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalEnemies();
+    public BasicReturn InternalEnemiesEdit(StaticFirstPage data);
+
+    public StaticFirstPage NameSaboteurOne();
+    public BasicReturn NameSaboteurOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage SFourPowersOne();
+    public BasicReturn SFourPowersOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage NameSaboteurTwo();
+    public BasicReturn NameSaboteurTwoEdit(StaticFirstPage data);
   }
 }

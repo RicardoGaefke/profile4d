@@ -24,7 +24,7 @@ const MyINamePartnerOne = withFormik<WithTranslation & WithSnackbarProps & IProp
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticFirstPage>('StaticContent/INamePartnerOneEdit', {
+    await myAxios(window.location.href).post<IStaticFirstPage>('StaticContent/IntNamePartnerOneEdit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,

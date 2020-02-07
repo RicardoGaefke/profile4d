@@ -104,4 +104,48 @@ export default [
     link: 'behavioursprofiles',
     title: 'behavioursprofiles',
   },
+  {
+    link: 'identifiedconflicts',
+    title: 'identifiedconflicts',
+  },
+  {
+    link: 'energyspikes',
+    title: 'energyspikes',
+  },
+  {
+    link: 'columncharthreeprofiles',
+    title: 'columncharthreeprofiles',
+  },
+  {
+    link: 'trinitypersonified',
+    title: 'trinitypersonified',
+  },
+  {
+    link: 'trinityspecifics',
+    title: 'trinityspecifics',
+  },
+  {
+    link: 'originalxadapted',
+    title: 'originalxadapted',
+  },
+  {
+    link: 'graphicimage',
+    title: 'graphicimage',
+  },
+  {
+    link: 'personalizedtext',
+    title: 'personalizedtext',
+  },
+  {
+    link: 'explainedtext',
+    title: 'explainedtext',
+  },
+  {
+    link: 'personalizedtable',
+    title: 'personalizedtable',
+  },
+  {
+    link: 'defaulttext',
+    title: 'defaulttext',
+  },
 ] as IStaticMenuItem[];
