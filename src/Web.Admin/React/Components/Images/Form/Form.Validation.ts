@@ -3,12 +3,12 @@ import * as Yup from 'yup';
 import { WithTranslation } from 'react-i18next';
 
 export default (props: WithTranslation): object => Yup.object().shape({
-  Title_PT: Yup.string()
-    .required(props.t('StaticImageForm:titlePT.required'))
-    .min(5, props.t('StaticImageForm:titlePT.min'))
-    .max(95, props.t('StaticImageForm:titlePT.max')),
-  Title_ENG: Yup.string()
-    .required(props.t('StaticImageForm:titleENG.required'))
-    .min(5, props.t('StaticImageForm:titleENG.min'))
-    .max(95, props.t('StaticImageForm:titleENG.max')),
+  Text_PT: Yup.string()
+    .required(props.t('StaticImageForm:textPT.required'))
+    .min(5, props.t('StaticImageForm:textPT.min'))
+    .max(3000, props.t('StaticImageForm:textPT.max')),
+  Text_ENG: Yup.string()
+    .required(props.t('StaticImageForm:textENG.required'))
+    .min(5, props.t('StaticImageForm:textENG.min'))
+    .max(3000, props.t('StaticImageForm:textENG.max')),
 });
