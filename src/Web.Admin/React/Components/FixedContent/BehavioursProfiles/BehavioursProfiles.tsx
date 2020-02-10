@@ -33,16 +33,16 @@ const MyBehavioursProfiles = withFormik<WithTranslation & WithSnackbarProps & IP
       const { data } = response;
 
       if (data.Success) {
-        enqueueSnackbar(t('StaticBehavioursProfiles:feedback.success'), {
+        enqueueSnackbar(t('StaticFirstPage:feedback.success'), {
           variant: 'success',
         });
       } else {
-        enqueueSnackbar(t('StaticBehavioursProfiles:feedback.failure'), {
+        enqueueSnackbar(t('StaticFirstPage:feedback.failure'), {
           variant: 'error',
         });
       }
     }).catch((): void => {
-      enqueueSnackbar(t('StaticBehavioursProfiles:feedback.failure'), {
+      enqueueSnackbar(t('StaticFirstPage:feedback.failure'), {
         variant: 'error',
       });
     });
