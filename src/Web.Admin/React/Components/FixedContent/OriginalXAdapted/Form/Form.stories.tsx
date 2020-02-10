@@ -11,7 +11,7 @@ const App = (): React.ReactElement => (
   </MyThemeHOC>
 );
 
-storiesOf('OriginalXAdapted', module)
+storiesOf('StaticContent.OriginalXAdapted', module)
   .addDecorator((story: any): React.ReactElement => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))

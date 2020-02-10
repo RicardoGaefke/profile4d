@@ -11,7 +11,7 @@ const App = (): React.ReactElement => (
   </MyThemeHOC>
 );
 
-storiesOf('INamePartnerTwo', module)
+storiesOf('StaticContent.INamePartnerTwo', module)
   .addDecorator((story: any): React.ReactElement => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))
