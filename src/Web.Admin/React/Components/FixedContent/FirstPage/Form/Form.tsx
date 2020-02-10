@@ -16,6 +16,7 @@ export type IForm = FormikProps<IStaticFirstPage> & WithTranslation;
 export default (props: IForm): React.ReactElement<IForm> => {
   const classes = useStyles({});
   const { t, i18n } = useTranslation('StaticFirstPage');
+
   const {
     values,
     touched,
