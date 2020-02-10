@@ -10,6 +10,7 @@ export interface IStyles {
   icon: {},
   form: {},
   dropzone: {},
+  hidden: {},
 }
 
 const useStyles = makeStyles((theme: Theme): IStyles => ({
@@ -39,6 +40,9 @@ const useStyles = makeStyles((theme: Theme): IStyles => ({
   dropzone: {
     color: 'black',
     height: 200,
+  },
+  hidden: {
+    display: 'none',
   },
 }));
 

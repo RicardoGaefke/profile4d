@@ -12,6 +12,8 @@ export const initialValues: IStaticImageForm = {
   Code: 'Undefined',
   Details: 'Undefined',
   Url: 'www.staging.profile4d.com',
+  Src: '',
+  Alt: '',
 };
 
 export default initialValues;
