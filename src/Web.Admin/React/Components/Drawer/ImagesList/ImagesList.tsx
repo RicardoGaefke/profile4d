@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
 import { NavLink } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
@@ -25,7 +24,7 @@ export default withTranslation()(
         subheader={
           (
             <ListSubheader component="div" id="fixed-content-header">
-              {t('DrawerAdminImageForm:title')}
+              {t('DrawerAdminImage:title')}
             </ListSubheader>
         )}
         className={classes.root}
@@ -37,19 +36,13 @@ export default withTranslation()(
               button
               component={NavLink}
               to={`/imageform/${item.link}`}
-              title={t(`DrawerAdminImageForm:${item.title}`)}
+              title={t(`DrawerAdminImage:${item.title}`)}
               className={classes.navlink}
             >
-              <ListItemText primary={t(`DrawerAdminImageForm:${item.title}`)} />
+              <ListItemText primary={t(`DrawerAdminImage:${item.title}`)} />
             </ListItem>
           ))
         }
-        {/* <ListItem
-          button
-          className={classes.navlink}
-        >
-          <ListItemText primary="Aqui vão as imagens" />
-        </ListItem> */}
       </List>
     );
   },
@@ -69,7 +62,7 @@ export default withTranslation()(
 //         subheader={
 //           (
 //             <ListSubheader component="div" id="fixed-content-header">
-//               {t('DrawerAdminFixed:images')}
+//               {t('DrawerAdminImage:images')}
 //             </ListSubheader>
 //         )}
 //         className={classes.root}

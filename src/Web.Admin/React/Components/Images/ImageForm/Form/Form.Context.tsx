@@ -4,10 +4,10 @@ import { withFormik } from 'formik';
 import { WithTranslation, withTranslation } from 'react-i18next';
 import setLanguage from './Language';
 // eslint-disable-next-line no-unused-vars
-import { IStaticImageForm } from '../../../../../TypeScript/Interfaces/IStaticImageForm';
+import { IStaticImageForm } from '../../../../../../TypeScript/Interfaces/IStaticImageForm';
 import Validation from './Form.Validation';
 import MyForm from './Form';
-import useStyles from '../../../Utils/Form.Styles';
+import useStyles from '../../../../Utils/Form.Styles';
 import initialValues from './Form.initialValues';
 
 const SuperForm = withFormik<WithTranslation, IStaticImageForm>({

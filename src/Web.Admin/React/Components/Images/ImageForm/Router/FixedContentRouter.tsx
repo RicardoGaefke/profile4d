@@ -5,9 +5,8 @@ import {
   Route,
   withRouter,
 } from 'react-router-dom';
-import MyTemplate from '../../Home/Template/Template';
-// import PersonalizedTable from '../PersonalizedTable/Page';
-import ImageForm from '../Page';
+import MyTemplate from '../../../Home/Template/Template';
+import Page from '../Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -15,7 +14,7 @@ export default withRouter(
 
     return (
       <MyTemplate>
-        <Route path={`${match.url}/imageform`} component={ImageForm} />
+        <Route path={`${match.url}/imageform`} component={Page} />
       </MyTemplate>
     );
   },

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 // eslint-disable-next-line no-unused-vars
-import { IStaticImageForm } from '../../../../TypeScript/Interfaces/IStaticImageForm';
-import Loading from '../Loading/Loading';
-import MyAxios from '../../Utils/MyAxios';
+import { IStaticImageForm } from '../../../../../TypeScript/Interfaces/IStaticImageForm';
+import Loading from '../../Loading/Loading';
+import MyAxios from '../../../Utils/MyAxios';
 import MyImageForm from './ImageForm';
 
 export default (): React.ReactElement => {
