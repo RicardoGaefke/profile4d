@@ -17,6 +17,11 @@ export default {
     min: 'Digite ao menos cinco caracteres',
     max: 'Digite no máximo 3000 caracteres',
   },
+  file: {
+    title: 'Selecione um arquivo .PNG',
+    required: 'Este campo é obrigatório',
+    type: 'Apenas arquivos .PNG são aceitos',
+  },
   button: {
     text: 'Salvar alterações',
     title: 'Clique aqui para salvar as alterações',

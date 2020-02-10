@@ -1,9 +1,10 @@
 import '@babel/polyfill';
-import React from 'react';
+// eslint-disable-next-line no-unused-vars
+import React, { ChangeEvent } from 'react';
 import {
   Grid, TextField, Button,
 } from '@material-ui/core';
-import { DropzoneArea } from 'material-ui-dropzone';
+import PublishIcon from '@material-ui/icons/Publish';
 // eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
@@ -32,6 +33,22 @@ export default (props: IForm): React.ReactElement<IForm> => {
     setFieldTouched,
     setFieldValue,
   } = props;
+
+  const myRef = React.useRef<HTMLInputElement>(null);
+
+  const pickFile = (): void => {
+    if (myRef.current) {
+      myRef.current.click();
+    }
+  };
+
+  const changeFile = (event: ChangeEvent<HTMLInputElement>): void => {
+    if (event.target.files?.length === 0) {
+      return;
+    }
+
+    setFieldValue('src', 'teste');
+  };
 
   i18n.on('languageChanged', (): void => {
     Object.keys(errors).forEach((fieldName): void => {
@@ -107,31 +124,22 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
           lg={12}
         >
-          <DropzoneArea
-            filesLimit={1}
-            maxFileSize={307200}
-            acceptedFiles={[
-              'image/jpeg',
-              'image/png',
-              'application/pdf',
-            ]}
-            showPreviews
-            showPreviewsInDropzone
-            dropzoneText={t('StaticImageForm:attachment.dropzoneText')}
-            dropzoneClass={classes.dropzone}
-            showAlerts={false}
-            onChange={(files: File[]): void => {
-              const myFiles: IAttachment[] = [];
-
-              files.forEach((f: File): void => {
-                myFiles.push({
-                  name: f.name,
-                  mime: f.type,
-                });
-              });
-
-              setFieldValue('Attachment', myFiles);
-            }}
+          {values.Src}
+          <Button
+            color="primary"
+            variant="outlined"
+            startIcon={<PublishIcon />}
+            onClick={pickFile}
+          >
+            {t('StaticImageForm:file.title')}
+          </Button>
+          <input
+            ref={myRef}
+            type="file"
+            id="image-file"
+            accept="image/png"
+            className={classes.hidden}
+            onChange={changeFile}
           />
         </Grid>
         <Grid

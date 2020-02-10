@@ -14,6 +14,11 @@ export interface ILanguage {
     min: string,
     max: string,
   },
+  file: {
+    title: string,
+    required: string,
+    type: string,
+  },
   button: {
     title: string,
     text: string,

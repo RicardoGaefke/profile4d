@@ -17,6 +17,11 @@ export default {
     min: '5 character minimum',
     max: '3000 characters maximum',
   },
+  file: {
+    title: 'Pick a .PNG file',
+    required: 'This field is required',
+    type: 'Only .PNG files are accepted',
+  },
   button: {
     text: 'Save changes',
     title: 'Click here to save changes',
