@@ -5,8 +5,8 @@ import {
   Route,
   withRouter,
 } from 'react-router-dom';
-import MyTemplate from '../../../Home/Template/Template';
-import Page from '../Page';
+import MyTemplate from '../../Home/Template/Template';
+import Page from '../ImageForm/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {

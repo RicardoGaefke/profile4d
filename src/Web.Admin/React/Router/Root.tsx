@@ -5,7 +5,7 @@ import MyAbout from '../Views/About/About';
 import MyNotFound from '../Views/404/404';
 import MyPolicy from '../Views/Policy/Policy';
 import FixedContentRouter from '../Components/FixedContent/Router/FixedContentRouter';
-import ImageFormRouter from '../Components/Images/ImageForm/Router/FixedContentRouter';
+import ImageFormRouter from '../Components/Images/Router/FixedContentRouter';
 
 export default (): React.ReactElement => (
   <Switch>
