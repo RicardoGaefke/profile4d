@@ -3,19 +3,19 @@ import { ILanguage } from './ILanguage';
 
 export default {
   title: 'Static data from the first page of the report',
-  titlePT: {
-    text: 'Title in Portuguese',
-    title: 'The title of the report in Portuguese',
+  textPT: {
+    text: 'Text in Portuguese',
+    title: 'The text of the description in Portuguese',
     required: 'This field is required',
     min: '5 character minimum',
-    max: '95 characters maximum',
+    max: '3000 characters maximum',
   },
-  titleENG: {
-    text: 'Title in English',
-    title: 'The title of the report in English',
+  textENG: {
+    text: 'Text in English',
+    title: 'The text of the description in English',
     required: 'This field is required',
     min: '5 character minimum',
-    max: '95 characters maximum',
+    max: '3000 characters maximum',
   },
   button: {
     text: 'Save changes',
@@ -28,5 +28,11 @@ export default {
   feedback: {
     success: 'Successfully saved your data',
     failure: 'Sorry but no data was saved',
+  },
+  attachment: {
+    uploads: 'Uploads',
+    save: 'Save',
+    dropzoneText: 'Drag and drop up one file JPEG or PNG files (up to 300kb each) here or click',
+    noAttachments: 'No attachments yet!',
   },
 } as ILanguage;

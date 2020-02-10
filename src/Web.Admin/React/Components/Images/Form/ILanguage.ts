@@ -1,13 +1,13 @@
 export interface ILanguage {
   title: string,
-  titlePT: {
+  textPT: {
     title: string,
     text: string,
     required: string,
     min: string,
     max: string,
   },
-  titleENG: {
+  textENG: {
     title: string,
     text: string,
     required: string,
@@ -25,5 +25,11 @@ export interface ILanguage {
   feedback: {
     success: string,
     failure: string,
+  },
+  attachment: {
+    uploads: string,
+    save: string,
+    dropzoneText: string,
+    noAttachments: string,
   },
 }
