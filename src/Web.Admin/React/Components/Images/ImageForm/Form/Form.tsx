@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 import React from 'react';
 import {
   Grid, TextField, Button,
@@ -114,7 +115,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
               'image/png',
               'application/pdf',
             ]}
-            showPreviews={false}
+            showPreviews
             showPreviewsInDropzone
             dropzoneText={t('StaticImageForm:attachment.dropzoneText')}
             dropzoneClass={classes.dropzone}
