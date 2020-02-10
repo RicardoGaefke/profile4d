@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withConsole } from '@storybook/addon-console';
 import { MemoryRouter } from 'react-router';
-import MyThemeHOC from '../../../Initial/Theme/StoryBookHOC';
+import MyThemeHOC from '../../../../Initial/Theme/StoryBookHOC';
 import MyForm from './Form.Context';
 
 const App = (): React.ReactElement => (

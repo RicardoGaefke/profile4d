@@ -7,6 +7,7 @@ interface IStyles {
   image: {},
   card: {},
   cardMedia: {},
+  main: {},
 }
 
 // eslint-disable-next-line no-unused-vars
@@ -27,5 +28,8 @@ export default makeStyles((theme: Theme): IStyles => ({
   },
   cardMedia: {
     maxHeight: 150,
+  },
+  main: {
+    padding: theme.spacing(3),
   },
 }));
