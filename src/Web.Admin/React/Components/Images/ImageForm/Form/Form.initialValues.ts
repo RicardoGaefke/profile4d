@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import { IStaticImageForm } from '../../../../../TypeScript/Interfaces/IStaticImageForm';
+import { IStaticImageForm } from '../../../../../../TypeScript/Interfaces/IStaticImageForm';
 
 export const initialValues: IStaticImageForm = {
   Id: 1,

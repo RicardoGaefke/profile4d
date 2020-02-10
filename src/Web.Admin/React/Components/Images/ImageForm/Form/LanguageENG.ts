@@ -4,14 +4,14 @@ import { ILanguage } from './ILanguage';
 export default {
   title: 'Static data from the first page of the report',
   textPT: {
-    text: 'Text in Portuguese',
+    text: 'Description in Portuguese',
     title: 'The text of the description in Portuguese',
     required: 'This field is required',
     min: '5 character minimum',
     max: '3000 characters maximum',
   },
   textENG: {
-    text: 'Text in English',
+    text: 'Description in English',
     title: 'The text of the description in English',
     required: 'This field is required',
     min: '5 character minimum',

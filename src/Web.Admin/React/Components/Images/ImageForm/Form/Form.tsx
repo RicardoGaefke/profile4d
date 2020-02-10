@@ -8,11 +8,11 @@ import { WithTranslation, useTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
 import { FormikProps } from 'formik';
 // eslint-disable-next-line no-unused-vars
-import { IAttachment } from '../../../../../TypeScript/Interfaces/IAttachment';
+import { IAttachment } from '../../../../../../TypeScript/Interfaces/IAttachment';
 // eslint-disable-next-line no-unused-vars
-import { IStaticImageForm } from '../../../../../TypeScript/Interfaces/IStaticImageForm';
-import Createdby from '../../Created/Created';
-import useStyles from '../../../Utils/Form.Styles';
+import { IStaticImageForm } from '../../../../../../TypeScript/Interfaces/IStaticImageForm';
+import Createdby from '../../../Created/Created';
+import useStyles from '../../../../Utils/Form.Styles';
 
 export type IForm = FormikProps<IStaticImageForm> & WithTranslation;
 
