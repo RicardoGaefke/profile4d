@@ -8,7 +8,7 @@ import { Typography } from '@material-ui/core';
 import useStyles from './Styles';
 import setLanguage from './Language';
 import CompetentMind from '../FirstPage/Form/Form';
-import Validation from './Form/Form.Validation';
+import Validation from '../FirstPage/Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
 import { IStaticFirstPage } from '../../../../../TypeScript/Interfaces/IStaticContent';
 import myAxios from '../../../Utils/MyAxios';
