@@ -14,6 +14,7 @@ export const initialValues: IStaticImageForm = {
   Url: 'www.staging.profile4d.com',
   Src: '',
   Alt: '',
+  Data: '',
 };
 
 export default initialValues;

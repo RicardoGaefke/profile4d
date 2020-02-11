@@ -2,8 +2,8 @@ import React from 'react';
 import '../i18n/language';
 import { ThemeProvider } from '@material-ui/styles';
 import { CssBaseline } from '@material-ui/core';
-// eslint-disable-next-line no-unused-vars
-import { withTranslation, useTranslation } from 'react-i18next';
+import { SnackbarProvider } from 'notistack';
+import { withTranslation } from 'react-i18next';
 import { useStateValue } from '../Context/StateProvider';
 
 import myTheme from './Theme';
@@ -21,12 +21,23 @@ const MyApp = (props: React.PropsWithChildren<any>): React.ReactElement => {
   return (
     <ThemeProvider theme={myTheme(Theme)}>
       <div className={classes.body}>
-        <AppBar />
-        <div className={classes.main}>
-          {children}
-        </div>
-        <Footer />
-        <ConfigDrawer />
+        <SnackbarProvider
+          maxSnack={4}
+          hideIconVariant={false}
+          anchorOrigin={{
+            horizontal: 'right',
+            vertical: 'bottom',
+          }}
+          autoHideDuration={6000}
+          dense
+        >
+          <AppBar />
+          <div className={classes.main}>
+            {children}
+          </div>
+          <Footer />
+          <ConfigDrawer />
+        </SnackbarProvider>
       </div>
       <CssBaseline />
     </ThemeProvider>
