@@ -1,13 +1,13 @@
 export interface ILanguage {
   title: string,
-  textPT: {
+  altPT: {
     title: string,
     text: string,
     required: string,
     min: string,
     max: string,
   },
-  textENG: {
+  altENG: {
     title: string,
     text: string,
     required: string,

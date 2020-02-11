@@ -3,19 +3,19 @@ import { ILanguage } from './ILanguage';
 
 export default {
   title: 'Dados estáticos da primeira página do relatório',
-  textPT: {
+  altPT: {
     text: 'Descrição em Português',
     title: 'Texto da descrição em Português',
     required: 'Este campo é obrigatório',
     min: 'Digite ao menos cinco caracteres',
-    max: 'Digite no máximo 3000 caracteres',
+    max: 'Digite no máximo 95 caracteres',
   },
-  textENG: {
+  altENG: {
     text: 'Descrição em Inglês',
     title: 'Texto da descrição em Inglês',
     required: 'Este campo é obrigatório',
     min: 'Digite ao menos cinco caracteres',
-    max: 'Digite no máximo 3000 caracteres',
+    max: 'Digite no máximo 95 caracteres',
   },
   file: {
     title: 'Selecione um arquivo .PNG',

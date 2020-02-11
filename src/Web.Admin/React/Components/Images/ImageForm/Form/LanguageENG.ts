@@ -3,19 +3,19 @@ import { ILanguage } from './ILanguage';
 
 export default {
   title: 'Static data from the first page of the report',
-  textPT: {
+  altPT: {
     text: 'Description in Portuguese',
     title: 'The text of the description in Portuguese',
     required: 'This field is required',
     min: '5 character minimum',
-    max: '3000 characters maximum',
+    max: '95 characters maximum',
   },
-  textENG: {
+  altENG: {
     text: 'Description in English',
     title: 'The text of the description in English',
     required: 'This field is required',
     min: '5 character minimum',
-    max: '3000 characters maximum',
+    max: '95 characters maximum',
   },
   file: {
     title: 'Pick a .PNG file',
