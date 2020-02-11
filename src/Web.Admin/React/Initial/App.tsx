@@ -23,7 +23,7 @@ const MyApp = (): React.ReactElement<any> => {
     <ThemeProvider theme={myTheme(Theme)}>
       <div className={classes.body}>
         <SnackbarProvider
-          maxSnack={3}
+          maxSnack={4}
           hideIconVariant={false}
           anchorOrigin={{
             horizontal: 'right',

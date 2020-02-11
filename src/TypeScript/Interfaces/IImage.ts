@@ -1,7 +1,7 @@
 import { IBasicReturn } from './IBasicReturn';
 import { ICreated } from './ICreated';
 
-export interface IImage extends IBasicReturn, ICreated {
+export interface IImage {
   Id?: number;
   Src: string,
   Alt: string,

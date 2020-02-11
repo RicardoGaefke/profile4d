@@ -6,7 +6,6 @@ import { Skeleton } from '@material-ui/lab';
 import Styles from './Styles';
 
 interface IProps {
-  image: string,
   alt: string,
 }
 
@@ -20,7 +19,7 @@ export default (props: IProps): React.ReactElement<IProps> => {
         <Skeleton
           variant="rect"
           width="100%"
-          height={200}
+          height={100}
           title={alt}
           animation="wave"
         />

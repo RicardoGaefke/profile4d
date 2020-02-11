@@ -11,4 +11,6 @@ export default (props: WithTranslation): object => Yup.object().shape({
     .required(props.t('StaticImageForm:textENG.required'))
     .min(5, props.t('StaticImageForm:textENG.min'))
     .max(3000, props.t('StaticImageForm:textENG.max')),
+  Src: Yup.string()
+    .required('Ops! Faltou a imagem'),
 });

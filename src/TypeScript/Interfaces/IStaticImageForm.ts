@@ -4,7 +4,8 @@ import { IImage } from './IImage';
 
 export interface IStaticImageForm extends IBasicReturn, ICreated, IImage
 {
-  Id: number;
-  Text_PT: string;
-  Text_ENG: string;
+  Id: number,
+  Text_PT: string,
+  Text_ENG: string,
+  Data?: string,
 }

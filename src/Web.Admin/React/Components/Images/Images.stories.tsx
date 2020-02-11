@@ -16,7 +16,7 @@ const AppPhoto = (): React.ReactElement => (
 );
 
 const AppNoImage = (): React.ReactElement => (
-  <NoImage alt="Sem imagem" image="" />
+  <NoImage alt="Sem imagem" />
 );
 
 storiesOf('Images.Show', module)

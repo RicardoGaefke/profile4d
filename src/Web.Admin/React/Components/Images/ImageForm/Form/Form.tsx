@@ -2,27 +2,31 @@ import '@babel/polyfill';
 // eslint-disable-next-line no-unused-vars
 import React, { ChangeEvent } from 'react';
 import {
-  Grid, TextField, Button,
+  Grid, TextField, Button, FormControl,
+  Input, FormHelperText,
 } from '@material-ui/core';
 import PublishIcon from '@material-ui/icons/Publish';
 // eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
-import { FormikProps } from 'formik';
+import { withSnackbar, WithSnackbarProps } from 'notistack';
 // eslint-disable-next-line no-unused-vars
-import { IAttachment } from '../../../../../../TypeScript/Interfaces/IAttachment';
+import { FormikProps } from 'formik';
 // eslint-disable-next-line no-unused-vars
 import { IStaticImageForm } from '../../../../../../TypeScript/Interfaces/IStaticImageForm';
 import Createdby from '../../../Created/Created';
 import useStyles from '../../../../Utils/Form.Styles';
+import NoImage from '../../NoImage';
+import ImageInfo from '../../ImageInfo';
 
-export type IForm = FormikProps<IStaticImageForm> & WithTranslation;
+export type IForm = FormikProps<IStaticImageForm> & WithTranslation & WithSnackbarProps;
 
 export default (props: IForm): React.ReactElement<IForm> => {
   const classes = useStyles({});
   const { t, i18n } = useTranslation('StaticImageForm');
 
   const {
+    enqueueSnackbar,
     values,
     touched,
     errors,
@@ -44,10 +48,41 @@ export default (props: IForm): React.ReactElement<IForm> => {
 
   const changeFile = (event: ChangeEvent<HTMLInputElement>): void => {
     if (event.target.files?.length === 0) {
+      enqueueSnackbar('No image', {
+        variant: 'error',
+      });
       return;
     }
 
-    setFieldValue('src', 'teste');
+    // @ts-ignore: Object is possibly 'null'.
+    const myFile = event.target.files[0];
+
+    const reader = new FileReader();
+    reader.readAsDataURL(myFile);
+    reader.onload = (): void => {
+      const { result } = reader;
+
+      setFieldValue('Data', result);
+      setFieldValue('Src', result);
+
+      const myImage = new Image();
+      // @ts-ignore: Object is possibly 'null'.
+      myImage.src = result.toString();
+      myImage.onload = (): void => {
+        setFieldValue('Size', myFile.size);
+        setFieldValue('Mime', myFile.type);
+        setFieldValue('Width', myImage.width);
+        setFieldValue('Height', myImage.height);
+      };
+    };
+    reader.onerror = (err): void => {
+      enqueueSnackbar(`error: ${err}`, {
+        variant: 'error',
+      });
+
+      // eslint-disable-next-line no-console
+      console.log('err', err);
+    };
   };
 
   i18n.on('languageChanged', (): void => {
@@ -124,7 +159,42 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
           lg={12}
         >
-          {values.Src}
+          <FormControl>
+            <Input
+              id="image-file"
+              value={values.Src}
+              className={classes.hidden}
+              inputComponent={(): React.ReactElement => (
+                <input
+                  ref={myRef}
+                  type="file"
+                  id="image-file"
+                  accept="image/png"
+                  onChange={changeFile}
+                />
+              )}
+            />
+            <FormHelperText
+              error
+              id="image-helper-text"
+            >
+              {errors.Src && touched.Src && errors.Src}
+            </FormHelperText>
+          </FormControl>
+          {
+            (values.Data === '' || undefined)
+              ? <NoImage alt="No image" />
+              : (
+                <ImageInfo
+                  Src={values.Data || ''}
+                  Alt="Imagem a ser enviada ao servidor"
+                  Mime={values.Mime}
+                  Size={values.Size}
+                  Width={values.Width}
+                  Height={values.Height}
+                />
+              )
+          }
           <Button
             color="primary"
             variant="outlined"
@@ -133,14 +203,6 @@ export default (props: IForm): React.ReactElement<IForm> => {
           >
             {t('StaticImageForm:file.title')}
           </Button>
-          <input
-            ref={myRef}
-            type="file"
-            id="image-file"
-            accept="image/png"
-            className={classes.hidden}
-            onChange={changeFile}
-          />
         </Grid>
         <Grid
           item
