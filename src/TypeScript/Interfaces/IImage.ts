@@ -5,6 +5,7 @@ export interface IImage extends IBasicReturn, ICreated {
   Id?: number;
   Src: string,
   Alt: string,
+  Data?: string,
   Mime?: string,
   Height?: number,
   Width?: number,

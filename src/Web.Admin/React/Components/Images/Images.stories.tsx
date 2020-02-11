@@ -5,6 +5,7 @@ import { withConsole } from '@storybook/addon-console';
 // eslint-disable-next-line no-unused-vars
 import { action, HandlerFunction } from '@storybook/addon-actions';
 import MyImage from './Image';
+import NoImage from './NoImage';
 
 const AppBasic = (): React.ReactElement => (
   <MyImage alt="Este é um exemplo de imagem" image="/img/logo_original.png" />
@@ -12,6 +13,10 @@ const AppBasic = (): React.ReactElement => (
 
 const AppPhoto = (): React.ReactElement => (
   <MyImage alt="Este é um exemplo com foto" image="/img/team.jpg" />
+);
+
+const AppNoImage = (): React.ReactElement => (
+  <NoImage alt="Sem imagem" image="" />
 );
 
 storiesOf('Images.Show', module)
@@ -24,4 +29,7 @@ storiesOf('Images.Show', module)
   ))
   .add('With photo', (): React.ReactElement => (
     <AppPhoto />
+  ))
+  .add('No photo', (): React.ReactElement => (
+    <AppNoImage />
   ));
