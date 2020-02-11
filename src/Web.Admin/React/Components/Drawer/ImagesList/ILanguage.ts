@@ -1,4 +1,4 @@
 export interface ILanguage {
   title: string;
-  imageform: string;
+  logo: string;
 }

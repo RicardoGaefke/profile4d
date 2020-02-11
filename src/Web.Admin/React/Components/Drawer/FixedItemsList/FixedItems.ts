@@ -10,7 +10,7 @@ export default [
   },
   {
     link: 'competentmind',
-    title: 'competent',
+    title: 'competentmind',
   },
   {
     link: 'dominantwhoiam',
