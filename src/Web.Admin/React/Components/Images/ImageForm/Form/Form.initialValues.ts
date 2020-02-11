@@ -3,8 +3,8 @@ import { IStaticImageForm } from '../../../../../../TypeScript/Interfaces/IStati
 
 export const initialValues: IStaticImageForm = {
   Id: 1,
-  Text_PT: 'Preencha o campo',
-  Text_ENG: 'Complete the field',
+  Alt_PT: 'Preencha o campo',
+  Alt_ENG: 'Complete the field',
   Created: 'R. Gaefke',
   CreatedBy: 'R. Gaefke',
   Success: true,
