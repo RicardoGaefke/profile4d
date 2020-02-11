@@ -111,15 +111,15 @@ export default (props: IForm): React.ReactElement<IForm> => {
         >
           <TextField
             margin="dense"
-            error={errors.Text_PT as any && touched.Text_PT as any}
-            label={t('StaticImageForm:textPT.text')}
-            title={t('StaticImageForm:textPT.title')}
-            name="Text_PT"
-            id="Text_PT"
-            value={values.Text_PT}
+            error={errors.Alt_PT as any && touched.Alt_PT as any}
+            label={t('StaticImageForm:altPT.text')}
+            title={t('StaticImageForm:altPT.title')}
+            name="Alt_PT"
+            id="Alt_PT"
+            value={values.Alt_PT}
             onChange={handleChange}
             onBlur={handleBlur}
-            helperText={(errors.Text_PT && touched.Text_PT) && errors.Text_PT}
+            helperText={(errors.Alt_PT && touched.Alt_PT) && errors.Alt_PT}
             variant="outlined"
             multiline
             rows={3}
@@ -136,15 +136,15 @@ export default (props: IForm): React.ReactElement<IForm> => {
         >
           <TextField
             margin="dense"
-            error={errors.Text_ENG as any && touched.Text_ENG as any}
-            label={t('StaticImageForm:textENG.text')}
-            title={t('StaticImageForm:textENG.title')}
-            name="Text_ENG"
-            id="Text_ENG"
-            value={values.Text_ENG}
+            error={errors.Alt_ENG as any && touched.Alt_ENG as any}
+            label={t('StaticImageForm:altENG.text')}
+            title={t('StaticImageForm:altENG.title')}
+            name="Alt_ENG"
+            id="Alt_ENG"
+            value={values.Alt_ENG}
             onChange={handleChange}
             onBlur={handleBlur}
-            helperText={(errors.Text_ENG && touched.Text_ENG) && errors.Text_ENG}
+            helperText={(errors.Alt_ENG && touched.Alt_ENG) && errors.Alt_ENG}
             variant="outlined"
             multiline
             rows={3}

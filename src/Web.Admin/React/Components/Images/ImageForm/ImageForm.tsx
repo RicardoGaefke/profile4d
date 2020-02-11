@@ -25,8 +25,8 @@ const MyImageForm = withFormik<WithTranslation & WithSnackbarProps & IProps, ISt
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
     await myAxios(window.location.href).post<IStaticImageForm>('StaticContent/ImageFormEdit', {
-      Text_PT: values.Text_PT,
-      Text_ENG: values.Text_ENG,
+      Alt_PT: values.Alt_PT,
+      Alt_ENG: values.Alt_ENG,
     }).then((response): void => {
       const { data } = response;
 

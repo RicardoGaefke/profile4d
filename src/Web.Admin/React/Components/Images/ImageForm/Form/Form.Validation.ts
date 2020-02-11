@@ -3,14 +3,14 @@ import * as Yup from 'yup';
 import { WithTranslation } from 'react-i18next';
 
 export default (props: WithTranslation): object => Yup.object().shape({
-  Text_PT: Yup.string()
-    .required(props.t('StaticImageForm:textPT.required'))
-    .min(5, props.t('StaticImageForm:textPT.min'))
-    .max(3000, props.t('StaticImageForm:textPT.max')),
-  Text_ENG: Yup.string()
-    .required(props.t('StaticImageForm:textENG.required'))
-    .min(5, props.t('StaticImageForm:textENG.min'))
-    .max(3000, props.t('StaticImageForm:textENG.max')),
+  Alt_PT: Yup.string()
+    .required(props.t('StaticImageForm:altPT.required'))
+    .min(5, props.t('StaticImageForm:altPT.min'))
+    .max(95, props.t('StaticImageForm:altPT.max')),
+  Alt_ENG: Yup.string()
+    .required(props.t('StaticImageForm:altENG.required'))
+    .min(5, props.t('StaticImageForm:altENG.min'))
+    .max(95, props.t('StaticImageForm:altENG.max')),
   Src: Yup.string()
     .required('Ops! Faltou a imagem'),
 });
