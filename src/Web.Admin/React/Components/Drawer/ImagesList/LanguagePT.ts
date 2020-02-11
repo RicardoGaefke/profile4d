@@ -2,6 +2,6 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Conteúdo fixo',
-  imageform: 'Formulário de imagem padrão',
+  title: 'Imagens do sistema',
+  logo: 'Logo do relatório',
 } as ILanguage;

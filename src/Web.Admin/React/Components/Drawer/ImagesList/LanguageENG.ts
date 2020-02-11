@@ -3,5 +3,5 @@ import { ILanguage } from './ILanguage';
 
 export default {
   title: 'Fixed Content',
-  imageform: 'Default Image Form',
+  logo: 'Report logo',
 } as ILanguage;

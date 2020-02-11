@@ -5,7 +5,7 @@ export interface IStaticMenuItem {
 
 export default [
   {
-    link: 'imageform',
-    title: 'imageform',
+    link: 'logo',
+    title: 'logo',
   },
 ] as IStaticMenuItem[];
