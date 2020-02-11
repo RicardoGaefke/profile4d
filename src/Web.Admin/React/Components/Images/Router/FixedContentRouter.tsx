@@ -14,7 +14,7 @@ export default withRouter(
 
     return (
       <MyTemplate>
-        <Route path={`${match.url}/imageform`} component={Page} />
+        <Route path={`${match.url}/logo`} component={Page} />
       </MyTemplate>
     );
   },
