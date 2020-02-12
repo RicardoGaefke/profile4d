@@ -31,6 +31,7 @@ namespace Profile4d.Web.Api
       services.Configure<Secrets.ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
       services.AddSingleton<MyIdentity>();
       services.AddSingleton<StaticContent>();
+      services.AddSingleton<Images>();
 
       // add cors
       Bootstrap.ConfigCors(services, Configuration, HostEnvironment.IsDevelopment());
@@ -40,8 +41,6 @@ namespace Profile4d.Web.Api
       Bootstrap.ConsentCookie(services, Configuration, HostEnvironment.IsDevelopment());
       Bootstrap.CookiesAuth(services, Configuration, HostEnvironment.IsDevelopment());
 
-      services.AddSingleton<MyIdentity>();
-      
       services
         .AddControllers()
         .AddNewtonsoftJson(options => {

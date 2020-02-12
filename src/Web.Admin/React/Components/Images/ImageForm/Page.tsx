@@ -10,7 +10,7 @@ export default (): React.ReactElement => {
 
   useEffect((): void => {
     MyAxios(window.location.href)
-      .get<IStaticImageForm>('StaticContent/ImageForm')
+      .get<IStaticImageForm>('Image/Logo')
       .then((response): void => setState(response.data));
   }, []);
 
