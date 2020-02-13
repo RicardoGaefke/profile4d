@@ -1,6 +1,7 @@
-using System.Security.AccessControl;
+using System.Security.Claims;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Profile4d.Data;
 using Profile4d.Domain;
@@ -13,13 +14,21 @@ namespace Profile4d.Web.Api.Controllers
   {
     private readonly ILogger<IdentityController> _logger;
     private readonly StaticContent _myContent;
+    private readonly IHttpContextAccessor _httpContextAccessor;
     private string _user;
 
-    public StaticContentController(ILogger<IdentityController> logger, StaticContent MyStaticContent)
+    public StaticContentController(ILogger<IdentityController> logger, IHttpContextAccessor httpContextAccessor, StaticContent MyStaticContent)
     {
+      ClaimsPrincipal currentUser = this.User;
+
       _logger = logger;
       _myContent = MyStaticContent;
-      _user = "1";
+      _httpContextAccessor = httpContextAccessor;
+
+      _user = (from c in _httpContextAccessor.HttpContext.User.Claims
+               where c.Type == "UserID"
+               select c.Value).FirstOrDefault()
+      ;
     }
 
     [HttpGet("FirstPage")]

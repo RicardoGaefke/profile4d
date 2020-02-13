@@ -182,8 +182,8 @@ export default (props: IForm): React.ReactElement<IForm> => {
             </FormHelperText>
           </FormControl>
           {
-            (values.Data === '' || undefined)
-              ? <NoImage alt="No image" />
+            (values.Data === '')
+              ? <NoImage alt={t('StaticImageForm:noImage')} />
               : (
                 <ImageInfo
                   Src={values.Data || ''}

@@ -126,6 +126,7 @@ namespace Profile4d.DI
           options.Cookie.IsEssential = true;
           options.Cookie.HttpOnly = true;
           options.Cookie.SameSite = SameSiteMode.None;
+          options.EventsType = typeof(CustomCookieAuthenticationEvents);
 
           if (IsDev)
           {
@@ -142,7 +143,7 @@ namespace Profile4d.DI
               {
                 // context.HttpContext.Response.Redirect("https://localhost:5060/");
                 return Task.CompletedTask;
-              }
+              },
             };
           }
           else
@@ -167,6 +168,8 @@ namespace Profile4d.DI
       ;
 
       services.AddScoped<CustomCookieAuthenticationEvents>();
+
+      services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
       services.Configure<CookiePolicyOptions>(options =>
       {
