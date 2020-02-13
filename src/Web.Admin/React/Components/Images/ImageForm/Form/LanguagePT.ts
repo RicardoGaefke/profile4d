@@ -22,6 +22,7 @@ export default {
     required: 'Este campo é obrigatório',
     type: 'Apenas arquivos .PNG são aceitos',
   },
+  noImage: 'Nenhuma imagem',
   button: {
     text: 'Salvar alterações',
     title: 'Clique aqui para salvar as alterações',

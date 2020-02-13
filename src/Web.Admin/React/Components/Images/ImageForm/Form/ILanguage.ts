@@ -19,6 +19,7 @@ export interface ILanguage {
     required: string,
     type: string,
   },
+  noImage: string,
   button: {
     title: string,
     text: string,

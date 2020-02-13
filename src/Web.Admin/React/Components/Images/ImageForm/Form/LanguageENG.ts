@@ -22,6 +22,7 @@ export default {
     required: 'This field is required',
     type: 'Only .PNG files are accepted',
   },
+  noImage: 'No image',
   button: {
     text: 'Save changes',
     title: 'Click here to save changes',
