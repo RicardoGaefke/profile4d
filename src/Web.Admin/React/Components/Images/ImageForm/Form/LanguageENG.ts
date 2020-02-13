@@ -35,10 +35,4 @@ export default {
     success: 'Successfully saved your data',
     failure: 'Sorry but no data was saved',
   },
-  attachment: {
-    uploads: 'Uploads',
-    save: 'Save',
-    dropzoneText: 'Drag and drop up one file JPEG or PNG files (up to 300kb each) here or click',
-    noAttachments: 'No attachments yet!',
-  },
 } as ILanguage;

@@ -14,6 +14,7 @@ import { withSnackbar, WithSnackbarProps } from 'notistack';
 import { FormikProps } from 'formik';
 // eslint-disable-next-line no-unused-vars
 import { IStaticImageForm } from '../../../../../../TypeScript/Interfaces/IStaticImageForm';
+import setLanguage from './Language';
 import Createdby from '../../../Created/Created';
 import useStyles from '../../../../Utils/Form.Styles';
 import NoImage from '../../NoImage';
@@ -24,6 +25,7 @@ export type IForm = FormikProps<IStaticImageForm> & WithTranslation & WithSnackb
 export default (props: IForm): React.ReactElement<IForm> => {
   const classes = useStyles({});
   const { t, i18n } = useTranslation('StaticImageForm');
+  setLanguage();
 
   const {
     enqueueSnackbar,
