@@ -18,7 +18,7 @@ import setLanguage from './Language';
 import Createdby from '../../../Created/Created';
 import useStyles from '../../../../Utils/Form.Styles';
 import NoImage from '../../NoImage';
-import ImageInfo from '../../ImageInfo';
+import ImageInfo from '../../ImageInfo/ImageInfo';
 
 export type IForm = FormikProps<IStaticImageForm> & WithTranslation & WithSnackbarProps;
 
@@ -189,7 +189,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
               : (
                 <ImageInfo
                   Src={values.Data || ''}
-                  Alt="Imagem a ser enviada ao servidor"
+                  Alt={t('StaticImageForm:altImage')}
                   Mime={values.Mime}
                   Size={values.Size}
                   Width={values.Width}

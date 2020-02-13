@@ -32,10 +32,5 @@ export interface ILanguage {
     success: string,
     failure: string,
   },
-  attachment: {
-    uploads: string,
-    save: string,
-    dropzoneText: string,
-    noAttachments: string,
-  },
+  altImage: string,
 }
