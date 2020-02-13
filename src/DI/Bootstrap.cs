@@ -118,6 +118,17 @@ namespace Profile4d.DI
 
     public static void CookiesAuth(IServiceCollection services, IConfiguration Configuration, bool IsDev)
     {
+      string _host;
+
+      if (IsDev)
+      {
+        _host = "localhost";
+      }
+      else
+      {
+        _host = $".{Configuration.GetValue<string>("domain")}";
+      }
+      
       services
         .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
         .AddCookie(options =>
@@ -126,44 +137,8 @@ namespace Profile4d.DI
           options.Cookie.IsEssential = true;
           options.Cookie.HttpOnly = true;
           options.Cookie.SameSite = SameSiteMode.None;
+          options.Cookie.Domain = _host;
           options.EventsType = typeof(CustomCookieAuthenticationEvents);
-
-          if (IsDev)
-          {
-            options.Cookie.Domain = "localhost";
-            options.Events = new CookieAuthenticationEvents()
-            {
-              OnRedirectToLogin = (context) =>
-              {
-                context.HttpContext.Response.Redirect("https://localhost:5055?ReturnUrl=https://" + context.Request.Host.Value);
-                // context.HttpContext.Response.StatusCode = 401;
-                return Task.CompletedTask;
-              },
-              OnSignedIn = (context) =>
-              {
-                // context.HttpContext.Response.Redirect("https://localhost:5060/");
-                return Task.CompletedTask;
-              },
-            };
-          }
-          else
-          {
-            options.Cookie.Domain = $".{Configuration.GetValue<string>("domain")}";
-            options.Events = new CookieAuthenticationEvents()
-            {
-              OnRedirectToLogin = (context) =>
-              {
-                context.HttpContext.Response.Redirect($"https://identity.{Configuration.GetValue<string>("domain")}?ReturnUrl=https://" + context.Request.Host.Value);
-                // context.HttpContext.Response.StatusCode = 401;
-                return Task.CompletedTask;
-              },
-              OnSignedIn = (context) =>
-              {
-                // context.HttpContext.Response.Redirect("https://ci.ricardogaefke.com");
-                return Task.CompletedTask;
-              }
-            };
-          }
         })
       ;
 
@@ -175,15 +150,7 @@ namespace Profile4d.DI
       {
         // This lambda determines whether user consent for non-essential cookies is needed for a given request.
         options.CheckConsentNeeded = context => true;
-
-        if (IsDev)
-        {
-          options.ConsentCookie.Domain = "localhost";
-        }
-        else
-        {
-          options.ConsentCookie.Domain = $".{Configuration.GetValue<string>("domain")}";
-        }
+        options.ConsentCookie.Domain = $".{Configuration.GetValue<string>("domain")}";
       });
     }
 
