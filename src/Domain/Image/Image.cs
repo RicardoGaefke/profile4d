@@ -4,6 +4,7 @@ namespace Profile4d.Domain
   {
     public int Id {get;set;}
     public string Src {get;set;}
+    public string Name {get;set;}
     public string Alt_PT { get; set; }
     public string Alt_ENG {get;set;}
 
@@ -17,6 +18,17 @@ namespace Profile4d.Domain
 
     public Image()
     {
+    }
+
+    public Image (string data, string mime, string name)
+    {
+      DomainException.When(!string.IsNullOrEmpty(data), "Data is required!");
+      DomainException.When(!string.IsNullOrEmpty(mime), "Mime is required!");
+      DomainException.When(!string.IsNullOrEmpty(name), "Name is required!");
+
+      this.Data = data;
+      this.Mime = mime;
+      this.Name = name;
     }
 
     public Image(string data, string mime, string user, string alt_PT, string alt_ENG)

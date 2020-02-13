@@ -5,6 +5,7 @@ using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Serialization;
 using Profile4d.DI;
 using Profile4d.Data;
+using Profile4d.Storage;
 using Profile4d.Domain;
 
 namespace Profile4d.Web.Api
@@ -29,9 +30,12 @@ namespace Profile4d.Web.Api
 
       // Config data before config cookies so logged users can be checked on SqlServer
       services.Configure<Secrets.ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
+      //  data
       services.AddSingleton<MyIdentity>();
       services.AddSingleton<StaticContent>();
       services.AddSingleton<Images>();
+      //  storage
+      services.AddSingleton<Blob>();
 
       // add cors
       Bootstrap.ConfigCors(services, Configuration, HostEnvironment.IsDevelopment());

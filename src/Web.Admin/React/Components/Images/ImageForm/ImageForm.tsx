@@ -63,7 +63,7 @@ export default withTranslation()(
           align="center"
           variant="h5"
         >
-          {t('StaticImageForm:title')}
+          {t('FirstPageImages:title')}
         </Typography>
         <Login myValues={myValues} />
       </div>

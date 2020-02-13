@@ -1,6 +1,8 @@
+using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Profile4d.Data;
+using Profile4d.Storage;
 using Profile4d.Domain;
 
 namespace Profile4d.Web.Api.Controllers
@@ -11,13 +13,22 @@ namespace Profile4d.Web.Api.Controllers
   {
     private readonly ILogger<IdentityController> _logger;
     private readonly Images _myImages;
+    private readonly Blob _blob;
     private string _user;
 
-    public ImageController(ILogger<IdentityController> logger, Images MyImages)
+    public ImageController(ILogger<IdentityController> logger, Images MyImages, Blob Blob)
     {
       _logger = logger;
       _myImages = MyImages;
+      _blob = Blob;
       _user = "1";
+    }
+
+    [HttpGet("show/{id}")]
+    [Produces("image/png")]
+    public object Show(string id)
+    {
+      return _blob.ShowImage(id);
     }
 
     [HttpGet("Logo")]

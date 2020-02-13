@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Images',
+  title: 'Logo image',
   logo: 'Logo',
   default: 'Default image',
 } as ILanguage;
