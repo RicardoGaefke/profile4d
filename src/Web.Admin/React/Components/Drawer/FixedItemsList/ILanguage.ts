@@ -3,7 +3,7 @@ export interface ILanguage {
   images: string,
   dynamic: string,
   firstpage: string,
-  competent: string,
+  competentmind: string,
   dominantwhoiam: string,
   dominantname: string,
   dominantstructure: string,
