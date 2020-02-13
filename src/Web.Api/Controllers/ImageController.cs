@@ -24,11 +24,10 @@ namespace Profile4d.Web.Api.Controllers
       _user = "1";
     }
 
-    [HttpGet("show/{id}")]
-    [Produces("image/png")]
-    public object Show(string id)
+    [HttpGet("show/{arquivo}")]
+    public object Show(string arquivo)
     {
-      return _blob.ShowImage(id);
+      return File(_blob.ShowImage(arquivo).Content, "image/png");
     }
 
     [HttpGet("Logo")]

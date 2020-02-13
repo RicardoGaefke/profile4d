@@ -25,11 +25,11 @@ namespace Profile4d.Storage
       blobClient.Upload(ms);
     }
 
-    public BlobDownloadInfo ShowImage(string id)
+    public BlobDownloadInfo ShowImage(string arquivo)
     {
       BlobServiceClient blobServiceClient = new BlobServiceClient(_connStr.Value.Storage);
       BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient("images-staging");
-      BlobClient blobClient = containerClient.GetBlobClient(id + ".png");
+      BlobClient blobClient = containerClient.GetBlobClient(arquivo);
 
       return blobClient.Download();
     }

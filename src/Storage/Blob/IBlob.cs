@@ -6,6 +6,6 @@ namespace Profile4d.Storage
   public interface IBlob
   {
     public void SaveBase64(Image data);
-    public BlobDownloadInfo ShowImage(string id);
+    public BlobDownloadInfo ShowImage(string arquivo);
   }
 }
