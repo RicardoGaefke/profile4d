@@ -44,7 +44,10 @@ namespace Profile4d.Data
               _myUser.Id = MyDR.GetInt32(0);
               _myUser.Name = MyDR.GetString(1);
               _myUser.Email = MyDR.GetString(2);
-              _myUser.LastChanged = MyDR.GetDateTime(3).ToString();
+
+              DateTime dt = MyDR.GetDateTime(3);
+
+              _myUser.LastChanged = string.Format("{0}", dt.ToString("yyyy-MM-dd HH:mm:ss.fff"));
 
               MyDR.NextResult();
 
@@ -74,7 +77,6 @@ namespace Profile4d.Data
       BasicReturn _return = new BasicReturn();
 
       int _user = Convert.ToInt32(user);
-      DateTime _lastChanged = new DateTime(Convert.ToInt32(lastChanged));
 
       using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
       {
@@ -85,7 +87,7 @@ namespace Profile4d.Data
           Cmd.CommandText = "[sp_VALIDATE_LAST_CHANGED]";
 
           Cmd.Parameters.AddWithValue("@USER", user);
-          Cmd.Parameters.AddWithValue("@LAST_CHANGED", lastChanged);
+          Cmd.Parameters.AddWithValue("@LAST_CHANGED", Convert.ToDateTime(lastChanged));
           Cmd.Parameters.AddWithValue("@URL", url);
 
           Con.Open();

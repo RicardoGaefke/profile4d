@@ -30,7 +30,9 @@ public class CustomCookieAuthenticationEvents : CookieAuthenticationEvents
                        select c.Value).FirstOrDefault()
     ;
 
-    if (string.IsNullOrEmpty(lastChanged) || !_myIdentity.ValidateLastChanged(userID, lastChanged, context.Request.Host.ToString()).Success)
+    string _url = context.Request.Host + context.Request.Path;
+
+    if (string.IsNullOrEmpty(lastChanged) || !_myIdentity.ValidateLastChanged(userID, lastChanged, _url).Success)
     {
       context.RejectPrincipal();
 
