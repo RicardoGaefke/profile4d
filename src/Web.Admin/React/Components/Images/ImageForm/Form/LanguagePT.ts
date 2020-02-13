@@ -35,4 +35,5 @@ export default {
     success: 'Alterações salvas com sucesso',
     failure: 'Desculpe, mas as informações não foram salvas',
   },
+  altImage: 'Imagem a ser enviada ao servidor',
 } as ILanguage;
