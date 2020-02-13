@@ -13,11 +13,11 @@ import Validation from '../FirstPage/Form/Form.Validation';
 import { IStaticFirstPage } from '../../../../../TypeScript/Interfaces/IStaticContent';
 import myAxios from '../../../Utils/MyAxios';
 
-interface IProps {
+export interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MyBehavioursProfiles = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+export const MyBehavioursProfiles = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
   displayName: 'Static Content Behaviours Profiles',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,
