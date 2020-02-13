@@ -6,7 +6,7 @@ export default {
   images: 'Lista de imagens',
   dynamic: 'Conteúdo dinâmico',
   firstpage: 'Primeira página',
-  competent: 'Mente competente',
+  competentmind: 'Mente competente',
   dominantwhoiam: 'Competente Quem eu sou?',
   dominantname: 'Nome Profile Dominante',
   dominantstructure: 'Estrutura Profile Dominante',

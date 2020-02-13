@@ -14,6 +14,33 @@ public class CustomCookieAuthenticationEvents : CookieAuthenticationEvents
     _myIdentity = MyIdentity;
   }
 
+  public override Task SignedIn(CookieSignedInContext context)
+  {
+
+    return Task.CompletedTask;
+  }
+  
+  public override Task RedirectToLogin(RedirectContext<CookieAuthenticationOptions> context)
+  {
+    string _host = context.Request.Host.ToString();
+    string _identity = "identity.profile4d.com";
+
+    if (_host.Contains("localhost"))
+    {
+      _identity = "localhost:5055";
+    }
+
+    if (_host.Contains("staging"))
+    {
+      _identity = "identity.staging.profile4d.com";
+    }
+    
+    context.HttpContext.Response.Redirect($"https://{_identity}?ReturnUrl=https://" + context.Request.Host.Value);
+    // context.HttpContext.Response.StatusCode = 401;
+
+    return Task.CompletedTask;
+  }
+
   public override async Task ValidatePrincipal(CookieValidatePrincipalContext context)
   {
     var userPrincipal = context.Principal;

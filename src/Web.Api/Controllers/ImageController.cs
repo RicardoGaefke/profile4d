@@ -1,4 +1,5 @@
 using System.IO;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Profile4d.Data;
@@ -25,7 +26,7 @@ namespace Profile4d.Web.Api.Controllers
     }
 
     [HttpGet("show/{arquivo}")]
-    public object Show(string arquivo)
+    public object Taks<Show>(string arquivo)
     {
       return File(_blob.ShowImage(arquivo).Content, "image/png");
     }

@@ -35,10 +35,5 @@ export default {
     success: 'Alterações salvas com sucesso',
     failure: 'Desculpe, mas as informações não foram salvas',
   },
-  attachment: {
-    uploads: 'Uploads',
-    save: 'Salvar',
-    dropzoneText: 'Arraste e solte um arquivo JPG ou PNG de até 300kb cada ou clique',
-    noAttachments: 'Nenhum arquivo anexo!',
-  },
+  altImage: 'Imagem a ser enviada ao servidor',
 } as ILanguage;
