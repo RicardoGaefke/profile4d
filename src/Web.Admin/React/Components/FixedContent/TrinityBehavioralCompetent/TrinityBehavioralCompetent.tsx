@@ -17,7 +17,7 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MyTrinityBehavioralCompetent = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+export const MyTrinityBehavioralCompetent = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
   displayName: 'Static Content Trinity Behavioral Competent',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,

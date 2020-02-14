@@ -17,7 +17,7 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MyTrinityPersonified = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+export const MyTrinityPersonified = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
   displayName: 'Static Content Trinity Personified',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,
