@@ -17,7 +17,7 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MyDominantWhoIAm = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+export const MyDominantWhoIAm = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
   displayName: 'Static Content Dominant Who I Am',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,

@@ -18,7 +18,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('Web.Admin -> BehavioursProfiles', (): void => {
   // The complete strucutre are here [Formik, Form, i18n & Snackbar]
-  const Login = withTranslation()(withSnackbar(MyBehavioursProfiles));
+  const DefaultForm = withTranslation()(withSnackbar(MyBehavioursProfiles));
 
   /*
     This component is extremally necessary to run enqueueSnackbar on tests.
@@ -26,7 +26,7 @@ describe('Web.Admin -> BehavioursProfiles', (): void => {
   */
   const App = (): React.ReactElement<HTMLElement> => (
     <SnackbarProvider>
-      <Login myValues={initialValues} />
+      <DefaultForm myValues={initialValues} />
     </SnackbarProvider>
   );
 
