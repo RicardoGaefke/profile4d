@@ -17,7 +17,7 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MyColumnChartThreeProfiles = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+export const MyColumnChartThreeProfiles = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
   displayName: 'Static Content Column Chart Three Profiles',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,

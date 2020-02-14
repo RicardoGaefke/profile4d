@@ -17,7 +17,7 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MyPersonalizedTable = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+export const MyPersonalizedTable = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
   displayName: 'Static Content Personalized Table',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,

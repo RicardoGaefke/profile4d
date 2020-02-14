@@ -17,7 +17,7 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MyThreeIntelligenceCenters = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+export const MyThreeIntelligenceCenters = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
   displayName: 'Static Content Three Intelligence Centers',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,

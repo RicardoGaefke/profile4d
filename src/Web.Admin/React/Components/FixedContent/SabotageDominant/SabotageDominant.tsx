@@ -17,7 +17,7 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MySabotageDominant = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+export const MySabotageDominant = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
   displayName: 'Static Content Sabotage Dominant',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,

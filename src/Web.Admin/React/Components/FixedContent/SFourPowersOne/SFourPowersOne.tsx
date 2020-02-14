@@ -17,7 +17,7 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MySFourPowersOne = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+export const MySFourPowersOne = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
   displayName: 'Static Content Sabotage Four Powers One',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,
