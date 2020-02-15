@@ -17,7 +17,7 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MyNameSaboteurOne = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+export const MyNameSaboteurOne = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
   displayName: 'Static Content Name Saboteur One',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,

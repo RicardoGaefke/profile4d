@@ -120,8 +120,8 @@ namespace Profile4d.Web.Api.Controllers
       try
       {
         int _userID = Convert.ToInt32(User.FindFirst(claim => claim.Type == "UserID")?.Value);
-        _myIdentity.SignOut(_userID);
         await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        _myIdentity.SignOut(_userID);
 
         _return.Success = true;
 
