@@ -3,7 +3,7 @@ import '@babel/polyfill';
 import React, { ChangeEvent } from 'react';
 import {
   Grid, TextField, Button, FormControl,
-  Input, FormHelperText,
+  Input, FormHelperText, Typography,
 } from '@material-ui/core';
 import PublishIcon from '@material-ui/icons/Publish';
 // eslint-disable-next-line no-unused-vars
@@ -21,6 +21,7 @@ import Createdby from '../../../Created/Created';
 import useStyles from '../../../../Utils/Form.Styles';
 import NoImage from '../../NoImage';
 import ImageInfo from '../../ImageInfo/ImageInfo';
+import ShowImage from '../../ShowImage/ShowImage';
 
 export type IForm = FormikProps<IStaticImageForm> & WithTranslation & WithSnackbarProps;
 
@@ -160,8 +161,8 @@ export default (props: IForm): React.ReactElement<IForm> => {
         <Grid
           item
           xs={12}
-          md={6}
-          lg={6}
+          md={5}
+          lg={5}
         >
           <FormControl>
             <Input
@@ -211,10 +212,18 @@ export default (props: IForm): React.ReactElement<IForm> => {
         <Grid
           item
           xs={12}
-          md={6}
-          lg={6}
+          md={7}
+          lg={7}
         >
-          Aqui vai a foto do bd
+          {
+            (values.Data === '')
+              ? (
+                <Typography variant="h4" color="primary">
+                  {t('StaticImageForm:showImage')}
+                </Typography>
+              )
+              : <ShowImage Src={values.Src} Alt={values.Alt} />
+          }
         </Grid>
         <Grid
           item
