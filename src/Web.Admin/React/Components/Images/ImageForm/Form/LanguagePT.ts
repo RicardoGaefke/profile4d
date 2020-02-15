@@ -36,4 +36,5 @@ export default {
     failure: 'Desculpe, mas as informações não foram salvas',
   },
   altImage: 'Imagem a ser enviada ao servidor',
+  showImage: 'Imagem atualmente no servidor',
 } as ILanguage;

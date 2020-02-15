@@ -21,6 +21,8 @@ import Createdby from '../../../Created/Created';
 import useStyles from '../../../../Utils/Form.Styles';
 import NoImage from '../../NoImage';
 import ImageInfo from '../../ImageInfo/ImageInfo';
+import ShowImage from '../../ShowImage/ShowImage';
+import Hosts from '../../../../Utils/Hosts';
 
 export type IForm = FormikProps<IStaticImageForm> & WithTranslation & WithSnackbarProps;
 
@@ -28,6 +30,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
   const classes = useStyles({});
   const { t, i18n } = useTranslation('StaticImageForm');
   setLanguage();
+  const Api = new Hosts(window.location.href);
 
   const {
     enqueueSnackbar,
@@ -160,7 +163,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
         <Grid
           item
           xs={12}
-          md={6}
+          md={12}
           lg={6}
         >
           <FormControl>
@@ -214,7 +217,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={6}
           lg={6}
         >
-          Aqui vai a foto do bd
+          <ShowImage Src={`${Api.Api()}Image/Show/${values.Id}.png`} Alt={values.Alt} />
         </Grid>
         <Grid
           item

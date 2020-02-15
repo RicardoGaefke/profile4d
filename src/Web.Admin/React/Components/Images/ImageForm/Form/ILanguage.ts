@@ -33,4 +33,5 @@ export interface ILanguage {
     failure: string,
   },
   altImage: string,
+  showImage: string,
 }
