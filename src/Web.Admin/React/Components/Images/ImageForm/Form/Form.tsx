@@ -3,7 +3,7 @@ import '@babel/polyfill';
 import React, { ChangeEvent } from 'react';
 import {
   Grid, TextField, Button, FormControl,
-  Input, FormHelperText, Typography,
+  Input, FormHelperText,
 } from '@material-ui/core';
 import PublishIcon from '@material-ui/icons/Publish';
 // eslint-disable-next-line no-unused-vars
@@ -22,6 +22,7 @@ import useStyles from '../../../../Utils/Form.Styles';
 import NoImage from '../../NoImage';
 import ImageInfo from '../../ImageInfo/ImageInfo';
 import ShowImage from '../../ShowImage/ShowImage';
+import Hosts from '../../../../Utils/Hosts';
 
 export type IForm = FormikProps<IStaticImageForm> & WithTranslation & WithSnackbarProps;
 
@@ -29,6 +30,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
   const classes = useStyles({});
   const { t, i18n } = useTranslation('StaticImageForm');
   setLanguage();
+  const Api = new Hosts(window.location.href);
 
   const {
     enqueueSnackbar,
@@ -161,8 +163,8 @@ export default (props: IForm): React.ReactElement<IForm> => {
         <Grid
           item
           xs={12}
-          md={5}
-          lg={5}
+          md={12}
+          lg={6}
         >
           <FormControl>
             <Input
@@ -212,18 +214,10 @@ export default (props: IForm): React.ReactElement<IForm> => {
         <Grid
           item
           xs={12}
-          md={7}
-          lg={7}
+          md={6}
+          lg={6}
         >
-          {
-            (values.Data === '')
-              ? (
-                <Typography variant="h4" color="primary">
-                  {t('StaticImageForm:showImage')}
-                </Typography>
-              )
-              : <ShowImage Src={values.Src} Alt={values.Alt} />
-          }
+          <ShowImage Src={`${Api.Api()}Image/Show/${values.Id}.png`} Alt={values.Alt} />
         </Grid>
         <Grid
           item
