@@ -24,9 +24,11 @@ const MyImageForm = withFormik<WithTranslation & WithSnackbarProps & IProps, ISt
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticImageForm>('StaticContent/ImageFormEdit', {
+    await myAxios(window.location.href).post<IStaticImageForm>('Image/LogoEdit', {
+      Mime: values.Mime,
       Alt_PT: values.Alt_PT,
       Alt_ENG: values.Alt_ENG,
+      Src: values.Src,
     }).then((response): void => {
       const { data } = response;
 

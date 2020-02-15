@@ -1,7 +1,7 @@
-using System.Security.Claims;
 using System.Linq;
-using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Profile4d.Data;
 using Profile4d.Domain;
@@ -17,13 +17,17 @@ namespace Profile4d.Web.Api.Controllers
     private readonly IHttpContextAccessor _httpContextAccessor;
     private string _user;
 
-    public StaticContentController(ILogger<IdentityController> logger, IHttpContextAccessor httpContextAccessor, StaticContent MyStaticContent)
+    public StaticContentController(
+      ILogger<IdentityController> logger,
+      IHttpContextAccessor httpContextAccessor,
+      StaticContent MyStaticContent
+    )
     {
-      ClaimsPrincipal currentUser = this.User;
-
       _logger = logger;
       _myContent = MyStaticContent;
+      
       _httpContextAccessor = httpContextAccessor;
+      ClaimsPrincipal currentUser = this.User;
 
       _user = (from c in _httpContextAccessor.HttpContext.User.Claims
                where c.Type == "UserID"

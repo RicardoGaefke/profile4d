@@ -14,6 +14,8 @@ import { withSnackbar, WithSnackbarProps } from 'notistack';
 import { FormikProps } from 'formik';
 // eslint-disable-next-line no-unused-vars
 import { IStaticImageForm } from '../../../../../../TypeScript/Interfaces/IStaticImageForm';
+// eslint-disable-next-line no-unused-vars
+import { IImage } from '../../../../../../TypeScript/Interfaces/IImage';
 import setLanguage from './Language';
 import Createdby from '../../../Created/Created';
 import useStyles from '../../../../Utils/Form.Styles';
@@ -158,8 +160,8 @@ export default (props: IForm): React.ReactElement<IForm> => {
         <Grid
           item
           xs={12}
-          md={12}
-          lg={12}
+          md={6}
+          lg={6}
         >
           <FormControl>
             <Input
@@ -205,6 +207,14 @@ export default (props: IForm): React.ReactElement<IForm> => {
           >
             {t('StaticImageForm:file.title')}
           </Button>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          lg={6}
+        >
+          Aqui vai a foto do bd
         </Grid>
         <Grid
           item

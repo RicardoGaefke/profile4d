@@ -56,7 +56,12 @@ namespace Profile4d.Data
         {
           Cmd.CommandType = CommandType.StoredProcedure;
           Cmd.Connection = Con;
-          Cmd.CommandText = "[sp_IMAGE_LOGO_READ]";
+          Cmd.CommandText = "[sp_IMAGE_LOGO_EDIT]";
+
+          Cmd.Parameters.AddWithValue("@MIME", data.Mime);
+          Cmd.Parameters.AddWithValue("@USER", data.CreatedBy);
+          Cmd.Parameters.AddWithValue("@ALT_PT", data.Alt_PT);
+          Cmd.Parameters.AddWithValue("@ALT_ENG", data.Alt_ENG);
 
           Con.Open();
 
