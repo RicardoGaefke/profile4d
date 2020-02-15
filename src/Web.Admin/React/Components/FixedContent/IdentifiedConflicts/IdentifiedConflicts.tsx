@@ -17,7 +17,7 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MyIdentifiedConflicts = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+export const MyIdentifiedConflicts = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
   displayName: 'Static Content Identified Conflicts',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,

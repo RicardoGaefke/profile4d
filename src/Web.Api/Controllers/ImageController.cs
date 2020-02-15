@@ -1,10 +1,11 @@
-using System.IO;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Linq;
+using System.Security.Claims;
 using Profile4d.Data;
-using Profile4d.Storage;
 using Profile4d.Domain;
+using Profile4d.Storage;
 
 namespace Profile4d.Web.Api.Controllers
 {
@@ -13,22 +14,35 @@ namespace Profile4d.Web.Api.Controllers
   public class ImageController : ControllerBase
   {
     private readonly ILogger<IdentityController> _logger;
+    private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly Images _myImages;
     private readonly Blob _blob;
     private string _user;
 
-    public ImageController(ILogger<IdentityController> logger, Images MyImages, Blob Blob)
+    public ImageController(
+      ILogger<IdentityController> logger,
+      IHttpContextAccessor httpContextAccessor,
+      Images MyImages,
+      Blob Blob
+    )
     {
       _logger = logger;
       _myImages = MyImages;
       _blob = Blob;
-      _user = "1";
+
+      _httpContextAccessor = httpContextAccessor;
+      ClaimsPrincipal currentUser = this.User;
+
+      _user = (from c in _httpContextAccessor.HttpContext.User.Claims
+               where c.Type == "UserID"
+               select c.Value).FirstOrDefault()
+      ;
     }
 
-    [HttpGet("show/{arquivo}")]
-    public object Taks<Show>(string arquivo)
+    [HttpGet("show/{file}")]
+    public object Show(string file)
     {
-      return File(_blob.ShowImage(arquivo).Content, "image/png");
+      return File(_blob.ShowImage(file).Content, "image/png");
     }
 
     [HttpGet("Logo")]
@@ -48,6 +62,30 @@ namespace Profile4d.Web.Api.Controllers
       {
         _return.Success = false;
         _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("LogoEdit")]
+    public ActionResult<BasicReturn> LogoEdit(Image data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+        _return = _myImages.LogoEdit(data);
+        data.Name = _return.Code + ".png";
+        _blob.SaveBase64(data);
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = data.Src;
+        _return.Details = ex.StackTrace;
 
         return _return;
       }

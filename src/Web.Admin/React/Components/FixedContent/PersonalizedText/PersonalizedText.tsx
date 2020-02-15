@@ -17,7 +17,7 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MyPersonalizedText = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+export const MyPersonalizedText = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
   displayName: 'Static Content Personalized Text',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,

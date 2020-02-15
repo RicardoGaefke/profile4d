@@ -36,7 +36,6 @@ public class CustomCookieAuthenticationEvents : CookieAuthenticationEvents
     }
     
     context.HttpContext.Response.Redirect($"https://{_identity}?ReturnUrl=https://" + context.Request.Host.Value);
-    // context.HttpContext.Response.StatusCode = 401;
 
     return Task.CompletedTask;
   }

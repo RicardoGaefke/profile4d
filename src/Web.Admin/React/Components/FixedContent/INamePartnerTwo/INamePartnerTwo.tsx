@@ -17,7 +17,7 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MyINamePartnerTwo = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+export const MyINamePartnerTwo = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
   displayName: 'Static Content Internal Second Partners Name',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,

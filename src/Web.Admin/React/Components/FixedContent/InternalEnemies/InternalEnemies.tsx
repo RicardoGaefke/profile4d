@@ -17,7 +17,7 @@ interface IProps {
   myValues: IStaticFirstPage
 }
 
-const MyInternalEnemies = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+export const MyInternalEnemies = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
   displayName: 'Static Content Internal Enemies',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,
