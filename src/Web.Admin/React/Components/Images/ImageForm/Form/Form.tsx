@@ -1,6 +1,6 @@
 import '@babel/polyfill';
 // eslint-disable-next-line no-unused-vars
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import {
   Grid, TextField, Button, FormControl,
   Input, FormHelperText,
@@ -23,6 +23,7 @@ import NoImage from '../../NoImage';
 import ImageInfo from '../../ImageInfo/ImageInfo';
 import ShowImage from '../../ShowImage/ShowImage';
 import Hosts from '../../../../Utils/Hosts';
+import MyAxios from '../../../../Utils/MyAxios';
 
 export type IForm = FormikProps<IStaticImageForm> & WithTranslation & WithSnackbarProps;
 
@@ -44,6 +45,20 @@ export default (props: IForm): React.ReactElement<IForm> => {
     setFieldTouched,
     setFieldValue,
   } = props;
+
+  const [image, setImage] = useState(values.Id);
+
+  useEffect((): void => {
+    if (!isSubmitting) {
+      MyAxios(window.location.href)
+        .get<IStaticImageForm>('Image/Logo')
+        .then((response): void => {
+          const { data } = response;
+
+          setImage(data.Id);
+        });
+    }
+  }, [isSubmitting]);
 
   const myRef = React.useRef<HTMLInputElement>(null);
 
@@ -217,7 +232,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={6}
           lg={6}
         >
-          <ShowImage Src={`${Api.Api()}Image/Show/${values.Id}.png`} Alt={values.Alt} />
+          <ShowImage Src={`${Api.Api()}Image/Show/${image}.png`} Alt={values.Alt} />
         </Grid>
         <Grid
           item
