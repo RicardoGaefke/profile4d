@@ -36,4 +36,5 @@ export default {
     failure: 'Sorry but no data was saved',
   },
   altImage: 'Image to be sent to the server',
+  showImage: 'Actual image on server',
 } as ILanguage;
