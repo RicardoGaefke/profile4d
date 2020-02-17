@@ -20,7 +20,7 @@ namespace Profile4d.Web.Admin.Controllers
       _logger = logger;
     }
 
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public IActionResult Index()
     {
       ViewData["Title"] = "Profile4D";

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -11,6 +12,7 @@ namespace Profile4d.Web.Api.Controllers
 {
   [ApiController]
   [Route("[controller]")]
+  [Authorize]
   public class ImageController : ControllerBase
   {
     private readonly ILogger<IdentityController> _logger;
@@ -39,12 +41,14 @@ namespace Profile4d.Web.Api.Controllers
       ;
     }
 
+    [AllowAnonymous]
     [HttpGet("show/{file}")]
     public object Show(string file)
     {
       return File(_blob.ShowImage(file).Content, "image/png");
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpGet("Logo")]
     public ActionResult<Image> Logo()
     {
@@ -67,6 +71,7 @@ namespace Profile4d.Web.Api.Controllers
       }
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpPost("LogoEdit")]
     public ActionResult<BasicReturn> LogoEdit(Image data)
     {
