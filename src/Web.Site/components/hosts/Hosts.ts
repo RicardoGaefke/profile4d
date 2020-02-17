@@ -1,4 +1,5 @@
 export default class Hosts {
+  // gives the right host deppending on the actual href
   private Host: string;
 
   constructor(host: string) {

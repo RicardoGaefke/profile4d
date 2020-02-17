@@ -1,0 +1,18 @@
+[
+  {
+    "id": {
+      "scope": null,
+      "name": "hosts"
+    },
+    "isSymlink": true,
+    "hash": "abba3508de929934a4e4b5198e00683c2b633bbc"
+  },
+  {
+    "id": {
+      "scope": "ricardogaefke.profile4d",
+      "name": "hosts"
+    },
+    "isSymlink": false,
+    "hash": "5abfe6d166dd5bfea026b10f0219a9f2302b384f"
+  }
+]
