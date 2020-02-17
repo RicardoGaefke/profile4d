@@ -34,8 +34,15 @@ public class CustomCookieAuthenticationEvents : CookieAuthenticationEvents
     {
       _identity = "identity.staging.profile4d.com";
     }
-    
-    context.HttpContext.Response.Redirect($"https://{_identity}?ReturnUrl=https://" + context.Request.Host.Value);
+
+    string _url = context.Request.Host.Value;
+
+    if (context.Request.Path != "/")
+    {
+      _url += context.Request.Path;
+    }
+
+    context.HttpContext.Response.Redirect($"https://{_identity}?ReturnUrl=https://" + _url);
 
     return Task.CompletedTask;
   }
