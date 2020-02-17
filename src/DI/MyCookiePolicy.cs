@@ -19,7 +19,24 @@ public class CustomCookieAuthenticationEvents : CookieAuthenticationEvents
 
     return Task.CompletedTask;
   }
-  
+
+  public override Task RedirectToAccessDenied(RedirectContext<CookieAuthenticationOptions> context)
+  {
+    var userID = (from c in context.HttpContext.User.Claims
+                  where c.Type == "UserID"
+                  select c.Value).FirstOrDefault()
+    ;
+    
+    string _url = context.Request.Host + context.Request.Path;
+
+    if (!string.IsNullOrEmpty(userID))
+    {
+      _myIdentity.Record(Convert.ToInt32(userID), 10, _url);
+    }
+
+    return Task.CompletedTask;
+  }
+
   public override Task RedirectToLogin(RedirectContext<CookieAuthenticationOptions> context)
   {
     string _host = context.Request.Host.ToString();
@@ -35,12 +52,7 @@ public class CustomCookieAuthenticationEvents : CookieAuthenticationEvents
       _identity = "identity.staging.profile4d.com";
     }
 
-    string _url = context.Request.Host.Value;
-
-    if (context.Request.Path != "/")
-    {
-      _url += context.Request.Path;
-    }
+    string _url = context.Request.Host + context.Request.Path;
 
     context.HttpContext.Response.Redirect($"https://{_identity}?ReturnUrl=https://" + _url);
 
