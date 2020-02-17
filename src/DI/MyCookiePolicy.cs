@@ -34,6 +34,8 @@ public class CustomCookieAuthenticationEvents : CookieAuthenticationEvents
       _myIdentity.Record(Convert.ToInt32(userID), 10, _url);
     }
 
+    context.Response.StatusCode = 403;
+
     return Task.CompletedTask;
   }
 
