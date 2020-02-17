@@ -129,5 +129,26 @@ namespace Profile4d.Data
         }
       }
     }
+
+    public void Record(int UserID, int Status, string Details)
+    {
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_LOGIN_RECORD]";
+
+          Cmd.Parameters.AddWithValue("@USER", UserID);
+          Cmd.Parameters.AddWithValue("@STATUS", Status);
+          Cmd.Parameters.AddWithValue("@DETAILS", Details);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+    }
   }
 }

@@ -17,7 +17,6 @@ export class Href {
   toLogin = (): string => {
     if (this.parsed.error) return this.parsed.error.message;
     if (!this.parsed.subdomain) return `identity.${this.parsed.domain}`;
-    return `${(this.parsed.subdomain as string).replace('www', 'identity')}.${this.parsed.domain}
-    `;
+    return `${(this.parsed.subdomain as string).replace('www', 'identity')}.${this.parsed.domain}`;
   };
 }

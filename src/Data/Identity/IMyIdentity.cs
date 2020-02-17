@@ -7,5 +7,7 @@ namespace Profile4d.Data
     public BasicReturn ValidateLastChanged(string user, string lastChanged, string url);
 
     public void SignOut(int UserID);
+
+    public void Record(int UserID, int Status, string Details);
   }
 }

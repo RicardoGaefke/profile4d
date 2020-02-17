@@ -19,7 +19,44 @@ public class CustomCookieAuthenticationEvents : CookieAuthenticationEvents
 
     return Task.CompletedTask;
   }
-  
+
+  public override Task RedirectToAccessDenied(RedirectContext<CookieAuthenticationOptions> context)
+  {
+    var userID = (from c in context.HttpContext.User.Claims
+                  where c.Type == "UserID"
+                  select c.Value).FirstOrDefault()
+    ;
+    
+    string _url = context.Request.Host + context.Request.Path;
+
+    if (!string.IsNullOrEmpty(userID))
+    {
+      _myIdentity.Record(Convert.ToInt32(userID), 10, _url);
+    }
+
+    context.Response.StatusCode = 403;
+
+    string _host = context.Request.Host.ToString();
+    string _identity = "identity.profile4d.com/403";
+
+    if (_host.Contains("localhost"))
+    {
+      _identity = "localhost:5055/403";
+    }
+
+    if (_host.Contains("staging"))
+    {
+      _identity = "identity.staging.profile4d.com/403";
+    }
+
+    if (!_host.Contains("api") && !_host.Contains("localhost:5065"))
+    {
+      context.Response.Redirect(_identity);
+    }
+
+    return Task.CompletedTask;
+  }
+
   public override Task RedirectToLogin(RedirectContext<CookieAuthenticationOptions> context)
   {
     string _host = context.Request.Host.ToString();
@@ -34,8 +71,10 @@ public class CustomCookieAuthenticationEvents : CookieAuthenticationEvents
     {
       _identity = "identity.staging.profile4d.com";
     }
-    
-    context.HttpContext.Response.Redirect($"https://{_identity}?ReturnUrl=https://" + context.Request.Host.Value);
+
+    string _url = context.Request.Host + context.Request.Path;
+
+    context.HttpContext.Response.Redirect($"https://{_identity}?ReturnUrl=https://" + _url);
 
     return Task.CompletedTask;
   }

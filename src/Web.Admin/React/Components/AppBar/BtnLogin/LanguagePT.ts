@@ -2,5 +2,5 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Gerenciar configurações de login',
+  title: 'Encerrar conexão',
 } as ILanguage;

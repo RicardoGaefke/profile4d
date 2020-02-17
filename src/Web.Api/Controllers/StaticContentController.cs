@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -10,6 +11,7 @@ namespace Profile4d.Web.Api.Controllers
 {
   [ApiController]
   [Route("[controller]")]
+  [Authorize(Roles = "Admin")]
   public class StaticContentController : ControllerBase
   {
     private readonly ILogger<IdentityController> _logger;
