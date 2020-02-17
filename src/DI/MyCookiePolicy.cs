@@ -36,6 +36,24 @@ public class CustomCookieAuthenticationEvents : CookieAuthenticationEvents
 
     context.Response.StatusCode = 403;
 
+    string _host = context.Request.Host.ToString();
+    string _identity = "identity.profile4d.com/403";
+
+    if (_host.Contains("localhost"))
+    {
+      _identity = "localhost:5055/403";
+    }
+
+    if (_host.Contains("staging"))
+    {
+      _identity = "identity.staging.profile4d.com/403";
+    }
+
+    if (!_host.Contains("api") && !_host.Contains("localhost:5065"))
+    {
+      context.Response.Redirect(_identity);
+    }
+
     return Task.CompletedTask;
   }
 

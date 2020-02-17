@@ -48,10 +48,8 @@ namespace Profile4d.Web.Api.Controllers
       return File(_blob.ShowImage(file).Content, "image/png");
     }
 
-    [Authorize(Roles = "Crazy")]
+    [Authorize(Roles = "Admin")]
     [HttpGet("Logo")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status403Forbidden)]
     public ActionResult<Image> Logo()
     {
       Image _return = new Image();
@@ -73,6 +71,7 @@ namespace Profile4d.Web.Api.Controllers
       }
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpPost("LogoEdit")]
     public ActionResult<BasicReturn> LogoEdit(Image data)
     {
