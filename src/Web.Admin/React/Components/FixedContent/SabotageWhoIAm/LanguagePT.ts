@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos do Sabotador Quem eu sou? do relatório',
+  title: 'Dados estáticos do Quem eu sou? (sabotador) do relatório',
   titlePT: {
     text: 'Título em Português',
     title: 'Título do relatório em Português',

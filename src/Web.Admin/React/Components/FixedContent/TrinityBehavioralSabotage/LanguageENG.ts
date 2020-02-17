@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Static data from the Trinity Behavioral Sabotage of the report',
+  title: 'Static data from the Triad Behavioral - Sabotage Mode of the report',
   titlePT: {
     text: 'Title in Portuguese',
     title: 'The title of the report in Portuguese',

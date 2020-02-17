@@ -5,21 +5,21 @@ export interface IStaticMenuItem {
 
 export default [
   {
-    link: 'firstpage',
-    title: 'firstpage',
+    link: 'introduction',
+    title: 'introduction',
   },
-  {
-    link: 'competentmind',
-    title: 'competentmind',
-  },
+  // {
+  //   link: 'competentmind',
+  //   title: 'competentmind',
+  // },
   {
     link: 'dominantwhoiam',
     title: 'dominantwhoiam',
   },
-  {
-    link: 'dominantname',
-    title: 'dominantname',
-  },
+  // {
+  //   link: 'dominantname',
+  //   title: 'dominantname',
+  // },
   {
     link: 'dominantstructure',
     title: 'dominantstructure',
@@ -36,10 +36,10 @@ export default [
     link: 'sabotagedominant',
     title: 'sabotagedominant',
   },
-  {
-    link: 'sabotagename',
-    title: 'sabotagename',
-  },
+  // {
+  //   link: 'sabotagename',
+  //   title: 'sabotagename',
+  // },
   {
     link: 'competentxsabotage',
     title: 'competentxsabotage',
@@ -52,22 +52,22 @@ export default [
     link: 'internalpartners',
     title: 'internalpartners',
   },
-  {
-    link: 'inamepartnerone',
-    title: 'inamepartnerone',
-  },
-  {
-    link: 'ifourpowersone',
-    title: 'ifourpowersone',
-  },
-  {
-    link: 'inamepartnertwo',
-    title: 'inamepartnertwo',
-  },
-  {
-    link: 'ifourpowerstwo',
-    title: 'ifourpowerstwo',
-  },
+  // {
+  //   link: 'inamepartnerone',
+  //   title: 'inamepartnerone',
+  // },
+  // {
+  //   link: 'ifourpowersone',
+  //   title: 'ifourpowersone',
+  // },
+  // {
+  //   link: 'inamepartnertwo',
+  //   title: 'inamepartnertwo',
+  // },
+  // {
+  //   link: 'ifourpowerstwo',
+  //   title: 'ifourpowerstwo',
+  // },
   {
     link: 'trinitybehavioralsabotage',
     title: 'trinitybehavioralsabotage',
@@ -100,26 +100,26 @@ export default [
     link: 'threeintelligencecenters',
     title: 'threeintelligencecenters',
   },
-  {
-    link: 'behavioursprofiles',
-    title: 'behavioursprofiles',
-  },
-  {
-    link: 'identifiedconflicts',
-    title: 'identifiedconflicts',
-  },
+  // {
+  //   link: 'behavioursprofiles',
+  //   title: 'behavioursprofiles',
+  // },
+  // {
+  //   link: 'identifiedconflicts',
+  //   title: 'identifiedconflicts',
+  // },
   {
     link: 'energyspikes',
     title: 'energyspikes',
   },
-  {
-    link: 'columncharthreeprofiles',
-    title: 'columncharthreeprofiles',
-  },
-  {
-    link: 'trinitypersonified',
-    title: 'trinitypersonified',
-  },
+  // {
+  //   link: 'columncharthreeprofiles',
+  //   title: 'columncharthreeprofiles',
+  // },
+  // {
+  //   link: 'trinitypersonified',
+  //   title: 'trinitypersonified',
+  // },
   {
     link: 'trinityspecifics',
     title: 'trinityspecifics',
@@ -128,24 +128,24 @@ export default [
     link: 'originalxadapted',
     title: 'originalxadapted',
   },
-  {
-    link: 'graphicimage',
-    title: 'graphicimage',
-  },
-  {
-    link: 'personalizedtext',
-    title: 'personalizedtext',
-  },
-  {
-    link: 'explainedtext',
-    title: 'explainedtext',
-  },
-  {
-    link: 'personalizedtable',
-    title: 'personalizedtable',
-  },
-  {
-    link: 'defaulttext',
-    title: 'defaulttext',
-  },
+  // {
+  //   link: 'graphicimage',
+  //   title: 'graphicimage',
+  // },
+  // {
+  //   link: 'personalizedtext',
+  //   title: 'personalizedtext',
+  // },
+  // {
+  //   link: 'explainedtext',
+  //   title: 'explainedtext',
+  // },
+  // {
+  //   link: 'personalizedtable',
+  //   title: 'personalizedtable',
+  // },
+  // {
+  //   link: 'defaulttext',
+  //   title: 'defaulttext',
+  // },
 ] as IStaticMenuItem[];

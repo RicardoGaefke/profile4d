@@ -2,30 +2,30 @@ import i18next from 'i18next';
 import { useEffect } from 'react';
 import LanguagePT from './LanguagePT';
 import LanguageENG from './LanguageENG';
-import LanguagePtFs from '../FirstPage/LanguagePT';
-import LanguageEngFs from '../FirstPage/LanguageENG';
+import LanguagePtFs from '../Introduction/LanguagePT';
+import LanguageEngFs from '../Introduction/LanguageENG';
 
 export default ():void => {
   i18next.addResourceBundle('PT', 'StaticSFourPowersOne', LanguagePT);
-  i18next.addResourceBundle('PT', 'StaticFirstPage', LanguagePtFs);
+  i18next.addResourceBundle('PT', 'StaticIntroduction', LanguagePtFs);
   i18next.addResourceBundle('ENG', 'StaticSFourPowersOne', LanguageENG);
-  i18next.addResourceBundle('ENG', 'StaticFirstPage', LanguageEngFs);
+  i18next.addResourceBundle('ENG', 'StaticIntroduction', LanguageEngFs);
 
   useEffect((): void => {
     if (!i18next.hasResourceBundle('PT', 'StaticSFourPowersOne')) {
       i18next.addResourceBundle('PT', 'StaticSFourPowersOne', LanguagePT);
-      i18next.addResourceBundle('PT', 'StaticFirstPage', LanguagePtFs);
+      i18next.addResourceBundle('PT', 'StaticIntroduction', LanguagePtFs);
     }
     if (!i18next.hasResourceBundle('ENG', 'StaticSFourPowersOne')) {
       i18next.addResourceBundle('ENG', 'StaticSFourPowersOne', LanguageENG);
-      i18next.addResourceBundle('ENG', 'StaticFirstPage', LanguageEngFs);
+      i18next.addResourceBundle('ENG', 'StaticIntroduction', LanguageEngFs);
     }
     // return type void != (): void... so as unknown as void
     return ((): void => {
       i18next.removeResourceBundle('PT', 'StaticSFourPowersOne');
-      i18next.removeResourceBundle('PT', 'StaticFirstPage');
+      i18next.removeResourceBundle('PT', 'StaticIntroduction');
       i18next.removeResourceBundle('ENG', 'StaticSFourPowersOne');
-      i18next.removeResourceBundle('ENG', 'StaticFirstPage');
+      i18next.removeResourceBundle('ENG', 'StaticIntroduction');
     }) as unknown as void;
   }, []);
 };
