@@ -18,7 +18,7 @@ interface IProps {
 }
 
 export const MyDominantProfile = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticIntroduction>({
-  displayName: 'Static Content Sabotage Mode',
+  displayName: 'Static Content Dominant Profile',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticIntroduction => props.myValues,
   validationSchema: Validation,

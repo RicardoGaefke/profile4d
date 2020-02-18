@@ -37,6 +37,10 @@ export default [
     title: 'dominantresources',
   },
   {
+    link: 'fourpersonalpowers',
+    title: 'fourpersonalpowers',
+  },
+  {
     link: 'sabotagemode',
     title: 'sabotagemode',
   },

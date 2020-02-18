@@ -10,6 +10,7 @@ export interface ILanguage {
   dominantwhoiam: string,
   dominantstructure: string,
   dominantresources: string,
+  fourpersonalpowers: string,
   sabotagemode: string,
   sabotagewhoiam: string,
   sabotagedominant: string,

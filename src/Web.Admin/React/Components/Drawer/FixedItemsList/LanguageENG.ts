@@ -13,6 +13,7 @@ export default {
   dominantwhoiam: 'Who am I?',
   dominantstructure: 'The structure of your dominant profile',
   dominantresources: 'Dominant Profile Resources',
+  fourpersonalpowers: 'The Four Forces of Personality',
   sabotagemode: 'Saboteur Mode',
   sabotagewhoiam: 'Who am I (saboteur)?',
   sabotagedominant: 'Features of your dominant profile',

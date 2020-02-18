@@ -14,6 +14,7 @@ import CompetentMode from '../CompetentMode/Page';
 import DominantWhoIAm from '../DominantWhoIAm/Page';
 import DominantStructure from '../DominantStructure/Page';
 import DominantResources from '../DominantResources/Page';
+import FourPersonalPowers from '../FourPersonalPowers/Page';
 import SabotageMode from '../SabotageMode/Page';
 import SabotageWhoIAm from '../SabotageWhoIAm/Page';
 import SabotageDominant from '../SabotageDominant/Page';
@@ -43,11 +44,10 @@ export default withRouter(
         <Route path={`${match.url}/inferiormind`} component={InferiorMind} />
         <Route path={`${match.url}/dominantprofile`} component={DominantProfile} />
         <Route path={`${match.url}/competentmode`} component={CompetentMode} />
-        {/* <Route path={`${match.url}/competentmind`} component={Competent} /> */}
         <Route path={`${match.url}/dominantwhoiam`} component={DominantWhoIAm} />
-        {/* <Route path={`${match.url}/dominantname`} component={DominantName} /> */}
         <Route path={`${match.url}/dominantstructure`} component={DominantStructure} />
         <Route path={`${match.url}/dominantresources`} component={DominantResources} />
+        <Route path={`${match.url}/fourpersonalpowers`} component={FourPersonalPowers} />
         <Route path={`${match.url}/sabotagemode`} component={SabotageMode} />
         <Route path={`${match.url}/sabotagewhoiam`} component={SabotageWhoIAm} />
         <Route path={`${match.url}/sabotagedominant`} component={SabotageDominant} />

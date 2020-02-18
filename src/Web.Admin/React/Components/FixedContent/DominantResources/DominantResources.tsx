@@ -18,7 +18,7 @@ interface IProps {
 }
 
 export const MyDominantResources = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticIntroduction>({
-  displayName: 'Static Content Dominant Structure',
+  displayName: 'Static Content Dominant Resources',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticIntroduction => props.myValues,
   validationSchema: Validation,
