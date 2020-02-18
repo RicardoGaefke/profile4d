@@ -13,6 +13,10 @@ export default [
     title: 'personalanalyze',
   },
   {
+    link: 'inferiormind',
+    title: 'inferiormind',
+  },
+  {
     link: 'dominantwhoiam',
     title: 'dominantwhoiam',
   },

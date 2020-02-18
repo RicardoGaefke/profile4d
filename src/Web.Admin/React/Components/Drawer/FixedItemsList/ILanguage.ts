@@ -4,6 +4,7 @@ export interface ILanguage {
   dynamic: string,
   introduction: string,
   personalanalyze: string,
+  inferiormind: string,
   dominantwhoiam: string,
   dominantstructure: string,
   sabotagemode: string,

@@ -8,6 +8,7 @@ import {
 import MyTemplate from '../../Home/Template/Template';
 import Page from '../Introduction/Page';
 import PersonalAnalyze from '../PersonalAnalyze/Page';
+import InferiorMind from '../InferiorMind/Page';
 import DominantWhoIAm from '../DominantWhoIAm/Page';
 import DominantStructure from '../DominantStructure/Page';
 import SabotageMode from '../SabotageMode/Page';
@@ -36,6 +37,7 @@ export default withRouter(
       <MyTemplate>
         <Route path={`${match.url}/introduction`} component={Page} />
         <Route path={`${match.url}/personalanalyze`} component={PersonalAnalyze} />
+        <Route path={`${match.url}/inferiormind`} component={InferiorMind} />
         {/* <Route path={`${match.url}/competentmind`} component={Competent} /> */}
         <Route path={`${match.url}/dominantwhoiam`} component={DominantWhoIAm} />
         {/* <Route path={`${match.url}/dominantname`} component={DominantName} /> */}

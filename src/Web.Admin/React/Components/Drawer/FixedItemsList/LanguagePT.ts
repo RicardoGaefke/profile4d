@@ -7,6 +7,7 @@ export default {
   dynamic: 'Conteúdo dinâmico',
   introduction: 'Introdução',
   personalanalyze: 'Análise Pessoal',
+  inferiormind: 'Mente Inferior',
   dominantwhoiam: 'Quem eu sou?',
   dominantstructure: 'A estrutura do seu perfil dominante',
   sabotagemode: 'Modo sabotador',
