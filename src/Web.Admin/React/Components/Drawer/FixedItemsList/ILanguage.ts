@@ -3,6 +3,7 @@ export interface ILanguage {
   images: string,
   dynamic: string,
   introduction: string,
+  personalanalyze: string,
   dominantwhoiam: string,
   dominantstructure: string,
   sabotagemode: string,
