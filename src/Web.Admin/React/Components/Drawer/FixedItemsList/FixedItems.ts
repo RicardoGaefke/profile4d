@@ -45,6 +45,10 @@ export default [
     title: 'yourmotivations',
   },
   {
+    link: 'attentionfocus',
+    title: 'attentionfocus',
+  },
+  {
     link: 'sabotagemode',
     title: 'sabotagemode',
   },

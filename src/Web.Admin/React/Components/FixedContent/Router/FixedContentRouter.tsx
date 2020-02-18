@@ -16,6 +16,7 @@ import DominantStructure from '../DominantStructure/Page';
 import DominantResources from '../DominantResources/Page';
 import FourPersonalPowers from '../FourPersonalPowers/Page';
 import YourMotivations from '../YourMotivations/Page';
+import AttentionFocus from '../AttentionFocus/Page';
 import SabotageMode from '../SabotageMode/Page';
 import SabotageWhoIAm from '../SabotageWhoIAm/Page';
 import SabotageDominant from '../SabotageDominant/Page';
@@ -50,6 +51,8 @@ export default withRouter(
         <Route path={`${match.url}/dominantresources`} component={DominantResources} />
         <Route path={`${match.url}/fourpersonalpowers`} component={FourPersonalPowers} />
         <Route path={`${match.url}/yourmotivations`} component={YourMotivations} />
+        <Route path={`${match.url}/attentionfocus`} component={AttentionFocus} />
+        {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/sabotagemode`} component={SabotageMode} />
         <Route path={`${match.url}/sabotagewhoiam`} component={SabotageWhoIAm} />
         <Route path={`${match.url}/sabotagedominant`} component={SabotageDominant} />

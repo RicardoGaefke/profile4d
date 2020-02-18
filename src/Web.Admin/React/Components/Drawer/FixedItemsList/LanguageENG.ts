@@ -15,6 +15,7 @@ export default {
   dominantresources: 'Dominant Profile Resources',
   fourpersonalpowers: 'The Four Forces of Personality',
   yourmotivations: 'Your Motivations',
+  attentionfocus: 'Attention Focus',
   sabotagemode: 'Saboteur Mode',
   sabotagewhoiam: 'Who am I (saboteur)?',
   sabotagedominant: 'Features of your dominant profile',
