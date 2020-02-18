@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos de Modo Competente versus Modo Sabotador do relatório',
+  title: 'Dados estáticos do Modo Competente vs. Modo Sabotador do relatório',
   titlePT: {
     text: 'Título em Português',
     title: 'Título do relatório em Português',

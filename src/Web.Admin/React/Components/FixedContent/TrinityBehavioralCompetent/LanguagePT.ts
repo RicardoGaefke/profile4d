@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos da Trindade Competencia Comportamental do relatório',
+  title: 'Dados estáticos da Tríade comportamental - Modo competente do relatório',
   titlePT: {
     text: 'Título em Português',
     title: 'Título do relatório em Português',

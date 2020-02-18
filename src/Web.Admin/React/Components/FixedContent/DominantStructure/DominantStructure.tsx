@@ -7,24 +7,24 @@ import { withFormik } from 'formik';
 import { Typography } from '@material-ui/core';
 import useStyles from './Styles';
 import setLanguage from './Language';
-import DominantStructure from '../FirstPage/Form/Form';
-import Validation from '../FirstPage/Form/Form.Validation';
+import DominantStructure from '../Introduction/Form/Form';
+import Validation from '../Introduction/Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
-import { IStaticFirstPage } from '../../../../../TypeScript/Interfaces/IStaticContent';
+import { IStaticIntroduction } from '../../../../../TypeScript/Interfaces/IStaticContent';
 import myAxios from '../../../Utils/MyAxios';
 
 interface IProps {
-  myValues: IStaticFirstPage
+  myValues: IStaticIntroduction
 }
 
-export const MyDominantStructure = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticFirstPage>({
+export const MyDominantStructure = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticIntroduction>({
   displayName: 'Static Content Dominant Structure',
   enableReinitialize: true,
-  mapPropsToValues: (props: IProps):IStaticFirstPage => props.myValues,
+  mapPropsToValues: (props: IProps):IStaticIntroduction => props.myValues,
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticFirstPage>('StaticContent/DominantStructureEdit', {
+    await myAxios(window.location.href).post<IStaticIntroduction>('StaticContent/DominantStructureEdit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,
@@ -65,7 +65,7 @@ export default withTranslation()(
           align="center"
           variant="h5"
         >
-          {t('StaticFirstPage:title')}
+          {t('StaticDominantStructure:title')}
         </Typography>
         <Login myValues={myValues} />
       </div>

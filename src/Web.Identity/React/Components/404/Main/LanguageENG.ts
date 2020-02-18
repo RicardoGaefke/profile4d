@@ -3,9 +3,9 @@ import { ILanguage } from './ILanguage';
 
 export default {
   title: 'It looks like you got lost!',
-  text: "The address you are looking for doesn't exist...",
+  text: 'The address or resource you are looking for does not exist. It may have even existed, but it has been moved or disabled.',
   btn: {
-    text: 'Back to Home Page',
+    text: 'How about going back home?',
     title: 'click here to return to the home page',
   },
 } as ILanguage;
