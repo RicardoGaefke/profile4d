@@ -1,18 +1,26 @@
 // eslint-disable-next-line no-unused-vars
-import { makeStyles, Theme } from '@material-ui/core';
+import { makeStyles, Theme } from '@material-ui/core/styles';
 
 interface IStyles {
-  main: {},
+  container: {},
+  content: {},
   img: {},
+  margin: {},
 }
 
-// eslint-disable-next-line no-unused-vars
 export default makeStyles((theme: Theme): IStyles => ({
-  main: {
-    marginBottom: 30,
+  container: {
+    display: 'flex',
+    flex: 1,
+  },
+  content: {
+    backgroundColor: (theme.palette.type === 'dark') ? 'white' : 'yellow',
   },
   img: {
-    maxWidth: '100%',
-    marginBottom: 30,
+    maxWidth: '85%',
+    marginTop: theme.spacing(1),
+  },
+  margin: {
+    marginBottom: 40,
   },
 }));
