@@ -5,7 +5,7 @@ import {
   Route,
   withRouter,
 } from 'react-router-dom';
-import LoginForm from '../../LoginForm/LoginForm';
+import Advice from '../Advice/Advice';
 import CreateForm from '../../CreateUserForm/CreateForm';
 import ForgotForm from '../../ForgotForm/ForgotForm';
 
@@ -15,7 +15,7 @@ export default withRouter(
 
     return (
       <>
-        <Route path={`${match.url}/`} exact component={LoginForm} />
+        <Route path={`${match.url}/`} exact component={Advice} />
         <Route path={`${match.url}/create`} component={CreateForm} />
         <Route path={`${match.url}/forgot`} component={ForgotForm} />
       </>
