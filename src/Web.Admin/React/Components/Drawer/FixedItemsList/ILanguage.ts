@@ -11,6 +11,7 @@ export interface ILanguage {
   dominantstructure: string,
   dominantresources: string,
   fourpersonalpowers: string,
+  yourmotivations: string,
   sabotagemode: string,
   sabotagewhoiam: string,
   sabotagedominant: string,

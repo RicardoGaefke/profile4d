@@ -41,6 +41,10 @@ export default [
     title: 'fourpersonalpowers',
   },
   {
+    link: 'yourmotivations',
+    title: 'yourmotivations',
+  },
+  {
     link: 'sabotagemode',
     title: 'sabotagemode',
   },
