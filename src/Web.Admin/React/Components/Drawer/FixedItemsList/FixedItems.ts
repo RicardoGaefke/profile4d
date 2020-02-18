@@ -9,6 +9,10 @@ export default [
     title: 'introduction',
   },
   {
+    link: 'personalanalyze',
+    title: 'personalanalyze',
+  },
+  {
     link: 'dominantwhoiam',
     title: 'dominantwhoiam',
   },

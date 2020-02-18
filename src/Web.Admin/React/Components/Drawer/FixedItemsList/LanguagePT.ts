@@ -6,6 +6,7 @@ export default {
   images: 'Lista de imagens',
   dynamic: 'Conteúdo dinâmico',
   introduction: 'Introdução',
+  personalanalyze: 'Análise Pessoal',
   dominantwhoiam: 'Quem eu sou?',
   dominantstructure: 'A estrutura do seu perfil dominante',
   sabotagemode: 'Modo sabotador',
