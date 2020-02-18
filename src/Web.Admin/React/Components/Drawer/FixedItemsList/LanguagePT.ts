@@ -16,6 +16,7 @@ export default {
   fourpersonalpowers: 'As Quatro Forças da Personalidade',
   yourmotivations: 'Suas Motivações',
   attentionfocus: 'Seu Foco de Atenção',
+  leaderdifferential: 'Seu Diferencial como Líder',
   sabotagemode: 'Modo sabotador',
   sabotagewhoiam: 'Quem eu sou (sabotador)?',
   sabotagedominant: 'Seu Sabotador Dominante',

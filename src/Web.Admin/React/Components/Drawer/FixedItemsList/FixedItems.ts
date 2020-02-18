@@ -49,6 +49,10 @@ export default [
     title: 'attentionfocus',
   },
   {
+    link: 'leaderdifferential',
+    title: 'leaderdifferential',
+  },
+  {
     link: 'sabotagemode',
     title: 'sabotagemode',
   },

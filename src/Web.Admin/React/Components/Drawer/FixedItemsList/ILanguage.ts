@@ -13,6 +13,7 @@ export interface ILanguage {
   fourpersonalpowers: string,
   yourmotivations: string,
   attentionfocus: string,
+  leaderdifferential: string,
   sabotagemode: string,
   sabotagewhoiam: string,
   sabotagedominant: string,
