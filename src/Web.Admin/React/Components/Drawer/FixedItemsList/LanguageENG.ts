@@ -12,6 +12,7 @@ export default {
   competentmode: 'Competent Mode',
   dominantwhoiam: 'Who am I?',
   dominantstructure: 'The structure of your dominant profile',
+  dominantresources: 'Dominant Profile Resources',
   sabotagemode: 'Saboteur Mode',
   sabotagewhoiam: 'Who am I (saboteur)?',
   sabotagedominant: 'Features of your dominant profile',

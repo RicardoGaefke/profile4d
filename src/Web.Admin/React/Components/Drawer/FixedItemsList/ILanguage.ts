@@ -9,6 +9,7 @@ export interface ILanguage {
   competentmode: string,
   dominantwhoiam: string,
   dominantstructure: string,
+  dominantresources: string,
   sabotagemode: string,
   sabotagewhoiam: string,
   sabotagedominant: string,

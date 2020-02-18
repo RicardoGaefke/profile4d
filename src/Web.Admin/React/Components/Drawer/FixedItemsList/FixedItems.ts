@@ -33,6 +33,10 @@ export default [
     title: 'dominantstructure',
   },
   {
+    link: 'dominantresources',
+    title: 'dominantresources',
+  },
+  {
     link: 'sabotagemode',
     title: 'sabotagemode',
   },
