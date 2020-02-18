@@ -17,6 +17,7 @@ export default {
   yourmotivations: 'Your Motivations',
   attentionfocus: 'Attention Focus',
   leaderdifferential: 'Your Differential as Leader',
+  relationedvaluesdomprofile: 'Values ​​related to your Dominant Profile',
   sabotagemode: 'Saboteur Mode',
   sabotagewhoiam: 'Who am I (saboteur)?',
   sabotagedominant: 'Features of your dominant profile',

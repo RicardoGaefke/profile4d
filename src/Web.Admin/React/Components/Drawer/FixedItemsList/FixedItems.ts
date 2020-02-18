@@ -53,6 +53,10 @@ export default [
     title: 'leaderdifferential',
   },
   {
+    link: 'relationedvaluesdomprofile',
+    title: 'relationedvaluesdomprofile',
+  },
+  {
     link: 'sabotagemode',
     title: 'sabotagemode',
   },

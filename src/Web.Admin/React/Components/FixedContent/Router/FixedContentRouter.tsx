@@ -18,6 +18,7 @@ import FourPersonalPowers from '../FourPersonalPowers/Page';
 import YourMotivations from '../YourMotivations/Page';
 import AttentionFocus from '../AttentionFocus/Page';
 import LeaderDifferential from '../LeaderDifferential/Page';
+import RelationedValuesDomProfile from '../RelationedValuesDomProfile/Page';
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import SabotageMode from '../SabotageMode/Page';
 import SabotageWhoIAm from '../SabotageWhoIAm/Page';
@@ -55,6 +56,7 @@ export default withRouter(
         <Route path={`${match.url}/yourmotivations`} component={YourMotivations} />
         <Route path={`${match.url}/attentionfocus`} component={AttentionFocus} />
         <Route path={`${match.url}/leaderdifferential`} component={LeaderDifferential} />
+        <Route path={`${match.url}/relationedvaluesdomprofile`} component={RelationedValuesDomProfile} />
         {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/sabotagemode`} component={SabotageMode} />
         <Route path={`${match.url}/sabotagewhoiam`} component={SabotageWhoIAm} />
