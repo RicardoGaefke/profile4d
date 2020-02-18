@@ -21,6 +21,10 @@ export default [
     title: 'dominantprofile',
   },
   {
+    link: 'competentmode',
+    title: 'competentmode',
+  },
+  {
     link: 'dominantwhoiam',
     title: 'dominantwhoiam',
   },

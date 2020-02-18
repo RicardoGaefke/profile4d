@@ -9,6 +9,7 @@ export default {
   personalanalyze: 'Personal Analyze',
   inferiormind: 'Inferior Mind',
   dominantprofile: 'Dominant Profile',
+  competentmode: 'Competent Mode',
   dominantwhoiam: 'Who am I?',
   dominantstructure: 'The structure of your dominant profile',
   sabotagemode: 'Saboteur Mode',
