@@ -4,7 +4,7 @@ import {
   AppBar, Toolbar, Link, Typography,
 } from '@material-ui/core';
 import useStyles from './Styles';
-import LoginButton from './BtnLogin/LoginButton';
+import LoginMenu from './LoginMenu/LoginMenu';
 import ConfigButton from './BtnConfig/ConfigButton';
 
 export default (): React.ReactElement => {
@@ -29,7 +29,7 @@ export default (): React.ReactElement => {
               />
             </Link>
           </Typography>
-          <LoginButton />
+          <LoginMenu />
           <ConfigButton />
         </Toolbar>
       </AppBar>
