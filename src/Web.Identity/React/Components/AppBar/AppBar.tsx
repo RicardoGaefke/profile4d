@@ -5,11 +5,10 @@ import {
 } from '@material-ui/core';
 import { useStateValue } from '../../Initial/Context/StateProvider';
 import useStyles from './Styles';
-import LoginButton from './BtnLogin/LoginButton';
 import ConfigButton from './BtnConfig/ConfigButton';
 
 export default (): React.ReactElement => {
-  const [{ Language, IsAuthenticated }] = useStateValue();
+  const [{ Language }] = useStateValue();
   const classes = useStyles({});
 
   return (
@@ -31,9 +30,6 @@ export default (): React.ReactElement => {
               />
             </Link>
           </Typography>
-          {
-            (IsAuthenticated) ? (<LoginButton />) : null
-          }
           <ConfigButton />
         </Toolbar>
       </AppBar>
