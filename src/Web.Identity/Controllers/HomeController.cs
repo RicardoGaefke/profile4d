@@ -32,7 +32,7 @@ namespace Profile4d.Web.Identity.Controllers
         Title = "Profile4D",
         Description = "Profile4d description",
         IsAuthenticated = Request.HttpContext.User.Identity.IsAuthenticated,
-        Name = Request.HttpContext.User.Identity.Name,
+        Name = Request.HttpContext.User?.Identity.Name,
         Email = "",
         Language = "PT",
         Theme = "light",
