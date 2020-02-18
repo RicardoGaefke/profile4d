@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Static data from the Sabotage Four Powers Two of the report',
+  title: 'Static data from the Four Powers Two - Saboteur Mode of the report',
   titlePT: {
     text: 'Title in Portuguese',
     title: 'The title of the report in Portuguese',

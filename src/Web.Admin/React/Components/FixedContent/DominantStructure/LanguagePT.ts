@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos do Estrutura do Profile Dominante do relatório',
+  title: 'Dados estáticos da Estrutura do seu Perfil Dominante do relatório',
   titlePT: {
     text: 'Título em Português',
     title: 'Título do relatório em Português',

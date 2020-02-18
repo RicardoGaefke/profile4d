@@ -1,18 +1,21 @@
 // eslint-disable-next-line no-unused-vars
-import axios, { AxiosInstance } from 'axios';
+import axios, { AxiosInstance, AxiosResponse, AxiosError } from 'axios';
+import Hosts from './Hosts';
 
 export default (host: string): AxiosInstance => {
-  let myHost;
+  const myHost = new Hosts(host);
 
-  if (host.includes('localhost')) {
-    myHost = 'https://localhost:5065/';
-  } else if (host.includes('staging')) {
-    myHost = 'https://api.staging.profile4d.com/';
-  } else {
-    myHost = 'https://api.profile4d.com/';
-  }
-  return axios.create({
-    baseURL: myHost,
+  const myAxios = axios.create({
+    baseURL: myHost.Api(),
     withCredentials: true,
   });
+
+  myAxios.interceptors.response.use((response): AxiosResponse => response,
+    (error: AxiosError): void => {
+      if (error.response?.status === 403) {
+        window.location.href = `${myHost.Identity()}403`;
+      }
+    });
+
+  return myAxios;
 };

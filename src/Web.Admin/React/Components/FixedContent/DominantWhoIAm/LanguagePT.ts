@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos de Dominante Quem eu Sou? do relatório',
+  title: 'Dados estáticos do Quem eu sou? (dominante) do relatório',
   titlePT: {
     text: 'Título em Português',
     title: 'Título do relatório em Português',
