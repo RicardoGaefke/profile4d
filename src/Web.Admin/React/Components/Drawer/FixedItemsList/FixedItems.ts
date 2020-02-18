@@ -17,6 +17,10 @@ export default [
     title: 'inferiormind',
   },
   {
+    link: 'dominantprofile',
+    title: 'dominantprofile',
+  },
+  {
     link: 'dominantwhoiam',
     title: 'dominantwhoiam',
   },
