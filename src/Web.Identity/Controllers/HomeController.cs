@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Security.Claims;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -30,8 +31,8 @@ namespace Profile4d.Web.Identity.Controllers
       {
         Title = "Profile4D",
         Description = "Profile4d description",
-        IsAuthenticated = false,
-        Name = "",
+        IsAuthenticated = Request.HttpContext.User.Identity.IsAuthenticated,
+        Name = Request.HttpContext.User.Identity.Name,
         Email = "",
         Language = "PT",
         Theme = "light",
