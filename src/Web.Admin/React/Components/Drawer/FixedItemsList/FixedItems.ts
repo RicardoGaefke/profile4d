@@ -5,20 +5,12 @@ export interface IStaticMenuItem {
 
 export default [
   {
-    link: 'firstpage',
-    title: 'firstpage',
-  },
-  {
-    link: 'competentmind',
-    title: 'competentmind',
+    link: 'introduction',
+    title: 'introduction',
   },
   {
     link: 'dominantwhoiam',
     title: 'dominantwhoiam',
-  },
-  {
-    link: 'dominantname',
-    title: 'dominantname',
   },
   {
     link: 'dominantstructure',
@@ -37,10 +29,6 @@ export default [
     title: 'sabotagedominant',
   },
   {
-    link: 'sabotagename',
-    title: 'sabotagename',
-  },
-  {
     link: 'competentxsabotage',
     title: 'competentxsabotage',
   },
@@ -51,22 +39,6 @@ export default [
   {
     link: 'internalpartners',
     title: 'internalpartners',
-  },
-  {
-    link: 'inamepartnerone',
-    title: 'inamepartnerone',
-  },
-  {
-    link: 'ifourpowersone',
-    title: 'ifourpowersone',
-  },
-  {
-    link: 'inamepartnertwo',
-    title: 'inamepartnertwo',
-  },
-  {
-    link: 'ifourpowerstwo',
-    title: 'ifourpowerstwo',
   },
   {
     link: 'trinitybehavioralsabotage',
@@ -101,24 +73,8 @@ export default [
     title: 'threeintelligencecenters',
   },
   {
-    link: 'behavioursprofiles',
-    title: 'behavioursprofiles',
-  },
-  {
-    link: 'identifiedconflicts',
-    title: 'identifiedconflicts',
-  },
-  {
     link: 'energyspikes',
     title: 'energyspikes',
-  },
-  {
-    link: 'columncharthreeprofiles',
-    title: 'columncharthreeprofiles',
-  },
-  {
-    link: 'trinitypersonified',
-    title: 'trinitypersonified',
   },
   {
     link: 'trinityspecifics',
@@ -127,25 +83,5 @@ export default [
   {
     link: 'originalxadapted',
     title: 'originalxadapted',
-  },
-  {
-    link: 'graphicimage',
-    title: 'graphicimage',
-  },
-  {
-    link: 'personalizedtext',
-    title: 'personalizedtext',
-  },
-  {
-    link: 'explainedtext',
-    title: 'explainedtext',
-  },
-  {
-    link: 'personalizedtable',
-    title: 'personalizedtable',
-  },
-  {
-    link: 'defaulttext',
-    title: 'defaulttext',
   },
 ] as IStaticMenuItem[];

@@ -9,7 +9,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import chaiEnzyme from 'chai-enzyme';
 // eslint-disable-next-line no-unused-vars
 import { TextField, Button } from '@material-ui/core';
-import initialValues from '../FirstPage/Form/Form.InitialValues';
+import initialValues from '../Introduction/Form/Form.InitialValues';
 // eslint-disable-next-line no-unused-vars
 import { MyTrinitySpecifics } from './TrinitySpecifics';
 
