@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Static data from the Sabotage Dominant of the report',
+  title: 'Static data from the Features of your Dominant Profile of the report',
   titlePT: {
     text: 'Title in Portuguese',
     title: 'The title of the report in Portuguese',

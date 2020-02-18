@@ -1,7 +1,7 @@
 import { IBasicReturn } from './IBasicReturn';
 import { ICreated } from './ICreated';
 
-export interface IStaticFirstPage extends IBasicReturn, ICreated
+export interface IStaticIntroduction extends IBasicReturn, ICreated
 {
   Id: number;
   Title_PT: string;
