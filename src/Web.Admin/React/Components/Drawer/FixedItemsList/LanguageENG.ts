@@ -32,10 +32,15 @@ export default {
   limitingattitudes: 'Limiting Attitudes',
   behavioraladdiction: 'Behavioral Addiction',
   emotionaladdiction: 'Emotional Addiction',
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  mentaladdiction: 'Mental Addiction',
+  defensemecanisms: 'Defense Mecanisms',
+  neuroticcompulsion: 'Neurotic Compulsion',
   competentxsabotage: 'Competent mode vs. saboteur mode',
   trinitybehavioralcompetent: 'Behavioral triad - Competent mode',
   internalpartners: 'Internal Partners',
+  difficultycomunnication: 'Difficulty in Comunnication',
+  fourpersonalitypowers: 'The Four Forces of Personality',
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   trinitybehavioralsabotage: 'Trinity Behavioral Saboteur',
   internalenemies: 'Internal Enemies',
   namesaboteurone: 'Name Saboteur One',
