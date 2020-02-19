@@ -32,10 +32,15 @@ export default {
   limitingattitudes: 'Atitudes Limitantes',
   behavioraladdiction: 'Vício Comportamental',
   emotionaladdiction: 'Vício Emocional',
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  mentaladdiction: 'Vício Mental',
+  defensemecanisms: 'Mecanismos de Defesa',
+  neuroticcompulsion: 'Compulsão Neurótica',
   competentxsabotage: 'Modo Competente X Modo Sabotador',
   trinitybehavioralcompetent: 'Tríade comportamental - Modo competente',
   internalpartners: 'Parceiros Internos',
+  difficultycomunnication: 'Dificuldade na Comunicação',
+  fourpersonalitypowers: 'As Quatro Forças da Personalidade',
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   trinitybehavioralsabotage: 'Trindade Sabotador Comportamental',
   internalenemies: 'Inimigos Internos',
   namesaboteurone: 'Primeiro Sabotador Interno',
