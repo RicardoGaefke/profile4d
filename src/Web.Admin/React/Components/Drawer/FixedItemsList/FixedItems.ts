@@ -68,7 +68,10 @@ export default [
     link: 'interactsrelationships',
     title: 'interactsrelationships',
   },
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  {
+    link: 'sabotagedominant',
+    title: 'sabotagedominant',
+  },
   {
     link: 'sabotagemode',
     title: 'sabotagemode',
@@ -78,9 +81,10 @@ export default [
     title: 'sabotagewhoiam',
   },
   {
-    link: 'sabotagedominant',
-    title: 'sabotagedominant',
+    link: 'synthesissaboteur',
+    title: 'synthesissaboteur',
   },
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'competentxsabotage',
     title: 'competentxsabotage',

@@ -22,10 +22,11 @@ import RelationedValuesDomProfile from '../RelationedValuesDomProfile/Page';
 import CompetentEmotional from '../CompetentEmotional/Page';
 import CommunicatesMode from '../CommunicatesMode/Page';
 import InteractsRelationships from '../InteractsRelationships/Page';
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+import SabotageDominant from '../SabotageDominant/Page';
 import SabotageMode from '../SabotageMode/Page';
 import SabotageWhoIAm from '../SabotageWhoIAm/Page';
-import SabotageDominant from '../SabotageDominant/Page';
+import SynthesisSaboteur from '../SynthesisSaboteur/Page';
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import CompetentXSabotage from '../CompetentXSabotage/Page';
 import TrinityBehavioralCompetent from '../TrinityBehavioralCompetent/Page';
 import InternalPartners from '../InternalPartners/Page';
@@ -63,11 +64,11 @@ export default withRouter(
         <Route path={`${match.url}/competentemotional`} component={CompetentEmotional} />
         <Route path={`${match.url}/communicatesmode`} component={CommunicatesMode} />
         <Route path={`${match.url}/interactsrelationships`} component={InteractsRelationships} />
-        {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
+        <Route path={`${match.url}/sabotagedominant`} component={SabotageDominant} />
         <Route path={`${match.url}/sabotagemode`} component={SabotageMode} />
         <Route path={`${match.url}/sabotagewhoiam`} component={SabotageWhoIAm} />
-        <Route path={`${match.url}/sabotagedominant`} component={SabotageDominant} />
-        {/* <Route path={`${match.url}/sabotagename`} component={SabotageName} /> */}
+        <Route path={`${match.url}/synthesissaboteur`} component={SynthesisSaboteur} />
+        {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/competentxsabotage`} component={CompetentXSabotage} />
         <Route path={`${match.url}/trinitybehavioralcompetent`} component={TrinityBehavioralCompetent} />
         <Route path={`${match.url}/internalpartners`} component={InternalPartners} />

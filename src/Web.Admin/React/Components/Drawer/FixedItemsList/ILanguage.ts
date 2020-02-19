@@ -18,10 +18,11 @@ export interface ILanguage {
   competentemotional: string,
   communicatesmode: string,
   interactsrelationships: string,
-  // ^^^^^^^^^^^^^^^^^^^^^^^^
+  sabotagedominant: string,
   sabotagemode: string,
   sabotagewhoiam: string,
-  sabotagedominant: string,
+  synthesissaboteur: string,
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: string,
   trinitybehavioralcompetent: string,
   internalpartners: string,

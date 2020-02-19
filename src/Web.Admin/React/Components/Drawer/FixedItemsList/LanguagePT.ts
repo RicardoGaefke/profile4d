@@ -21,10 +21,11 @@ export default {
   competentemotional: 'Competência Emocional',
   communicatesmode: 'Modo que se comunica',
   interactsrelationships: 'Modo que interage nos Relacionamentos',
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  sabotagedominant: 'Seu Sabotador Dominante',
   sabotagemode: 'Modo sabotador',
   sabotagewhoiam: 'Quem eu sou (sabotador)?',
-  sabotagedominant: 'Seu Sabotador Dominante',
+  synthesissaboteur: 'Resumo do seu principal Sabotador',
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: 'Modo Competente X Modo Sabotador',
   trinitybehavioralcompetent: 'Tríade comportamental - Modo competente',
   internalpartners: 'Parceiros Internos',
