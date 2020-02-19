@@ -116,6 +116,10 @@ export default [
     link: 'mentaladdiction',
     title: 'mentaladdiction',
   },
+  {
+    link: 'defensemecanisms',
+    title: 'defensemecanisms',
+  },
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'competentxsabotage',
