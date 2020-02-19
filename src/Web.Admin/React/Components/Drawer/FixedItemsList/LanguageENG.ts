@@ -31,6 +31,7 @@ export default {
   fourlimitationpowers: 'The Four Limiting Forces',
   limitingattitudes: 'Limiting Attitudes',
   behavioraladdiction: 'Behavioral Addiction',
+  emotionaladdiction: 'Emotional Addiction',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: 'Competent mode vs. saboteur mode',
   trinitybehavioralcompetent: 'Behavioral triad - Competent mode',

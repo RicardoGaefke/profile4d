@@ -28,6 +28,7 @@ export interface ILanguage {
   fourlimitationpowers: string,
   limitingattitudes: string,
   behavioraladdiction: string,
+  emotionaladdiction: string,
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: string,
   trinitybehavioralcompetent: string,
