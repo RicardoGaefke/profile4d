@@ -32,6 +32,7 @@ export default {
   limitingattitudes: 'Atitudes Limitantes',
   behavioraladdiction: 'Vício Comportamental',
   emotionaladdiction: 'Vício Emocional',
+  mentaladdiction: 'Vício Mental',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: 'Modo Competente X Modo Sabotador',
   trinitybehavioralcompetent: 'Tríade comportamental - Modo competente',

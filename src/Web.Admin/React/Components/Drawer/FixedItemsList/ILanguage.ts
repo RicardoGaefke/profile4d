@@ -29,6 +29,7 @@ export interface ILanguage {
   limitingattitudes: string,
   behavioraladdiction: string,
   emotionaladdiction: string,
+  mentaladdiction: string,
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: string,
   trinitybehavioralcompetent: string,

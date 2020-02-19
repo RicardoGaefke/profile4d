@@ -112,6 +112,10 @@ export default [
     link: 'emotionaladdiction',
     title: 'emotionaladdiction',
   },
+  {
+    link: 'mentaladdiction',
+    title: 'mentaladdiction',
+  },
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'competentxsabotage',
