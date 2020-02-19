@@ -40,6 +40,7 @@ import CompetentXSabotage from '../CompetentXSabotage/Page';
 import TrinityBehavioralCompetent from '../TrinityBehavioralCompetent/Page';
 import InternalPartners from '../InternalPartners/Page';
 import DifficultyComunnication from '../DifficultyComunnication/Page';
+import FourPersonalityPowers from '../FourPersonalityPowers/Page';
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import TrinityBehavioralSabotage from '../TrinityBehavioralSabotage/Page';
 import InternalEnemies from '../InternalEnemies/Page';
@@ -93,6 +94,7 @@ export default withRouter(
         <Route path={`${match.url}/trinitybehavioralcompetent`} component={TrinityBehavioralCompetent} />
         <Route path={`${match.url}/internalpartners`} component={InternalPartners} />
         <Route path={`${match.url}/difficultycomunnication`} component={DifficultyComunnication} />
+        <Route path={`${match.url}/fourpersonalitypowers`} component={FourPersonalityPowers} />
         {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/trinitybehavioralsabotage`} component={TrinityBehavioralSabotage} />
         <Route path={`${match.url}/internalenemies`} component={InternalEnemies} />

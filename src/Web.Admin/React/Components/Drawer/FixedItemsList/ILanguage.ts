@@ -36,6 +36,7 @@ export interface ILanguage {
   trinitybehavioralcompetent: string,
   internalpartners: string,
   difficultycomunnication: string,
+  fourpersonalitypowers: string,
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   trinitybehavioralsabotage: string,
   internalenemies: string,

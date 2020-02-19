@@ -140,6 +140,10 @@ export default [
     link: 'difficultycomunnication',
     title: 'difficultycomunnication',
   },
+  {
+    link: 'fourpersonalitypowers',
+    title: 'fourpersonalitypowers',
+  },
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'trinitybehavioralsabotage',

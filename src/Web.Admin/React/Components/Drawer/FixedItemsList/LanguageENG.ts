@@ -39,6 +39,7 @@ export default {
   trinitybehavioralcompetent: 'Behavioral triad - Competent mode',
   internalpartners: 'Internal Partners',
   difficultycomunnication: 'Difficulty in Comunnication',
+  fourpersonalitypowers: 'The Four Forces of Personality',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   trinitybehavioralsabotage: 'Trinity Behavioral Saboteur',
   internalenemies: 'Internal Enemies',
