@@ -30,6 +30,7 @@ export default {
   difficultyrelationships: 'Dificuldade nos Relacionamentos',
   fourlimitationpowers: 'As Quatro Forças Limitantes',
   limitingattitudes: 'Atitudes Limitantes',
+  behavioraladdiction: 'Vício Comportamental',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: 'Modo Competente X Modo Sabotador',
   trinitybehavioralcompetent: 'Tríade comportamental - Modo competente',

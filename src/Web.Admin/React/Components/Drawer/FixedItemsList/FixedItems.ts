@@ -104,6 +104,10 @@ export default [
     link: 'limitingattitudes',
     title: 'limitingattitudes',
   },
+  {
+    link: 'behavioraladdiction',
+    title: 'behavioraladdiction',
+  },
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'competentxsabotage',
