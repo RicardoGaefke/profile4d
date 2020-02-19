@@ -28,6 +28,8 @@ import SabotageWhoIAm from '../SabotageWhoIAm/Page';
 import SynthesisSaboteur from '../SynthesisSaboteur/Page';
 import LimitingMatrix from '../LimitingMatrix/Page';
 import CommunicationDifficulty from '../CommunicationDifficulty/Page';
+import DifficultyRelationships from '../DifficultyRelationships/Page';
+import FourLimitationPowers from '../FourLimitationPowers/Page';
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import CompetentXSabotage from '../CompetentXSabotage/Page';
 import TrinityBehavioralCompetent from '../TrinityBehavioralCompetent/Page';
@@ -72,6 +74,8 @@ export default withRouter(
         <Route path={`${match.url}/synthesissaboteur`} component={SynthesisSaboteur} />
         <Route path={`${match.url}/limitingmatrix`} component={LimitingMatrix} />
         <Route path={`${match.url}/communicationdifficulty`} component={CommunicationDifficulty} />
+        <Route path={`${match.url}/difficultyrelationships`} component={DifficultyRelationships} />
+        <Route path={`${match.url}/fourlimitationpowers`} component={FourLimitationPowers} />
         {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/competentxsabotage`} component={CompetentXSabotage} />
         <Route path={`${match.url}/trinitybehavioralcompetent`} component={TrinityBehavioralCompetent} />

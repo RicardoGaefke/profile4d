@@ -25,6 +25,7 @@ export interface ILanguage {
   limitingmatrix: string,
   communicationdifficulty: string,
   difficultyrelationships: string,
+  fourlimitationpowers: string,
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: string,
   trinitybehavioralcompetent: string,

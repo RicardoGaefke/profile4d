@@ -28,6 +28,7 @@ export default {
   limitingmatrix: 'Limiting Matrix Belief',
   communicationdifficulty: 'Difficulty in Communication',
   difficultyrelationships: 'Difficulty in Relationships',
+  fourlimitationpowers: 'The Four Limiting Forces',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: 'Competent mode vs. saboteur mode',
   trinitybehavioralcompetent: 'Behavioral triad - Competent mode',

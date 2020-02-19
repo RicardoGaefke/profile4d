@@ -96,6 +96,10 @@ export default [
     link: 'difficultyrelationships',
     title: 'difficultyrelationships',
   },
+  {
+    link: 'fourlimitationpowers',
+    title: 'fourlimitationpowers',
+  },
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'competentxsabotage',
