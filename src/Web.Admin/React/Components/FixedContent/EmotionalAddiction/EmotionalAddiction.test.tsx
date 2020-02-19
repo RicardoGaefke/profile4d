@@ -17,7 +17,7 @@ chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('Web.Admin -> EmotionalAddiction', (): void => {
-  // The complete strucutre are here [Formik, Form, i18n & Snackbar]
+  // Complete strucutre are here [Formik, Form, i18n & Snackbar]
   const DefaultForm = withTranslation()(withSnackbar(MyEmotionalAddiction));
 
   /*
