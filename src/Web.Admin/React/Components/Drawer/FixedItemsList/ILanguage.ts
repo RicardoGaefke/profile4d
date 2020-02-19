@@ -22,6 +22,7 @@ export interface ILanguage {
   sabotagemode: string,
   sabotagewhoiam: string,
   synthesissaboteur: string,
+  limitingmatrix: string,
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: string,
   trinitybehavioralcompetent: string,

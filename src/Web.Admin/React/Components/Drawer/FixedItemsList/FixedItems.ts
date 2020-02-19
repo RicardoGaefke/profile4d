@@ -84,6 +84,10 @@ export default [
     link: 'synthesissaboteur',
     title: 'synthesissaboteur',
   },
+  {
+    link: 'limitingmatrix',
+    title: 'limitingmatrix',
+  },
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'competentxsabotage',
