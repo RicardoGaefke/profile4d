@@ -9,12 +9,52 @@ export default [
     title: 'introduction',
   },
   {
+    link: 'personalanalyze',
+    title: 'personalanalyze',
+  },
+  {
+    link: 'inferiormind',
+    title: 'inferiormind',
+  },
+  {
+    link: 'dominantprofile',
+    title: 'dominantprofile',
+  },
+  {
+    link: 'competentmode',
+    title: 'competentmode',
+  },
+  {
     link: 'dominantwhoiam',
     title: 'dominantwhoiam',
   },
   {
     link: 'dominantstructure',
     title: 'dominantstructure',
+  },
+  {
+    link: 'dominantresources',
+    title: 'dominantresources',
+  },
+  {
+    link: 'fourpersonalpowers',
+    title: 'fourpersonalpowers',
+  },
+  {
+    link: 'yourmotivations',
+    title: 'yourmotivations',
+  },
+  {
+    link: 'attentionfocus',
+    title: 'attentionfocus',
+  },
+  {
+    link: 'leaderdifferential',
+    title: 'leaderdifferential',
+  },
+  {
+    link: 'relationedvaluesdomprofile',
+    title: 'relationedvaluesdomprofile',
   },
   {
     link: 'sabotagemode',

@@ -7,8 +7,19 @@ import {
 } from 'react-router-dom';
 import MyTemplate from '../../Home/Template/Template';
 import Page from '../Introduction/Page';
+import PersonalAnalyze from '../PersonalAnalyze/Page';
+import InferiorMind from '../InferiorMind/Page';
+import DominantProfile from '../DominantProfile/Page';
+import CompetentMode from '../CompetentMode/Page';
 import DominantWhoIAm from '../DominantWhoIAm/Page';
 import DominantStructure from '../DominantStructure/Page';
+import DominantResources from '../DominantResources/Page';
+import FourPersonalPowers from '../FourPersonalPowers/Page';
+import YourMotivations from '../YourMotivations/Page';
+import AttentionFocus from '../AttentionFocus/Page';
+import LeaderDifferential from '../LeaderDifferential/Page';
+import RelationedValuesDomProfile from '../RelationedValuesDomProfile/Page';
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import SabotageMode from '../SabotageMode/Page';
 import SabotageWhoIAm from '../SabotageWhoIAm/Page';
 import SabotageDominant from '../SabotageDominant/Page';
@@ -34,10 +45,19 @@ export default withRouter(
     return (
       <MyTemplate>
         <Route path={`${match.url}/introduction`} component={Page} />
-        {/* <Route path={`${match.url}/competentmind`} component={Competent} /> */}
+        <Route path={`${match.url}/personalanalyze`} component={PersonalAnalyze} />
+        <Route path={`${match.url}/inferiormind`} component={InferiorMind} />
+        <Route path={`${match.url}/dominantprofile`} component={DominantProfile} />
+        <Route path={`${match.url}/competentmode`} component={CompetentMode} />
         <Route path={`${match.url}/dominantwhoiam`} component={DominantWhoIAm} />
-        {/* <Route path={`${match.url}/dominantname`} component={DominantName} /> */}
         <Route path={`${match.url}/dominantstructure`} component={DominantStructure} />
+        <Route path={`${match.url}/dominantresources`} component={DominantResources} />
+        <Route path={`${match.url}/fourpersonalpowers`} component={FourPersonalPowers} />
+        <Route path={`${match.url}/yourmotivations`} component={YourMotivations} />
+        <Route path={`${match.url}/attentionfocus`} component={AttentionFocus} />
+        <Route path={`${match.url}/leaderdifferential`} component={LeaderDifferential} />
+        <Route path={`${match.url}/relationedvaluesdomprofile`} component={RelationedValuesDomProfile} />
+        {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/sabotagemode`} component={SabotageMode} />
         <Route path={`${match.url}/sabotagewhoiam`} component={SabotageWhoIAm} />
         <Route path={`${match.url}/sabotagedominant`} component={SabotageDominant} />
