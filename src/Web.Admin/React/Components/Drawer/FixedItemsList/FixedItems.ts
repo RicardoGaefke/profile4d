@@ -88,6 +88,10 @@ export default [
     link: 'limitingmatrix',
     title: 'limitingmatrix',
   },
+  {
+    link: 'communicationdifficulty',
+    title: 'communicationdifficulty',
+  },
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'competentxsabotage',

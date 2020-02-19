@@ -26,6 +26,7 @@ export default {
   sabotagewhoiam: 'Quem eu sou (sabotador)?',
   synthesissaboteur: 'Resumo do seu principal Sabotador',
   limitingmatrix: 'Limitando a Crença na Matriz',
+  communicationdifficulty: 'Dificuldade de Comunicação',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: 'Modo Competente X Modo Sabotador',
   trinitybehavioralcompetent: 'Tríade comportamental - Modo competente',
