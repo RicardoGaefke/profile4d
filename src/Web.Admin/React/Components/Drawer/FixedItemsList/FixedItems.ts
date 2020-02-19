@@ -57,6 +57,22 @@ export default [
     title: 'relationedvaluesdomprofile',
   },
   {
+    link: 'competentemotional',
+    title: 'competentemotional',
+  },
+  {
+    link: 'communicatesmode',
+    title: 'communicatesmode',
+  },
+  {
+    link: 'interactsrelationships',
+    title: 'interactsrelationships',
+  },
+  {
+    link: 'sabotagedominant',
+    title: 'sabotagedominant',
+  },
+  {
     link: 'sabotagemode',
     title: 'sabotagemode',
   },
@@ -65,9 +81,38 @@ export default [
     title: 'sabotagewhoiam',
   },
   {
-    link: 'sabotagedominant',
-    title: 'sabotagedominant',
+    link: 'synthesissaboteur',
+    title: 'synthesissaboteur',
   },
+  {
+    link: 'limitingmatrix',
+    title: 'limitingmatrix',
+  },
+  {
+    link: 'communicationdifficulty',
+    title: 'communicationdifficulty',
+  },
+  {
+    link: 'difficultyrelationships',
+    title: 'difficultyrelationships',
+  },
+  {
+    link: 'fourlimitationpowers',
+    title: 'fourlimitationpowers',
+  },
+  {
+    link: 'limitingattitudes',
+    title: 'limitingattitudes',
+  },
+  {
+    link: 'behavioraladdiction',
+    title: 'behavioraladdiction',
+  },
+  {
+    link: 'emotionaladdiction',
+    title: 'emotionaladdiction',
+  },
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'competentxsabotage',
     title: 'competentxsabotage',

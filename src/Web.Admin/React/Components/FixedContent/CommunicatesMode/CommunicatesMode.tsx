@@ -7,7 +7,7 @@ import { withFormik } from 'formik';
 import { Typography } from '@material-ui/core';
 import useStyles from './Styles';
 import setLanguage from './Language';
-import DominantWhoIAm from '../Introduction/Form/Form';
+import CommunicatesMode from '../Introduction/Form/Form';
 import Validation from '../Introduction/Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
 import { IStaticIntroduction } from '../../../../../TypeScript/Interfaces/IStaticContent';
@@ -17,14 +17,14 @@ interface IProps {
   myValues: IStaticIntroduction
 }
 
-export const MyDominantWhoIAm = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticIntroduction>({
-  displayName: 'Static Content Dominant Who I Am',
+export const MyCommunicatesMode = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticIntroduction>({
+  displayName: 'Static Content Communicates Mode',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticIntroduction => props.myValues,
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticIntroduction>('StaticContent/DominantWhoIAmEdit', {
+    await myAxios(window.location.href).post<IStaticIntroduction>('StaticContent/CommunicatesModeEdit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,
@@ -33,24 +33,24 @@ export const MyDominantWhoIAm = withFormik<WithTranslation & WithSnackbarProps &
       const { data } = response;
 
       if (data.Success) {
-        enqueueSnackbar(t('StaticDominantWhoIAm:feedback.success'), {
+        enqueueSnackbar(t('StaticCommunicatesMode:feedback.success'), {
           variant: 'success',
         });
       } else {
-        enqueueSnackbar(t('StaticDominantWhoIAm:feedback.failure'), {
+        enqueueSnackbar(t('StaticCommunicatesMode:feedback.failure'), {
           variant: 'error',
         });
       }
     }).catch((): void => {
-      enqueueSnackbar(t('StaticDominantWhoIAm:feedback.failure'), {
+      enqueueSnackbar(t('StaticCommunicatesMode:feedback.failure'), {
         variant: 'error',
       });
     });
     setSubmitting(false);
   },
-})(DominantWhoIAm);
+})(CommunicatesMode);
 
-export const Login = withTranslation()(withSnackbar(MyDominantWhoIAm));
+export const Login = withTranslation()(withSnackbar(MyCommunicatesMode));
 
 export default withTranslation()(
   (props: WithTranslation & IProps): React.ReactElement<WithTranslation & IProps> => {
@@ -65,7 +65,7 @@ export default withTranslation()(
           align="center"
           variant="h5"
         >
-          {t('StaticDominantWhoIAm:title')}
+          {t('StaticCommunicatesMode:title')}
         </Typography>
         <Login myValues={myValues} />
       </div>
