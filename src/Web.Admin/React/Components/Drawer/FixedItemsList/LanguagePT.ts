@@ -18,6 +18,7 @@ export default {
   attentionfocus: 'Seu Foco de Atenção',
   leaderdifferential: 'Seu Diferencial como Líder',
   relationedvaluesdomprofile: 'Valores relacionados ao seu Perfil Dominante',
+  competentemotional: 'Competência Emocional',
   sabotagemode: 'Modo sabotador',
   sabotagewhoiam: 'Quem eu sou (sabotador)?',
   sabotagedominant: 'Seu Sabotador Dominante',

@@ -57,6 +57,10 @@ export default [
     title: 'relationedvaluesdomprofile',
   },
   {
+    link: 'competentemotional',
+    title: 'competentemotional',
+  },
+  {
     link: 'sabotagemode',
     title: 'sabotagemode',
   },
