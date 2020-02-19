@@ -26,6 +26,7 @@ export interface ILanguage {
   communicationdifficulty: string,
   difficultyrelationships: string,
   fourlimitationpowers: string,
+  limitingattitudes: string,
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: string,
   trinitybehavioralcompetent: string,

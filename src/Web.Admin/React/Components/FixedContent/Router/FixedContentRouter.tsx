@@ -30,6 +30,7 @@ import LimitingMatrix from '../LimitingMatrix/Page';
 import CommunicationDifficulty from '../CommunicationDifficulty/Page';
 import DifficultyRelationships from '../DifficultyRelationships/Page';
 import FourLimitationPowers from '../FourLimitationPowers/Page';
+import LimitingAttitudes from '../LimitingAttitudes/Page';
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import CompetentXSabotage from '../CompetentXSabotage/Page';
 import TrinityBehavioralCompetent from '../TrinityBehavioralCompetent/Page';
@@ -76,6 +77,7 @@ export default withRouter(
         <Route path={`${match.url}/communicationdifficulty`} component={CommunicationDifficulty} />
         <Route path={`${match.url}/difficultyrelationships`} component={DifficultyRelationships} />
         <Route path={`${match.url}/fourlimitationpowers`} component={FourLimitationPowers} />
+        <Route path={`${match.url}/limitingattitudes`} component={LimitingAttitudes} />
         {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/competentxsabotage`} component={CompetentXSabotage} />
         <Route path={`${match.url}/trinitybehavioralcompetent`} component={TrinityBehavioralCompetent} />

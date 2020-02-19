@@ -29,6 +29,7 @@ export default {
   communicationdifficulty: 'Dificuldade de Comunicação',
   difficultyrelationships: 'Dificuldade nos Relacionamentos',
   fourlimitationpowers: 'As Quatro Forças Limitantes',
+  limitingattitudes: 'Atitudes Limitantes',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: 'Modo Competente X Modo Sabotador',
   trinitybehavioralcompetent: 'Tríade comportamental - Modo competente',

@@ -100,6 +100,10 @@ export default [
     link: 'fourlimitationpowers',
     title: 'fourlimitationpowers',
   },
+  {
+    link: 'limitingattitudes',
+    title: 'limitingattitudes',
+  },
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'competentxsabotage',
