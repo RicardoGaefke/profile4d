@@ -92,6 +92,10 @@ export default [
     link: 'communicationdifficulty',
     title: 'communicationdifficulty',
   },
+  {
+    link: 'difficultyrelationships',
+    title: 'difficultyrelationships',
+  },
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'competentxsabotage',

@@ -27,6 +27,7 @@ export default {
   synthesissaboteur: 'Resumo do seu principal Sabotador',
   limitingmatrix: 'Limitando a Crença na Matriz',
   communicationdifficulty: 'Dificuldade de Comunicação',
+  difficultyrelationships: 'Dificuldade nos Relacionamentos',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: 'Modo Competente X Modo Sabotador',
   trinitybehavioralcompetent: 'Tríade comportamental - Modo competente',
