@@ -34,6 +34,7 @@ export default {
   emotionaladdiction: 'Emotional Addiction',
   mentaladdiction: 'Mental Addiction',
   defensemecanisms: 'Defense Mecanisms',
+  neuroticcompulsion: 'Neurotic Compulsion',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: 'Competent mode vs. saboteur mode',
   trinitybehavioralcompetent: 'Behavioral triad - Competent mode',

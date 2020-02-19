@@ -120,6 +120,10 @@ export default [
     link: 'defensemecanisms',
     title: 'defensemecanisms',
   },
+  {
+    link: 'neuroticcompulsion',
+    title: 'neuroticcompulsion',
+  },
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'competentxsabotage',

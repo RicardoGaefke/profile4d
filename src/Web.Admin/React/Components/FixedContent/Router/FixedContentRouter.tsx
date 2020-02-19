@@ -35,6 +35,7 @@ import BehavioralAddiction from '../BehavioralAddiction/Page';
 import EmotionalAddiction from '../EmotionalAddiction/Page';
 import MentalAddiction from '../MentalAddiction/Page';
 import DefenseMecanisms from '../DefenseMecanisms/Page';
+import NeuroticCompulsion from '../NeuroticCompulsion/Page';
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import CompetentXSabotage from '../CompetentXSabotage/Page';
 import TrinityBehavioralCompetent from '../TrinityBehavioralCompetent/Page';
@@ -86,6 +87,7 @@ export default withRouter(
         <Route path={`${match.url}/emotionaladdiction`} component={EmotionalAddiction} />
         <Route path={`${match.url}/mentaladdiction`} component={MentalAddiction} />
         <Route path={`${match.url}/defensemecanisms`} component={DefenseMecanisms} />
+        <Route path={`${match.url}/neuroticcompulsion`} component={NeuroticCompulsion} />
         {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/competentxsabotage`} component={CompetentXSabotage} />
         <Route path={`${match.url}/trinitybehavioralcompetent`} component={TrinityBehavioralCompetent} />
