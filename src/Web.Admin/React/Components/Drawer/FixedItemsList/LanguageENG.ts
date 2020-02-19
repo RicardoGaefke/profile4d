@@ -35,10 +35,11 @@ export default {
   mentaladdiction: 'Mental Addiction',
   defensemecanisms: 'Defense Mecanisms',
   neuroticcompulsion: 'Neurotic Compulsion',
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: 'Competent mode vs. saboteur mode',
   trinitybehavioralcompetent: 'Behavioral triad - Competent mode',
   internalpartners: 'Internal Partners',
+  difficultycomunnication: 'Difficulty in Comunnication',
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   trinitybehavioralsabotage: 'Trinity Behavioral Saboteur',
   internalenemies: 'Internal Enemies',
   namesaboteurone: 'Name Saboteur One',

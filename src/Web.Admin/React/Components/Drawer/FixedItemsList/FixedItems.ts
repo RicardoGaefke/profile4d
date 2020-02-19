@@ -124,7 +124,6 @@ export default [
     link: 'neuroticcompulsion',
     title: 'neuroticcompulsion',
   },
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'competentxsabotage',
     title: 'competentxsabotage',
@@ -137,6 +136,11 @@ export default [
     link: 'internalpartners',
     title: 'internalpartners',
   },
+  {
+    link: 'difficultycomunnication',
+    title: 'difficultycomunnication',
+  },
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'trinitybehavioralsabotage',
     title: 'trinitybehavioralsabotage',

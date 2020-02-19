@@ -32,10 +32,11 @@ export interface ILanguage {
   mentaladdiction: string,
   defensemecanisms: string,
   neuroticcompulsion: string,
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: string,
   trinitybehavioralcompetent: string,
   internalpartners: string,
+  difficultycomunnication: string,
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   trinitybehavioralsabotage: string,
   internalenemies: string,
   namesaboteurone: string,

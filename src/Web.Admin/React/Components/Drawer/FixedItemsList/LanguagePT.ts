@@ -35,10 +35,11 @@ export default {
   mentaladdiction: 'Vício Mental',
   defensemecanisms: 'Mecanismos de Defesa',
   neuroticcompulsion: 'Compulsão Neurótica',
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   competentxsabotage: 'Modo Competente X Modo Sabotador',
   trinitybehavioralcompetent: 'Tríade comportamental - Modo competente',
   internalpartners: 'Parceiros Internos',
+  difficultycomunnication: 'Dificuldade na Comunicação',
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   trinitybehavioralsabotage: 'Trindade Sabotador Comportamental',
   internalenemies: 'Inimigos Internos',
   namesaboteurone: 'Primeiro Sabotador Interno',
