@@ -16,6 +16,8 @@ export interface ILanguage {
   leaderdifferential: string,
   relationedvaluesdomprofile: string,
   competentemotional: string,
+  communicatesmode: string,
+  // ^^^^^^^^^^^^^^^^^^^^^^^^
   sabotagemode: string,
   sabotagewhoiam: string,
   sabotagedominant: string,

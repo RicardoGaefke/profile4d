@@ -61,6 +61,11 @@ export default [
     title: 'competentemotional',
   },
   {
+    link: 'communicatesmode',
+    title: 'communicatesmode',
+  },
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  {
     link: 'sabotagemode',
     title: 'sabotagemode',
   },

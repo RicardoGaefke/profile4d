@@ -20,6 +20,7 @@ import AttentionFocus from '../AttentionFocus/Page';
 import LeaderDifferential from '../LeaderDifferential/Page';
 import RelationedValuesDomProfile from '../RelationedValuesDomProfile/Page';
 import CompetentEmotional from '../CompetentEmotional/Page';
+import CommunicatesMode from '../CommunicatesMode/Page';
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import SabotageMode from '../SabotageMode/Page';
 import SabotageWhoIAm from '../SabotageWhoIAm/Page';
@@ -59,6 +60,7 @@ export default withRouter(
         <Route path={`${match.url}/leaderdifferential`} component={LeaderDifferential} />
         <Route path={`${match.url}/relationedvaluesdomprofile`} component={RelationedValuesDomProfile} />
         <Route path={`${match.url}/competentemotional`} component={CompetentEmotional} />
+        <Route path={`${match.url}/communicatesmode`} component={CommunicatesMode} />
         {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/sabotagemode`} component={SabotageMode} />
         <Route path={`${match.url}/sabotagewhoiam`} component={SabotageWhoIAm} />

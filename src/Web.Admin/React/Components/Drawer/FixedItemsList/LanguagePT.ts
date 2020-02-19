@@ -19,6 +19,8 @@ export default {
   leaderdifferential: 'Seu Diferencial como Líder',
   relationedvaluesdomprofile: 'Valores relacionados ao seu Perfil Dominante',
   competentemotional: 'Competência Emocional',
+  communicatesmode: 'Modo que se comunica',
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   sabotagemode: 'Modo sabotador',
   sabotagewhoiam: 'Quem eu sou (sabotador)?',
   sabotagedominant: 'Seu Sabotador Dominante',
