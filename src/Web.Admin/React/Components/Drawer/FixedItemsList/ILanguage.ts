@@ -17,6 +17,7 @@ export interface ILanguage {
   relationedvaluesdomprofile: string,
   competentemotional: string,
   communicatesmode: string,
+  interactsrelationships: string,
   // ^^^^^^^^^^^^^^^^^^^^^^^^
   sabotagemode: string,
   sabotagewhoiam: string,

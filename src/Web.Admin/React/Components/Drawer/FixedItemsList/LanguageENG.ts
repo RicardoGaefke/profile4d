@@ -20,6 +20,7 @@ export default {
   relationedvaluesdomprofile: 'Values ​​related to your Dominant Profile',
   competentemotional: 'Competent Emotional',
   communicatesmode: 'How it communicates',
+  interactsrelationships: 'Mode that interacts in Relationships',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   sabotagemode: 'Saboteur Mode',
   sabotagewhoiam: 'Who am I (saboteur)?',

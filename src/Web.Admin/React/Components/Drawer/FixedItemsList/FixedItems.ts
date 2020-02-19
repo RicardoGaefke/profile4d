@@ -64,6 +64,10 @@ export default [
     link: 'communicatesmode',
     title: 'communicatesmode',
   },
+  {
+    link: 'interactsrelationships',
+    title: 'interactsrelationships',
+  },
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'sabotagemode',
