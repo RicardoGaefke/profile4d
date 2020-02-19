@@ -19,10 +19,21 @@ import YourMotivations from '../YourMotivations/Page';
 import AttentionFocus from '../AttentionFocus/Page';
 import LeaderDifferential from '../LeaderDifferential/Page';
 import RelationedValuesDomProfile from '../RelationedValuesDomProfile/Page';
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+import CompetentEmotional from '../CompetentEmotional/Page';
+import CommunicatesMode from '../CommunicatesMode/Page';
+import InteractsRelationships from '../InteractsRelationships/Page';
+import SabotageDominant from '../SabotageDominant/Page';
 import SabotageMode from '../SabotageMode/Page';
 import SabotageWhoIAm from '../SabotageWhoIAm/Page';
-import SabotageDominant from '../SabotageDominant/Page';
+import SynthesisSaboteur from '../SynthesisSaboteur/Page';
+import LimitingMatrix from '../LimitingMatrix/Page';
+import CommunicationDifficulty from '../CommunicationDifficulty/Page';
+import DifficultyRelationships from '../DifficultyRelationships/Page';
+import FourLimitationPowers from '../FourLimitationPowers/Page';
+import LimitingAttitudes from '../LimitingAttitudes/Page';
+import BehavioralAddiction from '../BehavioralAddiction/Page';
+import EmotionalAddiction from '../EmotionalAddiction/Page';
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import CompetentXSabotage from '../CompetentXSabotage/Page';
 import TrinityBehavioralCompetent from '../TrinityBehavioralCompetent/Page';
 import InternalPartners from '../InternalPartners/Page';
@@ -57,11 +68,21 @@ export default withRouter(
         <Route path={`${match.url}/attentionfocus`} component={AttentionFocus} />
         <Route path={`${match.url}/leaderdifferential`} component={LeaderDifferential} />
         <Route path={`${match.url}/relationedvaluesdomprofile`} component={RelationedValuesDomProfile} />
-        {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
+        <Route path={`${match.url}/competentemotional`} component={CompetentEmotional} />
+        <Route path={`${match.url}/communicatesmode`} component={CommunicatesMode} />
+        <Route path={`${match.url}/interactsrelationships`} component={InteractsRelationships} />
+        <Route path={`${match.url}/sabotagedominant`} component={SabotageDominant} />
         <Route path={`${match.url}/sabotagemode`} component={SabotageMode} />
         <Route path={`${match.url}/sabotagewhoiam`} component={SabotageWhoIAm} />
-        <Route path={`${match.url}/sabotagedominant`} component={SabotageDominant} />
-        {/* <Route path={`${match.url}/sabotagename`} component={SabotageName} /> */}
+        <Route path={`${match.url}/synthesissaboteur`} component={SynthesisSaboteur} />
+        <Route path={`${match.url}/limitingmatrix`} component={LimitingMatrix} />
+        <Route path={`${match.url}/communicationdifficulty`} component={CommunicationDifficulty} />
+        <Route path={`${match.url}/difficultyrelationships`} component={DifficultyRelationships} />
+        <Route path={`${match.url}/fourlimitationpowers`} component={FourLimitationPowers} />
+        <Route path={`${match.url}/limitingattitudes`} component={LimitingAttitudes} />
+        <Route path={`${match.url}/behavioraladdiction`} component={BehavioralAddiction} />
+        <Route path={`${match.url}/emotionaladdiction`} component={EmotionalAddiction} />
+        {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/competentxsabotage`} component={CompetentXSabotage} />
         <Route path={`${match.url}/trinitybehavioralcompetent`} component={TrinityBehavioralCompetent} />
         <Route path={`${match.url}/internalpartners`} component={InternalPartners} />
