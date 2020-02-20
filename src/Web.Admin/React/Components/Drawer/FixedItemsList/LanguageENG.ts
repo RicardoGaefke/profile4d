@@ -46,7 +46,8 @@ export default {
   secondfourlimitateforces: 'The Four Limiting Forces',
   pdi: 'Individual Development Plan',
   threeintelligencecenters: 'Three Intelligence Centers',
-  behavioralrespectivernergies: 'Behavioral Profiles and their Respective Energies (title)',
+  behavioralrespectiveenergies: 'Behavioral Profiles and their Respective Energies (title)',
+  identifiedconflicts: 'Identified Conflicts',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   energyspikes: 'Energy Spikes',
   trinityspecifics: 'Trinity Specifics',

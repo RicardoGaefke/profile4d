@@ -169,8 +169,12 @@ export default [
     title: 'threeintelligencecenters',
   },
   {
-    link: 'behavioralrespectivernergies',
-    title: 'behavioralrespectivernergies',
+    link: 'behavioralrespectiveenergies',
+    title: 'behavioralrespectiveenergies',
+  },
+  {
+    link: 'identifiedconflicts',
+    title: 'identifiedconflicts',
   },
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {

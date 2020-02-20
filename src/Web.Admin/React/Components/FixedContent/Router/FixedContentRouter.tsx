@@ -48,6 +48,7 @@ import SecondFourLimitateForces from '../SecondFourLimitateForces/Page';
 import PDI from '../PDI/Page';
 import ThreeIntelligenceCenters from '../ThreeIntelligenceCenters/Page';
 import BehavioralRespectiveEnergies from '../BehavioralRespectiveEnergies/Page';
+import IdentifiedConflicts from '../IdentifiedConflicts/Page';
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import EnergySpikes from '../EnergySpikes/Page';
 import TrinitySpecifics from '../TrinitySpecifics/Page';
@@ -100,7 +101,8 @@ export default withRouter(
         <Route path={`${match.url}/secondfourlimitateforces`} component={SecondFourLimitateForces} />
         <Route path={`${match.url}/pdi`} component={PDI} />
         <Route path={`${match.url}/threeintelligencecenters`} component={ThreeIntelligenceCenters} />
-        <Route path={`${match.url}/behavioralrespectivernergies`} component={BehavioralRespectiveEnergies} />
+        <Route path={`${match.url}/behavioralrespectiveenergies`} component={BehavioralRespectiveEnergies} />
+        <Route path={`${match.url}/identifiedconflicts`} component={IdentifiedConflicts} />
         {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/energyspikes`} component={EnergySpikes} />
         <Route path={`${match.url}/trinityspecifics`} component={TrinitySpecifics} />

@@ -43,7 +43,8 @@ export interface ILanguage {
   secondfourlimitateforces: string,
   pdi: string,
   threeintelligencecenters: string,
-  behavioralrespectivernergies: string,
+  behavioralrespectiveenergies: string,
+  identifiedconflicts: string,
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   energyspikes: string,
   trinityspecifics: string,
