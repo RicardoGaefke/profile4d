@@ -29,10 +29,15 @@ export interface ILanguage {
   limitingattitudes: string,
   behavioraladdiction: string,
   emotionaladdiction: string,
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  mentaladdiction: string,
+  defensemecanisms: string,
+  neuroticcompulsion: string,
   competentxsabotage: string,
   trinitybehavioralcompetent: string,
   internalpartners: string,
+  difficultycomunnication: string,
+  fourpersonalitypowers: string,
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   trinitybehavioralsabotage: string,
   internalenemies: string,
   namesaboteurone: string,

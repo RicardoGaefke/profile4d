@@ -112,7 +112,18 @@ export default [
     link: 'emotionaladdiction',
     title: 'emotionaladdiction',
   },
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  {
+    link: 'mentaladdiction',
+    title: 'mentaladdiction',
+  },
+  {
+    link: 'defensemecanisms',
+    title: 'defensemecanisms',
+  },
+  {
+    link: 'neuroticcompulsion',
+    title: 'neuroticcompulsion',
+  },
   {
     link: 'competentxsabotage',
     title: 'competentxsabotage',
@@ -125,6 +136,15 @@ export default [
     link: 'internalpartners',
     title: 'internalpartners',
   },
+  {
+    link: 'difficultycomunnication',
+    title: 'difficultycomunnication',
+  },
+  {
+    link: 'fourpersonalitypowers',
+    title: 'fourpersonalitypowers',
+  },
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'trinitybehavioralsabotage',
     title: 'trinitybehavioralsabotage',
