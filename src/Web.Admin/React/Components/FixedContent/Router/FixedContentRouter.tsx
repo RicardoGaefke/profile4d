@@ -33,10 +33,15 @@ import FourLimitationPowers from '../FourLimitationPowers/Page';
 import LimitingAttitudes from '../LimitingAttitudes/Page';
 import BehavioralAddiction from '../BehavioralAddiction/Page';
 import EmotionalAddiction from '../EmotionalAddiction/Page';
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+import MentalAddiction from '../MentalAddiction/Page';
+import DefenseMecanisms from '../DefenseMecanisms/Page';
+import NeuroticCompulsion from '../NeuroticCompulsion/Page';
 import CompetentXSabotage from '../CompetentXSabotage/Page';
 import TrinityBehavioralCompetent from '../TrinityBehavioralCompetent/Page';
 import InternalPartners from '../InternalPartners/Page';
+import DifficultyComunnication from '../DifficultyComunnication/Page';
+import FourPersonalityPowers from '../FourPersonalityPowers/Page';
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import TrinityBehavioralSabotage from '../TrinityBehavioralSabotage/Page';
 import InternalEnemies from '../InternalEnemies/Page';
 import NameSaboteurOne from '../NameSaboteurOne/Page';
@@ -82,14 +87,15 @@ export default withRouter(
         <Route path={`${match.url}/limitingattitudes`} component={LimitingAttitudes} />
         <Route path={`${match.url}/behavioraladdiction`} component={BehavioralAddiction} />
         <Route path={`${match.url}/emotionaladdiction`} component={EmotionalAddiction} />
-        {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
+        <Route path={`${match.url}/mentaladdiction`} component={MentalAddiction} />
+        <Route path={`${match.url}/defensemecanisms`} component={DefenseMecanisms} />
+        <Route path={`${match.url}/neuroticcompulsion`} component={NeuroticCompulsion} />
         <Route path={`${match.url}/competentxsabotage`} component={CompetentXSabotage} />
         <Route path={`${match.url}/trinitybehavioralcompetent`} component={TrinityBehavioralCompetent} />
         <Route path={`${match.url}/internalpartners`} component={InternalPartners} />
-        {/* <Route path={`${match.url}/inamepartnerone`} component={INamePartnerOne} />
-        <Route path={`${match.url}/ifourpowersone`} component={IFourPowersOne} />
-        <Route path={`${match.url}/inamepartnertwo`} component={INamePartnerTwo} />
-        <Route path={`${match.url}/ifourpowerstwo`} component={IFourPowersTwo} /> */}
+        <Route path={`${match.url}/difficultycomunnication`} component={DifficultyComunnication} />
+        <Route path={`${match.url}/fourpersonalitypowers`} component={FourPersonalityPowers} />
+        {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/trinitybehavioralsabotage`} component={TrinityBehavioralSabotage} />
         <Route path={`${match.url}/internalenemies`} component={InternalEnemies} />
         <Route path={`${match.url}/namesaboteurone`} component={NameSaboteurOne} />
