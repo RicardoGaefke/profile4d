@@ -14,7 +14,7 @@ export default (props: IProps): React.ReactElement<IProps> => {
   return (
     <Alert severity={severity}>
       <AlertTitle>{title}</AlertTitle>
-      {text}
+      <div dangerouslySetInnerHTML={{ __html: text }} />
     </Alert>
   );
 };

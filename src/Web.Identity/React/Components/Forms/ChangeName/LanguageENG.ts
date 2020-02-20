@@ -2,38 +2,32 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Already a member?',
-  email: {
-    text: 'Your email',
-    title: 'Type your email',
-    required: 'This field is required',
-    invalid: 'Please inform a valid email',
-  },
-  password: {
-    text: 'Your password',
-    title: 'Type your password',
+  title: 'Change user name',
+  name: {
+    text: 'New name',
+    title: 'Type your new name',
     required: 'This field is required',
     min: '6 character minimum',
     max: '20 characters maximum',
   },
-  forgot: {
-    text: 'Forgot your password?',
-    title: 'Click here to create a new password',
+  password: {
+    text: 'Your password to confirm',
+    title: 'Type your password to confirm the change',
+    required: 'This field is required',
+    min: '6 character minimum',
+    max: '20 characters maximum',
   },
   button: {
-    text: 'Login',
-    title: 'Click here to start a new session',
+    text: 'Save new name',
+    title: 'Click here to save the changes',
   },
-  keep: {
-    text: 'Keep me connected?',
-    title: 'Check this option to keep connection alive',
-  },
-  create: {
-    text: 'Create new credentials',
-    title: 'Click here to create new credentials',
+  alert: {
+    text: 'Attention to registration changes',
+    title: `1. Changing registration information <strong>immediately disconnects the user</strong>, so that a new credential is
+  loaded with the updated information`,
   },
   feedback: {
-    success: 'Successfully logged in',
-    failure: 'You were not able to log in',
+    success: 'Data saved successfully',
+    failure: 'We were unable to save your changes',
   },
 } as ILanguage;

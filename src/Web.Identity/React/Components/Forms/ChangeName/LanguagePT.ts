@@ -2,38 +2,32 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Já é um usuário?',
-  email: {
-    text: 'Teu email',
-    title: 'Informe teu email',
-    required: 'Este campo é obrigatório',
-    invalid: 'Email inválido',
-  },
-  password: {
-    text: 'Tua senha',
-    title: 'Informe tua senha',
+  title: 'Alterar nome do usuário',
+  name: {
+    text: 'Novo nome',
+    title: 'Informe o nome a ser cadastrado',
     required: 'Este campo é obrigatório',
     min: 'Tamanho mínimo de 6 caracteres',
     max: 'Tamanho mínimo de 20 caracteres',
   },
-  forgot: {
-    text: 'Esqueceu a senha?',
-    title: 'Clique aqui para gerar uma nova senha',
+  password: {
+    text: 'Confirme com a senha',
+    title: 'Digite tua senha para confirmar a operação',
+    required: 'Este campo é obrigatório',
+    min: 'Tamanho mínimo de 6 caracteres',
+    max: 'Tamanho mínimo de 20 caracteres',
   },
   button: {
-    text: 'Entrar no sistema',
-    title: 'Clique aqui para iniciar a sessão',
+    text: 'Salvar novo nome',
+    title: 'Clique aqui para salvar as alterações',
   },
-  keep: {
-    text: 'Manter-me conectado?',
-    title: 'Marque esta opção para permanecer conectado',
-  },
-  create: {
-    text: 'Criar credenciais de acesso',
-    title: 'Clique aqui para fazer teu cadastro',
+  alert: {
+    title: 'Atenção às alterações de cadastro',
+    text: `1. Alterar informações cadastrais <strong>desconecta o usuário imediatamente</strong>,
+    para que uma nova credencial seja carregada com as informações atualizadas`,
   },
   feedback: {
-    success: 'Você fez login com sucesso',
-    failure: 'Não foi possível fazer login',
+    success: 'Dados salvos com sucesso',
+    failure: 'Não foi possível salvar tuas alterações',
   },
 } as ILanguage;

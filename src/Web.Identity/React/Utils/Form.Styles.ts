@@ -2,6 +2,7 @@
 import { makeStyles, Theme } from '@material-ui/core/styles';
 
 export interface IStyles {
+  main: {},
   root: {},
   container: {},
   item: {},
@@ -11,6 +12,9 @@ export interface IStyles {
 }
 
 const useStyles = makeStyles((theme: Theme): IStyles => ({
+  main: {
+    padding: theme.spacing(3),
+  },
   root: {
   },
   container: {
