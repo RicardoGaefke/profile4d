@@ -41,9 +41,10 @@ import TrinityBehavioralCompetent from '../TrinityBehavioralCompetent/Page';
 import InternalPartners from '../InternalPartners/Page';
 import DifficultyComunnication from '../DifficultyComunnication/Page';
 import FourPersonalityPowers from '../FourPersonalityPowers/Page';
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import TrinityBehavioralSabotage from '../TrinityBehavioralSabotage/Page';
 import InternalEnemies from '../InternalEnemies/Page';
+import FirstFourLimitateForces from '../FirstFourLimitateForces/Page';
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import NameSaboteurOne from '../NameSaboteurOne/Page';
 import SFourPowersOne from '../SFourPowersOne/Page';
 import NameSaboteurTwo from '../NameSaboteurTwo/Page';
@@ -95,9 +96,10 @@ export default withRouter(
         <Route path={`${match.url}/internalpartners`} component={InternalPartners} />
         <Route path={`${match.url}/difficultycomunnication`} component={DifficultyComunnication} />
         <Route path={`${match.url}/fourpersonalitypowers`} component={FourPersonalityPowers} />
-        {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/trinitybehavioralsabotage`} component={TrinityBehavioralSabotage} />
         <Route path={`${match.url}/internalenemies`} component={InternalEnemies} />
+        <Route path={`${match.url}/firstfourlimitateforces`} component={FirstFourLimitateForces} />
+        {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/namesaboteurone`} component={NameSaboteurOne} />
         <Route path={`${match.url}/sfourpowersone`} component={SFourPowersOne} />
         <Route path={`${match.url}/namesaboteurtwo`} component={NameSaboteurTwo} />

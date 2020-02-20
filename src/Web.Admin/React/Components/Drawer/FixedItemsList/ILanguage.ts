@@ -37,9 +37,10 @@ export interface ILanguage {
   internalpartners: string,
   difficultycomunnication: string,
   fourpersonalitypowers: string,
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   trinitybehavioralsabotage: string,
   internalenemies: string,
+  firstfourlimitateforces: string,
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   namesaboteurone: string,
   sfourpowersone: string,
   namesaboteurtwo: string,

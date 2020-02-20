@@ -40,9 +40,10 @@ export default {
   internalpartners: 'Parceiros Internos',
   difficultycomunnication: 'Dificuldade na Comunicação',
   fourpersonalitypowers: 'As Quatro Forças da Personalidade',
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   trinitybehavioralsabotage: 'Trindade Sabotador Comportamental',
   internalenemies: 'Inimigos Internos',
+  firstfourlimitateforces: 'As Quatro Forças Limitantes',
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   namesaboteurone: 'Primeiro Sabotador Interno',
   sfourpowersone: 'Primeiros Quatro Poderes Sabotador',
   namesaboteurtwo: 'Segundo Sabotador Interno',

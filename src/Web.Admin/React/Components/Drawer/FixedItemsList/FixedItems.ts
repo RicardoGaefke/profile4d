@@ -144,7 +144,6 @@ export default [
     link: 'fourpersonalitypowers',
     title: 'fourpersonalitypowers',
   },
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'trinitybehavioralsabotage',
     title: 'trinitybehavioralsabotage',
@@ -153,6 +152,11 @@ export default [
     link: 'internalenemies',
     title: 'internalenemies',
   },
+  {
+    link: 'firstfourlimitateforces',
+    title: 'firstfourlimitateforces',
+  },
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'namesaboteurone',
     title: 'namesaboteurone',
