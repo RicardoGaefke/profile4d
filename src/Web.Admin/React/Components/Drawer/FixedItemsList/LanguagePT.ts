@@ -43,6 +43,7 @@ export default {
   trinitybehavioralsabotage: 'Trindade Sabotador Comportamental',
   internalenemies: 'Inimigos Internos',
   firstfourlimitateforces: 'As Quatro Forças Limitantes',
+  secondfourlimitateforces: 'As Quatro Forças Limitantes',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   namesaboteurone: 'Primeiro Sabotador Interno',
   sfourpowersone: 'Primeiros Quatro Poderes Sabotador',

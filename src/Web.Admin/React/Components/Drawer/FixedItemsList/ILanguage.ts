@@ -40,6 +40,7 @@ export interface ILanguage {
   trinitybehavioralsabotage: string,
   internalenemies: string,
   firstfourlimitateforces: string,
+  secondfourlimitateforces: string,
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   namesaboteurone: string,
   sfourpowersone: string,

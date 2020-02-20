@@ -156,6 +156,10 @@ export default [
     link: 'firstfourlimitateforces',
     title: 'firstfourlimitateforces',
   },
+  {
+    link: 'secondfourlimitateforces',
+    title: 'secondfourlimitateforces',
+  },
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'namesaboteurone',

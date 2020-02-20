@@ -43,6 +43,7 @@ export default {
   trinitybehavioralsabotage: 'Trinity Behavioral Saboteur',
   internalenemies: 'Internal Enemies',
   firstfourlimitateforces: 'The Four Limiting Forces',
+  secondfourlimitateforces: 'The Four Limiting Forces',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   namesaboteurone: 'Name Saboteur One',
   sfourpowersone: 'Saboteur Four Powers One',
