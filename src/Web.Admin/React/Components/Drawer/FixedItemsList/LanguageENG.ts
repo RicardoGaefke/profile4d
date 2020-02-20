@@ -44,13 +44,10 @@ export default {
   internalenemies: 'Internal Enemies',
   firstfourlimitateforces: 'The Four Limiting Forces',
   secondfourlimitateforces: 'The Four Limiting Forces',
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  namesaboteurone: 'Name Saboteur One',
-  sfourpowersone: 'Saboteur Four Powers One',
-  namesaboteurtwo: 'Name Saboteur Two',
-  sfourpowerstwo: 'Saboteur Four Powers Two',
   pdi: 'Individual Development Plan',
   threeintelligencecenters: 'Three Intelligence Centers',
+  behavioralrespectivernergies: 'Behavioral Profiles and their Respective Energies (title)',
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   energyspikes: 'Energy Spikes',
   trinityspecifics: 'Trinity Specifics',
   originalxadapted: 'Original Triad X Adapted Triad',

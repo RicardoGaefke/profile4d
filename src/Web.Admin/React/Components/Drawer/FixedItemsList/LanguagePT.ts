@@ -44,13 +44,10 @@ export default {
   internalenemies: 'Inimigos Internos',
   firstfourlimitateforces: 'As Quatro Forças Limitantes',
   secondfourlimitateforces: 'As Quatro Forças Limitantes',
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  namesaboteurone: 'Primeiro Sabotador Interno',
-  sfourpowersone: 'Primeiros Quatro Poderes Sabotador',
-  namesaboteurtwo: 'Segundo Sabotador Interno',
-  sfourpowerstwo: 'Segundos Quatro Poderes Sabotador',
   pdi: 'Plano de Desenvolvimento Individual',
   threeintelligencecenters: 'Três Centros de Inteligência',
+  behavioralrespectivernergies: 'Perfis Comportamentais e suas Respectivas Energias (título)',
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   energyspikes: 'Picos de Energia',
   trinityspecifics: 'Trindade Especificada',
   originalxadapted: 'Tríade Original X Tríade Adaptada',

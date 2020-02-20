@@ -41,13 +41,10 @@ export interface ILanguage {
   internalenemies: string,
   firstfourlimitateforces: string,
   secondfourlimitateforces: string,
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  namesaboteurone: string,
-  sfourpowersone: string,
-  namesaboteurtwo: string,
-  sfourpowerstwo: string,
   pdi: string,
   threeintelligencecenters: string,
+  behavioralrespectivernergies: string,
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   energyspikes: string,
   trinityspecifics: string,
   originalxadapted: string,

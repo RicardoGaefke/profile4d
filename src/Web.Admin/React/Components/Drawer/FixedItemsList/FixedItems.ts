@@ -160,23 +160,6 @@ export default [
     link: 'secondfourlimitateforces',
     title: 'secondfourlimitateforces',
   },
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  {
-    link: 'namesaboteurone',
-    title: 'namesaboteurone',
-  },
-  {
-    link: 'sfourpowersone',
-    title: 'sfourpowersone',
-  },
-  {
-    link: 'namesaboteurtwo',
-    title: 'namesaboteurtwo',
-  },
-  {
-    link: 'sfourpowerstwo',
-    title: 'sfourpowerstwo',
-  },
   {
     link: 'pdi',
     title: 'pdi',
@@ -185,6 +168,11 @@ export default [
     link: 'threeintelligencecenters',
     title: 'threeintelligencecenters',
   },
+  {
+    link: 'behavioralrespectivernergies',
+    title: 'behavioralrespectivernergies',
+  },
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'energyspikes',
     title: 'energyspikes',
