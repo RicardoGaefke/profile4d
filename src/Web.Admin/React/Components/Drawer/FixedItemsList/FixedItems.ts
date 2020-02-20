@@ -144,7 +144,6 @@ export default [
     link: 'fourpersonalitypowers',
     title: 'fourpersonalitypowers',
   },
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'trinitybehavioralsabotage',
     title: 'trinitybehavioralsabotage',
@@ -154,20 +153,12 @@ export default [
     title: 'internalenemies',
   },
   {
-    link: 'namesaboteurone',
-    title: 'namesaboteurone',
+    link: 'firstfourlimitateforces',
+    title: 'firstfourlimitateforces',
   },
   {
-    link: 'sfourpowersone',
-    title: 'sfourpowersone',
-  },
-  {
-    link: 'namesaboteurtwo',
-    title: 'namesaboteurtwo',
-  },
-  {
-    link: 'sfourpowerstwo',
-    title: 'sfourpowerstwo',
+    link: 'secondfourlimitateforces',
+    title: 'secondfourlimitateforces',
   },
   {
     link: 'pdi',
@@ -177,6 +168,15 @@ export default [
     link: 'threeintelligencecenters',
     title: 'threeintelligencecenters',
   },
+  {
+    link: 'behavioralrespectiveenergies',
+    title: 'behavioralrespectiveenergies',
+  },
+  {
+    link: 'identifiedconflicts',
+    title: 'identifiedconflicts',
+  },
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'energyspikes',
     title: 'energyspikes',
