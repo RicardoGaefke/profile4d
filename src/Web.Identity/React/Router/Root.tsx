@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import ProtectedRoute from '../Components/ProtectedRoute/ProtectedRoute';
 import MyHome from '../Views/Home/Home';
 import Connected from '../Components/Connected/Main/Main';
 import MyAbout from '../Views/About/About';
@@ -11,7 +12,7 @@ export default (): React.ReactElement => (
   <Switch>
     <Route path="/" exact component={MyHome} />
     <Route path="/account/" component={MyHome} />
-    <Route path="/connected/" component={Connected} />
+    <ProtectedRoute path="/connected/" component={Connected} />
     <Route path="/about" component={MyAbout} />
     <Route path="/policy" component={MyPolicy} />
     <Route path="/404" component={MyNotFound} />

@@ -9,5 +9,7 @@ namespace Profile4d.Data
     public void SignOut(int UserID);
 
     public void Record(int UserID, int Status, string Details);
+
+    public BasicReturn ChangeName(int UserID, string Name, string Password, string Url);
   }
 }

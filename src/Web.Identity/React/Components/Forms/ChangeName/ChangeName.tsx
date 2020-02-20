@@ -26,7 +26,7 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps & RouteComponentPr
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t, history } = props;
     await myAxios(window.location.href).post<IBasicReturn>('Identity/ChangeName', {
-      Email: values.Email,
+      Name: values.Name,
       Password: values.Password,
     }).then((response): void => {
       const { data } = response;

@@ -4,11 +4,11 @@ import { WithTranslation } from 'react-i18next';
 
 export default (props: WithTranslation): object => Yup.object().shape({
   Name: Yup.string()
-    .required(props.t('CreateUserForm:name.required'))
-    .min(6, props.t('CreateUserForm:name.min'))
-    .max(20, props.t('CreateUserForm:name.max')),
+    .required(props.t('ChangeNameForm:name.required'))
+    .min(6, props.t('ChangeNameForm:name.min'))
+    .max(95, props.t('ChangeNameForm:name.max')),
   Password: Yup.string()
-    .required(props.t('CreateUserForm:password.required'))
-    .min(6, props.t('CreateUserForm:password.min'))
-    .max(20, props.t('CreateUserForm:password.max')),
+    .required(props.t('ChangeNameForm:password.required'))
+    .min(6, props.t('ChangeNameForm:password.min'))
+    .max(20, props.t('ChangeNameForm:password.max')),
 });

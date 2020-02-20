@@ -23,11 +23,11 @@ export default {
   },
   alert: {
     title: 'Atenção às alterações de cadastro',
-    text: `1. Alterar informações cadastrais <strong>desconecta o usuário imediatamente</strong>,
+    text: `Alterar informações cadastrais <strong>desconecta o usuário imediatamente</strong>,
     para que uma nova credencial seja carregada com as informações atualizadas`,
   },
   feedback: {
     success: 'Dados salvos com sucesso',
-    failure: 'Não foi possível salvar tuas alterações',
+    failure: 'Não foi possível salvar tuas alterações! Provavelmente a senha está incorreta!',
   },
 } as ILanguage;

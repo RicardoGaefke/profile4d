@@ -22,8 +22,8 @@ export default {
     title: 'Click here to save the changes',
   },
   alert: {
-    text: 'Attention to registration changes',
-    title: `1. Changing registration information <strong>immediately disconnects the user</strong>, so that a new credential is
+    title: 'Attention to registration changes',
+    text: `Changing registration information <strong>immediately disconnects the user</strong>, so that a new credential is
   loaded with the updated information`,
   },
   feedback: {
