@@ -41,15 +41,15 @@ import TrinityBehavioralCompetent from '../TrinityBehavioralCompetent/Page';
 import InternalPartners from '../InternalPartners/Page';
 import DifficultyComunnication from '../DifficultyComunnication/Page';
 import FourPersonalityPowers from '../FourPersonalityPowers/Page';
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import TrinityBehavioralSabotage from '../TrinityBehavioralSabotage/Page';
 import InternalEnemies from '../InternalEnemies/Page';
-import NameSaboteurOne from '../NameSaboteurOne/Page';
-import SFourPowersOne from '../SFourPowersOne/Page';
-import NameSaboteurTwo from '../NameSaboteurTwo/Page';
-import SFourPowersTwo from '../SFourPowersTwo/Page';
+import FirstFourLimitateForces from '../FirstFourLimitateForces/Page';
+import SecondFourLimitateForces from '../SecondFourLimitateForces/Page';
 import PDI from '../PDI/Page';
 import ThreeIntelligenceCenters from '../ThreeIntelligenceCenters/Page';
+import BehavioralRespectiveEnergies from '../BehavioralRespectiveEnergies/Page';
+import IdentifiedConflicts from '../IdentifiedConflicts/Page';
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import EnergySpikes from '../EnergySpikes/Page';
 import TrinitySpecifics from '../TrinitySpecifics/Page';
 import OriginalXAdapted from '../OriginalXAdapted/Page';
@@ -95,27 +95,18 @@ export default withRouter(
         <Route path={`${match.url}/internalpartners`} component={InternalPartners} />
         <Route path={`${match.url}/difficultycomunnication`} component={DifficultyComunnication} />
         <Route path={`${match.url}/fourpersonalitypowers`} component={FourPersonalityPowers} />
-        {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/trinitybehavioralsabotage`} component={TrinityBehavioralSabotage} />
         <Route path={`${match.url}/internalenemies`} component={InternalEnemies} />
-        <Route path={`${match.url}/namesaboteurone`} component={NameSaboteurOne} />
-        <Route path={`${match.url}/sfourpowersone`} component={SFourPowersOne} />
-        <Route path={`${match.url}/namesaboteurtwo`} component={NameSaboteurTwo} />
-        <Route path={`${match.url}/sfourpowerstwo`} component={SFourPowersTwo} />
+        <Route path={`${match.url}/firstfourlimitateforces`} component={FirstFourLimitateForces} />
+        <Route path={`${match.url}/secondfourlimitateforces`} component={SecondFourLimitateForces} />
         <Route path={`${match.url}/pdi`} component={PDI} />
         <Route path={`${match.url}/threeintelligencecenters`} component={ThreeIntelligenceCenters} />
-        {/* <Route path={`${match.url}/behavioursprofiles`} component={BehavioursProfiles} />
-        <Route path={`${match.url}/identifiedconflicts`} component={IdentifiedConflicts} /> */}
+        <Route path={`${match.url}/behavioralrespectiveenergies`} component={BehavioralRespectiveEnergies} />
+        <Route path={`${match.url}/identifiedconflicts`} component={IdentifiedConflicts} />
+        {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/energyspikes`} component={EnergySpikes} />
-        {/* <Route path={`${match.url}/columncharthreeprofiles`} component={ColumnChartThreeProfiles} />
-        <Route path={`${match.url}/trinitypersonified`} component={TrinityPersonified} /> */}
         <Route path={`${match.url}/trinityspecifics`} component={TrinitySpecifics} />
         <Route path={`${match.url}/originalxadapted`} component={OriginalXAdapted} />
-        {/* <Route path={`${match.url}/graphicimage`} component={GraphicImage} />
-        <Route path={`${match.url}/personalizedtext`} component={PersonalizedText} />
-        <Route path={`${match.url}/explainedtext`} component={ExplainedText} />
-        <Route path={`${match.url}/personalizedtable`} component={PersonalizedTable} /> */}
-        {/* <Route path={`${match.url}/defaulttext`} component={DefaultText} /> */}
       </MyTemplate>
     );
   },
