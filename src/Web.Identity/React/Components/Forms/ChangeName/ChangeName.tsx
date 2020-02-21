@@ -23,7 +23,7 @@ import { IInitialContext } from '../../../../../TypeScript/Interfaces/IInitialCo
 import { withContext, IContext } from '../../../Initial/Context/StateProvider';
 
 const MyForm = withFormik<WithTranslation & WithSnackbarProps & RouteComponentProps & IContext, ICreateUser>({
-  displayName: 'LoginForm',
+  displayName: 'ChangeNameForm',
   enableReinitialize: true,
   mapPropsToValues: (): ICreateUser => (InitialValues),
   validationSchema: Validation,

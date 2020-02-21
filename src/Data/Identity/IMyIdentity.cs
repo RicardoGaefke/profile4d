@@ -12,5 +12,6 @@ namespace Profile4d.Data
 
     public void ChangeName(int UserID, string Name, string Password, string Url);
     public void ChangeEmail(int UserID, string Email, string Password, string Url);
+    public void ChangePassword(int UserID, string NewPassword, string Password, string Url);
   }
 }

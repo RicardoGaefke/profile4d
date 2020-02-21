@@ -203,5 +203,37 @@ namespace Profile4d.Web.Api.Controllers
 
       return _return;
     }
+
+    [HttpPost("ChangePassword")]
+    public ActionResult<BasicReturn> ChangePassword(User user)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        int _userID = Convert.ToInt32(User.FindFirst(claim => claim.Type == "UserID")?.Value);
+        string _url = _httpContextAccessor.HttpContext.Request.Host + _httpContextAccessor.HttpContext.Request.Path;
+        _myIdentity.ChangePassword(_userID, user.NewPassword, user.Password, _url);
+
+        _return.Success = true;
+      }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = ex.Number.ToString();
+
+        return _return;
+      }
+      catch (Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+
+      return _return;
+    }
   }
 }

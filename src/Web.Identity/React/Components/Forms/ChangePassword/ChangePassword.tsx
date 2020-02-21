@@ -23,7 +23,7 @@ import { IInitialContext } from '../../../../../TypeScript/Interfaces/IInitialCo
 import { withContext, IContext } from '../../../Initial/Context/StateProvider';
 
 const MyForm = withFormik<WithTranslation & WithSnackbarProps & RouteComponentProps & IContext, ICreateUser>({
-  displayName: 'ChangeEmailForm',
+  displayName: 'ChangePasswordForm',
   enableReinitialize: true,
   mapPropsToValues: (): ICreateUser => (InitialValues),
   validationSchema: Validation,
@@ -31,21 +31,15 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps & RouteComponentPr
     const { enqueueSnackbar, t, history } = props;
     // eslint-disable-next-line no-unused-vars
     const [ctx, dispatch] = props.context;
-    await myAxios(window.location.href).post<IBasicReturn>('Identity/ChangeEmail', {
-      Email: values.Email,
-      ConfirmEmail: values.ConfirmEmail,
+    await myAxios(window.location.href).post<IBasicReturn>('Identity/ChangePassword', {
+      NewPassword: values.NewPassword,
       Password: values.Password,
     }).then((response): void => {
       const { data } = response;
 
       if (data.Success) {
-        enqueueSnackbar(t('ChangeEmailForm:feedback.success'), {
+        enqueueSnackbar(t('ChangePasswordForm:feedback.success'), {
           variant: 'success',
-        });
-
-        dispatch({
-          type: 'changeEmail',
-          value: values.Email,
         });
 
         dispatch({
@@ -55,19 +49,12 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps & RouteComponentPr
 
         history.push('/');
       } else {
-        // eslint-disable-next-line no-lonely-if
-        if (data.Code === '50500') {
-          enqueueSnackbar(t('ChangeEmailForm:blockedEmail.text'), {
-            variant: 'error',
-          });
-        } else {
-          enqueueSnackbar(t('ChangeEmailForm:feedback.failure'), {
-            variant: 'error',
-          });
-        }
+        enqueueSnackbar(t('ChangePasswordForm:feedback.failure'), {
+          variant: 'error',
+        });
       }
     }).catch((): void => {
-      enqueueSnackbar(t('ChangeEmailForm:feedback.failure'), {
+      enqueueSnackbar(t('ChangePasswordForm:feedback.failure'), {
         variant: 'error',
       });
     });
@@ -90,7 +77,7 @@ export default withTranslation()(
           align="center"
           variant="h5"
         >
-          {t('ChangeEmailForm:title')}
+          {t('ChangePasswordForm:title')}
         </Typography>
         <Login />
       </div>

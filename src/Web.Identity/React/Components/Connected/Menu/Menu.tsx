@@ -49,7 +49,7 @@ export default withTranslation()(
             title={t('Connected:changeEmail.title')}
           />
         </ListItem>
-        <ListItem button component={NavLink} to="/connected/changePassord" className={classes.navlink}>
+        <ListItem button component={NavLink} to="/connected/changePassword" className={classes.navlink}>
           <ListItemIcon>
             <VpnKeyIcon />
           </ListItemIcon>

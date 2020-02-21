@@ -2,32 +2,29 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Alterar email do usuário',
-  email: {
-    text: 'Informe teu novo email',
-    title: 'Informe teu novo email',
+  title: 'Alterar senha do usuário',
+  newPassword: {
+    text: 'Nova senha',
+    title: 'Informe a nova senha a ser cadastrada',
     required: 'Este campo é obrigatório',
-    invalid: 'Email inválido',
+    min: 'Tamanho mínimo de 6 caracteres',
+    max: 'Tamanho mínimo de 20 caracteres',
   },
-  confirmEmail: {
-    text: 'Confirme teu novo email',
-    title: 'Confirme teu novo email',
+  confirmPassword: {
+    text: 'Confirme a tua nova senha',
+    title: 'Confirme a tua nova senha',
     required: 'Este campo é obrigatório',
-    invalid: 'Digite exatamente o mesmo email',
-  },
-  blockedEmail: {
-    title: 'Desculpe, email bloqueado!',
-    text: 'Este email foi recusado pelo servidor. Talvez já esteja em uso por outro usuário.',
+    invalid: 'Digite exatamente a mesma senha',
   },
   password: {
-    text: 'Confirme com a senha',
-    title: 'Digite tua senha para confirmar a operação',
+    text: 'Confirme com a senha atual',
+    title: 'Digite tua senha atual para confirmar a operação',
     required: 'Este campo é obrigatório',
     min: 'Tamanho mínimo de 6 caracteres',
     max: 'Tamanho mínimo de 20 caracteres',
   },
   button: {
-    text: 'Salvar novo email',
+    text: 'Salvar novo nome',
     title: 'Clique aqui para salvar as alterações',
   },
   alert: {

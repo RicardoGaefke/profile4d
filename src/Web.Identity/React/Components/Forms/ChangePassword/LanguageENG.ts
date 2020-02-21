@@ -2,22 +2,19 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Change user email',
-  email: {
-    text: 'Your email',
-    title: 'Type your email',
+  title: 'Change user password',
+  newPassword: {
+    text: 'New password',
+    title: 'Type your new password',
     required: 'This field is required',
-    invalid: 'Please inform a valid email',
+    min: '6 character minimum',
+    max: '20 characters maximum',
   },
-  confirmEmail: {
-    text: 'Confirm your email',
-    title: 'Please confirm your email',
+  confirmPassword: {
+    text: 'Confirm new password',
+    title: 'Please confirm your new password',
     required: 'This field is required',
-    invalid: 'Please type exactly same email',
-  },
-  blockedEmail: {
-    title: 'Sorry, blocked email!',
-    text: 'This email was declined by the server. It may already be in use by another user.',
+    invalid: 'Please type exactly same new password',
   },
   password: {
     text: 'Your password to confirm',
