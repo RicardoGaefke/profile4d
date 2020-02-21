@@ -60,4 +60,5 @@ export interface ILanguage {
   behavioraldna: string,
   archetypeessence: string,
   essentialfeature: string,
+  characterformation: string,
 }

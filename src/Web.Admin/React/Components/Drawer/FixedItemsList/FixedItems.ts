@@ -236,4 +236,8 @@ export default [
     link: 'essentialfeature',
     title: 'essentialfeature',
   },
+  {
+    link: 'characterformation',
+    title: 'characterformation',
+  },
 ] as IStaticMenuItem[];

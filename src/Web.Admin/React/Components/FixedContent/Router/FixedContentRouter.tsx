@@ -64,6 +64,7 @@ import IdealPartner from '../IdealPartner/Page';
 import BehavioralDNA from '../BehavioralDNA/Page';
 import ArchetypeEssence from '../ArchetypeEssence/Page';
 import EssentialFeature from '../EssentialFeature/Page';
+import CharacterFormation from '../CharacterFormation/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -129,6 +130,7 @@ export default withRouter(
         <Route path={`${match.url}/behavioraldna`} component={BehavioralDNA} />
         <Route path={`${match.url}/archetypeessence`} component={ArchetypeEssence} />
         <Route path={`${match.url}/essentialfeature`} component={EssentialFeature} />
+        <Route path={`${match.url}/characterformation`} component={CharacterFormation} />
       </MyTemplate>
     );
   },

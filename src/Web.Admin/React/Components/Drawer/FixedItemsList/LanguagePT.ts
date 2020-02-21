@@ -63,4 +63,5 @@ export default {
   behavioraldna: 'Síntese do seu DNA comportamental',
   archetypeessence: 'Descobrindo seu Arquétipo – Sua Essência',
   essentialfeature: 'Característica Essencial',
+  characterformation: 'Formação do Caráter',
 } as ILanguage;
