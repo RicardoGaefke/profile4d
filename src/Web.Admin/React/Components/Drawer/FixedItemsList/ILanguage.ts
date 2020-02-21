@@ -52,4 +52,5 @@ export interface ILanguage {
   exerciseprofilemoviment: string,
   superiormind: string,
   healthyadult: string,
+  synergeticmode: string,
 }

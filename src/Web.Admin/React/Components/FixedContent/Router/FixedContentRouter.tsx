@@ -56,6 +56,7 @@ import OriginalXAdapted from '../OriginalXAdapted/Page';
 import ExerciseProfileMoviment from '../ExerciseProfileMoviment/Page';
 import SuperiorMind from '../SuperiorMind/Page';
 import HealthyAdult from '../HealthyAdult/Page';
+import SynergeticMode from '../SynergeticMode/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -108,13 +109,12 @@ export default withRouter(
         <Route path={`${match.url}/identifiedconflicts`} component={IdentifiedConflicts} />
         <Route path={`${match.url}/energyspikes`} component={EnergySpikes} />
         <Route path={`${match.url}/homogeneousheterogeneous`} component={HomogeneousHeterogeneous} />
-        <Route path={`${match.url}/exerciseprofilemoviment`} component={ExerciseProfileMoviment} />
-        <Route path={`${match.url}/superiormind`} component={SuperiorMind} />
-        {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/trinityspecifics`} component={TrinitySpecifics} />
         <Route path={`${match.url}/originalxadapted`} component={OriginalXAdapted} />
-        <Route path={`${match.url}/HealthyAdult`} component={HealthyAdult} />
-
+        <Route path={`${match.url}/exerciseprofilemoviment`} component={ExerciseProfileMoviment} />
+        <Route path={`${match.url}/superiormind`} component={SuperiorMind} />
+        <Route path={`${match.url}/healthyadult`} component={HealthyAdult} />
+        <Route path={`${match.url}/synergeticmode`} component={SynergeticMode} />
       </MyTemplate>
     );
   },

@@ -204,4 +204,8 @@ export default [
     link: 'healthyadult',
     title: 'healthyadult',
   },
+  {
+    link: 'synergeticmode',
+    title: 'synergeticmode',
+  },
 ] as IStaticMenuItem[];

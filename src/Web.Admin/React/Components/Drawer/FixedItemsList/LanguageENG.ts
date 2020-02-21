@@ -55,4 +55,5 @@ export default {
   exerciseprofilemoviment: 'Exercise to check the Profile Movement',
   superiormind: 'Superior Mind (title)',
   healthyadult: 'Your best version - The healthy adult',
+  synergeticmode: 'Synergetic Mode (Increasing Mindset - Empowered Resources)',
 } as ILanguage;

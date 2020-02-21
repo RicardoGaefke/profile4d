@@ -55,4 +55,5 @@ export default {
   exerciseprofilemoviment: 'Exercício para verificar o Movimento do Perfil',
   superiormind: 'Mente Superior (título)',
   healthyadult: 'Sua melhor versão - O adulto saudável',
+  synergeticmode: 'Modo sinérgico (aumento da mentalidade - recursos fortalecidos)',
 } as ILanguage;
