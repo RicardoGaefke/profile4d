@@ -248,4 +248,8 @@ export default [
     link: 'existentialpain',
     title: 'existentialpain',
   },
+  {
+    link: 'noteexistentialpain',
+    title: 'noteexistentialpain',
+  },
 ] as IStaticMenuItem[];

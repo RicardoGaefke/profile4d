@@ -66,4 +66,5 @@ export default {
   characterformation: 'Character Formation',
   moment: 'Moment',
   existentialpain: 'Existential Pain',
+  noteexistentialpain: 'Existential Pain Note',
 } as ILanguage;

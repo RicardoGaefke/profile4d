@@ -63,4 +63,5 @@ export interface ILanguage {
   characterformation: string,
   moment: string,
   existentialpain: string,
+  noteexistentialpain: string,
 }
