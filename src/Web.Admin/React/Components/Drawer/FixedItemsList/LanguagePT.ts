@@ -60,4 +60,5 @@ export default {
   bigchallenge: 'Seu Grande Desafio',
   workkey: 'Sua Tarefa Chave',
   idealpartner: 'Seu Parceiro Ideal',
+  behavioraldna: 'Síntese do seu DNA comportamental',
 } as ILanguage;

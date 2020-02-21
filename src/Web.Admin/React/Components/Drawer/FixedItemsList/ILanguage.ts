@@ -57,4 +57,5 @@ export interface ILanguage {
   bigchallenge: string,
   workkey: string,
   idealpartner: string,
+  behavioraldna: string,
 }

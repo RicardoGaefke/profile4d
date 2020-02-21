@@ -224,4 +224,8 @@ export default [
     link: 'idealpartner',
     title: 'idealpartner',
   },
+  {
+    link: 'behavioraldna',
+    title: 'behavioraldna',
+  },
 ] as IStaticMenuItem[];
