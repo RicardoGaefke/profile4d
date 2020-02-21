@@ -58,4 +58,5 @@ export interface ILanguage {
   workkey: string,
   idealpartner: string,
   behavioraldna: string,
+  archetypeessence: string,
 }

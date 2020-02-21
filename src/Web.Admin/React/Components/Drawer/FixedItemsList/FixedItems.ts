@@ -228,4 +228,8 @@ export default [
     link: 'behavioraldna',
     title: 'behavioraldna',
   },
+  {
+    link: 'archetypeessence',
+    title: 'archetypeessence',
+  },
 ] as IStaticMenuItem[];

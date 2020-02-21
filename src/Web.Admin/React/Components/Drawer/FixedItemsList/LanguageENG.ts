@@ -61,4 +61,5 @@ export default {
   workkey: 'Your Key Task',
   idealpartner: 'Your Ideal Partner',
   behavioraldna: 'Synthesis of your Behavioral DNA',
+  archetypeessence: 'Discovering your Archetype - Its Essence',
 } as ILanguage;
