@@ -216,4 +216,8 @@ export default [
     link: 'bigchallenge',
     title: 'bigchallenge',
   },
+  {
+    link: 'workkey',
+    title: 'workkey',
+  },
 ] as IStaticMenuItem[];

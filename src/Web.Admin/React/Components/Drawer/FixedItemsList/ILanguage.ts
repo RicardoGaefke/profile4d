@@ -55,4 +55,5 @@ export interface ILanguage {
   synergeticmode: string,
   domprofile: string,
   bigchallenge: string,
+  workkey: string,
 }

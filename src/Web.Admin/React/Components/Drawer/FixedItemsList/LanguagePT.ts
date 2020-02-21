@@ -58,4 +58,5 @@ export default {
   synergeticmode: 'Modo sinérgico (aumento da mentalidade - recursos fortalecidos)',
   domprofile: 'Perfil Dominante',
   bigchallenge: 'Seu Grande Desafio',
+  workkey: 'Sua Tarefa Chave',
 } as ILanguage;

@@ -58,4 +58,5 @@ export default {
   synergeticmode: 'Synergetic Mode (Increasing Mindset - Empowered Resources)',
   domprofile: 'Dominant Profile',
   bigchallenge: 'Your Big Challenge',
+  workkey: 'Your Key Task',
 } as ILanguage;

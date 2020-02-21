@@ -59,6 +59,7 @@ import HealthyAdult from '../HealthyAdult/Page';
 import SynergeticMode from '../SynergeticMode/Page';
 import DomProfile from '../DomProfile/Page';
 import BigChallenge from '../BigChallenge/Page';
+import WorkKey from '../WorkKey/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -119,6 +120,7 @@ export default withRouter(
         <Route path={`${match.url}/synergeticmode`} component={SynergeticMode} />
         <Route path={`${match.url}/domprofile`} component={DomProfile} />
         <Route path={`${match.url}/bigchallenge`} component={BigChallenge} />
+        <Route path={`${match.url}/workkey`} component={WorkKey} />
       </MyTemplate>
     );
   },
