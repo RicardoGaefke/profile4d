@@ -51,11 +51,11 @@ import BehavioralRespectiveEnergies from '../BehavioralRespectiveEnergies/Page';
 import IdentifiedConflicts from '../IdentifiedConflicts/Page';
 import EnergySpikes from '../EnergySpikes/Page';
 import HomogeneousHeterogeneous from '../HomogeneousHeterogeneous/Page';
-import ExerciseProfileMoviment from '../ExerciseProfileMoviment/Page';
-import SuperiorMind from '../SuperiorMind/Page';
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import TrinitySpecifics from '../TrinitySpecifics/Page';
 import OriginalXAdapted from '../OriginalXAdapted/Page';
+import ExerciseProfileMoviment from '../ExerciseProfileMoviment/Page';
+import SuperiorMind from '../SuperiorMind/Page';
+import HealthyAdult from '../HealthyAdult/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -113,6 +113,8 @@ export default withRouter(
         {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/trinityspecifics`} component={TrinitySpecifics} />
         <Route path={`${match.url}/originalxadapted`} component={OriginalXAdapted} />
+        <Route path={`${match.url}/HealthyAdult`} component={HealthyAdult} />
+
       </MyTemplate>
     );
   },

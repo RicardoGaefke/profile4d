@@ -185,6 +185,14 @@ export default [
     title: 'homogeneousheterogeneous',
   },
   {
+    link: 'trinityspecifics',
+    title: 'trinityspecifics',
+  },
+  {
+    link: 'originalxadapted',
+    title: 'originalxadapted',
+  },
+  {
     link: 'exerciseprofilemoviment',
     title: 'exerciseprofilemoviment',
   },
@@ -192,13 +200,8 @@ export default [
     link: 'superiormind',
     title: 'superiormind',
   },
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
-    link: 'trinityspecifics',
-    title: 'trinityspecifics',
-  },
-  {
-    link: 'originalxadapted',
-    title: 'originalxadapted',
+    link: 'healthyadult',
+    title: 'healthyadult',
   },
 ] as IStaticMenuItem[];

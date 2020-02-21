@@ -47,9 +47,9 @@ export interface ILanguage {
   identifiedconflicts: string,
   energyspikes: string,
   homogeneousheterogeneous: string,
-  exerciseprofilemoviment: string,
-  superiormind: string,
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   trinityspecifics: string,
   originalxadapted: string,
+  exerciseprofilemoviment: string,
+  superiormind: string,
+  healthyadult: string,
 }

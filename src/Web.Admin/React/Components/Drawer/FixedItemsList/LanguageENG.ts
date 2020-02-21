@@ -50,9 +50,9 @@ export default {
   identifiedconflicts: 'Identified Conflicts',
   energyspikes: 'Behavioral Triad and Energy Spikes',
   homogeneousheterogeneous: 'Triad (customized: Homogeneous or Heterogeneous)',
-  exerciseprofilemoviment: 'Exercise to check the Profile Movement',
-  superiormind: 'Superior Mind (title)',
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   trinityspecifics: 'Trinity Specifics',
   originalxadapted: 'Original Triad X Adapted Triad',
+  exerciseprofilemoviment: 'Exercise to check the Profile Movement',
+  superiormind: 'Superior Mind (title)',
+  healthyadult: 'Your best version - The healthy adult',
 } as ILanguage;
