@@ -5,7 +5,7 @@ import { WithTranslation } from 'react-i18next';
 export default (props: WithTranslation): object => Yup.object().shape({
   Email: Yup.string()
     .required(props.t('ChangeEmailForm:email.required'))
-    .email(props.t('ChangeEmailForm:name.invalid')),
+    .email(props.t('ChangeEmailForm:email.invalid')),
   ConfirmEmail: Yup.string()
     .required(props.t('ChangeEmailForm:confirmEmail.required'))
     .oneOf([Yup.ref('Email')], props.t('ChangeEmailForm:confirmEmail.invalid')),

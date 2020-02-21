@@ -2,7 +2,6 @@
 import { ICreateUser } from '../../../../../../TypeScript/Interfaces/ICreateUser';
 
 export default {
-  Email: '',
-  ConfirmEmail: '',
+  Name: '',
   Password: '',
 } as ICreateUser;
