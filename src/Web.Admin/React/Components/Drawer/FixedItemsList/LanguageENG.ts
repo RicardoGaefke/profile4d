@@ -59,4 +59,5 @@ export default {
   domprofile: 'Dominant Profile',
   bigchallenge: 'Your Big Challenge',
   workkey: 'Your Key Task',
+  idealpartner: 'Your Ideal Partner',
 } as ILanguage;

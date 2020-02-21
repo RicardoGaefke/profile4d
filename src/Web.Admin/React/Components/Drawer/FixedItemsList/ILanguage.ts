@@ -56,4 +56,5 @@ export interface ILanguage {
   domprofile: string,
   bigchallenge: string,
   workkey: string,
+  idealpartner: string,
 }

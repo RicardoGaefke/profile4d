@@ -220,4 +220,8 @@ export default [
     link: 'workkey',
     title: 'workkey',
   },
+  {
+    link: 'idealpartner',
+    title: 'idealpartner',
+  },
 ] as IStaticMenuItem[];
