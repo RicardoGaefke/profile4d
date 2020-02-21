@@ -66,4 +66,5 @@ export interface ILanguage {
   noteexistentialpain: string,
   crystallizationpersonality: string,
   bodystructurefixed: string,
+  bodyshape: string,
 }

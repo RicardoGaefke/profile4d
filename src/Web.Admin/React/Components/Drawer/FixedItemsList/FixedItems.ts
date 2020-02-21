@@ -260,4 +260,8 @@ export default [
     link: 'bodystructurefixed',
     title: 'bodystructurefixed',
   },
+  {
+    link: 'bodyshape',
+    title: 'bodyshape',
+  },
 ] as IStaticMenuItem[];
