@@ -5,5 +5,5 @@ export default {
   title: 'Registration change',
   one: `1. Changing registration information <strong>immediately disconnects the user</strong>, so that a new credential is
   loaded with the updated information`,
-  two: 'Any <strong>change is pending</strong> until confirmed in the automatic email sent by the system',
+  two: 'Any <strong>change is pending</strong> until it is validated with the user\'s password',
 } as ILanguage;

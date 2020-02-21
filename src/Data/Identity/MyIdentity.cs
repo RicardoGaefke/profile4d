@@ -150,5 +150,71 @@ namespace Profile4d.Data
         }
       }
     }
+
+    public void ChangeName(int UserID, string Name, string Password, string Url)
+    {
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_CHANGE_NAME]";
+
+          Cmd.Parameters.AddWithValue("@USER", UserID);
+          Cmd.Parameters.AddWithValue("@PASSWORD", Password);
+          Cmd.Parameters.AddWithValue("@NAME", Name);
+          Cmd.Parameters.AddWithValue("@URL", Url);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+    }
+
+    public void ChangeEmail(int UserID, string Email, string Password, string Url)
+    {
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_CHANGE_EMAIL]";
+
+          Cmd.Parameters.AddWithValue("@USER", UserID);
+          Cmd.Parameters.AddWithValue("@PASSWORD", Password);
+          Cmd.Parameters.AddWithValue("@EMAIL", Email);
+          Cmd.Parameters.AddWithValue("@URL", Url);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+    }
+
+    public void ChangePassword(int UserID, string NewPassword, string Password, string Url)
+    {
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_CHANGE_PASSWORD]";
+
+          Cmd.Parameters.AddWithValue("@USER", UserID);
+          Cmd.Parameters.AddWithValue("@PASSWORD", Password);
+          Cmd.Parameters.AddWithValue("@NEW_PASSWORD", NewPassword);
+          Cmd.Parameters.AddWithValue("@URL", Url);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+    }
   }
 }

@@ -24,7 +24,7 @@ export const MyDominantWhoIAm = withFormik<WithTranslation & WithSnackbarProps &
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticIntroduction>('StaticContent/WhoIAmEdit', {
+    await myAxios(window.location.href).post<IStaticIntroduction>('StaticContent/DominantWhoIAmEdit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,
