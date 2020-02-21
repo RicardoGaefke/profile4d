@@ -66,6 +66,7 @@ import ArchetypeEssence from '../ArchetypeEssence/Page';
 import EssentialFeature from '../EssentialFeature/Page';
 import CharacterFormation from '../CharacterFormation/Page';
 import Moment from '../Moment/Page';
+import ExistentialPain from '../ExistentialPain/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -133,6 +134,7 @@ export default withRouter(
         <Route path={`${match.url}/essentialfeature`} component={EssentialFeature} />
         <Route path={`${match.url}/characterformation`} component={CharacterFormation} />
         <Route path={`${match.url}/moment`} component={Moment} />
+        <Route path={`${match.url}/existentialpain`} component={ExistentialPain} />
       </MyTemplate>
     );
   },

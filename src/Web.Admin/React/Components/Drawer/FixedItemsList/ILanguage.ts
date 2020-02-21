@@ -62,4 +62,5 @@ export interface ILanguage {
   essentialfeature: string,
   characterformation: string,
   moment: string,
+  existentialpain: string,
 }

@@ -65,4 +65,5 @@ export default {
   essentialfeature: 'Essential Feature',
   characterformation: 'Character Formation',
   moment: 'Moment',
+  existentialpain: 'Existential Pain',
 } as ILanguage;

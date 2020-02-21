@@ -244,4 +244,8 @@ export default [
     link: 'moment',
     title: 'moment',
   },
+  {
+    link: 'existentialpain',
+    title: 'existentialpain',
+  },
 ] as IStaticMenuItem[];
