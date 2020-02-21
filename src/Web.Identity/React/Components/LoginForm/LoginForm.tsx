@@ -17,11 +17,8 @@ import { ILoginForm } from '../../../../TypeScript/Interfaces/ILoginForm';
 import myAxios from '../../Utils/MyAxios';
 // eslint-disable-next-line no-unused-vars
 import { IInitialContext } from '../../../../TypeScript/Interfaces/IInitialContext';
-import { withContext } from '../../Initial/Context/StateProvider';
-
-interface IContext {
-  context: [IInitialContext, void | any]
-}
+// eslint-disable-next-line no-unused-vars
+import { withContext, IContext } from '../../Initial/Context/StateProvider';
 
 const MyForm = withFormik<WithTranslation & WithSnackbarProps & IContext, ILoginForm>({
   displayName: 'LoginForm',

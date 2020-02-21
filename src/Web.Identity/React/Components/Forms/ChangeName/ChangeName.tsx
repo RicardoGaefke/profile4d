@@ -17,14 +17,20 @@ import { ICreateUser } from '../../../../../TypeScript/Interfaces/ICreateUser';
 // eslint-disable-next-line no-unused-vars
 import { IBasicReturn } from '../../../../../TypeScript/Interfaces/IBasicReturn';
 import myAxios from '../../../Utils/MyAxios';
+// eslint-disable-next-line no-unused-vars
+import { IInitialContext } from '../../../../../TypeScript/Interfaces/IInitialContext';
+// eslint-disable-next-line no-unused-vars
+import { withContext, IContext } from '../../../Initial/Context/StateProvider';
 
-const MyForm = withFormik<WithTranslation & WithSnackbarProps & RouteComponentProps, ICreateUser>({
+const MyForm = withFormik<WithTranslation & WithSnackbarProps & RouteComponentProps & IContext, ICreateUser>({
   displayName: 'LoginForm',
   enableReinitialize: true,
   mapPropsToValues: (): ICreateUser => (InitialValues),
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t, history } = props;
+    // eslint-disable-next-line no-unused-vars
+    const [ctx, dispatch] = props.context;
     await myAxios(window.location.href).post<IBasicReturn>('Identity/ChangeName', {
       Name: values.Name,
       Password: values.Password,
@@ -34,6 +40,11 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps & RouteComponentPr
       if (data.Success) {
         enqueueSnackbar(t('ChangeNameForm:feedback.success'), {
           variant: 'success',
+        });
+
+        dispatch({
+          type: 'changeName',
+          value: values.Name,
         });
 
         history.push('/');
@@ -51,7 +62,7 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps & RouteComponentPr
   },
 })(LoginForm);
 
-const Login = withTranslation()(withSnackbar(withRouter(MyForm)));
+const Login = withTranslation()(withContext(withSnackbar(withRouter(MyForm))));
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
