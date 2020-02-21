@@ -45,8 +45,9 @@ export interface ILanguage {
   threeintelligencecenters: string,
   behavioralrespectiveenergies: string,
   identifiedconflicts: string,
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   energyspikes: string,
+  homogeneousheterogeneous: string,
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   trinityspecifics: string,
   originalxadapted: string,
 }

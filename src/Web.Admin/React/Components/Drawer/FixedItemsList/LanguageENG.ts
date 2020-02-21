@@ -48,8 +48,9 @@ export default {
   threeintelligencecenters: 'Three Intelligence Centers',
   behavioralrespectiveenergies: 'Behavioral Profiles and their Respective Energies (title)',
   identifiedconflicts: 'Identified Conflicts',
+  energyspikes: 'Behavioral Triad and Energy Spikes',
+  homogeneousheterogeneous: 'Triad (customized: Homogeneous or Heterogeneous)',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  energyspikes: 'Energy Spikes',
   trinityspecifics: 'Trinity Specifics',
   originalxadapted: 'Original Triad X Adapted Triad',
 } as ILanguage;

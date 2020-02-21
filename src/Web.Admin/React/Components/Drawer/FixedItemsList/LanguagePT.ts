@@ -48,8 +48,9 @@ export default {
   threeintelligencecenters: 'Três Centros de Inteligência',
   behavioralrespectiveenergies: 'Perfis Comportamentais e suas Respectivas Energias (título)',
   identifiedconflicts: 'Conflitos Identificados',
+  energyspikes: 'Tríade Comportamental e os Picos de Energia',
+  homogeneousheterogeneous: 'Tríade (personalizada: Homogênea ou Heterogênea)',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  energyspikes: 'Picos de Energia',
   trinityspecifics: 'Trindade Especificada',
   originalxadapted: 'Tríade Original X Tríade Adaptada',
 } as ILanguage;

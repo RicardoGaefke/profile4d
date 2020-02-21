@@ -176,11 +176,15 @@ export default [
     link: 'identifiedconflicts',
     title: 'identifiedconflicts',
   },
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'energyspikes',
     title: 'energyspikes',
   },
+  {
+    link: 'homogeneousheterogeneous',
+    title: 'homogeneousheterogeneous',
+  },
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'trinityspecifics',
     title: 'trinityspecifics',
