@@ -54,4 +54,5 @@ export interface ILanguage {
   healthyadult: string,
   synergeticmode: string,
   domprofile: string,
+  bigchallenge: string,
 }

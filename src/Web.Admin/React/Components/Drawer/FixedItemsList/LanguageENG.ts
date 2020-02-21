@@ -8,7 +8,7 @@ export default {
   introduction: 'Introduction',
   personalanalyze: 'Personal Analyze',
   inferiormind: 'Inferior Mind',
-  dominantprofile: 'Dominant Profile',
+  dominantprofile: 'Your Dominant Profile',
   competentmode: 'Competent Mode',
   dominantwhoiam: 'Who am I?',
   dominantstructure: 'The structure of your dominant profile',
@@ -57,4 +57,5 @@ export default {
   healthyadult: 'Your best version - The healthy adult',
   synergeticmode: 'Synergetic Mode (Increasing Mindset - Empowered Resources)',
   domprofile: 'Dominant Profile',
+  bigchallenge: 'Your Big Challenge',
 } as ILanguage;

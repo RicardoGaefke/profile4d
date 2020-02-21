@@ -212,4 +212,8 @@ export default [
     link: 'domprofile',
     title: 'domprofile',
   },
+  {
+    link: 'bigchallenge',
+    title: 'bigchallenge',
+  },
 ] as IStaticMenuItem[];

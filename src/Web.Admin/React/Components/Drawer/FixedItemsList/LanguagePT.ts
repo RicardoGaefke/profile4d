@@ -8,7 +8,7 @@ export default {
   introduction: 'Introdução',
   personalanalyze: 'Análise Pessoal',
   inferiormind: 'Mente Inferior',
-  dominantprofile: 'Perfil Dominante',
+  dominantprofile: 'Seu Perfil Dominante',
   competentmode: 'Modo Competente',
   dominantwhoiam: 'Quem eu sou?',
   dominantstructure: 'A estrutura do Perfil Dominante',
@@ -57,4 +57,5 @@ export default {
   healthyadult: 'Sua melhor versão - O adulto saudável',
   synergeticmode: 'Modo sinérgico (aumento da mentalidade - recursos fortalecidos)',
   domprofile: 'Perfil Dominante',
+  bigchallenge: 'Seu Grande Desafio',
 } as ILanguage;
