@@ -67,4 +67,5 @@ export default {
   moment: 'Moment',
   existentialpain: 'Existential Pain',
   noteexistentialpain: 'Existential Pain Note',
+  crystallizationpersonality: 'Crystallization of Personality',
 } as ILanguage;

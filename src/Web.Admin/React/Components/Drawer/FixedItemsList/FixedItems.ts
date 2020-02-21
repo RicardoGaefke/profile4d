@@ -252,4 +252,8 @@ export default [
     link: 'noteexistentialpain',
     title: 'noteexistentialpain',
   },
+  {
+    link: 'crystallizationpersonality',
+    title: 'crystallizationpersonality',
+  },
 ] as IStaticMenuItem[];

@@ -67,4 +67,5 @@ export default {
   moment: 'Momento',
   existentialpain: 'Dor Existencial',
   noteexistentialpain: 'Nota da Dor Existencial',
+  crystallizationpersonality: 'Processo de Cristalização da Personalidade',
 } as ILanguage;

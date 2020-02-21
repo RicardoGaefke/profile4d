@@ -68,6 +68,7 @@ import CharacterFormation from '../CharacterFormation/Page';
 import Moment from '../Moment/Page';
 import ExistentialPain from '../ExistentialPain/Page';
 import NoteExistentialPain from '../NoteExistentialPain/Page';
+import CrystallizationPersonality from '../CrystallizationPersonality/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -137,6 +138,7 @@ export default withRouter(
         <Route path={`${match.url}/moment`} component={Moment} />
         <Route path={`${match.url}/existentialpain`} component={ExistentialPain} />
         <Route path={`${match.url}/noteexistentialpain`} component={NoteExistentialPain} />
+        <Route path={`${match.url}/crystallizationpersonality`} component={CrystallizationPersonality} />
       </MyTemplate>
     );
   },
