@@ -51,6 +51,7 @@ import BehavioralRespectiveEnergies from '../BehavioralRespectiveEnergies/Page';
 import IdentifiedConflicts from '../IdentifiedConflicts/Page';
 import EnergySpikes from '../EnergySpikes/Page';
 import HomogeneousHeterogeneous from '../HomogeneousHeterogeneous/Page';
+import ExerciseProfileMoviment from '../ExerciseProfileMoviment/Page';
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import TrinitySpecifics from '../TrinitySpecifics/Page';
 import OriginalXAdapted from '../OriginalXAdapted/Page';
@@ -106,6 +107,7 @@ export default withRouter(
         <Route path={`${match.url}/identifiedconflicts`} component={IdentifiedConflicts} />
         <Route path={`${match.url}/energyspikes`} component={EnergySpikes} />
         <Route path={`${match.url}/homogeneousheterogeneous`} component={HomogeneousHeterogeneous} />
+        <Route path={`${match.url}/exerciseprofilemoviment`} component={ExerciseProfileMoviment} />
         {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/trinityspecifics`} component={TrinitySpecifics} />
         <Route path={`${match.url}/originalxadapted`} component={OriginalXAdapted} />

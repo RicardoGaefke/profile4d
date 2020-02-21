@@ -184,6 +184,10 @@ export default [
     link: 'homogeneousheterogeneous',
     title: 'homogeneousheterogeneous',
   },
+  {
+    link: 'exerciseprofilemoviment',
+    title: 'exerciseprofilemoviment',
+  },
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'trinityspecifics',
