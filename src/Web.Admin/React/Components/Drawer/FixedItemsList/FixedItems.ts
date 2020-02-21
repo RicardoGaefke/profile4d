@@ -264,4 +264,8 @@ export default [
     link: 'bodyshape',
     title: 'bodyshape',
   },
+  {
+    link: 'mainvirtueessence',
+    title: 'mainvirtueessence',
+  },
 ] as IStaticMenuItem[];

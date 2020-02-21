@@ -67,4 +67,5 @@ export interface ILanguage {
   crystallizationpersonality: string,
   bodystructurefixed: string,
   bodyshape: string,
+  mainvirtueessence: string,
 }

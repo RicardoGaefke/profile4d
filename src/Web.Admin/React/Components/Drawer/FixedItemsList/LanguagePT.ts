@@ -70,4 +70,5 @@ export default {
   crystallizationpersonality: 'Processo de Cristalização da Personalidade',
   bodystructurefixed: 'Estrutura Corporal (fixo)',
   bodyshape: 'Formato do Corpo',
+  mainvirtueessence: 'Principal virtude a desenvolver para entrar em contato com a Essência',
 } as ILanguage;
