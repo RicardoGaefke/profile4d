@@ -71,4 +71,5 @@ export default {
   bodystructurefixed: 'Body Structure (fixed)',
   bodyshape: 'Body Shape',
   mainvirtueessence: 'Main virtue to develop to get in touch with the Essence',
+  benefitsvirtueessence: 'Benefits you will get from getting in touch with Essence',
 } as ILanguage;

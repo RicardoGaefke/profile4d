@@ -68,4 +68,5 @@ export interface ILanguage {
   bodystructurefixed: string,
   bodyshape: string,
   mainvirtueessence: string,
+  benefitsvirtueessence: string,
 }

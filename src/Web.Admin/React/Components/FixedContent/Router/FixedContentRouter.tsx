@@ -72,6 +72,7 @@ import CrystallizationPersonality from '../CrystallizationPersonality/Page';
 import BodyStructureFixed from '../BodyStructureFixed/Page';
 import BodyShape from '../BodyShape/Page';
 import MainVirtueEssence from '../MainVirtueEssence/Page';
+import BenefitsVirtueEssence from '../BenefitsVirtueEssence/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -145,6 +146,7 @@ export default withRouter(
         <Route path={`${match.url}/bodystructurefixed`} component={BodyStructureFixed} />
         <Route path={`${match.url}/bodyshape`} component={BodyShape} />
         <Route path={`${match.url}/mainvirtueessence`} component={MainVirtueEssence} />
+        <Route path={`${match.url}/benefitsvirtueessence`} component={BenefitsVirtueEssence} />
       </MyTemplate>
     );
   },

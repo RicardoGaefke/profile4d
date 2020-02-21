@@ -268,4 +268,8 @@ export default [
     link: 'mainvirtueessence',
     title: 'mainvirtueessence',
   },
+  {
+    link: 'benefitsvirtueessence',
+    title: 'benefitsvirtueessence',
+  },
 ] as IStaticMenuItem[];
