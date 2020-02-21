@@ -17,8 +17,10 @@ import { ILoginForm } from '../../../../TypeScript/Interfaces/ILoginForm';
 import myAxios from '../../Utils/MyAxios';
 // eslint-disable-next-line no-unused-vars
 import { IInitialContext } from '../../../../TypeScript/Interfaces/IInitialContext';
+// eslint-disable-next-line no-unused-vars
+import { withContext, IContext } from '../../Initial/Context/StateProvider';
 
-const MyForm = withFormik<WithTranslation & WithSnackbarProps, ILoginForm>({
+const MyForm = withFormik<WithTranslation & WithSnackbarProps & IContext, ILoginForm>({
   displayName: 'LoginForm',
   enableReinitialize: true,
   mapPropsToValues: (): ILoginForm => (InitialValues),
@@ -31,10 +33,27 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps, ILoginForm>({
       KeepConnected: values.KeepConnected,
     }).then((response): void => {
       const { data } = response;
+      // eslint-disable-next-line no-unused-vars
+      const [ctx, dispatch] = props.context;
 
       if (data.Success) {
         enqueueSnackbar(t('LoginForm:feedback.success'), {
           variant: 'success',
+        });
+
+        dispatch({
+          type: 'changeName',
+          value: data.Name,
+        });
+
+        dispatch({
+          type: 'changeEmail',
+          value: data.Email,
+        });
+
+        dispatch({
+          type: 'changeAuth',
+          value: data.Success,
         });
 
         const UrlParams = new URLSearchParams(window.location.search);
@@ -57,7 +76,7 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps, ILoginForm>({
   },
 })(LoginForm);
 
-const Login = withTranslation()(withSnackbar(MyForm));
+const Login = withTranslation()(withContext(withSnackbar(MyForm)));
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {

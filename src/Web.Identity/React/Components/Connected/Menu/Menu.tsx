@@ -11,10 +11,12 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { withTranslation, WithTranslation } from 'react-i18next';
 import setLanguage from './Language';
 import SignOut from './SignOut';
+import useStyles from './Styles';
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement => {
     const { t } = props;
+    const classes = useStyles();
     setLanguage();
 
     return (
@@ -29,7 +31,7 @@ export default withTranslation()(
           )
         }
       >
-        <ListItem button component={NavLink} to="/connected/changeName">
+        <ListItem button component={NavLink} to="/connected/changeName" className={classes.navlink}>
           <ListItemIcon>
             <LoyaltyIcon />
           </ListItemIcon>
@@ -38,7 +40,7 @@ export default withTranslation()(
             title={t('Connected:changeName.title')}
           />
         </ListItem>
-        <ListItem button component={NavLink} to="/connected/changeEmail">
+        <ListItem button component={NavLink} to="/connected/changeEmail" className={classes.navlink}>
           <ListItemIcon>
             <AlternateEmailIcon />
           </ListItemIcon>
@@ -47,7 +49,7 @@ export default withTranslation()(
             title={t('Connected:changeEmail.title')}
           />
         </ListItem>
-        <ListItem button component={NavLink} to="/connected/changePassord">
+        <ListItem button component={NavLink} to="/connected/changePassword" className={classes.navlink}>
           <ListItemIcon>
             <VpnKeyIcon />
           </ListItemIcon>

@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Profile4d.Data;
 using Profile4d.Domain;
@@ -17,11 +19,13 @@ namespace Profile4d.Web.Api.Controllers
     {
     private readonly ILogger<IdentityController> _logger;
     private readonly MyIdentity _myIdentity;
+    private readonly IHttpContextAccessor _httpContextAccessor;
 
-    public IdentityController(ILogger<IdentityController> logger, MyIdentity MyIdentity)
+    public IdentityController(ILogger<IdentityController> logger, MyIdentity MyIdentity, IHttpContextAccessor httpContextAccessor)
     {
       _logger = logger;
       _myIdentity = MyIdentity;
+      _httpContextAccessor = httpContextAccessor;
     }
 
     [HttpPost("SignIn")]
@@ -134,6 +138,102 @@ namespace Profile4d.Web.Api.Controllers
 
         return _return;
       }
+    }
+
+    [HttpPost("ChangeName")]
+    public ActionResult<BasicReturn> ChangeName(User user)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        int _userID = Convert.ToInt32(User.FindFirst(claim => claim.Type == "UserID")?.Value);
+        string _url = _httpContextAccessor.HttpContext.Request.Host + _httpContextAccessor.HttpContext.Request.Path;
+        _myIdentity.ChangeName(_userID, user.Name, user.Password, _url);
+
+        _return.Success = true;
+      }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = ex.Number.ToString();
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+
+      return _return;
+    }
+
+    [HttpPost("ChangeEmail")]
+    public ActionResult<BasicReturn> ChangeEmail(User user)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        int _userID = Convert.ToInt32(User.FindFirst(claim => claim.Type == "UserID")?.Value);
+        string _url = _httpContextAccessor.HttpContext.Request.Host + _httpContextAccessor.HttpContext.Request.Path;
+        _myIdentity.ChangeEmail(_userID, user.Email, user.Password, _url);
+
+        _return.Success = true;
+      }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = ex.Number.ToString();
+
+        return _return;
+      }
+      catch (Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+
+      return _return;
+    }
+
+    [HttpPost("ChangePassword")]
+    public ActionResult<BasicReturn> ChangePassword(User user)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        int _userID = Convert.ToInt32(User.FindFirst(claim => claim.Type == "UserID")?.Value);
+        string _url = _httpContextAccessor.HttpContext.Request.Host + _httpContextAccessor.HttpContext.Request.Path;
+        _myIdentity.ChangePassword(_userID, user.NewPassword, user.Password, _url);
+
+        _return.Success = true;
+      }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = ex.Number.ToString();
+
+        return _return;
+      }
+      catch (Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+
+      return _return;
     }
   }
 }
