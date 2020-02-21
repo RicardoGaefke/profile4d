@@ -31,8 +31,8 @@ export interface IContext {
 
 export const withContext = (Component): any => (props: React.Props<any>): React.ReactElement => (
   <StateContext.Consumer>
-    {(context): React.ReactElement => (
-      <Component {...props} context={context} />
+    {(context: [IInitialContext, void]): React.ReactElement => (
+      <Component {...props} context={context as [IInitialContext, void]} />
     )
   }
   </StateContext.Consumer>

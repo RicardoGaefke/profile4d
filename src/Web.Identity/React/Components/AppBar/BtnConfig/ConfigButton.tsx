@@ -10,7 +10,7 @@ export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
     // eslint-disable-next-line no-unused-vars
     const { t } = props;
-    const [{ Config, IsAuthenticated }, dispatch] = useStateValue();
+    const [{ Config }, dispatch] = useStateValue();
     setLanguage();
 
     const toggleConfig = (): void => {
@@ -23,8 +23,7 @@ export default withTranslation()(
     return (
       <Button
         color="inherit"
-        // title={t('CustomBtnConfig:title')}
-        title={IsAuthenticated.toString()}
+        title={t('CustomBtnConfig:title')}
         onClick={toggleConfig}
       >
         <TuneIcon />
