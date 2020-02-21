@@ -151,10 +151,8 @@ namespace Profile4d.Data
       }
     }
 
-    public BasicReturn ChangeName(int UserID, string Name, string Password, string Url)
+    public void ChangeName(int UserID, string Name, string Password, string Url)
     {
-      BasicReturn _return = new BasicReturn();
-
       using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
       {
         using (SqlCommand Cmd = new SqlCommand())
@@ -173,8 +171,28 @@ namespace Profile4d.Data
           Cmd.ExecuteNonQuery();
         }
       }
+    }
 
-      return _return;
+    public void ChangeEmail(int UserID, string Email, string Password, string Url)
+    {
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_CHANGE_EMAIL]";
+
+          Cmd.Parameters.AddWithValue("@USER", UserID);
+          Cmd.Parameters.AddWithValue("@PASSWORD", Password);
+          Cmd.Parameters.AddWithValue("@EMAIL", Email);
+          Cmd.Parameters.AddWithValue("@URL", Url);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
     }
   }
 }

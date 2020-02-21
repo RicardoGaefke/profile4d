@@ -31,20 +31,21 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps & RouteComponentPr
     const { enqueueSnackbar, t, history } = props;
     // eslint-disable-next-line no-unused-vars
     const [ctx, dispatch] = props.context;
-    await myAxios(window.location.href).post<IBasicReturn>('Identity/ChangeName', {
-      Name: values.Name,
+    await myAxios(window.location.href).post<IBasicReturn>('Identity/ChangeEmail', {
+      Email: values.Email,
+      ConfirmEmail: values.ConfirmEmail,
       Password: values.Password,
     }).then((response): void => {
       const { data } = response;
 
       if (data.Success) {
-        enqueueSnackbar(t('ChangeNameForm:feedback.success'), {
+        enqueueSnackbar(t('ChangeEmailForm:feedback.success'), {
           variant: 'success',
         });
 
         dispatch({
-          type: 'changeName',
-          value: values.Name,
+          type: 'changeEmail',
+          value: values.Email,
         });
 
         dispatch({
@@ -54,12 +55,19 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps & RouteComponentPr
 
         history.push('/');
       } else {
-        enqueueSnackbar(t('ChangeNameForm:feedback.failure'), {
-          variant: 'error',
-        });
+        // eslint-disable-next-line no-lonely-if
+        if (data.Code === '50500') {
+          enqueueSnackbar(t('ChangeEmailForm:blockedEmail.text'), {
+            variant: 'error',
+          });
+        } else {
+          enqueueSnackbar(t('ChangeEmailForm:feedback.failure'), {
+            variant: 'error',
+          });
+        }
       }
     }).catch((): void => {
-      enqueueSnackbar(t('ChangeNameForm:feedback.failure'), {
+      enqueueSnackbar(t('ChangeEmailForm:feedback.failure'), {
         variant: 'error',
       });
     });
@@ -82,7 +90,7 @@ export default withTranslation()(
           align="center"
           variant="h5"
         >
-          {t('ChangeNameForm:title')}
+          {t('ChangeEmailForm:title')}
         </Typography>
         <Login />
       </div>

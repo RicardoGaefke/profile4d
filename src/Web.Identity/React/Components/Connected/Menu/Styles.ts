@@ -3,6 +3,7 @@ import { makeStyles, Theme } from '@material-ui/core/styles';
 
 interface IStyles {
   navlink: {},
+  icon: {},
 }
 
 export default makeStyles((): IStyles => ({
@@ -10,6 +11,12 @@ export default makeStyles((): IStyles => ({
     '&.active': {
       backgroundColor: 'lightgray',
       color: 'black',
+      '& .MuiSvgIcon-root': {
+        color: 'black',
+      },
     },
+  },
+  icon: {
+    color: 'black',
   },
 }));

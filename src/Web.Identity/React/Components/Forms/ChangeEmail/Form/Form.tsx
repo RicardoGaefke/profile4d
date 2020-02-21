@@ -51,8 +51,8 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <Alert
-            title={t('ChangeNameForm:alert.title')}
-            text={t('ChangeNameForm:alert.text')}
+            title={t('ChangeEmailForm:alert.title')}
+            text={t('ChangeEmailForm:alert.text')}
             severity="warning"
           />
         </Grid>
@@ -62,16 +62,35 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <TextField
-            margin="dense"
-            error={errors.Name as any && touched.Name as any}
-            label={t('ChangeNameForm:name.text')}
-            title={t('ChangeNameForm:name.title')}
-            name="Name"
-            id="Name"
-            value={values.Name}
+            error={errors.Email as any && touched.Email as any}
+            label={t('ChangeEmailForm:email.title')}
+            title={t('ChangeEmailForm:email.text')}
+            name="Email"
+            id="Change-Email"
+            value={values.Email}
             onChange={handleChange}
             onBlur={handleBlur}
-            helperText={(errors.Name && touched.Name) && errors.Name}
+            helperText={(errors.Email && touched.Email) && errors.Email}
+            variant="outlined"
+            className={classes.item}
+            fullWidth
+          />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={12}
+        >
+          <TextField
+            error={errors.ConfirmEmail as any && touched.ConfirmEmail as any}
+            label={t('ChangeEmailForm:confirmEmail.title')}
+            title={t('ChangeEmailForm:confirmEmail.text')}
+            name="ConfirmEmail"
+            id="Change-ConfirmEmail"
+            value={values.ConfirmEmail}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            helperText={(errors.ConfirmEmail && touched.ConfirmEmail) && errors.ConfirmEmail}
             variant="outlined"
             className={classes.item}
             fullWidth
@@ -85,8 +104,8 @@ export default (props: IForm): React.ReactElement<IForm> => {
           <TextField
             margin="dense"
             error={errors.Password as any && touched.Password as any}
-            label={t('ChangeNameForm:password.text')}
-            title={t('ChangeNameForm:password.title')}
+            label={t('ChangeEmailForm:password.text')}
+            title={t('ChangeEmailForm:password.title')}
             name="Password"
             id="Password"
             type="password"
@@ -109,10 +128,10 @@ export default (props: IForm): React.ReactElement<IForm> => {
             color="primary"
             variant="contained"
             type="submit"
-            title={t('ChangeNameForm:button.title')}
+            title={t('ChangeEmailForm:button.title')}
             disabled={isSubmitting}
           >
-            {t('ChangeNameForm:button.text')}
+            {t('ChangeEmailForm:button.text')}
           </Button>
         </Grid>
       </Grid>

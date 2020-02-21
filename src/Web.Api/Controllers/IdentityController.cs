@@ -1,6 +1,6 @@
-using System.Data.SqlTypes;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
@@ -153,15 +153,47 @@ namespace Profile4d.Web.Api.Controllers
 
         _return.Success = true;
       }
-      catch (SqlTypeException ex)
+      catch (SqlException ex)
       {
         _return.Success = false;
         _return.Message = ex.Message;
-        _return.Code = ex.HResult.ToString();
+        _return.Code = ex.Number.ToString();
 
         return _return;
       }
       catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+
+      return _return;
+    }
+
+    [HttpPost("ChangeEmail")]
+    public ActionResult<BasicReturn> ChangeEmail(User user)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        int _userID = Convert.ToInt32(User.FindFirst(claim => claim.Type == "UserID")?.Value);
+        string _url = _httpContextAccessor.HttpContext.Request.Host + _httpContextAccessor.HttpContext.Request.Path;
+        _myIdentity.ChangeEmail(_userID, user.Email, user.Password, _url);
+
+        _return.Success = true;
+      }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = ex.Number.ToString();
+
+        return _return;
+      }
+      catch (Exception ex)
       {
         _return.Success = false;
         _return.Message = ex.Message;
