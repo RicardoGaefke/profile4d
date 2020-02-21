@@ -61,4 +61,5 @@ export interface ILanguage {
   archetypeessence: string,
   essentialfeature: string,
   characterformation: string,
+  moment: string,
 }

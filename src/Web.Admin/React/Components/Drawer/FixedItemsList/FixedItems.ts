@@ -240,4 +240,8 @@ export default [
     link: 'characterformation',
     title: 'characterformation',
   },
+  {
+    link: 'moment',
+    title: 'moment',
+  },
 ] as IStaticMenuItem[];

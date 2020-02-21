@@ -64,4 +64,5 @@ export default {
   archetypeessence: 'Discovering your Archetype - Its Essence',
   essentialfeature: 'Essential Feature',
   characterformation: 'Character Formation',
+  moment: 'Moment',
 } as ILanguage;
