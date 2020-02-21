@@ -256,4 +256,8 @@ export default [
     link: 'crystallizationpersonality',
     title: 'crystallizationpersonality',
   },
+  {
+    link: 'bodystructurefixed',
+    title: 'bodystructurefixed',
+  },
 ] as IStaticMenuItem[];

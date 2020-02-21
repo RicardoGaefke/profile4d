@@ -68,4 +68,5 @@ export default {
   existentialpain: 'Existential Pain',
   noteexistentialpain: 'Existential Pain Note',
   crystallizationpersonality: 'Crystallization of Personality',
+  bodystructurefixed: 'Body Structure (fixed)',
 } as ILanguage;

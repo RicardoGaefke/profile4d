@@ -68,4 +68,5 @@ export default {
   existentialpain: 'Dor Existencial',
   noteexistentialpain: 'Nota da Dor Existencial',
   crystallizationpersonality: 'Processo de Cristalização da Personalidade',
+  bodystructurefixed: 'Estrutura Corporal (fixo)',
 } as ILanguage;
