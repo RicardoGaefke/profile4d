@@ -57,6 +57,7 @@ import ExerciseProfileMoviment from '../ExerciseProfileMoviment/Page';
 import SuperiorMind from '../SuperiorMind/Page';
 import HealthyAdult from '../HealthyAdult/Page';
 import SynergeticMode from '../SynergeticMode/Page';
+import DomProfile from '../DomProfile/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -115,6 +116,7 @@ export default withRouter(
         <Route path={`${match.url}/superiormind`} component={SuperiorMind} />
         <Route path={`${match.url}/healthyadult`} component={HealthyAdult} />
         <Route path={`${match.url}/synergeticmode`} component={SynergeticMode} />
+        <Route path={`${match.url}/domprofile`} component={DomProfile} />
       </MyTemplate>
     );
   },

@@ -53,4 +53,5 @@ export interface ILanguage {
   superiormind: string,
   healthyadult: string,
   synergeticmode: string,
+  domprofile: string,
 }

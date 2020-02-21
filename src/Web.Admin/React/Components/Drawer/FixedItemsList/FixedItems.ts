@@ -208,4 +208,8 @@ export default [
     link: 'synergeticmode',
     title: 'synergeticmode',
   },
+  {
+    link: 'domprofile',
+    title: 'domprofile',
+  },
 ] as IStaticMenuItem[];

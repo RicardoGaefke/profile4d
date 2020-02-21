@@ -56,4 +56,5 @@ export default {
   superiormind: 'Superior Mind (title)',
   healthyadult: 'Your best version - The healthy adult',
   synergeticmode: 'Synergetic Mode (Increasing Mindset - Empowered Resources)',
+  domprofile: 'Dominant Profile',
 } as ILanguage;
