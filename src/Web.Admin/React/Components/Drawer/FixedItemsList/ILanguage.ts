@@ -59,4 +59,5 @@ export interface ILanguage {
   idealpartner: string,
   behavioraldna: string,
   archetypeessence: string,
+  essentialfeature: string,
 }

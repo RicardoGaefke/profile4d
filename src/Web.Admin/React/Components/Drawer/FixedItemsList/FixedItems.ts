@@ -232,4 +232,8 @@ export default [
     link: 'archetypeessence',
     title: 'archetypeessence',
   },
+  {
+    link: 'essentialfeature',
+    title: 'essentialfeature',
+  },
 ] as IStaticMenuItem[];

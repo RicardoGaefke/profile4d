@@ -62,4 +62,5 @@ export default {
   idealpartner: 'Seu Parceiro Ideal',
   behavioraldna: 'Síntese do seu DNA comportamental',
   archetypeessence: 'Descobrindo seu Arquétipo – Sua Essência',
+  essentialfeature: 'Característica Essencial',
 } as ILanguage;
