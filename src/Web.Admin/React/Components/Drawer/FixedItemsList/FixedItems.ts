@@ -188,6 +188,10 @@ export default [
     link: 'exerciseprofilemoviment',
     title: 'exerciseprofilemoviment',
   },
+  {
+    link: 'superiormind',
+    title: 'superiormind',
+  },
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'trinityspecifics',

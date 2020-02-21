@@ -51,6 +51,7 @@ export default {
   energyspikes: 'Tríade Comportamental e os Picos de Energia',
   homogeneousheterogeneous: 'Tríade (personalizada: Homogênea ou Heterogênea)',
   exerciseprofilemoviment: 'Exercício para verificar o Movimento do Perfil',
+  superiormind: 'Mente Superior (título)',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   trinityspecifics: 'Trindade Especificada',
   originalxadapted: 'Tríade Original X Tríade Adaptada',

@@ -51,6 +51,7 @@ export default {
   energyspikes: 'Behavioral Triad and Energy Spikes',
   homogeneousheterogeneous: 'Triad (customized: Homogeneous or Heterogeneous)',
   exerciseprofilemoviment: 'Exercise to check the Profile Movement',
+  superiormind: 'Superior Mind (title)',
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   trinityspecifics: 'Trinity Specifics',
   originalxadapted: 'Original Triad X Adapted Triad',
