@@ -49,10 +49,31 @@ import PDI from '../PDI/Page';
 import ThreeIntelligenceCenters from '../ThreeIntelligenceCenters/Page';
 import BehavioralRespectiveEnergies from '../BehavioralRespectiveEnergies/Page';
 import IdentifiedConflicts from '../IdentifiedConflicts/Page';
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import EnergySpikes from '../EnergySpikes/Page';
+import HomogeneousHeterogeneous from '../HomogeneousHeterogeneous/Page';
 import TrinitySpecifics from '../TrinitySpecifics/Page';
 import OriginalXAdapted from '../OriginalXAdapted/Page';
+import ExerciseProfileMoviment from '../ExerciseProfileMoviment/Page';
+import SuperiorMind from '../SuperiorMind/Page';
+import HealthyAdult from '../HealthyAdult/Page';
+import SynergeticMode from '../SynergeticMode/Page';
+import DomProfile from '../DomProfile/Page';
+import BigChallenge from '../BigChallenge/Page';
+import WorkKey from '../WorkKey/Page';
+import IdealPartner from '../IdealPartner/Page';
+import BehavioralDNA from '../BehavioralDNA/Page';
+import ArchetypeEssence from '../ArchetypeEssence/Page';
+import EssentialFeature from '../EssentialFeature/Page';
+import CharacterFormation from '../CharacterFormation/Page';
+import Moment from '../Moment/Page';
+import ExistentialPain from '../ExistentialPain/Page';
+import NoteExistentialPain from '../NoteExistentialPain/Page';
+import CrystallizationPersonality from '../CrystallizationPersonality/Page';
+import BodyStructureFixed from '../BodyStructureFixed/Page';
+import BodyShape from '../BodyShape/Page';
+import MainVirtueEssence from '../MainVirtueEssence/Page';
+import BenefitsVirtueEssence from '../BenefitsVirtueEssence/Page';
+import TwelveCharacterAdultStrengths from '../TwelveCharacterAdultStrengths/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -103,10 +124,31 @@ export default withRouter(
         <Route path={`${match.url}/threeintelligencecenters`} component={ThreeIntelligenceCenters} />
         <Route path={`${match.url}/behavioralrespectiveenergies`} component={BehavioralRespectiveEnergies} />
         <Route path={`${match.url}/identifiedconflicts`} component={IdentifiedConflicts} />
-        {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/energyspikes`} component={EnergySpikes} />
+        <Route path={`${match.url}/homogeneousheterogeneous`} component={HomogeneousHeterogeneous} />
         <Route path={`${match.url}/trinityspecifics`} component={TrinitySpecifics} />
         <Route path={`${match.url}/originalxadapted`} component={OriginalXAdapted} />
+        <Route path={`${match.url}/exerciseprofilemoviment`} component={ExerciseProfileMoviment} />
+        <Route path={`${match.url}/superiormind`} component={SuperiorMind} />
+        <Route path={`${match.url}/healthyadult`} component={HealthyAdult} />
+        <Route path={`${match.url}/synergeticmode`} component={SynergeticMode} />
+        <Route path={`${match.url}/domprofile`} component={DomProfile} />
+        <Route path={`${match.url}/bigchallenge`} component={BigChallenge} />
+        <Route path={`${match.url}/workkey`} component={WorkKey} />
+        <Route path={`${match.url}/idealpartner`} component={IdealPartner} />
+        <Route path={`${match.url}/behavioraldna`} component={BehavioralDNA} />
+        <Route path={`${match.url}/archetypeessence`} component={ArchetypeEssence} />
+        <Route path={`${match.url}/essentialfeature`} component={EssentialFeature} />
+        <Route path={`${match.url}/characterformation`} component={CharacterFormation} />
+        <Route path={`${match.url}/moment`} component={Moment} />
+        <Route path={`${match.url}/existentialpain`} component={ExistentialPain} />
+        <Route path={`${match.url}/noteexistentialpain`} component={NoteExistentialPain} />
+        <Route path={`${match.url}/crystallizationpersonality`} component={CrystallizationPersonality} />
+        <Route path={`${match.url}/bodystructurefixed`} component={BodyStructureFixed} />
+        <Route path={`${match.url}/bodyshape`} component={BodyShape} />
+        <Route path={`${match.url}/mainvirtueessence`} component={MainVirtueEssence} />
+        <Route path={`${match.url}/benefitsvirtueessence`} component={BenefitsVirtueEssence} />
+        <Route path={`${match.url}/twelvecharacteradultstrengths`} component={TwelveCharacterAdultStrengths} />
       </MyTemplate>
     );
   },
