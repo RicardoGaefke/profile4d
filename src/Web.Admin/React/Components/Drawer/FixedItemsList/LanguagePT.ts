@@ -72,4 +72,5 @@ export default {
   bodyshape: 'Formato do Corpo',
   mainvirtueessence: 'Principal virtude a desenvolver para entrar em contato com a Essência',
   benefitsvirtueessence: 'Benefícios que terá ao entrar em contato com Essência',
+  twelvecharacteradultstrengths: 'Doze Forças do caráter do Adulto Saudável',
 } as ILanguage;

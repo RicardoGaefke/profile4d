@@ -72,4 +72,5 @@ export default {
   bodyshape: 'Body Shape',
   mainvirtueessence: 'Main virtue to develop to get in touch with the Essence',
   benefitsvirtueessence: 'Benefits you will get from getting in touch with Essence',
+  twelvecharacteradultstrengths: 'Twelve Strengths of the Healthy Adult',
 } as ILanguage;

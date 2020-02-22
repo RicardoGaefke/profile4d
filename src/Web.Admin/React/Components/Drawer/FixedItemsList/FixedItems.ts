@@ -272,4 +272,8 @@ export default [
     link: 'benefitsvirtueessence',
     title: 'benefitsvirtueessence',
   },
+  {
+    link: 'twelvecharacteradultstrengths',
+    title: 'twelvecharacteradultstrengths',
+  },
 ] as IStaticMenuItem[];

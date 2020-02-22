@@ -69,4 +69,5 @@ export interface ILanguage {
   bodyshape: string,
   mainvirtueessence: string,
   benefitsvirtueessence: string,
+  twelvecharacteradultstrengths: string,
 }
