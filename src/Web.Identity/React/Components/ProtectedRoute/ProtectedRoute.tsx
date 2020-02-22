@@ -4,6 +4,7 @@ import {
   Route, useHistory, RouteProps,
 } from 'react-router-dom';
 import MyAxios from '../../Utils/MyAxios';
+import Loading from '../Connected/Loading/Loading';
 // eslint-disable-next-line no-unused-vars
 import { IInitialContext } from '../../../../TypeScript/Interfaces/IInitialContext';
 
@@ -12,12 +13,6 @@ interface IProps {
   path: string,
   component: React.ComponentType<any>,
 }
-
-const Loading = (): React.ReactElement => (
-  <div>
-    Loading
-  </div>
-);
 
 export default ({ component: Component, ...rest }: IProps): React.ReactElement<IProps> => {
   const [loading, setLoading] = useState(true);
