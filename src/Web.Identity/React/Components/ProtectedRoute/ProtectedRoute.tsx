@@ -1,24 +1,52 @@
-import React, { useEffect, useState } from 'react';
-// eslint-disable-next-line no-unused-vars
-import { Route, useHistory, RouteProps } from 'react-router-dom';
-
-export default (props: RouteProps): React.ReactElement<RouteProps> => {
-  const [logged, setLogged] = useState(false);
-  const { path, component } = props;
+import React, { useState, useEffect } from 'react';
+import {
   // eslint-disable-next-line no-unused-vars
-  const history = useHistory();
+  Route, useHistory, RouteProps,
+} from 'react-router-dom';
+import MyAxios from '../../Utils/MyAxios';
+// eslint-disable-next-line no-unused-vars
+import { IInitialContext } from '../../../../TypeScript/Interfaces/IInitialContext';
+
+interface IProps {
+  exact?: boolean,
+  path: string,
+  component: React.ComponentType<any>,
+}
+
+const Loading = (): React.ReactElement => (
+  <div>
+    Loading
+  </div>
+);
+
+export default ({ component: Component, ...rest }: IProps): React.ReactElement<IProps> => {
+  const [loading, setLoading] = useState(true);
+  const hist = useHistory();
 
   useEffect((): void => {
-    setLogged(true);
+    const useEffAsync = async (): Promise<void> => {
+      await MyAxios(window.location.href).get<boolean>('Identity/IsAuthenticated',
+        {}).then((response): void => {
+        const { data } = response;
+
+        if (!data) {
+          hist.push('/');
+          return;
+        }
+
+        setLoading(false);
+      });
+    };
+
+    useEffAsync();
   }, []);
 
   return (
-    <>
-      {
-        (logged === null)
-          ? <div>loading</div>
-          : <Route path={path} component={component} />
-      }
-    </>
+    <Route
+      {...rest}
+      render={(props): React.ReactElement => (
+        (loading) ? <Loading /> : (<Component {...props} />)
+      )}
+    />
   );
 };
