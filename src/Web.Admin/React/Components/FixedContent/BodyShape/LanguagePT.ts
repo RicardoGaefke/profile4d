@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos do Formato do Corpo  do relatório',
+  title: 'Dados estáticos do Formato do Corpo do relatório',
   titlePT: {
     text: 'Título em Português',
     title: 'Título do relatório em Português',
