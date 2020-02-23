@@ -94,7 +94,7 @@ export default {
   dominantprofilename: 'Name of Dominant Profile',
   internalparnerone: 'Internal Partner Name (first)',
   internalpartnertwo: 'Internal Partner Name (second)',
-  nameidealpartner: 'Ideal partner name',
+  nameidealpartner: 'Ideal Partner Name',
   behavioralresources: 'Behavioral Profile Resource',
   twelvecompetencestable: 'Table of twelve competencies',
 } as ILanguage;
