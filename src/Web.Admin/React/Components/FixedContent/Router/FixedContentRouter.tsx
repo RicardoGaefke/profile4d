@@ -75,6 +75,29 @@ import MainVirtueEssence from '../MainVirtueEssence/Page';
 import BenefitsVirtueEssence from '../BenefitsVirtueEssence/Page';
 import TwelveCharacterAdultStrengths from '../TwelveCharacterAdultStrengths/Page';
 import TwelveCompetencesApresentation from '../TwelveCompetencesApresentation/Page';
+import FourCompetentStages from '../FourCompetentStages/Page';
+import Observation from '../Observation/Page';
+// import TwelveCompetences from '../TwelveCompetences/Page';
+// import ExcellentCompromise from '../ExcellentCompromise/Page';
+// import ConflictsResolution from '../ConflictsResolution/Page';
+// import Adaptability from '../Adaptability/Page';
+// import Proactivity from '../Proactivity/Page';
+// import InternationalRelationship from '../InternationalRelationship/Page';
+// import ClientOrientation from '../ClientOrientation/Page';
+// import PeoplesDevolopment from '../PeoplesDevolopment/Page';
+// import NegotiationPersuation from '../NegotiationPersuation/Page';
+// import InovationCriativity from '../InovationCriativity/Page';
+// import EntrepreneurOrientation from '../EntrepreneurOrientation/Page';
+// import StrategicalPlanning from '../StrategicalPlanning/Page';
+// import SystemicalVision from '../SystemicalVision/Page';
+// import EnergyByArea from '../EnergyByArea/Page';
+// import LastPageResume from '../LastPageResume/Page';
+// import DominantProfileName from '../DominantProfileName/Page';
+// import InternalParnerOne from '../InternalParnerOne/Page';
+// import InternalPartnerTwo from '../InternalParnerTwo/Page';
+// import NameIdealPartner from '../NameIdealPartner/Page';
+// import BehavioralResources from '../BehavioralResources/Page';
+// import TwelveCompetencesTable from '../TwelveCompetencesTable/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -151,6 +174,29 @@ export default withRouter(
         <Route path={`${match.url}/benefitsvirtueessence`} component={BenefitsVirtueEssence} />
         <Route path={`${match.url}/twelvecharacteradultstrengths`} component={TwelveCharacterAdultStrengths} />
         <Route path={`${match.url}/twelvecompetencesapresentation`} component={TwelveCompetencesApresentation} />
+        <Route path={`${match.url}/fourcompetentstages`} component={FourCompetentStages} />
+        <Route path={`${match.url}/Observation`} component={Observation} />
+        {/* <Route path={`${match.url}/twelvecompetences`} component={TwelveCompetences} />
+        <Route path={`${match.url}/excellentcompromise`} component={ExcellentCompromise} />
+        <Route path={`${match.url}/conflictsresolution`} component={ConflictsResolution} />
+        <Route path={`${match.url}/adaptability`} component={Adaptability} />
+        <Route path={`${match.url}/proactivity`} component={Proactivity} />
+        <Route path={`${match.url}/internationalrelationship`} component={InternationalRelationship} />
+        <Route path={`${match.url}/clientorientation`} component={ClientOrientation} />
+        <Route path={`${match.url}/peoplesdevolopment`} component={PeoplesDevolopment} />
+        <Route path={`${match.url}/negotiationpersuation`} component={NegotiationPersuation} />
+        <Route path={`${match.url}/inovationcriativity`} component={InovationCriativity} />
+        <Route path={`${match.url}/entrepreneurorientation`} component={EntrepreneurOrientation} />
+        <Route path={`${match.url}/strategicalplanning`} component={StrategicalPlanning} />
+        <Route path={`${match.url}/systemicalvision`} component={SystemicalVision} />
+        <Route path={`${match.url}/energybyarea`} component={EnergyByArea} />
+        <Route path={`${match.url}/lastpageresume`} component={LastPageResume} />
+        <Route path={`${match.url}/dominantprofilename`} component={DominantProfileName} />
+        <Route path={`${match.url}/internalparnerone`} component={InternalParnerOne} />
+        <Route path={`${match.url}/internalpartnertwo`} component={InternalPartnerTwo} />
+        <Route path={`${match.url}/nameidealpartner`} component={NameIdealPartner} />
+        <Route path={`${match.url}/behavioralresources`} component={BehavioralResources} />
+        <Route path={`${match.url}/twelvecompetencestable`} component={TwelveCompetencesTable} /> */}
       </MyTemplate>
     );
   },
