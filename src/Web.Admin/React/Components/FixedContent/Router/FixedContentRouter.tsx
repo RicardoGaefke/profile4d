@@ -84,7 +84,7 @@ import ExcellentCompromise from '../ExcellentCompromise/Page';
 // import Proactivity from '../Proactivity/Page';
 // import InternationalRelationship from '../InternationalRelationship/Page';
 // import ClientOrientation from '../ClientOrientation/Page';
-// import PeoplesDevolopment from '../PeoplesDevolopment/Page';
+// import PeoplesDevelopment from '../PeoplesDevelopment/Page';
 // import NegotiationPersuation from '../NegotiationPersuation/Page';
 // import InovationCriativity from '../InovationCriativity/Page';
 // import EntrepreneurOrientation from '../EntrepreneurOrientation/Page';
@@ -183,7 +183,7 @@ export default withRouter(
         <Route path={`${match.url}/proactivity`} component={Proactivity} />
         <Route path={`${match.url}/internationalrelationship`} component={InternationalRelationship} />
         <Route path={`${match.url}/clientorientation`} component={ClientOrientation} />
-        <Route path={`${match.url}/peoplesdevolopment`} component={PeoplesDevolopment} />
+        <Route path={`${match.url}/peoplesdevelopment`} component={PeoplesDevelopment} />
         <Route path={`${match.url}/negotiationpersuation`} component={NegotiationPersuation} />
         <Route path={`${match.url}/inovationcriativity`} component={InovationCriativity} />
         <Route path={`${match.url}/entrepreneurorientation`} component={EntrepreneurOrientation} />

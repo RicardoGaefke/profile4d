@@ -80,7 +80,7 @@ export interface ILanguage {
   proactivity: string,
   internationalrelationship: string,
   clientorientation: string,
-  peoplesdevolopment: string,
+  peoplesdevelopment: string,
   negotiationpersuation: string,
   inovationcriativity: string,
   entrepreneurorientation: string,

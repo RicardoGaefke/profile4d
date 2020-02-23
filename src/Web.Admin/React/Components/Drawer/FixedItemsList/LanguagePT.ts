@@ -83,7 +83,7 @@ export default {
   proactivity: 'Proatividade',
   internationalrelationship: 'Relacionamento interpessoal',
   clientorientation: 'Orientação para o cliente',
-  peoplesdevolopment: 'Desenvolvimento de pessoas',
+  peoplesdevelopment: 'Desenvolvimento de pessoas',
   negotiationpersuation: 'Negociação / Persuasão',
   inovationcriativity: 'Inovação / Criatividade',
   entrepreneurorientation: 'Orientação para resultados (empreendedor)',
