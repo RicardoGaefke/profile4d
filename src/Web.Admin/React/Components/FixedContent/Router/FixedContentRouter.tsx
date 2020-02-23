@@ -77,8 +77,8 @@ import TwelveCharacterAdultStrengths from '../TwelveCharacterAdultStrengths/Page
 import TwelveCompetencesApresentation from '../TwelveCompetencesApresentation/Page';
 import FourCompetentStages from '../FourCompetentStages/Page';
 import Observation from '../Observation/Page';
-// import TwelveCompetences from '../TwelveCompetences/Page';
-// import ExcellentCompromise from '../ExcellentCompromise/Page';
+import TwelveCompetences from '../TwelveCompetences/Page';
+import ExcellentCompromise from '../ExcellentCompromise/Page';
 // import ConflictsResolution from '../ConflictsResolution/Page';
 // import Adaptability from '../Adaptability/Page';
 // import Proactivity from '../Proactivity/Page';
@@ -176,9 +176,9 @@ export default withRouter(
         <Route path={`${match.url}/twelvecompetencesapresentation`} component={TwelveCompetencesApresentation} />
         <Route path={`${match.url}/fourcompetentstages`} component={FourCompetentStages} />
         <Route path={`${match.url}/Observation`} component={Observation} />
-        {/* <Route path={`${match.url}/twelvecompetences`} component={TwelveCompetences} />
+        <Route path={`${match.url}/twelvecompetences`} component={TwelveCompetences} />
         <Route path={`${match.url}/excellentcompromise`} component={ExcellentCompromise} />
-        <Route path={`${match.url}/conflictsresolution`} component={ConflictsResolution} />
+        {/* <Route path={`${match.url}/conflictsresolution`} component={ConflictsResolution} />
         <Route path={`${match.url}/adaptability`} component={Adaptability} />
         <Route path={`${match.url}/proactivity`} component={Proactivity} />
         <Route path={`${match.url}/internationalrelationship`} component={InternationalRelationship} />
