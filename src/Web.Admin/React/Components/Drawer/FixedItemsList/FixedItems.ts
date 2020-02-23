@@ -332,44 +332,44 @@ export default [
     link: 'entrepreneurorientation',
     title: 'entrepreneurorientation',
   },
-  // {
-  //   link: 'strategicalplanning',
-  //   title: 'strategicalplanning',
-  // },
-  // {
-  //   link: 'systemicalvision',
-  //   title: 'systemicalvision',
-  // },
-  // {
-  //   link: 'energybyarea',
-  //   title: 'energybyarea',
-  // },
-  // {
-  //   link: 'lastpageresume',
-  //   title: 'lastpageresume',
-  // },
-  // {
-  //   link: 'dominantprofilename',
-  //   title: 'dominantprofilename',
-  // },
-  // {
-  //   link: 'internalparnerone',
-  //   title: 'internalparnerone',
-  // },
-  // {
-  //   link: 'internalpartnertwo',
-  //   title: 'internalpartnertwo',
-  // },
-  // {
-  //   link: 'nameidealpartner',
-  //   title: 'nameidealpartner',
-  // },
-  // {
-  //   link: 'behavioralresources',
-  //   title: 'behavioralresources',
-  // },
-  // {
-  //   link: 'twelvecompetencestable',
-  //   title: 'twelvecompetencestable',
-  // },
+  {
+    link: 'strategicalplanning',
+    title: 'strategicalplanning',
+  },
+  {
+    link: 'systemicalvision',
+    title: 'systemicalvision',
+  },
+  {
+    link: 'energybyarea',
+    title: 'energybyarea',
+  },
+  {
+    link: 'lastpageresume',
+    title: 'lastpageresume',
+  },
+  {
+    link: 'dominantprofilename',
+    title: 'dominantprofilename',
+  },
+  {
+    link: 'internalpartnerone',
+    title: 'internalpartnerone',
+  },
+  {
+    link: 'internalpartnertwo',
+    title: 'internalpartnertwo',
+  },
+  {
+    link: 'nameidealpartner',
+    title: 'nameidealpartner',
+  },
+  {
+    link: 'behavioralresources',
+    title: 'behavioralresources',
+  },
+  {
+    link: 'twelvecompetencestable',
+    title: 'twelvecompetencestable',
+  },
 ] as IStaticMenuItem[];

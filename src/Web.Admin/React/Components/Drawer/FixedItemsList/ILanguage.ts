@@ -89,7 +89,7 @@ export interface ILanguage {
   energybyarea: string,
   lastpageresume: string,
   dominantprofilename: string,
-  internalparnerone: string,
+  internalpartnerone: string,
   internalpartnertwo: string,
   nameidealpartner: string,
   behavioralresources: string,

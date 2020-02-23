@@ -6,25 +6,25 @@ import LanguagePtFs from '../Introduction/LanguagePT';
 import LanguageEngFs from '../Introduction/LanguageENG';
 
 export default ():void => {
-  i18next.addResourceBundle('PT', 'StaticInternalParnerOne', LanguagePT);
+  i18next.addResourceBundle('PT', 'StaticTwelveCompetencesTable', LanguagePT);
   i18next.addResourceBundle('PT', 'StaticIntroduction', LanguagePtFs);
-  i18next.addResourceBundle('ENG', 'StaticInternalParnerOne', LanguageENG);
+  i18next.addResourceBundle('ENG', 'StaticTwelveCompetencesTable', LanguageENG);
   i18next.addResourceBundle('ENG', 'StaticIntroduction', LanguageEngFs);
 
   useEffect((): void => {
-    if (!i18next.hasResourceBundle('PT', 'StaticInternalParnerOne')) {
-      i18next.addResourceBundle('PT', 'StaticInternalParnerOne', LanguagePT);
+    if (!i18next.hasResourceBundle('PT', 'StaticTwelveCompetencesTable')) {
+      i18next.addResourceBundle('PT', 'StaticTwelveCompetencesTable', LanguagePT);
       i18next.addResourceBundle('PT', 'StaticIntroduction', LanguagePtFs);
     }
-    if (!i18next.hasResourceBundle('ENG', 'StaticInternalParnerOne')) {
-      i18next.addResourceBundle('ENG', 'StaticInternalParnerOne', LanguageENG);
+    if (!i18next.hasResourceBundle('ENG', 'StaticTwelveCompetencesTable')) {
+      i18next.addResourceBundle('ENG', 'StaticTwelveCompetencesTable', LanguageENG);
       i18next.addResourceBundle('ENG', 'StaticIntroduction', LanguageEngFs);
     }
     // return type void != (): void... so as unknown as void
     return ((): void => {
-      i18next.removeResourceBundle('PT', 'StaticInternalParnerOne');
+      i18next.removeResourceBundle('PT', 'StaticTwelveCompetencesTable');
       i18next.removeResourceBundle('PT', 'StaticIntroduction');
-      i18next.removeResourceBundle('ENG', 'StaticInternalParnerOne');
+      i18next.removeResourceBundle('ENG', 'StaticTwelveCompetencesTable');
       i18next.removeResourceBundle('ENG', 'StaticIntroduction');
     }) as unknown as void;
   }, []);

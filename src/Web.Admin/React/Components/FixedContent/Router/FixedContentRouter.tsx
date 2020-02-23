@@ -88,16 +88,16 @@ import PeoplesDevelopment from '../PeoplesDevelopment/Page';
 import NegotiationPersuation from '../NegotiationPersuation/Page';
 import InovationCriativity from '../InovationCriativity/Page';
 import EntrepreneurOrientation from '../EntrepreneurOrientation/Page';
-// import StrategicalPlanning from '../StrategicalPlanning/Page';
-// import SystemicalVision from '../SystemicalVision/Page';
-// import EnergyByArea from '../EnergyByArea/Page';
-// import LastPageResume from '../LastPageResume/Page';
-// import DominantProfileName from '../DominantProfileName/Page';
-// import InternalParnerOne from '../InternalParnerOne/Page';
-// import InternalPartnerTwo from '../InternalParnerTwo/Page';
-// import NameIdealPartner from '../NameIdealPartner/Page';
-// import BehavioralResources from '../BehavioralResources/Page';
-// import TwelveCompetencesTable from '../TwelveCompetencesTable/Page';
+import StrategicalPlanning from '../StrategicalPlanning/Page';
+import SystemicalVision from '../SystemicalVision/Page';
+import EnergyByArea from '../EnergyByArea/Page';
+import LastPageResume from '../LastPageResume/Page';
+import DominantProfileName from '../DominantProfileName/Page';
+import InternalPartnerOne from '../InternalPartnerOne/Page';
+import InternalPartnerTwo from '../InternalPartnerTwo/Page';
+import NameIdealPartner from '../NameIdealPartner/Page';
+import BehavioralResources from '../BehavioralResources/Page';
+import TwelveCompetencesTable from '../TwelveCompetencesTable/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -187,16 +187,16 @@ export default withRouter(
         <Route path={`${match.url}/negotiationpersuation`} component={NegotiationPersuation} />
         <Route path={`${match.url}/inovationcriativity`} component={InovationCriativity} />
         <Route path={`${match.url}/entrepreneurorientation`} component={EntrepreneurOrientation} />
-        {/* <Route path={`${match.url}/strategicalplanning`} component={StrategicalPlanning} />
+        <Route path={`${match.url}/strategicalplanning`} component={StrategicalPlanning} />
         <Route path={`${match.url}/systemicalvision`} component={SystemicalVision} />
         <Route path={`${match.url}/energybyarea`} component={EnergyByArea} />
         <Route path={`${match.url}/lastpageresume`} component={LastPageResume} />
         <Route path={`${match.url}/dominantprofilename`} component={DominantProfileName} />
-        <Route path={`${match.url}/internalparnerone`} component={InternalParnerOne} />
+        <Route path={`${match.url}/internalpartnerone`} component={InternalPartnerOne} />
         <Route path={`${match.url}/internalpartnertwo`} component={InternalPartnerTwo} />
         <Route path={`${match.url}/nameidealpartner`} component={NameIdealPartner} />
         <Route path={`${match.url}/behavioralresources`} component={BehavioralResources} />
-        <Route path={`${match.url}/twelvecompetencestable`} component={TwelveCompetencesTable} /> */}
+        <Route path={`${match.url}/twelvecompetencestable`} component={TwelveCompetencesTable} />
       </MyTemplate>
     );
   },

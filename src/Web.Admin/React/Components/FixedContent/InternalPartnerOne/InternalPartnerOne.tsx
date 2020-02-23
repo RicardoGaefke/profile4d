@@ -7,7 +7,7 @@ import { withFormik } from 'formik';
 import { Typography } from '@material-ui/core';
 import useStyles from './Styles';
 import setLanguage from './Language';
-import InternalParnerOne from '../Introduction/Form/Form';
+import InternalPartnerOne from '../Introduction/Form/Form';
 import Validation from '../Introduction/Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
 import { IStaticIntroduction } from '../../../../../TypeScript/Interfaces/IStaticContent';
@@ -17,14 +17,14 @@ interface IProps {
   myValues: IStaticIntroduction
 }
 
-export const MyInternalParnerOne = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticIntroduction>({
-  displayName: 'Static Content Internal Parner One',
+export const MyInternalPartnerOne = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticIntroduction>({
+  displayName: 'Static Content Internal Partner One',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticIntroduction => props.myValues,
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticIntroduction>('StaticContent/InternalParnerOneEdit', {
+    await myAxios(window.location.href).post<IStaticIntroduction>('StaticContent/InternalPartnerOneEdit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,
@@ -33,24 +33,24 @@ export const MyInternalParnerOne = withFormik<WithTranslation & WithSnackbarProp
       const { data } = response;
 
       if (data.Success) {
-        enqueueSnackbar(t('StaticInternalParnerOne:feedback.success'), {
+        enqueueSnackbar(t('StaticInternalPartnerOne:feedback.success'), {
           variant: 'success',
         });
       } else {
-        enqueueSnackbar(t('StaticInternalParnerOne:feedback.failure'), {
+        enqueueSnackbar(t('StaticInternalPartnerOne:feedback.failure'), {
           variant: 'error',
         });
       }
     }).catch((): void => {
-      enqueueSnackbar(t('StaticInternalParnerOne:feedback.failure'), {
+      enqueueSnackbar(t('StaticInternalPartnerOne:feedback.failure'), {
         variant: 'error',
       });
     });
     setSubmitting(false);
   },
-})(InternalParnerOne);
+})(InternalPartnerOne);
 
-export const Login = withTranslation()(withSnackbar(MyInternalParnerOne));
+export const Login = withTranslation()(withSnackbar(MyInternalPartnerOne));
 
 export default withTranslation()(
   (props: WithTranslation & IProps): React.ReactElement<WithTranslation & IProps> => {
@@ -65,7 +65,7 @@ export default withTranslation()(
           align="center"
           variant="h5"
         >
-          {t('StaticInternalParnerOne:title')}
+          {t('StaticInternalPartnerOne:title')}
         </Typography>
         <Login myValues={myValues} />
       </div>
