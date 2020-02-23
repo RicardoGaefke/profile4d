@@ -86,7 +86,7 @@ export default {
   peoplesdevelopment: 'Desenvolvimento de pessoas',
   negotiationpersuation: 'Negociação / Persuasão',
   inovationcriativity: 'Inovação / Criatividade',
-  entrepreneurorientation: 'Orientação para resultados (empreendedor)',
+  entrepreneurorientation: 'Orientação para resultados (Empreendedor)',
   strategicalplanning: 'Planejamento estratégico',
   systemicalvision: 'Visão sistêmica',
   energybyarea: 'Energia por área de atuação',

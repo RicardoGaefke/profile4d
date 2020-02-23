@@ -87,7 +87,7 @@ import ClientOrientation from '../ClientOrientation/Page';
 import PeoplesDevelopment from '../PeoplesDevelopment/Page';
 import NegotiationPersuation from '../NegotiationPersuation/Page';
 import InovationCriativity from '../InovationCriativity/Page';
-// import EntrepreneurOrientation from '../EntrepreneurOrientation/Page';
+import EntrepreneurOrientation from '../EntrepreneurOrientation/Page';
 // import StrategicalPlanning from '../StrategicalPlanning/Page';
 // import SystemicalVision from '../SystemicalVision/Page';
 // import EnergyByArea from '../EnergyByArea/Page';
@@ -186,8 +186,8 @@ export default withRouter(
         <Route path={`${match.url}/peoplesdevelopment`} component={PeoplesDevelopment} />
         <Route path={`${match.url}/negotiationpersuation`} component={NegotiationPersuation} />
         <Route path={`${match.url}/inovationcriativity`} component={InovationCriativity} />
-        {/* <Route path={`${match.url}/entrepreneurorientation`} component={EntrepreneurOrientation} />
-        <Route path={`${match.url}/strategicalplanning`} component={StrategicalPlanning} />
+        <Route path={`${match.url}/entrepreneurorientation`} component={EntrepreneurOrientation} />
+        {/* <Route path={`${match.url}/strategicalplanning`} component={StrategicalPlanning} />
         <Route path={`${match.url}/systemicalvision`} component={SystemicalVision} />
         <Route path={`${match.url}/energybyarea`} component={EnergyByArea} />
         <Route path={`${match.url}/lastpageresume`} component={LastPageResume} />

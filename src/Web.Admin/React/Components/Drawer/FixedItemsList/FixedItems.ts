@@ -317,8 +317,8 @@ export default [
     title: 'clientorientation',
   },
   {
-    link: 'peoplesdevolopment',
-    title: 'peoplesdevolopment',
+    link: 'peoplesdevelopment',
+    title: 'peoplesdevelopment',
   },
   {
     link: 'negotiationpersuation',
@@ -328,10 +328,10 @@ export default [
     link: 'inovationcriativity',
     title: 'inovationcriativity',
   },
-  // {
-  //   link: 'entrepreneurorientation',
-  //   title: 'entrepreneurorientation',
-  // },
+  {
+    link: 'entrepreneurorientation',
+    title: 'entrepreneurorientation',
+  },
   // {
   //   link: 'strategicalplanning',
   //   title: 'strategicalplanning',
