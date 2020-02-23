@@ -93,7 +93,7 @@ export default {
   lastpageresume: 'Resumo (última página)',
   dominantprofilename: 'Nome do Perfil Dominante',
   internalparnerone: 'Nome do Parceiro interno (primeiro)',
-  internalpartnertwo: 'Nome do Parceiro interno (second)',
+  internalpartnertwo: 'Nome do Parceiro interno (segundo)',
   nameidealpartner: 'Nome do parceiro ideal',
   behavioralresources: 'Recurso do Perfil Comportamental',
   twelvecompetencestable: 'Tabela das doze competências',
