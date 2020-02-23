@@ -73,4 +73,5 @@ export default {
   mainvirtueessence: 'Principal virtude a desenvolver para entrar em contato com a Essência',
   benefitsvirtueessence: 'Benefícios que terá ao entrar em contato com Essência',
   twelvecharacteradultstrengths: 'Doze Forças do caráter do Adulto Saudável',
+  twelvecompetencesapresentation: 'Apresentação das 12 Competências',
 } as ILanguage;

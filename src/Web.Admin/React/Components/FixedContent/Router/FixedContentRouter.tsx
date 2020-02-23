@@ -74,6 +74,7 @@ import BodyShape from '../BodyShape/Page';
 import MainVirtueEssence from '../MainVirtueEssence/Page';
 import BenefitsVirtueEssence from '../BenefitsVirtueEssence/Page';
 import TwelveCharacterAdultStrengths from '../TwelveCharacterAdultStrengths/Page';
+import TwelveCompetencesApresentation from '../TwelveCompetencesApresentation/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -149,6 +150,7 @@ export default withRouter(
         <Route path={`${match.url}/mainvirtueessence`} component={MainVirtueEssence} />
         <Route path={`${match.url}/benefitsvirtueessence`} component={BenefitsVirtueEssence} />
         <Route path={`${match.url}/twelvecharacteradultstrengths`} component={TwelveCharacterAdultStrengths} />
+        <Route path={`${match.url}/twelvecompetencesapresentation`} component={TwelveCompetencesApresentation} />
       </MyTemplate>
     );
   },

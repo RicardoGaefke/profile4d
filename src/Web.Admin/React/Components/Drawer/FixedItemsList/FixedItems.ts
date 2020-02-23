@@ -276,4 +276,8 @@ export default [
     link: 'twelvecharacteradultstrengths',
     title: 'twelvecharacteradultstrengths',
   },
+  {
+    link: 'twelvecompetencesapresentation',
+    title: 'twelvecompetencesapresentation',
+  },
 ] as IStaticMenuItem[];

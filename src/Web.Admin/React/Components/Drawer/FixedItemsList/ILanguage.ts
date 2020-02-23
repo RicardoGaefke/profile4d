@@ -70,4 +70,5 @@ export interface ILanguage {
   mainvirtueessence: string,
   benefitsvirtueessence: string,
   twelvecharacteradultstrengths: string,
+  twelvecompetencesapresentation: string,
 }
