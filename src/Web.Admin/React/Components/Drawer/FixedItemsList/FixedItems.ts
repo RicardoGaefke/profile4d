@@ -296,38 +296,38 @@ export default [
     link: 'excellentcompromise',
     title: 'excellentcompromise',
   },
-  // {
-  //   link: 'conflictsresolution',
-  //   title: 'conflictsresolution',
-  // },
-  // {
-  //   link: 'adaptability',
-  //   title: 'adaptability',
-  // },
-  // {
-  //   link: 'proactivity',
-  //   title: 'proactivity',
-  // },
-  // {
-  //   link: 'internationalrelationship',
-  //   title: 'internationalrelationship',
-  // },
-  // {
-  //   link: 'clientorientation',
-  //   title: 'clientorientation',
-  // },
-  // {
-  //   link: 'peoplesdevolopment',
-  //   title: 'peoplesdevolopment',
-  // },
-  // {
-  //   link: 'negotiationpersuation',
-  //   title: 'negotiationpersuation',
-  // },
-  // {
-  //   link: 'inovationcriativity',
-  //   title: 'inovationcriativity',
-  // },
+  {
+    link: 'conflictsresolution',
+    title: 'conflictsresolution',
+  },
+  {
+    link: 'adaptability',
+    title: 'adaptability',
+  },
+  {
+    link: 'proactivity',
+    title: 'proactivity',
+  },
+  {
+    link: 'internationalrelationship',
+    title: 'internationalrelationship',
+  },
+  {
+    link: 'clientorientation',
+    title: 'clientorientation',
+  },
+  {
+    link: 'peoplesdevolopment',
+    title: 'peoplesdevolopment',
+  },
+  {
+    link: 'negotiationpersuation',
+    title: 'negotiationpersuation',
+  },
+  {
+    link: 'inovationcriativity',
+    title: 'inovationcriativity',
+  },
   // {
   //   link: 'entrepreneurorientation',
   //   title: 'entrepreneurorientation',

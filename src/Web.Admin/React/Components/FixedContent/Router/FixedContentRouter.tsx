@@ -79,14 +79,14 @@ import FourCompetentStages from '../FourCompetentStages/Page';
 import Observation from '../Observation/Page';
 import TwelveCompetences from '../TwelveCompetences/Page';
 import ExcellentCompromise from '../ExcellentCompromise/Page';
-// import ConflictsResolution from '../ConflictsResolution/Page';
-// import Adaptability from '../Adaptability/Page';
-// import Proactivity from '../Proactivity/Page';
-// import InternationalRelationship from '../InternationalRelationship/Page';
-// import ClientOrientation from '../ClientOrientation/Page';
-// import PeoplesDevelopment from '../PeoplesDevelopment/Page';
-// import NegotiationPersuation from '../NegotiationPersuation/Page';
-// import InovationCriativity from '../InovationCriativity/Page';
+import ConflictsResolution from '../ConflictsResolution/Page';
+import Adaptability from '../Adaptability/Page';
+import Proactivity from '../Proactivity/Page';
+import InternationalRelationship from '../InternationalRelationship/Page';
+import ClientOrientation from '../ClientOrientation/Page';
+import PeoplesDevelopment from '../PeoplesDevelopment/Page';
+import NegotiationPersuation from '../NegotiationPersuation/Page';
+import InovationCriativity from '../InovationCriativity/Page';
 // import EntrepreneurOrientation from '../EntrepreneurOrientation/Page';
 // import StrategicalPlanning from '../StrategicalPlanning/Page';
 // import SystemicalVision from '../SystemicalVision/Page';
@@ -178,7 +178,7 @@ export default withRouter(
         <Route path={`${match.url}/Observation`} component={Observation} />
         <Route path={`${match.url}/twelvecompetences`} component={TwelveCompetences} />
         <Route path={`${match.url}/excellentcompromise`} component={ExcellentCompromise} />
-        {/* <Route path={`${match.url}/conflictsresolution`} component={ConflictsResolution} />
+        <Route path={`${match.url}/conflictsresolution`} component={ConflictsResolution} />
         <Route path={`${match.url}/adaptability`} component={Adaptability} />
         <Route path={`${match.url}/proactivity`} component={Proactivity} />
         <Route path={`${match.url}/internationalrelationship`} component={InternationalRelationship} />
@@ -186,7 +186,7 @@ export default withRouter(
         <Route path={`${match.url}/peoplesdevelopment`} component={PeoplesDevelopment} />
         <Route path={`${match.url}/negotiationpersuation`} component={NegotiationPersuation} />
         <Route path={`${match.url}/inovationcriativity`} component={InovationCriativity} />
-        <Route path={`${match.url}/entrepreneurorientation`} component={EntrepreneurOrientation} />
+        {/* <Route path={`${match.url}/entrepreneurorientation`} component={EntrepreneurOrientation} />
         <Route path={`${match.url}/strategicalplanning`} component={StrategicalPlanning} />
         <Route path={`${match.url}/systemicalvision`} component={SystemicalVision} />
         <Route path={`${match.url}/energybyarea`} component={EnergyByArea} />
