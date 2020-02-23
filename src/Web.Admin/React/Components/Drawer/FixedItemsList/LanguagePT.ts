@@ -90,7 +90,7 @@ export default {
   strategicalplanning: 'Planejamento estratégico',
   systemicalvision: 'Visão sistêmica',
   energybyarea: 'Energia por área de atuação',
-  lastpageresume: 'Resumo (ultima página)',
+  lastpageresume: 'Resumo (última página)',
   dominantprofilename: 'Nome do Perfil Dominante',
   internalparnerone: 'Nome do Parceiro interno (primeiro)',
   internalpartnertwo: 'Nome do Parceiro interno (second)',
