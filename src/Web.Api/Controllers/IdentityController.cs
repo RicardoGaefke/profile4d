@@ -116,6 +116,12 @@ namespace Profile4d.Web.Api.Controllers
       }
     }
 
+    [HttpGet("IsAuthenticated")]
+    public ActionResult<Boolean> IsAutenticated()
+    {
+      return HttpContext.User.Identity.IsAuthenticated;
+    }
+
     [HttpGet("SignOut")]
     public async Task<ActionResult<BasicReturn>> SignOut()
     {

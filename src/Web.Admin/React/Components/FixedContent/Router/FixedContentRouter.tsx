@@ -49,10 +49,55 @@ import PDI from '../PDI/Page';
 import ThreeIntelligenceCenters from '../ThreeIntelligenceCenters/Page';
 import BehavioralRespectiveEnergies from '../BehavioralRespectiveEnergies/Page';
 import IdentifiedConflicts from '../IdentifiedConflicts/Page';
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 import EnergySpikes from '../EnergySpikes/Page';
+import HomogeneousHeterogeneous from '../HomogeneousHeterogeneous/Page';
 import TrinitySpecifics from '../TrinitySpecifics/Page';
 import OriginalXAdapted from '../OriginalXAdapted/Page';
+import ExerciseProfileMoviment from '../ExerciseProfileMoviment/Page';
+import SuperiorMind from '../SuperiorMind/Page';
+import HealthyAdult from '../HealthyAdult/Page';
+import SynergeticMode from '../SynergeticMode/Page';
+import DomProfile from '../DomProfile/Page';
+import BigChallenge from '../BigChallenge/Page';
+import WorkKey from '../WorkKey/Page';
+import IdealPartner from '../IdealPartner/Page';
+import BehavioralDNA from '../BehavioralDNA/Page';
+import ArchetypeEssence from '../ArchetypeEssence/Page';
+import EssentialFeature from '../EssentialFeature/Page';
+import CharacterFormation from '../CharacterFormation/Page';
+import Moment from '../Moment/Page';
+import ExistentialPain from '../ExistentialPain/Page';
+import NoteExistentialPain from '../NoteExistentialPain/Page';
+import CrystallizationPersonality from '../CrystallizationPersonality/Page';
+import BodyStructureFixed from '../BodyStructureFixed/Page';
+import BodyShape from '../BodyShape/Page';
+import MainVirtueEssence from '../MainVirtueEssence/Page';
+import BenefitsVirtueEssence from '../BenefitsVirtueEssence/Page';
+import TwelveCharacterAdultStrengths from '../TwelveCharacterAdultStrengths/Page';
+import TwelveCompetencesApresentation from '../TwelveCompetencesApresentation/Page';
+import FourCompetentStages from '../FourCompetentStages/Page';
+import Observation from '../Observation/Page';
+import TwelveCompetences from '../TwelveCompetences/Page';
+import ExcellentCompromise from '../ExcellentCompromise/Page';
+import ConflictsResolution from '../ConflictsResolution/Page';
+import Adaptability from '../Adaptability/Page';
+import Proactivity from '../Proactivity/Page';
+import InternationalRelationship from '../InternationalRelationship/Page';
+import ClientOrientation from '../ClientOrientation/Page';
+import PeoplesDevelopment from '../PeoplesDevelopment/Page';
+import NegotiationPersuation from '../NegotiationPersuation/Page';
+import InovationCriativity from '../InovationCriativity/Page';
+import EntrepreneurOrientation from '../EntrepreneurOrientation/Page';
+import StrategicalPlanning from '../StrategicalPlanning/Page';
+import SystemicalVision from '../SystemicalVision/Page';
+import EnergyByArea from '../EnergyByArea/Page';
+import LastPageResume from '../LastPageResume/Page';
+import DominantProfileName from '../DominantProfileName/Page';
+import InternalPartnerOne from '../InternalPartnerOne/Page';
+import InternalPartnerTwo from '../InternalPartnerTwo/Page';
+import NameIdealPartner from '../NameIdealPartner/Page';
+import BehavioralResources from '../BehavioralResources/Page';
+import TwelveCompetencesTable from '../TwelveCompetencesTable/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -103,10 +148,55 @@ export default withRouter(
         <Route path={`${match.url}/threeintelligencecenters`} component={ThreeIntelligenceCenters} />
         <Route path={`${match.url}/behavioralrespectiveenergies`} component={BehavioralRespectiveEnergies} />
         <Route path={`${match.url}/identifiedconflicts`} component={IdentifiedConflicts} />
-        {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         <Route path={`${match.url}/energyspikes`} component={EnergySpikes} />
+        <Route path={`${match.url}/homogeneousheterogeneous`} component={HomogeneousHeterogeneous} />
         <Route path={`${match.url}/trinityspecifics`} component={TrinitySpecifics} />
         <Route path={`${match.url}/originalxadapted`} component={OriginalXAdapted} />
+        <Route path={`${match.url}/exerciseprofilemoviment`} component={ExerciseProfileMoviment} />
+        <Route path={`${match.url}/superiormind`} component={SuperiorMind} />
+        <Route path={`${match.url}/healthyadult`} component={HealthyAdult} />
+        <Route path={`${match.url}/synergeticmode`} component={SynergeticMode} />
+        <Route path={`${match.url}/domprofile`} component={DomProfile} />
+        <Route path={`${match.url}/bigchallenge`} component={BigChallenge} />
+        <Route path={`${match.url}/workkey`} component={WorkKey} />
+        <Route path={`${match.url}/idealpartner`} component={IdealPartner} />
+        <Route path={`${match.url}/behavioraldna`} component={BehavioralDNA} />
+        <Route path={`${match.url}/archetypeessence`} component={ArchetypeEssence} />
+        <Route path={`${match.url}/essentialfeature`} component={EssentialFeature} />
+        <Route path={`${match.url}/characterformation`} component={CharacterFormation} />
+        <Route path={`${match.url}/moment`} component={Moment} />
+        <Route path={`${match.url}/existentialpain`} component={ExistentialPain} />
+        <Route path={`${match.url}/noteexistentialpain`} component={NoteExistentialPain} />
+        <Route path={`${match.url}/crystallizationpersonality`} component={CrystallizationPersonality} />
+        <Route path={`${match.url}/bodystructurefixed`} component={BodyStructureFixed} />
+        <Route path={`${match.url}/bodyshape`} component={BodyShape} />
+        <Route path={`${match.url}/mainvirtueessence`} component={MainVirtueEssence} />
+        <Route path={`${match.url}/benefitsvirtueessence`} component={BenefitsVirtueEssence} />
+        <Route path={`${match.url}/twelvecharacteradultstrengths`} component={TwelveCharacterAdultStrengths} />
+        <Route path={`${match.url}/twelvecompetencesapresentation`} component={TwelveCompetencesApresentation} />
+        <Route path={`${match.url}/fourcompetentstages`} component={FourCompetentStages} />
+        <Route path={`${match.url}/Observation`} component={Observation} />
+        <Route path={`${match.url}/twelvecompetences`} component={TwelveCompetences} />
+        <Route path={`${match.url}/excellentcompromise`} component={ExcellentCompromise} />
+        <Route path={`${match.url}/conflictsresolution`} component={ConflictsResolution} />
+        <Route path={`${match.url}/adaptability`} component={Adaptability} />
+        <Route path={`${match.url}/proactivity`} component={Proactivity} />
+        <Route path={`${match.url}/internationalrelationship`} component={InternationalRelationship} />
+        <Route path={`${match.url}/clientorientation`} component={ClientOrientation} />
+        <Route path={`${match.url}/peoplesdevelopment`} component={PeoplesDevelopment} />
+        <Route path={`${match.url}/negotiationpersuation`} component={NegotiationPersuation} />
+        <Route path={`${match.url}/inovationcriativity`} component={InovationCriativity} />
+        <Route path={`${match.url}/entrepreneurorientation`} component={EntrepreneurOrientation} />
+        <Route path={`${match.url}/strategicalplanning`} component={StrategicalPlanning} />
+        <Route path={`${match.url}/systemicalvision`} component={SystemicalVision} />
+        <Route path={`${match.url}/energybyarea`} component={EnergyByArea} />
+        <Route path={`${match.url}/lastpageresume`} component={LastPageResume} />
+        <Route path={`${match.url}/dominantprofilename`} component={DominantProfileName} />
+        <Route path={`${match.url}/internalpartnerone`} component={InternalPartnerOne} />
+        <Route path={`${match.url}/internalpartnertwo`} component={InternalPartnerTwo} />
+        <Route path={`${match.url}/nameidealpartner`} component={NameIdealPartner} />
+        <Route path={`${match.url}/behavioralresources`} component={BehavioralResources} />
+        <Route path={`${match.url}/twelvecompetencestable`} component={TwelveCompetencesTable} />
       </MyTemplate>
     );
   },

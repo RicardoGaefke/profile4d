@@ -1,24 +1,60 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import {
+  Route, useHistory, useRouteMatch,
+} from 'react-router-dom';
+import MyAxios from '../../Utils/MyAxios';
+import Loading from '../Connected/Loading/Loading';
 // eslint-disable-next-line no-unused-vars
-import { Route, useHistory, RouteProps } from 'react-router-dom';
+import { IInitialContext } from '../../../../TypeScript/Interfaces/IInitialContext';
+import { useStateValue } from '../../Initial/Context/StateProvider';
 
-export default (props: RouteProps): React.ReactElement<RouteProps> => {
-  const [logged, setLogged] = useState(false);
-  const { path, component } = props;
-  // eslint-disable-next-line no-unused-vars
+interface IProps {
+  exact?: boolean,
+  path: string,
+  component: React.ComponentType<any>,
+}
+
+export default ({ component: Component, path: Path, ...rest }: IProps): React.ReactElement<IProps> => {
+  const [dispatch] = useStateValue();
+  const [loading, setLoading] = useState(true);
   const history = useHistory();
+  const match = useRouteMatch({
+    path: Path,
+    strict: true,
+    sensitive: true,
+  });
 
   useEffect((): void => {
-    setLogged(true);
-  }, []);
+    if (match?.url === window.location.pathname) {
+      const useEffAsync = async (): Promise<void> => {
+        await MyAxios(window.location.href).get<boolean>('Identity/IsAuthenticated',
+          {}).then((response): void => {
+          const { data } = response;
+
+          if (!data) {
+            history.push('/');
+            dispatch({
+              type: 'changeAuth',
+              value: false,
+            });
+            return;
+          }
+
+          setLoading(false);
+        });
+      };
+
+      useEffAsync();
+    }
+  }, [match]);
 
   return (
-    <>
-      {
-        (logged === null)
-          ? <div>loading</div>
-          : <Route path={path} component={component} />
-      }
-    </>
+    <Route
+      path={Path}
+      {...rest}
+      render={(props): React.ReactElement => (
+        (loading) ? (<Loading />) : (<Component {...props} />)
+      )}
+    />
   );
 };

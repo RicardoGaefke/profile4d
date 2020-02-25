@@ -176,10 +176,13 @@ export default [
     link: 'identifiedconflicts',
     title: 'identifiedconflicts',
   },
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   {
     link: 'energyspikes',
     title: 'energyspikes',
+  },
+  {
+    link: 'homogeneousheterogeneous',
+    title: 'homogeneousheterogeneous',
   },
   {
     link: 'trinityspecifics',
@@ -188,5 +191,185 @@ export default [
   {
     link: 'originalxadapted',
     title: 'originalxadapted',
+  },
+  {
+    link: 'exerciseprofilemoviment',
+    title: 'exerciseprofilemoviment',
+  },
+  {
+    link: 'superiormind',
+    title: 'superiormind',
+  },
+  {
+    link: 'healthyadult',
+    title: 'healthyadult',
+  },
+  {
+    link: 'synergeticmode',
+    title: 'synergeticmode',
+  },
+  {
+    link: 'domprofile',
+    title: 'domprofile',
+  },
+  {
+    link: 'bigchallenge',
+    title: 'bigchallenge',
+  },
+  {
+    link: 'workkey',
+    title: 'workkey',
+  },
+  {
+    link: 'idealpartner',
+    title: 'idealpartner',
+  },
+  {
+    link: 'behavioraldna',
+    title: 'behavioraldna',
+  },
+  {
+    link: 'archetypeessence',
+    title: 'archetypeessence',
+  },
+  {
+    link: 'essentialfeature',
+    title: 'essentialfeature',
+  },
+  {
+    link: 'characterformation',
+    title: 'characterformation',
+  },
+  {
+    link: 'moment',
+    title: 'moment',
+  },
+  {
+    link: 'existentialpain',
+    title: 'existentialpain',
+  },
+  {
+    link: 'noteexistentialpain',
+    title: 'noteexistentialpain',
+  },
+  {
+    link: 'crystallizationpersonality',
+    title: 'crystallizationpersonality',
+  },
+  {
+    link: 'bodystructurefixed',
+    title: 'bodystructurefixed',
+  },
+  {
+    link: 'bodyshape',
+    title: 'bodyshape',
+  },
+  {
+    link: 'mainvirtueessence',
+    title: 'mainvirtueessence',
+  },
+  {
+    link: 'benefitsvirtueessence',
+    title: 'benefitsvirtueessence',
+  },
+  {
+    link: 'twelvecharacteradultstrengths',
+    title: 'twelvecharacteradultstrengths',
+  },
+  {
+    link: 'twelvecompetencesapresentation',
+    title: 'twelvecompetencesapresentation',
+  },
+  {
+    link: 'fourcompetentstages',
+    title: 'fourcompetentstages',
+  },
+  {
+    link: 'observation',
+    title: 'observation',
+  },
+  {
+    link: 'twelvecompetences',
+    title: 'twelvecompetences',
+  },
+  {
+    link: 'excellentcompromise',
+    title: 'excellentcompromise',
+  },
+  {
+    link: 'conflictsresolution',
+    title: 'conflictsresolution',
+  },
+  {
+    link: 'adaptability',
+    title: 'adaptability',
+  },
+  {
+    link: 'proactivity',
+    title: 'proactivity',
+  },
+  {
+    link: 'internationalrelationship',
+    title: 'internationalrelationship',
+  },
+  {
+    link: 'clientorientation',
+    title: 'clientorientation',
+  },
+  {
+    link: 'peoplesdevelopment',
+    title: 'peoplesdevelopment',
+  },
+  {
+    link: 'negotiationpersuation',
+    title: 'negotiationpersuation',
+  },
+  {
+    link: 'inovationcriativity',
+    title: 'inovationcriativity',
+  },
+  {
+    link: 'entrepreneurorientation',
+    title: 'entrepreneurorientation',
+  },
+  {
+    link: 'strategicalplanning',
+    title: 'strategicalplanning',
+  },
+  {
+    link: 'systemicalvision',
+    title: 'systemicalvision',
+  },
+  {
+    link: 'energybyarea',
+    title: 'energybyarea',
+  },
+  {
+    link: 'lastpageresume',
+    title: 'lastpageresume',
+  },
+  {
+    link: 'dominantprofilename',
+    title: 'dominantprofilename',
+  },
+  {
+    link: 'internalpartnerone',
+    title: 'internalpartnerone',
+  },
+  {
+    link: 'internalpartnertwo',
+    title: 'internalpartnertwo',
+  },
+  {
+    link: 'nameidealpartner',
+    title: 'nameidealpartner',
+  },
+  {
+    link: 'behavioralresources',
+    title: 'behavioralresources',
+  },
+  {
+    link: 'twelvecompetencestable',
+    title: 'twelvecompetencestable',
   },
 ] as IStaticMenuItem[];
