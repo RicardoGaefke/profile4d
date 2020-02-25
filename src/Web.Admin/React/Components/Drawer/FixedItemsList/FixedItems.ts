@@ -276,4 +276,100 @@ export default [
     link: 'twelvecharacteradultstrengths',
     title: 'twelvecharacteradultstrengths',
   },
+  {
+    link: 'twelvecompetencesapresentation',
+    title: 'twelvecompetencesapresentation',
+  },
+  {
+    link: 'fourcompetentstages',
+    title: 'fourcompetentstages',
+  },
+  {
+    link: 'observation',
+    title: 'observation',
+  },
+  {
+    link: 'twelvecompetences',
+    title: 'twelvecompetences',
+  },
+  {
+    link: 'excellentcompromise',
+    title: 'excellentcompromise',
+  },
+  {
+    link: 'conflictsresolution',
+    title: 'conflictsresolution',
+  },
+  {
+    link: 'adaptability',
+    title: 'adaptability',
+  },
+  {
+    link: 'proactivity',
+    title: 'proactivity',
+  },
+  {
+    link: 'internationalrelationship',
+    title: 'internationalrelationship',
+  },
+  {
+    link: 'clientorientation',
+    title: 'clientorientation',
+  },
+  {
+    link: 'peoplesdevelopment',
+    title: 'peoplesdevelopment',
+  },
+  {
+    link: 'negotiationpersuation',
+    title: 'negotiationpersuation',
+  },
+  {
+    link: 'inovationcriativity',
+    title: 'inovationcriativity',
+  },
+  {
+    link: 'entrepreneurorientation',
+    title: 'entrepreneurorientation',
+  },
+  {
+    link: 'strategicalplanning',
+    title: 'strategicalplanning',
+  },
+  {
+    link: 'systemicalvision',
+    title: 'systemicalvision',
+  },
+  {
+    link: 'energybyarea',
+    title: 'energybyarea',
+  },
+  {
+    link: 'lastpageresume',
+    title: 'lastpageresume',
+  },
+  {
+    link: 'dominantprofilename',
+    title: 'dominantprofilename',
+  },
+  {
+    link: 'internalpartnerone',
+    title: 'internalpartnerone',
+  },
+  {
+    link: 'internalpartnertwo',
+    title: 'internalpartnertwo',
+  },
+  {
+    link: 'nameidealpartner',
+    title: 'nameidealpartner',
+  },
+  {
+    link: 'behavioralresources',
+    title: 'behavioralresources',
+  },
+  {
+    link: 'twelvecompetencestable',
+    title: 'twelvecompetencestable',
+  },
 ] as IStaticMenuItem[];
