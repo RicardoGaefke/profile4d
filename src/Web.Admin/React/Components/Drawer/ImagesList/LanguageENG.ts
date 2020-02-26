@@ -5,4 +5,5 @@ export default {
   title: 'Fixed Content',
   logo: 'Report logo',
   imagetrinobrain: 'Triune Brain Image (static)',
+  imagefourintelligencecenters: 'Four Intelligence Centers Image (static)',
 } as ILanguage;

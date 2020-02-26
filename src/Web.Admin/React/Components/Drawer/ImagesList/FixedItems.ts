@@ -12,4 +12,8 @@ export default [
     link: 'imagetrinobrain',
     title: 'imagetrinobrain',
   },
+  {
+    link: 'imagefourintelligencecenters',
+    title: 'imagefourintelligencecenters',
+  },
 ] as IStaticMenuItem[];

@@ -5,4 +5,5 @@ export default {
   title: 'Imagens do sistema',
   logo: 'Logo do relatório',
   imagetrinobrain: 'Imagem Cérebro Trino (estática)',
+  imagefourintelligencecenters: 'Imagem Quatro Centros de Inteligência (estáticos)',
 } as ILanguage;
