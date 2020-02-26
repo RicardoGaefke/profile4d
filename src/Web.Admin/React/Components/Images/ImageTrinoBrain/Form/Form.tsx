@@ -16,7 +16,7 @@ import { FormikProps } from 'formik';
 import { IStaticImageForm } from '../../../../../../TypeScript/Interfaces/IStaticImageForm';
 // eslint-disable-next-line no-unused-vars
 import { IImage } from '../../../../../../TypeScript/Interfaces/IImage';
-import setLanguage from '../../ImageForm/Form/Language';
+import setLanguage from './Language';
 import Createdby from '../../../Created/Created';
 import useStyles from '../../../../Utils/Form.Styles';
 import NoImage from '../../NoImage';
@@ -51,7 +51,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
   useEffect((): void => {
     if (!isSubmitting) {
       MyAxios(window.location.href)
-        .get<IStaticImageForm>('Image/Logo')
+        .get<IStaticImageForm>('Image/ImageTrinoBrain')
         .then((response): void => {
           const { data } = response;
 
@@ -178,7 +178,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
         <Grid
           item
           xs={12}
-          md={12}
+          md={6}
           lg={6}
         >
           <FormControl>

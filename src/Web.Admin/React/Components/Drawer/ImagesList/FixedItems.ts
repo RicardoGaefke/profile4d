@@ -8,4 +8,8 @@ export default [
     link: 'logo',
     title: 'logo',
   },
+  {
+    link: 'imagetrinobrain',
+    title: 'imagetrinobrain',
+  },
 ] as IStaticMenuItem[];
