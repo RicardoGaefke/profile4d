@@ -29,7 +29,7 @@ export type IForm = FormikProps<IStaticImageForm> & WithTranslation & WithSnackb
 
 export default (props: IForm): React.ReactElement<IForm> => {
   const classes = useStyles({});
-  const { t, i18n } = useTranslation('StaticImageForm');
+  const { t, i18n } = useTranslation('StaticImageTrinoBrain');
   setLanguage();
   const Api = new Hosts(window.location.href);
 
@@ -134,8 +134,8 @@ export default (props: IForm): React.ReactElement<IForm> => {
           <TextField
             margin="dense"
             error={errors.Alt_PT as any && touched.Alt_PT as any}
-            label={t('StaticImageForm:altPT.text')}
-            title={t('StaticImageForm:altPT.title')}
+            label={t('StaticImageTrinoBrain:altPT.text')}
+            title={t('StaticImageTrinoBrain:altPT.title')}
             name="Alt_PT"
             id="Alt_PT"
             value={values.Alt_PT}
@@ -159,8 +159,8 @@ export default (props: IForm): React.ReactElement<IForm> => {
           <TextField
             margin="dense"
             error={errors.Alt_ENG as any && touched.Alt_ENG as any}
-            label={t('StaticImageForm:altENG.text')}
-            title={t('StaticImageForm:altENG.title')}
+            label={t('StaticImageTrinoBrain:altENG.text')}
+            title={t('StaticImageTrinoBrain:altENG.title')}
             name="Alt_ENG"
             id="Alt_ENG"
             value={values.Alt_ENG}
@@ -205,11 +205,11 @@ export default (props: IForm): React.ReactElement<IForm> => {
           </FormControl>
           {
             (values.Data === '')
-              ? <NoImage alt={t('StaticImageForm:noImage')} />
+              ? <NoImage alt={t('StaticImageTrinoBrain:noImage')} />
               : (
                 <ImageInfo
                   Src={values.Data || ''}
-                  Alt={t('StaticImageForm:altImage')}
+                  Alt={t('StaticImageTrinoBrain:altImage')}
                   Mime={values.Mime}
                   Size={values.Size}
                   Width={values.Width}
@@ -223,7 +223,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
             startIcon={<PublishIcon />}
             onClick={pickFile}
           >
-            {t('StaticImageForm:file.title')}
+            {t('StaticImageTrinoBrain:file.title')}
           </Button>
         </Grid>
         <Grid
@@ -253,10 +253,10 @@ export default (props: IForm): React.ReactElement<IForm> => {
             color="primary"
             variant="contained"
             type="submit"
-            title={t('StaticImageForm:button.title')}
+            title={t('StaticImageTrinoBrain:button.title')}
             disabled={isSubmitting}
           >
-            {t('StaticImageForm:button.text')}
+            {t('StaticImageTrinoBrain:button.text')}
           </Button>
         </Grid>
       </Grid>

@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Static data from the Trino Brain (static) of the report',
+  title: 'Static data from the Three dimensions that make up the Competency (static) of the report',
   altPT: {
     text: 'Description in Portuguese',
     title: 'The text of the description in Portuguese',

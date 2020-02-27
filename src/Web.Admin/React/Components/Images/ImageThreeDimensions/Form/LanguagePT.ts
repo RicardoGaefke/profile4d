@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos dos Quatro Centros de Inteligência (estáticos) do relatório',
+  title: 'Dados estáticos das Três dimensões que compõem a Competência (estática) do relatório',
   altPT: {
     text: 'Descrição em Português',
     title: 'Texto da descrição em Português',

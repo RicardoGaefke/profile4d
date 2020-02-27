@@ -16,4 +16,12 @@ export default [
     link: 'imagefourintelligencecenters',
     title: 'imagefourintelligencecenters',
   },
+  {
+    link: 'imagethreedimensions',
+    title: 'imagethreedimensions',
+  },
+  {
+    link: 'imagefourstages',
+    title: 'imagefourstages',
+  },
 ] as IStaticMenuItem[];

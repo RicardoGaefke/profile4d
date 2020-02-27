@@ -7,7 +7,7 @@ import { withFormik } from 'formik';
 import { Typography } from '@material-ui/core';
 import useStyles from '../Styles';
 import setLanguage from '../Language';
-import ImageFourIntelligenceCenters from './Form/Form';
+import ImageFourStages from './Form/Form';
 import Validation from './Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
 import { IStaticImageForm } from '../../../../../TypeScript/Interfaces/IStaticImageForm';
@@ -17,14 +17,14 @@ interface IProps {
   myValues: IStaticImageForm
 }
 
-const MyImageFourIntelligenceCenters = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticImageForm>({
-  displayName: 'Static Content Image Four Intelligence Centers',
+const MyImageFourStages = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticImageForm>({
+  displayName: 'Static Content Image Four Stages',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticImageForm => props.myValues,
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticImageForm>('Image/ImageFourIntelligenceCentersEdit', {
+    await myAxios(window.location.href).post<IStaticImageForm>('Image/ImageFourStagesEdit', {
       Mime: values.Mime,
       Alt_PT: values.Alt_PT,
       Alt_ENG: values.Alt_ENG,
@@ -33,24 +33,24 @@ const MyImageFourIntelligenceCenters = withFormik<WithTranslation & WithSnackbar
       const { data } = response;
 
       if (data.Success) {
-        enqueueSnackbar(t('StaticImageFourIntelligenceCenters:feedback.success'), {
+        enqueueSnackbar(t('StaticImageFourStages:feedback.success'), {
           variant: 'success',
         });
       } else {
-        enqueueSnackbar(t('StaticImageFourIntelligenceCenters:feedback.failure'), {
+        enqueueSnackbar(t('StaticImageFourStages:feedback.failure'), {
           variant: 'error',
         });
       }
     }).catch((): void => {
-      enqueueSnackbar(t('StaticImageFourIntelligenceCenters:feedback.failure'), {
+      enqueueSnackbar(t('StaticImageFourStages:feedback.failure'), {
         variant: 'error',
       });
     });
     setSubmitting(false);
   },
-})(ImageFourIntelligenceCenters);
+})(ImageFourStages);
 
-export const Login = withTranslation()(withSnackbar(MyImageFourIntelligenceCenters));
+export const Login = withTranslation()(withSnackbar(MyImageFourStages));
 
 export default withTranslation()(
   (props: WithTranslation & IProps): React.ReactElement<WithTranslation & IProps> => {
@@ -65,7 +65,7 @@ export default withTranslation()(
           align="center"
           variant="h5"
         >
-          {t('StaticImageFourIntelligenceCenters:title')}
+          {t('StaticImageFourStages:title')}
         </Typography>
         <Login myValues={myValues} />
       </div>

@@ -29,7 +29,7 @@ export type IForm = FormikProps<IStaticImageForm> & WithTranslation & WithSnackb
 
 export default (props: IForm): React.ReactElement<IForm> => {
   const classes = useStyles({});
-  const { t, i18n } = useTranslation('StaticImageFourIntelligenceCenters');
+  const { t, i18n } = useTranslation('StaticImageFourStages');
   setLanguage();
   const Api = new Hosts(window.location.href);
 
@@ -51,7 +51,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
   useEffect((): void => {
     if (!isSubmitting) {
       MyAxios(window.location.href)
-        .get<IStaticImageForm>('Image/ImageFourIntelligenceCenters')
+        .get<IStaticImageForm>('Image/ImageFourStages')
         .then((response): void => {
           const { data } = response;
 
@@ -134,8 +134,8 @@ export default (props: IForm): React.ReactElement<IForm> => {
           <TextField
             margin="dense"
             error={errors.Alt_PT as any && touched.Alt_PT as any}
-            label={t('StaticImageFourIntelligenceCenters:altPT.text')}
-            title={t('StaticImageFourIntelligenceCenters:altPT.title')}
+            label={t('StaticImageFourStages:altPT.text')}
+            title={t('StaticImageFourStages:altPT.title')}
             name="Alt_PT"
             id="Alt_PT"
             value={values.Alt_PT}
@@ -159,8 +159,8 @@ export default (props: IForm): React.ReactElement<IForm> => {
           <TextField
             margin="dense"
             error={errors.Alt_ENG as any && touched.Alt_ENG as any}
-            label={t('StaticImageFourIntelligenceCenters:altENG.text')}
-            title={t('StaticImageFourIntelligenceCenters:altENG.title')}
+            label={t('StaticImageFourStages:altENG.text')}
+            title={t('StaticImageFourStages:altENG.title')}
             name="Alt_ENG"
             id="Alt_ENG"
             value={values.Alt_ENG}
@@ -205,11 +205,11 @@ export default (props: IForm): React.ReactElement<IForm> => {
           </FormControl>
           {
             (values.Data === '')
-              ? <NoImage alt={t('StaticImageFourIntelligenceCenters:noImage')} />
+              ? <NoImage alt={t('StaticImageFourStages:noImage')} />
               : (
                 <ImageInfo
                   Src={values.Data || ''}
-                  Alt={t('StaticImageFourIntelligenceCenters:altImage')}
+                  Alt={t('StaticImageFourStages:altImage')}
                   Mime={values.Mime}
                   Size={values.Size}
                   Width={values.Width}
@@ -223,7 +223,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
             startIcon={<PublishIcon />}
             onClick={pickFile}
           >
-            {t('StaticImageFourIntelligenceCenters:file.title')}
+            {t('StaticImageFourStages:file.title')}
           </Button>
         </Grid>
         <Grid
@@ -253,10 +253,10 @@ export default (props: IForm): React.ReactElement<IForm> => {
             color="primary"
             variant="contained"
             type="submit"
-            title={t('StaticImageFourIntelligenceCenters:button.title')}
+            title={t('StaticImageFourStages:button.title')}
             disabled={isSubmitting}
           >
-            {t('StaticImageFourIntelligenceCenters:button.text')}
+            {t('StaticImageFourStages:button.text')}
           </Button>
         </Grid>
       </Grid>

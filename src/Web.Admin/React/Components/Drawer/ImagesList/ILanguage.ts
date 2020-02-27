@@ -3,4 +3,6 @@ export interface ILanguage {
   logo: string;
   imagetrinobrain: string;
   imagefourintelligencecenters: string;
+  imagethreedimensions: string;
+  imagefourstages: string;
 }

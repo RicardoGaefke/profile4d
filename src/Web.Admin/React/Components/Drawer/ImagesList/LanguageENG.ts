@@ -4,6 +4,8 @@ import { ILanguage } from './ILanguage';
 export default {
   title: 'Fixed Content',
   logo: 'Report logo',
-  imagetrinobrain: 'Triune Brain Image (static)',
-  imagefourintelligencecenters: 'Four Intelligence Centers Image (static)',
+  imagetrinobrain: 'Trino Brain (static)',
+  imagefourintelligencecenters: 'Four Intelligence Centers (static)',
+  imagethreedimensions: 'The three dimensions that make up the Competency (static)',
+  imagefourstages: 'Four stages (static)',
 } as ILanguage;

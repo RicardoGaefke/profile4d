@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos da Imagem CÉREBRO TRINO (estática) do relatório',
+  title: 'Dados estáticos do Cérebro Trino (estático) do relatório',
   altPT: {
     text: 'Descrição em Português',
     title: 'Texto da descrição em Português',
