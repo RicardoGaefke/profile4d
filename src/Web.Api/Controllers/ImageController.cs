@@ -191,5 +191,53 @@ namespace Profile4d.Web.Api.Controllers
         return _return;
       }
     }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("ImageThreeDimensions")]
+    public ActionResult<Image> ImageThreeDimensions()
+    {
+      Image _return = new Image();
+
+      try
+      {
+        _return = _myImages.ThreeDimension();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPost("ImageThreeDimensionsEdit")]
+    public ActionResult<BasicReturn> ImageThreeDimensionsEdit(Image data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+        _return = _myImages.ThreeDimensionEdit(data);
+        data.Name = _return.Code + ".png";
+        _blob.SaveBase64(data);
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = data.Src;
+        _return.Details = ex.StackTrace;
+
+        return _return;
+      }
+    }
   }
 }

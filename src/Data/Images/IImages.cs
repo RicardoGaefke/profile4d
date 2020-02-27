@@ -11,5 +11,8 @@ namespace Profile4d.Data
 
     public Image FourIntelligenceCenters();
     public BasicReturn FourIntelligenceCentersEdit(Image data);
+
+    public Image ThreeDimension();
+    public BasicReturn ThreeDimensionEdit(Image data);
   }
 }
