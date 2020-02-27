@@ -8,5 +8,8 @@ namespace Profile4d.Data
     public BasicReturn LogoEdit(Image data);
     public Image TrinoBrain();
     public BasicReturn TrinoBrainEdit(Image data);
+
+    public Image FourIntelligenceCenters();
+    public BasicReturn FourIntelligenceCentersEdit(Image data);
   }
 }
