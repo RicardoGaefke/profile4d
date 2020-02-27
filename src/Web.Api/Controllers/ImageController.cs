@@ -95,5 +95,197 @@ namespace Profile4d.Web.Api.Controllers
         return _return;
       }
     }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("ImageTrinoBrain")]
+    public ActionResult<Image> ImageTrinoBrain()
+    {
+      Image _return = new Image();
+
+      try
+      {
+        _return = _myImages.TrinoBrain();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPost("ImageTrinoBrainEdit")]
+    public ActionResult<BasicReturn> ImageTrinoBrainEdit(Image data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+        _return = _myImages.TrinoBrainEdit(data);
+        data.Name = _return.Code + ".png";
+        _blob.SaveBase64(data);
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = data.Src;
+        _return.Details = ex.StackTrace;
+
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("ImageFourIntelligenceCenters")]
+    public ActionResult<Image> ImageFourIntelligenceCenters()
+    {
+      Image _return = new Image();
+
+      try
+      {
+        _return = _myImages.FourIntelligenceCenters();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPost("ImageFourIntelligenceCentersEdit")]
+    public ActionResult<BasicReturn> ImageFourIntelligenceCentersEdit(Image data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+        _return = _myImages.FourIntelligenceCentersEdit(data);
+        data.Name = _return.Code + ".png";
+        _blob.SaveBase64(data);
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = data.Src;
+        _return.Details = ex.StackTrace;
+
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("ImageThreeDimensions")]
+    public ActionResult<Image> ImageThreeDimensions()
+    {
+      Image _return = new Image();
+
+      try
+      {
+        _return = _myImages.ThreeDimension();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPost("ImageThreeDimensionsEdit")]
+    public ActionResult<BasicReturn> ImageThreeDimensionsEdit(Image data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+        _return = _myImages.ThreeDimensionEdit(data);
+        data.Name = _return.Code + ".png";
+        _blob.SaveBase64(data);
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = data.Src;
+        _return.Details = ex.StackTrace;
+
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("ImageFourStages")]
+    public ActionResult<Image> ImageFourStages()
+    {
+      Image _return = new Image();
+
+      try
+      {
+        _return = _myImages.FourStages();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPost("ImageFourStagesEdit")]
+    public ActionResult<BasicReturn> ImageFourStagesEdit(Image data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+        _return = _myImages.FourStagesEdit(data);
+        data.Name = _return.Code + ".png";
+        _blob.SaveBase64(data);
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = data.Src;
+        _return.Details = ex.StackTrace;
+
+        return _return;
+      }
+    }
   }
 }
