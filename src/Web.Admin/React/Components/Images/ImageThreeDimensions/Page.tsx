@@ -3,14 +3,14 @@ import React, { useState, useEffect } from 'react';
 import { IStaticImageForm } from '../../../../../TypeScript/Interfaces/IStaticImageForm';
 import Loading from '../../Loading/Loading';
 import MyAxios from '../../../Utils/MyAxios';
-import MyImageBehavioursProfiles from './ImageBehavioursProfiles';
+import MyImageThreeDimensions from './ImageThreeDimensions';
 
 export default (): React.ReactElement => {
   const [state, setState] = useState({} as IStaticImageForm);
 
   useEffect((): void => {
     MyAxios(window.location.href)
-      .get<IStaticImageForm>('Image/Logo')
+      .get<IStaticImageForm>('Image/ImageThreeDimensions')
       .then((response): void => {
         const { data } = response;
 
@@ -21,7 +21,7 @@ export default (): React.ReactElement => {
 
   return (
     <>
-      {(!state.Success) ? (<Loading />) : (<MyImageBehavioursProfiles myValues={state} />)}
+      {(!state.Success) ? (<Loading />) : (<MyImageThreeDimensions myValues={state} />)}
     </>
   );
 };
