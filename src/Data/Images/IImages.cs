@@ -14,5 +14,8 @@ namespace Profile4d.Data
 
     public Image ThreeDimension();
     public BasicReturn ThreeDimensionEdit(Image data);
+
+    public Image FourStages();
+    public BasicReturn FourStagesEdit(Image data);
   }
 }

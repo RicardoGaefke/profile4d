@@ -239,5 +239,53 @@ namespace Profile4d.Web.Api.Controllers
         return _return;
       }
     }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("ImageFourStages")]
+    public ActionResult<Image> ImageFourStages()
+    {
+      Image _return = new Image();
+
+      try
+      {
+        _return = _myImages.FourStages();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPost("ImageFourStagesEdit")]
+    public ActionResult<BasicReturn> ImageFourStagesEdit(Image data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+        _return = _myImages.FourStagesEdit(data);
+        data.Name = _return.Code + ".png";
+        _blob.SaveBase64(data);
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = data.Src;
+        _return.Details = ex.StackTrace;
+
+        return _return;
+      }
+    }
   }
 }
