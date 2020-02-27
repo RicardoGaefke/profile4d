@@ -6,5 +6,7 @@ namespace Profile4d.Data
   {
     public Image Logo();
     public BasicReturn LogoEdit(Image data);
+    public Image TrinoBrain();
+    public BasicReturn TrinoBrainEdit(Image data);
   }
 }
