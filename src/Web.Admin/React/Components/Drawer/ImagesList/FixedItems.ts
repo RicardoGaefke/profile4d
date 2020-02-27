@@ -8,4 +8,20 @@ export default [
     link: 'logo',
     title: 'logo',
   },
+  {
+    link: 'imagetrinobrain',
+    title: 'imagetrinobrain',
+  },
+  {
+    link: 'imagefourintelligencecenters',
+    title: 'imagefourintelligencecenters',
+  },
+  {
+    link: 'imagethreedimensions',
+    title: 'imagethreedimensions',
+  },
+  {
+    link: 'imagefourstages',
+    title: 'imagefourstages',
+  },
 ] as IStaticMenuItem[];

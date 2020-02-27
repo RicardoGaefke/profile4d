@@ -7,8 +7,8 @@ import { withFormik } from 'formik';
 import { Typography } from '@material-ui/core';
 import useStyles from '../Styles';
 import setLanguage from '../Language';
-import ImageBehavioursProfiles from './Form/Form';
-import Validation from '../ImageForm/Form/Form.Validation';
+import ImageThreeDimensions from './Form/Form';
+import Validation from './Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
 import { IStaticImageForm } from '../../../../../TypeScript/Interfaces/IStaticImageForm';
 import myAxios from '../../../Utils/MyAxios';
@@ -17,14 +17,14 @@ interface IProps {
   myValues: IStaticImageForm
 }
 
-const MyImageBehavioursProfiles = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticImageForm>({
-  displayName: 'Static Content Image Form',
+const MyImageThreeDimensions = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticImageForm>({
+  displayName: 'Static Content Image Three Dimensions',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticImageForm => props.myValues,
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticImageForm>('Image/LogoEdit', {
+    await myAxios(window.location.href).post<IStaticImageForm>('Image/ImageThreeDimensionsEdit', {
       Mime: values.Mime,
       Alt_PT: values.Alt_PT,
       Alt_ENG: values.Alt_ENG,
@@ -33,24 +33,24 @@ const MyImageBehavioursProfiles = withFormik<WithTranslation & WithSnackbarProps
       const { data } = response;
 
       if (data.Success) {
-        enqueueSnackbar(t('StaticImageForm:feedback.success'), {
+        enqueueSnackbar(t('StaticImageThreeDimensions:feedback.success'), {
           variant: 'success',
         });
       } else {
-        enqueueSnackbar(t('StaticImageForm:feedback.failure'), {
+        enqueueSnackbar(t('StaticImageThreeDimensions:feedback.failure'), {
           variant: 'error',
         });
       }
     }).catch((): void => {
-      enqueueSnackbar(t('StaticImageForm:feedback.failure'), {
+      enqueueSnackbar(t('StaticImageThreeDimensions:feedback.failure'), {
         variant: 'error',
       });
     });
     setSubmitting(false);
   },
-})(ImageBehavioursProfiles);
+})(ImageThreeDimensions);
 
-export const Login = withTranslation()(withSnackbar(MyImageBehavioursProfiles));
+export const Login = withTranslation()(withSnackbar(MyImageThreeDimensions));
 
 export default withTranslation()(
   (props: WithTranslation & IProps): React.ReactElement<WithTranslation & IProps> => {
@@ -65,7 +65,7 @@ export default withTranslation()(
           align="center"
           variant="h5"
         >
-          {t('FirstPageImages:title')}
+          {t('StaticImageThreeDimensions:title')}
         </Typography>
         <Login myValues={myValues} />
       </div>
