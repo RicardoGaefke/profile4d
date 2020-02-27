@@ -16,7 +16,7 @@ import { FormikProps } from 'formik';
 import { IStaticImageForm } from '../../../../../../TypeScript/Interfaces/IStaticImageForm';
 // eslint-disable-next-line no-unused-vars
 import { IImage } from '../../../../../../TypeScript/Interfaces/IImage';
-import setLanguage from '../../ImageForm/Form/Language';
+import setLanguage from './Language';
 import Createdby from '../../../Created/Created';
 import useStyles from '../../../../Utils/Form.Styles';
 import NoImage from '../../NoImage';
@@ -29,7 +29,7 @@ export type IForm = FormikProps<IStaticImageForm> & WithTranslation & WithSnackb
 
 export default (props: IForm): React.ReactElement<IForm> => {
   const classes = useStyles({});
-  const { t, i18n } = useTranslation('StaticImageForm');
+  const { t, i18n } = useTranslation('StaticImageThreeDimensions');
   setLanguage();
   const Api = new Hosts(window.location.href);
 
@@ -51,7 +51,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
   useEffect((): void => {
     if (!isSubmitting) {
       MyAxios(window.location.href)
-        .get<IStaticImageForm>('Image/Logo')
+        .get<IStaticImageForm>('Image/ImageThreeDimensions')
         .then((response): void => {
           const { data } = response;
 
@@ -134,8 +134,8 @@ export default (props: IForm): React.ReactElement<IForm> => {
           <TextField
             margin="dense"
             error={errors.Alt_PT as any && touched.Alt_PT as any}
-            label={t('StaticImageForm:altPT.text')}
-            title={t('StaticImageForm:altPT.title')}
+            label={t('StaticImageThreeDimensions:altPT.text')}
+            title={t('StaticImageThreeDimensions:altPT.title')}
             name="Alt_PT"
             id="Alt_PT"
             value={values.Alt_PT}
@@ -159,8 +159,8 @@ export default (props: IForm): React.ReactElement<IForm> => {
           <TextField
             margin="dense"
             error={errors.Alt_ENG as any && touched.Alt_ENG as any}
-            label={t('StaticImageForm:altENG.text')}
-            title={t('StaticImageForm:altENG.title')}
+            label={t('StaticImageThreeDimensions:altENG.text')}
+            title={t('StaticImageThreeDimensions:altENG.title')}
             name="Alt_ENG"
             id="Alt_ENG"
             value={values.Alt_ENG}
@@ -178,7 +178,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
         <Grid
           item
           xs={12}
-          md={12}
+          md={6}
           lg={6}
         >
           <FormControl>
@@ -205,11 +205,11 @@ export default (props: IForm): React.ReactElement<IForm> => {
           </FormControl>
           {
             (values.Data === '')
-              ? <NoImage alt={t('StaticImageForm:noImage')} />
+              ? <NoImage alt={t('StaticImageThreeDimensions:noImage')} />
               : (
                 <ImageInfo
                   Src={values.Data || ''}
-                  Alt={t('StaticImageForm:altImage')}
+                  Alt={t('StaticImageThreeDimensions:altImage')}
                   Mime={values.Mime}
                   Size={values.Size}
                   Width={values.Width}
@@ -223,7 +223,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
             startIcon={<PublishIcon />}
             onClick={pickFile}
           >
-            {t('StaticImageForm:file.title')}
+            {t('StaticImageThreeDimensions:file.title')}
           </Button>
         </Grid>
         <Grid
@@ -253,10 +253,10 @@ export default (props: IForm): React.ReactElement<IForm> => {
             color="primary"
             variant="contained"
             type="submit"
-            title={t('StaticImageForm:button.title')}
+            title={t('StaticImageThreeDimensions:button.title')}
             disabled={isSubmitting}
           >
-            {t('StaticImageForm:button.text')}
+            {t('StaticImageThreeDimensions:button.text')}
           </Button>
         </Grid>
       </Grid>
