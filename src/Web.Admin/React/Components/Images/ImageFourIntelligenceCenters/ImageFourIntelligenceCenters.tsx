@@ -65,7 +65,7 @@ export default withTranslation()(
           align="center"
           variant="h5"
         >
-          {t('StaticImageFourIntelligenceCenters:title')}
+          {t('FirstPageImages:imagefourintelligencecenters')}
         </Typography>
         <Login myValues={myValues} />
       </div>

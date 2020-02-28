@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos da primeira página do relatório',
+  title: 'Dados estáticos do Logotipo do relatório',
   altPT: {
     text: 'Descrição em Português',
     title: 'Texto da descrição em Português',
