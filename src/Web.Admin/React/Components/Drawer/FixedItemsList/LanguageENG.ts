@@ -97,4 +97,6 @@ export default {
   nameidealpartner: 'Ideal Partner Name',
   behavioralresources: 'Behavioral Profile Resource',
   twelvecompetencestable: 'Table of twelve Competences',
+  //  dynamic content
+  questions: 'Questions',
 } as ILanguage;
