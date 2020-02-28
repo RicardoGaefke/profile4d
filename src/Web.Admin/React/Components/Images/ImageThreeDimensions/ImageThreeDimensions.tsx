@@ -65,7 +65,7 @@ export default withTranslation()(
           align="center"
           variant="h5"
         >
-          {t('StaticImageThreeDimensions:title')}
+          {t('FirstPageImages:imagethreedimensions')}
         </Typography>
         <Login myValues={myValues} />
       </div>

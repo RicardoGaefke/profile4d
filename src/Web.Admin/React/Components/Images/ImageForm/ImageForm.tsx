@@ -65,7 +65,7 @@ export default withTranslation()(
           align="center"
           variant="h5"
         >
-          {t('FirstPageImages:title')}
+          {t('FirstPageImages:logo')}
         </Typography>
         <Login myValues={myValues} />
       </div>
