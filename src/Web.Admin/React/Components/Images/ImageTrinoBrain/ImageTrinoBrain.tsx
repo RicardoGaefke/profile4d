@@ -65,7 +65,7 @@ export default withTranslation()(
           align="center"
           variant="h5"
         >
-          {t('StaticImageTrinoBrain:title')}
+          {t('FirstPageImages:imagetrinobrain')}
         </Typography>
         <Login myValues={myValues} />
       </div>
