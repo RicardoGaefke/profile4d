@@ -5,4 +5,8 @@ export default {
   title: 'Logo image',
   logo: 'Logo',
   default: 'Default image',
+  imagetrinobrain: 'Trino Brain (static)',
+  imagefourintelligencecenters: 'Four Intelligence Centers (static)',
+  imagethreedimensions: 'The three dimensions that make up the Competency (static)',
+  imagefourstages: 'Four stages (static)',
 } as ILanguage;

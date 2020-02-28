@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Static data from the first page of the report',
+  title: 'Static data from the Logo of the report',
   altPT: {
     text: 'Description in Portuguese',
     title: 'The text of the description in Portuguese',
