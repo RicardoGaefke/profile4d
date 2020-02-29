@@ -6,12 +6,7 @@ import {
   withRouter,
 } from 'react-router-dom';
 import MyTemplate from '../../Home/Template/Template';
-
-const Test = (): React.ReactElement => (
-  <>
-    questions
-  </>
-);
+import Questions from '../Questions/Questions';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -19,7 +14,7 @@ export default withRouter(
 
     return (
       <MyTemplate>
-        <Route path={`${match.url}/questions`} component={Test} />
+        <Route path={`${match.url}/questions`} component={Questions} />
       </MyTemplate>
     );
   },

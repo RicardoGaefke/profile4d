@@ -6,7 +6,7 @@ import MyNotFound from '../Views/404/404';
 import MyPolicy from '../Views/Policy/Policy';
 import FixedContentRouter from '../Components/FixedContent/Router/FixedContentRouter';
 import ImageFormRouter from '../Components/Images/Router/ImagesRouter';
-import DinamicRouter from '../Components/DynamicContent/Router/DynamicRouter';
+import DynamicRouter from '../Components/DynamicContent/Router/DynamicRouter';
 
 export default (): React.ReactElement => (
   <Switch>
@@ -14,7 +14,7 @@ export default (): React.ReactElement => (
     <Route path="/home/" component={MyHome} />
     <Route path="/fixedcontent/" component={FixedContentRouter} />
     <Route path="/imageform/" component={ImageFormRouter} />
-    <Route path="/dinamicContent/" component={DinamicRouter} />
+    <Route path="/dynamicContent/" component={DynamicRouter} />
     <Route path="/about" component={MyAbout} />
     <Route path="/policy" component={MyPolicy} />
     <Route path="/404" component={MyNotFound} />

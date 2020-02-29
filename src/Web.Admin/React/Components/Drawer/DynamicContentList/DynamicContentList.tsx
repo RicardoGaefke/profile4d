@@ -36,7 +36,7 @@ export default withTranslation()(
               key={item.link}
               button
               component={NavLink}
-              to={`/imageform/${item.link}`}
+              to={`/dynamicContent/${item.link}`}
               title={t(`DrawerAdminFixed:${item.title}`)}
               className={classes.navlink}
             >
