@@ -2,9 +2,10 @@ import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import {
-  Typography, Grid,
+  Typography, Grid, Container,
 } from '@material-ui/core';
 import Quantity from './Quantity/Quantity';
+import Add from './Add/Add';
 import setLanguage from './Language';
 import useStyles from './Styles';
 
@@ -15,7 +16,7 @@ export default withTranslation()(
     const classes = useStyles();
 
     return (
-      <div className={classes.root}>
+      <Container className={classes.root}>
         <Typography variant="h4" align="center">
           {t('DynamicQuestions:title')}
         </Typography>
@@ -29,7 +30,8 @@ export default withTranslation()(
             <Quantity minimum={99} total={32} />
           </Grid>
         </Grid>
-      </div>
+        <Add />
+      </Container>
     );
   },
 );

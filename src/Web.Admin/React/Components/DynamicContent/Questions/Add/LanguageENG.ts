@@ -2,5 +2,5 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Perguntas do assessment',
+  title: 'Add a question',
 } as ILanguage;

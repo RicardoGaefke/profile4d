@@ -6,6 +6,7 @@ interface IStyles {
   parent: {},
   divider: {},
   progress: {},
+  add: {},
 }
 
 export default makeStyles((theme: Theme): IStyles => ({
@@ -27,5 +28,10 @@ export default makeStyles((theme: Theme): IStyles => ({
     height: 12,
     marginLeft: 5,
     marginRight: 5,
+  },
+  add: {
+    position: 'fixed',
+    bottom: 85,
+    right: 45,
   },
 }));

@@ -27,8 +27,8 @@ export default withTranslation()(
             {`${t('Minimum:title')}: ${minimum.toString()}`}
           </Typography>
           <LinearProgress
-            variant="buffer"
-            value={(total >= minimum) ? minimum : total}
+            variant="determinate"
+            value={(total >= minimum) ? minimum : (total * 100 / minimum)}
             valueBuffer={minimum}
             color={(total >= minimum) ? 'primary' : 'secondary'}
             className={classes.progress}
