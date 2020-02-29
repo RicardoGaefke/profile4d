@@ -97,4 +97,6 @@ export default {
   nameidealpartner: 'Nome do Parceiro Ideal',
   behavioralresources: 'Recurso do Perfil Comportamental',
   twelvecompetencestable: 'Tabela das Doze Competências',
+  //  dynamic content
+  questions: 'Perguntas',
 } as ILanguage;

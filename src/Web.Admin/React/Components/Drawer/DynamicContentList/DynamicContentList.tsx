@@ -10,7 +10,7 @@ import {
 import setLanguage from '../FixedItemsList/Language';
 import Styles from '../FixedItemsList/Styles';
 // eslint-disable-next-line no-unused-vars
-import FixedItems, { IStaticMenuItem } from '../FixedItemsList/FixedItems';
+import FixedItems, { IStaticMenuItem } from './DynamicItems';
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
@@ -30,12 +30,20 @@ export default withTranslation()(
         )}
         className={classes.root}
       >
-        <ListItem
-          button
-          className={classes.navlink}
-        >
-          <ListItemText primary="Conteúdos fixos" />
-        </ListItem>
+        {
+          FixedItems.map((item: IStaticMenuItem): React.ReactNode => (
+            <ListItem
+              key={item.link}
+              button
+              component={NavLink}
+              to={`/dynamicContent/${item.link}`}
+              title={t(`DrawerAdminFixed:${item.title}`)}
+              className={classes.navlink}
+            >
+              <ListItemText primary={t(`DrawerAdminFixed:${item.title}`)} />
+            </ListItem>
+          ))
+        }
       </List>
     );
   },
