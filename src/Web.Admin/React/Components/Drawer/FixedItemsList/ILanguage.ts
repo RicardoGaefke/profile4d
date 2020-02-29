@@ -94,4 +94,5 @@ export interface ILanguage {
   nameidealpartner: string,
   behavioralresources: string,
   twelvecompetencestable: string,
+  questions: string,
 }
