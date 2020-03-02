@@ -185,10 +185,6 @@ export default [
     title: 'homogeneousheterogeneous',
   },
   {
-    link: 'trinityspecifics',
-    title: 'trinityspecifics',
-  },
-  {
     link: 'originalxadapted',
     title: 'originalxadapted',
   },
@@ -223,10 +219,6 @@ export default [
   {
     link: 'idealpartner',
     title: 'idealpartner',
-  },
-  {
-    link: 'behavioraldna',
-    title: 'behavioraldna',
   },
   {
     link: 'archetypeessence',

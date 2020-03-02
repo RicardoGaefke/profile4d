@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos do Processo de Cristalização da Personalidade do relatório',
+  title: 'Dados estáticos do Processo de Cristalização do seu Perfil Dominante do relatório',
   titlePT: {
     text: 'Título em Português',
     title: 'Título do relatório em Português',

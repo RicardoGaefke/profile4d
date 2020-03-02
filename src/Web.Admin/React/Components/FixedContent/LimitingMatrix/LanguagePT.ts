@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos da Crença Matriz Limitante do relatório',
+  title: 'Dados estáticos da Crença na Matriz Limitante do relatório',
   titlePT: {
     text: 'Título em Português',
     title: 'Título do relatório em Português',
