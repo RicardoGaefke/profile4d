@@ -7,7 +7,7 @@ import { withFormik } from 'formik';
 import { Typography } from '@material-ui/core';
 import useStyles from './Styles';
 import setLanguage from './Language';
-import TrinitySpecifics from '../Introduction/Form/Form';
+import YourBehavioralDNA from '../Introduction/Form/Form';
 import Validation from '../Introduction/Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
 import { IStaticIntroduction } from '../../../../../TypeScript/Interfaces/IStaticContent';
@@ -17,14 +17,14 @@ interface IProps {
   myValues: IStaticIntroduction
 }
 
-export const MyTrinitySpecifics = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticIntroduction>({
-  displayName: 'Static Content Trinity Specifics',
+export const MyYourBehavioralDNA = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticIntroduction>({
+  displayName: 'Static Content Internal Enemy One',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticIntroduction => props.myValues,
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticIntroduction>('StaticContent/TrinitySpecificsEdit', {
+    await myAxios(window.location.href).post<IStaticIntroduction>('StaticContent/YourBehavioralDNAEdit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,
@@ -33,24 +33,24 @@ export const MyTrinitySpecifics = withFormik<WithTranslation & WithSnackbarProps
       const { data } = response;
 
       if (data.Success) {
-        enqueueSnackbar(t('StaticTrinitySpecifics:feedback.success'), {
+        enqueueSnackbar(t('StaticYourBehavioralDNA:feedback.success'), {
           variant: 'success',
         });
       } else {
-        enqueueSnackbar(t('StaticTrinitySpecifics:feedback.failure'), {
+        enqueueSnackbar(t('StaticYourBehavioralDNA:feedback.failure'), {
           variant: 'error',
         });
       }
     }).catch((): void => {
-      enqueueSnackbar(t('StaticTrinitySpecifics:feedback.failure'), {
+      enqueueSnackbar(t('StaticYourBehavioralDNA:feedback.failure'), {
         variant: 'error',
       });
     });
     setSubmitting(false);
   },
-})(TrinitySpecifics);
+})(YourBehavioralDNA);
 
-export const Login = withTranslation()(withSnackbar(MyTrinitySpecifics));
+export const Login = withTranslation()(withSnackbar(MyYourBehavioralDNA));
 
 export default withTranslation()(
   (props: WithTranslation & IProps): React.ReactElement<WithTranslation & IProps> => {
@@ -65,7 +65,7 @@ export default withTranslation()(
           align="center"
           variant="h5"
         >
-          {t('StaticTrinitySpecifics:title')}
+          {t('StaticYourBehavioralDNA:title')}
         </Typography>
         <Login myValues={myValues} />
       </div>

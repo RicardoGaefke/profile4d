@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos da Crença na Matriz Limitante do relatório',
+  title: 'Dados estáticos do Seu DNA Comportamental do relatório',
   titlePT: {
     text: 'Título em Português',
     title: 'Título do relatório em Português',
