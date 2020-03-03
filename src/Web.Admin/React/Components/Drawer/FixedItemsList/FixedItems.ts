@@ -157,6 +157,10 @@ export default [
     title: 'firstfourlimitateforces',
   },
   {
+    link: 'internalenemyone',
+    title: 'internalenemyone',
+  },
+  {
     link: 'secondfourlimitateforces',
     title: 'secondfourlimitateforces',
   },
@@ -165,8 +169,20 @@ export default [
     title: 'pdi',
   },
   {
+    link: 'internalenemytwo',
+    title: 'internalenemytwo',
+  },
+  {
+    link: 'limitationfourpowers',
+    title: 'limitationfourpowers',
+  },
+  {
     link: 'threeintelligencecenters',
     title: 'threeintelligencecenters',
+  },
+  {
+    link: 'attentionpoints',
+    title: 'attentionpoints',
   },
   {
     link: 'behavioralrespectiveenergies',
@@ -185,10 +201,6 @@ export default [
     title: 'homogeneousheterogeneous',
   },
   {
-    link: 'trinityspecifics',
-    title: 'trinityspecifics',
-  },
-  {
     link: 'originalxadapted',
     title: 'originalxadapted',
   },
@@ -203,6 +215,10 @@ export default [
   {
     link: 'healthyadult',
     title: 'healthyadult',
+  },
+  {
+    link: 'yourbehavioraldna',
+    title: 'yourbehavioraldna',
   },
   {
     link: 'synergeticmode',
@@ -223,10 +239,6 @@ export default [
   {
     link: 'idealpartner',
     title: 'idealpartner',
-  },
-  {
-    link: 'behavioraldna',
-    title: 'behavioraldna',
   },
   {
     link: 'archetypeessence',
@@ -287,6 +299,10 @@ export default [
   {
     link: 'observation',
     title: 'observation',
+  },
+  {
+    link: 'professionalanalyze',
+    title: 'professionalanalyze',
   },
   {
     link: 'twelvecompetences',

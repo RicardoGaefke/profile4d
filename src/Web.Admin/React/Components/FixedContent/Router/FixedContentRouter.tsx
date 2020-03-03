@@ -44,24 +44,27 @@ import FourPersonalityPowers from '../FourPersonalityPowers/Page';
 import TrinityBehavioralSabotage from '../TrinityBehavioralSabotage/Page';
 import InternalEnemies from '../InternalEnemies/Page';
 import FirstFourLimitateForces from '../FirstFourLimitateForces/Page';
+import InternalEnemyOne from '../InternalEnemyOne/Page';
 import SecondFourLimitateForces from '../SecondFourLimitateForces/Page';
 import PDI from '../PDI/Page';
+import InternalEnemyTwo from '../InternalEnemyTwo/Page';
+import LimitationFourPowers from '../LimitationFourPowers/Page';
 import ThreeIntelligenceCenters from '../ThreeIntelligenceCenters/Page';
+import AttentionPoints from '../AttentionPoints/Page';
 import BehavioralRespectiveEnergies from '../BehavioralRespectiveEnergies/Page';
 import IdentifiedConflicts from '../IdentifiedConflicts/Page';
 import EnergySpikes from '../EnergySpikes/Page';
 import HomogeneousHeterogeneous from '../HomogeneousHeterogeneous/Page';
-import TrinitySpecifics from '../TrinitySpecifics/Page';
 import OriginalXAdapted from '../OriginalXAdapted/Page';
 import ExerciseProfileMoviment from '../ExerciseProfileMoviment/Page';
 import SuperiorMind from '../SuperiorMind/Page';
 import HealthyAdult from '../HealthyAdult/Page';
+import YourBehavioralDNA from '../YourBehavioralDNA/Page';
 import SynergeticMode from '../SynergeticMode/Page';
 import DomProfile from '../DomProfile/Page';
 import BigChallenge from '../BigChallenge/Page';
 import WorkKey from '../WorkKey/Page';
 import IdealPartner from '../IdealPartner/Page';
-import BehavioralDNA from '../BehavioralDNA/Page';
 import ArchetypeEssence from '../ArchetypeEssence/Page';
 import EssentialFeature from '../EssentialFeature/Page';
 import CharacterFormation from '../CharacterFormation/Page';
@@ -77,6 +80,7 @@ import TwelveCharacterAdultStrengths from '../TwelveCharacterAdultStrengths/Page
 import TwelveCompetencesApresentation from '../TwelveCompetencesApresentation/Page';
 import FourCompetentStages from '../FourCompetentStages/Page';
 import Observation from '../Observation/Page';
+import ProfessionalAnalyze from '../ProfessionalAnalyze/Page';
 import TwelveCompetences from '../TwelveCompetences/Page';
 import ExcellentCompromise from '../ExcellentCompromise/Page';
 import ConflictsResolution from '../ConflictsResolution/Page';
@@ -143,24 +147,27 @@ export default withRouter(
         <Route path={`${match.url}/trinitybehavioralsabotage`} component={TrinityBehavioralSabotage} />
         <Route path={`${match.url}/internalenemies`} component={InternalEnemies} />
         <Route path={`${match.url}/firstfourlimitateforces`} component={FirstFourLimitateForces} />
+        <Route path={`${match.url}/internalenemyone`} component={InternalEnemyOne} />
         <Route path={`${match.url}/secondfourlimitateforces`} component={SecondFourLimitateForces} />
         <Route path={`${match.url}/pdi`} component={PDI} />
+        <Route path={`${match.url}/internalenemytwo`} component={InternalEnemyTwo} />
+        <Route path={`${match.url}/limitationfourpowers`} component={LimitationFourPowers} />
         <Route path={`${match.url}/threeintelligencecenters`} component={ThreeIntelligenceCenters} />
+        <Route path={`${match.url}/attentionpoints`} component={AttentionPoints} />
         <Route path={`${match.url}/behavioralrespectiveenergies`} component={BehavioralRespectiveEnergies} />
         <Route path={`${match.url}/identifiedconflicts`} component={IdentifiedConflicts} />
         <Route path={`${match.url}/energyspikes`} component={EnergySpikes} />
         <Route path={`${match.url}/homogeneousheterogeneous`} component={HomogeneousHeterogeneous} />
-        <Route path={`${match.url}/trinityspecifics`} component={TrinitySpecifics} />
         <Route path={`${match.url}/originalxadapted`} component={OriginalXAdapted} />
         <Route path={`${match.url}/exerciseprofilemoviment`} component={ExerciseProfileMoviment} />
         <Route path={`${match.url}/superiormind`} component={SuperiorMind} />
         <Route path={`${match.url}/healthyadult`} component={HealthyAdult} />
+        <Route path={`${match.url}/yourbehavioraldna`} component={YourBehavioralDNA} />
         <Route path={`${match.url}/synergeticmode`} component={SynergeticMode} />
         <Route path={`${match.url}/domprofile`} component={DomProfile} />
         <Route path={`${match.url}/bigchallenge`} component={BigChallenge} />
         <Route path={`${match.url}/workkey`} component={WorkKey} />
         <Route path={`${match.url}/idealpartner`} component={IdealPartner} />
-        <Route path={`${match.url}/behavioraldna`} component={BehavioralDNA} />
         <Route path={`${match.url}/archetypeessence`} component={ArchetypeEssence} />
         <Route path={`${match.url}/essentialfeature`} component={EssentialFeature} />
         <Route path={`${match.url}/characterformation`} component={CharacterFormation} />
@@ -175,7 +182,8 @@ export default withRouter(
         <Route path={`${match.url}/twelvecharacteradultstrengths`} component={TwelveCharacterAdultStrengths} />
         <Route path={`${match.url}/twelvecompetencesapresentation`} component={TwelveCompetencesApresentation} />
         <Route path={`${match.url}/fourcompetentstages`} component={FourCompetentStages} />
-        <Route path={`${match.url}/Observation`} component={Observation} />
+        <Route path={`${match.url}/observation`} component={Observation} />
+        <Route path={`${match.url}/professionalanalyze`} component={ProfessionalAnalyze} />
         <Route path={`${match.url}/twelvecompetences`} component={TwelveCompetences} />
         <Route path={`${match.url}/excellentcompromise`} component={ExcellentCompromise} />
         <Route path={`${match.url}/conflictsresolution`} component={ConflictsResolution} />

@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos da Síntese do seu DNA Comportamental do relatório',
+  title: 'Dados estáticos dos Pontos de atenção do relatório',
   titlePT: {
     text: 'Título em Português',
     title: 'Título do relatório em Português',
