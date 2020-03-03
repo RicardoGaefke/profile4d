@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos dos Três Centros de Inteligência do relatório',
+  title: 'Dados estáticos dos Centros de inteligência e suas respectivas energias do relatório',
   titlePT: {
     text: 'Título em Português',
     title: 'Título do relatório em Português',

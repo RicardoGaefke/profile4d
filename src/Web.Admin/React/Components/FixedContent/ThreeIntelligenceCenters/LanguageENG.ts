@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Static data from the Three Intelligence Centers of the report',
+  title: 'Static data from the Intelligence centers and their respective energies of the report',
   titlePT: {
     text: 'Title in Portuguese',
     title: 'The title of the report in Portuguese',

@@ -51,7 +51,6 @@ import BehavioralRespectiveEnergies from '../BehavioralRespectiveEnergies/Page';
 import IdentifiedConflicts from '../IdentifiedConflicts/Page';
 import EnergySpikes from '../EnergySpikes/Page';
 import HomogeneousHeterogeneous from '../HomogeneousHeterogeneous/Page';
-import TrinitySpecifics from '../TrinitySpecifics/Page';
 import OriginalXAdapted from '../OriginalXAdapted/Page';
 import ExerciseProfileMoviment from '../ExerciseProfileMoviment/Page';
 import SuperiorMind from '../SuperiorMind/Page';
@@ -61,7 +60,6 @@ import DomProfile from '../DomProfile/Page';
 import BigChallenge from '../BigChallenge/Page';
 import WorkKey from '../WorkKey/Page';
 import IdealPartner from '../IdealPartner/Page';
-import BehavioralDNA from '../BehavioralDNA/Page';
 import ArchetypeEssence from '../ArchetypeEssence/Page';
 import EssentialFeature from '../EssentialFeature/Page';
 import CharacterFormation from '../CharacterFormation/Page';
@@ -150,7 +148,6 @@ export default withRouter(
         <Route path={`${match.url}/identifiedconflicts`} component={IdentifiedConflicts} />
         <Route path={`${match.url}/energyspikes`} component={EnergySpikes} />
         <Route path={`${match.url}/homogeneousheterogeneous`} component={HomogeneousHeterogeneous} />
-        <Route path={`${match.url}/trinityspecifics`} component={TrinitySpecifics} />
         <Route path={`${match.url}/originalxadapted`} component={OriginalXAdapted} />
         <Route path={`${match.url}/exerciseprofilemoviment`} component={ExerciseProfileMoviment} />
         <Route path={`${match.url}/superiormind`} component={SuperiorMind} />
@@ -160,7 +157,6 @@ export default withRouter(
         <Route path={`${match.url}/bigchallenge`} component={BigChallenge} />
         <Route path={`${match.url}/workkey`} component={WorkKey} />
         <Route path={`${match.url}/idealpartner`} component={IdealPartner} />
-        <Route path={`${match.url}/behavioraldna`} component={BehavioralDNA} />
         <Route path={`${match.url}/archetypeessence`} component={ArchetypeEssence} />
         <Route path={`${match.url}/essentialfeature`} component={EssentialFeature} />
         <Route path={`${match.url}/characterformation`} component={CharacterFormation} />
