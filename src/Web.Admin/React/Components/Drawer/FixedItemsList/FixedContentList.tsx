@@ -29,7 +29,7 @@ export default withTranslation()(
         className={classes.root}
       >
         {
-          FixedItems.map((item: IStaticMenuItem): React.ReactNode => (
+          FixedItems.map((item: IStaticMenuItem, index: number): React.ReactNode => (
             <ListItem
               key={item.link}
               button
@@ -38,7 +38,9 @@ export default withTranslation()(
               title={t(`DrawerAdminFixed:${item.title}`)}
               className={classes.navlink}
             >
-              <ListItemText primary={t(`DrawerAdminFixed:${item.title}`)} />
+              <ListItemText
+                primary={`${index + 1} - ${t(`DrawerAdminFixed:${item.title}`)}`}
+              />
             </ListItem>
           ))
         }

@@ -7,7 +7,7 @@ import { withFormik } from 'formik';
 import { Typography } from '@material-ui/core';
 import useStyles from './Styles';
 import setLanguage from './Language';
-import BehavioralDNA from '../Introduction/Form/Form';
+import InternalEnemyTwo from '../Introduction/Form/Form';
 import Validation from '../Introduction/Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
 import { IStaticIntroduction } from '../../../../../TypeScript/Interfaces/IStaticContent';
@@ -17,14 +17,14 @@ interface IProps {
   myValues: IStaticIntroduction
 }
 
-export const MyBehavioralDNA = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticIntroduction>({
-  displayName: 'Static Content Behavioral DNA',
+export const MyInternalEnemyTwo = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticIntroduction>({
+  displayName: 'Static Content Internal Enemy One',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticIntroduction => props.myValues,
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticIntroduction>('StaticContent/BehavioralDNAEdit', {
+    await myAxios(window.location.href).post<IStaticIntroduction>('StaticContent/InternalEnemyTwoEdit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,
@@ -33,24 +33,24 @@ export const MyBehavioralDNA = withFormik<WithTranslation & WithSnackbarProps & 
       const { data } = response;
 
       if (data.Success) {
-        enqueueSnackbar(t('StaticBehavioralDNA:feedback.success'), {
+        enqueueSnackbar(t('StaticInternalEnemyTwo:feedback.success'), {
           variant: 'success',
         });
       } else {
-        enqueueSnackbar(t('StaticBehavioralDNA:feedback.failure'), {
+        enqueueSnackbar(t('StaticInternalEnemyTwo:feedback.failure'), {
           variant: 'error',
         });
       }
     }).catch((): void => {
-      enqueueSnackbar(t('StaticBehavioralDNA:feedback.failure'), {
+      enqueueSnackbar(t('StaticInternalEnemyTwo:feedback.failure'), {
         variant: 'error',
       });
     });
     setSubmitting(false);
   },
-})(BehavioralDNA);
+})(InternalEnemyTwo);
 
-export const Login = withTranslation()(withSnackbar(MyBehavioralDNA));
+export const Login = withTranslation()(withSnackbar(MyInternalEnemyTwo));
 
 export default withTranslation()(
   (props: WithTranslation & IProps): React.ReactElement<WithTranslation & IProps> => {
@@ -65,7 +65,7 @@ export default withTranslation()(
           align="center"
           variant="h5"
         >
-          {t('StaticBehavioralDNA:title')}
+          {t('StaticInternalEnemyTwo:title')}
         </Typography>
         <Login myValues={myValues} />
       </div>

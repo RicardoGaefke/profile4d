@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos da Trindade Especificada do relatório',
+  title: 'Dados estáticos do 2º Inimigo Interno do relatório',
   titlePT: {
     text: 'Título em Português',
     title: 'Título do relatório em Português',
