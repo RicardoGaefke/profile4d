@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos das Quatro Forças Limitadoras do relatório',
+  title: 'Dados estáticos das Quatro Forças da Personalidade do relatório',
   titlePT: {
     text: 'Título em Português',
     title: 'Título do relatório em Português',

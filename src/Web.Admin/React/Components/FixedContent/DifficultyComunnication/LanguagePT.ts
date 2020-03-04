@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Dados estáticos da Dificuldade na Comunicação do relatório',
+  title: 'Dados estáticos do Quem eu Sou do relatório',
   titlePT: {
     text: 'Título em Português',
     title: 'Título do relatório em Português',
