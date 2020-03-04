@@ -5,7 +5,7 @@ import {
   Typography, Grid, Container,
 } from '@material-ui/core';
 import Quantity from './Quantity/Quantity';
-import Add from './Add/Add';
+import Add from './AddButton/Add';
 import setLanguage from './Language';
 import useStyles from './Styles';
 
