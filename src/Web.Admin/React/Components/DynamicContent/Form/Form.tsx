@@ -140,14 +140,18 @@ export default (props: IForm): React.ReactElement<IForm> => {
             fullWidth
           />
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={12}
-          lg={12}
-        >
-          <Createdby Created={values.Created} CreatedBy={values.CreatedBy} />
-        </Grid>
+        {
+          (values.CreatedBy !== '') ? (
+            <Grid
+              item
+              xs={12}
+              md={12}
+              lg={12}
+            >
+              <Createdby Created={values.Created} CreatedBy={values.CreatedBy} />
+            </Grid>
+          ) : null
+        }
         <Grid
           item
           xs={12}

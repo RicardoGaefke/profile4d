@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import MyTemplate from '../../Home/Template/Template';
 import Questions from '../Questions/Questions';
+import QuestionAdd from '../Questions/Add/Add';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -14,7 +15,8 @@ export default withRouter(
 
     return (
       <MyTemplate>
-        <Route path={`${match.url}/questions`} component={Questions} />
+        <Route path={`${match.url}/questions`} exact component={Questions} />
+        <Route path={`${match.url}/questions/add`} component={QuestionAdd} />
       </MyTemplate>
     );
   },
