@@ -5,7 +5,7 @@ import {
   Typography, Grid, Container,
 } from '@material-ui/core';
 import Quantity from './Quantity/Quantity';
-import Add from './AddButton/Add';
+import Add from '../AddButton/Add';
 import setLanguage from './Language';
 import useStyles from './Styles';
 
@@ -30,7 +30,7 @@ export default withTranslation()(
             <Quantity minimum={99} total={32} />
           </Grid>
         </Grid>
-        <Add />
+        <Add to="/dynamicContent/questions/add" />
       </Container>
     );
   },

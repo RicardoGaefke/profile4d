@@ -8,9 +8,13 @@ import {
 } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import setLanguage from './Language';
-import useStyles from '../Styles';
+import useStyles from '../Questions/Styles';
 
-type IProps = WithTranslation & RouteComponentProps;
+interface MyProps {
+  to: string,
+}
+
+type IProps = WithTranslation & RouteComponentProps & MyProps;
 
 export default withTranslation()(
   withRouter(
@@ -18,10 +22,10 @@ export default withTranslation()(
       setLanguage();
       const history = useHistory();
       const classes = useStyles();
-      const { t } = props;
+      const { t, to } = props;
 
       const newQuestion = (): void => {
-        history.push('/dynamicContent/questions/add');
+        history.push(to);
       };
 
       return (
