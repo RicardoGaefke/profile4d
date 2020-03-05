@@ -2,6 +2,8 @@ import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
+import { withRouter, RouteComponentProps } from 'react-router';
+// eslint-disable-next-line no-unused-vars
 import { withSnackbar, WithSnackbarProps } from 'notistack';
 import { withFormik } from 'formik';
 import { Typography } from '@material-ui/core';
@@ -19,13 +21,13 @@ interface IProps {
   myValues: IDynamicContent
 }
 
-const MyQuestion = withFormik<WithTranslation & WithSnackbarProps & IProps, IDynamicContent>({
-  displayName: 'Static Content Introduction',
+const MyQuestion = withFormik<WithTranslation & WithSnackbarProps & RouteComponentProps & IProps, IDynamicContent>({
+  displayName: 'Static Content Add',
   enableReinitialize: true,
   mapPropsToValues: (): IDynamicContent => InitialValues,
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
-    const { enqueueSnackbar, t } = props;
+    const { enqueueSnackbar, t, history } = props;
     await myAxios(window.location.href).post<IDynamicContent>('DynamicContent/QuestionAdd', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
@@ -38,6 +40,8 @@ const MyQuestion = withFormik<WithTranslation & WithSnackbarProps & IProps, IDyn
         enqueueSnackbar(t('DynamicForm:feedback.success'), {
           variant: 'success',
         });
+
+        history.push('/');
       } else {
         enqueueSnackbar(t('DynamicForm:feedback.failure'), {
           variant: 'error',
@@ -52,7 +56,7 @@ const MyQuestion = withFormik<WithTranslation & WithSnackbarProps & IProps, IDyn
   },
 })(Form);
 
-const Login = withTranslation()(withSnackbar(MyQuestion));
+const Login = withTranslation()(withSnackbar(withRouter(MyQuestion)));
 
 export default withTranslation()(
   (props: WithTranslation & IProps): React.ReactElement<WithTranslation & IProps> => {
