@@ -141,6 +141,14 @@ export default [
     title: 'competentxsabotage',
   },
   {
+    link: 'competentmodeone',
+    title: 'competentmodeone',
+  },
+  {
+    link: 'saboteurmodeone',
+    title: 'saboteurmodeone',
+  },
+  {
     link: 'trinitybehavioralcompetent',
     title: 'trinitybehavioralcompetent',
   },

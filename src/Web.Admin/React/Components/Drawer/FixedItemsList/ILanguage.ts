@@ -36,6 +36,8 @@ export interface ILanguage {
   defensemecanisms: string,
   neuroticcompulsion: string,
   competentxsabotage: string,
+  competentmodeone: string,
+  saboteurmodeone: string,
   trinitybehavioralcompetent: string,
   internalpartners: string,
   difficultycomunnication: string,

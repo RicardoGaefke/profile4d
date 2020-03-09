@@ -39,6 +39,8 @@ export default {
   defensemecanisms: 'Mecanismos de Defesa',
   neuroticcompulsion: 'Compulsão Neurótica',
   competentxsabotage: 'Modo Competente X Modo Sabotador',
+  competentmodeone: 'Modo Competente',
+  saboteurmodeone: 'Modo Sabotador',
   trinitybehavioralcompetent: 'Tríade comportamental - Modo competente',
   internalpartners: 'Parceiros Internos',
   difficultycomunnication: 'Quem eu sou?',
