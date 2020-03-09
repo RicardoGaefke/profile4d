@@ -7,7 +7,7 @@ import { withFormik } from 'formik';
 import { Typography } from '@material-ui/core';
 import useStyles from './Styles';
 import setLanguage from './Language';
-import NameProfileOne from '../Introduction/Form/Form';
+import NameProfileTwo from '../Introduction/Form/Form';
 import Validation from '../Introduction/Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
 import { IStaticIntroduction } from '../../../../../TypeScript/Interfaces/IStaticContent';
@@ -17,14 +17,14 @@ interface IProps {
   myValues: IStaticIntroduction
 }
 
-export const MyNameProfileOne = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticIntroduction>({
-  displayName: 'Static Content Name Profile One',
+export const MyNameProfileTwo = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticIntroduction>({
+  displayName: 'Static Content Name Profile Two',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticIntroduction => props.myValues,
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticIntroduction>('StaticContent/NameProfileOneEdit', {
+    await myAxios(window.location.href).post<IStaticIntroduction>('StaticContent/NameProfileTwoEdit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,
@@ -33,24 +33,24 @@ export const MyNameProfileOne = withFormik<WithTranslation & WithSnackbarProps &
       const { data } = response;
 
       if (data.Success) {
-        enqueueSnackbar(t('StaticNameProfileOne:feedback.success'), {
+        enqueueSnackbar(t('StaticNameProfileTwo:feedback.success'), {
           variant: 'success',
         });
       } else {
-        enqueueSnackbar(t('StaticNameProfileOne:feedback.failure'), {
+        enqueueSnackbar(t('StaticNameProfileTwo:feedback.failure'), {
           variant: 'error',
         });
       }
     }).catch((): void => {
-      enqueueSnackbar(t('StaticNameProfileOne:feedback.failure'), {
+      enqueueSnackbar(t('StaticNameProfileTwo:feedback.failure'), {
         variant: 'error',
       });
     });
     setSubmitting(false);
   },
-})(NameProfileOne);
+})(NameProfileTwo);
 
-export const Login = withTranslation()(withSnackbar(MyNameProfileOne));
+export const Login = withTranslation()(withSnackbar(MyNameProfileTwo));
 
 export default withTranslation()(
   (props: WithTranslation & IProps): React.ReactElement<WithTranslation & IProps> => {
@@ -65,7 +65,7 @@ export default withTranslation()(
           align="center"
           variant="h5"
         >
-          {t('StaticNameProfileOne:title')}
+          {t('StaticNameProfileTwo:title')}
         </Typography>
         <Login myValues={myValues} />
       </div>

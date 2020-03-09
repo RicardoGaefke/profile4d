@@ -89,6 +89,10 @@ export default [
     title: 'sabotagewhoiam',
   },
   {
+    link: 'nameprofiletwo',
+    title: 'nameprofiletwo',
+  },
+  {
     link: 'synthesissaboteur',
     title: 'synthesissaboteur',
   },

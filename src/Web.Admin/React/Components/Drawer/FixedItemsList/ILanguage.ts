@@ -23,6 +23,7 @@ export interface ILanguage {
   sabotagedominant: string,
   sabotagemode: string,
   sabotagewhoiam: string,
+  nameprofiletwo: string,
   synthesissaboteur: string,
   limitingmatrix: string,
   communicationdifficulty: string,

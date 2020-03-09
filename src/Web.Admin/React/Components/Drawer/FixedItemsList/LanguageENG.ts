@@ -26,6 +26,7 @@ export default {
   sabotagedominant: 'Features of your dominant profile',
   sabotagemode: 'Saboteur Mode',
   sabotagewhoiam: 'Who am I (saboteur)?',
+  nameprofiletwo: 'Profile name',
   synthesissaboteur: 'Synthesis of its main Saboteur',
   limitingmatrix: 'Limiting Matrix Belief',
   communicationdifficulty: 'Difficulty in Communication',

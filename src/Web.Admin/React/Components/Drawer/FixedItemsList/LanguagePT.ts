@@ -26,6 +26,7 @@ export default {
   sabotagedominant: 'Seu Sabotador Dominante',
   sabotagemode: 'Modo sabotador',
   sabotagewhoiam: 'Quem eu sou (sabotador)?',
+  nameprofiletwo: 'Nome do perfil',
   synthesissaboteur: 'Síntese do seu principal Sabotador',
   limitingmatrix: 'Crença na Matriz Limitante',
   communicationdifficulty: 'Dificuldade na Comunicação',

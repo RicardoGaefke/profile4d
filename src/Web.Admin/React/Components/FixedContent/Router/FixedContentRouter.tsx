@@ -27,6 +27,7 @@ import InteractsRelationships from '../InteractsRelationships/Page';
 import SabotageDominant from '../SabotageDominant/Page';
 import SabotageMode from '../SabotageMode/Page';
 import SabotageWhoIAm from '../SabotageWhoIAm/Page';
+import NameProfileTwo from '../NameProfileTwo/Page';
 import SynthesisSaboteur from '../SynthesisSaboteur/Page';
 import LimitingMatrix from '../LimitingMatrix/Page';
 import CommunicationDifficulty from '../CommunicationDifficulty/Page';
@@ -132,6 +133,7 @@ export default withRouter(
         <Route path={`${match.url}/sabotagedominant`} component={SabotageDominant} />
         <Route path={`${match.url}/sabotagemode`} component={SabotageMode} />
         <Route path={`${match.url}/sabotagewhoiam`} component={SabotageWhoIAm} />
+        <Route path={`${match.url}/nameprofiletwo`} component={NameProfileTwo} />
         <Route path={`${match.url}/synthesissaboteur`} component={SynthesisSaboteur} />
         <Route path={`${match.url}/limitingmatrix`} component={LimitingMatrix} />
         <Route path={`${match.url}/communicationdifficulty`} component={CommunicationDifficulty} />
