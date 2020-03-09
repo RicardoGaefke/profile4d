@@ -33,6 +33,10 @@ export default [
     title: 'dominantwhoiam',
   },
   {
+    link: 'nameprofileone',
+    title: 'nameprofileone',
+  },
+  {
     link: 'dominantstructure',
     title: 'dominantstructure',
   },

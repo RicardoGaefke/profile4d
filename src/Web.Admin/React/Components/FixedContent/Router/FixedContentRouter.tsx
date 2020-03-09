@@ -13,6 +13,7 @@ import TwoMindWays from '../TwoMindWays/Page';
 import DominantProfile from '../DominantProfile/Page';
 import CompetentMode from '../CompetentMode/Page';
 import DominantWhoIAm from '../DominantWhoIAm/Page';
+import NameProfileOne from '../NameProfileOne/Page';
 import DominantStructure from '../DominantStructure/Page';
 import DominantResources from '../DominantResources/Page';
 import FourPersonalPowers from '../FourPersonalPowers/Page';
@@ -117,6 +118,7 @@ export default withRouter(
         <Route path={`${match.url}/dominantprofile`} component={DominantProfile} />
         <Route path={`${match.url}/competentmode`} component={CompetentMode} />
         <Route path={`${match.url}/dominantwhoiam`} component={DominantWhoIAm} />
+        <Route path={`${match.url}/nameprofileone`} component={NameProfileOne} />
         <Route path={`${match.url}/dominantstructure`} component={DominantStructure} />
         <Route path={`${match.url}/dominantresources`} component={DominantResources} />
         <Route path={`${match.url}/fourpersonalpowers`} component={FourPersonalPowers} />

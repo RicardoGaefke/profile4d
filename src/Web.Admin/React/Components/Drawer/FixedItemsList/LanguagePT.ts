@@ -12,6 +12,7 @@ export default {
   dominantprofile: 'Seu Perfil Dominante',
   competentmode: 'Modo Competente',
   dominantwhoiam: 'Quem eu sou?',
+  nameprofileone: 'Nome do perfil',
   dominantstructure: 'A estrutura do Perfil Dominante',
   dominantresources: 'Os recursos do Perfil Dominante',
   fourpersonalpowers: 'As Quatro Forças da Personalidade',

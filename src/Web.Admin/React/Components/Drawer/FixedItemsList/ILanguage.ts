@@ -9,6 +9,7 @@ export interface ILanguage {
   dominantprofile: string,
   competentmode: string,
   dominantwhoiam: string,
+  nameprofileone: string,
   dominantstructure: string,
   dominantresources: string,
   fourpersonalpowers: string,
