@@ -17,6 +17,10 @@ export default [
     title: 'inferiormind',
   },
   {
+    link: 'twomindways',
+    title: 'twomindways',
+  },
+  {
     link: 'dominantprofile',
     title: 'dominantprofile',
   },

@@ -9,6 +9,7 @@ import MyTemplate from '../../Home/Template/Template';
 import Page from '../Introduction/Page';
 import PersonalAnalyze from '../PersonalAnalyze/Page';
 import InferiorMind from '../InferiorMind/Page';
+import TwoMindWays from '../TwoMindWays/Page';
 import DominantProfile from '../DominantProfile/Page';
 import CompetentMode from '../CompetentMode/Page';
 import DominantWhoIAm from '../DominantWhoIAm/Page';
@@ -112,6 +113,7 @@ export default withRouter(
         <Route path={`${match.url}/introduction`} component={Page} />
         <Route path={`${match.url}/personalanalyze`} component={PersonalAnalyze} />
         <Route path={`${match.url}/inferiormind`} component={InferiorMind} />
+        <Route path={`${match.url}/twomindways`} component={TwoMindWays} />
         <Route path={`${match.url}/dominantprofile`} component={DominantProfile} />
         <Route path={`${match.url}/competentmode`} component={CompetentMode} />
         <Route path={`${match.url}/dominantwhoiam`} component={DominantWhoIAm} />

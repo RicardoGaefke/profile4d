@@ -8,6 +8,7 @@ export default {
   introduction: 'Introdução',
   personalanalyze: 'Análise Pessoal',
   inferiormind: 'Mente Inferior',
+  twomindways: 'Sua mente pode atuar de dois modos',
   dominantprofile: 'Seu Perfil Dominante',
   competentmode: 'Modo Competente',
   dominantwhoiam: 'Quem eu sou?',
