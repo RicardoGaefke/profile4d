@@ -55,6 +55,31 @@ namespace Profile4d.Web.Api.Controllers
     }
 
     [Authorize(Roles = "Admin")]
+    [HttpPost("ChangeActive")]
+    public ActionResult<BasicReturn> ChangeActive(Question data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      Question _question = new Question(
+        data.Guid,
+        _user,
+        data.Active
+      );
+
+      try
+      {
+        _return = _questions.ChangeActive(_question);
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
     [HttpPost("Add")]
     public ActionResult<BasicReturn> Add(Question data)
     {

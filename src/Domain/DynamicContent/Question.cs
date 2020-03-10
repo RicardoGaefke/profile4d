@@ -96,6 +96,16 @@ namespace Profile4d.Domain
       this.CreatedBy = createdBy;
     }
 
+    public Question(string guid, string active_createdBy, bool active)
+    {
+      DomainException.When(!string.IsNullOrEmpty(guid), "Guid is required!");
+      DomainException.When(!string.IsNullOrEmpty(active_createdBy), "Active_CreatedBy is required!");
+
+      this.Guid = guid;
+      this.Active_CreatedBy = active_createdBy;
+      this.Active = active;
+    }
+
     public Question(string title_PT, string text_PT, string title_ENG, string text_ENG)
     {
       DomainException.When(!string.IsNullOrEmpty(title_PT), "Title_PT is required!");

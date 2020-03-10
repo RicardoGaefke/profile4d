@@ -76,7 +76,7 @@ export default withTranslation()(
               >
                 Edit
               </Button>
-              <MyActive active={Active} handleChange={handleChange} />
+              <MyActive Active={Active} handleChange={handleChange} Guid={Guid} />
             </>
           </Grid>
         </Grid>

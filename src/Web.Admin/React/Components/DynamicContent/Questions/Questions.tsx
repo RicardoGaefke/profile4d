@@ -6,7 +6,9 @@ import {
   Typography, Grid, Container, List, Divider,
 } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
-import { IQuestions } from '../../../../../TypeScript/Interfaces/IQuestion';
+import { IQuestions, IQuestion } from '../../../../../TypeScript/Interfaces/IQuestion';
+// eslint-disable-next-line no-unused-vars
+import { IBasicReturn } from '../../../../../TypeScript/Interfaces/IBasicReturn';
 import Loading from '../../Loading/Loading';
 import Quantity from './Quantity/Quantity';
 import Question from './Question/Question';
@@ -24,14 +26,35 @@ export default withTranslation()(
     // eslint-disable-next-line no-unused-vars
     const [state, setState] = useState({} as IQuestions);
 
-    useEffect((): void => {
+    const fetchQuestions = (): void => {
       MyAxios(window.location.href)
         .get<IQuestions>('/Questions')
         .then((response): void => setState(response.data));
+    };
+
+    useEffect((): void => {
+      fetchQuestions();
     }, []);
 
-    const handleChange = (event: ChangeEvent<HTMLInputElement>, checked: boolean): void => {
-      console.log(checked);
+    const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
+      setState({
+        Questions: [],
+        Success: false,
+      });
+
+      MyAxios(window.location.href)
+        .post<IBasicReturn>('/Questions/ChangeActive',
+        {
+          Guid: event.target.value,
+          Active: event.target.checked,
+        } as IQuestion)
+        .then((response): void => {
+          const { data } = response;
+          fetchQuestions();
+          if (data.Success) {
+            console.log('data', data);
+          }
+        });
     };
 
     return (
@@ -51,7 +74,15 @@ export default withTranslation()(
                 <Grid
                   item
                 >
-                  <Quantity minimum={99} total={state.Questions.length} />
+                  <Quantity
+                    minimum={99}
+                    total={state.Questions.filter((value): boolean => {
+                      if (value.Active) {
+                        return true;
+                      }
+                      return false;
+                    }).length}
+                  />
                 </Grid>
               </Grid>
               <List>

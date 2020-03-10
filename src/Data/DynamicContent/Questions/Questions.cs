@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Extensions.Options;
 using System.Collections.Generic;
 using System.Data;
@@ -85,6 +86,32 @@ namespace Profile4d.Data
 
       _return.Success = true;
 
+      return _return;
+    }
+
+    public BasicReturn ChangeActive(Question data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_QUESTION_CANGE_ACTIVE]";
+
+          Cmd.Parameters.AddWithValue("@GUID", data.Guid);
+          Cmd.Parameters.AddWithValue("@ACTIVE", data.Active);
+          Cmd.Parameters.AddWithValue("@CREATED_BY", Convert.ToInt32(data.Active_CreatedBy));
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+
+      _return.Success = true;
       return _return;
     }
   }
