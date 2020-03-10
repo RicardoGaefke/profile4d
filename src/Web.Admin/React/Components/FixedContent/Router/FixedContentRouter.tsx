@@ -48,19 +48,23 @@ import InternalPartners from '../InternalPartners/Page';
 import DifficultyComunnication from '../DifficultyComunnication/Page';
 import NameProfileThree from '../NameProfileThree/Page';
 import FourPersonalityPowers from '../FourPersonalityPowers/Page';
-import TrinityBehavioralSabotage from '../TrinityBehavioralSabotage/Page';
+import NewWhoAmI from '../NewWhoAmI/Page';
 import NameProfileFour from '../NameProfileFour/Page';
-import InternalEnemies from '../InternalEnemies/Page';
 import FirstFourLimitateForces from '../FirstFourLimitateForces/Page';
+import TrinityBehavioralSabotage from '../TrinityBehavioralSabotage/Page';
+import InternalEnemies from '../InternalEnemies/Page';
 import InternalEnemyOne from '../InternalEnemyOne/Page';
+import SaboteurNameOne from '../SaboteurNameOne/Page';
 import SecondFourLimitateForces from '../SecondFourLimitateForces/Page';
-import PDI from '../PDI/Page';
 import InternalEnemyTwo from '../InternalEnemyTwo/Page';
+import SaboteurNameTwo from '../SaboteurNameTwo/Page';
 import LimitationFourPowers from '../LimitationFourPowers/Page';
+import PDI from '../PDI/Page';
 import ThreeIntelligenceCenters from '../ThreeIntelligenceCenters/Page';
-import AttentionPoints from '../AttentionPoints/Page';
 import BehavioralRespectiveEnergies from '../BehavioralRespectiveEnergies/Page';
+import AttentionPoints from '../AttentionPoints/Page';
 import IdentifiedConflicts from '../IdentifiedConflicts/Page';
+// DAQUI PARA BAIXO O MENU AINDA NÃO FOI ADEQUADO
 import EnergySpikes from '../EnergySpikes/Page';
 import HomogeneousHeterogeneous from '../HomogeneousHeterogeneous/Page';
 import OriginalXAdapted from '../OriginalXAdapted/Page';
@@ -159,20 +163,23 @@ export default withRouter(
         <Route path={`${match.url}/difficultycomunnication`} component={DifficultyComunnication} />
         <Route path={`${match.url}/nameprofilethree`} component={NameProfileThree} />
         <Route path={`${match.url}/fourpersonalitypowers`} component={FourPersonalityPowers} />
-        <Route path={`${match.url}/trinitybehavioralsabotage`} component={TrinityBehavioralSabotage} />
+        <Route path={`${match.url}/newwhommi`} component={NewWhoAmI} />
         <Route path={`${match.url}/nameprofilefour`} component={NameProfileFour} />
-        {/*  */}
-        <Route path={`${match.url}/internalenemies`} component={InternalEnemies} />
         <Route path={`${match.url}/firstfourlimitateforces`} component={FirstFourLimitateForces} />
+        <Route path={`${match.url}/trinitybehavioralsabotage`} component={TrinityBehavioralSabotage} />
+        <Route path={`${match.url}/internalenemies`} component={InternalEnemies} />
         <Route path={`${match.url}/internalenemyone`} component={InternalEnemyOne} />
+        <Route path={`${match.url}/saboteurnameone`} component={SaboteurNameOne} />
         <Route path={`${match.url}/secondfourlimitateforces`} component={SecondFourLimitateForces} />
-        <Route path={`${match.url}/pdi`} component={PDI} />
         <Route path={`${match.url}/internalenemytwo`} component={InternalEnemyTwo} />
+        <Route path={`${match.url}/saboteurnametwo`} component={SaboteurNameTwo} />
         <Route path={`${match.url}/limitationfourpowers`} component={LimitationFourPowers} />
+        <Route path={`${match.url}/pdi`} component={PDI} />
         <Route path={`${match.url}/threeintelligencecenters`} component={ThreeIntelligenceCenters} />
-        <Route path={`${match.url}/attentionpoints`} component={AttentionPoints} />
         <Route path={`${match.url}/behavioralrespectiveenergies`} component={BehavioralRespectiveEnergies} />
+        <Route path={`${match.url}/attentionpoints`} component={AttentionPoints} />
         <Route path={`${match.url}/identifiedconflicts`} component={IdentifiedConflicts} />
+        {/*  DAQUI PARA BAIXO AINDA NÃO ESTÁ ESTABELECIDO SEGUNDO O MENU */}
         <Route path={`${match.url}/energyspikes`} component={EnergySpikes} />
         <Route path={`${match.url}/homogeneousheterogeneous`} component={HomogeneousHeterogeneous} />
         <Route path={`${match.url}/originalxadapted`} component={OriginalXAdapted} />

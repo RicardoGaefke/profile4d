@@ -173,57 +173,70 @@ export default [
     title: 'fourpersonalitypowers',
   },
   {
-    link: 'trinitybehavioralsabotage',
-    title: 'trinitybehavioralsabotage',
+    link: 'newwhoami',
+    title: 'newwhoami',
   },
   {
     link: 'nameprofilefour',
     title: 'nameprofilefour',
   },
   {
-    link: 'internalenemies',
-    title: 'internalenemies',
-  },
-  {
     link: 'firstfourlimitateforces',
     title: 'firstfourlimitateforces',
+  },
+  {
+    link: 'trinitybehavioralsabotage',
+    title: 'trinitybehavioralsabotage',
+  },
+  {
+    link: 'internalenemies',
+    title: 'internalenemies',
   },
   {
     link: 'internalenemyone',
     title: 'internalenemyone',
   },
   {
-    link: 'secondfourlimitateforces',
-    title: 'secondfourlimitateforces',
+    link: 'saboteurnameone',
+    title: 'saboteurnameone',
   },
   {
-    link: 'pdi',
-    title: 'pdi',
+    link: 'secondfourlimitateforces',
+    title: 'secondfourlimitateforces',
   },
   {
     link: 'internalenemytwo',
     title: 'internalenemytwo',
   },
   {
+    link: 'saboteurnametwo',
+    title: 'saboteurnametwo',
+  },
+  {
     link: 'limitationfourpowers',
     title: 'limitationfourpowers',
+  },
+  {
+    link: 'pdi',
+    title: 'pdi',
   },
   {
     link: 'threeintelligencecenters',
     title: 'threeintelligencecenters',
   },
   {
-    link: 'attentionpoints',
-    title: 'attentionpoints',
-  },
-  {
     link: 'behavioralrespectiveenergies',
     title: 'behavioralrespectiveenergies',
+  },
+  {
+    link: 'attentionpoints',
+    title: 'attentionpoints',
   },
   {
     link: 'identifiedconflicts',
     title: 'identifiedconflicts',
   },
+  // DAQUI PARA BAIXO, MENU AINDA NÃO CONFIGURADO
   {
     link: 'energyspikes',
     title: 'energyspikes',
