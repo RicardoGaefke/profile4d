@@ -41,6 +41,7 @@ export default {
   competentxsabotage: 'Competent mode vs. saboteur mode',
   competentmodeone: 'Competent Mode',
   saboteurmodeone: 'Saboteur Mode',
+  doyousee: 'Can you see?',
   trinitybehavioralcompetent: 'Behavioral triad - Competent mode',
   internalpartners: 'Internal Partners',
   difficultycomunnication: 'Who I Am?',

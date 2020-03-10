@@ -38,6 +38,7 @@ export interface ILanguage {
   competentxsabotage: string,
   competentmodeone: string,
   saboteurmodeone: string,
+  doyousee: string,
   trinitybehavioralcompetent: string,
   internalpartners: string,
   difficultycomunnication: string,

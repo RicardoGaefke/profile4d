@@ -41,6 +41,7 @@ export default {
   competentxsabotage: 'Modo Competente X Modo Sabotador',
   competentmodeone: 'Modo Competente',
   saboteurmodeone: 'Modo Sabotador',
+  doyousee: 'Você consegue perceber?',
   trinitybehavioralcompetent: 'Tríade comportamental - Modo competente',
   internalpartners: 'Parceiros Internos',
   difficultycomunnication: 'Quem eu sou?',

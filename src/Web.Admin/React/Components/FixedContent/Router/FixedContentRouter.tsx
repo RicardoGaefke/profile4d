@@ -42,6 +42,7 @@ import NeuroticCompulsion from '../NeuroticCompulsion/Page';
 import CompetentXSabotage from '../CompetentXSabotage/Page';
 import CompetentModeOne from '../CompetentModeOne/Page';
 import SaboteurModeOne from '../SaboteurModeOne/Page';
+import DoYouSee from '../DoYouSee/Page';
 import TrinityBehavioralCompetent from '../TrinityBehavioralCompetent/Page';
 import InternalPartners from '../InternalPartners/Page';
 import DifficultyComunnication from '../DifficultyComunnication/Page';
@@ -150,6 +151,7 @@ export default withRouter(
         <Route path={`${match.url}/competentxsabotage`} component={CompetentXSabotage} />
         <Route path={`${match.url}/competentmodeone`} component={CompetentModeOne} />
         <Route path={`${match.url}/saboteurmodeone`} component={SaboteurModeOne} />
+        <Route path={`${match.url}/doyousee`} component={DoYouSee} />
         <Route path={`${match.url}/trinitybehavioralcompetent`} component={TrinityBehavioralCompetent} />
         <Route path={`${match.url}/internalpartners`} component={InternalPartners} />
         <Route path={`${match.url}/difficultycomunnication`} component={DifficultyComunnication} />
