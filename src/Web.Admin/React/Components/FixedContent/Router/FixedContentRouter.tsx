@@ -49,6 +49,7 @@ import DifficultyComunnication from '../DifficultyComunnication/Page';
 import NameProfileThree from '../NameProfileThree/Page';
 import FourPersonalityPowers from '../FourPersonalityPowers/Page';
 import TrinityBehavioralSabotage from '../TrinityBehavioralSabotage/Page';
+import NameProfileFour from '../NameProfileFour/Page';
 import InternalEnemies from '../InternalEnemies/Page';
 import FirstFourLimitateForces from '../FirstFourLimitateForces/Page';
 import InternalEnemyOne from '../InternalEnemyOne/Page';
@@ -159,6 +160,8 @@ export default withRouter(
         <Route path={`${match.url}/nameprofilethree`} component={NameProfileThree} />
         <Route path={`${match.url}/fourpersonalitypowers`} component={FourPersonalityPowers} />
         <Route path={`${match.url}/trinitybehavioralsabotage`} component={TrinityBehavioralSabotage} />
+        <Route path={`${match.url}/nameprofilefour`} component={NameProfileFour} />
+        {/*  */}
         <Route path={`${match.url}/internalenemies`} component={InternalEnemies} />
         <Route path={`${match.url}/firstfourlimitateforces`} component={FirstFourLimitateForces} />
         <Route path={`${match.url}/internalenemyone`} component={InternalEnemyOne} />

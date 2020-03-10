@@ -48,6 +48,7 @@ export default {
   nameprofilethree: 'Nome do perfil',
   fourpersonalitypowers: 'As Quatro Forças da Personalidade',
   trinitybehavioralsabotage: 'Quem eu sou?',
+  nameprofilefour: '',
   internalenemies: 'Inimigos Internos',
   firstfourlimitateforces: 'As Quatro Forças da Personalidade',
   internalenemyone: 'Inimigo Interno 1',

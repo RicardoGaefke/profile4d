@@ -45,6 +45,7 @@ export interface ILanguage {
   nameprofilethree: string,
   fourpersonalitypowers: string,
   trinitybehavioralsabotage: string,
+  nameprofilefour: string,
   internalenemies: string,
   firstfourlimitateforces: string,
   internalenemyone: string,
