@@ -9,9 +9,11 @@ import MyTemplate from '../../Home/Template/Template';
 import Page from '../Introduction/Page';
 import PersonalAnalyze from '../PersonalAnalyze/Page';
 import InferiorMind from '../InferiorMind/Page';
+import TwoMindWays from '../TwoMindWays/Page';
 import DominantProfile from '../DominantProfile/Page';
 import CompetentMode from '../CompetentMode/Page';
 import DominantWhoIAm from '../DominantWhoIAm/Page';
+import NameProfileOne from '../NameProfileOne/Page';
 import DominantStructure from '../DominantStructure/Page';
 import DominantResources from '../DominantResources/Page';
 import FourPersonalPowers from '../FourPersonalPowers/Page';
@@ -25,6 +27,7 @@ import InteractsRelationships from '../InteractsRelationships/Page';
 import SabotageDominant from '../SabotageDominant/Page';
 import SabotageMode from '../SabotageMode/Page';
 import SabotageWhoIAm from '../SabotageWhoIAm/Page';
+import NameProfileTwo from '../NameProfileTwo/Page';
 import SynthesisSaboteur from '../SynthesisSaboteur/Page';
 import LimitingMatrix from '../LimitingMatrix/Page';
 import CommunicationDifficulty from '../CommunicationDifficulty/Page';
@@ -37,6 +40,8 @@ import MentalAddiction from '../MentalAddiction/Page';
 import DefenseMecanisms from '../DefenseMecanisms/Page';
 import NeuroticCompulsion from '../NeuroticCompulsion/Page';
 import CompetentXSabotage from '../CompetentXSabotage/Page';
+import CompetentModeOne from '../CompetentModeOne/Page';
+import SaboteurModeOne from '../SaboteurModeOne/Page';
 import TrinityBehavioralCompetent from '../TrinityBehavioralCompetent/Page';
 import InternalPartners from '../InternalPartners/Page';
 import DifficultyComunnication from '../DifficultyComunnication/Page';
@@ -112,9 +117,11 @@ export default withRouter(
         <Route path={`${match.url}/introduction`} component={Page} />
         <Route path={`${match.url}/personalanalyze`} component={PersonalAnalyze} />
         <Route path={`${match.url}/inferiormind`} component={InferiorMind} />
+        <Route path={`${match.url}/twomindways`} component={TwoMindWays} />
         <Route path={`${match.url}/dominantprofile`} component={DominantProfile} />
         <Route path={`${match.url}/competentmode`} component={CompetentMode} />
         <Route path={`${match.url}/dominantwhoiam`} component={DominantWhoIAm} />
+        <Route path={`${match.url}/nameprofileone`} component={NameProfileOne} />
         <Route path={`${match.url}/dominantstructure`} component={DominantStructure} />
         <Route path={`${match.url}/dominantresources`} component={DominantResources} />
         <Route path={`${match.url}/fourpersonalpowers`} component={FourPersonalPowers} />
@@ -128,6 +135,7 @@ export default withRouter(
         <Route path={`${match.url}/sabotagedominant`} component={SabotageDominant} />
         <Route path={`${match.url}/sabotagemode`} component={SabotageMode} />
         <Route path={`${match.url}/sabotagewhoiam`} component={SabotageWhoIAm} />
+        <Route path={`${match.url}/nameprofiletwo`} component={NameProfileTwo} />
         <Route path={`${match.url}/synthesissaboteur`} component={SynthesisSaboteur} />
         <Route path={`${match.url}/limitingmatrix`} component={LimitingMatrix} />
         <Route path={`${match.url}/communicationdifficulty`} component={CommunicationDifficulty} />
@@ -140,6 +148,8 @@ export default withRouter(
         <Route path={`${match.url}/defensemecanisms`} component={DefenseMecanisms} />
         <Route path={`${match.url}/neuroticcompulsion`} component={NeuroticCompulsion} />
         <Route path={`${match.url}/competentxsabotage`} component={CompetentXSabotage} />
+        <Route path={`${match.url}/competentmodeone`} component={CompetentModeOne} />
+        <Route path={`${match.url}/saboteurmodeone`} component={SaboteurModeOne} />
         <Route path={`${match.url}/trinitybehavioralcompetent`} component={TrinityBehavioralCompetent} />
         <Route path={`${match.url}/internalpartners`} component={InternalPartners} />
         <Route path={`${match.url}/difficultycomunnication`} component={DifficultyComunnication} />
