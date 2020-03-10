@@ -42,6 +42,7 @@ export interface ILanguage {
   trinitybehavioralcompetent: string,
   internalpartners: string,
   difficultycomunnication: string,
+  nameprofilethree: string,
   fourpersonalitypowers: string,
   trinitybehavioralsabotage: string,
   internalenemies: string,

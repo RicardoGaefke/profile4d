@@ -165,6 +165,10 @@ export default [
     title: 'difficultycomunnication',
   },
   {
+    link: 'nameprofilethree',
+    title: 'nameprofilethree',
+  },
+  {
     link: 'fourpersonalitypowers',
     title: 'fourpersonalitypowers',
   },

@@ -45,6 +45,7 @@ export default {
   trinitybehavioralcompetent: 'Tríade comportamental - Modo competente',
   internalpartners: 'Parceiros Internos',
   difficultycomunnication: 'Quem eu sou?',
+  nameprofilethree: 'Nome do perfil',
   fourpersonalitypowers: 'As Quatro Forças da Personalidade',
   trinitybehavioralsabotage: 'Quem eu sou?',
   internalenemies: 'Inimigos Internos',
