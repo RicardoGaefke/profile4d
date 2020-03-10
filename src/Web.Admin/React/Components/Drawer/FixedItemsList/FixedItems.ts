@@ -17,6 +17,10 @@ export default [
     title: 'inferiormind',
   },
   {
+    link: 'twomindways',
+    title: 'twomindways',
+  },
+  {
     link: 'dominantprofile',
     title: 'dominantprofile',
   },
@@ -27,6 +31,10 @@ export default [
   {
     link: 'dominantwhoiam',
     title: 'dominantwhoiam',
+  },
+  {
+    link: 'nameprofileone',
+    title: 'nameprofileone',
   },
   {
     link: 'dominantstructure',
@@ -81,6 +89,10 @@ export default [
     title: 'sabotagewhoiam',
   },
   {
+    link: 'nameprofiletwo',
+    title: 'nameprofiletwo',
+  },
+  {
     link: 'synthesissaboteur',
     title: 'synthesissaboteur',
   },
@@ -127,6 +139,14 @@ export default [
   {
     link: 'competentxsabotage',
     title: 'competentxsabotage',
+  },
+  {
+    link: 'competentmodeone',
+    title: 'competentmodeone',
+  },
+  {
+    link: 'saboteurmodeone',
+    title: 'saboteurmodeone',
   },
   {
     link: 'trinitybehavioralcompetent',

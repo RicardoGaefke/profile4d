@@ -1,0 +1,79 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System.Linq;
+using System.Security.Claims;
+using Profile4d.Data;
+using Profile4d.Domain;
+
+namespace Profile4d.Web.Api.Controllers
+{
+  [ApiController]
+  [Route("[controller]")]
+  [Authorize]
+  public class QuestionsController : ControllerBase
+  {
+    private readonly ILogger<IdentityController> _logger;
+    private readonly IHttpContextAccessor _httpContextAccessor;
+    private readonly Questions _questions;
+    private string _user;
+
+    public QuestionsController(
+      ILogger<IdentityController> logger,
+      IHttpContextAccessor httpContextAccessor,
+      Questions MyQuestions
+    )
+    {
+      _logger = logger;
+      _questions = MyQuestions;
+
+      _httpContextAccessor = httpContextAccessor;
+      ClaimsPrincipal currentUser = this.User;
+
+      _user = (from c in _httpContextAccessor.HttpContext.User.Claims
+               where c.Type == "UserID"
+               select c.Value).FirstOrDefault()
+      ;
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("")]
+    public ActionResult<Question.List> List()
+    {
+      try
+      {
+        return _questions.List();
+      }
+      catch (System.Exception ex)
+      {
+        Question.List _return = new Question.List();
+        _return.Success = false;
+        _return.Message = ex.Message;
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPost("Add")]
+    public ActionResult<BasicReturn> Add(Question data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+        _return = _questions.Add(data);
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Details = ex.StackTrace;
+
+        return _return;
+      }
+    }
+  }
+}

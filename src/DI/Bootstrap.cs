@@ -145,13 +145,6 @@ namespace Profile4d.DI
       services.AddScoped<CustomCookieAuthenticationEvents>();
 
       services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
-      services.Configure<CookiePolicyOptions>(options =>
-      {
-        // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-        options.CheckConsentNeeded = context => true;
-        options.ConsentCookie.Domain = $".{Configuration.GetValue<string>("domain")}";
-      });
     }
 
     public static void CookieMiddleware(IApplicationBuilder app)
