@@ -3,6 +3,7 @@ import React, { ChangeEvent, useState } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import { FormControlLabel, Checkbox } from '@material-ui/core';
+import setLanguage from './Language';
 
 interface MyProps {
   handleChange: (event: ChangeEvent<HTMLInputElement>, checked: boolean) => void,
@@ -14,8 +15,9 @@ type IProps = WithTranslation & MyProps;
 
 export default withTranslation()(
   (props: IProps): React.ReactElement<IProps> => {
+    setLanguage();
+
     const {
-      // eslint-disable-next-line no-unused-vars
       t, handleChange, Active, Guid,
     } = props;
 
@@ -32,7 +34,7 @@ export default withTranslation()(
         control={
           <Checkbox checked={state} onChange={onChange} value={Guid} />
         }
-        label="Active"
+        label={t('DynamicActive:title')}
       />
     );
   },

@@ -10,7 +10,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import { withTranslation, WithTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
 import { IQuestion } from '../../../../../../TypeScript/Interfaces/IQuestion';
-import MyActive from '../Active/Active';
+import MyActive from '../../Active/Active';
 
 interface MyProps {
   question: IQuestion,
