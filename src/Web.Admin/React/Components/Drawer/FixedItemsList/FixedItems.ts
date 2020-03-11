@@ -302,6 +302,10 @@ export default [
     title: 'exerciseprofilemoviment',
   },
   {
+    link: 'yourbehavioraldna',
+    title: 'yourbehavioraldna',
+  },
+  {
     link: 'superiormind',
     title: 'superiormind',
   },
@@ -309,13 +313,18 @@ export default [
     link: 'healthyadult',
     title: 'healthyadult',
   },
-  {
-    link: 'yourbehavioraldna',
-    title: 'yourbehavioraldna',
-  },
+
   {
     link: 'synergeticmode',
     title: 'synergeticmode',
+  },
+  {
+    link: 'archetypeessence',
+    title: 'archetypeessence',
+  },
+  {
+    link: 'essentialfeature',
+    title: 'essentialfeature',
   },
   {
     link: 'domprofile',
@@ -333,14 +342,7 @@ export default [
     link: 'idealpartner',
     title: 'idealpartner',
   },
-  {
-    link: 'archetypeessence',
-    title: 'archetypeessence',
-  },
-  {
-    link: 'essentialfeature',
-    title: 'essentialfeature',
-  },
+
   {
     link: 'characterformation',
     title: 'characterformation',
@@ -370,6 +372,10 @@ export default [
     title: 'bodyshape',
   },
   {
+    link: 'bodycharacters',
+    title: 'bodycharacters',
+  },
+  {
     link: 'mainvirtueessence',
     title: 'mainvirtueessence',
   },
@@ -382,8 +388,16 @@ export default [
     title: 'twelvecharacteradultstrengths',
   },
   {
+    link: 'professionalanalyze',
+    title: 'professionalanalyze',
+  },
+  {
     link: 'twelvecompetencesapresentation',
     title: 'twelvecompetencesapresentation',
+  },
+  {
+    link: 'threedimensions',
+    title: 'threedimensions',
   },
   {
     link: 'fourcompetentstages',
@@ -394,10 +408,6 @@ export default [
     title: 'observation',
   },
   {
-    link: 'professionalanalyze',
-    title: 'professionalanalyze',
-  },
-  {
     link: 'twelvecompetences',
     title: 'twelvecompetences',
   },
@@ -406,53 +416,150 @@ export default [
     title: 'excellentcompromise',
   },
   {
+    link: 'observationone',
+    title: 'observationone',
+  },
+  {
+    link: 'observationtwo',
+    title: 'observationtwo',
+  },
+  {
     link: 'conflictsresolution',
     title: 'conflictsresolution',
+  },
+  {
+    link: 'observationthree',
+    title: 'observationthree',
+  },
+  {
+    link: 'observationfour',
+    title: 'observationfour',
   },
   {
     link: 'adaptability',
     title: 'adaptability',
   },
   {
+    link: 'observationfive',
+    title: 'observationfive',
+  },
+  {
+    link: 'observationsix',
+    title: 'observationsix',
+  },
+  {
     link: 'proactivity',
     title: 'proactivity',
+  },
+  {
+    link: 'observationseven',
+    title: 'observationseven',
+  },
+  {
+    link: 'observationeight',
+    title: 'observationeight',
   },
   {
     link: 'internationalrelationship',
     title: 'internationalrelationship',
   },
   {
+    link: 'observationnine',
+    title: 'observationnine',
+  },
+  {
+    link: 'observationten',
+    title: 'observationten',
+  },
+  {
     link: 'clientorientation',
     title: 'clientorientation',
+  },
+  {
+    link: 'observationeleven',
+    title: 'observationeleven',
+  },
+  {
+    link: 'observationtwelve',
+    title: 'observationtwelve',
   },
   {
     link: 'peoplesdevelopment',
     title: 'peoplesdevelopment',
   },
   {
+    link: 'observationthirteen',
+    title: 'observationthirteen',
+  },
+  {
+    link: 'observationfourtee',
+    title: 'observationfourtee',
+  },
+  {
     link: 'negotiationpersuation',
     title: 'negotiationpersuation',
+  },
+  {
+    link: 'observationfifteen',
+    title: 'observationfifteen',
+  },
+  {
+    link: 'observationsixteen',
+    title: 'observationsixteen',
   },
   {
     link: 'inovationcriativity',
     title: 'inovationcriativity',
   },
   {
+    link: 'observationseventeen',
+    title: 'observationseventeen',
+  },
+  {
+    link: 'observationeighteen',
+    title: 'observationeighteen',
+  },
+  {
     link: 'entrepreneurorientation',
     title: 'entrepreneurorientation',
+  },
+  {
+    link: 'observationnineteen',
+    title: 'observationnineteen',
+  },
+  {
+    link: 'observationtwenty',
+    title: 'observationtwenty',
   },
   {
     link: 'strategicalplanning',
     title: 'strategicalplanning',
   },
   {
+    link: 'observationtwentyone',
+    title: 'observationtwentyone',
+  },
+  {
+    link: 'observationtwentytwo',
+    title: 'observationtwentytwo',
+  },
+  {
     link: 'systemicalvision',
     title: 'systemicalvision',
+  },
+  {
+    link: 'observationtwentythree',
+    title: 'observationtwentythree',
+  },
+  {
+    link: 'observationtwentyfour',
+    title: 'observationtwentyfour',
   },
   {
     link: 'energybyarea',
     title: 'energybyarea',
   },
+  // DAQUI PARA BAIXO NAO CONFIGURADO
   {
     link: 'lastpageresume',
     title: 'lastpageresume',

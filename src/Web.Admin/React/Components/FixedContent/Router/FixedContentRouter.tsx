@@ -79,18 +79,17 @@ import DominantProfileOne from '../DominantProfileOne/Page';
 import InternalPartOne from '../InternalPartOne/Page';
 import InternalPartTwo from '../InternalPartTwo/Page';
 import IdealGrowthPart from '../IdealGrowthPart/Page';
-// DAQUI PARA BAIXO O MENU AINDA NÃO FOI ADEQUADO
 import ExerciseProfileMoviment from '../ExerciseProfileMoviment/Page';
+import YourBehavioralDNA from '../YourBehavioralDNA/Page';
 import SuperiorMind from '../SuperiorMind/Page';
 import HealthyAdult from '../HealthyAdult/Page';
-import YourBehavioralDNA from '../YourBehavioralDNA/Page';
 import SynergeticMode from '../SynergeticMode/Page';
+import ArchetypeEssence from '../ArchetypeEssence/Page';
+import EssentialFeature from '../EssentialFeature/Page';
 import DomProfile from '../DomProfile/Page';
 import BigChallenge from '../BigChallenge/Page';
 import WorkKey from '../WorkKey/Page';
 import IdealPartner from '../IdealPartner/Page';
-import ArchetypeEssence from '../ArchetypeEssence/Page';
-import EssentialFeature from '../EssentialFeature/Page';
 import CharacterFormation from '../CharacterFormation/Page';
 import Moment from '../Moment/Page';
 import ExistentialPain from '../ExistentialPain/Page';
@@ -98,27 +97,54 @@ import NoteExistentialPain from '../NoteExistentialPain/Page';
 import CrystallizationPersonality from '../CrystallizationPersonality/Page';
 import BodyStructureFixed from '../BodyStructureFixed/Page';
 import BodyShape from '../BodyShape/Page';
+import BodyCharacters from '../BodyCharacters/Page';
 import MainVirtueEssence from '../MainVirtueEssence/Page';
 import BenefitsVirtueEssence from '../BenefitsVirtueEssence/Page';
 import TwelveCharacterAdultStrengths from '../TwelveCharacterAdultStrengths/Page';
+import ProfessionalAnalyze from '../ProfessionalAnalyze/Page';
 import TwelveCompetencesApresentation from '../TwelveCompetencesApresentation/Page';
+// import ThreeDimensions from '../ThreeDimensions/Page';
 import FourCompetentStages from '../FourCompetentStages/Page';
 import Observation from '../Observation/Page';
-import ProfessionalAnalyze from '../ProfessionalAnalyze/Page';
 import TwelveCompetences from '../TwelveCompetences/Page';
 import ExcellentCompromise from '../ExcellentCompromise/Page';
+// import ObservationOne from '../ObservationOne/Page';
+// import ObservationTwo from '../ObservationTwo/Page';
 import ConflictsResolution from '../ConflictsResolution/Page';
+// import ObservationThree from '../ObservationThree/Page';
+// import ObservationFour from '../ObservationFour/Page';
 import Adaptability from '../Adaptability/Page';
+// import ObservationFive from '../ObservationFive/Page';
+// import ObservationSix from '../ObservationSix/Page';
 import Proactivity from '../Proactivity/Page';
+// import ObservationSeven from '../ObservationSeven/Page';
+// import ObservationEight from '../ObservationEight/Page';
 import InternationalRelationship from '../InternationalRelationship/Page';
+// import ObservationNine from '../ObservationNine/Page';
+// import ObservationTen from '../ObservationTen/Page';
 import ClientOrientation from '../ClientOrientation/Page';
+// import ObservationEleven from '../ObservationEleven/Page';
+// import ObservationTwelve from '../ObservationTwelve/Page';
 import PeoplesDevelopment from '../PeoplesDevelopment/Page';
+// import ObservationThirteen from '../ObservationThirteen/Page';
+// import ObservationFourteen from '../ObservationFourteen/Page';
 import NegotiationPersuation from '../NegotiationPersuation/Page';
+// import ObservationFifteen from '../ObservationFifteen/Page';
+// import ObservationSixteen from '../ObservationSixteen/Page';
 import InovationCriativity from '../InovationCriativity/Page';
+// import ObservationSeventeen from '../ObservationSeventeen/Page';
+// import ObservationEighteen from '../ObservationEighteen/Page';
 import EntrepreneurOrientation from '../EntrepreneurOrientation/Page';
+// import ObservationNineteen from '../ObservationNineteen/Page';
+// import ObservationTwenty from '../ObservationTwenty/Page';
 import StrategicalPlanning from '../StrategicalPlanning/Page';
+// import ObservationTwentyOne from '../ObservationTwentyOne';
+// import ObservationTwentyTwo from '../ObservationTwentyTwo/Page';
 import SystemicalVision from '../SystemicalVision/Page';
+// import ObservationTwentyThree from '../ObservationTwentyThree/Page';
+// import ObservationTwentyFour from '../ObservationTwentyFour/Page';
 import EnergyByArea from '../EnergyByArea/Page';
+// DAQUI PARA BAIXO O MENU AINDA NÃO FOI ADEQUADO
 import LastPageResume from '../LastPageResume/Page';
 import DominantProfileName from '../DominantProfileName/Page';
 import InternalPartnerOne from '../InternalPartnerOne/Page';
@@ -206,18 +232,17 @@ export default withRouter(
         <Route path={`${match.url}/internalpartone`} component={InternalPartOne} />
         <Route path={`${match.url}/internalparttwo`} component={InternalPartTwo} />
         <Route path={`${match.url}/idealgrowthpart`} component={IdealGrowthPart} />
-        {/* DAQUI PARA BAIXO - MENU INCOMPLETO */}
         <Route path={`${match.url}/exerciseprofilemoviment`} component={ExerciseProfileMoviment} />
+        <Route path={`${match.url}/yourbehavioraldna`} component={YourBehavioralDNA} />
         <Route path={`${match.url}/superiormind`} component={SuperiorMind} />
         <Route path={`${match.url}/healthyadult`} component={HealthyAdult} />
-        <Route path={`${match.url}/yourbehavioraldna`} component={YourBehavioralDNA} />
         <Route path={`${match.url}/synergeticmode`} component={SynergeticMode} />
+        <Route path={`${match.url}/archetypeessence`} component={ArchetypeEssence} />
+        <Route path={`${match.url}/essentialfeature`} component={EssentialFeature} />
         <Route path={`${match.url}/domprofile`} component={DomProfile} />
         <Route path={`${match.url}/bigchallenge`} component={BigChallenge} />
         <Route path={`${match.url}/workkey`} component={WorkKey} />
         <Route path={`${match.url}/idealpartner`} component={IdealPartner} />
-        <Route path={`${match.url}/archetypeessence`} component={ArchetypeEssence} />
-        <Route path={`${match.url}/essentialfeature`} component={EssentialFeature} />
         <Route path={`${match.url}/characterformation`} component={CharacterFormation} />
         <Route path={`${match.url}/moment`} component={Moment} />
         <Route path={`${match.url}/existentialpain`} component={ExistentialPain} />
@@ -225,27 +250,54 @@ export default withRouter(
         <Route path={`${match.url}/crystallizationpersonality`} component={CrystallizationPersonality} />
         <Route path={`${match.url}/bodystructurefixed`} component={BodyStructureFixed} />
         <Route path={`${match.url}/bodyshape`} component={BodyShape} />
+        <Route path={`${match.url}/bodycharacters`} component={BodyCharacters} />
         <Route path={`${match.url}/mainvirtueessence`} component={MainVirtueEssence} />
         <Route path={`${match.url}/benefitsvirtueessence`} component={BenefitsVirtueEssence} />
         <Route path={`${match.url}/twelvecharacteradultstrengths`} component={TwelveCharacterAdultStrengths} />
+        <Route path={`${match.url}/professionalanalyze`} component={ProfessionalAnalyze} />
         <Route path={`${match.url}/twelvecompetencesapresentation`} component={TwelveCompetencesApresentation} />
+        {/* <Route path={`${match.url}/threedimensions`} component={ThreeDimensions} /> */}
         <Route path={`${match.url}/fourcompetentstages`} component={FourCompetentStages} />
         <Route path={`${match.url}/observation`} component={Observation} />
-        <Route path={`${match.url}/professionalanalyze`} component={ProfessionalAnalyze} />
         <Route path={`${match.url}/twelvecompetences`} component={TwelveCompetences} />
         <Route path={`${match.url}/excellentcompromise`} component={ExcellentCompromise} />
+        {/* <Route path={`${match.url}/observationone`} component={ObservationOne} /> */}
+        {/* <Route path={`${match.url}/observationtwo`} component={ObservationTwo} /> */}
         <Route path={`${match.url}/conflictsresolution`} component={ConflictsResolution} />
+        {/* <Route path={`${match.url}/observationthree`} component={ObservationThree} /> */}
+        {/* <Route path={`${match.url}/observationfour`} component={ObservationFour} /> */}
         <Route path={`${match.url}/adaptability`} component={Adaptability} />
+        {/* <Route path={`${match.url}/observationfive`} component={ObservationFive} /> */}
+        {/* <Route path={`${match.url}/observationsix`} component={ObservationSix} /> */}
         <Route path={`${match.url}/proactivity`} component={Proactivity} />
+        {/* <Route path={`${match.url}/observationseven`} component={ObservationSeven} /> */}
+        {/* <Route path={`${match.url}/observationeight`} component={ObservationEight} /> */}
         <Route path={`${match.url}/internationalrelationship`} component={InternationalRelationship} />
+        {/* <Route path={`${match.url}/observationnine`} component={ObservationNine} /> */}
+        {/* <Route path={`${match.url}/observationten`} component={ObservationTen} /> */}
         <Route path={`${match.url}/clientorientation`} component={ClientOrientation} />
+        {/* <Route path={`${match.url}/observationeleven`} component={ObservationEleven} /> */}
+        {/* <Route path={`${match.url}/observationtwelve`} component={ObservationTwelve} /> */}
         <Route path={`${match.url}/peoplesdevelopment`} component={PeoplesDevelopment} />
+        {/* <Route path={`${match.url}/observationthirteen`} component={ObservationThirteen} /> */}
+        {/* <Route path={`${match.url}/observationfourteen`} component={ObservationFourteen} /> */}
         <Route path={`${match.url}/negotiationpersuation`} component={NegotiationPersuation} />
+        {/* <Route path={`${match.url}/observationFifteen`} component={ObservationFifteen} /> */}
+        {/* <Route path={`${match.url}/observationsixteen`} component={ObservationSixteen} /> */}
         <Route path={`${match.url}/inovationcriativity`} component={InovationCriativity} />
+        {/* <Route path={`${match.url}/observationseventeen`} component={ObservationSeventeen} /> */}
+        {/* <Route path={`${match.url}/observationeighteen`} component={ObservationEighteen} /> */}
         <Route path={`${match.url}/entrepreneurorientation`} component={EntrepreneurOrientation} />
+        {/* <Route path={`${match.url}/observationnineteen`} component={ObservationNineteen} /> */}
+        {/* <Route path={`${match.url}/observationtwenty`} component={ObservationTwenty} /> */}
         <Route path={`${match.url}/strategicalplanning`} component={StrategicalPlanning} />
+        {/* <Route path={`${match.url}/observationtwentyone`} component={ObservationTwentyOne} /> */}
+        {/* <Route path={`${match.url}/observationtwentytwo`} component={ObservationTwentyTwo} /> */}
         <Route path={`${match.url}/systemicalvision`} component={SystemicalVision} />
+        {/* <Route path={`${match.url}/observationtwentythree`} component={ObservationTwentyThree} /> */}
+        {/* <Route path={`${match.url}/observationtwentyfour`} component={ObservationTwentyFour} /> */}
         <Route path={`${match.url}/energybyarea`} component={EnergyByArea} />
+        {/* DAQUI PARA BAIXO AINDA NÃO DEFINIDO */}
         <Route path={`${match.url}/lastpageresume`} component={LastPageResume} />
         <Route path={`${match.url}/dominantprofilename`} component={DominantProfileName} />
         <Route path={`${match.url}/internalpartnerone`} component={InternalPartnerOne} />
