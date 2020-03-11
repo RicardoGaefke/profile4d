@@ -100,5 +100,46 @@ namespace Profile4d.Web.Api.Controllers
         return _return;
       }
     }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("Question/{id}")]
+    public ActionResult<Question> Question(string id)
+    {
+      Question _return = new Question();
+      
+      try
+      {
+        _return = _questions.Question(id);
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPost("Edit")]
+    public ActionResult<BasicReturn> Edit(Question data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+        _return = _questions.Edit(data);
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Details = ex.StackTrace;
+
+        return _return;
+      }
+    }
   }
 }
