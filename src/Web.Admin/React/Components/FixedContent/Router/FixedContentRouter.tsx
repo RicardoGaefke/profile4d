@@ -71,7 +71,7 @@ import HomogeneousHeterogeneous from '../HomogeneousHeterogeneous/Page';
 import ObservationAttention from '../ObservationAttention/Page';
 import TriadSpecificsOne from '../TriadSpecificsOne/Page';
 import OriginalXAdapted from '../OriginalXAdapted/Page';
-// TriadLegends
+import TriadLegends from '../TriadLegends/Page';
 // ObservationTriad
 // CorrectFlux
 // EmotionalFluxResult
@@ -198,7 +198,7 @@ export default withRouter(
         <Route path={`${match.url}/observationattention`} component={ObservationAttention} />
         <Route path={`${match.url}/triadspecificsone`} component={TriadSpecificsOne} />
         <Route path={`${match.url}/originalxadapted`} component={OriginalXAdapted} />
-        {/* TriadLegends */}
+        <Route path={`${match.url}/triadlegends`} component={TriadLegends} />
         {/* ObservationTriad */}
         {/* CorrectFlux */}
         {/* EmotionalFluxResult */}
