@@ -7,7 +7,7 @@ import { useStateValue } from './Context/StateProvider';
 import './i18n/language';
 import myTheme from './Theme/Theme';
 import ErrorBoundary from '../Components/ErrorBoundary/ErrorBoundary';
-import RootRouter from '../Router/Root';
+import Template from '../Components/Template/Template';
 import AppBar from '../Components/AppBar/AppBar';
 import ConfigDrawer from '../Components/ConfigDrawer/Drawer';
 import Footer from '../Components/Footer/Footer';
@@ -36,7 +36,7 @@ const MyApp = (): React.ReactElement<any> => {
           {(ConsentCookie) ? <MyConsentCookie /> : null}
           <div className={classes.main}>
             <ErrorBoundary>
-              <RootRouter />
+              <Template />
             </ErrorBoundary>
           </div>
           <Footer />
