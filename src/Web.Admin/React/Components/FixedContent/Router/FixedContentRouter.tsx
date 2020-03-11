@@ -66,7 +66,7 @@ import BehavioralRespectiveEnergies from '../BehavioralRespectiveEnergies/Page';
 import AttentionPoints from '../AttentionPoints/Page';
 import IdentifiedConflicts from '../IdentifiedConflicts/Page';
 import EnergySpikes from '../EnergySpikes/Page';
-// TriadBehavioralLegend
+import TriadBehavioralLegend from '../TriadBehavioralLegend/Page';
 import HomogeneousHeterogeneous from '../HomogeneousHeterogeneous/Page';
 // ObservationAttention
 // TriadSpecificsOne
@@ -193,7 +193,7 @@ export default withRouter(
         <Route path={`${match.url}/attentionpoints`} component={AttentionPoints} />
         <Route path={`${match.url}/identifiedconflicts`} component={IdentifiedConflicts} />
         <Route path={`${match.url}/energyspikes`} component={EnergySpikes} />
-        {/* TriadBehavioralLegend */}
+        <Route path={`${match.url}/triadbehaviorallegend`} component={TriadBehavioralLegend} />
         <Route path={`${match.url}/homogeneousheterogeneous`} component={HomogeneousHeterogeneous} />
         {/* ObservationAttention */}
         {/* TriadSpecificsOne */}
