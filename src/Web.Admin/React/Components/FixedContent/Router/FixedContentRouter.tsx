@@ -61,13 +61,25 @@ import SaboteurNameTwo from '../SaboteurNameTwo/Page';
 import LimitationFourPowers from '../LimitationFourPowers/Page';
 import PDI from '../PDI/Page';
 import ThreeIntelligenceCenters from '../ThreeIntelligenceCenters/Page';
+import ThreeCentersLegend from '../ThreeCentersLegend/Page';
 import BehavioralRespectiveEnergies from '../BehavioralRespectiveEnergies/Page';
 import AttentionPoints from '../AttentionPoints/Page';
 import IdentifiedConflicts from '../IdentifiedConflicts/Page';
-// DAQUI PARA BAIXO O MENU AINDA NÃO FOI ADEQUADO
 import EnergySpikes from '../EnergySpikes/Page';
+// TriadBehavioralLegend
 import HomogeneousHeterogeneous from '../HomogeneousHeterogeneous/Page';
+// ObservationAttention
+// TriadSpecificsOne
 import OriginalXAdapted from '../OriginalXAdapted/Page';
+// TriadLegends
+// ObservationTriad
+// CorrectFlux
+// EmotionalFluxResult
+// DominantProfileOne
+// InternalPartOne
+// InternalPartTwo
+// IdealGrowthPart
+// DAQUI PARA BAIXO O MENU AINDA NÃO FOI ADEQUADO
 import ExerciseProfileMoviment from '../ExerciseProfileMoviment/Page';
 import SuperiorMind from '../SuperiorMind/Page';
 import HealthyAdult from '../HealthyAdult/Page';
@@ -176,13 +188,25 @@ export default withRouter(
         <Route path={`${match.url}/limitationfourpowers`} component={LimitationFourPowers} />
         <Route path={`${match.url}/pdi`} component={PDI} />
         <Route path={`${match.url}/threeintelligencecenters`} component={ThreeIntelligenceCenters} />
+        <Route path={`${match.url}/threecenterslegend`} component={ThreeCentersLegend} />
         <Route path={`${match.url}/behavioralrespectiveenergies`} component={BehavioralRespectiveEnergies} />
         <Route path={`${match.url}/attentionpoints`} component={AttentionPoints} />
         <Route path={`${match.url}/identifiedconflicts`} component={IdentifiedConflicts} />
-        {/*  DAQUI PARA BAIXO AINDA NÃO ESTÁ ESTABELECIDO SEGUNDO O MENU */}
         <Route path={`${match.url}/energyspikes`} component={EnergySpikes} />
+        {/* TriadBehavioralLegend */}
         <Route path={`${match.url}/homogeneousheterogeneous`} component={HomogeneousHeterogeneous} />
+        {/* ObservationAttention */}
+        {/* TriadSpecificsOne */}
         <Route path={`${match.url}/originalxadapted`} component={OriginalXAdapted} />
+        {/* TriadLegends */}
+        {/* ObservationTriad */}
+        {/* CorrectFlux */}
+        {/* EmotionalFluxResult */}
+        {/* DominantProfileOne */}
+        {/* InternalPartOne */}
+        {/* InternalPartTwo */}
+        {/* IdealGrowthPart */}
+        {/* DAQUI PARA BAIXO - MENU INCOMPLETO */}
         <Route path={`${match.url}/exerciseprofilemoviment`} component={ExerciseProfileMoviment} />
         <Route path={`${match.url}/superiormind`} component={SuperiorMind} />
         <Route path={`${match.url}/healthyadult`} component={HealthyAdult} />

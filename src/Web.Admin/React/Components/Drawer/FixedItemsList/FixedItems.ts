@@ -225,6 +225,10 @@ export default [
     title: 'threeintelligencecenters',
   },
   {
+    link: 'threecenterslegend',
+    title: 'threecenterslegend',
+  },
+  {
     link: 'behavioralrespectiveenergies',
     title: 'behavioralrespectiveenergies',
   },
@@ -236,19 +240,63 @@ export default [
     link: 'identifiedconflicts',
     title: 'identifiedconflicts',
   },
-  // DAQUI PARA BAIXO, MENU AINDA NÃO CONFIGURADO
   {
     link: 'energyspikes',
     title: 'energyspikes',
+  },
+  {
+    link: 'triadbehaviorallegend',
+    title: 'triadbehaviorallegend',
   },
   {
     link: 'homogeneousheterogeneous',
     title: 'homogeneousheterogeneous',
   },
   {
+    link: 'observationattention',
+    title: 'observationattention',
+  },
+  {
+    link: 'triadspecificsone',
+    title: 'triadspecificsone',
+  },
+  {
     link: 'originalxadapted',
     title: 'originalxadapted',
   },
+  {
+    link: 'triadlegends',
+    title: 'triadlegends',
+  },
+  {
+    link: 'observationtriad',
+    title: 'observationtriad',
+  },
+  {
+    link: 'correctflux',
+    title: 'correctflux',
+  },
+  {
+    link: 'emotionalfluxresult',
+    title: 'emotionalfluxresult',
+  },
+  {
+    link: 'dominantprofileone',
+    title: 'dominantprofileone',
+  },
+  {
+    link: 'internalpartone',
+    title: 'internalpartone',
+  },
+  {
+    link: 'internalparttwo',
+    title: 'internalparttwo',
+  },
+  {
+    link: 'idealgrowthpart',
+    title: 'idealgrowthpart',
+  },
+  // DAQUI PARA BAIXO, MENU AINDA NÃO CONFIGURADO
   {
     link: 'exerciseprofilemoviment',
     title: 'exerciseprofilemoviment',
