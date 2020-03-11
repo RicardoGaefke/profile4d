@@ -2,7 +2,7 @@ import React from 'react';
 import { MemoryRouter } from 'react-router';
 import { storiesOf } from '@storybook/react';
 import { withConsole } from '@storybook/addon-console';
-import MyThemeHoc from '../../../../Initial/Theme/StoryBookHOC';
+import MyThemeHoc from '../../../Initial/Theme/StoryBookHOC';
 import MyApp from './Quantity';
 
 const AppZero = (): React.ReactElement => (
