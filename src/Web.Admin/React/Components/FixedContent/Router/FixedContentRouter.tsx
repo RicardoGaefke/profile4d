@@ -69,7 +69,7 @@ import EnergySpikes from '../EnergySpikes/Page';
 import TriadBehavioralLegend from '../TriadBehavioralLegend/Page';
 import HomogeneousHeterogeneous from '../HomogeneousHeterogeneous/Page';
 import ObservationAttention from '../ObservationAttention/Page';
-// TriadSpecificsOne
+import TriadSpecificsOne from '../TriadSpecificsOne/Page';
 import OriginalXAdapted from '../OriginalXAdapted/Page';
 // TriadLegends
 // ObservationTriad
@@ -196,7 +196,7 @@ export default withRouter(
         <Route path={`${match.url}/triadbehaviorallegend`} component={TriadBehavioralLegend} />
         <Route path={`${match.url}/homogeneousheterogeneous`} component={HomogeneousHeterogeneous} />
         <Route path={`${match.url}/observationattention`} component={ObservationAttention} />
-        {/* TriadSpecificsOne */}
+        <Route path={`${match.url}/triadspecificsone`} component={TriadSpecificsOne} />
         <Route path={`${match.url}/originalxadapted`} component={OriginalXAdapted} />
         {/* TriadLegends */}
         {/* ObservationTriad */}
