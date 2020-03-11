@@ -75,7 +75,7 @@ import TriadLegends from '../TriadLegends/Page';
 import ObservationTriad from '../ObservationTriad/Page';
 import CorrectFlux from '../CorrectFlux/Page';
 import EmotionalFluxResult from '../EmotionalFluxResult/Page';
-// import DominantProfileOne from '../DominantProfileOne/Page';
+import DominantProfileOne from '../DominantProfileOne/Page';
 // import InternalPartOne from '../InternalPartOne/Page';
 // import InternalPartTwo from '../InternalPartTwo/Page';
 // import IdealGrowthPart from '../IdealGrowthPart/Page';
@@ -202,8 +202,8 @@ export default withRouter(
         <Route path={`${match.url}/observationtriad`} component={ObservationTriad} />
         <Route path={`${match.url}/correctflux`} component={CorrectFlux} />
         <Route path={`${match.url}/emotionalfluxresult`} component={EmotionalFluxResult} />
-        {/* <Route path={`${match.url}/dominantprofileone`} component={DominantProfileOne} />
-        <Route path={`${match.url}/internalpartone`} component={InternalPartOne} />
+        <Route path={`${match.url}/dominantprofileone`} component={DominantProfileOne} />
+        {/* <Route path={`${match.url}/internalpartone`} component={InternalPartOne} />
         <Route path={`${match.url}/internalparttwo`} component={InternalPartTwo} />
         <Route path={`${match.url}/idealgrowthpart`} component={IdealGrowthPart} /> */}
         {/* DAQUI PARA BAIXO - MENU INCOMPLETO */}
