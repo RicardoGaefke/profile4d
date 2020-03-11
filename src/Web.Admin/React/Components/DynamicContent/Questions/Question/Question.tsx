@@ -38,6 +38,7 @@ export default withTranslation()(
         </ListItemAvatar>
         <Grid
           container
+          spacing={4}
         >
           <Grid
             item
