@@ -74,11 +74,11 @@ import OriginalXAdapted from '../OriginalXAdapted/Page';
 import TriadLegends from '../TriadLegends/Page';
 import ObservationTriad from '../ObservationTriad/Page';
 import CorrectFlux from '../CorrectFlux/Page';
-// EmotionalFluxResult
-// DominantProfileOne
-// InternalPartOne
-// InternalPartTwo
-// IdealGrowthPart
+import EmotionalFluxResult from '../EmotionalFluxResult/Page';
+// import DominantProfileOne from '../DominantProfileOne/Page';
+// import InternalPartOne from '../InternalPartOne/Page';
+// import InternalPartTwo from '../InternalPartTwo/Page';
+// import IdealGrowthPart from '../IdealGrowthPart/Page';
 // DAQUI PARA BAIXO O MENU AINDA NÃO FOI ADEQUADO
 import ExerciseProfileMoviment from '../ExerciseProfileMoviment/Page';
 import SuperiorMind from '../SuperiorMind/Page';
@@ -201,11 +201,11 @@ export default withRouter(
         <Route path={`${match.url}/triadlegends`} component={TriadLegends} />
         <Route path={`${match.url}/observationtriad`} component={ObservationTriad} />
         <Route path={`${match.url}/correctflux`} component={CorrectFlux} />
-        {/* EmotionalFluxResult */}
-        {/* DominantProfileOne */}
-        {/* InternalPartOne */}
-        {/* InternalPartTwo */}
-        {/* IdealGrowthPart */}
+        <Route path={`${match.url}/emotionalfluxresult`} component={EmotionalFluxResult} />
+        {/* <Route path={`${match.url}/dominantprofileone`} component={DominantProfileOne} />
+        <Route path={`${match.url}/internalpartone`} component={InternalPartOne} />
+        <Route path={`${match.url}/internalparttwo`} component={InternalPartTwo} />
+        <Route path={`${match.url}/idealgrowthpart`} component={IdealGrowthPart} /> */}
         {/* DAQUI PARA BAIXO - MENU INCOMPLETO */}
         <Route path={`${match.url}/exerciseprofilemoviment`} component={ExerciseProfileMoviment} />
         <Route path={`${match.url}/superiormind`} component={SuperiorMind} />
