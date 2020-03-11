@@ -5,7 +5,7 @@ import {
   Paper, Typography, LinearProgress,
 } from '@material-ui/core';
 import setLanguage from './Language';
-import useStyles from '../Styles';
+import useStyles from './Styles';
 
 interface IMinimum {
   total: number,

@@ -1,16 +1,15 @@
 /* eslint-disable camelcase */
 // eslint-disable-next-line no-unused-vars
 import React, { ChangeEvent } from 'react';
-import { Link } from 'react-router-dom';
 import {
-  Grid, ListItem, Typography, ListItemAvatar, Avatar, Button,
+  Grid, ListItem, Typography, ListItemAvatar, Avatar,
 } from '@material-ui/core';
-import EditIcon from '@material-ui/icons/Edit';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
+import EditButton from '../../EditButton/EditButton';
 // eslint-disable-next-line no-unused-vars
 import { IQuestion } from '../../../../../../TypeScript/Interfaces/IQuestion';
-import MyActive from '../Active/Active';
+import MyActive from '../../Active/Active';
 
 interface MyProps {
   question: IQuestion,
@@ -67,16 +66,8 @@ export default withTranslation()(
             md={2}
           >
             <>
-              <Button
-                variant="contained"
-                title="Edit"
-                startIcon={<EditIcon />}
-                component={Link}
-                to={`/dynamicContent/questions/edit/${Guid}`}
-              >
-                Edit
-              </Button>
-              <MyActive active={Active} handleChange={handleChange} />
+              <EditButton to={`/dynamicContent/questions/edit/${Guid}`} />
+              <MyActive Active={Active} handleChange={handleChange} Guid={Guid} />
             </>
           </Grid>
         </Grid>
