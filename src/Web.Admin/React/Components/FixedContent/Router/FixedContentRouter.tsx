@@ -72,7 +72,7 @@ import ObservationAttention from '../ObservationAttention/Page';
 import TriadSpecificsOne from '../TriadSpecificsOne/Page';
 import OriginalXAdapted from '../OriginalXAdapted/Page';
 import TriadLegends from '../TriadLegends/Page';
-// ObservationTriad
+import ObservationTriad from '../ObservationTriad/Page';
 // CorrectFlux
 // EmotionalFluxResult
 // DominantProfileOne
@@ -199,7 +199,7 @@ export default withRouter(
         <Route path={`${match.url}/triadspecificsone`} component={TriadSpecificsOne} />
         <Route path={`${match.url}/originalxadapted`} component={OriginalXAdapted} />
         <Route path={`${match.url}/triadlegends`} component={TriadLegends} />
-        {/* ObservationTriad */}
+        <Route path={`${match.url}/observationtriad`} component={ObservationTriad} />
         {/* CorrectFlux */}
         {/* EmotionalFluxResult */}
         {/* DominantProfileOne */}
