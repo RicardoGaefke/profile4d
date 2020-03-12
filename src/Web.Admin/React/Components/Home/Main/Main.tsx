@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Grid, Typography } from '@material-ui/core';
-import MyDrawer from '../../Drawer/Drawer';
 import useStyles from './Styles';
 
 export default (): React.ReactElement => {
@@ -8,7 +7,6 @@ export default (): React.ReactElement => {
 
   return (
     <Container className={classes.container}>
-      <MyDrawer />
       <Grid
         container
         spacing={2}

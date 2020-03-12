@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Grid } from '@material-ui/core';
-import MyDrawer from '../../Drawer/Drawer';
 import useStyles from './Styles';
 
 export default (props: React.PropsWithChildren<React.ReactNode>): React.ReactElement => {
@@ -9,7 +8,6 @@ export default (props: React.PropsWithChildren<React.ReactNode>): React.ReactEle
 
   return (
     <Container className={classes.container}>
-      <MyDrawer />
       <Grid
         className={classes.grid}
         container

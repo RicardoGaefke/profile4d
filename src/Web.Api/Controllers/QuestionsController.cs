@@ -55,6 +55,31 @@ namespace Profile4d.Web.Api.Controllers
     }
 
     [Authorize(Roles = "Admin")]
+    [HttpPost("ChangeActive")]
+    public ActionResult<BasicReturn> ChangeActive(Question data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      Question _question = new Question(
+        data.Guid,
+        _user,
+        data.Active
+      );
+
+      try
+      {
+        _return = _questions.ChangeActive(_question);
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
     [HttpPost("Add")]
     public ActionResult<BasicReturn> Add(Question data)
     {
@@ -64,6 +89,47 @@ namespace Profile4d.Web.Api.Controllers
       {
         data.CreatedBy = _user;
         _return = _questions.Add(data);
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Details = ex.StackTrace;
+
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("Question/{id}")]
+    public ActionResult<Question> Question(string id)
+    {
+      Question _return = new Question();
+      
+      try
+      {
+        _return = _questions.Question(id);
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPost("Edit")]
+    public ActionResult<BasicReturn> Edit(Question data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+        _return = _questions.Edit(data);
         return _return;
       }
       catch (System.Exception ex)

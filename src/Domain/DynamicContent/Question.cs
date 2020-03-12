@@ -24,7 +24,7 @@ namespace Profile4d.Domain
       DomainException.When(!string.IsNullOrEmpty(createdBy), "CreatedBy is required!");
 
       DomainException.When(!string.IsNullOrEmpty(title_PT), "Title_PT is required!");
-      DomainException.When(!(title_PT.Length < 5), "Title_PT - 5 character minimum!");
+      DomainException.When(!(title_PT.Length < 3), "Title_PT - 5 character minimum!");
       DomainException.When(!(title_PT.Length > 95), "Title_PT - 95 character maximum!");
 
       DomainException.When(!string.IsNullOrEmpty(text_PT), "Text_PT is required!");
@@ -32,7 +32,7 @@ namespace Profile4d.Domain
       DomainException.When(!(text_PT.Length > 8000), "Text_PT - 8000 character maximum!");
 
       DomainException.When(!string.IsNullOrEmpty(title_ENG), "Title_ENG is required!");
-      DomainException.When(!(title_ENG.Length < 5), "Title_ENG - 5 character minimum!");
+      DomainException.When(!(title_ENG.Length < 3), "Title_ENG - 5 character minimum!");
       DomainException.When(!(title_ENG.Length > 95), "Title_ENG - 95 character maximum!");
 
       DomainException.When(!string.IsNullOrEmpty(text_ENG), "Text_ENG is required!");
@@ -68,7 +68,7 @@ namespace Profile4d.Domain
       DomainException.When(!string.IsNullOrEmpty(created), "Created is required!");
 
       DomainException.When(!string.IsNullOrEmpty(title_PT), "Title_PT is required!");
-      DomainException.When(!(title_PT.Length < 5), "Title_PT - 5 character minimum!");
+      DomainException.When(!(title_PT.Length < 3), "Title_PT - 5 character minimum!");
       DomainException.When(!(title_PT.Length > 95), "Title_PT - 95 character maximum!");
 
       DomainException.When(!string.IsNullOrEmpty(text_PT), "Text_PT is required!");
@@ -76,7 +76,7 @@ namespace Profile4d.Domain
       DomainException.When(!(text_PT.Length > 8000), "Text_PT - 8000 character maximum!");
 
       DomainException.When(!string.IsNullOrEmpty(title_ENG), "Title_ENG is required!");
-      DomainException.When(!(title_ENG.Length < 5), "Title_ENG - 5 character minimum!");
+      DomainException.When(!(title_ENG.Length < 3), "Title_ENG - 5 character minimum!");
       DomainException.When(!(title_ENG.Length > 95), "Title_ENG - 95 character maximum!");
 
       DomainException.When(!string.IsNullOrEmpty(text_ENG), "Text_ENG is required!");
@@ -96,10 +96,20 @@ namespace Profile4d.Domain
       this.CreatedBy = createdBy;
     }
 
+    public Question(string guid, string active_createdBy, bool active)
+    {
+      DomainException.When(!string.IsNullOrEmpty(guid), "Guid is required!");
+      DomainException.When(!string.IsNullOrEmpty(active_createdBy), "Active_CreatedBy is required!");
+
+      this.Guid = guid;
+      this.Active_CreatedBy = active_createdBy;
+      this.Active = active;
+    }
+
     public Question(string title_PT, string text_PT, string title_ENG, string text_ENG)
     {
       DomainException.When(!string.IsNullOrEmpty(title_PT), "Title_PT is required!");
-      DomainException.When(!(title_PT.Length < 5), "Title_PT - 5 character minimum!");
+      DomainException.When(!(title_PT.Length < 3), "Title_PT - 5 character minimum!");
       DomainException.When(!(title_PT.Length > 95), "Title_PT - 95 character maximum!");
 
       DomainException.When(!string.IsNullOrEmpty(text_PT), "Text_PT is required!");
@@ -107,7 +117,7 @@ namespace Profile4d.Domain
       DomainException.When(!(text_PT.Length > 8000), "Text_PT - 8000 character maximum!");
 
       DomainException.When(!string.IsNullOrEmpty(title_ENG), "Title_ENG is required!");
-      DomainException.When(!(title_ENG.Length < 5), "Title_ENG - 5 character minimum!");
+      DomainException.When(!(title_ENG.Length < 3), "Title_ENG - 5 character minimum!");
       DomainException.When(!(title_ENG.Length > 95), "Title_ENG - 95 character maximum!");
 
       DomainException.When(!string.IsNullOrEmpty(text_ENG), "Text_ENG is required!");
