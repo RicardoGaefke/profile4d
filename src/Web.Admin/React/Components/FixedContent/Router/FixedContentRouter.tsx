@@ -118,7 +118,7 @@ import ObservationFive from '../ObservationFive/Page';
 import ObservationSix from '../ObservationSix/Page';
 import Proactivity from '../Proactivity/Page';
 import ObservationSeven from '../ObservationSeven/Page';
-// import ObservationEight from '../ObservationEight/Page';
+import ObservationEight from '../ObservationEight/Page';
 import InternationalRelationship from '../InternationalRelationship/Page';
 // import ObservationNine from '../ObservationNine/Page';
 // import ObservationTen from '../ObservationTen/Page';
@@ -271,7 +271,7 @@ export default withRouter(
         <Route path={`${match.url}/observationsix`} component={ObservationSix} />
         <Route path={`${match.url}/proactivity`} component={Proactivity} />
         <Route path={`${match.url}/observationseven`} component={ObservationSeven} />
-        {/* <Route path={`${match.url}/observationeight`} component={ObservationEight} /> */}
+        <Route path={`${match.url}/observationeight`} component={ObservationEight} />
         <Route path={`${match.url}/internationalrelationship`} component={InternationalRelationship} />
         {/* <Route path={`${match.url}/observationnine`} component={ObservationNine} /> */}
         {/* <Route path={`${match.url}/observationten`} component={ObservationTen} /> */}
