@@ -103,12 +103,12 @@ import BenefitsVirtueEssence from '../BenefitsVirtueEssence/Page';
 import TwelveCharacterAdultStrengths from '../TwelveCharacterAdultStrengths/Page';
 import ProfessionalAnalyze from '../ProfessionalAnalyze/Page';
 import TwelveCompetencesApresentation from '../TwelveCompetencesApresentation/Page';
-// import ThreeDimensions from '../ThreeDimensions/Page';
+import ThreeDimensions from '../ThreeDimensions/Page';
 import FourCompetentStages from '../FourCompetentStages/Page';
 import Observation from '../Observation/Page';
 import TwelveCompetences from '../TwelveCompetences/Page';
 import ExcellentCompromise from '../ExcellentCompromise/Page';
-// import ObservationOne from '../ObservationOne/Page';
+import ObservationOne from '../ObservationOne/Page';
 // import ObservationTwo from '../ObservationTwo/Page';
 import ConflictsResolution from '../ConflictsResolution/Page';
 // import ObservationThree from '../ObservationThree/Page';
@@ -256,12 +256,12 @@ export default withRouter(
         <Route path={`${match.url}/twelvecharacteradultstrengths`} component={TwelveCharacterAdultStrengths} />
         <Route path={`${match.url}/professionalanalyze`} component={ProfessionalAnalyze} />
         <Route path={`${match.url}/twelvecompetencesapresentation`} component={TwelveCompetencesApresentation} />
-        {/* <Route path={`${match.url}/threedimensions`} component={ThreeDimensions} /> */}
+        <Route path={`${match.url}/threedimensions`} component={ThreeDimensions} />
         <Route path={`${match.url}/fourcompetentstages`} component={FourCompetentStages} />
         <Route path={`${match.url}/observation`} component={Observation} />
         <Route path={`${match.url}/twelvecompetences`} component={TwelveCompetences} />
         <Route path={`${match.url}/excellentcompromise`} component={ExcellentCompromise} />
-        {/* <Route path={`${match.url}/observationone`} component={ObservationOne} /> */}
+        <Route path={`${match.url}/observationone`} component={ObservationOne} />
         {/* <Route path={`${match.url}/observationtwo`} component={ObservationTwo} /> */}
         <Route path={`${match.url}/conflictsresolution`} component={ConflictsResolution} />
         {/* <Route path={`${match.url}/observationthree`} component={ObservationThree} /> */}
