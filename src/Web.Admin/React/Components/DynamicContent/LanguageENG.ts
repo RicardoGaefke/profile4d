@@ -7,14 +7,14 @@ export default {
     text: 'Title in Portuguese',
     title: 'The title of the report in Portuguese',
     required: 'This field is required',
-    min: '5 character minimum',
+    min: '3 character minimum',
     max: '95 characters maximum',
   },
   titleENG: {
     text: 'Title in English',
     title: 'The title of the report in English',
     required: 'This field is required',
-    min: '5 character minimum',
+    min: '3 character minimum',
     max: '95 characters maximum',
   },
   textPT: {
