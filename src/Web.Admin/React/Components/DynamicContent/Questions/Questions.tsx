@@ -13,7 +13,7 @@ import { IQuestions, IQuestion } from '../../../../../TypeScript/Interfaces/IQue
 import { IBasicReturn } from '../../../../../TypeScript/Interfaces/IBasicReturn';
 import Loading from '../../Loading/Loading';
 import Quantity from '../Quantity/Quantity';
-import Question from './Question/Question';
+import Question from '../Question/Question';
 import Add from '../AddButton/Add';
 import setLanguage from './Language';
 import useStyles from './Styles';
@@ -61,6 +61,7 @@ export default withTranslation()(
                 variant: 'success',
               });
             } else {
+              fetchQuestions();
               enqueueSnackbar('Falha ao atualizar.', {
                 variant: 'error',
               });

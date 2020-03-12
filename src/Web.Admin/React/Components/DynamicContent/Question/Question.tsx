@@ -6,10 +6,10 @@ import {
 } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
-import EditButton from '../../EditButton/EditButton';
+import EditButton from '../EditButton/EditButton';
 // eslint-disable-next-line no-unused-vars
-import { IQuestion } from '../../../../../../TypeScript/Interfaces/IQuestion';
-import MyActive from '../../Active/Active';
+import { IQuestion } from '../../../../../TypeScript/Interfaces/IQuestion';
+import MyActive from '../Active/Active';
 
 interface MyProps {
   question: IQuestion,
