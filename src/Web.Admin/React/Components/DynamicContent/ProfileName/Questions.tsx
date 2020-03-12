@@ -100,7 +100,7 @@ export default withTranslation()(
                 <List>
                   {state.Questions.map((q, i): React.ReactElement => (
                     <React.Fragment key={`Frag-${q.Guid}`}>
-                      <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} />
+                      <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} to="profileName" />
                       <Divider key={`Div-${q.Guid}`} />
                     </React.Fragment>
                   ))}

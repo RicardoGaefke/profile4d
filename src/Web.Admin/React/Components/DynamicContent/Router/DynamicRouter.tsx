@@ -12,6 +12,9 @@ import PageEdit from '../Questions/Edit/Page';
 import ProfileName from '../ProfileName/Questions';
 import ProfileNameAdd from '../ProfileName/Add/Add';
 import ProfileNameEdit from '../ProfileName/Edit/Page';
+import FeaturesDominant from '../FeaturesDominant/Questions';
+import FeaturesDominantAdd from '../FeaturesDominant/Add/Add';
+import FeaturesDominantEdit from '../FeaturesDominant/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -25,6 +28,9 @@ export default withRouter(
         <Route path={`${match.url}/profileName`} exact component={ProfileName} />
         <Route path={`${match.url}/profileName/add`} component={ProfileNameAdd} />
         <Route path={`${match.url}/profileName/edit/:id`} component={ProfileNameEdit} />
+        <Route path={`${match.url}/featuresDominant`} exact component={FeaturesDominant} />
+        <Route path={`${match.url}/featuresDominant/add`} component={FeaturesDominantAdd} />
+        <Route path={`${match.url}/featuresDominant/edit/:id`} component={FeaturesDominantEdit} />
       </MyTemplate>
     );
   },

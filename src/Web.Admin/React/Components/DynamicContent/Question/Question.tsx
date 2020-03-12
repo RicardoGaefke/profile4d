@@ -12,6 +12,7 @@ import { IQuestion } from '../../../../../TypeScript/Interfaces/IQuestion';
 import MyActive from '../Active/Active';
 
 interface MyProps {
+  to: string,
   question: IQuestion,
   number: number,
   handleChange: (event: ChangeEvent<HTMLInputElement>, checked: boolean) => void,
@@ -23,7 +24,7 @@ export default withTranslation()(
   (props: IProps): React.ReactElement<IProps> => {
     const {
       // eslint-disable-next-line no-unused-vars
-      t, number, question, handleChange,
+      t, number, question, handleChange, to,
     } = props;
     const {
       Title_PT, Text_PT, Title_ENG, Text_ENG, Guid, Active,
@@ -67,7 +68,7 @@ export default withTranslation()(
             md={2}
           >
             <>
-              <EditButton to={`/dynamicContent/questions/edit/${Guid}`} />
+              <EditButton to={`/dynamicContent/${to}/edit/${Guid}`} />
               <MyActive Active={Active} handleChange={handleChange} Guid={Guid} />
             </>
           </Grid>

@@ -109,4 +109,5 @@ export default {
   //  dynamic content
   questions: 'Perguntas',
   profileName: 'Nome do perfil',
+  featuresDominant: 'Recursos do seu perfil dominante',
 } as ILanguage;

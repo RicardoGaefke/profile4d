@@ -105,4 +105,5 @@ export interface ILanguage {
   twelvecompetencestable: string,
   questions: string,
   profileName: string,
+  featuresDominant: string,
 }

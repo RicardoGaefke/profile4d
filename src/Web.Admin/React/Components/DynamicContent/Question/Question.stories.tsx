@@ -29,7 +29,7 @@ const handleChange = (event: ChangeEvent<HTMLInputElement>, checked: boolean): v
 const App = (): React.ReactElement => (
   <MyThemeHoc>
     <List>
-      <MyApp question={Quest} number={1} handleChange={handleChange} />
+      <MyApp question={Quest} number={1} handleChange={handleChange} to="question" />
     </List>
   </MyThemeHoc>
 );
