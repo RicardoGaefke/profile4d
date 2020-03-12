@@ -120,7 +120,7 @@ import Proactivity from '../Proactivity/Page';
 import ObservationSeven from '../ObservationSeven/Page';
 import ObservationEight from '../ObservationEight/Page';
 import InternationalRelationship from '../InternationalRelationship/Page';
-// import ObservationNine from '../ObservationNine/Page';
+import ObservationNine from '../ObservationNine/Page';
 // import ObservationTen from '../ObservationTen/Page';
 import ClientOrientation from '../ClientOrientation/Page';
 // import ObservationEleven from '../ObservationEleven/Page';
@@ -273,7 +273,7 @@ export default withRouter(
         <Route path={`${match.url}/observationseven`} component={ObservationSeven} />
         <Route path={`${match.url}/observationeight`} component={ObservationEight} />
         <Route path={`${match.url}/internationalrelationship`} component={InternationalRelationship} />
-        {/* <Route path={`${match.url}/observationnine`} component={ObservationNine} /> */}
+        <Route path={`${match.url}/observationnine`} component={ObservationNine} />
         {/* <Route path={`${match.url}/observationten`} component={ObservationTen} /> */}
         <Route path={`${match.url}/clientorientation`} component={ClientOrientation} />
         {/* <Route path={`${match.url}/observationeleven`} component={ObservationEleven} /> */}
