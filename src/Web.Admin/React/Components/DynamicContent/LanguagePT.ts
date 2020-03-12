@@ -7,14 +7,14 @@ export default {
     text: 'Título em Português',
     title: 'Título do relatório em Português',
     required: 'Este campo é obrigatório',
-    min: 'Digite ao menos cinco caracteres',
+    min: 'Digite ao menos três caracteres',
     max: 'Digite no máximo 95 caracteres',
   },
   titleENG: {
     text: 'Título em Inglês',
     title: 'Título do relatório em Inglês',
     required: 'Este campo é obrigatório',
-    min: 'Digite ao menos cinco caracteres',
+    min: 'Digite ao menos três caracteres',
     max: 'Digite no máximo 95 caracteres',
   },
   textPT: {
