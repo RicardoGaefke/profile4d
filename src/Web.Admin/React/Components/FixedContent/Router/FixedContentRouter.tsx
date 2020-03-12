@@ -111,7 +111,7 @@ import ExcellentCompromise from '../ExcellentCompromise/Page';
 import ObservationOne from '../ObservationOne/Page';
 import ObservationTwo from '../ObservationTwo/Page';
 import ConflictsResolution from '../ConflictsResolution/Page';
-// import ObservationThree from '../ObservationThree/Page';
+import ObservationThree from '../ObservationThree/Page';
 // import ObservationFour from '../ObservationFour/Page';
 import Adaptability from '../Adaptability/Page';
 // import ObservationFive from '../ObservationFive/Page';
@@ -264,7 +264,7 @@ export default withRouter(
         <Route path={`${match.url}/observationone`} component={ObservationOne} />
         <Route path={`${match.url}/observationtwo`} component={ObservationTwo} />
         <Route path={`${match.url}/conflictsresolution`} component={ConflictsResolution} />
-        {/* <Route path={`${match.url}/observationthree`} component={ObservationThree} /> */}
+        <Route path={`${match.url}/observationthree`} component={ObservationThree} />
         {/* <Route path={`${match.url}/observationfour`} component={ObservationFour} /> */}
         <Route path={`${match.url}/adaptability`} component={Adaptability} />
         {/* <Route path={`${match.url}/observationfive`} component={ObservationFive} /> */}
