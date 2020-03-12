@@ -75,8 +75,6 @@ export interface ILanguage {
   internalpartone: string,
   internalparttwo: string,
   idealgrowthpart: string,
-
-
   exerciseprofilemoviment: string,
   yourbehavioraldna: string,
   superiormind: string,

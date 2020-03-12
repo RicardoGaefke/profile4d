@@ -296,7 +296,6 @@ export default [
     link: 'idealgrowthpart',
     title: 'idealgrowthpart',
   },
-  // DAQUI PARA BAIXO, MENU AINDA NÃO CONFIGURADO
   {
     link: 'exerciseprofilemoviment',
     title: 'exerciseprofilemoviment',

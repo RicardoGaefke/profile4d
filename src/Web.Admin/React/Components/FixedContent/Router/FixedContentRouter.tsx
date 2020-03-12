@@ -142,7 +142,7 @@ import ObservationTwentyOne from '../ObservationTwentyOne/Page';
 import ObservationTwentyTwo from '../ObservationTwentyTwo/Page';
 import SystemicalVision from '../SystemicalVision/Page';
 import ObservationTwentyThree from '../ObservationTwentyThree/Page';
-// import ObservationTwentyFour from '../ObservationTwentyFour/Page';
+import ObservationTwentyFour from '../ObservationTwentyFour/Page';
 import EnergyByArea from '../EnergyByArea/Page';
 // DAQUI PARA BAIXO O MENU AINDA NÃO FOI ADEQUADO
 import LastPageResume from '../LastPageResume/Page';
@@ -295,7 +295,7 @@ export default withRouter(
         <Route path={`${match.url}/observationtwentytwo`} component={ObservationTwentyTwo} />
         <Route path={`${match.url}/systemicalvision`} component={SystemicalVision} />
         <Route path={`${match.url}/observationtwentythree`} component={ObservationTwentyThree} />
-        {/* <Route path={`${match.url}/observationtwentyfour`} component={ObservationTwentyFour} /> */}
+        <Route path={`${match.url}/observationtwentyfour`} component={ObservationTwentyFour} />
         <Route path={`${match.url}/energybyarea`} component={EnergyByArea} />
         {/* DAQUI PARA BAIXO AINDA NÃO DEFINIDO */}
         <Route path={`${match.url}/lastpageresume`} component={LastPageResume} />
