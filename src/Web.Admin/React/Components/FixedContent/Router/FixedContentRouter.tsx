@@ -133,7 +133,7 @@ import ObservationFifteen from '../ObservationFifteen/Page';
 import ObservationSixteen from '../ObservationSixteen/Page';
 import InovationCriativity from '../InovationCriativity/Page';
 import ObservationSeventeen from '../ObservationSeventeen/Page';
-// import ObservationEighteen from '../ObservationEighteen/Page';
+import ObservationEighteen from '../ObservationEighteen/Page';
 import EntrepreneurOrientation from '../EntrepreneurOrientation/Page';
 // import ObservationNineteen from '../ObservationNineteen/Page';
 // import ObservationTwenty from '../ObservationTwenty/Page';
@@ -286,7 +286,7 @@ export default withRouter(
         <Route path={`${match.url}/observationsixteen`} component={ObservationSixteen} />
         <Route path={`${match.url}/inovationcriativity`} component={InovationCriativity} />
         <Route path={`${match.url}/observationseventeen`} component={ObservationSeventeen} />
-        {/* <Route path={`${match.url}/observationeighteen`} component={ObservationEighteen} /> */}
+        <Route path={`${match.url}/observationeighteen`} component={ObservationEighteen} />
         <Route path={`${match.url}/entrepreneurorientation`} component={EntrepreneurOrientation} />
         {/* <Route path={`${match.url}/observationnineteen`} component={ObservationNineteen} /> */}
         {/* <Route path={`${match.url}/observationtwenty`} component={ObservationTwenty} /> */}
