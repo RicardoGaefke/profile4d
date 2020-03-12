@@ -143,14 +143,21 @@ export default {
   observationtwentythree: 'Observation 1',
   observationtwentyfour: 'Observation 2',
   energybyarea: 'Energy by area of ​​activity',
-  // DAQUI PARA BAIXO O MENU AINDA NÃO FOI ADEQUADO
+  graphiclegends: 'Graphic legend',
+  inovationcriativityone: 'Innovation and creativity',
+  managment: 'Planning',
+  relationshipone: 'Relationship',
+  controlexec: 'Execution and control',
   lastpageresume: 'Summary (last page)',
   dominantprofilename: 'Name of Dominant Profile',
+  internalpartthree: '',
   internalpartnerone: 'Internal Partner Name (first)',
   internalpartnertwo: 'Internal Partner Name (second)',
   nameidealpartner: 'Ideal Partner Name',
   behavioralresources: 'Behavioral Profile Resource',
-  twelvecompetencestable: 'Table of twelve Competences',
+  competentresume: 'Skills Summary',
+  competentlegends: 'Caption skills',
+  // twelvecompetencestable: 'Table of twelve Competences',
   //  dynamic content
   questions: 'Questions',
 } as ILanguage;

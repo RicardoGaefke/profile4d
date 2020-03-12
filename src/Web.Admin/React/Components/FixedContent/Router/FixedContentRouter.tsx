@@ -144,14 +144,21 @@ import SystemicalVision from '../SystemicalVision/Page';
 import ObservationTwentyThree from '../ObservationTwentyThree/Page';
 import ObservationTwentyFour from '../ObservationTwentyFour/Page';
 import EnergyByArea from '../EnergyByArea/Page';
-// DAQUI PARA BAIXO O MENU AINDA NÃO FOI ADEQUADO
+// import GraphicLegends from '../GraphicLegends/Page';
+// import InovationCriativityOne from '../InovationCriativityOne/Page';
+// import Managment from '../Managment/Page';
+// import RelationshipOne from '../RelationshipOne/Page';
+// import ControlExec from '../ControlExec/Page';
 import LastPageResume from '../LastPageResume/Page';
 import DominantProfileName from '../DominantProfileName/Page';
+// import InternalPartThree from '../InternalPartThree/Page';
 import InternalPartnerOne from '../InternalPartnerOne/Page';
 import InternalPartnerTwo from '../InternalPartnerTwo/Page';
 import NameIdealPartner from '../NameIdealPartner/Page';
 import BehavioralResources from '../BehavioralResources/Page';
-import TwelveCompetencesTable from '../TwelveCompetencesTable/Page';
+// import CompetentResume from '../CompetentResume/Page';
+// import CompetentLegends from '../CompetentLegends/Page';
+// import TwelveCompetencesTable from '../TwelveCompetencesTable/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -298,13 +305,21 @@ export default withRouter(
         <Route path={`${match.url}/observationtwentyfour`} component={ObservationTwentyFour} />
         <Route path={`${match.url}/energybyarea`} component={EnergyByArea} />
         {/* DAQUI PARA BAIXO AINDA NÃO DEFINIDO */}
+        {/* <Route path={`${match.url}/graphiclegends`} component={GraphicLegends} />
+        <Route path={`${match.url}/inovationcriativityone`} component={InovationCriativityOne} />
+        <Route path={`${match.url}/managment`} component={Managment} />
+        <Route path={`${match.url}/relationshipone`} component={RelationshipOne} />
+        <Route path={`${match.url}/controlexec`} component={ControlExec} /> */}
         <Route path={`${match.url}/lastpageresume`} component={LastPageResume} />
         <Route path={`${match.url}/dominantprofilename`} component={DominantProfileName} />
+        {/* <Route path={`${match.url}/internalpartthree`} component={InternalPartThree} /> */}
         <Route path={`${match.url}/internalpartnerone`} component={InternalPartnerOne} />
         <Route path={`${match.url}/internalpartnertwo`} component={InternalPartnerTwo} />
         <Route path={`${match.url}/nameidealpartner`} component={NameIdealPartner} />
         <Route path={`${match.url}/behavioralresources`} component={BehavioralResources} />
-        <Route path={`${match.url}/twelvecompetencestable`} component={TwelveCompetencesTable} />
+        {/* <Route path={`${match.url}/competentresume`} component={CompetentResume} />
+        <Route path={`${match.url}/competentlegends`} component={CompetentLegends} /> */}
+        {/* <Route path={`${match.url}/twelvecompetencestable`} component={TwelveCompetencesTable} /> */}
       </MyTemplate>
     );
   },

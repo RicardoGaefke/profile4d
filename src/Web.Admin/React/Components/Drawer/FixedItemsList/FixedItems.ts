@@ -558,7 +558,26 @@ export default [
     link: 'energybyarea',
     title: 'energybyarea',
   },
-  // DAQUI PARA BAIXO NAO CONFIGURADO
+  {
+    link: 'graphiclegends',
+    title: 'graphiclegends',
+  },
+  {
+    link: 'inovationcriativityone',
+    title: 'inovationcriativityone',
+  },
+  {
+    link: 'managment',
+    title: 'managment',
+  },
+  {
+    link: 'relationshipone',
+    title: 'relationshipone',
+  },
+  {
+    link: 'controlexec',
+    title: 'controlexec',
+  },
   {
     link: 'lastpageresume',
     title: 'lastpageresume',
@@ -566,6 +585,10 @@ export default [
   {
     link: 'dominantprofilename',
     title: 'dominantprofilename',
+  },
+  {
+    link: 'internalpartthree',
+    title: 'internalpartthree',
   },
   {
     link: 'internalpartnerone',
@@ -584,7 +607,15 @@ export default [
     title: 'behavioralresources',
   },
   {
-    link: 'twelvecompetencestable',
-    title: 'twelvecompetencestable',
+    link: 'competentresume',
+    title: 'competentresume',
   },
+  {
+    link: 'competentlegends',
+    title: 'competentlegends',
+  },
+  // {
+  //   link: 'twelvecompetencestable',
+  //   title: 'twelvecompetencestable',
+  // },
 ] as IStaticMenuItem[];
