@@ -35,6 +35,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<StaticContent>();
       services.AddSingleton<Images>();
       services.AddSingleton<Questions>();
+      services.AddSingleton<ProfileName>();
       //  storage
       services.AddSingleton<Blob>();
 

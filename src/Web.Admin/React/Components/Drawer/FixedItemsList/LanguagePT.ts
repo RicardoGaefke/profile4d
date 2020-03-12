@@ -108,4 +108,5 @@ export default {
   twelvecompetencestable: 'Tabela das Doze Competências',
   //  dynamic content
   questions: 'Perguntas',
+  profileName: 'Nome do perfil',
 } as ILanguage;
