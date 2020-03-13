@@ -8,4 +8,12 @@ export default [
     link: 'questions',
     title: 'questions',
   },
+  {
+    link: 'profileName',
+    title: 'profileName',
+  },
+  {
+    link: 'featuresDominant',
+    title: 'featuresDominant',
+  },
 ] as IStaticMenuItem[];

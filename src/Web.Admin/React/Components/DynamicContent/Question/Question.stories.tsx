@@ -5,8 +5,8 @@ import { storiesOf } from '@storybook/react';
 import { withConsole } from '@storybook/addon-console';
 import { List } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
-import { IQuestion } from '../../../../../../TypeScript/Interfaces/IQuestion';
-import MyThemeHoc from '../../../../Initial/Theme/StoryBookHOC';
+import { IQuestion } from '../../../../../TypeScript/Interfaces/IQuestion';
+import MyThemeHoc from '../../../Initial/Theme/StoryBookHOC';
 import MyApp from './Question';
 
 const Quest: IQuestion = {
@@ -29,7 +29,7 @@ const handleChange = (event: ChangeEvent<HTMLInputElement>, checked: boolean): v
 const App = (): React.ReactElement => (
   <MyThemeHoc>
     <List>
-      <MyApp question={Quest} number={1} handleChange={handleChange} />
+      <MyApp question={Quest} number={1} handleChange={handleChange} to="question" />
     </List>
   </MyThemeHoc>
 );

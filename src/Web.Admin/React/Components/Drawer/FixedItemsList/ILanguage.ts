@@ -104,4 +104,6 @@ export interface ILanguage {
   behavioralresources: string,
   twelvecompetencestable: string,
   questions: string,
+  profileName: string,
+  featuresDominant: string,
 }
