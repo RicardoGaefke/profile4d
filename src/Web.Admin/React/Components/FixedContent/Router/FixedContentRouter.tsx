@@ -156,7 +156,7 @@ import InternalPartnerOne from '../InternalPartnerOne/Page';
 import InternalPartnerTwo from '../InternalPartnerTwo/Page';
 import NameIdealPartner from '../NameIdealPartner/Page';
 import BehavioralResources from '../BehavioralResources/Page';
-// import CompetentResume from '../CompetentResume/Page';
+import CompetentResume from '../CompetentResume/Page';
 // import CompetentLegends from '../CompetentLegends/Page';
 // import TwelveCompetencesTable from '../TwelveCompetencesTable/Page';
 
@@ -317,8 +317,8 @@ export default withRouter(
         <Route path={`${match.url}/internalpartnertwo`} component={InternalPartnerTwo} />
         <Route path={`${match.url}/nameidealpartner`} component={NameIdealPartner} />
         <Route path={`${match.url}/behavioralresources`} component={BehavioralResources} />
-        {/* <Route path={`${match.url}/competentresume`} component={CompetentResume} />
-        <Route path={`${match.url}/competentlegends`} component={CompetentLegends} /> */}
+        <Route path={`${match.url}/competentresume`} component={CompetentResume} />
+        {/* <Route path={`${match.url}/competentlegends`} component={CompetentLegends} /> */}
         {/* <Route path={`${match.url}/twelvecompetencestable`} component={TwelveCompetencesTable} /> */}
       </MyTemplate>
     );
