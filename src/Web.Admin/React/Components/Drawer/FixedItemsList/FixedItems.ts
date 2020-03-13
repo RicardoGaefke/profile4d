@@ -491,8 +491,8 @@ export default [
     title: 'observationthirteen',
   },
   {
-    link: 'observationfourtee',
-    title: 'observationfourtee',
+    link: 'observationfourteen',
+    title: 'observationfourteen',
   },
   {
     link: 'negotiationpersuation',
