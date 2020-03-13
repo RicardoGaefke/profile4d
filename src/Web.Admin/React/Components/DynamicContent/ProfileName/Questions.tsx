@@ -33,7 +33,7 @@ export default withTranslation()(
 
       const fetchQuestions = (): void => {
         MyAxios(window.location.href)
-          .get<IQuestions>('/Questions')
+          .get<IQuestions>('/ProfileName')
           .then((response): void => setState(response.data));
       };
 
@@ -48,7 +48,7 @@ export default withTranslation()(
         });
 
         MyAxios(window.location.href)
-          .post<IBasicReturn>('/Questions/ChangeActive',
+          .post<IBasicReturn>('/ProfileName/ChangeActive',
           {
             Guid: event.target.value,
             Active: event.target.checked,
@@ -87,7 +87,7 @@ export default withTranslation()(
                     item
                   >
                     <Quantity
-                      minimum={99}
+                      minimum={9}
                       total={state.Questions.filter((value): boolean => {
                         if (value.Active) {
                           return true;
@@ -100,7 +100,7 @@ export default withTranslation()(
                 <List>
                   {state.Questions.map((q, i): React.ReactElement => (
                     <React.Fragment key={`Frag-${q.Guid}`}>
-                      <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} to="questions" />
+                      <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} to="profileName" />
                       <Divider key={`Div-${q.Guid}`} />
                     </React.Fragment>
                   ))}
@@ -108,7 +108,7 @@ export default withTranslation()(
               </>
             )
           }
-          <Add to="/dynamicContent/questions/add" />
+          <Add to="/dynamicContent/profileName/add" />
         </Container>
       );
     },

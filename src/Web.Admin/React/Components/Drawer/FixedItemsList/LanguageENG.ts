@@ -160,4 +160,6 @@ export default {
   // twelvecompetencestable: 'Table of twelve Competences',
   //  dynamic content
   questions: 'Questions',
+  profileName: 'Profile name',
+  featuresDominant: 'Features of your dominant profile',
 } as ILanguage;
