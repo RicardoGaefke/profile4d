@@ -150,7 +150,7 @@ export default {
   controlexec: 'Execution and control',
   lastpageresume: 'Summary (last page)',
   dominantprofilename: 'Name of Dominant Profile',
-  internalpartthree: '',
+  internalpartthree: 'Internal partners',
   internalpartnerone: 'Internal Partner Name (first)',
   internalpartnertwo: 'Internal Partner Name (second)',
   nameidealpartner: 'Ideal Partner Name',

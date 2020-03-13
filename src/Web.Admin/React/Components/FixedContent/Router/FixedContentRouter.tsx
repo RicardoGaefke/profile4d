@@ -145,7 +145,7 @@ import ObservationTwentyThree from '../ObservationTwentyThree/Page';
 import ObservationTwentyFour from '../ObservationTwentyFour/Page';
 import EnergyByArea from '../EnergyByArea/Page';
 import GraphicLegends from '../GraphicLegends/Page';
-// import InovationCriativityOne from '../InovationCriativityOne/Page';
+import InovationCriativityOne from '../InovationCriativityOne/Page';
 // import Managment from '../Managment/Page';
 // import RelationshipOne from '../RelationshipOne/Page';
 // import ControlExec from '../ControlExec/Page';
@@ -306,7 +306,7 @@ export default withRouter(
         <Route path={`${match.url}/energybyarea`} component={EnergyByArea} />
         {/* DAQUI PARA BAIXO AINDA NÃO DEFINIDO */}
         <Route path={`${match.url}/graphiclegends`} component={GraphicLegends} />
-        {/* <Route path={`${match.url}/inovationcriativityone`} component={InovationCriativityOne} /> */}
+        <Route path={`${match.url}/inovationcriativityone`} component={InovationCriativityOne} />
         {/* <Route path={`${match.url}/managment`} component={Managment} /> */}
         {/* <Route path={`${match.url}/relationshipone`} component={RelationshipOne} /> */}
         {/* <Route path={`${match.url}/controlexec`} component={ControlExec} /> */}
