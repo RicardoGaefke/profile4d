@@ -151,7 +151,7 @@ import RelationshipOne from '../RelationshipOne/Page';
 import ControlExec from '../ControlExec/Page';
 import LastPageResume from '../LastPageResume/Page';
 import DominantProfileName from '../DominantProfileName/Page';
-// import InternalPartThree from '../InternalPartThree/Page';
+import InternalPartThree from '../InternalPartThree/Page';
 import InternalPartnerOne from '../InternalPartnerOne/Page';
 import InternalPartnerTwo from '../InternalPartnerTwo/Page';
 import NameIdealPartner from '../NameIdealPartner/Page';
@@ -312,7 +312,7 @@ export default withRouter(
         <Route path={`${match.url}/controlexec`} component={ControlExec} />
         <Route path={`${match.url}/lastpageresume`} component={LastPageResume} />
         <Route path={`${match.url}/dominantprofilename`} component={DominantProfileName} />
-        {/* <Route path={`${match.url}/internalpartthree`} component={InternalPartThree} /> */}
+        <Route path={`${match.url}/internalpartthree`} component={InternalPartThree} />
         <Route path={`${match.url}/internalpartnerone`} component={InternalPartnerOne} />
         <Route path={`${match.url}/internalpartnertwo`} component={InternalPartnerTwo} />
         <Route path={`${match.url}/nameidealpartner`} component={NameIdealPartner} />
