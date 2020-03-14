@@ -149,6 +149,10 @@ export default [
     title: 'saboteurmodeone',
   },
   {
+    link: 'doyousee',
+    title: 'doyousee',
+  },
+  {
     link: 'trinitybehavioralcompetent',
     title: 'trinitybehavioralcompetent',
   },
@@ -161,8 +165,24 @@ export default [
     title: 'difficultycomunnication',
   },
   {
+    link: 'nameprofilethree',
+    title: 'nameprofilethree',
+  },
+  {
     link: 'fourpersonalitypowers',
     title: 'fourpersonalitypowers',
+  },
+  {
+    link: 'newwhoami',
+    title: 'newwhoami',
+  },
+  {
+    link: 'nameprofilefour',
+    title: 'nameprofilefour',
+  },
+  {
+    link: 'firstfourlimitateforces',
+    title: 'firstfourlimitateforces',
   },
   {
     link: 'trinitybehavioralsabotage',
@@ -173,40 +193,48 @@ export default [
     title: 'internalenemies',
   },
   {
-    link: 'firstfourlimitateforces',
-    title: 'firstfourlimitateforces',
-  },
-  {
     link: 'internalenemyone',
     title: 'internalenemyone',
+  },
+  {
+    link: 'saboteurnameone',
+    title: 'saboteurnameone',
   },
   {
     link: 'secondfourlimitateforces',
     title: 'secondfourlimitateforces',
   },
   {
-    link: 'pdi',
-    title: 'pdi',
-  },
-  {
     link: 'internalenemytwo',
     title: 'internalenemytwo',
+  },
+  {
+    link: 'saboteurnametwo',
+    title: 'saboteurnametwo',
   },
   {
     link: 'limitationfourpowers',
     title: 'limitationfourpowers',
   },
   {
+    link: 'pdi',
+    title: 'pdi',
+  },
+  {
     link: 'threeintelligencecenters',
     title: 'threeintelligencecenters',
   },
   {
-    link: 'attentionpoints',
-    title: 'attentionpoints',
+    link: 'threecenterslegend',
+    title: 'threecenterslegend',
   },
   {
     link: 'behavioralrespectiveenergies',
     title: 'behavioralrespectiveenergies',
+  },
+  {
+    link: 'attentionpoints',
+    title: 'attentionpoints',
   },
   {
     link: 'identifiedconflicts',
@@ -217,16 +245,64 @@ export default [
     title: 'energyspikes',
   },
   {
+    link: 'triadbehaviorallegend',
+    title: 'triadbehaviorallegend',
+  },
+  {
     link: 'homogeneousheterogeneous',
     title: 'homogeneousheterogeneous',
+  },
+  {
+    link: 'observationattention',
+    title: 'observationattention',
+  },
+  {
+    link: 'triadspecificsone',
+    title: 'triadspecificsone',
   },
   {
     link: 'originalxadapted',
     title: 'originalxadapted',
   },
   {
+    link: 'triadlegends',
+    title: 'triadlegends',
+  },
+  {
+    link: 'observationtriad',
+    title: 'observationtriad',
+  },
+  {
+    link: 'correctflux',
+    title: 'correctflux',
+  },
+  {
+    link: 'emotionalfluxresult',
+    title: 'emotionalfluxresult',
+  },
+  {
+    link: 'dominantprofileone',
+    title: 'dominantprofileone',
+  },
+  {
+    link: 'internalpartone',
+    title: 'internalpartone',
+  },
+  {
+    link: 'internalparttwo',
+    title: 'internalparttwo',
+  },
+  {
+    link: 'idealgrowthpart',
+    title: 'idealgrowthpart',
+  },
+  {
     link: 'exerciseprofilemoviment',
     title: 'exerciseprofilemoviment',
+  },
+  {
+    link: 'yourbehavioraldna',
+    title: 'yourbehavioraldna',
   },
   {
     link: 'superiormind',
@@ -236,13 +312,18 @@ export default [
     link: 'healthyadult',
     title: 'healthyadult',
   },
-  {
-    link: 'yourbehavioraldna',
-    title: 'yourbehavioraldna',
-  },
+
   {
     link: 'synergeticmode',
     title: 'synergeticmode',
+  },
+  {
+    link: 'archetypeessence',
+    title: 'archetypeessence',
+  },
+  {
+    link: 'essentialfeature',
+    title: 'essentialfeature',
   },
   {
     link: 'domprofile',
@@ -260,14 +341,7 @@ export default [
     link: 'idealpartner',
     title: 'idealpartner',
   },
-  {
-    link: 'archetypeessence',
-    title: 'archetypeessence',
-  },
-  {
-    link: 'essentialfeature',
-    title: 'essentialfeature',
-  },
+
   {
     link: 'characterformation',
     title: 'characterformation',
@@ -297,6 +371,10 @@ export default [
     title: 'bodyshape',
   },
   {
+    link: 'bodycharacters',
+    title: 'bodycharacters',
+  },
+  {
     link: 'mainvirtueessence',
     title: 'mainvirtueessence',
   },
@@ -309,8 +387,16 @@ export default [
     title: 'twelvecharacteradultstrengths',
   },
   {
+    link: 'professionalanalyze',
+    title: 'professionalanalyze',
+  },
+  {
     link: 'twelvecompetencesapresentation',
     title: 'twelvecompetencesapresentation',
+  },
+  {
+    link: 'threedimensions',
+    title: 'threedimensions',
   },
   {
     link: 'fourcompetentstages',
@@ -321,10 +407,6 @@ export default [
     title: 'observation',
   },
   {
-    link: 'professionalanalyze',
-    title: 'professionalanalyze',
-  },
-  {
     link: 'twelvecompetences',
     title: 'twelvecompetences',
   },
@@ -333,52 +415,168 @@ export default [
     title: 'excellentcompromise',
   },
   {
+    link: 'observationone',
+    title: 'observationone',
+  },
+  {
+    link: 'observationtwo',
+    title: 'observationtwo',
+  },
+  {
     link: 'conflictsresolution',
     title: 'conflictsresolution',
+  },
+  {
+    link: 'observationthree',
+    title: 'observationthree',
+  },
+  {
+    link: 'observationfour',
+    title: 'observationfour',
   },
   {
     link: 'adaptability',
     title: 'adaptability',
   },
   {
+    link: 'observationfive',
+    title: 'observationfive',
+  },
+  {
+    link: 'observationsix',
+    title: 'observationsix',
+  },
+  {
     link: 'proactivity',
     title: 'proactivity',
+  },
+  {
+    link: 'observationseven',
+    title: 'observationseven',
+  },
+  {
+    link: 'observationeight',
+    title: 'observationeight',
   },
   {
     link: 'internationalrelationship',
     title: 'internationalrelationship',
   },
   {
+    link: 'observationnine',
+    title: 'observationnine',
+  },
+  {
+    link: 'observationten',
+    title: 'observationten',
+  },
+  {
     link: 'clientorientation',
     title: 'clientorientation',
+  },
+  {
+    link: 'observationeleven',
+    title: 'observationeleven',
+  },
+  {
+    link: 'observationtwelve',
+    title: 'observationtwelve',
   },
   {
     link: 'peoplesdevelopment',
     title: 'peoplesdevelopment',
   },
   {
+    link: 'observationthirteen',
+    title: 'observationthirteen',
+  },
+  {
+    link: 'observationfourteen',
+    title: 'observationfourteen',
+  },
+  {
     link: 'negotiationpersuation',
     title: 'negotiationpersuation',
+  },
+  {
+    link: 'observationfifteen',
+    title: 'observationfifteen',
+  },
+  {
+    link: 'observationsixteen',
+    title: 'observationsixteen',
   },
   {
     link: 'inovationcriativity',
     title: 'inovationcriativity',
   },
   {
+    link: 'observationseventeen',
+    title: 'observationseventeen',
+  },
+  {
+    link: 'observationeighteen',
+    title: 'observationeighteen',
+  },
+  {
     link: 'entrepreneurorientation',
     title: 'entrepreneurorientation',
+  },
+  {
+    link: 'observationnineteen',
+    title: 'observationnineteen',
+  },
+  {
+    link: 'observationtwenty',
+    title: 'observationtwenty',
   },
   {
     link: 'strategicalplanning',
     title: 'strategicalplanning',
   },
   {
+    link: 'observationtwentyone',
+    title: 'observationtwentyone',
+  },
+  {
+    link: 'observationtwentytwo',
+    title: 'observationtwentytwo',
+  },
+  {
     link: 'systemicalvision',
     title: 'systemicalvision',
   },
   {
+    link: 'observationtwentythree',
+    title: 'observationtwentythree',
+  },
+  {
+    link: 'observationtwentyfour',
+    title: 'observationtwentyfour',
+  },
+  {
     link: 'energybyarea',
     title: 'energybyarea',
+  },
+  {
+    link: 'graphiclegends',
+    title: 'graphiclegends',
+  },
+  {
+    link: 'inovationcriativityone',
+    title: 'inovationcriativityone',
+  },
+  {
+    link: 'managment',
+    title: 'managment',
+  },
+  {
+    link: 'relationshipone',
+    title: 'relationshipone',
+  },
+  {
+    link: 'controlexec',
+    title: 'controlexec',
   },
   {
     link: 'lastpageresume',
@@ -387,6 +585,10 @@ export default [
   {
     link: 'dominantprofilename',
     title: 'dominantprofilename',
+  },
+  {
+    link: 'internalpartthree',
+    title: 'internalpartthree',
   },
   {
     link: 'internalpartnerone',
@@ -405,7 +607,15 @@ export default [
     title: 'behavioralresources',
   },
   {
-    link: 'twelvecompetencestable',
-    title: 'twelvecompetencestable',
+    link: 'competentresume',
+    title: 'competentresume',
   },
+  {
+    link: 'competentlegends',
+    title: 'competentlegends',
+  },
+  // {
+  //   link: 'twelvecompetencestable',
+  //   title: 'twelvecompetencestable',
+  // },
 ] as IStaticMenuItem[];
