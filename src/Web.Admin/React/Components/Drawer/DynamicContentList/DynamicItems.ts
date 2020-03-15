@@ -16,4 +16,8 @@ export default [
     link: 'featuresDominant',
     title: 'featuresDominant',
   },
+  {
+    link: 'personalityForces',
+    title: 'personalityForces',
+  },
 ] as IStaticMenuItem[];

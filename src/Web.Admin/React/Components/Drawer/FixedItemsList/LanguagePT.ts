@@ -162,4 +162,5 @@ export default {
   questions: 'Perguntas',
   profileName: 'Nome do perfil',
   featuresDominant: 'Recursos do seu perfil dominante',
+  personalityForces: 'As quatro forças da personalidade',
 } as ILanguage;
