@@ -11,7 +11,7 @@ import useStyles from '../../../../Utils/Form.Styles';
 import setLanguage from '../Language';
 import setLanguageForm from '../../Language';
 import Form from '../../Form/Form';
-import InitialValues from '../../Form/Form.InitialValues';
+import InitialValues from '../../Questions/Add/Form.InitialValues';
 import Validation from '../../Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
 import { IDynamicContent } from '../../../../../../TypeScript/Interfaces/IDynamicContent';
