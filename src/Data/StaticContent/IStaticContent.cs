@@ -108,5 +108,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage AttentionFocus();
     public BasicReturn AttentionFocusEdit(StaticFirstPage data);
+
+    public StaticFirstPage LeaderDifferential();
+    public BasicReturn LeaderDifferentialEdit(StaticFirstPage data);
   }
 }
