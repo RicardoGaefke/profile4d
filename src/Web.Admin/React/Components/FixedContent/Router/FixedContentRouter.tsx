@@ -167,7 +167,7 @@ export default withRouter(
     return (
       <MyTemplate>
         <Route path={`${match.url}/introduction`} component={Page} />
-        <Route path={`${match.url}/personalanalyze`} component={PersonalAnalyze} />
+        <Route path={`${match.url}/personalanalysis`} component={PersonalAnalyze} />
         <Route path={`${match.url}/inferiormind`} component={InferiorMind} />
         <Route path={`${match.url}/twomindways`} component={TwoMindWays} />
         <Route path={`${match.url}/dominantprofile`} component={DominantProfile} />

@@ -75,5 +75,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage Introduction();
     public BasicReturn IntroductionEdit(StaticFirstPage data);
+
+    public StaticFirstPage PersonalAnalysis();
+    public BasicReturn PersonalAnalysisEdit(StaticFirstPage data);
   }
 }
