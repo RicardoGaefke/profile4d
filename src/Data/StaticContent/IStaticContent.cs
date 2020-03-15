@@ -120,5 +120,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage CommunicatesMode();
     public BasicReturn CommunicatesModeEdit(StaticFirstPage data);
+
+    public StaticFirstPage InteractsRelationships();
+    public BasicReturn InteractsRelationshipsEdit(StaticFirstPage data);
   }
 }
