@@ -117,5 +117,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage CompetentEmotional();
     public BasicReturn CompetentEmotionalEdit(StaticFirstPage data);
+
+    public StaticFirstPage CommunicatesMode();
+    public BasicReturn CommunicatesModeEdit(StaticFirstPage data);
   }
 }
