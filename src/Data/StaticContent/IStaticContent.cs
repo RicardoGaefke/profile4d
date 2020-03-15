@@ -111,5 +111,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage LeaderDifferential();
     public BasicReturn LeaderDifferentialEdit(StaticFirstPage data);
+
+    public StaticFirstPage RelationedValuesDomProfile();
+    public BasicReturn RelationedValuesDomProfileEdit(StaticFirstPage data);
   }
 }
