@@ -66,10 +66,23 @@ namespace Profile4d.Data
 
     public StaticFirstPage NameSaboteurTwo();
     public BasicReturn NameSaboteurTwoEdit(StaticFirstPage data);
+
     public StaticFirstPage SFourPowersTwo();
     public BasicReturn SFourPowersTwoEdit(StaticFirstPage data);
 
     public StaticFirstPage PDI();
     public BasicReturn PDIEdit(StaticFirstPage data);
+
+    public StaticFirstPage Introduction();
+    public BasicReturn IntroductionEdit(StaticFirstPage data);
+
+    public StaticFirstPage PersonalAnalysis();
+    public BasicReturn PersonalAnalysisEdit(StaticFirstPage data);
+
+    public StaticFirstPage InferiorMind();
+    public BasicReturn InferiorMindEdit(StaticFirstPage data);
+
+    public StaticFirstPage TwoMindWays();
+    public BasicReturn TwoMindWaysEdit(StaticFirstPage data);
   }
 }

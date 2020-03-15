@@ -37,6 +37,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<Questions>();
       services.AddSingleton<ProfileName>();
       services.AddSingleton<FeaturesDominant>();
+      services.AddSingleton<PersonalityForces>();
       //  storage
       services.AddSingleton<Blob>();
 

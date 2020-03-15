@@ -24,7 +24,7 @@ export const MyPersonalAnalyze = withFormik<WithTranslation & WithSnackbarProps 
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    await myAxios(window.location.href).post<IStaticIntroduction>('StaticContent/PersonalAnalyzeEdit', {
+    await myAxios(window.location.href).post<IStaticIntroduction>('StaticContent/PersonalAnalysisEdit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,

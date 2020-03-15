@@ -10,7 +10,7 @@ export default (): React.ReactElement => {
 
   useEffect((): void => {
     MyAxios(window.location.href)
-      .get<IStaticIntroduction>('StaticContent/PersonalAnalyze')
+      .get<IStaticIntroduction>('StaticContent/PersonalAnalysis')
       .then((response): void => setState(response.data));
   }, []);
 
