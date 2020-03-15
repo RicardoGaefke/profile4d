@@ -105,5 +105,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage YourMotivations();
     public BasicReturn YourMotivationsEdit(StaticFirstPage data);
+
+    public StaticFirstPage AttentionFocus();
+    public BasicReturn AttentionFocusEdit(StaticFirstPage data);
   }
 }
