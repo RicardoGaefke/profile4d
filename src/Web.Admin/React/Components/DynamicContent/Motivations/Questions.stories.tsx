@@ -11,7 +11,7 @@ const App = (): React.ReactElement => (
   </MyThemeHoc>
 );
 
-storiesOf('Questions.FeaturesDominant', module)
+storiesOf('Questions.Motivations', module)
   .addDecorator((story: any): React.ReactElement => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))

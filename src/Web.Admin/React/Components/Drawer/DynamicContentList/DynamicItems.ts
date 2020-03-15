@@ -20,4 +20,8 @@ export default [
     link: 'personalityForces',
     title: 'personalityForces',
   },
+  {
+    link: 'yourMotivations',
+    title: 'yourMotivations',
+  },
 ] as IStaticMenuItem[];
