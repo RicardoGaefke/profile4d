@@ -9,7 +9,7 @@ export default [
     title: 'introduction',
   },
   {
-    link: 'personalanalyze',
+    link: 'personalanalysis',
     title: 'personalanalyze',
   },
   {
