@@ -84,5 +84,47 @@ namespace Profile4d.Data
 
     public StaticFirstPage TwoMindWays();
     public BasicReturn TwoMindWaysEdit(StaticFirstPage data);
+
+    public StaticFirstPage DominantProfile();
+    public BasicReturn DominantProfileEdit(StaticFirstPage data);
+
+    public StaticFirstPage CompetentMode();
+    public BasicReturn CompetentModeEdit(StaticFirstPage data);
+
+    public StaticFirstPage DominantWhoIAm();
+    public BasicReturn DominantWhoIAmEdit(StaticFirstPage data);
+
+    public StaticFirstPage NameProfileOne();
+    public BasicReturn NameProfileOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage DominantResources();
+    public BasicReturn DominantResourcesEdit(StaticFirstPage data);
+
+    public StaticFirstPage FourPersonalPowers();
+    public BasicReturn FourPersonalPowersEdit(StaticFirstPage data);
+
+    public StaticFirstPage YourMotivations();
+    public BasicReturn YourMotivationsEdit(StaticFirstPage data);
+
+    public StaticFirstPage AttentionFocus();
+    public BasicReturn AttentionFocusEdit(StaticFirstPage data);
+
+    public StaticFirstPage LeaderDifferential();
+    public BasicReturn LeaderDifferentialEdit(StaticFirstPage data);
+
+    public StaticFirstPage RelationedValuesDomProfile();
+    public BasicReturn RelationedValuesDomProfileEdit(StaticFirstPage data);
+
+    public StaticFirstPage CompetentEmotional();
+    public BasicReturn CompetentEmotionalEdit(StaticFirstPage data);
+
+    public StaticFirstPage CommunicatesMode();
+    public BasicReturn CommunicatesModeEdit(StaticFirstPage data);
+
+    public StaticFirstPage InteractsRelationships();
+    public BasicReturn InteractsRelationshipsEdit(StaticFirstPage data);
+
+    public StaticFirstPage NameProfileTwo();
+    public BasicReturn NameProfileTwoEdit(StaticFirstPage data);
   }
 }
