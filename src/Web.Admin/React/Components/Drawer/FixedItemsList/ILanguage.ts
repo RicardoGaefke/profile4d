@@ -158,4 +158,5 @@ export interface ILanguage {
   questions: string,
   profileName: string,
   featuresDominant: string,
+  personalityForces: string,
 }

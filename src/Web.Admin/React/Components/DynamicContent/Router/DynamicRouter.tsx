@@ -15,6 +15,9 @@ import ProfileNameEdit from '../ProfileName/Edit/Page';
 import FeaturesDominant from '../FeaturesDominant/Questions';
 import FeaturesDominantAdd from '../FeaturesDominant/Add/Add';
 import FeaturesDominantEdit from '../FeaturesDominant/Edit/Page';
+import PersonalityForces from '../PersonalityForces/Questions';
+import PersonalityForcesAdd from '../PersonalityForces/Add/Add';
+import PersonalityForcesEdit from '../PersonalityForces/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -31,6 +34,9 @@ export default withRouter(
         <Route path={`${match.url}/featuresDominant`} exact component={FeaturesDominant} />
         <Route path={`${match.url}/featuresDominant/add`} component={FeaturesDominantAdd} />
         <Route path={`${match.url}/featuresDominant/edit/:id`} component={FeaturesDominantEdit} />
+        <Route path={`${match.url}/personalityForces`} exact component={PersonalityForces} />
+        <Route path={`${match.url}/personalityForces/add`} component={PersonalityForcesAdd} />
+        <Route path={`${match.url}/personalityForces/edit/:id`} component={PersonalityForcesEdit} />
       </MyTemplate>
     );
   },
