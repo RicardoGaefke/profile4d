@@ -87,5 +87,11 @@ namespace Profile4d.Data
 
     public StaticFirstPage DominantProfile();
     public BasicReturn DominantProfileEdit(StaticFirstPage data);
+
+    public StaticFirstPage CompetentMode();
+    public BasicReturn CompetentModeEdit(StaticFirstPage data);
+
+    public StaticFirstPage DominantWhoIAm();
+    public BasicReturn DominantWhoIAmEdit(StaticFirstPage data);
   }
 }
