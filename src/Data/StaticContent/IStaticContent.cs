@@ -114,5 +114,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage RelationedValuesDomProfile();
     public BasicReturn RelationedValuesDomProfileEdit(StaticFirstPage data);
+
+    public StaticFirstPage CompetentEmotional();
+    public BasicReturn CompetentEmotionalEdit(StaticFirstPage data);
   }
 }
