@@ -93,5 +93,11 @@ namespace Profile4d.Data
 
     public StaticFirstPage DominantWhoIAm();
     public BasicReturn DominantWhoIAmEdit(StaticFirstPage data);
+
+    public StaticFirstPage NameProfileOne();
+    public BasicReturn NameProfileOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage DominantResources();
+    public BasicReturn DominantResourcesEdit(StaticFirstPage data);
   }
 }
