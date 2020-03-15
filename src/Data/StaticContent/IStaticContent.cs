@@ -81,5 +81,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage InferiorMind();
     public BasicReturn InferiorMindEdit(StaticFirstPage data);
+
+    public StaticFirstPage TwoMindWays();
+    public BasicReturn TwoMindWaysEdit(StaticFirstPage data);
   }
 }
