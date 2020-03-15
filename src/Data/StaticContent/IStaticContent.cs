@@ -99,5 +99,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage DominantResources();
     public BasicReturn DominantResourcesEdit(StaticFirstPage data);
+
+    public StaticFirstPage FourPersonalPowers();
+    public BasicReturn FourPersonalPowersEdit(StaticFirstPage data);
   }
 }
