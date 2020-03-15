@@ -84,5 +84,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage TwoMindWays();
     public BasicReturn TwoMindWaysEdit(StaticFirstPage data);
+
+    public StaticFirstPage DominantProfile();
+    public BasicReturn DominantProfileEdit(StaticFirstPage data);
   }
 }
