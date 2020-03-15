@@ -123,5 +123,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage InteractsRelationships();
     public BasicReturn InteractsRelationshipsEdit(StaticFirstPage data);
+
+    public StaticFirstPage NameProfileTwo();
+    public BasicReturn NameProfileTwoEdit(StaticFirstPage data);
   }
 }
