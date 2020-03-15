@@ -102,5 +102,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage FourPersonalPowers();
     public BasicReturn FourPersonalPowersEdit(StaticFirstPage data);
+
+    public StaticFirstPage YourMotivations();
+    public BasicReturn YourMotivationsEdit(StaticFirstPage data);
   }
 }
