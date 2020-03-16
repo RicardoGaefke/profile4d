@@ -46,10 +46,10 @@ describe('Web.Admin -> StrategicalPlanning', (): void => {
       const wrapper = mount(<App />);
       expect(wrapper.find(MyStrategicalPlanning).find(TextField)).to.have.length(4);
     });
-    it('Should MyStrategicalPlanning return a tag Button length equal 1 when is called', (): void => {
-      const wrapper = mount(<App />);
-      expect(wrapper.find(MyStrategicalPlanning).find(Button)).to.have.length(1);
-    });
+    // it('Should MyStrategicalPlanning return a tag Button length equal 1 when is called', (): void => {
+    //   const wrapper = mount(<App />);
+    //   expect(wrapper.find(MyStrategicalPlanning).find(Button)).to.have.length(1);
+    // });
   });
   describe('Form Properties', (): void => {
     describe('TextField Properties', (): void => {

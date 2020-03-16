@@ -11,7 +11,6 @@ import useStyles from '../../../../Utils/Form.Styles';
 import setLanguage from '../Language';
 import setLanguageForm from '../../Language';
 import Form from '../../Form/Form';
-import InitialValues from '../../Questions/Add/Form.InitialValues';
 import Validation from '../../Form/Form.Validation';
 // eslint-disable-next-line no-unused-vars
 import { IDynamicContent } from '../../../../../../TypeScript/Interfaces/IDynamicContent';
@@ -22,17 +21,18 @@ interface IProps {
 }
 
 const MyQuestion = withFormik<WithTranslation & WithSnackbarProps & RouteComponentProps & IProps, IDynamicContent>({
-  displayName: 'Dynamic Content Add Question',
+  displayName: 'Dynamic Content Edit Question',
   enableReinitialize: true,
-  mapPropsToValues: (): IDynamicContent => InitialValues,
+  mapPropsToValues: (props: IProps): IDynamicContent => props.myValues,
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t, history } = props;
-    await myAxios(window.location.href).post<IDynamicContent>('ProfileName/Add', {
+    await myAxios(window.location.href).post<IDynamicContent>('YourMotivations/Edit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,
       Text_ENG: values.Text_ENG,
+      Guid: values.Guid,
     }).then((response): void => {
       const { data } = response;
 
@@ -41,7 +41,7 @@ const MyQuestion = withFormik<WithTranslation & WithSnackbarProps & RouteCompone
           variant: 'success',
         });
 
-        history.push('/dynamicContent/profileName');
+        history.push('/dynamicContent/yourMotivations');
       } else {
         enqueueSnackbar(t('DynamicForm:feedback.failure'), {
           variant: 'error',
@@ -57,7 +57,7 @@ const MyQuestion = withFormik<WithTranslation & WithSnackbarProps & RouteCompone
   },
 })(Form);
 
-const AddQuestion = withTranslation()(withSnackbar(withRouter(MyQuestion)));
+const EditQuestion = withTranslation()(withSnackbar(withRouter(MyQuestion)));
 
 export default withTranslation()(
   (props: WithTranslation & IProps): React.ReactElement<WithTranslation & IProps> => {
@@ -75,7 +75,7 @@ export default withTranslation()(
         >
           {t('DynamicQuestions:title')}
         </Typography>
-        <AddQuestion myValues={myValues} />
+        <EditQuestion myValues={myValues} />
       </div>
     );
   },
