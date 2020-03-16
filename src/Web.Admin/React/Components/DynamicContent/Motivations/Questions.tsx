@@ -33,7 +33,7 @@ export default withTranslation()(
 
       const fetchQuestions = (): void => {
         MyAxios(window.location.href)
-          .get<IQuestions>('/Motivations')
+          .get<IQuestions>('/YourMotivations')
           .then((response): void => setState(response.data));
       };
 
@@ -48,7 +48,7 @@ export default withTranslation()(
         });
 
         MyAxios(window.location.href)
-          .post<IBasicReturn>('/Motivations/ChangeActive',
+          .post<IBasicReturn>('/YourMotivations/ChangeActive',
           {
             Guid: event.target.value,
             Active: event.target.checked,
@@ -100,7 +100,7 @@ export default withTranslation()(
                 <List>
                   {state.Questions.map((q, i): React.ReactElement => (
                     <React.Fragment key={`Frag-${q.Guid}`}>
-                      <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} to="motivations" />
+                      <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} to="yourMotivations" />
                       <Divider key={`Div-${q.Guid}`} />
                     </React.Fragment>
                   ))}
@@ -108,7 +108,7 @@ export default withTranslation()(
               </>
             )
           }
-          <Add to="/dynamicContent/motivations/add" />
+          <Add to="/dynamicContent/yourMotivations/add" />
         </Container>
       );
     },

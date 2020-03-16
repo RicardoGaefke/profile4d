@@ -43,9 +43,9 @@ export default withRouter(
         <Route path={`${match.url}/personalityForces`} exact component={PersonalityForces} />
         <Route path={`${match.url}/personalityForces/add`} component={PersonalityForcesAdd} />
         <Route path={`${match.url}/personalityForces/edit/:id`} component={PersonalityForcesEdit} />
-        <Route path={`${match.url}/motivations`} exact component={Motivations} />
-        <Route path={`${match.url}/motivations/add`} component={MotivationsAdd} />
-        <Route path={`${match.url}/motivations/edit/:id`} component={MotivationsEdit} />
+        <Route path={`${match.url}/yourMotivations`} exact component={Motivations} />
+        <Route path={`${match.url}/yourMotivations/add`} component={MotivationsAdd} />
+        <Route path={`${match.url}/yourMotivations/edit/:id`} component={MotivationsEdit} />
         <Route path={`${match.url}/focusAttention`} exact component={FocusAttention} />
         <Route path={`${match.url}/focusAttention/add`} component={FocusAttentionAdd} />
         <Route path={`${match.url}/focusAttention/edit/:id`} component={FocusAttentionEdit} />

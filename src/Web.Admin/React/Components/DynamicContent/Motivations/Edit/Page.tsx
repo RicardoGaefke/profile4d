@@ -18,7 +18,7 @@ export default withTranslation()(
 
     const fetchQuestions = (): void => {
       MyAxios(window.location.href)
-        .get<IDynamicContent>(`/ProfileName/Question/${id}`)
+        .get<IDynamicContent>(`/YourMotivations/Question/${id}`)
         .then((response): void => setState(response.data));
     };
 
