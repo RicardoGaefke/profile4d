@@ -135,5 +135,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage CommunicationDifficulty();
     public BasicReturn CommunicationDifficultyEdit(StaticFirstPage data);
+
+    public StaticFirstPage DifficultyRelationships();
+    public BasicReturn DifficultyRelationshipsEdit(StaticFirstPage data);
   }
 }
