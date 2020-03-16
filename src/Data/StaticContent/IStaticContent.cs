@@ -126,5 +126,17 @@ namespace Profile4d.Data
 
     public StaticFirstPage NameProfileTwo();
     public BasicReturn NameProfileTwoEdit(StaticFirstPage data);
+
+    public StaticFirstPage SynthesisSaboteur();
+    public BasicReturn SynthesisSaboteurEdit(StaticFirstPage data);
+
+    public StaticFirstPage LimitingMatrix();
+    public BasicReturn LimitingMatrixEdit(StaticFirstPage data);
+
+    public StaticFirstPage CommunicationDifficulty();
+    public BasicReturn CommunicationDifficultyEdit(StaticFirstPage data);
+
+    public StaticFirstPage DifficultyRelationships();
+    public BasicReturn DifficultyRelationshipsEdit(StaticFirstPage data);
   }
 }
