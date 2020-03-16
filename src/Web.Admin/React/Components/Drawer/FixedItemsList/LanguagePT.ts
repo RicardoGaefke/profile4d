@@ -164,4 +164,5 @@ export default {
   featuresDominant: 'Recursos do seu perfil dominante',
   personalityForces: 'As quatro forças da personalidade',
   yourMotivations: 'Tuas motivações',
+  focusAttention: 'Seu foco de atenção',
 } as ILanguage;
