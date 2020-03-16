@@ -164,4 +164,6 @@ export default {
   featuresDominant: 'Features of your dominant profile',
   personalityForces: 'The four forces of personality',
   yourMotivations: 'Your motivations',
+  focusAttention: 'Your focus of attention',
+  leaderDifferent: 'Your differential as a leader',
 } as ILanguage;

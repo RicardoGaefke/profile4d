@@ -165,4 +165,5 @@ export default {
   personalityForces: 'As quatro forças da personalidade',
   yourMotivations: 'Tuas motivações',
   focusAttention: 'Seu foco de atenção',
+  leaderDifferent: 'Seu diferencial como líder',
 } as ILanguage;

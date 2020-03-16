@@ -160,4 +160,6 @@ export interface ILanguage {
   featuresDominant: string,
   personalityForces: string,
   yourMotivations: string,
+  focusAttention: string,
+  leaderDifferent: string,
 }

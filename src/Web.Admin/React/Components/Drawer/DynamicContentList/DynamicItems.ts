@@ -24,4 +24,12 @@ export default [
     link: 'yourMotivations',
     title: 'yourMotivations',
   },
+  {
+    link: 'focusAttention',
+    title: 'focusAttention',
+  },
+  {
+    link: 'leaderDifferent',
+    title: 'leaderDifferent',
+  },
 ] as IStaticMenuItem[];
