@@ -163,4 +163,6 @@ export default {
   profileName: 'Profile name',
   featuresDominant: 'Features of your dominant profile',
   personalityForces: 'The four forces of personality',
+  motivations: 'Your motivations',
+  focusAttention: 'Focus attention',
 } as ILanguage;

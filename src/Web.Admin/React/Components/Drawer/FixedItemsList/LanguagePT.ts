@@ -163,4 +163,6 @@ export default {
   profileName: 'Nome do perfil',
   featuresDominant: 'Recursos do seu perfil dominante',
   personalityForces: 'As quatro forças da personalidade',
+  motivations: 'Suas motivações',
+  focusAttention: 'Seu foco de atenção',
 } as ILanguage;

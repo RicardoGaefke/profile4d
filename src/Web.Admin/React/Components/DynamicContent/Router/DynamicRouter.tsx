@@ -21,6 +21,9 @@ import PersonalityForcesEdit from '../PersonalityForces/Edit/Page';
 import Motivations from '../Motivations/Questions';
 import MotivationsAdd from '../Motivations/Add/Add';
 import MotivationsEdit from '../Motivations/Edit/Page';
+import FocusAttention from '../FocusAttention/Questions';
+import FocusAttentionAdd from '../FocusAttention/Add/Add';
+import FocusAttentionEdit from '../FocusAttention/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -43,6 +46,9 @@ export default withRouter(
         <Route path={`${match.url}/motivations`} exact component={Motivations} />
         <Route path={`${match.url}/motivations/add`} component={MotivationsAdd} />
         <Route path={`${match.url}/motivations/edit/:id`} component={MotivationsEdit} />
+        <Route path={`${match.url}/focusAttention`} exact component={FocusAttention} />
+        <Route path={`${match.url}/focusAttention/add`} component={FocusAttentionAdd} />
+        <Route path={`${match.url}/focusAttention/edit/:id`} component={FocusAttentionEdit} />
       </MyTemplate>
     );
   },
