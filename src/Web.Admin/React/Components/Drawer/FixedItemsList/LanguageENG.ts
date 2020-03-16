@@ -166,4 +166,5 @@ export default {
   yourMotivations: 'Your motivations',
   focusAttention: 'Your focus of attention',
   leaderDifferent: 'Your differential as a leader',
+  valuesDom: 'Values ​​related to your dominant profile',
 } as ILanguage;

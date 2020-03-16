@@ -32,4 +32,8 @@ export default [
     link: 'leaderDifferent',
     title: 'leaderDifferent',
   },
+  {
+    link: 'valuesDom',
+    title: 'valuesDom',
+  },
 ] as IStaticMenuItem[];

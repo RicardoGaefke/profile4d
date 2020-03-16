@@ -162,4 +162,5 @@ export interface ILanguage {
   yourMotivations: string,
   focusAttention: string,
   leaderDifferent: string,
+  valuesDom: string,
 }
