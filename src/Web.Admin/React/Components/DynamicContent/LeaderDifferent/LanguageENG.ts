@@ -3,5 +3,5 @@ import { ILanguage } from './ILanguage';
 
 export default {
   // alterar título
-  title: 'Features of your dominant profile',
+  title: 'Your differential as a leader',
 } as ILanguage;
