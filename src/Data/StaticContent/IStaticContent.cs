@@ -132,5 +132,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage LimitingMatrix();
     public BasicReturn LimitingMatrixEdit(StaticFirstPage data);
+
+    public StaticFirstPage CommunicationDifficulty();
+    public BasicReturn CommunicationDifficultyEdit(StaticFirstPage data);
   }
 }
