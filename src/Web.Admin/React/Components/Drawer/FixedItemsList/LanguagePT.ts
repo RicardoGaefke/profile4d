@@ -178,4 +178,5 @@ export default {
   fourLimited: 'As quatro forças limitadoras',
   behavioralAddiction: 'Vício comportamental',
   emotionalAddiction: 'Vício emocional',
+  mentalAddiction: 'Vício mental',
 } as ILanguage;

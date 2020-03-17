@@ -174,4 +174,5 @@ export interface ILanguage {
   fourLimited: string,
   behavioralAddiction: string,
   emotionalAddiction: string,
+  mentalAddiction: string,
 }

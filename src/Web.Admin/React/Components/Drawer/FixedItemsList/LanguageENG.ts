@@ -178,4 +178,5 @@ export default {
   fourLimited: 'The four limiting forces',
   behavioralAddiction: 'Behavioral addiction',
   emotionalAddiction: 'Emotional addiction',
+  mentalAddiction: 'Mental addiction',
 } as ILanguage;
