@@ -138,5 +138,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage DifficultyRelationships();
     public BasicReturn DifficultyRelationshipsEdit(StaticFirstPage data);
+
+    public StaticFirstPage FourLimitationPowers();
+    public BasicReturn FourLimitationPowersEdit(StaticFirstPage data);
   }
 }
