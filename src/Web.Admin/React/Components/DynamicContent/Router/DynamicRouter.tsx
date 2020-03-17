@@ -60,6 +60,15 @@ import FourLimitedEdit from '../FourLimited/Edit/Page';
 import BehavioralAddiction from '../BehavioralAddiction/Questions';
 import BehavioralAddictionAdd from '../BehavioralAddiction/Add/Add';
 import BehavioralAddictionEdit from '../BehavioralAddiction/Edit/Page';
+import EmotionalAddiction from '../EmotionalAddiction/Questions';
+import EmotionalAddictionAdd from '../EmotionalAddiction/Add/Add';
+import EmotionalAddictionEdit from '../EmotionalAddiction/Edit/Page';
+import MentalAddiction from '../MentalAddiction/Questions';
+import MentalAddictionAdd from '../MentalAddiction/Add/Add';
+import MentalAddictionEdit from '../MentalAddiction/Edit/Page';
+import NeuroticCompulsion from '../NeuroticCompulsion/Questions';
+import NeuroticCompulsionAdd from '../NeuroticCompulsion/Add/Add';
+import NeuroticCompulsionEdit from '../NeuroticCompulsion/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -124,7 +133,12 @@ export default withRouter(
         <Route path={`${match.url}/emotionalAddiction`} exact component={EmotionalAddiction} />
         <Route path={`${match.url}/emotionalAddiction/add`} component={EmotionalAddictionAdd} />
         <Route path={`${match.url}/emotionalAddiction/edit/:id`} component={EmotionalAddictionEdit} />
-      </MyTemplate>
+        <Route path={`${match.url}/mentalAddiction`} exact component={MentalAddiction} />
+        <Route path={`${match.url}/mentalAddiction/add`} component={MentalAddictionAdd} />
+        <Route path={`${match.url}/mentalAddiction/edit/:id`} component={MentalAddictionEdit} />
+        <Route path={`${match.url}/neuroticCompulsion`} exact component={NeuroticCompulsion} />
+        <Route path={`${match.url}/neuroticCompulsion/add`} component={NeuroticCompulsionAdd} />
+        <Route path={`${match.url}/neuroticCompulsion/edit/:id`} component={NeuroticCompulsionEdit} />
       </MyTemplate>
     );
   },
