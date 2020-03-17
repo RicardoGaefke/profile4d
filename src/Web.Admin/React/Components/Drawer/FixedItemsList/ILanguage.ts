@@ -170,4 +170,12 @@ export interface ILanguage {
   saboteurSynteshis: string,
   limitedMatrix: string,
   difficultComunicate: string,
+  relationshipDifficult: string,
+  fourLimited: string,
+  behavioralAddiction: string,
+  emotionalAddiction: string,
+  mentalAddiction: string,
+  defenseMecanism: string,
+  competentMode: string,
+  saboteurMode: string,
 }
