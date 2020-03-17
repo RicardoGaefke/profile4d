@@ -181,4 +181,5 @@ export default {
   mentalAddiction: 'Vício mental',
   defenseMecanism: 'Mecanismo de defesa',
   competentMode: 'Modo competente',
+  saboteurMode: 'Modo sabotador',
 } as ILanguage;

@@ -69,9 +69,15 @@ import MentalAddictionEdit from '../MentalAddiction/Edit/Page';
 import NeuroticCompulsion from '../NeuroticCompulsion/Questions';
 import NeuroticCompulsionAdd from '../NeuroticCompulsion/Add/Add';
 import NeuroticCompulsionEdit from '../NeuroticCompulsion/Edit/Page';
+import DefenseMecanism from '../DefenseMecanism/Questions';
+import DefenseMecanismAdd from '../DefenseMecanism/Add/Add';
+import DefenseMecanismEdit from '../DefenseMecanism/Edit/Page';
 import CompetentMode from '../CompetentMode/Questions';
 import CompetentModeAdd from '../CompetentMode/Add/Add';
 import CompetentModeEdit from '../CompetentMode/Edit/Page';
+import SaboteurMode from '../SaboteurMode/Questions';
+import SaboteurModeAdd from '../SaboteurMode/Add/Add';
+import SaboteurModeEdit from '../SaboteurMode/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -142,9 +148,15 @@ export default withRouter(
         <Route path={`${match.url}/neuroticCompulsion`} exact component={NeuroticCompulsion} />
         <Route path={`${match.url}/neuroticCompulsion/add`} component={NeuroticCompulsionAdd} />
         <Route path={`${match.url}/neuroticCompulsion/edit/:id`} component={NeuroticCompulsionEdit} />
+        <Route path={`${match.url}/defenseMecanism`} exact component={DefenseMecanism} />
+        <Route path={`${match.url}/defenseMecanism/add`} component={DefenseMecanismAdd} />
+        <Route path={`${match.url}/defenseMecanism/edit/:id`} component={DefenseMecanismEdit} />
         <Route path={`${match.url}/competentMode`} exact component={CompetentMode} />
         <Route path={`${match.url}/competentMode/add`} component={CompetentModeAdd} />
         <Route path={`${match.url}/competentMode/edit/:id`} component={CompetentModeEdit} />
+        <Route path={`${match.url}/saboteurMode`} exact component={SaboteurMode} />
+        <Route path={`${match.url}/saboteurMode/add`} component={SaboteurModeAdd} />
+        <Route path={`${match.url}/saboteurMode/edit/:id`} component={SaboteurModeEdit} />
       </MyTemplate>
     );
   },

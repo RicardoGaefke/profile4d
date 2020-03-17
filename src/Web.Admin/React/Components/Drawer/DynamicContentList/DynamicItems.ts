@@ -92,4 +92,8 @@ export default [
     link: 'competentMode',
     title: 'competentMode',
   },
+  {
+    link: 'saboteurMode',
+    title: 'saboteurMode',
+  },
 ] as IStaticMenuItem[];
