@@ -138,5 +138,32 @@ namespace Profile4d.Data
 
     public StaticFirstPage DifficultyRelationships();
     public BasicReturn DifficultyRelationshipsEdit(StaticFirstPage data);
+
+    public StaticFirstPage FourLimitationPowers();
+    public BasicReturn FourLimitationPowersEdit(StaticFirstPage data);
+
+    public StaticFirstPage LimitingAttitudes();
+    public BasicReturn LimitingAttitudesEdit(StaticFirstPage data);
+
+    public StaticFirstPage BehavioralAddiction();
+    public BasicReturn BehavioralAddictionEdit(StaticFirstPage data);
+
+    public StaticFirstPage EmotionalAddiction();
+    public BasicReturn EmotionalAddictionEdit(StaticFirstPage data);
+
+    public StaticFirstPage MentalAddiction();
+    public BasicReturn MentalAddictionEdit(StaticFirstPage data);
+
+    public StaticFirstPage DefenseMecanisms();
+    public BasicReturn DefenseMecanismsEdit(StaticFirstPage data);
+
+    public StaticFirstPage NeuroticCompulsion();
+    public BasicReturn NeuroticCompulsionEdit(StaticFirstPage data);
+
+    public StaticFirstPage CompetentModeOne();
+    public BasicReturn CompetentModeOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage SaboteurModeOne();
+    public BasicReturn SaboteurModeOneEdit(StaticFirstPage data);
   }
 }
