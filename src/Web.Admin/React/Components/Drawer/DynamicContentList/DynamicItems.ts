@@ -64,4 +64,36 @@ export default [
     link: 'difficultComunicate',
     title: 'difficultComunicate',
   },
+  {
+    link: 'relationshipDifficult',
+    title: 'relationshipDifficult',
+  },
+  {
+    link: 'fourLimited',
+    title: 'fourLimited',
+  },
+  {
+    link: 'behavioralAddiction',
+    title: 'behavioralAddiction',
+  },
+  {
+    link: 'emotionalAddiction',
+    title: 'emotionalAddiction',
+  },
+  {
+    link: 'mentalAddiction',
+    title: 'mentalAddiction',
+  },
+  {
+    link: 'defenseMecanism',
+    title: 'defenseMecanism',
+  },
+  {
+    link: 'competentMode',
+    title: 'competentMode',
+  },
+  {
+    link: 'saboteurMode',
+    title: 'saboteurMode',
+  },
 ] as IStaticMenuItem[];
