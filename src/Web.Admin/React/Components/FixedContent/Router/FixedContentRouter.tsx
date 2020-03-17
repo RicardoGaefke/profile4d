@@ -208,7 +208,7 @@ export default withRouter(
         <Route path={`${match.url}/difficultycomunnication`} component={DifficultyComunnication} />
         <Route path={`${match.url}/nameprofilethree`} component={NameProfileThree} />
         <Route path={`${match.url}/fourpersonalitypowers`} component={FourPersonalityPowers} />
-        <Route path={`${match.url}/newwhommi`} component={NewWhoAmI} />
+        <Route path={`${match.url}/newwhoami`} component={NewWhoAmI} />
         <Route path={`${match.url}/nameprofilefour`} component={NameProfileFour} />
         <Route path={`${match.url}/firstfourlimitateforces`} component={FirstFourLimitateForces} />
         <Route path={`${match.url}/trinitybehavioralsabotage`} component={TrinityBehavioralSabotage} />
