@@ -179,4 +179,5 @@ export default {
   behavioralAddiction: 'Behavioral addiction',
   emotionalAddiction: 'Emotional addiction',
   mentalAddiction: 'Mental addiction',
+  defenseMecanism: 'Defense Mechanism',
 } as ILanguage;

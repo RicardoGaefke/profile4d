@@ -175,4 +175,5 @@ export interface ILanguage {
   behavioralAddiction: string,
   emotionalAddiction: string,
   mentalAddiction: string,
+  defenseMecanism: string,
 }

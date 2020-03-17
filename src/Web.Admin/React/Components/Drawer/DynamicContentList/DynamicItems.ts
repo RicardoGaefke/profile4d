@@ -83,5 +83,9 @@ export default [
   {
     link: 'mentalAddiction',
     title: 'mentalAddiction',
-  }
+  },
+  {
+    link: 'defenseMecanism',
+    title: 'defenseMecanism',
+  },
 ] as IStaticMenuItem[];
