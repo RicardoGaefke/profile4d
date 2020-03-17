@@ -168,5 +168,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage DoYouSee();
     public BasicReturn DoYouSeeEdit(StaticFirstPage data);
+
+    public StaticFirstPage DifficultyComunnication();
+    public BasicReturn DifficultyComunnicationEdit(StaticFirstPage data);
   }
 }
