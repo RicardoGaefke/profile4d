@@ -171,5 +171,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage DifficultyComunnication();
     public BasicReturn DifficultyComunnicationEdit(StaticFirstPage data);
+
+    public StaticFirstPage NameProfileThree();
+    public BasicReturn NameProfileThreeEdit(StaticFirstPage data);
   }
 }
