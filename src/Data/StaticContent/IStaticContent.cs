@@ -213,5 +213,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage AttentionPoints();
     public BasicReturn AttentionPointsEdit(StaticFirstPage data);
+
+    public StaticFirstPage IdentifiedConflicts();
+    public BasicReturn IdentifiedConflictsEdit(StaticFirstPage data);
   }
 }
