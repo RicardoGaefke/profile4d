@@ -207,5 +207,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage ThreeCentersLegend();
     public BasicReturn ThreeCentersLegendEdit(StaticFirstPage data);
+
+    public StaticFirstPage BehavioralRespectiveEnergies();
+    public BasicReturn BehavioralRespectiveEnergiesEdit(StaticFirstPage data);
   }
 }
