@@ -96,4 +96,44 @@ export default [
     link: 'saboteurMode',
     title: 'saboteurMode',
   },
+  {
+    link: 'nameProfile',
+    title: 'nameProfile',
+  },
+  {
+    link: 'limitedForcesOne',
+    title: 'limitedForcesOne',
+  },
+  {
+    link: 'profileNameOne',
+    title: 'profileNameOne',
+  },
+  {
+    link: 'limitedForcesTwo',
+    title: 'limitedForcesTwo',
+  },
+  {
+    link: 'saboteurNameOne',
+    title: 'saboteurNameOne',
+  },
+  {
+    link: 'limitedForcesThree',
+    title: 'limitedForcesThree',
+  },
+  {
+    link: 'saboteurNameTwo',
+    title: 'saboteurNameTwo',
+  },
+  {
+    link: 'limitedForcesFour',
+    title: 'limitedForcesFour',
+  },
+  {
+    link: 'conflictsIdentified',
+    title: 'conflictsIdentified',
+  },
+  {
+    link: 'triadHeHo',
+    title: 'triadHeHo',
+  },
 ] as IStaticMenuItem[];
