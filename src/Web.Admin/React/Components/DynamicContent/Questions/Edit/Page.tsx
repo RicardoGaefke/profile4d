@@ -18,6 +18,7 @@ export default withTranslation()(
 
     const fetchQuestions = (): void => {
       MyAxios(window.location.href)
+        // alterar o webservice apenas, não a função Question ▼
         .get<IDynamicContent>(`/Questions/Question/${id}`)
         .then((response): void => setState(response.data));
     };

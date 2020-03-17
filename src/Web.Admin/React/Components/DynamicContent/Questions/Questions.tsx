@@ -33,6 +33,7 @@ export default withTranslation()(
 
       const fetchQuestions = (): void => {
         MyAxios(window.location.href)
+          // alterar o webservice ▼
           .get<IQuestions>('/Questions')
           .then((response): void => setState(response.data));
       };
@@ -48,6 +49,8 @@ export default withTranslation()(
         });
 
         MyAxios(window.location.href)
+          // alterar o webservice - apenas o nome do serviço
+          // não a função ChangeActive) ▼
           .post<IBasicReturn>('/Questions/ChangeActive',
           {
             Guid: event.target.value,
@@ -100,6 +103,7 @@ export default withTranslation()(
                 <List>
                   {state.Questions.map((q, i): React.ReactElement => (
                     <React.Fragment key={`Frag-${q.Guid}`}>
+                      {/* // alterar o nome da rota para o editar                                               ▼ */}
                       <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} to="questions" />
                       <Divider key={`Div-${q.Guid}`} />
                     </React.Fragment>
@@ -108,6 +112,7 @@ export default withTranslation()(
               </>
             )
           }
+          {/* // alterar apenas o nome da rota ▼ */}
           <Add to="/dynamicContent/questions/add" />
         </Container>
       );
