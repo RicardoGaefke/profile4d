@@ -216,5 +216,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage IdentifiedConflicts();
     public BasicReturn IdentifiedConflictsEdit(StaticFirstPage data);
+
+    public StaticFirstPage EnergySpikes();
+    public BasicReturn EnergySpikesEdit(StaticFirstPage data);
   }
 }
