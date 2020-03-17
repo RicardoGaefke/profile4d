@@ -186,5 +186,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage InternalEnemyOne();
     public BasicReturn InternalEnemyOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage SaboteurNameOne();
+    public BasicReturn SaboteurNameOneEdit(StaticFirstPage data);
   }
 }
