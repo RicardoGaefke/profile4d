@@ -180,5 +180,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage NameProfileFour();
     public BasicReturn NameProfileFourEdit(StaticFirstPage data);
+
+    public StaticFirstPage FirstFourLimitateForces();
+    public BasicReturn FirstFourLimitateForcesEdit(StaticFirstPage data);
   }
 }
