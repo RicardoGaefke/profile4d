@@ -170,4 +170,6 @@ export default {
   emotionalCompetence: 'Competência Emocional',
   comunicateMode: 'Modo que se comunica',
   interactMode: 'Modo que interage nos relacionamentos',
+  profileNames: 'Nome do perfil',
+  saboteurSynteshis: 'Síntese do seu principal sabotador',
 } as ILanguage;

@@ -166,4 +166,6 @@ export interface ILanguage {
   emotionalCompetence: string,
   comunicateMode: string,
   interactMode: string,
+  profileNames: string,
+  saboteurSynteshis: string,
 }

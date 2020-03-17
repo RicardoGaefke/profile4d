@@ -48,4 +48,12 @@ export default [
     link: 'interactMode',
     title: 'interactMode',
   },
+  {
+    link: 'profileNames',
+    title: 'profileNames',
+  },
+  {
+    link: 'saboteurSynteshis',
+    title: 'saboteurSynteshis',
+  },
 ] as IStaticMenuItem[];

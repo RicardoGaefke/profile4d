@@ -39,6 +39,12 @@ import ComunicateModeEdit from '../ComunicateMode/Edit/Page';
 import InteractMode from '../InteractMode/Questions';
 import InteractModeAdd from '../InteractMode/Add/Add';
 import InteractModeEdit from '../InteractMode/Edit/Page';
+import ProfileNames from '../ProfileNames/Questions';
+import ProfileNamesAdd from '../ProfileNames/Add/Add';
+import ProfileNamesEdit from '../ProfileNames/Edit/Page';
+import SaboteurSynteshis from '../SaboteurSynteshis/Questions';
+import SaboteurSynteshisAdd from '../SaboteurSynteshis/Add/Add';
+import SaboteurSynteshisEdit from '../SaboteurSynteshis/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -79,6 +85,12 @@ export default withRouter(
         <Route path={`${match.url}/interactMode`} exact component={InteractMode} />
         <Route path={`${match.url}/interactMode/add`} component={InteractModeAdd} />
         <Route path={`${match.url}/interactMode/edit/:id`} component={InteractModeEdit} />
+        <Route path={`${match.url}/profileNames`} exact component={ProfileNames} />
+        <Route path={`${match.url}/profileNames/add`} component={ProfileNamesAdd} />
+        <Route path={`${match.url}/profileNames/edit/:id`} component={ProfileNamesEdit} />
+        <Route path={`${match.url}/saboteurSynteshis`} exact component={SaboteurSynteshis} />
+        <Route path={`${match.url}/saboteurSynteshis/add`} component={SaboteurSynteshisAdd} />
+        <Route path={`${match.url}/saboteurSynteshis/edit/:id`} component={SaboteurSynteshisEdit} />
       </MyTemplate>
     );
   },
