@@ -192,5 +192,32 @@ namespace Profile4d.Data
 
     public StaticFirstPage SecondFourLimitateForces();
     public BasicReturn SecondFourLimitateForcesEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalEnemyTwo();
+    public BasicReturn InternalEnemyTwoEdit(StaticFirstPage data);
+
+    public StaticFirstPage SaboteurNameTwo();
+    public BasicReturn SaboteurNameTwoEdit(StaticFirstPage data);
+
+    public StaticFirstPage LimitationFourPowers();
+    public BasicReturn LimitationFourPowersEdit(StaticFirstPage data);
+
+    public StaticFirstPage ThreeIntelligenceCenters();
+    public BasicReturn ThreeIntelligenceCentersEdit(StaticFirstPage data);
+
+    public StaticFirstPage ThreeCentersLegend();
+    public BasicReturn ThreeCentersLegendEdit(StaticFirstPage data);
+
+    public StaticFirstPage BehavioralRespectiveEnergies();
+    public BasicReturn BehavioralRespectiveEnergiesEdit(StaticFirstPage data);
+
+    public StaticFirstPage AttentionPoints();
+    public BasicReturn AttentionPointsEdit(StaticFirstPage data);
+
+    public StaticFirstPage IdentifiedConflicts();
+    public BasicReturn IdentifiedConflictsEdit(StaticFirstPage data);
+
+    public StaticFirstPage EnergySpikes();
+    public BasicReturn EnergySpikesEdit(StaticFirstPage data);
   }
 }

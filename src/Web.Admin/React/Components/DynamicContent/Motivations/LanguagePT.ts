@@ -2,5 +2,6 @@
 import { ILanguage } from './ILanguage';
 
 export default {
+  // alterar título
   title: 'Suas motivações',
 } as ILanguage;

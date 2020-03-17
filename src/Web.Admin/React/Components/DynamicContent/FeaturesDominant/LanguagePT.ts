@@ -2,5 +2,6 @@
 import { ILanguage } from './ILanguage';
 
 export default {
+  // alterar título
   title: 'Recursos do seu perfil dominante',
 } as ILanguage;

@@ -27,6 +27,7 @@ const MyQuestion = withFormik<WithTranslation & WithSnackbarProps & RouteCompone
   validationSchema: Validation,
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t, history } = props;
+    // alterar o webservice apenas, não a função Edit                ▼
     await myAxios(window.location.href).post<IDynamicContent>('ProfileName/Edit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
@@ -41,6 +42,7 @@ const MyQuestion = withFormik<WithTranslation & WithSnackbarProps & RouteCompone
           variant: 'success',
         });
 
+        // redireciona para a lista          ▼
         history.push('/dynamicContent/profileName');
       } else {
         enqueueSnackbar(t('DynamicForm:feedback.failure'), {

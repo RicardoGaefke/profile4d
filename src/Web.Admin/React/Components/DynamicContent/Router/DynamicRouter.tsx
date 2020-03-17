@@ -24,6 +24,30 @@ import MotivationsEdit from '../Motivations/Edit/Page';
 import FocusAttention from '../FocusAttention/Questions';
 import FocusAttentionAdd from '../FocusAttention/Add/Add';
 import FocusAttentionEdit from '../FocusAttention/Edit/Page';
+import LeaderDifferent from '../LeaderDifferent/Questions';
+import LeaderDifferentAdd from '../LeaderDifferent/Add/Add';
+import LeaderDifferentEdit from '../LeaderDifferent/Edit/Page';
+import ValuesDom from '../ValuesDom/Questions';
+import ValuesDomAdd from '../ValuesDom/Add/Add';
+import ValuesDomEdit from '../ValuesDom/Edit/Page';
+import EmotionalCompetent from '../EmotionalCompetent/Questions';
+import EmotionalCompetentAdd from '../EmotionalCompetent/Add/Add';
+import EmotionalCompetentEdit from '../EmotionalCompetent/Edit/Page';
+import ComunicateMode from '../ComunicateMode/Questions';
+import ComunicateModeAdd from '../ComunicateMode/Add/Add';
+import ComunicateModeEdit from '../ComunicateMode/Edit/Page';
+import InteractMode from '../InteractMode/Questions';
+import InteractModeAdd from '../InteractMode/Add/Add';
+import InteractModeEdit from '../InteractMode/Edit/Page';
+import ProfileNames from '../ProfileNames/Questions';
+import ProfileNamesAdd from '../ProfileNames/Add/Add';
+import ProfileNamesEdit from '../ProfileNames/Edit/Page';
+import SaboteurSynteshis from '../SaboteurSynteshis/Questions';
+import SaboteurSynteshisAdd from '../SaboteurSynteshis/Add/Add';
+import SaboteurSynteshisEdit from '../SaboteurSynteshis/Edit/Page';
+import LimitedMatrix from '../LimitedMatrix/Questions';
+import LimitedMatrixAdd from '../LimitedMatrix/Add/Add';
+import LimitedMatrixEdit from '../LimitedMatrix/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -49,6 +73,30 @@ export default withRouter(
         <Route path={`${match.url}/focusAttention`} exact component={FocusAttention} />
         <Route path={`${match.url}/focusAttention/add`} component={FocusAttentionAdd} />
         <Route path={`${match.url}/focusAttention/edit/:id`} component={FocusAttentionEdit} />
+        <Route path={`${match.url}/leaderDifferent`} exact component={LeaderDifferent} />
+        <Route path={`${match.url}/leaderDifferent/add`} component={LeaderDifferentAdd} />
+        <Route path={`${match.url}/leaderDifferent/edit/:id`} component={LeaderDifferentEdit} />
+        <Route path={`${match.url}/valuesDom`} exact component={ValuesDom} />
+        <Route path={`${match.url}/valuesDom/add`} component={ValuesDomAdd} />
+        <Route path={`${match.url}/valuesDom/edit/:id`} component={ValuesDomEdit} />
+        <Route path={`${match.url}/emotionalCompetent`} exact component={EmotionalCompetent} />
+        <Route path={`${match.url}/emotionalCompetent/add`} component={EmotionalCompetentAdd} />
+        <Route path={`${match.url}/emotionalCompetent/edit/:id`} component={EmotionalCompetentEdit} />
+        <Route path={`${match.url}/comunicateMode`} exact component={ComunicateMode} />
+        <Route path={`${match.url}/comunicateMode/add`} component={ComunicateModeAdd} />
+        <Route path={`${match.url}/comunicateMode/edit/:id`} component={ComunicateModeEdit} />
+        <Route path={`${match.url}/interactMode`} exact component={InteractMode} />
+        <Route path={`${match.url}/interactMode/add`} component={InteractModeAdd} />
+        <Route path={`${match.url}/interactMode/edit/:id`} component={InteractModeEdit} />
+        <Route path={`${match.url}/profileNames`} exact component={ProfileNames} />
+        <Route path={`${match.url}/profileNames/add`} component={ProfileNamesAdd} />
+        <Route path={`${match.url}/profileNames/edit/:id`} component={ProfileNamesEdit} />
+        <Route path={`${match.url}/saboteurSynteshis`} exact component={SaboteurSynteshis} />
+        <Route path={`${match.url}/saboteurSynteshis/add`} component={SaboteurSynteshisAdd} />
+        <Route path={`${match.url}/saboteurSynteshis/edit/:id`} component={SaboteurSynteshisEdit} />
+        <Route path={`${match.url}/limitedMatrix`} exact component={LimitedMatrix} />
+        <Route path={`${match.url}/limitedMatrix/add`} component={LimitedMatrixAdd} />
+        <Route path={`${match.url}/limitedMatrix/edit/:id`} component={LimitedMatrixEdit} />
       </MyTemplate>
     );
   },
