@@ -198,5 +198,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage SaboteurNameTwo();
     public BasicReturn SaboteurNameTwoEdit(StaticFirstPage data);
+
+    public StaticFirstPage LimitationFourPowers();
+    public BasicReturn LimitationFourPowersEdit(StaticFirstPage data);
   }
 }
