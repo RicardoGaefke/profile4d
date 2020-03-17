@@ -219,5 +219,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage EnergySpikes();
     public BasicReturn EnergySpikesEdit(StaticFirstPage data);
+
+    public StaticFirstPage NewWhoAmI();
+    public BasicReturn NewWhoAmIEdit(StaticFirstPage data);
   }
 }
