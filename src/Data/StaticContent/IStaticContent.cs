@@ -201,5 +201,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage LimitationFourPowers();
     public BasicReturn LimitationFourPowersEdit(StaticFirstPage data);
+
+    public StaticFirstPage ThreeIntelligenceCenters();
+    public BasicReturn ThreeIntelligenceCentersEdit(StaticFirstPage data);
   }
 }
