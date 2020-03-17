@@ -171,4 +171,5 @@ export interface ILanguage {
   limitedMatrix: string,
   difficultComunicate: string,
   relationshipDifficult: string,
+  fourLimited: string,
 }

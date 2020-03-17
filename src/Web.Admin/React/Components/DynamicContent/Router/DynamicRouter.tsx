@@ -54,6 +54,9 @@ import DifficultComunicateEdit from '../DifficultComunicate/Edit/Page';
 import RelationshipDifficult from '../RelationshipDifficult/Questions';
 import RelationshipDifficultAdd from '../RelationshipDifficult/Add/Add';
 import RelationshipDifficultEdit from '../RelationshipDifficult/Edit/Page';
+import FourLimited from '../FourLimited/Questions';
+import FourLimitedAdd from '../FourLimited/Add/Add';
+import FourLimitedEdit from '../FourLimited/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -109,6 +112,9 @@ export default withRouter(
         <Route path={`${match.url}/relationshipDifficult`} exact component={RelationshipDifficult} />
         <Route path={`${match.url}/relationshipDifficult/add`} component={RelationshipDifficultAdd} />
         <Route path={`${match.url}/relationshipDifficult/edit/:id`} component={RelationshipDifficultEdit} />
+        <Route path={`${match.url}/fourLimited`} exact component={FourLimited} />
+        <Route path={`${match.url}/fourLimited/add`} component={FourLimitedAdd} />
+        <Route path={`${match.url}/fourLimited/edit/:id`} component={FourLimitedEdit} />
       </MyTemplate>
     );
   },

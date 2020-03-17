@@ -175,4 +175,5 @@ export default {
   limitedMatrix: 'Crença matriz limitante',
   difficultComunicate: 'Dificuldade na comunicação',
   relationshipDifficult: 'Dificuldade nos relacionamentos',
+  fourLimited: 'As quatro forças limitadoras',
 } as ILanguage;

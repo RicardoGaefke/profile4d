@@ -68,4 +68,8 @@ export default [
     link: 'relationshipDifficult',
     title: 'relationshipDifficult',
   },
+  {
+    link: 'fourLimited',
+    title: 'fourLimited',
+  },
 ] as IStaticMenuItem[];
