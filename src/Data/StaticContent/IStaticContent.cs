@@ -162,5 +162,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage CompetentModeOne();
     public BasicReturn CompetentModeOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage SaboteurModeOne();
+    public BasicReturn SaboteurModeOneEdit(StaticFirstPage data);
   }
 }
