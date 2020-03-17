@@ -204,5 +204,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage ThreeIntelligenceCenters();
     public BasicReturn ThreeIntelligenceCentersEdit(StaticFirstPage data);
+
+    public StaticFirstPage ThreeCentersLegend();
+    public BasicReturn ThreeCentersLegendEdit(StaticFirstPage data);
   }
 }
