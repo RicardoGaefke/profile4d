@@ -57,6 +57,9 @@ import RelationshipDifficultEdit from '../RelationshipDifficult/Edit/Page';
 import FourLimited from '../FourLimited/Questions';
 import FourLimitedAdd from '../FourLimited/Add/Add';
 import FourLimitedEdit from '../FourLimited/Edit/Page';
+import BehavioralAddiction from '../BehavioralAddiction/Questions';
+import BehavioralAddictionAdd from '../BehavioralAddiction/Add/Add';
+import BehavioralAddictionEdit from '../BehavioralAddiction/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -115,6 +118,9 @@ export default withRouter(
         <Route path={`${match.url}/fourLimited`} exact component={FourLimited} />
         <Route path={`${match.url}/fourLimited/add`} component={FourLimitedAdd} />
         <Route path={`${match.url}/fourLimited/edit/:id`} component={FourLimitedEdit} />
+        <Route path={`${match.url}/behavioralAddiction`} exact component={BehavioralAddiction} />
+        <Route path={`${match.url}/behavioralAddiction/add`} component={BehavioralAddictionAdd} />
+        <Route path={`${match.url}/behavioralAddiction/edit/:id`} component={BehavioralAddictionEdit} />
       </MyTemplate>
     );
   },

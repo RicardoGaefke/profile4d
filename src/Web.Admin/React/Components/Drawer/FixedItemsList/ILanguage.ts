@@ -172,4 +172,5 @@ export interface ILanguage {
   difficultComunicate: string,
   relationshipDifficult: string,
   fourLimited: string,
+  behavioralAddiction: string,
 }

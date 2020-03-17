@@ -72,4 +72,8 @@ export default [
     link: 'fourLimited',
     title: 'fourLimited',
   },
+  {
+    link: 'behavioralAddiction',
+    title: 'behavioralAddiction',
+  },
 ] as IStaticMenuItem[];

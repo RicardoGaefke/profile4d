@@ -176,4 +176,5 @@ export default {
   difficultComunicate: 'Difficulty in communication',
   relationshipDifficult: 'Difficulty in relationships',
   fourLimited: 'The four limiting forces',
+  behavioralAddiction: 'Behavioral addiction',
 } as ILanguage;
