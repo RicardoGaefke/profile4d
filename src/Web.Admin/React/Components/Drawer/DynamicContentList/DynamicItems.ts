@@ -36,4 +36,8 @@ export default [
     link: 'valuesDom',
     title: 'valuesDom',
   },
+  {
+    link: 'emotionalCompetence',
+    title: 'emotionalCompetence',
+  },
 ] as IStaticMenuItem[];

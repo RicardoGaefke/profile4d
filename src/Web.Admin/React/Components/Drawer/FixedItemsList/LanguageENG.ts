@@ -167,4 +167,5 @@ export default {
   focusAttention: 'Your focus of attention',
   leaderDifferent: 'Your differential as a leader',
   valuesDom: 'Values ​​related to your dominant profile',
+  emotionalCompetence: 'Emotional Competence',
 } as ILanguage;

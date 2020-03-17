@@ -163,4 +163,5 @@ export interface ILanguage {
   focusAttention: string,
   leaderDifferent: string,
   valuesDom: string,
+  emotionalCompetence: string,
 }

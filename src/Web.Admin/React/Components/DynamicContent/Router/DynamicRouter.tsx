@@ -30,6 +30,9 @@ import LeaderDifferentEdit from '../LeaderDifferent/Edit/Page';
 import ValuesDom from '../ValuesDom/Questions';
 import ValuesDomAdd from '../ValuesDom/Add/Add';
 import ValuesDomEdit from '../ValuesDom/Edit/Page';
+import EmotionalCompetent from '../EmotionalCompetent/Questions';
+import EmotionalCompetentAdd from '../EmotionalCompetent/Add/Add';
+import EmotionalCompetentEdit from '../EmotionalCompetent/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -61,6 +64,9 @@ export default withRouter(
         <Route path={`${match.url}/valuesDom`} exact component={ValuesDom} />
         <Route path={`${match.url}/valuesDom/add`} component={ValuesDomAdd} />
         <Route path={`${match.url}/valuesDom/edit/:id`} component={ValuesDomEdit} />
+        <Route path={`${match.url}/emotionalCompetent`} exact component={EmotionalCompetent} />
+        <Route path={`${match.url}/emotionalCompetent/add`} component={EmotionalCompetentAdd} />
+        <Route path={`${match.url}/emotionalCompetent/edit/:id`} component={EmotionalCompetentEdit} />
       </MyTemplate>
     );
   },
