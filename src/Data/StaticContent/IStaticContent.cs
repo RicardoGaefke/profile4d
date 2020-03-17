@@ -225,5 +225,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage TriadBehavioralLegend();
     public BasicReturn TriadBehavioralLegendEdit(StaticFirstPage data);
+
+    public StaticFirstPage HomogeneousHeterogeneous();
+    public BasicReturn HomogeneousHeterogeneousEdit(StaticFirstPage data);
   }
 }
