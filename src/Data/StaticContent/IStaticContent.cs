@@ -156,5 +156,11 @@ namespace Profile4d.Data
 
     public StaticFirstPage DefenseMecanisms();
     public BasicReturn DefenseMecanismsEdit(StaticFirstPage data);
+
+    public StaticFirstPage NeuroticCompulsion();
+    public BasicReturn NeuroticCompulsionEdit(StaticFirstPage data);
+
+    public StaticFirstPage CompetentModeOne();
+    public BasicReturn CompetentModeOneEdit(StaticFirstPage data);
   }
 }
