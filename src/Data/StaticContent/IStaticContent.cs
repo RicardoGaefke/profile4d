@@ -153,5 +153,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage MentalAddiction();
     public BasicReturn MentalAddictionEdit(StaticFirstPage data);
+
+    public StaticFirstPage DefenseMecanisms();
+    public BasicReturn DefenseMecanismsEdit(StaticFirstPage data);
   }
 }
