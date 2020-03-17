@@ -169,4 +169,5 @@ export default {
   valuesDom: 'Values ​​related to your dominant profile',
   emotionalCompetence: 'Emotional Competence',
   comunicateMode: 'How it communicates',
+  interactMode: 'Mode that interacts in relationships',
 } as ILanguage;

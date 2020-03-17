@@ -44,4 +44,8 @@ export default [
     link: 'comunicateMode',
     title: 'comunicateMode',
   },
+  {
+    link: 'interactMode',
+    title: 'interactMode',
+  },
 ] as IStaticMenuItem[];

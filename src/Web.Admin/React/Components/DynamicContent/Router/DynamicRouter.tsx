@@ -36,6 +36,9 @@ import EmotionalCompetentEdit from '../EmotionalCompetent/Edit/Page';
 import ComunicateMode from '../ComunicateMode/Questions';
 import ComunicateModeAdd from '../ComunicateMode/Add/Add';
 import ComunicateModeEdit from '../ComunicateMode/Edit/Page';
+import InteractMode from '../InteractMode/Questions';
+import InteractModeAdd from '../InteractMode/Add/Add';
+import InteractModeEdit from '../InteractMode/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -73,6 +76,9 @@ export default withRouter(
         <Route path={`${match.url}/comunicateMode`} exact component={ComunicateMode} />
         <Route path={`${match.url}/comunicateMode/add`} component={ComunicateModeAdd} />
         <Route path={`${match.url}/comunicateMode/edit/:id`} component={ComunicateModeEdit} />
+        <Route path={`${match.url}/interactMode`} exact component={InteractMode} />
+        <Route path={`${match.url}/interactMode/add`} component={InteractModeAdd} />
+        <Route path={`${match.url}/interactMode/edit/:id`} component={InteractModeEdit} />
       </MyTemplate>
     );
   },

@@ -165,4 +165,5 @@ export interface ILanguage {
   valuesDom: string,
   emotionalCompetence: string,
   comunicateMode: string,
+  interactMode: string,
 }
