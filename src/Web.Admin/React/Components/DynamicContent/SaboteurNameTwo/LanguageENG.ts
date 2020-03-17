@@ -3,5 +3,5 @@ import { ILanguage } from './ILanguage';
 
 export default {
   // alterar título
-  title: 'Nome do sabotador',
+  title: 'Saboteur name',
 } as ILanguage;
