@@ -141,5 +141,11 @@ namespace Profile4d.Data
 
     public StaticFirstPage FourLimitationPowers();
     public BasicReturn FourLimitationPowersEdit(StaticFirstPage data);
+
+    public StaticFirstPage LimitingAttitudes();
+    public BasicReturn LimitingAttitudesEdit(StaticFirstPage data);
+
+    public StaticFirstPage BehavioralAddiction();
+    public BasicReturn BehavioralAddictionEdit(StaticFirstPage data);
   }
 }
