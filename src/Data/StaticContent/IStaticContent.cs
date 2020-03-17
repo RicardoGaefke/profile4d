@@ -222,5 +222,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage NewWhoAmI();
     public BasicReturn NewWhoAmIEdit(StaticFirstPage data);
+
+    public StaticFirstPage TriadBehavioralLegend();
+    public BasicReturn TriadBehavioralLegendEdit(StaticFirstPage data);
   }
 }
