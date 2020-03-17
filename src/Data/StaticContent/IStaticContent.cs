@@ -147,5 +147,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage BehavioralAddiction();
     public BasicReturn BehavioralAddictionEdit(StaticFirstPage data);
+
+    public StaticFirstPage EmotionalAddiction();
+    public BasicReturn EmotionalAddictionEdit(StaticFirstPage data);
   }
 }
