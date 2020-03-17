@@ -164,4 +164,5 @@ export interface ILanguage {
   leaderDifferent: string,
   valuesDom: string,
   emotionalCompetence: string,
+  comunicateMode: string,
 }

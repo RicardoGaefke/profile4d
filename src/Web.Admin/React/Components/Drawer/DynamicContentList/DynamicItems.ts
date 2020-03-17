@@ -40,4 +40,8 @@ export default [
     link: 'emotionalCompetence',
     title: 'emotionalCompetence',
   },
+  {
+    link: 'comunicateMode',
+    title: 'comunicateMode',
+  },
 ] as IStaticMenuItem[];

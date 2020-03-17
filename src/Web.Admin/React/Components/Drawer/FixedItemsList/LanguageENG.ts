@@ -168,4 +168,5 @@ export default {
   leaderDifferent: 'Your differential as a leader',
   valuesDom: 'Values ​​related to your dominant profile',
   emotionalCompetence: 'Emotional Competence',
+  comunicateMode: 'How it communicates',
 } as ILanguage;
