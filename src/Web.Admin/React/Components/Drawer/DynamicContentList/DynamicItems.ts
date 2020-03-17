@@ -56,4 +56,8 @@ export default [
     link: 'saboteurSynteshis',
     title: 'saboteurSynteshis',
   },
+  {
+    link: 'limitedMatrix',
+    title: 'limitedMatrix',
+  },
 ] as IStaticMenuItem[];

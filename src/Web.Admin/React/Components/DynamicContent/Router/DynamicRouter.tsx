@@ -45,6 +45,9 @@ import ProfileNamesEdit from '../ProfileNames/Edit/Page';
 import SaboteurSynteshis from '../SaboteurSynteshis/Questions';
 import SaboteurSynteshisAdd from '../SaboteurSynteshis/Add/Add';
 import SaboteurSynteshisEdit from '../SaboteurSynteshis/Edit/Page';
+import LimitedMatrix from '../LimitedMatrix/Questions';
+import LimitedMatrixAdd from '../LimitedMatrix/Add/Add';
+import LimitedMatrixEdit from '../LimitedMatrix/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -91,6 +94,9 @@ export default withRouter(
         <Route path={`${match.url}/saboteurSynteshis`} exact component={SaboteurSynteshis} />
         <Route path={`${match.url}/saboteurSynteshis/add`} component={SaboteurSynteshisAdd} />
         <Route path={`${match.url}/saboteurSynteshis/edit/:id`} component={SaboteurSynteshisEdit} />
+        <Route path={`${match.url}/limitedMatrix`} exact component={LimitedMatrix} />
+        <Route path={`${match.url}/limitedMatrix/add`} component={LimitedMatrixAdd} />
+        <Route path={`${match.url}/limitedMatrix/edit/:id`} component={LimitedMatrixEdit} />
       </MyTemplate>
     );
   },

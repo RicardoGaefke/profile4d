@@ -172,4 +172,5 @@ export default {
   interactMode: 'Mode that interacts in relationships',
   profileNames: 'Profile name',
   saboteurSynteshis: 'Summary of its main saboteur',
+  limitedMatrix: 'Limiting matrix belief',
 } as ILanguage;

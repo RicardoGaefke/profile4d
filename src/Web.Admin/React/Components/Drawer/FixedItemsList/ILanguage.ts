@@ -168,4 +168,5 @@ export interface ILanguage {
   interactMode: string,
   profileNames: string,
   saboteurSynteshis: string,
+  limitedMatrix: string,
 }

@@ -172,4 +172,5 @@ export default {
   interactMode: 'Modo que interage nos relacionamentos',
   profileNames: 'Nome do perfil',
   saboteurSynteshis: 'Síntese do seu principal sabotador',
+  limitedMatrix: 'Crença matriz limitante',
 } as ILanguage;
