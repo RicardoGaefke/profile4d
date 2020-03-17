@@ -165,4 +165,13 @@ export default {
   personalityForces: 'As quatro forças da personalidade',
   yourMotivations: 'Tuas motivações',
   focusAttention: 'Seu foco de atenção',
+  leaderDifferent: 'Seu diferencial como líder',
+  valuesDom: 'Valores relacionados ao seu perfil dominante',
+  emotionalCompetence: 'Competência Emocional',
+  comunicateMode: 'Modo que se comunica',
+  interactMode: 'Modo que interage nos relacionamentos',
+  profileNames: 'Nome do perfil',
+  saboteurSynteshis: 'Síntese do seu principal sabotador',
+  limitedMatrix: 'Crença matriz limitante',
+  difficultComunicate: 'Dificuldade na comunicação',
 } as ILanguage;

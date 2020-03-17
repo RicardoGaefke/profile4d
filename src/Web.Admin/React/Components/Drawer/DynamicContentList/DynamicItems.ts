@@ -24,4 +24,44 @@ export default [
     link: 'yourMotivations',
     title: 'yourMotivations',
   },
+  {
+    link: 'focusAttention',
+    title: 'focusAttention',
+  },
+  {
+    link: 'leaderDifferent',
+    title: 'leaderDifferent',
+  },
+  {
+    link: 'valuesDom',
+    title: 'valuesDom',
+  },
+  {
+    link: 'emotionalCompetence',
+    title: 'emotionalCompetence',
+  },
+  {
+    link: 'comunicateMode',
+    title: 'comunicateMode',
+  },
+  {
+    link: 'interactMode',
+    title: 'interactMode',
+  },
+  {
+    link: 'profileNames',
+    title: 'profileNames',
+  },
+  {
+    link: 'saboteurSynteshis',
+    title: 'saboteurSynteshis',
+  },
+  {
+    link: 'limitedMatrix',
+    title: 'limitedMatrix',
+  },
+  {
+    link: 'difficultComunicate',
+    title: 'difficultComunicate',
+  },
 ] as IStaticMenuItem[];

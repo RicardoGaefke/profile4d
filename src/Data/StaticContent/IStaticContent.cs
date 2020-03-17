@@ -165,5 +165,32 @@ namespace Profile4d.Data
 
     public StaticFirstPage SaboteurModeOne();
     public BasicReturn SaboteurModeOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage DoYouSee();
+    public BasicReturn DoYouSeeEdit(StaticFirstPage data);
+
+    public StaticFirstPage DifficultyComunnication();
+    public BasicReturn DifficultyComunnicationEdit(StaticFirstPage data);
+
+    public StaticFirstPage NameProfileThree();
+    public BasicReturn NameProfileThreeEdit(StaticFirstPage data);
+
+    public StaticFirstPage FourPersonalityPowers();
+    public BasicReturn FourPersonalityPowersEdit(StaticFirstPage data);
+
+    public StaticFirstPage NameProfileFour();
+    public BasicReturn NameProfileFourEdit(StaticFirstPage data);
+
+    public StaticFirstPage FirstFourLimitateForces();
+    public BasicReturn FirstFourLimitateForcesEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalEnemyOne();
+    public BasicReturn InternalEnemyOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage SaboteurNameOne();
+    public BasicReturn SaboteurNameOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage SecondFourLimitateForces();
+    public BasicReturn SecondFourLimitateForcesEdit(StaticFirstPage data);
   }
 }

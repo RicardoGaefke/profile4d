@@ -11,6 +11,7 @@ const App = (): React.ReactElement => (
   </MyThemeHoc>
 );
 
+// Alterar o componente      ▼
 storiesOf('Questions.Motivations', module)
   .addDecorator((story: any): React.ReactElement => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
