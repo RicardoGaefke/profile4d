@@ -176,4 +176,5 @@ export interface ILanguage {
   emotionalAddiction: string,
   mentalAddiction: string,
   defenseMecanism: string,
+  competentMode: string,
 }

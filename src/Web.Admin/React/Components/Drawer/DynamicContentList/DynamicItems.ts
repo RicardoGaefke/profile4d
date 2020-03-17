@@ -88,4 +88,8 @@ export default [
     link: 'defenseMecanism',
     title: 'defenseMecanism',
   },
+  {
+    link: 'competentMode',
+    title: 'competentMode',
+  },
 ] as IStaticMenuItem[];

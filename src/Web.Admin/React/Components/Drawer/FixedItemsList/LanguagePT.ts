@@ -180,4 +180,5 @@ export default {
   emotionalAddiction: 'Vício emocional',
   mentalAddiction: 'Vício mental',
   defenseMecanism: 'Mecanismo de defesa',
+  competentMode: 'Modo competente',
 } as ILanguage;

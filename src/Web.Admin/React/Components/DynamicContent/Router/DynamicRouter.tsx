@@ -69,6 +69,9 @@ import MentalAddictionEdit from '../MentalAddiction/Edit/Page';
 import NeuroticCompulsion from '../NeuroticCompulsion/Questions';
 import NeuroticCompulsionAdd from '../NeuroticCompulsion/Add/Add';
 import NeuroticCompulsionEdit from '../NeuroticCompulsion/Edit/Page';
+import CompetentMode from '../CompetentMode/Questions';
+import CompetentModeAdd from '../CompetentMode/Add/Add';
+import CompetentModeEdit from '../CompetentMode/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -139,6 +142,9 @@ export default withRouter(
         <Route path={`${match.url}/neuroticCompulsion`} exact component={NeuroticCompulsion} />
         <Route path={`${match.url}/neuroticCompulsion/add`} component={NeuroticCompulsionAdd} />
         <Route path={`${match.url}/neuroticCompulsion/edit/:id`} component={NeuroticCompulsionEdit} />
+        <Route path={`${match.url}/competentMode`} exact component={CompetentMode} />
+        <Route path={`${match.url}/competentMode/add`} component={CompetentModeAdd} />
+        <Route path={`${match.url}/competentMode/edit/:id`} component={CompetentModeEdit} />
       </MyTemplate>
     );
   },
