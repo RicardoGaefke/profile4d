@@ -210,5 +210,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage BehavioralRespectiveEnergies();
     public BasicReturn BehavioralRespectiveEnergiesEdit(StaticFirstPage data);
+
+    public StaticFirstPage AttentionPoints();
+    public BasicReturn AttentionPointsEdit(StaticFirstPage data);
   }
 }
