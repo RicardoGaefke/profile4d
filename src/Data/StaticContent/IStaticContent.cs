@@ -177,5 +177,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage FourPersonalityPowers();
     public BasicReturn FourPersonalityPowersEdit(StaticFirstPage data);
+
+    public StaticFirstPage NameProfileFour();
+    public BasicReturn NameProfileFourEdit(StaticFirstPage data);
   }
 }
