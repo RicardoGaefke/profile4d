@@ -174,4 +174,12 @@ export default {
   saboteurSynteshis: 'Síntese do seu principal sabotador',
   limitedMatrix: 'Crença matriz limitante',
   difficultComunicate: 'Dificuldade na comunicação',
+  relationshipDifficult: 'Dificuldade nos relacionamentos',
+  fourLimited: 'As quatro forças limitadoras',
+  behavioralAddiction: 'Vício comportamental',
+  emotionalAddiction: 'Vício emocional',
+  mentalAddiction: 'Vício mental',
+  defenseMecanism: 'Mecanismo de defesa',
+  competentMode: 'Modo competente',
+  saboteurMode: 'Modo sabotador',
 } as ILanguage;

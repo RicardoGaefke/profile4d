@@ -174,4 +174,12 @@ export default {
   saboteurSynteshis: 'Summary of its main saboteur',
   limitedMatrix: 'Limiting matrix belief',
   difficultComunicate: 'Difficulty in communication',
+  relationshipDifficult: 'Difficulty in relationships',
+  fourLimited: 'The four limiting forces',
+  behavioralAddiction: 'Behavioral addiction',
+  emotionalAddiction: 'Emotional addiction',
+  mentalAddiction: 'Mental addiction',
+  defenseMecanism: 'Defense Mechanism',
+  competentMode: 'Competent mode',
+  saboteurMode: 'Saboteur mode',
 } as ILanguage;

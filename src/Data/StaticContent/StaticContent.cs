@@ -3919,5 +3919,563 @@ namespace Profile4d.Data
 
       return _return;
     }
+
+    public StaticFirstPage InternalEnemyTwo()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_INTERNAL_ENEMY_TWO_READ]";
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            _return.CreatedBy = MyDR.GetString(0);
+            _return.Created = MyDR.GetDateTime(1).ToLongDateString();
+            _return.Title_PT = MyDR.GetString(2);
+            _return.Text_PT = MyDR.GetString(3);
+            _return.Title_ENG = MyDR.GetString(4);
+            _return.Text_ENG = MyDR.GetString(5);
+          }
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public BasicReturn InternalEnemyTwoEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_INTERNAL_ENEMY_TWO_EDIT]";
+
+          Cmd.Parameters.AddWithValue("@USER", data.CreatedBy);
+          Cmd.Parameters.AddWithValue("@TITLE_PT", data.Title_PT);
+          Cmd.Parameters.AddWithValue("@TEXT_PT", data.Text_PT);
+          Cmd.Parameters.AddWithValue("@TITLE_ENG", data.Title_ENG);
+          Cmd.Parameters.AddWithValue("@TEXT_ENG", data.Text_ENG);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public StaticFirstPage SaboteurNameTwo()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_SABOTEUR_NAME_TWO_READ]";
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            _return.CreatedBy = MyDR.GetString(0);
+            _return.Created = MyDR.GetDateTime(1).ToLongDateString();
+            _return.Title_PT = MyDR.GetString(2);
+            _return.Text_PT = MyDR.GetString(3);
+            _return.Title_ENG = MyDR.GetString(4);
+            _return.Text_ENG = MyDR.GetString(5);
+          }
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public BasicReturn SaboteurNameTwoEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_SABOTEUR_NAME_TWO_EDIT]";
+
+          Cmd.Parameters.AddWithValue("@USER", data.CreatedBy);
+          Cmd.Parameters.AddWithValue("@TITLE_PT", data.Title_PT);
+          Cmd.Parameters.AddWithValue("@TEXT_PT", data.Text_PT);
+          Cmd.Parameters.AddWithValue("@TITLE_ENG", data.Title_ENG);
+          Cmd.Parameters.AddWithValue("@TEXT_ENG", data.Text_ENG);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public StaticFirstPage LimitationFourPowers()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_LIMITATION_FOUR_POWERS_READ]";
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            _return.CreatedBy = MyDR.GetString(0);
+            _return.Created = MyDR.GetDateTime(1).ToLongDateString();
+            _return.Title_PT = MyDR.GetString(2);
+            _return.Text_PT = MyDR.GetString(3);
+            _return.Title_ENG = MyDR.GetString(4);
+            _return.Text_ENG = MyDR.GetString(5);
+          }
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public BasicReturn LimitationFourPowersEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_LIMITATION_FOUR_POWERS_EDIT]";
+
+          Cmd.Parameters.AddWithValue("@USER", data.CreatedBy);
+          Cmd.Parameters.AddWithValue("@TITLE_PT", data.Title_PT);
+          Cmd.Parameters.AddWithValue("@TEXT_PT", data.Text_PT);
+          Cmd.Parameters.AddWithValue("@TITLE_ENG", data.Title_ENG);
+          Cmd.Parameters.AddWithValue("@TEXT_ENG", data.Text_ENG);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public StaticFirstPage ThreeIntelligenceCenters()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_THREE_INTELLIGENCE_CENTERS_READ]";
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            _return.CreatedBy = MyDR.GetString(0);
+            _return.Created = MyDR.GetDateTime(1).ToLongDateString();
+            _return.Title_PT = MyDR.GetString(2);
+            _return.Text_PT = MyDR.GetString(3);
+            _return.Title_ENG = MyDR.GetString(4);
+            _return.Text_ENG = MyDR.GetString(5);
+          }
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public BasicReturn ThreeIntelligenceCentersEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_THREE_INTELLIGENCE_CENTERS_EDIT]";
+
+          Cmd.Parameters.AddWithValue("@USER", data.CreatedBy);
+          Cmd.Parameters.AddWithValue("@TITLE_PT", data.Title_PT);
+          Cmd.Parameters.AddWithValue("@TEXT_PT", data.Text_PT);
+          Cmd.Parameters.AddWithValue("@TITLE_ENG", data.Title_ENG);
+          Cmd.Parameters.AddWithValue("@TEXT_ENG", data.Text_ENG);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public StaticFirstPage ThreeCentersLegend()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_THREE_CENTERS_LEGEND_READ]";
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            _return.CreatedBy = MyDR.GetString(0);
+            _return.Created = MyDR.GetDateTime(1).ToLongDateString();
+            _return.Title_PT = MyDR.GetString(2);
+            _return.Text_PT = MyDR.GetString(3);
+            _return.Title_ENG = MyDR.GetString(4);
+            _return.Text_ENG = MyDR.GetString(5);
+          }
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public BasicReturn ThreeCentersLegendEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_THREE_CENTERS_LEGEND_EDIT]";
+
+          Cmd.Parameters.AddWithValue("@USER", data.CreatedBy);
+          Cmd.Parameters.AddWithValue("@TITLE_PT", data.Title_PT);
+          Cmd.Parameters.AddWithValue("@TEXT_PT", data.Text_PT);
+          Cmd.Parameters.AddWithValue("@TITLE_ENG", data.Title_ENG);
+          Cmd.Parameters.AddWithValue("@TEXT_ENG", data.Text_ENG);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public StaticFirstPage BehavioralRespectiveEnergies()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_BEHAVIORAL_ENERGIES_READ]";
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            _return.CreatedBy = MyDR.GetString(0);
+            _return.Created = MyDR.GetDateTime(1).ToLongDateString();
+            _return.Title_PT = MyDR.GetString(2);
+            _return.Text_PT = MyDR.GetString(3);
+            _return.Title_ENG = MyDR.GetString(4);
+            _return.Text_ENG = MyDR.GetString(5);
+          }
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public BasicReturn BehavioralRespectiveEnergiesEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_BEHAVIORAL_ENERGIES_EDIT]";
+
+          Cmd.Parameters.AddWithValue("@USER", data.CreatedBy);
+          Cmd.Parameters.AddWithValue("@TITLE_PT", data.Title_PT);
+          Cmd.Parameters.AddWithValue("@TEXT_PT", data.Text_PT);
+          Cmd.Parameters.AddWithValue("@TITLE_ENG", data.Title_ENG);
+          Cmd.Parameters.AddWithValue("@TEXT_ENG", data.Text_ENG);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public StaticFirstPage AttentionPoints()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_ATTENTION_POINTS_READ]";
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            _return.CreatedBy = MyDR.GetString(0);
+            _return.Created = MyDR.GetDateTime(1).ToLongDateString();
+            _return.Title_PT = MyDR.GetString(2);
+            _return.Text_PT = MyDR.GetString(3);
+            _return.Title_ENG = MyDR.GetString(4);
+            _return.Text_ENG = MyDR.GetString(5);
+          }
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public BasicReturn AttentionPointsEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_ATTENTION_POINTS_EDIT]";
+
+          Cmd.Parameters.AddWithValue("@USER", data.CreatedBy);
+          Cmd.Parameters.AddWithValue("@TITLE_PT", data.Title_PT);
+          Cmd.Parameters.AddWithValue("@TEXT_PT", data.Text_PT);
+          Cmd.Parameters.AddWithValue("@TITLE_ENG", data.Title_ENG);
+          Cmd.Parameters.AddWithValue("@TEXT_ENG", data.Text_ENG);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public StaticFirstPage IdentifiedConflicts()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_IDENTIFIED_CONFLICTS_READ]";
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            _return.CreatedBy = MyDR.GetString(0);
+            _return.Created = MyDR.GetDateTime(1).ToLongDateString();
+            _return.Title_PT = MyDR.GetString(2);
+            _return.Text_PT = MyDR.GetString(3);
+            _return.Title_ENG = MyDR.GetString(4);
+            _return.Text_ENG = MyDR.GetString(5);
+          }
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public BasicReturn IdentifiedConflictsEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_IDENTIFIED_CONFLICTS_EDIT]";
+
+          Cmd.Parameters.AddWithValue("@USER", data.CreatedBy);
+          Cmd.Parameters.AddWithValue("@TITLE_PT", data.Title_PT);
+          Cmd.Parameters.AddWithValue("@TEXT_PT", data.Text_PT);
+          Cmd.Parameters.AddWithValue("@TITLE_ENG", data.Title_ENG);
+          Cmd.Parameters.AddWithValue("@TEXT_ENG", data.Text_ENG);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public StaticFirstPage EnergySpikes()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_ENERGY_SPIKES_READ]";
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            _return.CreatedBy = MyDR.GetString(0);
+            _return.Created = MyDR.GetDateTime(1).ToLongDateString();
+            _return.Title_PT = MyDR.GetString(2);
+            _return.Text_PT = MyDR.GetString(3);
+            _return.Title_ENG = MyDR.GetString(4);
+            _return.Text_ENG = MyDR.GetString(5);
+          }
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
+
+    public BasicReturn EnergySpikesEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_STATIC_ENERGY_SPIKES_EDIT]";
+
+          Cmd.Parameters.AddWithValue("@USER", data.CreatedBy);
+          Cmd.Parameters.AddWithValue("@TITLE_PT", data.Title_PT);
+          Cmd.Parameters.AddWithValue("@TEXT_PT", data.Text_PT);
+          Cmd.Parameters.AddWithValue("@TITLE_ENG", data.Title_ENG);
+          Cmd.Parameters.AddWithValue("@TEXT_ENG", data.Text_ENG);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+
+      _return.Success = true;
+
+      return _return;
+    }
   }
 }
