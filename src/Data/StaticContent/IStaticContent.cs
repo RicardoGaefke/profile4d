@@ -192,5 +192,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage SecondFourLimitateForces();
     public BasicReturn SecondFourLimitateForcesEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalEnemyTwo();
+    public BasicReturn InternalEnemyTwoEdit(StaticFirstPage data);
   }
 }
