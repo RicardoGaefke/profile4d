@@ -121,6 +121,10 @@ export default withRouter(
         <Route path={`${match.url}/behavioralAddiction`} exact component={BehavioralAddiction} />
         <Route path={`${match.url}/behavioralAddiction/add`} component={BehavioralAddictionAdd} />
         <Route path={`${match.url}/behavioralAddiction/edit/:id`} component={BehavioralAddictionEdit} />
+        <Route path={`${match.url}/emotionalAddiction`} exact component={EmotionalAddiction} />
+        <Route path={`${match.url}/emotionalAddiction/add`} component={EmotionalAddictionAdd} />
+        <Route path={`${match.url}/emotionalAddiction/edit/:id`} component={EmotionalAddictionEdit} />
+      </MyTemplate>
       </MyTemplate>
     );
   },

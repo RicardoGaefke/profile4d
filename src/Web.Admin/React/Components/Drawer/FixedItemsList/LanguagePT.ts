@@ -177,4 +177,5 @@ export default {
   relationshipDifficult: 'Dificuldade nos relacionamentos',
   fourLimited: 'As quatro forças limitadoras',
   behavioralAddiction: 'Vício comportamental',
+  emotionalAddiction: 'Vício emocional',
 } as ILanguage;

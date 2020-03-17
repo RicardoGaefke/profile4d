@@ -76,4 +76,8 @@ export default [
     link: 'behavioralAddiction',
     title: 'behavioralAddiction',
   },
+  {
+    link: 'emotionalAddiction',
+    title: 'emotionalAddiction',
+  }
 ] as IStaticMenuItem[];
