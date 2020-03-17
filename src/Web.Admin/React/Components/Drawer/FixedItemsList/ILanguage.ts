@@ -169,4 +169,5 @@ export interface ILanguage {
   profileNames: string,
   saboteurSynteshis: string,
   limitedMatrix: string,
+  difficultComunicate: string,
 }

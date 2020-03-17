@@ -60,4 +60,8 @@ export default [
     link: 'limitedMatrix',
     title: 'limitedMatrix',
   },
+  {
+    link: 'difficultComunicate',
+    title: 'difficultComunicate',
+  },
 ] as IStaticMenuItem[];

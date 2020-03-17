@@ -173,4 +173,5 @@ export default {
   profileNames: 'Nome do perfil',
   saboteurSynteshis: 'Síntese do seu principal sabotador',
   limitedMatrix: 'Crença matriz limitante',
+  difficultComunicate: 'Dificuldade na comunicação',
 } as ILanguage;
