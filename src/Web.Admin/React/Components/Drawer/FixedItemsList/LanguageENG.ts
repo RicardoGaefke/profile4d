@@ -174,4 +174,5 @@ export default {
   saboteurSynteshis: 'Summary of its main saboteur',
   limitedMatrix: 'Limiting matrix belief',
   difficultComunicate: 'Difficulty in communication',
+  relationshipDifficult: 'Difficulty in relationships',
 } as ILanguage;

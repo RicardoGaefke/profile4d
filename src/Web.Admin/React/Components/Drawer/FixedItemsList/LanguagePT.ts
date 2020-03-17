@@ -174,4 +174,5 @@ export default {
   saboteurSynteshis: 'Síntese do seu principal sabotador',
   limitedMatrix: 'Crença matriz limitante',
   difficultComunicate: 'Dificuldade na comunicação',
+  relationshipDifficult: 'Dificuldade nos relacionamentos',
 } as ILanguage;

@@ -48,6 +48,12 @@ import SaboteurSynteshisEdit from '../SaboteurSynteshis/Edit/Page';
 import LimitedMatrix from '../LimitedMatrix/Questions';
 import LimitedMatrixAdd from '../LimitedMatrix/Add/Add';
 import LimitedMatrixEdit from '../LimitedMatrix/Edit/Page';
+import DifficultComunicate from '../DifficultComunicate/Questions';
+import DifficultComunicateAdd from '../DifficultComunicate/Add/Add';
+import DifficultComunicateEdit from '../DifficultComunicate/Edit/Page';
+import RelationshipDifficult from '../RelationshipDifficult/Questions';
+import RelationshipDifficultAdd from '../RelationshipDifficult/Add/Add';
+import RelationshipDifficultEdit from '../RelationshipDifficult/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -97,6 +103,12 @@ export default withRouter(
         <Route path={`${match.url}/limitedMatrix`} exact component={LimitedMatrix} />
         <Route path={`${match.url}/limitedMatrix/add`} component={LimitedMatrixAdd} />
         <Route path={`${match.url}/limitedMatrix/edit/:id`} component={LimitedMatrixEdit} />
+        <Route path={`${match.url}/difficultComunicate`} exact component={DifficultComunicate} />
+        <Route path={`${match.url}/difficultComunicate/add`} component={DifficultComunicateAdd} />
+        <Route path={`${match.url}/difficultComunicate/edit/:id`} component={DifficultComunicateEdit} />
+        <Route path={`${match.url}/relationshipDifficult`} exact component={RelationshipDifficult} />
+        <Route path={`${match.url}/relationshipDifficult/add`} component={RelationshipDifficultAdd} />
+        <Route path={`${match.url}/relationshipDifficult/edit/:id`} component={RelationshipDifficultEdit} />
       </MyTemplate>
     );
   },
