@@ -2004,5 +2004,629 @@ namespace Profile4d.Web.Api.Controllers
         return _return;
       }
     }
+
+    [HttpGet("SynthesisSaboteur")]
+    public ActionResult<StaticFirstPage> SynthesisSaboteur()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.SynthesisSaboteur();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("SynthesisSaboteurEdit")]
+    public ActionResult<BasicReturn> SynthesisSaboteurEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.SynthesisSaboteurEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("LimitingMatrix")]
+    public ActionResult<StaticFirstPage> LimitingMatrix()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.LimitingMatrix();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("LimitingMatrixEdit")]
+    public ActionResult<BasicReturn> LimitingMatrixEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.LimitingMatrixEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("CommunicationDifficulty")]
+    public ActionResult<StaticFirstPage> CommunicationDifficulty()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.CommunicationDifficulty();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("CommunicationDifficultyEdit")]
+    public ActionResult<BasicReturn> CommunicationDifficultyEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.CommunicationDifficultyEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("DifficultyRelationships")]
+    public ActionResult<StaticFirstPage> DifficultyRelationships()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.DifficultyRelationships();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("DifficultyRelationshipsEdit")]
+    public ActionResult<BasicReturn> DifficultyRelationshipsEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.DifficultyRelationshipsEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("FourLimitationPowers")]
+    public ActionResult<StaticFirstPage> FourLimitationPowers()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.FourLimitationPowers();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("FourLimitationPowersEdit")]
+    public ActionResult<BasicReturn> FourLimitationPowersEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.FourLimitationPowersEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("LimitingAttitudes")]
+    public ActionResult<StaticFirstPage> LimitingAttitudes()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.LimitingAttitudes();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("LimitingAttitudesEdit")]
+    public ActionResult<BasicReturn> LimitingAttitudesEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.LimitingAttitudesEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("BehavioralAddiction")]
+    public ActionResult<StaticFirstPage> BehavioralAddiction()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.BehavioralAddiction();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("BehavioralAddictionEdit")]
+    public ActionResult<BasicReturn> BehavioralAddictionEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.BehavioralAddictionEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("EmotionalAddiction")]
+    public ActionResult<StaticFirstPage> EmotionalAddiction()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.EmotionalAddiction();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("EmotionalAddictionEdit")]
+    public ActionResult<BasicReturn> EmotionalAddictionEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.EmotionalAddictionEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("MentalAddiction")]
+    public ActionResult<StaticFirstPage> MentalAddiction()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.MentalAddiction();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("MentalAddictionEdit")]
+    public ActionResult<BasicReturn> MentalAddictionEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.MentalAddictionEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("DefenseMecanisms")]
+    public ActionResult<StaticFirstPage> DefenseMecanisms()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.DefenseMecanisms();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("DefenseMecanismsEdit")]
+    public ActionResult<BasicReturn> DefenseMecanismsEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.DefenseMecanismsEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("NeuroticCompulsion")]
+    public ActionResult<StaticFirstPage> NeuroticCompulsion()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.NeuroticCompulsion();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("NeuroticCompulsionEdit")]
+    public ActionResult<BasicReturn> NeuroticCompulsionEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.NeuroticCompulsionEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("CompetentModeOne")]
+    public ActionResult<StaticFirstPage> CompetentModeOne()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.CompetentModeOne();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("CompetentModeOneEdit")]
+    public ActionResult<BasicReturn> CompetentModeOneEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.CompetentModeOneEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpGet("SaboteurModeOne")]
+    public ActionResult<StaticFirstPage> SaboteurModeOne()
+    {
+      StaticFirstPage _return = new StaticFirstPage();
+
+      try
+      {
+        _return = _myContent.SaboteurModeOne();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [HttpPost("SaboteurModeOneEdit")]
+    public ActionResult<BasicReturn> SaboteurModeOneEdit(StaticFirstPage data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+
+        StaticFirstPage _firstPage = new StaticFirstPage(data.CreatedBy, data.Title_PT, data.Text_PT, data.Title_ENG, data.Text_ENG);
+
+        _myContent.SaboteurModeOneEdit(_firstPage);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
   }
 }
