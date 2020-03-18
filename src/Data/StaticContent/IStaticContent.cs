@@ -276,5 +276,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage SynergeticMode();
     public BasicReturn SynergeticModeEdit(StaticFirstPage data);
+
+    public StaticFirstPage ArchetypeEssence();
+    public BasicReturn ArchetypeEssenceEdit(StaticFirstPage data);
   }
 }
