@@ -252,5 +252,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage DominantProfileOne();
     public BasicReturn DominantProfileOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalPartOne();
+    public BasicReturn InternalPartOneEdit(StaticFirstPage data);
   }
 }
