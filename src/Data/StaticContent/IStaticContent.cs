@@ -264,5 +264,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage ExerciseProfileMoviment();
     public BasicReturn ExerciseProfileMovimentEdit(StaticFirstPage data);
+
+    public StaticFirstPage YourBehavioralDNA();
+    public BasicReturn YourBehavioralDNAEdit(StaticFirstPage data);
   }
 }
