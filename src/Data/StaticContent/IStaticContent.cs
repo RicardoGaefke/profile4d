@@ -279,5 +279,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage ArchetypeEssence();
     public BasicReturn ArchetypeEssenceEdit(StaticFirstPage data);
+
+    public StaticFirstPage EssentialFeature();
+    public BasicReturn EssentialFeatureEdit(StaticFirstPage data);
   }
 }
