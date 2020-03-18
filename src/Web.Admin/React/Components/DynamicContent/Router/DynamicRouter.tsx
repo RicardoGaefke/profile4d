@@ -125,10 +125,9 @@ import DomProfileEdit from '../DomProfile/Edit/Page';
 import InternalPartners from '../InternalPartners/Questions';
 import InternalPartnersAdd from '../InternalPartners/Add/Add';
 import InternalPartnersEdit from '../InternalPartners/Edit/Page';
-
-// import InternalPartOne from '../InternalPartOne/Questions';
-// import InternalPartOneAdd from '../InternalPartOne/Add/Add';
-// import InternalPartOneEdit from '../InternalPartOne/Edit/Page';
+import InternalPartOne from '../InternalPartOne/Questions';
+import InternalPartOneAdd from '../InternalPartOne/Add/Add';
+import InternalPartOneEdit from '../InternalPartOne/Edit/Page';
 
 // import InternalPartTwo from '../InternalPartTwo/Questions';
 // import InternalPartTwoAdd from '../InternalPartTwo/Add/Add';
@@ -273,10 +272,9 @@ export default withRouter(
         <Route path={`${match.url}/internalPartners`} exact component={InternalPartners} />
         <Route path={`${match.url}/internalPartners/add`} component={InternalPartnersAdd} />
         <Route path={`${match.url}/internalPartners/edit/:id`} component={InternalPartnersEdit} />
-
-        {/* <Route path={`${match.url}/internalPartOne`} exact component={InternalPartOne} />
+        <Route path={`${match.url}/internalPartOne`} exact component={InternalPartOne} />
         <Route path={`${match.url}/internalPartOne/add`} component={InternalPartOneAdd} />
-        <Route path={`${match.url}/internalPartOne/edit/:id`} component={InternalPartOneEdit} /> */}
+        <Route path={`${match.url}/internalPartOne/edit/:id`} component={InternalPartOneEdit} />
 
         {/* <Route path={`${match.url}/internalPartTwo`} exact component={InternalPartTwo} />
         <Route path={`${match.url}/internalPartTwo/add`} component={InternalPartTwoAdd} />
