@@ -167,7 +167,7 @@ export default {
   focusAttention: 'Your focus of attention',
   leaderDifferent: 'Your differential as a leader',
   valuesDom: 'Values ​​related to your dominant profile',
-  emotionalCompetence: 'Emotional Competence',
+  emotionalCompetent: 'Emotional Competence',
   comunicateMode: 'How it communicates',
   interactMode: 'Mode that interacts in relationships',
   profileNames: 'Profile name',

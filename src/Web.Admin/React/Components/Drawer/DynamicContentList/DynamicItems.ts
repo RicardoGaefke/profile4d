@@ -37,8 +37,8 @@ export default [
     title: 'valuesDom',
   },
   {
-    link: 'emotionalCompetence',
-    title: 'emotionalCompetence',
+    link: 'emotionalCompetent',
+    title: 'emotionalCompetent',
   },
   {
     link: 'comunicateMode',

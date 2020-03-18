@@ -163,7 +163,7 @@ export interface ILanguage {
   focusAttention: string,
   leaderDifferent: string,
   valuesDom: string,
-  emotionalCompetence: string,
+  emotionalCompetent: string,
   comunicateMode: string,
   interactMode: string,
   profileNames: string,

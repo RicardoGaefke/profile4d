@@ -198,9 +198,6 @@ export default withRouter(
         <Route path={`${match.url}/defenseMecanism`} exact component={DefenseMecanism} />
         <Route path={`${match.url}/defenseMecanism/add`} component={DefenseMecanismAdd} />
         <Route path={`${match.url}/defenseMecanism/edit/:id`} component={DefenseMecanismEdit} />
-        <Route path={`${match.url}/mentalAddiction`} exact component={MentalAddiction} />
-        <Route path={`${match.url}/mentalAddiction/add`} component={MentalAddictionAdd} />
-        <Route path={`${match.url}/mentalAddiction/edit/:id`} component={MentalAddictionEdit} />
         <Route path={`${match.url}/competentMode`} exact component={CompetentMode} />
         <Route path={`${match.url}/competentMode/add`} component={CompetentModeAdd} />
         <Route path={`${match.url}/competentMode/edit/:id`} component={CompetentModeEdit} />
@@ -219,9 +216,9 @@ export default withRouter(
         <Route path={`${match.url}/limitedForcesTwo`} exact component={LimitedForcesTwo} />
         <Route path={`${match.url}/limitedForcesTwo/add`} component={LimitedForcesTwoAdd} />
         <Route path={`${match.url}/limitedForcesTwo/edit/:id`} component={LimitedForcesTwoEdit} />
-        <Route path={`${match.url}/SaboteurNameOne`} exact component={SaboteurNameOne} />
-        <Route path={`${match.url}/SaboteurNameOne/add`} component={SaboteurNameOneAdd} />
-        <Route path={`${match.url}/SaboteurNameOne/edit/:id`} component={SaboteurNameOneEdit} />
+        <Route path={`${match.url}/saboteurNameOne`} exact component={SaboteurNameOne} />
+        <Route path={`${match.url}/saboteurNameOne/add`} component={SaboteurNameOneAdd} />
+        <Route path={`${match.url}/saboteurNameOne/edit/:id`} component={SaboteurNameOneEdit} />
         <Route path={`${match.url}/limitedForcesThree`} exact component={LimitedForcesThree} />
         <Route path={`${match.url}/limitedForcesThree/add`} component={LimitedForcesThreeAdd} />
         <Route path={`${match.url}/limitedForcesThree/edit/:id`} component={LimitedForcesThreeEdit} />
