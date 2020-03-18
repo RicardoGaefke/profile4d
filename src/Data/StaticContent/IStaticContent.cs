@@ -252,5 +252,35 @@ namespace Profile4d.Data
 
     public StaticFirstPage DominantProfileOne();
     public BasicReturn DominantProfileOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalPartOne();
+    public BasicReturn InternalPartOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalPartTwo();
+    public BasicReturn InternalPartTwoEdit(StaticFirstPage data);
+
+    public StaticFirstPage IdealGrowthPart();
+    public BasicReturn IdealGrowthPartEdit(StaticFirstPage data);
+
+    public StaticFirstPage ExerciseProfileMoviment();
+    public BasicReturn ExerciseProfileMovimentEdit(StaticFirstPage data);
+
+    public StaticFirstPage YourBehavioralDNA();
+    public BasicReturn YourBehavioralDNAEdit(StaticFirstPage data);
+
+    public StaticFirstPage SuperiorMind();
+    public BasicReturn SuperiorMindEdit(StaticFirstPage data);
+
+    public StaticFirstPage HealthyAdult();
+    public BasicReturn HealthyAdultEdit(StaticFirstPage data);
+
+    public StaticFirstPage SynergeticMode();
+    public BasicReturn SynergeticModeEdit(StaticFirstPage data);
+
+    public StaticFirstPage ArchetypeEssence();
+    public BasicReturn ArchetypeEssenceEdit(StaticFirstPage data);
+
+    public StaticFirstPage EssentialFeature();
+    public BasicReturn EssentialFeatureEdit(StaticFirstPage data);
   }
 }

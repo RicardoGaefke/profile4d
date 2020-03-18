@@ -113,7 +113,7 @@ export default withTranslation()(
             )
           }
           {/* // alterar apenas o nome da rota ▼ */}
-          <Add to="/dynamicContent/profileName/add" />
+          <Add to="/dynamicContent/ProfileName/add" />
         </Container>
       );
     },
