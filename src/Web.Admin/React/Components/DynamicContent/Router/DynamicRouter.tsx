@@ -159,10 +159,9 @@ import CristallyzationProcessEdit from '../CristallyzationProcess/Edit/Page';
 import BodyShape from '../BodyShape/Questions';
 import BodyShapeAdd from '../BodyShape/Add/Add';
 import BodyShapeEdit from '../BodyShape/Edit/Page';
-
-// import YourDevelopment from '../YourDevelopment/Questions';
-// import YourDevelopmentAdd from '../YourDevelopment/Add/Add';
-// import YourDevelopmentEdit from '../YourDevelopment/Edit/Page';
+import YourDevelopment from '../YourDevelopment/Questions';
+import YourDevelopmentAdd from '../YourDevelopment/Add/Add';
+import YourDevelopmentEdit from '../YourDevelopment/Edit/Page';
 
 // import BenefitsContact from '../BenefitsContact/Questions';
 // import BenefitsContactAdd from '../BenefitsContact/Add/Add';
@@ -335,10 +334,9 @@ export default withRouter(
         <Route path={`${match.url}/bodyShape`} exact component={BodyShape} />
         <Route path={`${match.url}/bodyShape/add`} component={BodyShapeAdd} />
         <Route path={`${match.url}/bodyShape/edit/:id`} component={BodyShapeEdit} />
-
-        {/* <Route path={`${match.url}/yourDevelopment`} exact component={YourDevelopment} />
+        <Route path={`${match.url}/yourDevelopment`} exact component={YourDevelopment} />
         <Route path={`${match.url}/yourDevelopment/add`} component={YourDevelopmentAdd} />
-        <Route path={`${match.url}/yourDevelopment/edit/:id`} component={YourDevelopmentEdit} /> */}
+        <Route path={`${match.url}/yourDevelopment/edit/:id`} component={YourDevelopmentEdit} />
 
         {/* <Route path={`${match.url}/benefitsContact`} exact component={BenefitsContact} />
         <Route path={`${match.url}/benefitsContact/add`} component={BenefitsContactAdd} />
