@@ -75,8 +75,6 @@ import NeuroticCompulsionEdit from '../NeuroticCompulsion/Edit/Page';
 import DefenseMecanism from '../DefenseMecanism/Questions';
 import DefenseMecanismAdd from '../DefenseMecanism/Add/Add';
 import DefenseMecanismEdit from '../DefenseMecanism/Edit/Page';
-
-
 import CompetentMode from '../CompetentMode/Questions';
 import CompetentModeAdd from '../CompetentMode/Add/Add';
 import CompetentModeEdit from '../CompetentMode/Edit/Page';
@@ -155,10 +153,9 @@ import YourMomentEdit from '../YourMoment/Edit/Page';
 import ExistentialPain from '../ExistentialPain/Questions';
 import ExistentialPainAdd from '../ExistentialPain/Add/Add';
 import ExistentialPainEdit from '../ExistentialPain/Edit/Page';
-
-// import CristallyzationProcess from '../CristallyzationProcess/Questions';
-// import CristallyzationProcessAdd from '../CristallyzationProcess/Add/Add';
-// import CristallyzationProcessEdit from '../CristallyzationProcess/Edit/Page';
+import CristallyzationProcess from '../CristallyzationProcess/Questions';
+import CristallyzationProcessAdd from '../CristallyzationProcess/Add/Add';
+import CristallyzationProcessEdit from '../CristallyzationProcess/Edit/Page';
 
 // import BodyShape from '../BodyShape/Questions';
 // import BodyShapeAdd from '../BodyShape/Add/Add';
@@ -333,10 +330,9 @@ export default withRouter(
         <Route path={`${match.url}/existentialPain`} exact component={ExistentialPain} />
         <Route path={`${match.url}/existentialPain/add`} component={ExistentialPainAdd} />
         <Route path={`${match.url}/existentialPain/edit/:id`} component={ExistentialPainEdit} />
-
-        {/* <Route path={`${match.url}/cristallyzationProcess`} exact component={CristallyzationProcess} />
+        <Route path={`${match.url}/cristallyzationProcess`} exact component={CristallyzationProcess} />
         <Route path={`${match.url}/cristallyzationProcess/add`} component={CristallyzationProcessAdd} />
-        <Route path={`${match.url}/cristallyzationProcess/edit/:id`} component={CristallyzationProcessEdit} /> */}
+        <Route path={`${match.url}/cristallyzationProcess/edit/:id`} component={CristallyzationProcessEdit} />
 
         {/* <Route path={`${match.url}/bodyShape`} exact component={BodyShape} />
         <Route path={`${match.url}/bodyShape/add`} component={BodyShapeAdd} />
