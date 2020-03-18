@@ -261,5 +261,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage IdealGrowthPart();
     public BasicReturn IdealGrowthPartEdit(StaticFirstPage data);
+
+    public StaticFirstPage ExerciseProfileMoviment();
+    public BasicReturn ExerciseProfileMovimentEdit(StaticFirstPage data);
   }
 }
