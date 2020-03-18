@@ -267,5 +267,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage YourBehavioralDNA();
     public BasicReturn YourBehavioralDNAEdit(StaticFirstPage data);
+
+    public StaticFirstPage SuperiorMind();
+    public BasicReturn SuperiorMindEdit(StaticFirstPage data);
   }
 }
