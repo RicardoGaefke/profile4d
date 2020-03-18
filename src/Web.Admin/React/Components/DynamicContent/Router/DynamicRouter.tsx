@@ -113,46 +113,44 @@ import ConflictsIdentifiedEdit from '../ConflictsIdentified/Edit/Page';
 import TriadHeHo from '../TriadHeHo/Questions';
 import TriadHeHoAdd from '../TriadHeHo/Add/Add';
 import TriadHeHoEdit from '../TriadHeHo/Edit/Page';
-
 import SpecificsTriad from '../SpecificsTriad/Questions';
 import SpecificsTriadAdd from '../SpecificsTriad/Add/Add';
 import SpecificsTriadEdit from '../SpecificsTriad/Edit/Page';
-
-// import FluxAnalyze from '../FluxAnalyze/Questions';
-// import FluxAnalyze from '../FluxAnalyze/Add/Add';
-// import FluxAnalyze from '../FluxAnalyze/Edit/Page';
+import FluxAnalyze from '../FluxAnalyze/Questions';
+import FluxAnalyzeAdd from '../FluxAnalyze/Add/Add';
+import FluxAnalyzeEdit from '../FluxAnalyze/Edit/Page';
 
 // import DomProfile from '../DomProfile/Questions';
-// import DomProfile from '../DomProfile/Add/Add';
-// import DomProfile from '../DomProfile/Edit/Page';
+// import DomProfileAdd from '../DomProfile/Add/Add';
+// import DomProfileEdit from '../DomProfile/Edit/Page';
 
 // import InternalPartners from '../InternalPartners/Questions';
-// import InternalPartners from '../InternalPartners/Add/Add';
-// import InternalPartners from '../InternalPartners/Edit/Page';
+// import InternalPartnersAdd from '../InternalPartners/Add/Add';
+// import InternalPartnersEdit from '../InternalPartners/Edit/Page';
 
 // import InternalPartOne from '../InternalPartOne/Questions';
-// import InternalPartOne from '../InternalPartOne/Add/Add';
-// import InternalPartOne from '../InternalPartOne/Edit/Page';
+// import InternalPartOneAdd from '../InternalPartOne/Add/Add';
+// import InternalPartOneEdit from '../InternalPartOne/Edit/Page';
 
 // import InternalPartTwo from '../InternalPartTwo/Questions';
-// import InternalPartTwo from '../InternalPartTwo/Add/Add';
-// import InternalPartTwo from '../InternalPartTwo/Edit/Page';
+// import InternalPartTwoAdd from '../InternalPartTwo/Add/Add';
+// import InternalPartTwoEdit from '../InternalPartTwo/Edit/Page';
 
 // import ArchetypeDiscover from '../ArchetypeDiscover/Questions';
-// import ArchetypeDiscover from '../ArchetypeDiscover/Add/Add';
-// import ArchetypeDiscover from '../ArchetypeDiscover/Edit/Page';
+// import ArchetypeDiscoverAdd from '../ArchetypeDiscover/Add/Add';
+// import ArchetypeDiscoverEdit from '../ArchetypeDiscover/Edit/Page';
 
 // import EssentialCharacter from '../EssentialCharacter/Questions';
-// import EssentialCharacter from '../EssentialCharacter/Add/Add';
-// import EssentialCharacter from '../EssentialCharacter/Edit/Page';
+// import EssentialCharacterAdd from '../EssentialCharacter/Add/Add';
+// import EssentialCharacterEdit from '../EssentialCharacter/Edit/Page';
 
 // import DomProfileOne from '../DomProfileOne/Questions';
-// import DomProfileOne from '../DomProfileOne/Add/Add';
-// import DomProfileOne from '../DomProfileOne/Edit/Page';
+// import DomProfileOneAdd from '../DomProfileOne/Add/Add';
+// import DomProfileOneEdit from '../DomProfileOne/Edit/Page';
 
 // import BigChallenge from '../BigChallenge/Questions';
-// import BigChallenge from '../BigChallenge/Add/Add';
-// import BigChallenge from '../BigChallenge/Edit/Page';
+// import BigChallengeAdd from Add'../BigChallenge/Add/Add';
+// import BigChallengeEdit from '../BigChallenge/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -265,44 +263,42 @@ export default withRouter(
         <Route path={`${match.url}/triadHeHo`} exact component={TriadHeHo} />
         <Route path={`${match.url}/triadHeHo/add`} component={TriadHeHoAdd} />
         <Route path={`${match.url}/triadHeHo/edit/:id`} component={TriadHeHoEdit} />
-
         <Route path={`${match.url}/specificsTriad`} exact component={SpecificsTriad} />
         <Route path={`${match.url}/specificsTriad/add`} component={SpecificsTriadAdd} />
         <Route path={`${match.url}/specificsTriad/edit/:id`} component={SpecificsTriadEdit} />
-
-        {/* <Route path={`${match.url}/fluxAnalyze`} exact component={FluxAnalyze} />
+        <Route path={`${match.url}/fluxAnalyze`} exact component={FluxAnalyze} />
         <Route path={`${match.url}/fluxAnalyze/add`} component={FluxAnalyzeAdd} />
         <Route path={`${match.url}/fluxAnalyze/edit/:id`} component={FluxAnalyzeEdit} />
 
-        <Route path={`${match.url}/domProfile`} exact component={DomProfile} />
+        {/* <Route path={`${match.url}/domProfile`} exact component={DomProfile} />
         <Route path={`${match.url}/domProfile/add`} component={DomProfileAdd} />
-        <Route path={`${match.url}/domProfile/edit/:id`} component={DomProfileEdit} />
+        <Route path={`${match.url}/domProfile/edit/:id`} component={DomProfileEdit} /> */}
 
-        <Route path={`${match.url}/internalPartners`} exact component={InternalPartners} />
+        {/* <Route path={`${match.url}/internalPartners`} exact component={InternalPartners} />
         <Route path={`${match.url}/internalPartners/add`} component={InternalPartnersAdd} />
-        <Route path={`${match.url}/internalPartners/edit/:id`} component={InternalPartnersEdit} />
+        <Route path={`${match.url}/internalPartners/edit/:id`} component={InternalPartnersEdit} /> */}
 
-        <Route path={`${match.url}/internalPartOne`} exact component={InternalPartOne} />
+        {/* <Route path={`${match.url}/internalPartOne`} exact component={InternalPartOne} />
         <Route path={`${match.url}/internalPartOne/add`} component={InternalPartOneAdd} />
-        <Route path={`${match.url}/internalPartOne/edit/:id`} component={InternalPartOneEdit} />
+        <Route path={`${match.url}/internalPartOne/edit/:id`} component={InternalPartOneEdit} /> */}
 
-        <Route path={`${match.url}/internalPartTwo`} exact component={InternalPartTwo} />
+        {/* <Route path={`${match.url}/internalPartTwo`} exact component={InternalPartTwo} />
         <Route path={`${match.url}/internalPartTwo/add`} component={InternalPartTwoAdd} />
-        <Route path={`${match.url}/internalPartTwo/edit/:id`} component={InternalPartTwoEdit} />
+        <Route path={`${match.url}/internalPartTwo/edit/:id`} component={InternalPartTwoEdit} /> */}
 
-        <Route path={`${match.url}/archetypeDiscover`} exact component={ArchetypeDiscover} />
+        {/* <Route path={`${match.url}/archetypeDiscover`} exact component={ArchetypeDiscover} />
         <Route path={`${match.url}/archetypeDiscover/add`} component={ArchetypeDiscoverAdd} />
-        <Route path={`${match.url}/archetypeDiscover/edit/:id`} component={ArchetypeDiscoverEdit} />
+        <Route path={`${match.url}/archetypeDiscover/edit/:id`} component={ArchetypeDiscoverEdit} /> */}
 
-        <Route path={`${match.url}/essentialCharacter`} exact component={EssentialCharacter} />
+        {/* <Route path={`${match.url}/essentialCharacter`} exact component={EssentialCharacter} />
         <Route path={`${match.url}/essentialCharacter/add`} component={EssentialCharacterAdd} />
-        <Route path={`${match.url}/essentialCharacter/edit/:id`} component={EssentialCharacterEdit} />
+        <Route path={`${match.url}/essentialCharacter/edit/:id`} component={EssentialCharacterEdit} /> */}
 
-        <Route path={`${match.url}/domProfileOne`} exact component={DomProfileOne} />
+        {/* <Route path={`${match.url}/domProfileOne`} exact component={DomProfileOne} />
         <Route path={`${match.url}/domProfileOne/add`} component={DomProfileOneAdd} />
-        <Route path={`${match.url}/domProfileOne/edit/:id`} component={DomProfileOneEdit} />
+        <Route path={`${match.url}/domProfileOne/edit/:id`} component={DomProfileOneEdit} /> */}
 
-        <Route path={`${match.url}/bigChallenge`} exact component={BigChallenge} />
+        {/* <Route path={`${match.url}/bigChallenge`} exact component={BigChallenge} />
         <Route path={`${match.url}/bigChallenge/add`} component={BigChallengeAdd} />
         <Route path={`${match.url}/bigChallenge/edit/:id`} component={BigChallengeEdit} /> */}
       </MyTemplate>
