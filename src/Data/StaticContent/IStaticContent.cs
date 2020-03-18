@@ -246,5 +246,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage CorrectFlux();
     public BasicReturn CorrectFluxEdit(StaticFirstPage data);
+
+    public StaticFirstPage EmotionalFluxResult();
+    public BasicReturn EmotionalFluxResultEdit(StaticFirstPage data);
   }
 }
