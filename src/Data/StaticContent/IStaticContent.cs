@@ -258,5 +258,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage InternalPartTwo();
     public BasicReturn InternalPartTwoEdit(StaticFirstPage data);
+
+    public StaticFirstPage IdealGrowthPart();
+    public BasicReturn IdealGrowthPartEdit(StaticFirstPage data);
   }
 }
