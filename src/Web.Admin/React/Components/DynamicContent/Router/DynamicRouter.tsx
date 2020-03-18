@@ -137,10 +137,9 @@ import ArchetypeDiscoverEdit from '../ArchetypeDiscover/Edit/Page';
 import EssentialCharacter from '../EssentialCharacter/Questions';
 import EssentialCharacterAdd from '../EssentialCharacter/Add/Add';
 import EssentialCharacterEdit from '../EssentialCharacter/Edit/Page';
-
-// import DomProfileOne from '../DomProfileOne/Questions';
-// import DomProfileOneAdd from '../DomProfileOne/Add/Add';
-// import DomProfileOneEdit from '../DomProfileOne/Edit/Page';
+import DomProfileOne from '../DomProfileOne/Questions';
+import DomProfileOneAdd from '../DomProfileOne/Add/Add';
+import DomProfileOneEdit from '../DomProfileOne/Edit/Page';
 
 // import BigChallenge from '../BigChallenge/Questions';
 // import BigChallengeAdd from Add'../BigChallenge/Add/Add';
@@ -281,10 +280,9 @@ export default withRouter(
         <Route path={`${match.url}/essentialCharacter`} exact component={EssentialCharacter} />
         <Route path={`${match.url}/essentialCharacter/add`} component={EssentialCharacterAdd} />
         <Route path={`${match.url}/essentialCharacter/edit/:id`} component={EssentialCharacterEdit} />
-
-        {/* <Route path={`${match.url}/domProfileOne`} exact component={DomProfileOne} />
+        <Route path={`${match.url}/domProfileOne`} exact component={DomProfileOne} />
         <Route path={`${match.url}/domProfileOne/add`} component={DomProfileOneAdd} />
-        <Route path={`${match.url}/domProfileOne/edit/:id`} component={DomProfileOneEdit} /> */}
+        <Route path={`${match.url}/domProfileOne/edit/:id`} component={DomProfileOneEdit} />
 
         {/* <Route path={`${match.url}/bigChallenge`} exact component={BigChallenge} />
         <Route path={`${match.url}/bigChallenge/add`} component={BigChallengeAdd} />
