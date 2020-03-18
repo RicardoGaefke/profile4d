@@ -3,5 +3,5 @@ import { ILanguage } from './ILanguage';
 
 export default {
   // alterar título
-  title: 'Nome do perfil',
+  title: 'Saboteur name',
 } as ILanguage;

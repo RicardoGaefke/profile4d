@@ -3,5 +3,5 @@ import { ILanguage } from './ILanguage';
 
 export default {
   // alterar título
-  title: 'Nome do perfil',
+  title: 'As quatro forças limitadoras',
 } as ILanguage;
