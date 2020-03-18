@@ -73,6 +73,10 @@ export default [
     title: 'fourLimited',
   },
   {
+    link: 'limitedAttitude',
+    title: 'limitedAttitude',
+  },
+  {
     link: 'behavioralAddiction',
     title: 'behavioralAddiction',
   },
@@ -87,6 +91,10 @@ export default [
   {
     link: 'defenseMecanism',
     title: 'defenseMecanism',
+  },
+  {
+    link: 'neuroticCompulsion',
+    title: 'neuroticCompulsion',
   },
   {
     link: 'competentMode',

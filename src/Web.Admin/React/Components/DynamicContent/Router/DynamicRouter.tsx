@@ -57,6 +57,9 @@ import RelationshipDifficultEdit from '../RelationshipDifficult/Edit/Page';
 import FourLimited from '../FourLimited/Questions';
 import FourLimitedAdd from '../FourLimited/Add/Add';
 import FourLimitedEdit from '../FourLimited/Edit/Page';
+import LimitedAttitude from '../LimitedAttitude/Questions';
+import LimitedAttitudeAdd from '../LimitedAttitude/Add/Add';
+import LimitedAttitudeEdit from '../LimitedAttitude/Edit/Page';
 import BehavioralAddiction from '../BehavioralAddiction/Questions';
 import BehavioralAddictionAdd from '../BehavioralAddiction/Add/Add';
 import BehavioralAddictionEdit from '../BehavioralAddiction/Edit/Page';
@@ -72,6 +75,8 @@ import NeuroticCompulsionEdit from '../NeuroticCompulsion/Edit/Page';
 import DefenseMecanism from '../DefenseMecanism/Questions';
 import DefenseMecanismAdd from '../DefenseMecanism/Add/Add';
 import DefenseMecanismEdit from '../DefenseMecanism/Edit/Page';
+
+
 import CompetentMode from '../CompetentMode/Questions';
 import CompetentModeAdd from '../CompetentMode/Add/Add';
 import CompetentModeEdit from '../CompetentMode/Edit/Page';
@@ -175,6 +180,9 @@ export default withRouter(
         <Route path={`${match.url}/fourLimited`} exact component={FourLimited} />
         <Route path={`${match.url}/fourLimited/add`} component={FourLimitedAdd} />
         <Route path={`${match.url}/fourLimited/edit/:id`} component={FourLimitedEdit} />
+        <Route path={`${match.url}/limitedAttitude`} exact component={LimitedAttitude} />
+        <Route path={`${match.url}/limitedAttitude/add`} component={LimitedAttitudeAdd} />
+        <Route path={`${match.url}/limitedAttitude/edit/:id`} component={LimitedAttitudeEdit} />
         <Route path={`${match.url}/behavioralAddiction`} exact component={BehavioralAddiction} />
         <Route path={`${match.url}/behavioralAddiction/add`} component={BehavioralAddictionAdd} />
         <Route path={`${match.url}/behavioralAddiction/edit/:id`} component={BehavioralAddictionEdit} />
@@ -190,6 +198,9 @@ export default withRouter(
         <Route path={`${match.url}/defenseMecanism`} exact component={DefenseMecanism} />
         <Route path={`${match.url}/defenseMecanism/add`} component={DefenseMecanismAdd} />
         <Route path={`${match.url}/defenseMecanism/edit/:id`} component={DefenseMecanismEdit} />
+        <Route path={`${match.url}/mentalAddiction`} exact component={MentalAddiction} />
+        <Route path={`${match.url}/mentalAddiction/add`} component={MentalAddictionAdd} />
+        <Route path={`${match.url}/mentalAddiction/edit/:id`} component={MentalAddictionEdit} />
         <Route path={`${match.url}/competentMode`} exact component={CompetentMode} />
         <Route path={`${match.url}/competentMode/add`} component={CompetentModeAdd} />
         <Route path={`${match.url}/competentMode/edit/:id`} component={CompetentModeEdit} />
@@ -199,39 +210,30 @@ export default withRouter(
         <Route path={`${match.url}/nameProfile`} exact component={NameProfile} />
         <Route path={`${match.url}/nameProfile/add`} component={NameProfileAdd} />
         <Route path={`${match.url}/nameProfile/edit/:id`} component={NameProfileEdit} />
-
         <Route path={`${match.url}/limitedForcesOne`} exact component={LimitedForcesOne} />
         <Route path={`${match.url}/limitedForcesOne/add`} component={LimitedForcesOneAdd} />
         <Route path={`${match.url}/limitedForcesOne/edit/:id`} component={LimitedForcesOneEdit} />
-
         <Route path={`${match.url}/profileNameOne`} exact component={ProfileNameOne} />
         <Route path={`${match.url}/profileNameOne/add`} component={ProfileNameOneAdd} />
         <Route path={`${match.url}/profileNameOne/edit/:id`} component={ProfileNameOneEdit} />
-
         <Route path={`${match.url}/limitedForcesTwo`} exact component={LimitedForcesTwo} />
         <Route path={`${match.url}/limitedForcesTwo/add`} component={LimitedForcesTwoAdd} />
         <Route path={`${match.url}/limitedForcesTwo/edit/:id`} component={LimitedForcesTwoEdit} />
-
         <Route path={`${match.url}/SaboteurNameOne`} exact component={SaboteurNameOne} />
         <Route path={`${match.url}/SaboteurNameOne/add`} component={SaboteurNameOneAdd} />
         <Route path={`${match.url}/SaboteurNameOne/edit/:id`} component={SaboteurNameOneEdit} />
-
         <Route path={`${match.url}/limitedForcesThree`} exact component={LimitedForcesThree} />
         <Route path={`${match.url}/limitedForcesThree/add`} component={LimitedForcesThreeAdd} />
         <Route path={`${match.url}/limitedForcesThree/edit/:id`} component={LimitedForcesThreeEdit} />
-
         <Route path={`${match.url}/saboteurNameTwo`} exact component={SaboteurNameTwo} />
         <Route path={`${match.url}/saboteurNameTwo/add`} component={SaboteurNameTwoAdd} />
         <Route path={`${match.url}/saboteurNameTwo/edit/:id`} component={SaboteurNameTwoEdit} />
-
         <Route path={`${match.url}/limitedForcesFour`} exact component={LimitedForcesFour} />
         <Route path={`${match.url}/limitedForcesFour/add`} component={LimitedForcesFourAdd} />
         <Route path={`${match.url}/limitedForcesFour/edit/:id`} component={LimitedForcesFourEdit} />
-
         <Route path={`${match.url}/conflictsIdentified`} exact component={ConflictsIdentified} />
         <Route path={`${match.url}/conflictsIdentified/add`} component={ConflictsIdentifiedAdd} />
         <Route path={`${match.url}/conflictsIdentified/edit/:id`} component={ConflictsIdentifiedEdit} />
-
         <Route path={`${match.url}/triadHeHo`} exact component={TriadHeHo} />
         <Route path={`${match.url}/triadHeHo/add`} component={TriadHeHoAdd} />
         <Route path={`${match.url}/triadHeHo/edit/:id`} component={TriadHeHoEdit} />
