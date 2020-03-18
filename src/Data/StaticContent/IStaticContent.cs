@@ -219,5 +219,38 @@ namespace Profile4d.Data
 
     public StaticFirstPage EnergySpikes();
     public BasicReturn EnergySpikesEdit(StaticFirstPage data);
+
+    public StaticFirstPage NewWhoAmI();
+    public BasicReturn NewWhoAmIEdit(StaticFirstPage data);
+
+    public StaticFirstPage TriadBehavioralLegend();
+    public BasicReturn TriadBehavioralLegendEdit(StaticFirstPage data);
+
+    public StaticFirstPage HomogeneousHeterogeneous();
+    public BasicReturn HomogeneousHeterogeneousEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationAttention();
+    public BasicReturn ObservationAttentionEdit(StaticFirstPage data);
+
+    public StaticFirstPage TriadSpecificsOne();
+    public BasicReturn TriadSpecificsOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage OriginalXAdapted();
+    public BasicReturn OriginalXAdaptedEdit(StaticFirstPage data);
+
+    public StaticFirstPage TriadLegends();
+    public BasicReturn TriadLegendsEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTriad();
+    public BasicReturn ObservationTriadEdit(StaticFirstPage data);
+
+    public StaticFirstPage CorrectFlux();
+    public BasicReturn CorrectFluxEdit(StaticFirstPage data);
+
+    public StaticFirstPage EmotionalFluxResult();
+    public BasicReturn EmotionalFluxResultEdit(StaticFirstPage data);
+
+    public StaticFirstPage DominantProfileOne();
+    public BasicReturn DominantProfileOneEdit(StaticFirstPage data);
   }
 }
