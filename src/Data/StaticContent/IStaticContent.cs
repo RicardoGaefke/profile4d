@@ -255,5 +255,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage InternalPartOne();
     public BasicReturn InternalPartOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalPartTwo();
+    public BasicReturn InternalPartTwoEdit(StaticFirstPage data);
   }
 }
