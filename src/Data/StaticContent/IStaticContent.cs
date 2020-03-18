@@ -228,5 +228,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage HomogeneousHeterogeneous();
     public BasicReturn HomogeneousHeterogeneousEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationAttention();
+    public BasicReturn ObservationAttentionEdit(StaticFirstPage data);
   }
 }
