@@ -146,10 +146,9 @@ import BigChallengeEdit from '../BigChallenge/Edit/Page';
 import KeyWork from '../KeyWork/Questions';
 import KeyWorkAdd from '../KeyWork/Add/Add';
 import KeyWorkEdit from '../KeyWork/Edit/Page';
-
-// import IdealPart from '../IdealPart/Questions';
-// import IdealPartAdd from '../IdealPart/Add/Add';
-// import IdealPartEdit from '../IdealPart/Edit/Page';
+import IdealPart from '../IdealPart/Questions';
+import IdealPartAdd from '../IdealPart/Add/Add';
+import IdealPartEdit from '../IdealPart/Edit/Page';
 
 // import YourMoment from '../YourMoment/Questions';
 // import YourMomentAdd from '../YourMoment/Add/Add';
@@ -327,10 +326,9 @@ export default withRouter(
         <Route path={`${match.url}/keyWork`} exact component={KeyWork} />
         <Route path={`${match.url}/keyWork/add`} component={KeyWorkAdd} />
         <Route path={`${match.url}/keyWork/edit/:id`} component={KeyWorkEdit} />
-
-        {/* <Route path={`${match.url}/idealPart`} exact component={IdealPart} />
+        <Route path={`${match.url}/idealPart`} exact component={IdealPart} />
         <Route path={`${match.url}/idealPart/add`} component={IdealPartAdd} />
-        <Route path={`${match.url}/idealPart/edit/:id`} component={IdealPartEdit} /> */}
+        <Route path={`${match.url}/idealPart/edit/:id`} component={IdealPartEdit} />
 
         {/* <Route path={`${match.url}/yourMoment`} exact component={YourMoment} />
         <Route path={`${match.url}/yourMoment/add`} component={YourMomentAdd} />
