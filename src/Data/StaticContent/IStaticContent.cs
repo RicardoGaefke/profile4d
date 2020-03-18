@@ -243,5 +243,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage ObservationTriad();
     public BasicReturn ObservationTriadEdit(StaticFirstPage data);
+
+    public StaticFirstPage CorrectFlux();
+    public BasicReturn CorrectFluxEdit(StaticFirstPage data);
   }
 }
