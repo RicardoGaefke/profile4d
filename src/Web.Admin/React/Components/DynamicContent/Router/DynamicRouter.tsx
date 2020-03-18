@@ -143,10 +143,9 @@ import DomProfileOneEdit from '../DomProfileOne/Edit/Page';
 import BigChallenge from '../BigChallenge/Questions';
 import BigChallengeAdd from '../BigChallenge/Add/Add';
 import BigChallengeEdit from '../BigChallenge/Edit/Page';
-
-// import KeyWork from '../KeyWork/Questions';
-// import KeyWorkAdd from '../KeyWork/Add/Add';
-// import KeyWorkEdit from '../KeyWork/Edit/Page';
+import KeyWork from '../KeyWork/Questions';
+import KeyWorkAdd from '../KeyWork/Add/Add';
+import KeyWorkEdit from '../KeyWork/Edit/Page';
 
 // import IdealPart from '../IdealPart/Questions';
 // import IdealPartAdd from '../IdealPart/Add/Add';
@@ -325,10 +324,9 @@ export default withRouter(
         <Route path={`${match.url}/bigChallenge`} exact component={BigChallenge} />
         <Route path={`${match.url}/bigChallenge/add`} component={BigChallengeAdd} />
         <Route path={`${match.url}/bigChallenge/edit/:id`} component={BigChallengeEdit} />
-
-        {/* <Route path={`${match.url}/keyWork`} exact component={KeyWork} />
+        <Route path={`${match.url}/keyWork`} exact component={KeyWork} />
         <Route path={`${match.url}/keyWork/add`} component={KeyWorkAdd} />
-        <Route path={`${match.url}/keyWork/edit/:id`} component={KeyWorkEdit} /> */}
+        <Route path={`${match.url}/keyWork/edit/:id`} component={KeyWorkEdit} />
 
         {/* <Route path={`${match.url}/idealPart`} exact component={IdealPart} />
         <Route path={`${match.url}/idealPart/add`} component={IdealPartAdd} />
