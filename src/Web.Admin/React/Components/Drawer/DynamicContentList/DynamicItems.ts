@@ -184,4 +184,44 @@ export default [
     link: 'bigChallenge',
     title: 'bigChallenge',
   },
+  // {
+  //   link: 'keyWork',
+  //   title: 'keyWork',
+  // },
+  // {
+  //   link: 'idealPart',
+  //   title: 'idealPart',
+  // },
+  // {
+  //   link: 'yourMoment',
+  //   title: 'yourMoment',
+  // },
+  // {
+  //   link: 'existentialPain',
+  //   title: 'existentialPain',
+  // },
+  // {
+  //   link: 'cristallyzationProcess',
+  //   title: 'cristallyzationProcess',
+  // },
+  // {
+  //   link: 'bodyShape',
+  //   title: 'bodyShape',
+  // },
+  // {
+  //   link: 'yourDevelopment',
+  //   title: 'yourDevelopment',
+  // },
+  // {
+  //   link: 'benefitsContact',
+  //   title: 'benefitsContact',
+  // },
+  // {
+  //   link: 'twelveForces',
+  //   title: 'twelveForces',
+  // },
+  // {
+  //   link: 'dyobservationOne',
+  //   title: 'dyobservationOne',
+  // },
 ] as IStaticMenuItem[];
