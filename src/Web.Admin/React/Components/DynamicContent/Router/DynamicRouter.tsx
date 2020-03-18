@@ -131,10 +131,9 @@ import InternalPartOneEdit from '../InternalPartOne/Edit/Page';
 import InternalPartTwo from '../InternalPartTwo/Questions';
 import InternalPartTwoAdd from '../InternalPartTwo/Add/Add';
 import InternalPartTwoEdit from '../InternalPartTwo/Edit/Page';
-
-// import ArchetypeDiscover from '../ArchetypeDiscover/Questions';
-// import ArchetypeDiscoverAdd from '../ArchetypeDiscover/Add/Add';
-// import ArchetypeDiscoverEdit from '../ArchetypeDiscover/Edit/Page';
+import ArchetypeDiscover from '../ArchetypeDiscover/Questions';
+import ArchetypeDiscoverAdd from '../ArchetypeDiscover/Add/Add';
+import ArchetypeDiscoverEdit from '../ArchetypeDiscover/Edit/Page';
 
 // import EssentialCharacter from '../EssentialCharacter/Questions';
 // import EssentialCharacterAdd from '../EssentialCharacter/Add/Add';
@@ -277,10 +276,9 @@ export default withRouter(
         <Route path={`${match.url}/internalPartTwo`} exact component={InternalPartTwo} />
         <Route path={`${match.url}/internalPartTwo/add`} component={InternalPartTwoAdd} />
         <Route path={`${match.url}/internalPartTwo/edit/:id`} component={InternalPartTwoEdit} />
-
-        {/* <Route path={`${match.url}/archetypeDiscover`} exact component={ArchetypeDiscover} />
+        <Route path={`${match.url}/archetypeDiscover`} exact component={ArchetypeDiscover} />
         <Route path={`${match.url}/archetypeDiscover/add`} component={ArchetypeDiscoverAdd} />
-        <Route path={`${match.url}/archetypeDiscover/edit/:id`} component={ArchetypeDiscoverEdit} /> */}
+        <Route path={`${match.url}/archetypeDiscover/edit/:id`} component={ArchetypeDiscoverEdit} />
 
         {/* <Route path={`${match.url}/essentialCharacter`} exact component={EssentialCharacter} />
         <Route path={`${match.url}/essentialCharacter/add`} component={EssentialCharacterAdd} />
