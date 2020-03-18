@@ -240,5 +240,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage TriadLegends();
     public BasicReturn TriadLegendsEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTriad();
+    public BasicReturn ObservationTriadEdit(StaticFirstPage data);
   }
 }
