@@ -144,4 +144,44 @@ export default [
     link: 'triadHeHo',
     title: 'triadHeHo',
   },
+  {
+    link: 'specificsTriad',
+    title: 'specificsTriad',
+  },
+  {
+    link: 'fluxAnalyze',
+    title: 'fluxAnalyze',
+  },
+  {
+    link: 'domProfile',
+    title: 'domProfile',
+  },
+  {
+    link: 'internalPartners',
+    title: 'internalPartners',
+  },
+  {
+    link: 'internalPartOne',
+    title: 'internalPartOne',
+  },
+  {
+    link: 'internalPartTwo',
+    title: 'internalPartTwo',
+  },
+  {
+    link: 'archetypeDiscover',
+    title: 'archetypeDiscover',
+  },
+  {
+    link: 'essentialCharacter',
+    title: 'essentialCharacter',
+  },
+  {
+    link: 'domProfileOne',
+    title: 'domProfileOne',
+  },
+  {
+    link: 'bigChallenge',
+    title: 'bigChallenge',
+  },
 ] as IStaticMenuItem[];
