@@ -273,5 +273,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage HealthyAdult();
     public BasicReturn HealthyAdultEdit(StaticFirstPage data);
+
+    public StaticFirstPage SynergeticMode();
+    public BasicReturn SynergeticModeEdit(StaticFirstPage data);
   }
 }
