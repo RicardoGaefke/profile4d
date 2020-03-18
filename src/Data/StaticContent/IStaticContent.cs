@@ -234,5 +234,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage TriadSpecificsOne();
     public BasicReturn TriadSpecificsOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage OriginalXAdapted();
+    public BasicReturn OriginalXAdaptedEdit(StaticFirstPage data);
   }
 }
