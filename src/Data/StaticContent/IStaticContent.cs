@@ -231,5 +231,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage ObservationAttention();
     public BasicReturn ObservationAttentionEdit(StaticFirstPage data);
+
+    public StaticFirstPage TriadSpecificsOne();
+    public BasicReturn TriadSpecificsOneEdit(StaticFirstPage data);
   }
 }
