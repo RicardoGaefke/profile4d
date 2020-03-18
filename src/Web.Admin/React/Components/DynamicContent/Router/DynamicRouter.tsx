@@ -86,42 +86,63 @@ import SaboteurModeEdit from '../SaboteurMode/Edit/Page';
 import NameProfile from '../NameProfile/Questions';
 import NameProfileAdd from '../NameProfile/Add/Add';
 import NameProfileEdit from '../NameProfile/Edit/Page';
-
 import LimitedForcesOne from '../LimitedForcesOne/Questions';
 import LimitedForcesOneAdd from '../LimitedForcesOne/Add/Add';
 import LimitedForcesOneEdit from '../LimitedForcesOne/Edit/Page';
-
 import ProfileNameOne from '../ProfileNameOne/Questions';
 import ProfileNameOneAdd from '../ProfileNameOne/Add/Add';
 import ProfileNameOneEdit from '../ProfileNameOne/Edit/Page';
-
 import LimitedForcesTwo from '../LimitedForcesTwo/Questions';
 import LimitedForcesTwoAdd from '../LimitedForcesTwo/Add/Add';
 import LimitedForcesTwoEdit from '../LimitedForcesTwo/Edit/Page';
-
 import SaboteurNameOne from '../SaboteurNameOne/Questions';
 import SaboteurNameOneAdd from '../SaboteurNameOne/Add/Add';
 import SaboteurNameOneEdit from '../SaboteurNameOne/Edit/Page';
-
 import LimitedForcesThree from '../LimitedForcesThree/Questions';
 import LimitedForcesThreeAdd from '../LimitedForcesThree/Add/Add';
 import LimitedForcesThreeEdit from '../LimitedForcesThree/Edit/Page';
-
 import SaboteurNameTwo from '../SaboteurNameTwo/Questions';
 import SaboteurNameTwoAdd from '../SaboteurNameTwo/Add/Add';
 import SaboteurNameTwoEdit from '../SaboteurNameTwo/Edit/Page';
-
 import LimitedForcesFour from '../LimitedForcesFour/Questions';
 import LimitedForcesFourAdd from '../LimitedForcesFour/Add/Add';
 import LimitedForcesFourEdit from '../LimitedForcesFour/Edit/Page';
-
 import ConflictsIdentified from '../ConflictsIdentified/Questions';
 import ConflictsIdentifiedAdd from '../ConflictsIdentified/Add/Add';
 import ConflictsIdentifiedEdit from '../ConflictsIdentified/Edit/Page';
-
 import TriadHeHo from '../TriadHeHo/Questions';
 import TriadHeHoAdd from '../TriadHeHo/Add/Add';
 import TriadHeHoEdit from '../TriadHeHo/Edit/Page';
+import SpecificsTriad from '../SpecificsTriad/Questions';
+import SpecificsTriadAdd from '../SpecificsTriad/Add/Add';
+import SpecificsTriadEdit from '../SpecificsTriad/Edit/Page';
+import FluxAnalyze from '../FluxAnalyze/Questions';
+import FluxAnalyzeAdd from '../FluxAnalyze/Add/Add';
+import FluxAnalyzeEdit from '../FluxAnalyze/Edit/Page';
+import DomProfile from '../DomProfile/Questions';
+import DomProfileAdd from '../DomProfile/Add/Add';
+import DomProfileEdit from '../DomProfile/Edit/Page';
+import InternalPartners from '../InternalPartners/Questions';
+import InternalPartnersAdd from '../InternalPartners/Add/Add';
+import InternalPartnersEdit from '../InternalPartners/Edit/Page';
+import InternalPartOne from '../InternalPartOne/Questions';
+import InternalPartOneAdd from '../InternalPartOne/Add/Add';
+import InternalPartOneEdit from '../InternalPartOne/Edit/Page';
+import InternalPartTwo from '../InternalPartTwo/Questions';
+import InternalPartTwoAdd from '../InternalPartTwo/Add/Add';
+import InternalPartTwoEdit from '../InternalPartTwo/Edit/Page';
+import ArchetypeDiscover from '../ArchetypeDiscover/Questions';
+import ArchetypeDiscoverAdd from '../ArchetypeDiscover/Add/Add';
+import ArchetypeDiscoverEdit from '../ArchetypeDiscover/Edit/Page';
+import EssentialCharacter from '../EssentialCharacter/Questions';
+import EssentialCharacterAdd from '../EssentialCharacter/Add/Add';
+import EssentialCharacterEdit from '../EssentialCharacter/Edit/Page';
+import DomProfileOne from '../DomProfileOne/Questions';
+import DomProfileOneAdd from '../DomProfileOne/Add/Add';
+import DomProfileOneEdit from '../DomProfileOne/Edit/Page';
+import BigChallenge from '../BigChallenge/Questions';
+import BigChallengeAdd from '../BigChallenge/Add/Add';
+import BigChallengeEdit from '../BigChallenge/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -234,6 +255,36 @@ export default withRouter(
         <Route path={`${match.url}/triadHeHo`} exact component={TriadHeHo} />
         <Route path={`${match.url}/triadHeHo/add`} component={TriadHeHoAdd} />
         <Route path={`${match.url}/triadHeHo/edit/:id`} component={TriadHeHoEdit} />
+        <Route path={`${match.url}/specificsTriad`} exact component={SpecificsTriad} />
+        <Route path={`${match.url}/specificsTriad/add`} component={SpecificsTriadAdd} />
+        <Route path={`${match.url}/specificsTriad/edit/:id`} component={SpecificsTriadEdit} />
+        <Route path={`${match.url}/fluxAnalyze`} exact component={FluxAnalyze} />
+        <Route path={`${match.url}/fluxAnalyze/add`} component={FluxAnalyzeAdd} />
+        <Route path={`${match.url}/fluxAnalyze/edit/:id`} component={FluxAnalyzeEdit} />
+        <Route path={`${match.url}/domProfile`} exact component={DomProfile} />
+        <Route path={`${match.url}/domProfile/add`} component={DomProfileAdd} />
+        <Route path={`${match.url}/domProfile/edit/:id`} component={DomProfileEdit} />
+        <Route path={`${match.url}/internalPartners`} exact component={InternalPartners} />
+        <Route path={`${match.url}/internalPartners/add`} component={InternalPartnersAdd} />
+        <Route path={`${match.url}/internalPartners/edit/:id`} component={InternalPartnersEdit} />
+        <Route path={`${match.url}/internalPartOne`} exact component={InternalPartOne} />
+        <Route path={`${match.url}/internalPartOne/add`} component={InternalPartOneAdd} />
+        <Route path={`${match.url}/internalPartOne/edit/:id`} component={InternalPartOneEdit} />
+        <Route path={`${match.url}/internalPartTwo`} exact component={InternalPartTwo} />
+        <Route path={`${match.url}/internalPartTwo/add`} component={InternalPartTwoAdd} />
+        <Route path={`${match.url}/internalPartTwo/edit/:id`} component={InternalPartTwoEdit} />
+        <Route path={`${match.url}/archetypeDiscover`} exact component={ArchetypeDiscover} />
+        <Route path={`${match.url}/archetypeDiscover/add`} component={ArchetypeDiscoverAdd} />
+        <Route path={`${match.url}/archetypeDiscover/edit/:id`} component={ArchetypeDiscoverEdit} />
+        <Route path={`${match.url}/essentialCharacter`} exact component={EssentialCharacter} />
+        <Route path={`${match.url}/essentialCharacter/add`} component={EssentialCharacterAdd} />
+        <Route path={`${match.url}/essentialCharacter/edit/:id`} component={EssentialCharacterEdit} />
+        <Route path={`${match.url}/domProfileOne`} exact component={DomProfileOne} />
+        <Route path={`${match.url}/domProfileOne/add`} component={DomProfileOneAdd} />
+        <Route path={`${match.url}/domProfileOne/edit/:id`} component={DomProfileOneEdit} />
+        <Route path={`${match.url}/bigChallenge`} exact component={BigChallenge} />
+        <Route path={`${match.url}/bigChallenge/add`} component={BigChallengeAdd} />
+        <Route path={`${match.url}/bigChallenge/edit/:id`} component={BigChallengeEdit} />
       </MyTemplate>
     );
   },
