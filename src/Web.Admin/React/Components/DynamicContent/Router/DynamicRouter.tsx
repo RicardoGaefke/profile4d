@@ -122,10 +122,9 @@ import FluxAnalyzeEdit from '../FluxAnalyze/Edit/Page';
 import DomProfile from '../DomProfile/Questions';
 import DomProfileAdd from '../DomProfile/Add/Add';
 import DomProfileEdit from '../DomProfile/Edit/Page';
-
-// import InternalPartners from '../InternalPartners/Questions';
-// import InternalPartnersAdd from '../InternalPartners/Add/Add';
-// import InternalPartnersEdit from '../InternalPartners/Edit/Page';
+import InternalPartners from '../InternalPartners/Questions';
+import InternalPartnersAdd from '../InternalPartners/Add/Add';
+import InternalPartnersEdit from '../InternalPartners/Edit/Page';
 
 // import InternalPartOne from '../InternalPartOne/Questions';
 // import InternalPartOneAdd from '../InternalPartOne/Add/Add';
@@ -271,10 +270,9 @@ export default withRouter(
         <Route path={`${match.url}/domProfile`} exact component={DomProfile} />
         <Route path={`${match.url}/domProfile/add`} component={DomProfileAdd} />
         <Route path={`${match.url}/domProfile/edit/:id`} component={DomProfileEdit} />
-
-        {/* <Route path={`${match.url}/internalPartners`} exact component={InternalPartners} />
+        <Route path={`${match.url}/internalPartners`} exact component={InternalPartners} />
         <Route path={`${match.url}/internalPartners/add`} component={InternalPartnersAdd} />
-        <Route path={`${match.url}/internalPartners/edit/:id`} component={InternalPartnersEdit} /> */}
+        <Route path={`${match.url}/internalPartners/edit/:id`} component={InternalPartnersEdit} />
 
         {/* <Route path={`${match.url}/internalPartOne`} exact component={InternalPartOne} />
         <Route path={`${match.url}/internalPartOne/add`} component={InternalPartOneAdd} />
