@@ -277,10 +277,6 @@ export default [
     title: 'correctflux',
   },
   {
-    link: 'emotionalfluxresult',
-    title: 'emotionalfluxresult',
-  },
-  {
     link: 'dominantprofileone',
     title: 'dominantprofileone',
   },
@@ -295,6 +291,10 @@ export default [
   {
     link: 'idealgrowthpart',
     title: 'idealgrowthpart',
+  },
+  {
+    link: 'emotionalfluxresult',
+    title: 'emotionalfluxresult',
   },
   {
     link: 'exerciseprofilemoviment',
