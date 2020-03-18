@@ -140,10 +140,9 @@ import EssentialCharacterEdit from '../EssentialCharacter/Edit/Page';
 import DomProfileOne from '../DomProfileOne/Questions';
 import DomProfileOneAdd from '../DomProfileOne/Add/Add';
 import DomProfileOneEdit from '../DomProfileOne/Edit/Page';
-
-// import BigChallenge from '../BigChallenge/Questions';
-// import BigChallengeAdd from Add'../BigChallenge/Add/Add';
-// import BigChallengeEdit from '../BigChallenge/Edit/Page';
+import BigChallenge from '../BigChallenge/Questions';
+import BigChallengeAdd from '../BigChallenge/Add/Add';
+import BigChallengeEdit from '../BigChallenge/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -283,10 +282,9 @@ export default withRouter(
         <Route path={`${match.url}/domProfileOne`} exact component={DomProfileOne} />
         <Route path={`${match.url}/domProfileOne/add`} component={DomProfileOneAdd} />
         <Route path={`${match.url}/domProfileOne/edit/:id`} component={DomProfileOneEdit} />
-
-        {/* <Route path={`${match.url}/bigChallenge`} exact component={BigChallenge} />
+        <Route path={`${match.url}/bigChallenge`} exact component={BigChallenge} />
         <Route path={`${match.url}/bigChallenge/add`} component={BigChallengeAdd} />
-        <Route path={`${match.url}/bigChallenge/edit/:id`} component={BigChallengeEdit} /> */}
+        <Route path={`${match.url}/bigChallenge/edit/:id`} component={BigChallengeEdit} />
       </MyTemplate>
     );
   },
