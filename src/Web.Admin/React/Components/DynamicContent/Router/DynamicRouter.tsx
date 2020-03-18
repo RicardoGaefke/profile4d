@@ -152,10 +152,9 @@ import IdealPartEdit from '../IdealPart/Edit/Page';
 import YourMoment from '../YourMoment/Questions';
 import YourMomentAdd from '../YourMoment/Add/Add';
 import YourMomentEdit from '../YourMoment/Edit/Page';
-
-// import ExistentialPain from '../ExistentialPain/Questions';
-// import ExistentialPainAdd from '../ExistentialPain/Add/Add';
-// import ExistentialPainEdit from '../ExistentialPain/Edit/Page';
+import ExistentialPain from '../ExistentialPain/Questions';
+import ExistentialPainAdd from '../ExistentialPain/Add/Add';
+import ExistentialPainEdit from '../ExistentialPain/Edit/Page';
 
 // import CristallyzationProcess from '../CristallyzationProcess/Questions';
 // import CristallyzationProcessAdd from '../CristallyzationProcess/Add/Add';
@@ -331,10 +330,9 @@ export default withRouter(
         <Route path={`${match.url}/yourMoment`} exact component={YourMoment} />
         <Route path={`${match.url}/yourMoment/add`} component={YourMomentAdd} />
         <Route path={`${match.url}/yourMoment/edit/:id`} component={YourMomentEdit} />
-
-        {/* <Route path={`${match.url}/existentialPain`} exact component={ExistentialPain} />
+        <Route path={`${match.url}/existentialPain`} exact component={ExistentialPain} />
         <Route path={`${match.url}/existentialPain/add`} component={ExistentialPainAdd} />
-        <Route path={`${match.url}/existentialPain/edit/:id`} component={ExistentialPainEdit} /> */}
+        <Route path={`${match.url}/existentialPain/edit/:id`} component={ExistentialPainEdit} />
 
         {/* <Route path={`${match.url}/cristallyzationProcess`} exact component={CristallyzationProcess} />
         <Route path={`${match.url}/cristallyzationProcess/add`} component={CristallyzationProcessAdd} />
