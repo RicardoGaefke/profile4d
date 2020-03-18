@@ -3,5 +3,5 @@ import { ILanguage } from './ILanguage';
 
 export default {
   // alterar título
-  title: 'As quatro forças da personalidade',
+  title: 'As doze forças do caráter',
 } as ILanguage;

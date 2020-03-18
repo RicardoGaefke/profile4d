@@ -28,7 +28,7 @@ const MyQuestion = withFormik<WithTranslation & WithSnackbarProps & RouteCompone
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t, history } = props;
     // alterar o webservice apenas, não a função Edit                ▼
-    await myAxios(window.location.href).post<IDynamicContent>('PersonalityForces/Edit', {
+    await myAxios(window.location.href).post<IDynamicContent>('TwelveForces/Edit', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,
@@ -42,7 +42,7 @@ const MyQuestion = withFormik<WithTranslation & WithSnackbarProps & RouteCompone
           variant: 'success',
         });
         // redireciona para a lista          ▼
-        history.push('/dynamicContent/personalityForces');
+        history.push('/dynamicContent/twelveForces');
       } else {
         enqueueSnackbar(t('DynamicForm:feedback.failure'), {
           variant: 'error',

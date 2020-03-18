@@ -12,7 +12,7 @@ const App = (): React.ReactElement => (
 );
 
 // Alterar o componente      ▼
-storiesOf('Questions.PersonalityForces', module)
+storiesOf('Questions.TwelveForces', module)
   .addDecorator((story: any): React.ReactElement => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))

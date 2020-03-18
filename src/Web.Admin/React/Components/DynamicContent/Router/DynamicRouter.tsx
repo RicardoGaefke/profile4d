@@ -165,10 +165,9 @@ import YourDevelopmentEdit from '../YourDevelopment/Edit/Page';
 import BenefitsContact from '../BenefitsContact/Questions';
 import BenefitsContactAdd from '../BenefitsContact/Add/Add';
 import BenefitsContactEdit from '../BenefitsContact/Edit/Page';
-
-// import TwelveForces from '../TwelveForces/Questions';
-// import TwelveForcesAdd from '../TwelveForces/Add/Add';
-// import TwelveForcesEdit from '../TwelveForces/Edit/Page';
+import TwelveForces from '../TwelveForces/Questions';
+import TwelveForcesAdd from '../TwelveForces/Add/Add';
+import TwelveForcesEdit from '../TwelveForces/Edit/Page';
 
 // import DyObservationOne from '../DyObservationOne/Questions';
 // import DyObservationOneAdd from '../DyObservationOne/Add/Add';
@@ -339,10 +338,9 @@ export default withRouter(
         <Route path={`${match.url}/benefitsContact`} exact component={BenefitsContact} />
         <Route path={`${match.url}/benefitsContact/add`} component={BenefitsContactAdd} />
         <Route path={`${match.url}/benefitsContact/edit/:id`} component={BenefitsContactEdit} />
-
-        {/* <Route path={`${match.url}/twelveForces`} exact component={TwelveForces} />
+        <Route path={`${match.url}/twelveForces`} exact component={TwelveForces} />
         <Route path={`${match.url}/twelveForces/add`} component={TwelveForcesAdd} />
-        <Route path={`${match.url}/twelveForces/edit/:id`} component={TwelveForcesEdit} /> */}
+        <Route path={`${match.url}/twelveForces/edit/:id`} component={TwelveForcesEdit} />
 
         {/* <Route path={`${match.url}/dyObservationOne`} exact component={DyObservationOne} />
         <Route path={`${match.url}/dyObservationOne/add`} component={DyObservationOneAdd} />
