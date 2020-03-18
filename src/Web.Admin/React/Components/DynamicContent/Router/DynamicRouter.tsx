@@ -156,10 +156,9 @@ import ExistentialPainEdit from '../ExistentialPain/Edit/Page';
 import CristallyzationProcess from '../CristallyzationProcess/Questions';
 import CristallyzationProcessAdd from '../CristallyzationProcess/Add/Add';
 import CristallyzationProcessEdit from '../CristallyzationProcess/Edit/Page';
-
-// import BodyShape from '../BodyShape/Questions';
-// import BodyShapeAdd from '../BodyShape/Add/Add';
-// import BodyShapeEdit from '../BodyShape/Edit/Page';
+import BodyShape from '../BodyShape/Questions';
+import BodyShapeAdd from '../BodyShape/Add/Add';
+import BodyShapeEdit from '../BodyShape/Edit/Page';
 
 // import YourDevelopment from '../YourDevelopment/Questions';
 // import YourDevelopmentAdd from '../YourDevelopment/Add/Add';
@@ -333,10 +332,9 @@ export default withRouter(
         <Route path={`${match.url}/cristallyzationProcess`} exact component={CristallyzationProcess} />
         <Route path={`${match.url}/cristallyzationProcess/add`} component={CristallyzationProcessAdd} />
         <Route path={`${match.url}/cristallyzationProcess/edit/:id`} component={CristallyzationProcessEdit} />
-
-        {/* <Route path={`${match.url}/bodyShape`} exact component={BodyShape} />
+        <Route path={`${match.url}/bodyShape`} exact component={BodyShape} />
         <Route path={`${match.url}/bodyShape/add`} component={BodyShapeAdd} />
-        <Route path={`${match.url}/bodyShape/edit/:id`} component={BodyShapeEdit} /> */}
+        <Route path={`${match.url}/bodyShape/edit/:id`} component={BodyShapeEdit} />
 
         {/* <Route path={`${match.url}/yourDevelopment`} exact component={YourDevelopment} />
         <Route path={`${match.url}/yourDevelopment/add`} component={YourDevelopmentAdd} />
