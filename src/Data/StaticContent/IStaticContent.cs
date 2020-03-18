@@ -270,5 +270,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage SuperiorMind();
     public BasicReturn SuperiorMindEdit(StaticFirstPage data);
+
+    public StaticFirstPage HealthyAdult();
+    public BasicReturn HealthyAdultEdit(StaticFirstPage data);
   }
 }
