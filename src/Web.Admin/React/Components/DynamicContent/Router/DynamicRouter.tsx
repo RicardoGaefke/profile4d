@@ -243,10 +243,9 @@ import DyObservationTwentyFourEdit from '../DyObservationTwentyFour/Edit/Page';
 import DomProfileTwo from '../DomProfileTwo/Questions';
 import DomProfileTwoAdd from '../DomProfileTwo/Add/Add';
 import DomProfileTwoEdit from '../DomProfileTwo/Edit/Page';
-
-// import PartnerOne from '../PartnerOne/Questions';
-// import PartnerOneAdd from '../PartnerOne/Add/Add';
-// import PartnerOneEdit from '../PartnerOne/Edit/Page';
+import PartnerOne from '../PartnerOne/Questions';
+import PartnerOneAdd from '../PartnerOne/Add/Add';
+import PartnerOneEdit from '../PartnerOne/Edit/Page';
 
 // import PartnerTwo from '../PartnerTwo/Questions';
 // import PartnerTwoAdd from '../PartnerTwo/Add/Add';
@@ -503,10 +502,9 @@ export default withRouter(
         <Route path={`${match.url}/domProfileTwo`} exact component={DomProfileTwo} />
         <Route path={`${match.url}/domProfileTwo/add`} component={DomProfileTwoAdd} />
         <Route path={`${match.url}/domProfileTwo/edit/:id`} component={DomProfileTwoEdit} />
-
-        {/* <Route path={`${match.url}/partnerOne} exact component={PartnerOne} />
+        <Route path={`${match.url}/partnerOne`} exact component={PartnerOne} />
         <Route path={`${match.url}/partnerOne/add`} component={PartnerOneAdd} />
-        <Route path={`${match.url}/partnerOne/edit/:id`} component={PartnerOneEdit} /> */}
+        <Route path={`${match.url}/partnerOne/edit/:id`} component={PartnerOneEdit} />
 
         {/* <Route path={`${match.url}/partnerTwo`} exact component={PartnerTwo} />
         <Route path={`${match.url}/partnerTwo/add`} component={PartnerTwoAdd} />

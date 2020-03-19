@@ -320,10 +320,10 @@ export default [
     link: 'domProfileTwo',
     title: 'domProfileTwo',
   },
-  // {
-  //   link: 'partnerOne',
-  //   title: 'partnerOne',
-  // },
+  {
+    link: 'partnerOne',
+    title: 'partnerOne',
+  },
   // {
   //   link: 'partnerTwo',
   //   title: 'partnerTwo',
