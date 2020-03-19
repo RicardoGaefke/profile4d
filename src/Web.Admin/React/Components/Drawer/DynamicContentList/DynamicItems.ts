@@ -256,10 +256,10 @@ export default [
     link: 'dyobservationNine',
     title: 'dyobservationNine',
   },
-  // {
-  //   link: 'dyobservationTen',
-  //   title: 'dyobservationTen',
-  // },
+  {
+    link: 'dyobservationTen',
+    title: 'dyobservationTen',
+  },
   // {
   //   link: 'dyobservationEleven',
   //   title: 'dyobservationEleven',

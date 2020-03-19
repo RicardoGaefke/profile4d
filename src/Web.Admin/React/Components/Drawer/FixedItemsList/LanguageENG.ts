@@ -222,7 +222,7 @@ export default {
   dyObservationSeven: 'Observation 1',
   dyObservationEight: 'Observation 2',
   dyObservationNine: 'Observation 1',
-  // dyObservationTen: 'Observation 2',
+  dyObservationTen: 'Observation 2',
   // dyObservationEleven: 'Observation 1',
   //
   // dyObservationTwelve: 'Observation 2',
