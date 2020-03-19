@@ -306,5 +306,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage NoteExistentialPain();
     public BasicReturn NoteExistentialPainEdit(StaticFirstPage data);
+
+    public StaticFirstPage CrystallizationPersonality();
+    public BasicReturn CrystallizationPersonalityEdit(StaticFirstPage data);
   }
 }
