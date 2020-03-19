@@ -215,7 +215,7 @@ export default {
   twelveForces: 'The twelve forces of character',
   dyobservationOne: 'Observation 1',
   dyobservationTwo: 'Observation 2',
-  // dyObservationThree: 'Observation 1',
+  dyObservationThree: 'Observation 1',
   // dyObservationFour: 'Observation 2',
   // dyObservationFive: 'Observation 1',
   // dyObservationSix: 'Observation 2',

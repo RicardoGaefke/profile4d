@@ -211,7 +211,7 @@ export interface ILanguage {
   twelveForces: string,
   dyobservationOne: string,
   dyobservationTwo: string,
-  // dyObservationThree: string,
+  dyObservationThree: string,
   // dyObservationFour: string,
   // dyObservationFive: string,
   // dyObservationSix: string,
