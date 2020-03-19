@@ -168,10 +168,9 @@ import BenefitsContactEdit from '../BenefitsContact/Edit/Page';
 import TwelveForces from '../TwelveForces/Questions';
 import TwelveForcesAdd from '../TwelveForces/Add/Add';
 import TwelveForcesEdit from '../TwelveForces/Edit/Page';
-
-// import DyObservationOne from '../DyObservationOne/Questions';
-// import DyObservationOneAdd from '../DyObservationOne/Add/Add';
-// import DyObservationOneEdit from '../DyObservationOne/Edit/Page';
+import DyObservationOne from '../DyObservationOne/Questions';
+import DyObservationOneAdd from '../DyObservationOne/Add/Add';
+import DyObservationOneEdit from '../DyObservationOne/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -341,10 +340,9 @@ export default withRouter(
         <Route path={`${match.url}/twelveForces`} exact component={TwelveForces} />
         <Route path={`${match.url}/twelveForces/add`} component={TwelveForcesAdd} />
         <Route path={`${match.url}/twelveForces/edit/:id`} component={TwelveForcesEdit} />
-
-        {/* <Route path={`${match.url}/dyObservationOne`} exact component={DyObservationOne} />
+        <Route path={`${match.url}/dyObservationOne`} exact component={DyObservationOne} />
         <Route path={`${match.url}/dyObservationOne/add`} component={DyObservationOneAdd} />
-        <Route path={`${match.url}/dyObservationOne/edit/:id`} component={DyObservationOneEdit} /> */}
+        <Route path={`${match.url}/dyObservationOne/edit/:id`} component={DyObservationOneEdit} />
       </MyTemplate>
     );
   },
