@@ -201,15 +201,12 @@ import DyObservationTenEdit from '../DyObservationTen/Edit/Page';
 import DyObservationEleven from '../DyObservationEleven/Questions';
 import DyObservationElevenAdd from '../DyObservationEleven/Add/Add';
 import DyObservationElevenEdit from '../DyObservationEleven/Edit/Page';
-
-
-// import DyObservationTwelve from '../DyObservationTwelve/Questions';
-// import DyObservationTwelveAdd from '../DyObservationTwelve/Add/Add';
-// import DyObservationTwelveEdit from '../DyObservationTwelve/Edit/Page';
-
-// import DyObservationThirteen from '../DyObservationThirteen/Questions';
-// import DyObservationThirteenAdd from '../DyObservationThirteen/Add/Add';
-// import DyObservationThirteenEdit from '../DyObservationThirteen/Edit/Page';
+import DyObservationTwelve from '../DyObservationTwelve/Questions';
+import DyObservationTwelveAdd from '../DyObservationTwelve/Add/Add';
+import DyObservationTwelveEdit from '../DyObservationTwelve/Edit/Page';
+import DyObservationThirteen from '../DyObservationThirteen/Questions';
+import DyObservationThirteenAdd from '../DyObservationThirteen/Add/Add';
+import DyObservationThirteenEdit from '../DyObservationThirteen/Edit/Page';
 
 // import DyObservationFourteen from '../DyObservationFourteen/Questions';
 // import DyObservationFourteenAdd from '../DyObservationFourteen/Add/Add';
@@ -444,16 +441,12 @@ export default withRouter(
         <Route path={`${match.url}/dyObservationEleven`} exact component={DyObservationEleven} />
         <Route path={`${match.url}/dyObservationEleven/add`} component={DyObservationElevenAdd} />
         <Route path={`${match.url}/dyObservationEleven/edit/:id`} component={DyObservationElevenEdit} />
-
-        {/*  */}
-
-        {/* <Route path={`${match.url}/dyObservationTwelve`} exact component={DyObservationTwelve} />
+        <Route path={`${match.url}/dyObservationTwelve`} exact component={DyObservationTwelve} />
         <Route path={`${match.url}/dyObservationTwelve/add`} component={DyObservationTwelveAdd} />
-        <Route path={`${match.url}/dyObservationTwelve/edit/:id`} component={DyObservationTwelveEdit} /> */}
-
-        {/* <Route path={`${match.url}/dyObservationThirteen`} exact component={DyObservationThirteen} />
+        <Route path={`${match.url}/dyObservationTwelve/edit/:id`} component={DyObservationTwelveEdit} />
+        <Route path={`${match.url}/dyObservationThirteen`} exact component={DyObservationThirteen} />
         <Route path={`${match.url}/dyObservationThirteen/add`} component={DyObservationThirteenAdd} />
-        <Route path={`${match.url}/dyObservationThirteen/edit/:id`} component={DyObservationThirteenEdit} /> */}
+        <Route path={`${match.url}/dyObservationThirteen/edit/:id`} component={DyObservationThirteenEdit} />
 
         {/* <Route path={`${match.url}/dyObservationFourteen`} exact component={DyObservationFourteen} />
         <Route path={`${match.url}/dyObservationFourteen/add`} component={DyObservationFourteenAdd} />
