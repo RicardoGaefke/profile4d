@@ -268,40 +268,72 @@ export default [
     link: 'dyObservationTwelve',
     title: 'dyObservationTwelve',
   },
-  // {
-  //   link: 'dyObservationThirteen',
-  //   title: 'dyObservationThirteen',
-  // },
-  // {
-  //   link: 'dyObservationFourteen',
-  //   title: 'dyObservationFourteen',
-  // },
-  // {
-  //   link: 'dyObservationFifteen',
-  //   title: 'dyObservationFifteen',
-  // },
-  // {
-  //   link: 'dyObservationSixteen',
-  //   title: 'dyObservationSixteen',
-  // },
-  // {
-  //   link: 'dyObservationSeventeen',
-  //   title: 'dyObservationSeventeen',
-  // },
-  // {
-  //   link: 'dyObservationEighteen',
-  //   title: 'dyObservationEighteen',
-  // },
-  // {
-  //   link: 'dyObservationNineteen',
-  //   title: 'dyObservationNineteen',
-  // },
-  // {
-  //   link: 'dyObservationTwenty',
-  //   title: 'dyObservationTwenty',
-  // },
-  // {
-  //   link: 'dyObservationTwentyOne',
-  //   title: 'dyObservationTwentyOne',
-  // },
+  {
+    link: 'dyObservationThirteen',
+    title: 'dyObservationThirteen',
+  },
+  {
+    link: 'dyObservationFourteen',
+    title: 'dyObservationFourteen',
+  },
+  {
+    link: 'dyObservationFifteen',
+    title: 'dyObservationFifteen',
+  },
+  {
+    link: 'dyObservationSixteen',
+    title: 'dyObservationSixteen',
+  },
+  {
+    link: 'dyObservationSeventeen',
+    title: 'dyObservationSeventeen',
+  },
+  {
+    link: 'dyObservationEighteen',
+    title: 'dyObservationEighteen',
+  },
+  {
+    link: 'dyObservationNineteen',
+    title: 'dyObservationNineteen',
+  },
+  {
+    link: 'dyObservationTwenty',
+    title: 'dyObservationTwenty',
+  },
+  {
+    link: 'dyObservationTwentyOne',
+    title: 'dyObservationTwentyOne',
+  },
+  {
+    link: 'dyObservationTwentyTwo',
+    title: 'dyObservationTwentyTwo',
+  },
+  {
+    link: 'dyObservationTwentyThree',
+    title: 'dyObservationTwentyThree',
+  },
+  {
+    link: 'dyObservationTwentyFour',
+    title: 'dyObservationTwentyFour',
+  },
+  {
+    link: 'domProfileTwo',
+    title: 'domProfileTwo',
+  },
+  {
+    link: 'partnerOne',
+    title: 'partnerOne',
+  },
+  {
+    link: 'partnerTwo',
+    title: 'partnerTwo',
+  },
+  {
+    link: 'idealPartner',
+    title: 'idealPartner',
+  },
+  {
+    link: 'behavioralResources',
+    title: 'behavioralResources',
+  },
 ] as IStaticMenuItem[];
