@@ -315,5 +315,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage BodyShape();
     public BasicReturn BodyShapeEdit(StaticFirstPage data);
+
+    public StaticFirstPage BodyCharacters();
+    public BasicReturn BodyCharactersEdit(StaticFirstPage data);
   }
 }
