@@ -235,7 +235,7 @@ export interface ILanguage {
   dyObservationTwentyFour: string,
   domProfileTwo: string,
   partnerOne: string,
-  // partnerTwo: string,
+  partnerTwo: string,
   // idealPartner: string,
   // behavioralResources: string,
 }

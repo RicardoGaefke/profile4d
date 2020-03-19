@@ -246,10 +246,9 @@ import DomProfileTwoEdit from '../DomProfileTwo/Edit/Page';
 import PartnerOne from '../PartnerOne/Questions';
 import PartnerOneAdd from '../PartnerOne/Add/Add';
 import PartnerOneEdit from '../PartnerOne/Edit/Page';
-
-// import PartnerTwo from '../PartnerTwo/Questions';
-// import PartnerTwoAdd from '../PartnerTwo/Add/Add';
-// import PartnerTwoEdit from '../PartnerTwo/Edit/Page';
+import PartnerTwo from '../PartnerTwo/Questions';
+import PartnerTwoAdd from '../PartnerTwo/Add/Add';
+import PartnerTwoEdit from '../PartnerTwo/Edit/Page';
 
 // import IdealPartner from '../IdealPartner/Questions';
 // import IdealPartnerAdd from '../IdealPartner/Add/Add';
@@ -505,10 +504,9 @@ export default withRouter(
         <Route path={`${match.url}/partnerOne`} exact component={PartnerOne} />
         <Route path={`${match.url}/partnerOne/add`} component={PartnerOneAdd} />
         <Route path={`${match.url}/partnerOne/edit/:id`} component={PartnerOneEdit} />
-
-        {/* <Route path={`${match.url}/partnerTwo`} exact component={PartnerTwo} />
+        <Route path={`${match.url}/partnerTwo`} exact component={PartnerTwo} />
         <Route path={`${match.url}/partnerTwo/add`} component={PartnerTwoAdd} />
-        <Route path={`${match.url}/partnerTwo/edit/:id`} component={PartnerTwoEdit} /> */}
+        <Route path={`${match.url}/partnerTwo/edit/:id`} component={PartnerTwoEdit} />
 
         {/* <Route path={`${match.url}/idealPartner`} exact component={IdealPartner} />
         <Route path={`${match.url}/idealPartner/add`} component={IdealPartnerAdd} />

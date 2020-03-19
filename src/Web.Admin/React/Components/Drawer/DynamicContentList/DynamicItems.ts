@@ -324,10 +324,10 @@ export default [
     link: 'partnerOne',
     title: 'partnerOne',
   },
-  // {
-  //   link: 'partnerTwo',
-  //   title: 'partnerTwo',
-  // },
+  {
+    link: 'partnerTwo',
+    title: 'partnerTwo',
+  },
   // {
   //   link: 'idealPartner',
   //   title: 'idealPartner',
