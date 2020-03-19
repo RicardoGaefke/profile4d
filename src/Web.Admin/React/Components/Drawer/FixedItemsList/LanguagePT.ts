@@ -240,6 +240,6 @@ export default {
   domProfileTwo: 'Perfil dominante',
   partnerOne: 'Parceiro 1',
   partnerTwo: 'Parceiro 2',
-  // idealPartner: 'Parceiro ideal ',
+  idealPartner: 'Parceiro ideal ',
   // behavioralResources: 'Recursos do seu perfil comportamental',
 } as ILanguage;

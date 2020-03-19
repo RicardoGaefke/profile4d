@@ -328,10 +328,10 @@ export default [
     link: 'partnerTwo',
     title: 'partnerTwo',
   },
-  // {
-  //   link: 'idealPartner',
-  //   title: 'idealPartner',
-  // },
+  {
+    link: 'idealPartner',
+    title: 'idealPartner',
+  },
   // {
   //   link: 'behavioralResources',
   //   title: 'behavioralResources',

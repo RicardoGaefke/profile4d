@@ -249,10 +249,9 @@ import PartnerOneEdit from '../PartnerOne/Edit/Page';
 import PartnerTwo from '../PartnerTwo/Questions';
 import PartnerTwoAdd from '../PartnerTwo/Add/Add';
 import PartnerTwoEdit from '../PartnerTwo/Edit/Page';
-
-// import IdealPartner from '../IdealPartner/Questions';
-// import IdealPartnerAdd from '../IdealPartner/Add/Add';
-// import IdealPartnerEdit from '../IdealPartner/Edit/Page';
+import IdealPartner from '../IdealPartner/Questions';
+import IdealPartnerAdd from '../IdealPartner/Add/Add';
+import IdealPartnerEdit from '../IdealPartner/Edit/Page';
 
 // import BehavioralResources from '../BehavioralResources/Questions';
 // import BehavioralResourcesAdd from '../BehavioralResources/Add/Add';
@@ -507,10 +506,9 @@ export default withRouter(
         <Route path={`${match.url}/partnerTwo`} exact component={PartnerTwo} />
         <Route path={`${match.url}/partnerTwo/add`} component={PartnerTwoAdd} />
         <Route path={`${match.url}/partnerTwo/edit/:id`} component={PartnerTwoEdit} />
-
-        {/* <Route path={`${match.url}/idealPartner`} exact component={IdealPartner} />
+        <Route path={`${match.url}/idealPartner`} exact component={IdealPartner} />
         <Route path={`${match.url}/idealPartner/add`} component={IdealPartnerAdd} />
-        <Route path={`${match.url}/idealPartner/edit/:id`} component={IdealPartnerEdit} /> */}
+        <Route path={`${match.url}/idealPartner/edit/:id`} component={IdealPartnerEdit} />
 
         {/* <Route path={`${match.url}/behavioralResources`} exact component={BehavioralResources} />
         <Route path={`${match.url}/behavioralResources/add`} component={BehavioralResourcesAdd} />

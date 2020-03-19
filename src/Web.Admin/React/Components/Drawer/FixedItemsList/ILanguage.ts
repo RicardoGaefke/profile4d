@@ -236,6 +236,6 @@ export interface ILanguage {
   domProfileTwo: string,
   partnerOne: string,
   partnerTwo: string,
-  // idealPartner: string,
+  idealPartner: string,
   // behavioralResources: string,
 }
