@@ -304,10 +304,10 @@ export default [
     link: 'dyObservationTwentyOne',
     title: 'dyObservationTwentyOne',
   },
-  // {
-  //   link: 'dyObservationTwentyTwo',
-  //   title: 'dyObservationTwentyTwo',
-  // },
+  {
+    link: 'dyObservationTwentyTwo',
+    title: 'dyObservationTwentyTwo',
+  },
   // {
   //   link: 'dyObservationTwentyThree',
   //   title: 'dyObservationTwentyThree',

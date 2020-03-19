@@ -231,10 +231,9 @@ import DyObservationTwentyEdit from '../DyObservationTwenty/Edit/Page';
 import DyObservationTwentyOne from '../DyObservationTwentyOne/Questions';
 import DyObservationTwentyOneAdd from '../DyObservationTwentyOne/Add/Add';
 import DyObservationTwentyOneEdit from '../DyObservationTwentyOne/Edit/Page';
-
-// import DyObservationTwentyTwo from '../DyObservationTwentyTwo/Questions';
-// import DyObservationTwentyTwoAdd from '../DyObservationTwentyTwo/Add/Add';
-// import DyObservationTwentyTwoEdit from '../DyObservationTwentyTwo/Edit/Page';
+import DyObservationTwentyTwo from '../DyObservationTwentyTwo/Questions';
+import DyObservationTwentyTwoAdd from '../DyObservationTwentyTwo/Add/Add';
+import DyObservationTwentyTwoEdit from '../DyObservationTwentyTwo/Edit/Page';
 
 // import DyObservationTwentyThree from '../DyObservationTwentyThree/Questions';
 // import DyObservationTwentyThreeAdd from '../DyObservationTwentyThree/Add/Add';
@@ -495,10 +494,9 @@ export default withRouter(
         <Route path={`${match.url}/dyObservationTwentyOne`} exact component={DyObservationTwentyOne} />
         <Route path={`${match.url}/dyObservationTwentyOne/add`} component={DyObservationTwentyOneAdd} />
         <Route path={`${match.url}/dyObservationTwentyOne/edit/:id`} component={DyObservationTwentyOneEdit} />
-
-        {/* <Route path={`${match.url}/dyObservationTwentyTwo`} exact component={DyObservationTwentyTwo} />
+        <Route path={`${match.url}/dyObservationTwentyTwo`} exact component={DyObservationTwentyTwo} />
         <Route path={`${match.url}/dyObservationTwentyTwo/add`} component={DyObservationTwentyTwoAdd} />
-        <Route path={`${match.url}/dyObservationTwentyTwo/edit/:id`} component={DyObservationTwentyTwoEdit} /> */}
+        <Route path={`${match.url}/dyObservationTwentyTwo/edit/:id`} component={DyObservationTwentyTwoEdit} />
 
         {/* <Route path={`${match.url}/dyObservationTwentyThree`} exact component={DyObservationTwentyThree} />
         <Route path={`${match.url}/dyObservationTwentyThree/add`} component={DyObservationTwentyThreeAdd} />
