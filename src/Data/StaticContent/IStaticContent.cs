@@ -288,5 +288,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage BigChallenge();
     public BasicReturn BigChallengeEdit(StaticFirstPage data);
+
+    public StaticFirstPage WorkKey();
+    public BasicReturn WorkKeyEdit(StaticFirstPage data);
   }
 }
