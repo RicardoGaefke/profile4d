@@ -321,5 +321,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage MainVirtueEssence();
     public BasicReturn MainVirtueEssenceEdit(StaticFirstPage data);
+
+    public StaticFirstPage BenefitsVirtueEssence();
+    public BasicReturn BenefitsVirtueEssenceEdit(StaticFirstPage data);
   }
 }
