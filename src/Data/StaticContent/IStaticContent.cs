@@ -327,5 +327,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage TwelveCharacterAdultStrengths();
     public BasicReturn TwelveCharacterAdultStrengthsEdit(StaticFirstPage data);
+
+    public StaticFirstPage ProfessionalAnalyze();
+    public BasicReturn ProfessionalAnalyzeEdit(StaticFirstPage data);
   }
 }
