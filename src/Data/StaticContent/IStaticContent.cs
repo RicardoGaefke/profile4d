@@ -294,5 +294,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage IdealPartner();
     public BasicReturn IdealPartnerEdit(StaticFirstPage data);
+
+    public StaticFirstPage CharacterFormation();
+    public BasicReturn CharacterFormationEdit(StaticFirstPage data);
   }
 }
