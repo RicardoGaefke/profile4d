@@ -285,5 +285,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage DomProfile();
     public BasicReturn DomProfileEdit(StaticFirstPage data);
+
+    public StaticFirstPage BigChallenge();
+    public BasicReturn BigChallengeEdit(StaticFirstPage data);
   }
 }
