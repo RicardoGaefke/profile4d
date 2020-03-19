@@ -241,5 +241,5 @@ export default {
   partnerOne: 'Partner 1',
   partnerTwo: 'Partner 2',
   idealPartner: 'Ideal partner',
-  // behavioralResources: 'Features of your behavioral profile',
+  behavioralResources: 'Features of your behavioral profile',
 } as ILanguage;

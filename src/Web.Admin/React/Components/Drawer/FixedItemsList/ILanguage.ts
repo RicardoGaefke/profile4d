@@ -237,5 +237,5 @@ export interface ILanguage {
   partnerOne: string,
   partnerTwo: string,
   idealPartner: string,
-  // behavioralResources: string,
+  behavioralResources: string,
 }

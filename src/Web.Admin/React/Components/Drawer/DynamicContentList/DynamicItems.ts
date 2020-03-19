@@ -332,8 +332,8 @@ export default [
     link: 'idealPartner',
     title: 'idealPartner',
   },
-  // {
-  //   link: 'behavioralResources',
-  //   title: 'behavioralResources',
-  // },
+  {
+    link: 'behavioralResources',
+    title: 'behavioralResources',
+  },
 ] as IStaticMenuItem[];

@@ -252,10 +252,9 @@ import PartnerTwoEdit from '../PartnerTwo/Edit/Page';
 import IdealPartner from '../IdealPartner/Questions';
 import IdealPartnerAdd from '../IdealPartner/Add/Add';
 import IdealPartnerEdit from '../IdealPartner/Edit/Page';
-
-// import BehavioralResources from '../BehavioralResources/Questions';
-// import BehavioralResourcesAdd from '../BehavioralResources/Add/Add';
-// import BehavioralResourcesEdit from '../BehavioralResources/Edit/Page';
+import BehavioralResources from '../BehavioralResources/Questions';
+import BehavioralResourcesAdd from '../BehavioralResources/Add/Add';
+import BehavioralResourcesEdit from '../BehavioralResources/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -509,10 +508,9 @@ export default withRouter(
         <Route path={`${match.url}/idealPartner`} exact component={IdealPartner} />
         <Route path={`${match.url}/idealPartner/add`} component={IdealPartnerAdd} />
         <Route path={`${match.url}/idealPartner/edit/:id`} component={IdealPartnerEdit} />
-
-        {/* <Route path={`${match.url}/behavioralResources`} exact component={BehavioralResources} />
+        <Route path={`${match.url}/behavioralResources`} exact component={BehavioralResources} />
         <Route path={`${match.url}/behavioralResources/add`} component={BehavioralResourcesAdd} />
-        <Route path={`${match.url}/behavioralResources/edit/:id`} component={BehavioralResourcesEdit} /> */}
+        <Route path={`${match.url}/behavioralResources/edit/:id`} component={BehavioralResourcesEdit} />
       </MyTemplate>
     );
   },
