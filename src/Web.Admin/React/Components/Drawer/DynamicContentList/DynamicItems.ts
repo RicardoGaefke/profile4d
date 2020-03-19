@@ -312,10 +312,10 @@ export default [
     link: 'dyObservationTwentyThree',
     title: 'dyObservationTwentyThree',
   },
-  // {
-  //   link: 'dyObservationTwentyFour',
-  //   title: 'dyObservationTwentyFour',
-  // },
+  {
+    link: 'dyObservationTwentyFour',
+    title: 'dyObservationTwentyFour',
+  },
   // {
   //   link: 'domProfileTwo',
   //   title: 'domProfileTwo',

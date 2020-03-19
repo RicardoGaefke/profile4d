@@ -34,7 +34,7 @@ export default withTranslation()(
       const fetchQuestions = (): void => {
         MyAxios(window.location.href)
           // alterar o webservice ▼
-          .get<IQuestions>('/DyObservationTwentyTwo')
+          .get<IQuestions>('/DyObservationTwentyFour')
           .then((response): void => setState(response.data));
       };
 
@@ -51,7 +51,7 @@ export default withTranslation()(
         MyAxios(window.location.href)
           // alterar o webservice - apenas o nome do serviço
           // não a função ChangeActive) ▼
-          .post<IBasicReturn>('/DyObservationTwentyTwo/ChangeActive',
+          .post<IBasicReturn>('/DyObservationTwentyFour/ChangeActive',
           {
             Guid: event.target.value,
             Active: event.target.checked,
@@ -90,7 +90,7 @@ export default withTranslation()(
                     item
                   >
                     <Quantity
-                      minimum={2}
+                      minimum={3}
                       total={state.Questions.filter((value): boolean => {
                         if (value.Active) {
                           return true;
@@ -104,7 +104,7 @@ export default withTranslation()(
                   {state.Questions.map((q, i): React.ReactElement => (
                     <React.Fragment key={`Frag-${q.Guid}`}>
                       {/* // alterar o nome da rota para o editar                                               ▼ */}
-                      <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} to="dyObservationTwentyTwo" />
+                      <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} to="dyObservationTwentyFour" />
                       <Divider key={`Div-${q.Guid}`} />
                     </React.Fragment>
                   ))}
@@ -113,7 +113,7 @@ export default withTranslation()(
             )
           }
           {/* // alterar apenas o nome da rota ▼ */}
-          <Add to="/dynamicContent/DyObservationTwentyTwo/add" />
+          <Add to="/dynamicContent/DyObservationTwentyFour/add" />
         </Container>
       );
     },

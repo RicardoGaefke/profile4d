@@ -237,10 +237,9 @@ import DyObservationTwentyTwoEdit from '../DyObservationTwentyTwo/Edit/Page';
 import DyObservationTwentyThree from '../DyObservationTwentyThree/Questions';
 import DyObservationTwentyThreeAdd from '../DyObservationTwentyThree/Add/Add';
 import DyObservationTwentyThreeEdit from '../DyObservationTwentyThree/Edit/Page';
-
-// import DyObservationTwentyFour from '../DyObservationTwentyFour/Questions';
-// import DyObservationTwentyFourAdd from '../DyObservationTwentyFour/Add/Add';
-// import DyObservationTwentyFourEdit from '../DyObservationTwentyFour/Edit/Page';
+import DyObservationTwentyFour from '../DyObservationTwentyFour/Questions';
+import DyObservationTwentyFourAdd from '../DyObservationTwentyFour/Add/Add';
+import DyObservationTwentyFourEdit from '../DyObservationTwentyFour/Edit/Page';
 
 // import DomProfileTwo from '../DomProfileTwo/Questions';
 // import DomProfileTwoAdd from '../DomProfileTwo/Add/Add';
@@ -499,10 +498,9 @@ export default withRouter(
         <Route path={`${match.url}/dyObservationTwentyThree`} exact component={DyObservationTwentyThree} />
         <Route path={`${match.url}/dyObservationTwentyThree/add`} component={DyObservationTwentyThreeAdd} />
         <Route path={`${match.url}/dyObservationTwentyThree/edit/:id`} component={DyObservationTwentyThreeEdit} />
-
-        {/* <Route path={`${match.url}/dyObservationTwentyFour`} exact component={DyObservationTwentyFour} />
+        <Route path={`${match.url}/dyObservationTwentyFour`} exact component={DyObservationTwentyFour} />
         <Route path={`${match.url}/dyObservationTwentyFour/add`} component={DyObservationTwentyFourAdd} />
-        <Route path={`${match.url}/dyObservationTwentyFour/edit/:id`} component={DyObservationTwentyFourEdit} /> */}
+        <Route path={`${match.url}/dyObservationTwentyFour/edit/:id`} component={DyObservationTwentyFourEdit} />
 
         {/* <Route path={`${match.url}/domProfileTwo`} exact component={DomProfileTwo} />
         <Route path={`${match.url}/domProfileTwo/add`} component={DomProfileTwoAdd} />
