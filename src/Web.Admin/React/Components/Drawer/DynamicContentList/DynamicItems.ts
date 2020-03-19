@@ -221,49 +221,49 @@ export default [
     title: 'twelveForces',
   },
   {
-    link: 'dyobservationOne',
-    title: 'dyobservationOne',
+    link: 'dyObservationOne',
+    title: 'dyObservationOne',
   },
   {
-    link: 'dyobservationTwo',
-    title: 'dyobservationTwo',
+    link: 'dyObservationTwo',
+    title: 'dyObservationTwo',
   },
   {
-    link: 'dyobservationThree',
-    title: 'dyobservationThree',
+    link: 'dyObservationThree',
+    title: 'dyObservationThree',
   },
   {
-    link: 'dyobservationFour',
-    title: 'dyobservationFour',
+    link: 'dyObservationFour',
+    title: 'dyObservationFour',
   },
   {
-    link: 'dyobservationFive',
-    title: 'dyobservationFive',
+    link: 'dyObservationFive',
+    title: 'dyObservationFive',
   },
   {
-    link: 'dyobservationSix',
-    title: 'dyobservationSix',
+    link: 'dyObservationSix',
+    title: 'dyObservationSix',
   },
   {
-    link: 'dyobservationSeven',
-    title: 'dyobservationSeven',
+    link: 'dyObservationSeven',
+    title: 'dyObservationSeven',
   },
   {
-    link: 'dyobservationEight',
-    title: 'dyobservationEight',
+    link: 'dyObservationEight',
+    title: 'dyObservationEight',
   },
   {
-    link: 'dyobservationNine',
-    title: 'dyobservationNine',
+    link: 'dyObservationNine',
+    title: 'dyObservationNine',
   },
   {
-    link: 'dyobservationTen',
-    title: 'dyobservationTen',
+    link: 'dyObservationTen',
+    title: 'dyObservationTen',
   },
-  // {
-  //   link: 'dyobservationEleven',
-  //   title: 'dyobservationEleven',
-  // },
+  {
+    link: 'dyObservationEleven',
+    title: 'dyObservationEleven',
+  },
 
   //
 
