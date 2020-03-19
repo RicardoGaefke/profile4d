@@ -308,10 +308,10 @@ export default [
     link: 'dyObservationTwentyTwo',
     title: 'dyObservationTwentyTwo',
   },
-  // {
-  //   link: 'dyObservationTwentyThree',
-  //   title: 'dyObservationTwentyThree',
-  // },
+  {
+    link: 'dyObservationTwentyThree',
+    title: 'dyObservationTwentyThree',
+  },
   // {
   //   link: 'dyObservationTwentyFour',
   //   title: 'dyObservationTwentyFour',

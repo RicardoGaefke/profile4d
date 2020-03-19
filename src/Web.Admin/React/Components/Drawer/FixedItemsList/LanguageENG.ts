@@ -235,7 +235,7 @@ export default {
   dyObservationTwenty: 'Observation 2',
   dyObservationTwentyOne: 'Observation 1',
   dyObservationTwentyTwo: 'Observation 2',
-  // dyObservationTwentyThree: 'Observation 1',
+  dyObservationTwentyThree: 'Observation 1',
   // dyObservationTwentyFour: 'Observation 2',
   // domProfileTwo: 'Dominant profile',
   // partnerOne: 'Partner 1',

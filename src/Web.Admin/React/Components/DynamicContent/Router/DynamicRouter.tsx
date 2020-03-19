@@ -234,10 +234,9 @@ import DyObservationTwentyOneEdit from '../DyObservationTwentyOne/Edit/Page';
 import DyObservationTwentyTwo from '../DyObservationTwentyTwo/Questions';
 import DyObservationTwentyTwoAdd from '../DyObservationTwentyTwo/Add/Add';
 import DyObservationTwentyTwoEdit from '../DyObservationTwentyTwo/Edit/Page';
-
-// import DyObservationTwentyThree from '../DyObservationTwentyThree/Questions';
-// import DyObservationTwentyThreeAdd from '../DyObservationTwentyThree/Add/Add';
-// import DyObservationTwentyThreeEdit from '../DyObservationTwentyThree/Edit/Page';
+import DyObservationTwentyThree from '../DyObservationTwentyThree/Questions';
+import DyObservationTwentyThreeAdd from '../DyObservationTwentyThree/Add/Add';
+import DyObservationTwentyThreeEdit from '../DyObservationTwentyThree/Edit/Page';
 
 // import DyObservationTwentyFour from '../DyObservationTwentyFour/Questions';
 // import DyObservationTwentyFourAdd from '../DyObservationTwentyFour/Add/Add';
@@ -497,10 +496,9 @@ export default withRouter(
         <Route path={`${match.url}/dyObservationTwentyTwo`} exact component={DyObservationTwentyTwo} />
         <Route path={`${match.url}/dyObservationTwentyTwo/add`} component={DyObservationTwentyTwoAdd} />
         <Route path={`${match.url}/dyObservationTwentyTwo/edit/:id`} component={DyObservationTwentyTwoEdit} />
-
-        {/* <Route path={`${match.url}/dyObservationTwentyThree`} exact component={DyObservationTwentyThree} />
+        <Route path={`${match.url}/dyObservationTwentyThree`} exact component={DyObservationTwentyThree} />
         <Route path={`${match.url}/dyObservationTwentyThree/add`} component={DyObservationTwentyThreeAdd} />
-        <Route path={`${match.url}/dyObservationTwentyThree/edit/:id`} component={DyObservationTwentyThreeEdit} /> */}
+        <Route path={`${match.url}/dyObservationTwentyThree/edit/:id`} component={DyObservationTwentyThreeEdit} />
 
         {/* <Route path={`${match.url}/dyObservationTwentyFour`} exact component={DyObservationTwentyFour} />
         <Route path={`${match.url}/dyObservationTwentyFour/add`} component={DyObservationTwentyFourAdd} />
