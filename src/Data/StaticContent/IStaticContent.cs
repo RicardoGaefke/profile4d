@@ -339,5 +339,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage FourCompetentStages();
     public BasicReturn FourCompetentStagesEdit(StaticFirstPage data);
+
+    public StaticFirstPage Observation();
+    public BasicReturn ObservationEdit(StaticFirstPage data);
   }
 }
