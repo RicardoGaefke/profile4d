@@ -300,5 +300,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage Moment();
     public BasicReturn MomentEdit(StaticFirstPage data);
+
+    public StaticFirstPage ExistentialPain();
+    public BasicReturn ExistentialPainEdit(StaticFirstPage data);
   }
 }
