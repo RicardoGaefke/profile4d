@@ -282,5 +282,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage EssentialFeature();
     public BasicReturn EssentialFeatureEdit(StaticFirstPage data);
+
+    public StaticFirstPage DomProfile();
+    public BasicReturn DomProfileEdit(StaticFirstPage data);
   }
 }
