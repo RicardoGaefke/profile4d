@@ -216,10 +216,9 @@ import DyObservationFifteenEdit from '../DyObservationFifteen/Edit/Page';
 import DyObservationSixteen from '../DyObservationSixteen/Questions';
 import DyObservationSixteenAdd from '../DyObservationSixteen/Add/Add';
 import DyObservationSixteenEdit from '../DyObservationSixteen/Edit/Page';
-
-// import DyObservationSeventeen from '../DyObservationSeventeen/Questions';
-// import DyObservationSeventeenAdd from '../DyObservationSeventeen/Add/Add';
-// import DyObservationSeventeenEdit from '../DyObservationSeventeen/Edit/Page';
+import DyObservationSeventeen from '../DyObservationSeventeen/Questions';
+import DyObservationSeventeenAdd from '../DyObservationSeventeen/Add/Add';
+import DyObservationSeventeenEdit from '../DyObservationSeventeen/Edit/Page';
 
 // import DyObservationEighteen from '../DyObservationEighteen/Questions';
 // import DyObservationEighteenAdd from '../DyObservationEighteen/Add/Add';
@@ -453,10 +452,9 @@ export default withRouter(
         <Route path={`${match.url}/dyObservationSixteen`} exact component={DyObservationSixteen} />
         <Route path={`${match.url}/dyObservationSixteen/add`} component={DyObservationSixteenAdd} />
         <Route path={`${match.url}/dyObservationSixteen/edit/:id`} component={DyObservationSixteenEdit} />
-
-        {/* <Route path={`${match.url}/dyObservationSeventeen`} exact component={DyObservationSeventeen} />
+        <Route path={`${match.url}/dyObservationSeventeen`} exact component={DyObservationSeventeen} />
         <Route path={`${match.url}/dyObservationSeventeen/add`} component={DyObservationSeventeenAdd} />
-        <Route path={`${match.url}/dyObservationSeventeen/edit/:id`} component={DyObservationSeventeenEdit} /> */}
+        <Route path={`${match.url}/dyObservationSeventeen/edit/:id`} component={DyObservationSeventeenEdit} />
 
         {/* <Route path={`${match.url}/dyObservationEighteen`} exact component={DyObservationEighteen} />
         <Route path={`${match.url}/dyObservationEighteen/add`} component={DyObservationEighteenAdd} />
