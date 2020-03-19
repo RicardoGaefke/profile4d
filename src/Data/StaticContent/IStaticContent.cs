@@ -282,5 +282,65 @@ namespace Profile4d.Data
 
     public StaticFirstPage EssentialFeature();
     public BasicReturn EssentialFeatureEdit(StaticFirstPage data);
+
+    public StaticFirstPage DomProfile();
+    public BasicReturn DomProfileEdit(StaticFirstPage data);
+
+    public StaticFirstPage BigChallenge();
+    public BasicReturn BigChallengeEdit(StaticFirstPage data);
+
+    public StaticFirstPage WorkKey();
+    public BasicReturn WorkKeyEdit(StaticFirstPage data);
+
+    public StaticFirstPage IdealPartner();
+    public BasicReturn IdealPartnerEdit(StaticFirstPage data);
+
+    public StaticFirstPage CharacterFormation();
+    public BasicReturn CharacterFormationEdit(StaticFirstPage data);
+
+    public StaticFirstPage Moment();
+    public BasicReturn MomentEdit(StaticFirstPage data);
+
+    public StaticFirstPage ExistentialPain();
+    public BasicReturn ExistentialPainEdit(StaticFirstPage data);
+
+    public StaticFirstPage NoteExistentialPain();
+    public BasicReturn NoteExistentialPainEdit(StaticFirstPage data);
+
+    public StaticFirstPage CrystallizationPersonality();
+    public BasicReturn CrystallizationPersonalityEdit(StaticFirstPage data);
+
+    public StaticFirstPage BodyStructureFixed();
+    public BasicReturn BodyStructureFixedEdit(StaticFirstPage data);
+
+    public StaticFirstPage BodyShape();
+    public BasicReturn BodyShapeEdit(StaticFirstPage data);
+
+    public StaticFirstPage BodyCharacters();
+    public BasicReturn BodyCharactersEdit(StaticFirstPage data);
+
+    public StaticFirstPage MainVirtueEssence();
+    public BasicReturn MainVirtueEssenceEdit(StaticFirstPage data);
+
+    public StaticFirstPage BenefitsVirtueEssence();
+    public BasicReturn BenefitsVirtueEssenceEdit(StaticFirstPage data);
+
+    public StaticFirstPage TwelveCharacterAdultStrengths();
+    public BasicReturn TwelveCharacterAdultStrengthsEdit(StaticFirstPage data);
+
+    public StaticFirstPage ProfessionalAnalyze();
+    public BasicReturn ProfessionalAnalyzeEdit(StaticFirstPage data);
+
+    public StaticFirstPage TwelveCompetencesApresentation();
+    public BasicReturn TwelveCompetencesApresentationEdit(StaticFirstPage data);
+
+    public StaticFirstPage ThreeDimensions();
+    public BasicReturn ThreeDimensionsEdit(StaticFirstPage data);
+
+    public StaticFirstPage FourCompetentStages();
+    public BasicReturn FourCompetentStagesEdit(StaticFirstPage data);
+
+    public StaticFirstPage Observation();
+    public BasicReturn ObservationEdit(StaticFirstPage data);
   }
 }
