@@ -336,5 +336,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage ThreeDimensions();
     public BasicReturn ThreeDimensionsEdit(StaticFirstPage data);
+
+    public StaticFirstPage FourCompetentStages();
+    public BasicReturn FourCompetentStagesEdit(StaticFirstPage data);
   }
 }
