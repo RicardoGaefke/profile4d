@@ -309,5 +309,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage CrystallizationPersonality();
     public BasicReturn CrystallizationPersonalityEdit(StaticFirstPage data);
+
+    public StaticFirstPage BodyStructureFixed();
+    public BasicReturn BodyStructureFixedEdit(StaticFirstPage data);
   }
 }
