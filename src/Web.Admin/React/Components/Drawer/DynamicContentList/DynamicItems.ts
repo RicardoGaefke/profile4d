@@ -264,47 +264,44 @@ export default [
     link: 'dyObservationEleven',
     title: 'dyObservationEleven',
   },
-
-  //
-
+  {
+    link: 'dyObservationTwelve',
+    title: 'dyObservationTwelve',
+  },
   // {
-  //   link: 'dyobservationTwelve',
-  //   title: 'dyobservationTwelve',
+  //   link: 'dyObservationThirteen',
+  //   title: 'dyObservationThirteen',
   // },
   // {
-  //   link: 'dyobservationThirteen',
-  //   title: 'dyobservationThirteen',
+  //   link: 'dyObservationFourteen',
+  //   title: 'dyObservationFourteen',
   // },
   // {
-  //   link: 'dyobservationFourteen',
-  //   title: 'dyobservationFourteen',
+  //   link: 'dyObservationFifteen',
+  //   title: 'dyObservationFifteen',
   // },
   // {
-  //   link: 'dyobservationFifteen',
-  //   title: 'dyobservationFifteen',
+  //   link: 'dyObservationSixteen',
+  //   title: 'dyObservationSixteen',
   // },
   // {
-  //   link: 'dyobservationSixteen',
-  //   title: 'dyobservationSixteen',
+  //   link: 'dyObservationSeventeen',
+  //   title: 'dyObservationSeventeen',
   // },
   // {
-  //   link: 'dyobservationSeventeen',
-  //   title: 'dyobservationSeventeen',
+  //   link: 'dyObservationEighteen',
+  //   title: 'dyObservationEighteen',
   // },
   // {
-  //   link: 'dyobservationEighteen',
-  //   title: 'dyobservationEighteen',
+  //   link: 'dyObservationNineteen',
+  //   title: 'dyObservationNineteen',
   // },
   // {
-  //   link: 'dyobservationNineteen',
-  //   title: 'dyobservationNineteen',
+  //   link: 'dyObservationTwenty',
+  //   title: 'dyObservationTwenty',
   // },
   // {
-  //   link: 'dyobservationTwenty',
-  //   title: 'dyobservationTwenty',
-  // },
-  // {
-  //   link: 'dyobservationTwentyOne',
-  //   title: 'dyobservationTwentyOne',
+  //   link: 'dyObservationTwentyOne',
+  //   title: 'dyObservationTwentyOne',
   // },
 ] as IStaticMenuItem[];
