@@ -316,10 +316,10 @@ export default [
     link: 'dyObservationTwentyFour',
     title: 'dyObservationTwentyFour',
   },
-  // {
-  //   link: 'domProfileTwo',
-  //   title: 'domProfileTwo',
-  // },
+  {
+    link: 'domProfileTwo',
+    title: 'domProfileTwo',
+  },
   // {
   //   link: 'partnerOne',
   //   title: 'partnerOne',
