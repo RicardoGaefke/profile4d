@@ -8,7 +8,7 @@
     "lint-fix": "./node_modules/.bin/eslint \"React/**/*.*s*\" --fix",
     "start": "dotnet run --urls=https://localhost:5060/",
     "build": "webpack --config webpack.dev.js --progress --color",
-    "production": "webpack --config webpack.prod.js --max-old-space-size=8192",
+    "production": "webpack --config webpack.prod.js --max-old-space-size=16384",
     "storybook": "start-storybook -p 9001 -c .storybook -s ./wwwroot",
     "test": "mocha -r ts-mocha React/Components/**/**/**.test.tsx --require @babel/polyfill --require jsdom-global/register --expose-gc --max-old-space-size=8192",
     "test:coverage": "nyc npm run test",
