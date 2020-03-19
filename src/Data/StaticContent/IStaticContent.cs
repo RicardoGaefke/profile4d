@@ -318,5 +318,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage BodyCharacters();
     public BasicReturn BodyCharactersEdit(StaticFirstPage data);
+
+    public StaticFirstPage MainVirtueEssence();
+    public BasicReturn MainVirtueEssenceEdit(StaticFirstPage data);
   }
 }
