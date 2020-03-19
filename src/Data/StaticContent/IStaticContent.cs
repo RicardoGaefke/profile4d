@@ -330,5 +330,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage ProfessionalAnalyze();
     public BasicReturn ProfessionalAnalyzeEdit(StaticFirstPage data);
+
+    public StaticFirstPage TwelveCompetencesApresentation();
+    public BasicReturn TwelveCompetencesApresentationEdit(StaticFirstPage data);
   }
 }
