@@ -228,10 +228,9 @@ import DyObservationNineteenEdit from '../DyObservationNineteen/Edit/Page';
 import DyObservationTwenty from '../DyObservationTwenty/Questions';
 import DyObservationTwentyAdd from '../DyObservationTwenty/Add/Add';
 import DyObservationTwentyEdit from '../DyObservationTwenty/Edit/Page';
-
-// import DyObservationTwentyOne from '../DyObservationTwentyOne/Questions';
-// import DyObservationTwentyOneAdd from '../DyObservationTwentyOne/Add/Add';
-// import DyObservationTwentyOneEdit from '../DyObservationTwentyOne/Edit/Page';
+import DyObservationTwentyOne from '../DyObservationTwentyOne/Questions';
+import DyObservationTwentyOneAdd from '../DyObservationTwentyOne/Add/Add';
+import DyObservationTwentyOneEdit from '../DyObservationTwentyOne/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -461,10 +460,9 @@ export default withRouter(
         <Route path={`${match.url}/dyObservationTwenty`} exact component={DyObservationTwenty} />
         <Route path={`${match.url}/dyObservationTwenty/add`} component={DyObservationTwentyAdd} />
         <Route path={`${match.url}/dyObservationTwenty/edit/:id`} component={DyObservationTwentyEdit} />
-
-        {/* <Route path={`${match.url}/dyObservationTwentyOne`} exact component={DyObservationTwentyOne} />
+        <Route path={`${match.url}/dyObservationTwentyOne`} exact component={DyObservationTwentyOne} />
         <Route path={`${match.url}/dyObservationTwentyOne/add`} component={DyObservationTwentyOneAdd} />
-        <Route path={`${match.url}/dyObservationTwentyOne/edit/:id`} component={DyObservationTwentyOneEdit} /> */}
+        <Route path={`${match.url}/dyObservationTwentyOne/edit/:id`} component={DyObservationTwentyOneEdit} />
       </MyTemplate>
     );
   },

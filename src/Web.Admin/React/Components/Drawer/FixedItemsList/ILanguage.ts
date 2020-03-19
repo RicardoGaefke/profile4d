@@ -229,5 +229,5 @@ export interface ILanguage {
   dyObservationEighteen: string,
   dyObservationNineteen: string,
   dyObservationTwenty: string,
-  // dyObservationTwentyOne: string,
+  dyObservationTwentyOne: string,
 }

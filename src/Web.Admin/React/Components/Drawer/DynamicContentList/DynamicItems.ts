@@ -300,8 +300,8 @@ export default [
     link: 'dyObservationTwenty',
     title: 'dyObservationTwenty',
   },
-  // {
-  //   link: 'dyObservationTwentyOne',
-  //   title: 'dyObservationTwentyOne',
-  // },
+  {
+    link: 'dyObservationTwentyOne',
+    title: 'dyObservationTwentyOne',
+  },
 ] as IStaticMenuItem[];

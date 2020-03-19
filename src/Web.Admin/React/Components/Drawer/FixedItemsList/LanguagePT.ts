@@ -233,5 +233,5 @@ export default {
   dyObservationEighteen: 'Observação 2',
   dyObservationNineteen: 'Observação 1',
   dyObservationTwenty: 'Observação 2',
-  // dyObservationTwentyOne: 'Observação 1',
+  dyObservationTwentyOne: 'Observação 1',
 } as ILanguage;
