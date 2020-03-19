@@ -333,5 +333,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage TwelveCompetencesApresentation();
     public BasicReturn TwelveCompetencesApresentationEdit(StaticFirstPage data);
+
+    public StaticFirstPage ThreeDimensions();
+    public BasicReturn ThreeDimensionsEdit(StaticFirstPage data);
   }
 }
