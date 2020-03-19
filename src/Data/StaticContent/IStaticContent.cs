@@ -303,5 +303,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage ExistentialPain();
     public BasicReturn ExistentialPainEdit(StaticFirstPage data);
+
+    public StaticFirstPage NoteExistentialPain();
+    public BasicReturn NoteExistentialPainEdit(StaticFirstPage data);
   }
 }
