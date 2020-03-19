@@ -230,4 +230,12 @@ export interface ILanguage {
   dyObservationNineteen: string,
   dyObservationTwenty: string,
   dyObservationTwentyOne: string,
+  // dyObservationTwentyTwo: string,
+  // dyObservationTwentyThree: string,
+  // dyObservationTwentyFour: string,
+  // domProfileTwo: string,
+  // partnerOne: string,
+  // partnerTwo: string,
+  // idealPartner: string,
+  // behavioralResources: string,
 }

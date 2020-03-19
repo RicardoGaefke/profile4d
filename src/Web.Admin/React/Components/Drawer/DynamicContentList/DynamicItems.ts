@@ -304,4 +304,36 @@ export default [
     link: 'dyObservationTwentyOne',
     title: 'dyObservationTwentyOne',
   },
+  // {
+  //   link: 'dyObservationTwentyTwo',
+  //   title: 'dyObservationTwentyTwo',
+  // },
+  // {
+  //   link: 'dyObservationTwentyThree',
+  //   title: 'dyObservationTwentyThree',
+  // },
+  // {
+  //   link: 'dyObservationTwentyFour',
+  //   title: 'dyObservationTwentyFour',
+  // },
+  // {
+  //   link: 'domProfileTwo',
+  //   title: 'domProfileTwo',
+  // },
+  // {
+  //   link: 'partnerOne',
+  //   title: 'partnerOne',
+  // },
+  // {
+  //   link: 'partnerTwo',
+  //   title: 'partnerTwo',
+  // },
+  // {
+  //   link: 'idealPartner',
+  //   title: 'idealPartner',
+  // },
+  // {
+  //   link: 'behavioralResources',
+  //   title: 'behavioralResources',
+  // },
 ] as IStaticMenuItem[];

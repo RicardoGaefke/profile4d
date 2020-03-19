@@ -232,6 +232,38 @@ import DyObservationTwentyOne from '../DyObservationTwentyOne/Questions';
 import DyObservationTwentyOneAdd from '../DyObservationTwentyOne/Add/Add';
 import DyObservationTwentyOneEdit from '../DyObservationTwentyOne/Edit/Page';
 
+// import DyObservationTwentyTwo from '../DyObservationTwentyTwo/Questions';
+// import DyObservationTwentyTwoAdd from '../DyObservationTwentyTwo/Add/Add';
+// import DyObservationTwentyTwoEdit from '../DyObservationTwentyTwo/Edit/Page';
+
+// import DyObservationTwentyThree from '../DyObservationTwentyThree/Questions';
+// import DyObservationTwentyThreeAdd from '../DyObservationTwentyThree/Add/Add';
+// import DyObservationTwentyThreeEdit from '../DyObservationTwentyThree/Edit/Page';
+
+// import DyObservationTwentyFour from '../DyObservationTwentyFour/Questions';
+// import DyObservationTwentyFourAdd from '../DyObservationTwentyFour/Add/Add';
+// import DyObservationTwentyFourEdit from '../DyObservationTwentyFour/Edit/Page';
+
+// import DomProfileTwo from '../DomProfileTwo/Questions';
+// import DomProfileTwoAdd from '../DomProfileTwo/Add/Add';
+// import DomProfileTwoEdit from '../DomProfileTwo/Edit/Page';
+
+// import PartnerOne from '../PartnerOne/Questions';
+// import PartnerOneAdd from '../PartnerOne/Add/Add';
+// import PartnerOneEdit from '../PartnerOne/Edit/Page';
+
+// import PartnerTwo from '../PartnerTwo/Questions';
+// import PartnerTwoAdd from '../PartnerTwo/Add/Add';
+// import PartnerTwoEdit from '../PartnerTwo/Edit/Page';
+
+// import IdealPartner from '../IdealPartner/Questions';
+// import IdealPartnerAdd from '../IdealPartner/Add/Add';
+// import IdealPartnerEdit from '../IdealPartner/Edit/Page';
+
+// import BehavioralResources from '../BehavioralResources/Questions';
+// import BehavioralResourcesAdd from '../BehavioralResources/Add/Add';
+// import BehavioralResourcesEdit from '../BehavioralResources/Edit/Page';
+
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
     const { match } = props;
@@ -463,6 +495,38 @@ export default withRouter(
         <Route path={`${match.url}/dyObservationTwentyOne`} exact component={DyObservationTwentyOne} />
         <Route path={`${match.url}/dyObservationTwentyOne/add`} component={DyObservationTwentyOneAdd} />
         <Route path={`${match.url}/dyObservationTwentyOne/edit/:id`} component={DyObservationTwentyOneEdit} />
+
+        {/* <Route path={`${match.url}/dyObservationTwentyTwo`} exact component={DyObservationTwentyTwo} />
+        <Route path={`${match.url}/dyObservationTwentyTwo/add`} component={DyObservationTwentyTwoAdd} />
+        <Route path={`${match.url}/dyObservationTwentyTwo/edit/:id`} component={DyObservationTwentyTwoEdit} /> */}
+
+        {/* <Route path={`${match.url}/dyObservationTwentyThree`} exact component={DyObservationTwentyThree} />
+        <Route path={`${match.url}/dyObservationTwentyThree/add`} component={DyObservationTwentyThreeAdd} />
+        <Route path={`${match.url}/dyObservationTwentyThree/edit/:id`} component={DyObservationTwentyThreeEdit} /> */}
+
+        {/* <Route path={`${match.url}/dyObservationTwentyFour`} exact component={DyObservationTwentyFour} />
+        <Route path={`${match.url}/dyObservationTwentyFour/add`} component={DyObservationTwentyFourAdd} />
+        <Route path={`${match.url}/dyObservationTwentyFour/edit/:id`} component={DyObservationTwentyFourEdit} /> */}
+
+        {/* <Route path={`${match.url}/domProfileTwo`} exact component={DomProfileTwo} />
+        <Route path={`${match.url}/domProfileTwo/add`} component={DomProfileTwoAdd} />
+        <Route path={`${match.url}/domProfileTwo/edit/:id`} component={DomProfileTwoEdit} /> */}
+
+        {/* <Route path={`${match.url}/partnerOne} exact component={PartnerOne} />
+        <Route path={`${match.url}/partnerOne/add`} component={PartnerOneAdd} />
+        <Route path={`${match.url}/partnerOne/edit/:id`} component={PartnerOneEdit} /> */}
+
+        {/* <Route path={`${match.url}/partnerTwo`} exact component={PartnerTwo} />
+        <Route path={`${match.url}/partnerTwo/add`} component={PartnerTwoAdd} />
+        <Route path={`${match.url}/partnerTwo/edit/:id`} component={PartnerTwoEdit} /> */}
+
+        {/* <Route path={`${match.url}/idealPartner`} exact component={IdealPartner} />
+        <Route path={`${match.url}/idealPartner/add`} component={IdealPartnerAdd} />
+        <Route path={`${match.url}/idealPartner/edit/:id`} component={IdealPartnerEdit} /> */}
+
+        {/* <Route path={`${match.url}/behavioralResources`} exact component={BehavioralResources} />
+        <Route path={`${match.url}/behavioralResources/add`} component={BehavioralResourcesAdd} />
+        <Route path={`${match.url}/behavioralResources/edit/:id`} component={BehavioralResourcesEdit} /> */}
       </MyTemplate>
     );
   },

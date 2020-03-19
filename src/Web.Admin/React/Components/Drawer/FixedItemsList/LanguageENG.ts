@@ -234,4 +234,12 @@ export default {
   dyObservationNineteen: 'Observation 1',
   dyObservationTwenty: 'Observation 2',
   dyObservationTwentyOne: 'Observation 1',
+  // dyObservationTwentyTwo: 'Observation 2',
+  // dyObservationTwentyThree: 'Observation 1',
+  // dyObservationTwentyFour: 'Observation 2',
+  // domProfileTwo: 'Dominant profile',
+  // partnerOne: 'Partner 1',
+  // partnerTwo: 'Partner 2',
+  // idealPartner: 'Ideal partner',
+  // behavioralResources: 'Features of your behavioral profile',
 } as ILanguage;
