@@ -184,44 +184,124 @@ export default [
     link: 'bigChallenge',
     title: 'bigChallenge',
   },
+  {
+    link: 'keyWork',
+    title: 'keyWork',
+  },
+  {
+    link: 'idealPart',
+    title: 'idealPart',
+  },
+  {
+    link: 'yourMoment',
+    title: 'yourMoment',
+  },
+  {
+    link: 'existentialPain',
+    title: 'existentialPain',
+  },
+  {
+    link: 'cristallyzationProcess',
+    title: 'cristallyzationProcess',
+  },
+  {
+    link: 'bodyShape',
+    title: 'bodyShape',
+  },
+  {
+    link: 'yourDevelopment',
+    title: 'yourDevelopment',
+  },
+  {
+    link: 'benefitsContact',
+    title: 'benefitsContact',
+  },
+  {
+    link: 'twelveForces',
+    title: 'twelveForces',
+  },
+  {
+    link: 'dyObservationOne',
+    title: 'dyObservationOne',
+  },
+  {
+    link: 'dyObservationTwo',
+    title: 'dyObservationTwo',
+  },
+  {
+    link: 'dyObservationThree',
+    title: 'dyObservationThree',
+  },
+  {
+    link: 'dyObservationFour',
+    title: 'dyObservationFour',
+  },
+  {
+    link: 'dyObservationFive',
+    title: 'dyObservationFive',
+  },
+  {
+    link: 'dyObservationSix',
+    title: 'dyObservationSix',
+  },
+  {
+    link: 'dyObservationSeven',
+    title: 'dyObservationSeven',
+  },
+  {
+    link: 'dyObservationEight',
+    title: 'dyObservationEight',
+  },
+  {
+    link: 'dyObservationNine',
+    title: 'dyObservationNine',
+  },
+  {
+    link: 'dyObservationTen',
+    title: 'dyObservationTen',
+  },
+  {
+    link: 'dyObservationEleven',
+    title: 'dyObservationEleven',
+  },
+  {
+    link: 'dyObservationTwelve',
+    title: 'dyObservationTwelve',
+  },
   // {
-  //   link: 'keyWork',
-  //   title: 'keyWork',
+  //   link: 'dyObservationThirteen',
+  //   title: 'dyObservationThirteen',
   // },
   // {
-  //   link: 'idealPart',
-  //   title: 'idealPart',
+  //   link: 'dyObservationFourteen',
+  //   title: 'dyObservationFourteen',
   // },
   // {
-  //   link: 'yourMoment',
-  //   title: 'yourMoment',
+  //   link: 'dyObservationFifteen',
+  //   title: 'dyObservationFifteen',
   // },
   // {
-  //   link: 'existentialPain',
-  //   title: 'existentialPain',
+  //   link: 'dyObservationSixteen',
+  //   title: 'dyObservationSixteen',
   // },
   // {
-  //   link: 'cristallyzationProcess',
-  //   title: 'cristallyzationProcess',
+  //   link: 'dyObservationSeventeen',
+  //   title: 'dyObservationSeventeen',
   // },
   // {
-  //   link: 'bodyShape',
-  //   title: 'bodyShape',
+  //   link: 'dyObservationEighteen',
+  //   title: 'dyObservationEighteen',
   // },
   // {
-  //   link: 'yourDevelopment',
-  //   title: 'yourDevelopment',
+  //   link: 'dyObservationNineteen',
+  //   title: 'dyObservationNineteen',
   // },
   // {
-  //   link: 'benefitsContact',
-  //   title: 'benefitsContact',
+  //   link: 'dyObservationTwenty',
+  //   title: 'dyObservationTwenty',
   // },
   // {
-  //   link: 'twelveForces',
-  //   title: 'twelveForces',
-  // },
-  // {
-  //   link: 'dyobservationOne',
-  //   title: 'dyobservationOne',
+  //   link: 'dyObservationTwentyOne',
+  //   title: 'dyObservationTwentyOne',
   // },
 ] as IStaticMenuItem[];

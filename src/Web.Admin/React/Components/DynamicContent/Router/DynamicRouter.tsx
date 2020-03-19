@@ -75,8 +75,6 @@ import NeuroticCompulsionEdit from '../NeuroticCompulsion/Edit/Page';
 import DefenseMecanism from '../DefenseMecanism/Questions';
 import DefenseMecanismAdd from '../DefenseMecanism/Add/Add';
 import DefenseMecanismEdit from '../DefenseMecanism/Edit/Page';
-
-
 import CompetentMode from '../CompetentMode/Questions';
 import CompetentModeAdd from '../CompetentMode/Add/Add';
 import CompetentModeEdit from '../CompetentMode/Edit/Page';
@@ -143,46 +141,107 @@ import DomProfileOneEdit from '../DomProfileOne/Edit/Page';
 import BigChallenge from '../BigChallenge/Questions';
 import BigChallengeAdd from '../BigChallenge/Add/Add';
 import BigChallengeEdit from '../BigChallenge/Edit/Page';
+import KeyWork from '../KeyWork/Questions';
+import KeyWorkAdd from '../KeyWork/Add/Add';
+import KeyWorkEdit from '../KeyWork/Edit/Page';
+import IdealPart from '../IdealPart/Questions';
+import IdealPartAdd from '../IdealPart/Add/Add';
+import IdealPartEdit from '../IdealPart/Edit/Page';
+import YourMoment from '../YourMoment/Questions';
+import YourMomentAdd from '../YourMoment/Add/Add';
+import YourMomentEdit from '../YourMoment/Edit/Page';
+import ExistentialPain from '../ExistentialPain/Questions';
+import ExistentialPainAdd from '../ExistentialPain/Add/Add';
+import ExistentialPainEdit from '../ExistentialPain/Edit/Page';
+import CristallyzationProcess from '../CristallyzationProcess/Questions';
+import CristallyzationProcessAdd from '../CristallyzationProcess/Add/Add';
+import CristallyzationProcessEdit from '../CristallyzationProcess/Edit/Page';
+import BodyShape from '../BodyShape/Questions';
+import BodyShapeAdd from '../BodyShape/Add/Add';
+import BodyShapeEdit from '../BodyShape/Edit/Page';
+import YourDevelopment from '../YourDevelopment/Questions';
+import YourDevelopmentAdd from '../YourDevelopment/Add/Add';
+import YourDevelopmentEdit from '../YourDevelopment/Edit/Page';
+import BenefitsContact from '../BenefitsContact/Questions';
+import BenefitsContactAdd from '../BenefitsContact/Add/Add';
+import BenefitsContactEdit from '../BenefitsContact/Edit/Page';
+import TwelveForces from '../TwelveForces/Questions';
+import TwelveForcesAdd from '../TwelveForces/Add/Add';
+import TwelveForcesEdit from '../TwelveForces/Edit/Page';
+import DyObservationOne from '../DyObservationOne/Questions';
+import DyObservationOneAdd from '../DyObservationOne/Add/Add';
+import DyObservationOneEdit from '../DyObservationOne/Edit/Page';
+import DyObservationTwo from '../DyObservationTwo/Questions';
+import DyObservationTwoAdd from '../DyObservationTwo/Add/Add';
+import DyObservationTwoEdit from '../DyObservationTwo/Edit/Page';
+import DyObservationThree from '../DyObservationThree/Questions';
+import DyObservationThreeAdd from '../DyObservationThree/Add/Add';
+import DyObservationThreeEdit from '../DyObservationThree/Edit/Page';
+import DyObservationFour from '../DyObservationFour/Questions';
+import DyObservationFourAdd from '../DyObservationFour/Add/Add';
+import DyObservationFourEdit from '../DyObservationFour/Edit/Page';
+import DyObservationFive from '../DyObservationFive/Questions';
+import DyObservationFiveAdd from '../DyObservationFive/Add/Add';
+import DyObservationFiveEdit from '../DyObservationFive/Edit/Page';
+import DyObservationSix from '../DyObservationSix/Questions';
+import DyObservationSixAdd from '../DyObservationSix/Add/Add';
+import DyObservationSixEdit from '../DyObservationSix/Edit/Page';
+import DyObservationSeven from '../DyObservationSeven/Questions';
+import DyObservationSevenAdd from '../DyObservationSeven/Add/Add';
+import DyObservationSevenEdit from '../DyObservationSeven/Edit/Page';
+import DyObservationEight from '../DyObservationEight/Questions';
+import DyObservationEightAdd from '../DyObservationEight/Add/Add';
+import DyObservationEightEdit from '../DyObservationEight/Edit/Page';
+import DyObservationNine from '../DyObservationNine/Questions';
+import DyObservationNineAdd from '../DyObservationNine/Add/Add';
+import DyObservationNineEdit from '../DyObservationNine/Edit/Page';
+import DyObservationTen from '../DyObservationTen/Questions';
+import DyObservationTenAdd from '../DyObservationTen/Add/Add';
+import DyObservationTenEdit from '../DyObservationTen/Edit/Page';
+import DyObservationEleven from '../DyObservationEleven/Questions';
+import DyObservationElevenAdd from '../DyObservationEleven/Add/Add';
+import DyObservationElevenEdit from '../DyObservationEleven/Edit/Page';
 
-// import KeyWork from '../KeyWork/Questions';
-// import KeyWorkAdd from '../KeyWork/Add/Add';
-// import KeyWorkEdit from '../KeyWork/Edit/Page';
 
-// import IdealPart from '../IdealPart/Questions';
-// import IdealPartAdd from '../IdealPart/Add/Add';
-// import IdealPartEdit from '../IdealPart/Edit/Page';
+// import DyObservationTwelve from '../DyObservationTwelve/Questions';
+// import DyObservationTwelveAdd from '../DyObservationTwelve/Add/Add';
+// import DyObservationTwelveEdit from '../DyObservationTwelve/Edit/Page';
 
-// import YourMoment from '../YourMoment/Questions';
-// import YourMomentAdd from '../YourMoment/Add/Add';
-// import YourMomentEdit from '../YourMoment/Edit/Page';
+// import DyObservationThirteen from '../DyObservationThirteen/Questions';
+// import DyObservationThirteenAdd from '../DyObservationThirteen/Add/Add';
+// import DyObservationThirteenEdit from '../DyObservationThirteen/Edit/Page';
 
-// import ExistentialPain from '../ExistentialPain/Questions';
-// import ExistentialPainAdd from '../ExistentialPain/Add/Add';
-// import ExistentialPainEdit from '../ExistentialPain/Edit/Page';
+// import DyObservationFourteen from '../DyObservationFourteen/Questions';
+// import DyObservationFourteenAdd from '../DyObservationFourteen/Add/Add';
+// import DyObservationFourteenEdit from '../DyObservationFourteen/Edit/Page';
 
-// import CristallyzationProcess from '../CristallyzationProcess/Questions';
-// import CristallyzationProcessAdd from '../CristallyzationProcess/Add/Add';
-// import CristallyzationProcessEdit from '../CristallyzationProcess/Edit/Page';
+// import DyObservationFifteen from '../DyObservationFifteen/Questions';
+// import DyObservationFifteenAdd from '../DyObservationFifteen/Add/Add';
+// import DyObservationFifteenEdit from '../DyObservationFifteen/Edit/Page';
 
-// import BodyShape from '../BodyShape/Questions';
-// import BodyShapeAdd from '../BodyShape/Add/Add';
-// import BodyShapeEdit from '../BodyShape/Edit/Page';
+// import DyObservationSixteen from '../DyObservationSixteen/Questions';
+// import DyObservationSixteenAdd from '../DyObservationSixteen/Add/Add';
+// import DyObservationSixteenEdit from '../DyObservationSixteen/Edit/Page';
 
-// import YourDevelopment from '../YourDevelopment/Questions';
-// import YourDevelopmentAdd from '../YourDevelopment/Add/Add';
-// import YourDevelopmentEdit from '../YourDevelopment/Edit/Page';
+// import DyObservationSeventeen from '../DyObservationSeventeen/Questions';
+// import DyObservationSeventeenAdd from '../DyObservationSeventeen/Add/Add';
+// import DyObservationSeventeenEdit from '../DyObservationSeventeen/Edit/Page';
 
-// import BenefitsContact from '../BenefitsContact/Questions';
-// import BenefitsContactAdd from '../BenefitsContact/Add/Add';
-// import BenefitsContactEdit from '../BenefitsContact/Edit/Page';
+// import DyObservationEighteen from '../DyObservationEighteen/Questions';
+// import DyObservationEighteenAdd from '../DyObservationEighteen/Add/Add';
+// import DyObservationEighteenEdit from '../DyObservationEighteen/Edit/Page';
 
-// import TwelveForces from '../TwelveForces/Questions';
-// import TwelveForcesAdd from '../TwelveForces/Add/Add';
-// import TwelveForcesEdit from '../TwelveForces/Edit/Page';
+// import DyObservationNineteen from '../DyObservationNineteen/Questions';
+// import DyObservationNineteenAdd from '../DyObservationNineteen/Add/Add';
+// import DyObservationNineteenEdit from '../DyObservationNineteen/Edit/Page';
 
-// import DyObservationOne from '../DyObservationOne/Questions';
-// import DyObservationOneAdd from '../DyObservationOne/Add/Add';
-// import DyObservationOneEdit from '../DyObservationOne/Edit/Page';
+// import DyObservationTwenty from '../DyObservationTwenty/Questions';
+// import DyObservationTwentyAdd from '../DyObservationTwenty/Add/Add';
+// import DyObservationTwentyEdit from '../DyObservationTwenty/Edit/Page';
+
+// import DyObservationTwentyOne from '../DyObservationTwentyOne/Questions';
+// import DyObservationTwentyOneAdd from '../DyObservationTwentyOne/Add/Add';
+// import DyObservationTwentyOneEdit from '../DyObservationTwentyOne/Edit/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -325,46 +384,108 @@ export default withRouter(
         <Route path={`${match.url}/bigChallenge`} exact component={BigChallenge} />
         <Route path={`${match.url}/bigChallenge/add`} component={BigChallengeAdd} />
         <Route path={`${match.url}/bigChallenge/edit/:id`} component={BigChallengeEdit} />
-
-        {/* <Route path={`${match.url}/keyWork`} exact component={KeyWork} />
+        <Route path={`${match.url}/keyWork`} exact component={KeyWork} />
         <Route path={`${match.url}/keyWork/add`} component={KeyWorkAdd} />
-        <Route path={`${match.url}/keyWork/edit/:id`} component={KeyWorkEdit} /> */}
-
-        {/* <Route path={`${match.url}/idealPart`} exact component={IdealPart} />
+        <Route path={`${match.url}/keyWork/edit/:id`} component={KeyWorkEdit} />
+        <Route path={`${match.url}/idealPart`} exact component={IdealPart} />
         <Route path={`${match.url}/idealPart/add`} component={IdealPartAdd} />
-        <Route path={`${match.url}/idealPart/edit/:id`} component={IdealPartEdit} /> */}
-
-        {/* <Route path={`${match.url}/yourMoment`} exact component={YourMoment} />
+        <Route path={`${match.url}/idealPart/edit/:id`} component={IdealPartEdit} />
+        <Route path={`${match.url}/yourMoment`} exact component={YourMoment} />
         <Route path={`${match.url}/yourMoment/add`} component={YourMomentAdd} />
-        <Route path={`${match.url}/yourMoment/edit/:id`} component={YourMomentEdit} /> */}
-
-        {/* <Route path={`${match.url}/existentialPain`} exact component={ExistentialPain} />
+        <Route path={`${match.url}/yourMoment/edit/:id`} component={YourMomentEdit} />
+        <Route path={`${match.url}/existentialPain`} exact component={ExistentialPain} />
         <Route path={`${match.url}/existentialPain/add`} component={ExistentialPainAdd} />
-        <Route path={`${match.url}/existentialPain/edit/:id`} component={ExistentialPainEdit} /> */}
-
-        {/* <Route path={`${match.url}/cristallyzationProcess`} exact component={CristallyzationProcess} />
+        <Route path={`${match.url}/existentialPain/edit/:id`} component={ExistentialPainEdit} />
+        <Route path={`${match.url}/cristallyzationProcess`} exact component={CristallyzationProcess} />
         <Route path={`${match.url}/cristallyzationProcess/add`} component={CristallyzationProcessAdd} />
-        <Route path={`${match.url}/cristallyzationProcess/edit/:id`} component={CristallyzationProcessEdit} /> */}
-
-        {/* <Route path={`${match.url}/bodyShape`} exact component={BodyShape} />
+        <Route path={`${match.url}/cristallyzationProcess/edit/:id`} component={CristallyzationProcessEdit} />
+        <Route path={`${match.url}/bodyShape`} exact component={BodyShape} />
         <Route path={`${match.url}/bodyShape/add`} component={BodyShapeAdd} />
-        <Route path={`${match.url}/bodyShape/edit/:id`} component={BodyShapeEdit} /> */}
-
-        {/* <Route path={`${match.url}/yourDevelopment`} exact component={YourDevelopment} />
+        <Route path={`${match.url}/bodyShape/edit/:id`} component={BodyShapeEdit} />
+        <Route path={`${match.url}/yourDevelopment`} exact component={YourDevelopment} />
         <Route path={`${match.url}/yourDevelopment/add`} component={YourDevelopmentAdd} />
-        <Route path={`${match.url}/yourDevelopment/edit/:id`} component={YourDevelopmentEdit} /> */}
-
-        {/* <Route path={`${match.url}/benefitsContact`} exact component={BenefitsContact} />
+        <Route path={`${match.url}/yourDevelopment/edit/:id`} component={YourDevelopmentEdit} />
+        <Route path={`${match.url}/benefitsContact`} exact component={BenefitsContact} />
         <Route path={`${match.url}/benefitsContact/add`} component={BenefitsContactAdd} />
-        <Route path={`${match.url}/benefitsContact/edit/:id`} component={BenefitsContactEdit} /> */}
-
-        {/* <Route path={`${match.url}/twelveForces`} exact component={TwelveForces} />
+        <Route path={`${match.url}/benefitsContact/edit/:id`} component={BenefitsContactEdit} />
+        <Route path={`${match.url}/twelveForces`} exact component={TwelveForces} />
         <Route path={`${match.url}/twelveForces/add`} component={TwelveForcesAdd} />
-        <Route path={`${match.url}/twelveForces/edit/:id`} component={TwelveForcesEdit} /> */}
-
-        {/* <Route path={`${match.url}/dyObservationOne`} exact component={DyObservationOne} />
+        <Route path={`${match.url}/twelveForces/edit/:id`} component={TwelveForcesEdit} />
+        <Route path={`${match.url}/dyObservationOne`} exact component={DyObservationOne} />
         <Route path={`${match.url}/dyObservationOne/add`} component={DyObservationOneAdd} />
-        <Route path={`${match.url}/dyObservationOne/edit/:id`} component={DyObservationOneEdit} /> */}
+        <Route path={`${match.url}/dyObservationOne/edit/:id`} component={DyObservationOneEdit} />
+        <Route path={`${match.url}/dyObservationTwo`} exact component={DyObservationTwo} />
+        <Route path={`${match.url}/dyObservationTwo/add`} component={DyObservationTwoAdd} />
+        <Route path={`${match.url}/dyObservationTwo/edit/:id`} component={DyObservationTwoEdit} />
+        <Route path={`${match.url}/dyObservationThree`} exact component={DyObservationThree} />
+        <Route path={`${match.url}/dyObservationThree/add`} component={DyObservationThreeAdd} />
+        <Route path={`${match.url}/dyObservationThree/edit/:id`} component={DyObservationThreeEdit} />
+        <Route path={`${match.url}/dyObservationFour`} exact component={DyObservationFour} />
+        <Route path={`${match.url}/dyObservationFour/add`} component={DyObservationFourAdd} />
+        <Route path={`${match.url}/dyObservationFour/edit/:id`} component={DyObservationFourEdit} />
+        <Route path={`${match.url}/dyObservationFive`} exact component={DyObservationFive} />
+        <Route path={`${match.url}/dyObservationFive/add`} component={DyObservationFiveAdd} />
+        <Route path={`${match.url}/dyObservationFive/edit/:id`} component={DyObservationFiveEdit} />
+        <Route path={`${match.url}/dyObservationSix`} exact component={DyObservationSix} />
+        <Route path={`${match.url}/dyObservationSix/add`} component={DyObservationSixAdd} />
+        <Route path={`${match.url}/dyObservationSix/edit/:id`} component={DyObservationSixEdit} />
+        <Route path={`${match.url}/dyObservationSeven`} exact component={DyObservationSeven} />
+        <Route path={`${match.url}/dyObservationSeven/add`} component={DyObservationSevenAdd} />
+        <Route path={`${match.url}/dyObservationSeven/edit/:id`} component={DyObservationSevenEdit} />
+        <Route path={`${match.url}/dyObservationEight`} exact component={DyObservationEight} />
+        <Route path={`${match.url}/dyObservationEight/add`} component={DyObservationEightAdd} />
+        <Route path={`${match.url}/dyObservationEight/edit/:id`} component={DyObservationEightEdit} />
+        <Route path={`${match.url}/dyObservationNine`} exact component={DyObservationNine} />
+        <Route path={`${match.url}/dyObservationNine/add`} component={DyObservationNineAdd} />
+        <Route path={`${match.url}/dyObservationNine/edit/:id`} component={DyObservationNineEdit} />
+        <Route path={`${match.url}/dyObservationTen`} exact component={DyObservationTen} />
+        <Route path={`${match.url}/dyObservationTen/add`} component={DyObservationTenAdd} />
+        <Route path={`${match.url}/dyObservationTen/edit/:id`} component={DyObservationTenEdit} />
+        <Route path={`${match.url}/dyObservationEleven`} exact component={DyObservationEleven} />
+        <Route path={`${match.url}/dyObservationEleven/add`} component={DyObservationElevenAdd} />
+        <Route path={`${match.url}/dyObservationEleven/edit/:id`} component={DyObservationElevenEdit} />
+
+        {/*  */}
+
+        {/* <Route path={`${match.url}/dyObservationTwelve`} exact component={DyObservationTwelve} />
+        <Route path={`${match.url}/dyObservationTwelve/add`} component={DyObservationTwelveAdd} />
+        <Route path={`${match.url}/dyObservationTwelve/edit/:id`} component={DyObservationTwelveEdit} /> */}
+
+        {/* <Route path={`${match.url}/dyObservationThirteen`} exact component={DyObservationThirteen} />
+        <Route path={`${match.url}/dyObservationThirteen/add`} component={DyObservationThirteenAdd} />
+        <Route path={`${match.url}/dyObservationThirteen/edit/:id`} component={DyObservationThirteenEdit} /> */}
+
+        {/* <Route path={`${match.url}/dyObservationFourteen`} exact component={DyObservationFourteen} />
+        <Route path={`${match.url}/dyObservationFourteen/add`} component={DyObservationFourteenAdd} />
+        <Route path={`${match.url}/dyObservationFourteen/edit/:id`} component={DyObservationFourteenEdit} /> */}
+
+        {/* <Route path={`${match.url}/dyObservationFifteen`} exact component={DyObservationFifteen} />
+        <Route path={`${match.url}/dyObservationFifteen/add`} component={DyObservationFifteenAdd} />
+        <Route path={`${match.url}/dyObservationFifteen/edit/:id`} component={DyObservationFifteenEdit} /> */}
+
+        {/* <Route path={`${match.url}/dyObservationSixteen`} exact component={DyObservationSixteen} />
+        <Route path={`${match.url}/dyObservationSixteen/add`} component={DyObservationSixteenAdd} />
+        <Route path={`${match.url}/dyObservationSixteen/edit/:id`} component={DyObservationSixteenEdit} /> */}
+
+        {/* <Route path={`${match.url}/dyObservationSeventeen`} exact component={DyObservationSeventeen} />
+        <Route path={`${match.url}/dyObservationSeventeen/add`} component={DyObservationSeventeenAdd} />
+        <Route path={`${match.url}/dyObservationSeventeen/edit/:id`} component={DyObservationSeventeenEdit} /> */}
+
+        {/* <Route path={`${match.url}/dyObservationEighteen`} exact component={DyObservationEighteen} />
+        <Route path={`${match.url}/dyObservationEighteen/add`} component={DyObservationEighteenAdd} />
+        <Route path={`${match.url}/dyObservationEighteen/edit/:id`} component={DyObservationEighteenEdit} /> */}
+
+        {/* <Route path={`${match.url}/dyObservationNineteen`} exact component={DyObservationNineteen} />
+        <Route path={`${match.url}/dyObservationNineteen/add`} component={DyObservationNineteenAdd} />
+        <Route path={`${match.url}/dyObservationNineteen/edit/:id`} component={DyObservationNineteenEdit} /> */}
+
+        {/* <Route path={`${match.url}/dyObservationTwenty`} exact component={DyObservationTwenty} />
+        <Route path={`${match.url}/dyObservationTwenty/add`} component={DyObservationTwentyAdd} />
+        <Route path={`${match.url}/dyObservationTwenty/edit/:id`} component={DyObservationTwentyEdit} /> */}
+
+        {/* <Route path={`${match.url}/dyObservationTwentyOne`} exact component={DyObservationTwentyOne} />
+        <Route path={`${match.url}/dyObservationTwentyOne/add`} component={DyObservationTwentyOneAdd} />
+        <Route path={`${match.url}/dyObservationTwentyOne/edit/:id`} component={DyObservationTwentyOneEdit} /> */}
       </MyTemplate>
     );
   },
