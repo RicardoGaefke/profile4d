@@ -232,10 +232,10 @@ export default [
     link: 'dyobservationThree',
     title: 'dyobservationThree',
   },
-  // {
-  //   link: 'dyobservationFour',
-  //   title: 'dyobservationFour',
-  // },
+  {
+    link: 'dyobservationFour',
+    title: 'dyobservationFour',
+  },
   // {
   //   link: 'dyobservationFive',
   //   title: 'dyobservationFive',
