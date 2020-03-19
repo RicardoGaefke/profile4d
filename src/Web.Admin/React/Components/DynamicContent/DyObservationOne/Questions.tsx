@@ -90,7 +90,7 @@ export default withTranslation()(
                     item
                   >
                     <Quantity
-                      minimum={9}
+                      minimum={3}
                       total={state.Questions.filter((value): boolean => {
                         if (value.Active) {
                           return true;
