@@ -12,7 +12,7 @@ const App = (): React.ReactElement => (
 );
 
 // Alterar o componente      ▼
-storiesOf('Questions.DyObservationEight', module)
+storiesOf('Questions.DyObservationNine', module)
   .addDecorator((story: any): React.ReactElement => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))

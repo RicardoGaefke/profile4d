@@ -29,7 +29,7 @@ const MyQuestion = withFormik<WithTranslation & WithSnackbarProps & RouteCompone
   handleSubmit: async (values, { setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t, history } = props;
     // alterar o webservice apenas, não a função Add               ▼
-    await myAxios(window.location.href).post<IDynamicContent>('DyObservationEight/Add', {
+    await myAxios(window.location.href).post<IDynamicContent>('DyObservationNine/Add', {
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,
@@ -43,7 +43,7 @@ const MyQuestion = withFormik<WithTranslation & WithSnackbarProps & RouteCompone
         });
 
         // voltar para a tela de lista     ▼
-        history.push('/dynamicContent/dyObservationEight');
+        history.push('/dynamicContent/dyObservationNine');
       } else {
         enqueueSnackbar(t('DynamicForm:feedback.failure'), {
           variant: 'error',
