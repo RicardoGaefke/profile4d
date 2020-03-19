@@ -218,7 +218,7 @@ export default {
   dyObservationThree: 'Observação 1',
   dyObservationFour: 'Observação 2',
   dyObservationFive: 'Observação 1',
-  // dyObservationSix: 'Observação 2',
+  dyObservationSix: 'Observação 2',
   // dyObservationSeven: 'Observação 1',
   // dyObservationEight: 'Observação 2',
   // dyObservationNine: 'Observação 1',

@@ -214,7 +214,7 @@ export interface ILanguage {
   dyObservationThree: string,
   dyObservationFour: string,
   dyObservationFive: string,
-  // dyObservationSix: string,
+  dyObservationSix: string,
   // dyObservationSeven: string,
   // dyObservationEight: string,
   // dyObservationNine: string,
