@@ -291,5 +291,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage WorkKey();
     public BasicReturn WorkKeyEdit(StaticFirstPage data);
+
+    public StaticFirstPage IdealPartner();
+    public BasicReturn IdealPartnerEdit(StaticFirstPage data);
   }
 }
