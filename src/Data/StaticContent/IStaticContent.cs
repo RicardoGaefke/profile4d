@@ -297,5 +297,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage CharacterFormation();
     public BasicReturn CharacterFormationEdit(StaticFirstPage data);
+
+    public StaticFirstPage Moment();
+    public BasicReturn MomentEdit(StaticFirstPage data);
   }
 }
