@@ -348,5 +348,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage ExcellentCompromise();
     public BasicReturn ExcellentCompromiseEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationOne();
+    public BasicReturn ObservationOneEdit(StaticFirstPage data);
   }
 }
