@@ -342,5 +342,35 @@ namespace Profile4d.Data
 
     public StaticFirstPage Observation();
     public BasicReturn ObservationEdit(StaticFirstPage data);
+
+    public StaticFirstPage TwelveCompetences();
+    public BasicReturn TwelveCompetencesEdit(StaticFirstPage data);
+
+    public StaticFirstPage ExcellentCompromise();
+    public BasicReturn ExcellentCompromiseEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationOne();
+    public BasicReturn ObservationOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTwo();
+    public BasicReturn ObservationTwoEdit(StaticFirstPage data);
+
+    public StaticFirstPage ConflictsResolution();
+    public BasicReturn ConflictsResolutionEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationThree();
+    public BasicReturn ObservationThreeEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationFour();
+    public BasicReturn ObservationFourEdit(StaticFirstPage data);
+
+    public StaticFirstPage Adaptability();
+    public BasicReturn AdaptabilityEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationFive();
+    public BasicReturn ObservationFiveEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationSix();
+    public BasicReturn ObservationSixEdit(StaticFirstPage data);
   }
 }
