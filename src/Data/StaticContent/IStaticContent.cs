@@ -378,5 +378,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage ObservationSeven();
     public BasicReturn ObservationSevenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationEight();
+    public BasicReturn ObservationEightEdit(StaticFirstPage data);
   }
 }
