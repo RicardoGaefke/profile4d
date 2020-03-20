@@ -375,5 +375,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage Proactivity();
     public BasicReturn ProactivityEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationSeven();
+    public BasicReturn ObservationSevenEdit(StaticFirstPage data);
   }
 }
