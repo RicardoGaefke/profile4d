@@ -342,5 +342,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage Observation();
     public BasicReturn ObservationEdit(StaticFirstPage data);
+
+    public StaticFirstPage TwelveCompetences();
+    public BasicReturn TwelveCompetencesEdit(StaticFirstPage data);
   }
 }
