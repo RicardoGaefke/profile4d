@@ -345,5 +345,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage TwelveCompetences();
     public BasicReturn TwelveCompetencesEdit(StaticFirstPage data);
+
+    public StaticFirstPage ExcellentCompromise();
+    public BasicReturn ExcellentCompromiseEdit(StaticFirstPage data);
   }
 }
