@@ -372,5 +372,62 @@ namespace Profile4d.Data
 
     public StaticFirstPage ObservationSix();
     public BasicReturn ObservationSixEdit(StaticFirstPage data);
+
+    public StaticFirstPage Proactivity();
+    public BasicReturn ProactivityEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationSeven();
+    public BasicReturn ObservationSevenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationEight();
+    public BasicReturn ObservationEightEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationNine();
+    public BasicReturn ObservationNineEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTen();
+    public BasicReturn ObservationTenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationEleven();
+    public BasicReturn ObservationElevenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTwelve();
+    public BasicReturn ObservationTwelveEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationThirteen();
+    public BasicReturn ObservationThirteenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationFourteen();
+    public BasicReturn ObservationFourteenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationFifteen();
+    public BasicReturn ObservationFifteenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationSixteen();
+    public BasicReturn ObservationSixteenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationSeventeen();
+    public BasicReturn ObservationSeventeenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationEighteen();
+    public BasicReturn ObservationEighteenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationNineteen();
+    public BasicReturn ObservationNineteenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTwenty();
+    public BasicReturn ObservationTwentyEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTwentyOne();
+    public BasicReturn ObservationTwentyOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTwentyTwo();
+    public BasicReturn ObservationTwentyTwoEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTwentyThree();
+    public BasicReturn ObservationTwentyThreeEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTwentyFour();
+    public BasicReturn ObservationTwentyFourEdit(StaticFirstPage data);
   }
 }
