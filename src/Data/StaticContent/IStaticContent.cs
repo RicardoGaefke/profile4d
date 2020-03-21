@@ -432,5 +432,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage InternationalRelationship();
     public BasicReturn InternationalRelationshipEdit(StaticFirstPage data);
+
+    public StaticFirstPage ClientOrientation();
+    public BasicReturn ClientOrientationEdit(StaticFirstPage data);
   }
 }
