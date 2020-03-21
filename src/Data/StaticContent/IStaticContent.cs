@@ -441,5 +441,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage NegotiationPersuation();
     public BasicReturn NegotiationPersuationEdit(StaticFirstPage data);
+
+    public StaticFirstPage InovationCriativity();
+    public BasicReturn InovationCriativityEdit(StaticFirstPage data);
   }
 }
