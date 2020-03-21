@@ -435,5 +435,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage ClientOrientation();
     public BasicReturn ClientOrientationEdit(StaticFirstPage data);
+
+    public StaticFirstPage PeoplesDevelopment();
+    public BasicReturn PeoplesDevelopmentEdit(StaticFirstPage data);
   }
 }
