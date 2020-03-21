@@ -438,5 +438,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage PeoplesDevelopment();
     public BasicReturn PeoplesDevelopmentEdit(StaticFirstPage data);
+
+    public StaticFirstPage NegotiationPersuation();
+    public BasicReturn NegotiationPersuationEdit(StaticFirstPage data);
   }
 }
