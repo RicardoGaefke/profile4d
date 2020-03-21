@@ -429,5 +429,20 @@ namespace Profile4d.Data
 
     public StaticFirstPage ObservationTwentyFour();
     public BasicReturn ObservationTwentyFourEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternationalRelationship();
+    public BasicReturn InternationalRelationshipEdit(StaticFirstPage data);
+
+    public StaticFirstPage ClientOrientation();
+    public BasicReturn ClientOrientationEdit(StaticFirstPage data);
+
+    public StaticFirstPage PeoplesDevelopment();
+    public BasicReturn PeoplesDevelopmentEdit(StaticFirstPage data);
+
+    public StaticFirstPage NegotiationPersuation();
+    public BasicReturn NegotiationPersuationEdit(StaticFirstPage data);
+
+    public StaticFirstPage InovationCriativity();
+    public BasicReturn InovationCriativityEdit(StaticFirstPage data);
   }
 }
