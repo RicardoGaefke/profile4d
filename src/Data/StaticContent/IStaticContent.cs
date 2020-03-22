@@ -489,5 +489,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage NameIdealPartner();
     public BasicReturn NameIdealPartnerEdit(StaticFirstPage data);
+
+    public StaticFirstPage BehavioralResources();
+    public BasicReturn BehavioralResourcesEdit(StaticFirstPage data);
   }
 }
