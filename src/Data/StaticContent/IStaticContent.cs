@@ -468,5 +468,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage RelationshipOne();
     public BasicReturn RelationshipOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage ControlExec();
+    public BasicReturn ControlExecEdit(StaticFirstPage data);
   }
 }
