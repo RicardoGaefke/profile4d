@@ -471,5 +471,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage ControlExec();
     public BasicReturn ControlExecEdit(StaticFirstPage data);
+
+    public StaticFirstPage LastPageResume();
+    public BasicReturn LastPageResumeEdit(StaticFirstPage data);
   }
 }
