@@ -480,5 +480,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage InternalPartThree();
     public BasicReturn InternalPartThreeEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalPartnerOne();
+    public BasicReturn InternalPartnerOneEdit(StaticFirstPage data);
   }
 }
