@@ -456,5 +456,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage EnergyByArea();
     public BasicReturn EnergyByAreaEdit(StaticFirstPage data);
+
+    public StaticFirstPage GraphicLegends();
+    public BasicReturn GraphicLegendsEdit(StaticFirstPage data);
   }
 }
