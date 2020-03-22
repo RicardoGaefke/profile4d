@@ -492,5 +492,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage BehavioralResources();
     public BasicReturn BehavioralResourcesEdit(StaticFirstPage data);
+
+    public StaticFirstPage CompetentResume();
+    public BasicReturn CompetentResumeEdit(StaticFirstPage data);
   }
 }
