@@ -450,5 +450,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage StrategicalPlanning();
     public BasicReturn StrategicalPlanningEdit(StaticFirstPage data);
+
+    public StaticFirstPage SystemicalVision();
+    public BasicReturn SystemicalVisionEdit(StaticFirstPage data);
   }
 }
