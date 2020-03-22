@@ -444,5 +444,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage InovationCriativity();
     public BasicReturn InovationCriativityEdit(StaticFirstPage data);
+
+    public StaticFirstPage EntrepreneurOrientation();
+    public BasicReturn EntrepreneurOrientationEdit(StaticFirstPage data);
   }
 }
