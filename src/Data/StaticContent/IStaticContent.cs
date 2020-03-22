@@ -462,5 +462,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage InovationCriativityOne();
     public BasicReturn InovationCriativityOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage Managment();
+    public BasicReturn ManagmentEdit(StaticFirstPage data);
   }
 }
