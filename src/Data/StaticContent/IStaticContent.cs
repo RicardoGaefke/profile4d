@@ -495,5 +495,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage CompetentResume();
     public BasicReturn CompetentResumeEdit(StaticFirstPage data);
+
+    public StaticFirstPage CompetentLegends();
+    public BasicReturn CompetentLegendsEdit(StaticFirstPage data);
   }
 }
