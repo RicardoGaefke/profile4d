@@ -453,5 +453,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage SystemicalVision();
     public BasicReturn SystemicalVisionEdit(StaticFirstPage data);
+
+    public StaticFirstPage EnergyByArea();
+    public BasicReturn EnergyByAreaEdit(StaticFirstPage data);
   }
 }
