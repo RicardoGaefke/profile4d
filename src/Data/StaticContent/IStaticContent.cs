@@ -459,5 +459,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage GraphicLegends();
     public BasicReturn GraphicLegendsEdit(StaticFirstPage data);
+
+    public StaticFirstPage InovationCriativityOne();
+    public BasicReturn InovationCriativityOneEdit(StaticFirstPage data);
   }
 }
