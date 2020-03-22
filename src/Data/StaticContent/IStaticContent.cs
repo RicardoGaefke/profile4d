@@ -444,5 +444,59 @@ namespace Profile4d.Data
 
     public StaticFirstPage InovationCriativity();
     public BasicReturn InovationCriativityEdit(StaticFirstPage data);
+
+    public StaticFirstPage EntrepreneurOrientation();
+    public BasicReturn EntrepreneurOrientationEdit(StaticFirstPage data);
+
+    public StaticFirstPage StrategicalPlanning();
+    public BasicReturn StrategicalPlanningEdit(StaticFirstPage data);
+
+    public StaticFirstPage SystemicalVision();
+    public BasicReturn SystemicalVisionEdit(StaticFirstPage data);
+
+    public StaticFirstPage EnergyByArea();
+    public BasicReturn EnergyByAreaEdit(StaticFirstPage data);
+
+    public StaticFirstPage GraphicLegends();
+    public BasicReturn GraphicLegendsEdit(StaticFirstPage data);
+
+    public StaticFirstPage InovationCriativityOne();
+    public BasicReturn InovationCriativityOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage Managment();
+    public BasicReturn ManagmentEdit(StaticFirstPage data);
+
+    public StaticFirstPage RelationshipOne();
+    public BasicReturn RelationshipOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage ControlExec();
+    public BasicReturn ControlExecEdit(StaticFirstPage data);
+
+    public StaticFirstPage LastPageResume();
+    public BasicReturn LastPageResumeEdit(StaticFirstPage data);
+
+    public StaticFirstPage DominantProfileName();
+    public BasicReturn DominantProfileNameEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalPartThree();
+    public BasicReturn InternalPartThreeEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalPartnerOne();
+    public BasicReturn InternalPartnerOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalPartnerTwo();
+    public BasicReturn InternalPartnerTwoEdit(StaticFirstPage data);
+
+    public StaticFirstPage NameIdealPartner();
+    public BasicReturn NameIdealPartnerEdit(StaticFirstPage data);
+
+    public StaticFirstPage BehavioralResources();
+    public BasicReturn BehavioralResourcesEdit(StaticFirstPage data);
+
+    public StaticFirstPage CompetentResume();
+    public BasicReturn CompetentResumeEdit(StaticFirstPage data);
+
+    public StaticFirstPage CompetentLegends();
+    public BasicReturn CompetentLegendsEdit(StaticFirstPage data);
   }
 }
