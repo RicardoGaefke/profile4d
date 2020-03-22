@@ -474,5 +474,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage LastPageResume();
     public BasicReturn LastPageResumeEdit(StaticFirstPage data);
+
+    public StaticFirstPage DominantProfileName();
+    public BasicReturn DominantProfileNameEdit(StaticFirstPage data);
   }
 }
