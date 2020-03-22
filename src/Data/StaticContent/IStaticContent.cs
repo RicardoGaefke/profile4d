@@ -477,5 +477,8 @@ namespace Profile4d.Data
 
     public StaticFirstPage DominantProfileName();
     public BasicReturn DominantProfileNameEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalPartThree();
+    public BasicReturn InternalPartThreeEdit(StaticFirstPage data);
   }
 }
