@@ -43,6 +43,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<LeaderDifferent>();
       services.AddSingleton<ValuesDom>();
       services.AddSingleton<EmotionalCompetent>();
+      services.AddSingleton<ComunicateMode>();
       //  storage
       services.AddSingleton<Blob>();
 
