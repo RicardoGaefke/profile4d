@@ -7,11 +7,11 @@ using Profile4d.Domain;
 
 namespace Profile4d.Data
 {
-  public class Questions : IDynamicContent
+  public class ValuesDom : IDynamicContent
   {
     private readonly IOptions<Secrets.ConnectionStrings> _connStr;
 
-    public Questions(IOptions<Secrets.ConnectionStrings> ConnectionStrings)
+    public ValuesDom(IOptions<Secrets.ConnectionStrings> ConnectionStrings)
     {
       _connStr = ConnectionStrings;
     }
@@ -27,7 +27,7 @@ namespace Profile4d.Data
         {
           Cmd.CommandType = CommandType.StoredProcedure;
           Cmd.Connection = Con;
-          Cmd.CommandText = "[sp_QUESTIONS_LIST]";
+          Cmd.CommandText = "[sp_VALUES_DOM_LIST]";
 
           Con.Open();
 
@@ -70,7 +70,7 @@ namespace Profile4d.Data
         {
           Cmd.CommandType = CommandType.StoredProcedure;
           Cmd.Connection = Con;
-          Cmd.CommandText = "[sp_QUESTIONS_ADD]";
+          Cmd.CommandText = "[sp_VALUES_DOM_ADD]";
 
           Cmd.Parameters.AddWithValue("@USER", data.CreatedBy);
           Cmd.Parameters.AddWithValue("@TITLE_PT", data.Title_PT);
@@ -99,7 +99,7 @@ namespace Profile4d.Data
         {
           Cmd.CommandType = CommandType.StoredProcedure;
           Cmd.Connection = Con;
-          Cmd.CommandText = "[sp_QUESTION_CANGE_ACTIVE]";
+          Cmd.CommandText = "[sp_VALUES_DOM_ACTIVE]";
 
           Cmd.Parameters.AddWithValue("@GUID", data.Guid);
           Cmd.Parameters.AddWithValue("@ACTIVE", data.Active);
@@ -125,7 +125,7 @@ namespace Profile4d.Data
         {
           Cmd.CommandType = CommandType.StoredProcedure;
           Cmd.Connection = Con;
-          Cmd.CommandText = "[sp_QUESTION]";
+          Cmd.CommandText = "[sp_VALUES_DOM]";
 
           Cmd.Parameters.AddWithValue("@GUID", guid);
 
@@ -160,7 +160,7 @@ namespace Profile4d.Data
         {
           Cmd.CommandType = CommandType.StoredProcedure;
           Cmd.Connection = Con;
-          Cmd.CommandText = "[sp_QUESTIONS_EDIT]";
+          Cmd.CommandText = "[sp_VALUES_DOM_EDIT]";
 
           Cmd.Parameters.AddWithValue("@GUID", data.Guid);
           Cmd.Parameters.AddWithValue("@USER", data.CreatedBy);

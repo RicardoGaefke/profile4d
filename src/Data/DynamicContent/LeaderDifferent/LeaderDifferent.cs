@@ -7,7 +7,7 @@ using Profile4d.Domain;
 
 namespace Profile4d.Data
 {
-  public class LeaderDifferent : ILeaderDifferent
+  public class LeaderDifferent : IDynamicContent
   {
     private readonly IOptions<Secrets.ConnectionStrings> _connStr;
 
