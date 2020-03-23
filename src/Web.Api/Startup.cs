@@ -39,6 +39,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<FeaturesDominant>();
       services.AddSingleton<PersonalityForces>();
       services.AddSingleton<YourMotivation>();
+      services.AddSingleton<FocusAttention>();
       //  storage
       services.AddSingleton<Blob>();
 
@@ -61,7 +62,7 @@ namespace Profile4d.Web.Api
 
       services.AddSwaggerDocument(options => {
         options.Title = "API for Profile4d";
-        options.Version = "1.11";
+        options.Version = "1.12";
       });
     }
 
