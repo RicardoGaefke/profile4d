@@ -40,6 +40,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<PersonalityForces>();
       services.AddSingleton<YourMotivation>();
       services.AddSingleton<FocusAttention>();
+      services.AddSingleton<LeaderDifferent>();
       //  storage
       services.AddSingleton<Blob>();
 
