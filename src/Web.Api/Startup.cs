@@ -58,6 +58,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<DefenseMecanism>();
       services.AddSingleton<NeuroticCompulsion>();
       services.AddSingleton<CompetentMode>();
+      services.AddSingleton<SaboteurMode>();
       //  storage
       services.AddSingleton<Blob>();
 
