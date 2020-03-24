@@ -49,6 +49,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<SaboteurSynteshis>();
       services.AddSingleton<LimitedMatrix>();
       services.AddSingleton<DifficultComunicate>();
+      services.AddSingleton<RelationshipDifficult>();
       //  storage
       services.AddSingleton<Blob>();
 
