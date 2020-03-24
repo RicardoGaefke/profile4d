@@ -60,6 +60,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<CompetentMode>();
       services.AddSingleton<SaboteurMode>();
       services.AddSingleton<NameProfile>();
+      services.AddSingleton<LimitedForcesOne>();
       //  storage
       services.AddSingleton<Blob>();
 
