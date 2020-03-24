@@ -59,6 +59,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<NeuroticCompulsion>();
       services.AddSingleton<CompetentMode>();
       services.AddSingleton<SaboteurMode>();
+      services.AddSingleton<NameProfile>();
       //  storage
       services.AddSingleton<Blob>();
 
