@@ -7,7 +7,7 @@ using Profile4d.Domain;
 
 namespace Profile4d.Data
 {
-  public class YourMotivation : IYourMotivation
+  public class YourMotivation : IDynamicContent
   {
     private readonly IOptions<Secrets.ConnectionStrings> _connStr;
 

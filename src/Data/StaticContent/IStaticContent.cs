@@ -252,5 +252,251 @@ namespace Profile4d.Data
 
     public StaticFirstPage DominantProfileOne();
     public BasicReturn DominantProfileOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalPartOne();
+    public BasicReturn InternalPartOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalPartTwo();
+    public BasicReturn InternalPartTwoEdit(StaticFirstPage data);
+
+    public StaticFirstPage IdealGrowthPart();
+    public BasicReturn IdealGrowthPartEdit(StaticFirstPage data);
+
+    public StaticFirstPage ExerciseProfileMoviment();
+    public BasicReturn ExerciseProfileMovimentEdit(StaticFirstPage data);
+
+    public StaticFirstPage YourBehavioralDNA();
+    public BasicReturn YourBehavioralDNAEdit(StaticFirstPage data);
+
+    public StaticFirstPage SuperiorMind();
+    public BasicReturn SuperiorMindEdit(StaticFirstPage data);
+
+    public StaticFirstPage HealthyAdult();
+    public BasicReturn HealthyAdultEdit(StaticFirstPage data);
+
+    public StaticFirstPage SynergeticMode();
+    public BasicReturn SynergeticModeEdit(StaticFirstPage data);
+
+    public StaticFirstPage ArchetypeEssence();
+    public BasicReturn ArchetypeEssenceEdit(StaticFirstPage data);
+
+    public StaticFirstPage EssentialFeature();
+    public BasicReturn EssentialFeatureEdit(StaticFirstPage data);
+
+    public StaticFirstPage DomProfile();
+    public BasicReturn DomProfileEdit(StaticFirstPage data);
+
+    public StaticFirstPage BigChallenge();
+    public BasicReturn BigChallengeEdit(StaticFirstPage data);
+
+    public StaticFirstPage WorkKey();
+    public BasicReturn WorkKeyEdit(StaticFirstPage data);
+
+    public StaticFirstPage IdealPartner();
+    public BasicReturn IdealPartnerEdit(StaticFirstPage data);
+
+    public StaticFirstPage CharacterFormation();
+    public BasicReturn CharacterFormationEdit(StaticFirstPage data);
+
+    public StaticFirstPage Moment();
+    public BasicReturn MomentEdit(StaticFirstPage data);
+
+    public StaticFirstPage ExistentialPain();
+    public BasicReturn ExistentialPainEdit(StaticFirstPage data);
+
+    public StaticFirstPage NoteExistentialPain();
+    public BasicReturn NoteExistentialPainEdit(StaticFirstPage data);
+
+    public StaticFirstPage CrystallizationPersonality();
+    public BasicReturn CrystallizationPersonalityEdit(StaticFirstPage data);
+
+    public StaticFirstPage BodyStructureFixed();
+    public BasicReturn BodyStructureFixedEdit(StaticFirstPage data);
+
+    public StaticFirstPage BodyShape();
+    public BasicReturn BodyShapeEdit(StaticFirstPage data);
+
+    public StaticFirstPage BodyCharacters();
+    public BasicReturn BodyCharactersEdit(StaticFirstPage data);
+
+    public StaticFirstPage MainVirtueEssence();
+    public BasicReturn MainVirtueEssenceEdit(StaticFirstPage data);
+
+    public StaticFirstPage BenefitsVirtueEssence();
+    public BasicReturn BenefitsVirtueEssenceEdit(StaticFirstPage data);
+
+    public StaticFirstPage TwelveCharacterAdultStrengths();
+    public BasicReturn TwelveCharacterAdultStrengthsEdit(StaticFirstPage data);
+
+    public StaticFirstPage ProfessionalAnalyze();
+    public BasicReturn ProfessionalAnalyzeEdit(StaticFirstPage data);
+
+    public StaticFirstPage TwelveCompetencesApresentation();
+    public BasicReturn TwelveCompetencesApresentationEdit(StaticFirstPage data);
+
+    public StaticFirstPage ThreeDimensions();
+    public BasicReturn ThreeDimensionsEdit(StaticFirstPage data);
+
+    public StaticFirstPage FourCompetentStages();
+    public BasicReturn FourCompetentStagesEdit(StaticFirstPage data);
+
+    public StaticFirstPage Observation();
+    public BasicReturn ObservationEdit(StaticFirstPage data);
+
+    public StaticFirstPage TwelveCompetences();
+    public BasicReturn TwelveCompetencesEdit(StaticFirstPage data);
+
+    public StaticFirstPage ExcellentCompromise();
+    public BasicReturn ExcellentCompromiseEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationOne();
+    public BasicReturn ObservationOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTwo();
+    public BasicReturn ObservationTwoEdit(StaticFirstPage data);
+
+    public StaticFirstPage ConflictsResolution();
+    public BasicReturn ConflictsResolutionEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationThree();
+    public BasicReturn ObservationThreeEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationFour();
+    public BasicReturn ObservationFourEdit(StaticFirstPage data);
+
+    public StaticFirstPage Adaptability();
+    public BasicReturn AdaptabilityEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationFive();
+    public BasicReturn ObservationFiveEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationSix();
+    public BasicReturn ObservationSixEdit(StaticFirstPage data);
+
+    public StaticFirstPage Proactivity();
+    public BasicReturn ProactivityEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationSeven();
+    public BasicReturn ObservationSevenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationEight();
+    public BasicReturn ObservationEightEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationNine();
+    public BasicReturn ObservationNineEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTen();
+    public BasicReturn ObservationTenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationEleven();
+    public BasicReturn ObservationElevenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTwelve();
+    public BasicReturn ObservationTwelveEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationThirteen();
+    public BasicReturn ObservationThirteenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationFourteen();
+    public BasicReturn ObservationFourteenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationFifteen();
+    public BasicReturn ObservationFifteenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationSixteen();
+    public BasicReturn ObservationSixteenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationSeventeen();
+    public BasicReturn ObservationSeventeenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationEighteen();
+    public BasicReturn ObservationEighteenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationNineteen();
+    public BasicReturn ObservationNineteenEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTwenty();
+    public BasicReturn ObservationTwentyEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTwentyOne();
+    public BasicReturn ObservationTwentyOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTwentyTwo();
+    public BasicReturn ObservationTwentyTwoEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTwentyThree();
+    public BasicReturn ObservationTwentyThreeEdit(StaticFirstPage data);
+
+    public StaticFirstPage ObservationTwentyFour();
+    public BasicReturn ObservationTwentyFourEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternationalRelationship();
+    public BasicReturn InternationalRelationshipEdit(StaticFirstPage data);
+
+    public StaticFirstPage ClientOrientation();
+    public BasicReturn ClientOrientationEdit(StaticFirstPage data);
+
+    public StaticFirstPage PeoplesDevelopment();
+    public BasicReturn PeoplesDevelopmentEdit(StaticFirstPage data);
+
+    public StaticFirstPage NegotiationPersuation();
+    public BasicReturn NegotiationPersuationEdit(StaticFirstPage data);
+
+    public StaticFirstPage InovationCriativity();
+    public BasicReturn InovationCriativityEdit(StaticFirstPage data);
+
+    public StaticFirstPage EntrepreneurOrientation();
+    public BasicReturn EntrepreneurOrientationEdit(StaticFirstPage data);
+
+    public StaticFirstPage StrategicalPlanning();
+    public BasicReturn StrategicalPlanningEdit(StaticFirstPage data);
+
+    public StaticFirstPage SystemicalVision();
+    public BasicReturn SystemicalVisionEdit(StaticFirstPage data);
+
+    public StaticFirstPage EnergyByArea();
+    public BasicReturn EnergyByAreaEdit(StaticFirstPage data);
+
+    public StaticFirstPage GraphicLegends();
+    public BasicReturn GraphicLegendsEdit(StaticFirstPage data);
+
+    public StaticFirstPage InovationCriativityOne();
+    public BasicReturn InovationCriativityOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage Managment();
+    public BasicReturn ManagmentEdit(StaticFirstPage data);
+
+    public StaticFirstPage RelationshipOne();
+    public BasicReturn RelationshipOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage ControlExec();
+    public BasicReturn ControlExecEdit(StaticFirstPage data);
+
+    public StaticFirstPage LastPageResume();
+    public BasicReturn LastPageResumeEdit(StaticFirstPage data);
+
+    public StaticFirstPage DominantProfileName();
+    public BasicReturn DominantProfileNameEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalPartThree();
+    public BasicReturn InternalPartThreeEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalPartnerOne();
+    public BasicReturn InternalPartnerOneEdit(StaticFirstPage data);
+
+    public StaticFirstPage InternalPartnerTwo();
+    public BasicReturn InternalPartnerTwoEdit(StaticFirstPage data);
+
+    public StaticFirstPage NameIdealPartner();
+    public BasicReturn NameIdealPartnerEdit(StaticFirstPage data);
+
+    public StaticFirstPage BehavioralResources();
+    public BasicReturn BehavioralResourcesEdit(StaticFirstPage data);
+
+    public StaticFirstPage CompetentResume();
+    public BasicReturn CompetentResumeEdit(StaticFirstPage data);
+
+    public StaticFirstPage CompetentLegends();
+    public BasicReturn CompetentLegendsEdit(StaticFirstPage data);
   }
 }
