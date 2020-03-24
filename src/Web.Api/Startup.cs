@@ -56,6 +56,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<EmotionalAddiction>();
       services.AddSingleton<MentalAddiction>();
       services.AddSingleton<DefenseMecanism>();
+      services.AddSingleton<NeuroticCompulsion>();
       //  storage
       services.AddSingleton<Blob>();
 
