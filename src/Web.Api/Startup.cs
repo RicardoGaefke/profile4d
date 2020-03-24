@@ -47,6 +47,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<InteractMode>();
       services.AddSingleton<ProfileNames>();
       services.AddSingleton<SaboteurSynteshis>();
+      services.AddSingleton<LimitedMatrix>();
       //  storage
       services.AddSingleton<Blob>();
 
