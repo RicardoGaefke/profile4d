@@ -50,6 +50,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<LimitedMatrix>();
       services.AddSingleton<DifficultComunicate>();
       services.AddSingleton<RelationshipDifficult>();
+      services.AddSingleton<FourLimited>();
       //  storage
       services.AddSingleton<Blob>();
 
