@@ -53,6 +53,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<FourLimited>();
       services.AddSingleton<LimitedAttitude>();
       services.AddSingleton<BehavioralAddiction>();
+      services.AddSingleton<EmotionalAddiction>();
       //  storage
       services.AddSingleton<Blob>();
 
