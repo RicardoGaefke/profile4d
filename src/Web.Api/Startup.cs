@@ -45,6 +45,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<EmotionalCompetent>();
       services.AddSingleton<ComunicateMode>();
       services.AddSingleton<InteractMode>();
+      services.AddSingleton<ProfileNames>();
       //  storage
       services.AddSingleton<Blob>();
 
