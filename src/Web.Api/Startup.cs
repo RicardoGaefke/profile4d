@@ -44,6 +44,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<ValuesDom>();
       services.AddSingleton<EmotionalCompetent>();
       services.AddSingleton<ComunicateMode>();
+      services.AddSingleton<InteractMode>();
       //  storage
       services.AddSingleton<Blob>();
 
@@ -66,7 +67,7 @@ namespace Profile4d.Web.Api
 
       services.AddSwaggerDocument(options => {
         options.Title = "API for Profile4d";
-        options.Version = "1.12";
+        options.Version = "1.14";
       });
     }
 
