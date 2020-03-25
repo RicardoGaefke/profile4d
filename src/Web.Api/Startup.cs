@@ -75,6 +75,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<FluxAnalyze>();
       services.AddSingleton<DomProfile>();
       services.AddSingleton<InternalPartners>();
+      services.AddSingleton<InternalPartOne>();
       //  storage
       services.AddSingleton<Blob>();
 
