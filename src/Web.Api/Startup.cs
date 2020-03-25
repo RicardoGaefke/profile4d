@@ -42,6 +42,28 @@ namespace Profile4d.Web.Api
       services.AddSingleton<FocusAttention>();
       services.AddSingleton<LeaderDifferent>();
       services.AddSingleton<ValuesDom>();
+      services.AddSingleton<EmotionalCompetent>();
+      services.AddSingleton<ComunicateMode>();
+      services.AddSingleton<InteractMode>();
+      services.AddSingleton<ProfileNames>();
+      services.AddSingleton<SaboteurSynteshis>();
+      services.AddSingleton<LimitedMatrix>();
+      services.AddSingleton<DifficultComunicate>();
+      services.AddSingleton<RelationshipDifficult>();
+      services.AddSingleton<FourLimited>();
+      services.AddSingleton<LimitedAttitude>();
+      services.AddSingleton<BehavioralAddiction>();
+      services.AddSingleton<EmotionalAddiction>();
+      services.AddSingleton<MentalAddiction>();
+      services.AddSingleton<DefenseMecanism>();
+      services.AddSingleton<NeuroticCompulsion>();
+      services.AddSingleton<CompetentMode>();
+      services.AddSingleton<SaboteurMode>();
+      services.AddSingleton<NameProfile>();
+      services.AddSingleton<LimitedForcesOne>();
+      services.AddSingleton<ProfileNameOne>();
+      services.AddSingleton<LimitedForcesTwo>();
+      services.AddSingleton<SaboteurNameOne>();
       //  storage
       services.AddSingleton<Blob>();
 
@@ -64,7 +86,7 @@ namespace Profile4d.Web.Api
 
       services.AddSwaggerDocument(options => {
         options.Title = "API for Profile4d";
-        options.Version = "1.12";
+        options.Version = "1.14";
       });
     }
 
