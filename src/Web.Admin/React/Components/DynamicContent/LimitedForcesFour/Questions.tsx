@@ -34,7 +34,7 @@ export default withTranslation()(
       const fetchQuestions = (): void => {
         MyAxios(window.location.href)
           // alterar o webservice ▼
-          .get<IQuestions>('/LimitedForcesThree')
+          .get<IQuestions>('/LimitedForcesFour')
           .then((response): void => setState(response.data));
       };
 
@@ -51,7 +51,7 @@ export default withTranslation()(
         MyAxios(window.location.href)
           // alterar o webservice - apenas o nome do serviço
           // não a função ChangeActive) ▼
-          .post<IBasicReturn>('/LimitedForcesThree/ChangeActive',
+          .post<IBasicReturn>('/LimitedForcesFour/ChangeActive',
           {
             Guid: event.target.value,
             Active: event.target.checked,
@@ -104,7 +104,7 @@ export default withTranslation()(
                   {state.Questions.map((q, i): React.ReactElement => (
                     <React.Fragment key={`Frag-${q.Guid}`}>
                       {/* // alterar o nome da rota para o editar                                               ▼ */}
-                      <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} to="limitedForcesThree" />
+                      <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} to="limitedForcesFour" />
                       <Divider key={`Div-${q.Guid}`} />
                     </React.Fragment>
                   ))}
@@ -113,7 +113,7 @@ export default withTranslation()(
             )
           }
           {/* // alterar apenas o nome da rota ▼ */}
-          <Add to="/dynamicContent/LimitedForcesThree/add" />
+          <Add to="/dynamicContent/LimitedForcesFour/add" />
         </Container>
       );
     },
