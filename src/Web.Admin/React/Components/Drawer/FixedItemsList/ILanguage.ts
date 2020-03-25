@@ -190,6 +190,8 @@ export interface ILanguage {
   limitedForcesFour: string,
   conflictsIdentified: string,
   triadHeHo: string,
+  newObservation: string,
+  observationTriad: string,
   specificsTriad: string,
   fluxAnalyze: string,
   domProfile: string,
