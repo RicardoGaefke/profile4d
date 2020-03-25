@@ -71,6 +71,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<TriadHeHo>();
       services.AddSingleton<SpecificsTriad>();
       services.AddSingleton<NewObservation>();
+      services.AddSingleton<observationTriad>();
       //  storage
       services.AddSingleton<Blob>();
 
