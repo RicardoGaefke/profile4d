@@ -104,7 +104,7 @@ export default withTranslation()(
                   {state.Questions.map((q, i): React.ReactElement => (
                     <React.Fragment key={`Frag-${q.Guid}`}>
                       {/* // alterar o nome da rota para o editar                                               ▼ */}
-                      <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} to="personalityForces" />
+                      <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} to="competentMode" />
                       <Divider key={`Div-${q.Guid}`} />
                     </React.Fragment>
                   ))}
@@ -113,7 +113,7 @@ export default withTranslation()(
             )
           }
           {/* // alterar apenas o nome da rota ▼ */}
-          <Add to="/dynamicContent/PersonalityForces/add" />
+          <Add to="/dynamicContent/competentMode/add" />
         </Container>
       );
     },
