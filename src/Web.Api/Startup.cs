@@ -78,6 +78,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<InternalPartOne>();
       services.AddSingleton<InternalPartTwo>();
       services.AddSingleton<ArchetypeDiscover>();
+      services.AddSingleton<EssentialCharacter>();
       //  storage
       services.AddSingleton<Blob>();
 
