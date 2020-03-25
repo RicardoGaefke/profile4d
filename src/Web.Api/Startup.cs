@@ -80,6 +80,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<ArchetypeDiscover>();
       services.AddSingleton<EssentialCharacter>();
       services.AddSingleton<DomProfileOne>();
+      services.AddSingleton<BigChallenge>();
       //  storage
       services.AddSingleton<Blob>();
 
