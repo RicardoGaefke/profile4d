@@ -69,6 +69,8 @@ namespace Profile4d.Web.Api
       services.AddSingleton<LimitedForcesFour>();
       services.AddSingleton<ConflictsIdentified>();
       services.AddSingleton<TriadHeHo>();
+      services.AddSingleton<SpecificsTriad>();
+      services.AddSingleton<NewObservation>();
       //  storage
       services.AddSingleton<Blob>();
 
@@ -91,7 +93,7 @@ namespace Profile4d.Web.Api
 
       services.AddSwaggerDocument(options => {
         options.Title = "API for Profile4d";
-        options.Version = "1.14";
+        options.Version = "1.15";
       });
     }
 
