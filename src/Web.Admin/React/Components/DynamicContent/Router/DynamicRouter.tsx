@@ -111,10 +111,10 @@ import ConflictsIdentifiedEdit from '../ConflictsIdentified/Edit/Page';
 import TriadHeHo from '../TriadHeHo/Questions';
 import TriadHeHoAdd from '../TriadHeHo/Add/Add';
 import TriadHeHoEdit from '../TriadHeHo/Edit/Page';
+import NewObservation from '../NewObservation/Questions';
+import NewObservationAdd from '../NewObservation/Add/Add';
+import NewObservationEdit from '../NewObservation/Edit/Page';
 
-// import NewObservation from '../NewObservation/Questions';
-// import NewObservationAdd from '../NewObservation/Add/Add';
-// import NewObservationEdit from '../NewObservation/Edit/Page';
 // import ObservationTriad from '../ObservationTriad/Questions';
 // import ObservationTriadAdd from '../ObservationTriad/Add/Add';
 // import ObservationTriadEdit from '../ObservationTriad/Edit/Page';
@@ -375,10 +375,10 @@ export default withRouter(
         <Route path={`${match.url}/triadHeHo`} exact component={TriadHeHo} />
         <Route path={`${match.url}/triadHeHo/add`} component={TriadHeHoAdd} />
         <Route path={`${match.url}/triadHeHo/edit/:id`} component={TriadHeHoEdit} />
-
-        {/* <Route path={`${match.url}/newObservation`} exact component={NewObservation} />
+        <Route path={`${match.url}/newObservation`} exact component={NewObservation} />
         <Route path={`${match.url}/newObservation/add`} component={NewObservationAdd} />
-        <Route path={`${match.url}/newObservation/edit/:id`} component={NewObservationEdit} /> */}
+        <Route path={`${match.url}/newObservation/edit/:id`} component={NewObservationEdit} />
+
         {/* <Route path={`${match.url}/observationTriad`} exact component={ObservationTriad} />
         <Route path={`${match.url}/observationTriad/add`} component={ObservationTriadAdd} />
         <Route path={`${match.url}/observationTriad/edit/:id`} component={ObservationTriadEdit} /> */}
