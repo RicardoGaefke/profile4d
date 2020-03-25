@@ -194,6 +194,8 @@ export default {
   limitedForcesFour: 'As quatro forças limitadoras',
   conflictsIdentified: 'Conflitos identificados',
   triadHeHo: 'Tríade Heterogênea / Homogênea',
+  newObservation: 'Observação',
+  observationTriad: 'Observação sobre a tríade',
   specificsTriad: 'Característica específica da tríade',
   fluxAnalyze: 'Resultado da análise do seu fluxo emocional',
   domProfile: 'Perfil dominante',
