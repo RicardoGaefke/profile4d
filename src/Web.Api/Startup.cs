@@ -74,6 +74,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<observationTriad>();
       services.AddSingleton<FluxAnalyze>();
       services.AddSingleton<DomProfile>();
+      services.AddSingleton<InternalPartners>();
       //  storage
       services.AddSingleton<Blob>();
 
