@@ -194,6 +194,8 @@ export default {
   limitedForcesFour: 'The four limiting forces',
   conflictsIdentified: 'Conflicts identified',
   triadHeHo: 'Heterogeneous / Homogeneous Triad',
+  newObservation: 'Observation',
+  observationTriad: 'Observation about the triad',
   specificsTriad: 'Specific characteristic of the triad',
   fluxAnalyze: 'Result of the analysis of your emotional flow',
   domProfile: 'Dominant profile',
