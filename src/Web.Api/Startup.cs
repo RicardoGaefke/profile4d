@@ -81,6 +81,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<EssentialCharacter>();
       services.AddSingleton<DomProfileOne>();
       services.AddSingleton<BigChallenge>();
+      services.AddSingleton<KeyWork>();
       //  storage
       services.AddSingleton<Blob>();
 
