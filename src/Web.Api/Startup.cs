@@ -65,6 +65,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<LimitedForcesTwo>();
       services.AddSingleton<SaboteurNameOne>();
       services.AddSingleton<LimitedForcesThree>();
+      services.AddSingleton<SaboteurNameTwo>();
       //  storage
       services.AddSingleton<Blob>();
 
