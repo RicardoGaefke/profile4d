@@ -84,6 +84,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<KeyWork>();
       services.AddSingleton<IdealPart>();
       services.AddSingleton<YourMoment>();
+      services.AddSingleton<ExistentialPain>();
       //  storage
       services.AddSingleton<Blob>();
 
