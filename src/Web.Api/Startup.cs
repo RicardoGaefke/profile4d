@@ -90,6 +90,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<YourDevelopment>();
       services.AddSingleton<BenefitsContact>();
       services.AddSingleton<TwelveForces>();
+      services.AddSingleton<DyObservationOne>();
       //  storage
       services.AddSingleton<Blob>();
 
