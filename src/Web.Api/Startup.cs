@@ -64,6 +64,61 @@ namespace Profile4d.Web.Api
       services.AddSingleton<ProfileNameOne>();
       services.AddSingleton<LimitedForcesTwo>();
       services.AddSingleton<SaboteurNameOne>();
+      services.AddSingleton<LimitedForcesThree>();
+      services.AddSingleton<SaboteurNameTwo>();
+      services.AddSingleton<LimitedForcesFour>();
+      services.AddSingleton<ConflictsIdentified>();
+      services.AddSingleton<TriadHeHo>();
+      services.AddSingleton<SpecificsTriad>();
+      services.AddSingleton<NewObservation>();
+      services.AddSingleton<observationTriad>();
+      services.AddSingleton<FluxAnalyze>();
+      services.AddSingleton<DomProfile>();
+      services.AddSingleton<InternalPartners>();
+      services.AddSingleton<InternalPartOne>();
+      services.AddSingleton<InternalPartTwo>();
+      services.AddSingleton<ArchetypeDiscover>();
+      services.AddSingleton<EssentialCharacter>();
+      services.AddSingleton<DomProfileOne>();
+      services.AddSingleton<BigChallenge>();
+      services.AddSingleton<KeyWork>();
+      services.AddSingleton<IdealPart>();
+      services.AddSingleton<YourMoment>();
+      services.AddSingleton<ExistentialPain>();
+      services.AddSingleton<CristallyzationProcess>();
+      services.AddSingleton<BodyShape>();
+      services.AddSingleton<YourDevelopment>();
+      services.AddSingleton<BenefitsContact>();
+      services.AddSingleton<TwelveForces>();
+      services.AddSingleton<DyObservationOne>();
+      services.AddSingleton<DyObservationTwo>();
+      services.AddSingleton<DyObservationThree>();
+      services.AddSingleton<DyObservationFour>();
+      services.AddSingleton<DyObservationFive>();
+      services.AddSingleton<DyObservationSix>();
+      services.AddSingleton<DyObservationSeven>();
+      services.AddSingleton<DyObservationEight>();
+      services.AddSingleton<DyObservationNine>();
+      services.AddSingleton<DyObservationTen>();
+      services.AddSingleton<DyObservationEleven>();
+      services.AddSingleton<DyObservationTwelve>();
+      services.AddSingleton<DyObservationThirteen>();
+      services.AddSingleton<DyObservationFourteen>();
+      services.AddSingleton<DyObservationFifteen>();
+      services.AddSingleton<DyObservationSixteen>();
+      services.AddSingleton<DyObservationSeventeen>();
+      services.AddSingleton<DyObservationEighteen>();
+      services.AddSingleton<DyObservationNineteen>();
+      services.AddSingleton<DyObservationTwenty>();
+      services.AddSingleton<DyObservationTwentyOne>();
+      services.AddSingleton<DyObservationTwentyTwo>();
+      services.AddSingleton<DyObservationTwentyThree>();
+      services.AddSingleton<DyObservationTwentyFour>();
+      services.AddSingleton<DomProfileTwo>();
+      services.AddSingleton<PartnerOne>();
+      services.AddSingleton<PartnerTwo>();
+      services.AddSingleton<IdealPartner>();
+      services.AddSingleton<BehavioralResources>();
       //  storage
       services.AddSingleton<Blob>();
 
@@ -86,7 +141,7 @@ namespace Profile4d.Web.Api
 
       services.AddSwaggerDocument(options => {
         options.Title = "API for Profile4d";
-        options.Version = "1.14";
+        options.Version = "1.15";
       });
     }
 
