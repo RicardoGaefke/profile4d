@@ -89,6 +89,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<BodyShape>();
       services.AddSingleton<YourDevelopment>();
       services.AddSingleton<BenefitsContact>();
+      services.AddSingleton<TwelveForces>();
       //  storage
       services.AddSingleton<Blob>();
 
