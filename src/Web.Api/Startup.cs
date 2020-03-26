@@ -88,6 +88,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<CristallyzationProcess>();
       services.AddSingleton<BodyShape>();
       services.AddSingleton<YourDevelopment>();
+      services.AddSingleton<BenefitsContact>();
       //  storage
       services.AddSingleton<Blob>();
 
