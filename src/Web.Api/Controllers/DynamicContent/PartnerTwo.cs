@@ -26,7 +26,7 @@ namespace Profile4d.Web.Api.Controllers
     )
     {
       _logger = logger;
-      _questions = MyBodyShape;
+      _questions = MyPartnerTwo;
 
       _httpContextAccessor = httpContextAccessor;
       ClaimsPrincipal currentUser = this.User;
