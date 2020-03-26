@@ -116,6 +116,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<DyObservationTwentyFour>();
       services.AddSingleton<DomProfileTwo>();
       services.AddSingleton<PartnerOne>();
+      services.AddSingleton<PartnerTwo>();
       //  storage
       services.AddSingleton<Blob>();
 
