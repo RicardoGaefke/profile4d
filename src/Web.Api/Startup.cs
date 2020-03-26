@@ -118,6 +118,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<PartnerOne>();
       services.AddSingleton<PartnerTwo>();
       services.AddSingleton<IdealPartner>();
+      services.AddSingleton<BehavioralResources>();
       //  storage
       services.AddSingleton<Blob>();
 
