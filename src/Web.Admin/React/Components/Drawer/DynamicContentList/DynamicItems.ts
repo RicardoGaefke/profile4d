@@ -145,6 +145,14 @@ export default [
     title: 'triadHeHo',
   },
   {
+    link: 'newObservation',
+    title: 'newObservation',
+  },
+  {
+    link: 'observationTriad',
+    title: 'observationTriad',
+  },
+  {
     link: 'specificsTriad',
     title: 'specificsTriad',
   },
