@@ -92,6 +92,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<TwelveForces>();
       services.AddSingleton<DyObservationOne>();
       services.AddSingleton<DyObservationTwo>();
+      services.AddSingleton<DyObservationThree>();
       //  storage
       services.AddSingleton<Blob>();
 
