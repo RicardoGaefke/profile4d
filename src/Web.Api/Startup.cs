@@ -107,6 +107,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<DyObservationFifteen>();
       services.AddSingleton<DyObservationSixteen>();
       services.AddSingleton<DyObservationSeventeen>();
+      services.AddSingleton<DyObservationEighteen>();
       //  storage
       services.AddSingleton<Blob>();
 
