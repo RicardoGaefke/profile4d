@@ -113,7 +113,7 @@ export default withTranslation()(
             )
           }
           {/* // alterar apenas o nome da rota ▼ */}
-          <Add to="/dynamicContent/CompetentMode/add" />
+          <Add to="/dynamicContent/competentMode/add" />
         </Container>
       );
     },
