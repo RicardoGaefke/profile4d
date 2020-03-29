@@ -16,7 +16,7 @@ RUN npm install
 
 RUN npm run lint-fix
 
-RUN npm run production
+RUN npm run production1
 
 RUN dotnet publish -c Release ./Web.Identity.csproj -r linux-musl-x64 -o ./publish
 
