@@ -6,7 +6,7 @@ RUN apk add  --no-cache --repository https://pkgs.alpinelinux.org/packages?name=
 
 RUN apk add npm
 
-RUN git clone -b dev --depth 1 https://github.com/RicardoGaefke/profile4d.git ./app
+RUN git clone -b dev https://github.com/RicardoGaefke/profile4d.git ./app
 
 WORKDIR /app/src/Web.Identity
 
