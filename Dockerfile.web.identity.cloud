@@ -1,0 +1,31 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0-alpine AS build
+
+RUN apk add --no-cache bash git openssh
+
+RUN apk add  --no-cache --repository https://pkgs.alpinelinux.org/packages?name=nodejs&branch=v3.10&repo=main&arch=x86_64 nodejs=10.19.0-r0
+
+RUN apk add npm
+
+RUN git clone -b dev https://github.com/RicardoGaefke/profile4d.git ./app
+
+WORKDIR /app/src/Web.Identity
+
+# RUN NODE_OPTIONS=--max_old_space_size=32768‬
+
+RUN npm install
+
+RUN npm run lint-fix
+
+RUN npm run production1
+
+RUN dotnet publish -c Release ./Web.Identity.csproj -r linux-musl-x64 -o ./publish
+
+FROM mcr.microsoft.com/dotnet/core/runtime-deps:3.0-alpine as runtime
+
+EXPOSE 80
+
+WORKDIR /app
+
+COPY --from=build /app/src/Web.Identity/publish ./
+
+ENTRYPOINT ["dotnet", "Web.Identity"]

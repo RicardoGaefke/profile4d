@@ -11,38 +11,27 @@ namespace Profile4d.WebJob.Teste
 {
   public class Functions
   {
-    private static IOptions<Secrets.ConnectionStrings> _myConnStr;
+    private readonly IOptions<Secrets.ConnectionStrings> _connStr;
     private static MyEmail _myEmail;
-    private static IMyFunc _myFunc;
 
-    public Functions(IOptions<Secrets.ConnectionStrings> ConnectionString, MyEmail MyEmail, MyFunc MyFunc)
+    public Functions(
+      IOptions<Secrets.ConnectionStrings> ConnectionStrings,
+      MyEmail MyEmail
+    )
     {
-      _myConnStr = ConnectionString;
+      _connStr = ConnectionStrings;
       _myEmail = MyEmail;
-      _myFunc = MyFunc;
-
-      Console.WriteLine("Functions constructor");
     }
 
 
-    public void ProcessQueueMessage
+    public async void ProcessQueueMessage
     (
       [QueueTrigger("teste")]
       string message,
       ILogger logger
     )
     {
-      var configuration = new ConfigurationBuilder()
-        .SetBasePath(Directory.GetCurrentDirectory())
-        .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-        .AddEnvironmentVariables()
-        .Build()
-      ;
-      
-      Secrets.ConnectionStrings myConnStr = new Secrets.ConnectionStrings();
-      configuration.GetSection("ConnectionStrings").Bind(myConnStr);
-
-      logger.LogInformation(myConnStr.SendGrid);
+      logger.LogInformation(await _myEmail.SendTestEmail());
     }
   }
 }
