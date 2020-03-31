@@ -1,0 +1,17 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0-alpine AS build
+
+RUN apk update && apk add --no-cache bash git openssh
+
+RUN git clone -b dev https://github.com/RicardoGaefke/profile4d.git ./app
+
+WORKDIR /app/src/Web.Api
+
+RUN dotnet publish -c Release ./Web.Api.csproj -r linux-musl-x64 -o ./publish
+
+FROM mcr.microsoft.com/dotnet/core/runtime:3.0-alpine as runtime
+
+WORKDIR /app
+
+COPY --from=build /app/src/Web.Api/publish ./
+
+ENTRYPOINT ["./Web.Api"]

@@ -1,0 +1,5 @@
+version: '3'
+
+services:
+  webjob_teste:
+    image: webjob_teste

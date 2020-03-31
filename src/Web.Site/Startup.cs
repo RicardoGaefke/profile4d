@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -42,6 +43,8 @@ namespace Profile4d.Web.Site
       Bootstrap.DataProtection(services, Configuration);
       Bootstrap.ConsentCookie(services, Configuration, HostingEnvironment.IsDevelopment());
       Bootstrap.CookiesAuth(services, Configuration, HostingEnvironment.IsDevelopment());
+
+      Console.WriteLine(RuntimeInformation.OSDescription);
       
       services.AddNodeServices(options =>
         {
