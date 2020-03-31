@@ -15,3 +15,7 @@ WORKDIR /app
 COPY --from=build /app/src/Web.Api/publish ./
 
 ENTRYPOINT ["./Web.Api"]
+
+# docker build -f .\Dockerfile.web.api.cloud -t web_api:cloud --no-cache .
+# docker tag web_api:cloud ricardogaefke/profile4d:web_api_cloud
+# docker push ricardogaefke/profile4d:web_api_cloud
