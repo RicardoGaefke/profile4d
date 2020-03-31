@@ -4,7 +4,7 @@ RUN apk add --no-cache bash git openssh nodejs npm
 
 RUN git clone -b dev https://github.com/RicardoGaefke/profile4d.git ./app
 
-WORKDIR /app/src/Web.Identity
+WORKDIR /app/src/Web.Site
 
 RUN NODE_OPTIONS=--max_old_space_size=32768‬
 
@@ -12,9 +12,9 @@ RUN npm install
 
 RUN npm run lint-fix
 
-RUN npm run production1
+RUN npm run production
 
-RUN dotnet publish -c Release ./Web.Identity.csproj -r linux-musl-x64 -o ./publish
+RUN dotnet publish -c Release ./Web.Site.csproj -r linux-musl-x64 -o ./publish
 
 FROM mcr.microsoft.com/dotnet/core/runtime-deps:3.0-alpine as runtime
 
@@ -22,6 +22,6 @@ EXPOSE 80
 
 WORKDIR /app
 
-COPY --from=build /app/src/Web.Identity/publish ./
+COPY --from=build /app/src/Web.Site/publish ./
 
-ENTRYPOINT ["dotnet", "Web.Identity.dll"]
+ENTRYPOINT ["dotnet", "Web.Site.dll"]
