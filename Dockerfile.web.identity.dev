@@ -1,7 +1,8 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0-alpine AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build
 
-RUN apk update && apk upgrade && \
-  apk add --no-cache bash git openssh nodejs npm
+RUN apt-get install curl
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash
+RUN apt-get install -y -qq nodejs
 
 WORKDIR /app
 
@@ -10,7 +11,7 @@ COPY src/. ./src/
 
 WORKDIR /app/src/Web.Identity
 
-RUN dotnet restore
+RUN dotnet restore -r linux-x64 ./Web.Identity.csproj
 
 RUN npm install
 
@@ -18,14 +19,26 @@ RUN npm run lint-fix
 
 RUN npm run production
 
-RUN dotnet publish -c Release ./Web.Identity.csproj --no-restore -r linux-musl-x64 -o ./publish
+RUN dotnet publish -c Release ./Web.Identity.csproj --no-restore -r linux-x64 -o ./publish
 
-FROM mcr.microsoft.com/dotnet/core/runtime-deps:3.0-alpine as runtime
+FROM mcr.microsoft.com/dotnet/core/runtime:3.0 as runtime
 
-EXPOSE 80
+RUN apt update
+RUN apt install -y -qq nodejs
+
+RUN dpkg-query -L nodejs
+
+RUN export PATH=$PATH:/usr/bin/node:/usr/share/doc/nodejs
+
+ENV ASPNETCORE_URLS=http://+:5000
 
 WORKDIR /app
 
 COPY --from=build /app/src/Web.Identity/publish ./
 
-ENTRYPOINT ["dotnet", "Web.Identity"]
+ENTRYPOINT ["./Web.Identity"]
+
+# docker build -f .\Dockerfile.web.identity.dev -t web_identity_dev --no-cache .
+# docker create web_identity_dev
+# docker run -it -t -p 8000:5000 web_identity_dev
+# /usr/bin/node /usr/share/doc/nodejs

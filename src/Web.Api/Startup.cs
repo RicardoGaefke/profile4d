@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Serialization;
+using System.Net;
 using Profile4d.DI;
 using Profile4d.Data;
 using Profile4d.Storage;
@@ -143,6 +145,12 @@ namespace Profile4d.Web.Api
         options.Title = "API for Profile4d";
         options.Version = "1.20";
       });
+
+      // ngix config
+      services.Configure<ForwardedHeadersOptions>(options =>
+      {
+        options.KnownProxies.Add(IPAddress.Parse("10.0.0.100"));
+      });
     }
 
       // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -164,6 +172,12 @@ namespace Profile4d.Web.Api
 
       app.UseOpenApi();
       app.UseSwaggerUi3();
+
+      // nginx config
+      app.UseForwardedHeaders(new ForwardedHeadersOptions
+      {
+        ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+      });
 
       app.UseAuthentication();
       app.UseAuthorization();

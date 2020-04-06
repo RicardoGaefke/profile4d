@@ -2,13 +2,17 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.0-alpine AS build
 
 RUN apk update && apk add --no-cache bash git openssh
 
-RUN git clone -b dev https://github.com/RicardoGaefke/profile4d.git ./app
+RUN git clone -b staging https://github.com/RicardoGaefke/profile4d.git ./app
 
 WORKDIR /app/src/Web.Api
 
-RUN dotnet publish -c Release ./Web.Api.csproj -r linux-musl-x64 -o ./publish
+RUN dotnet restore -r linux-musl-x64 ./Web.Api.csproj
+
+RUN dotnet publish -c Release ./Web.Api.csproj -r linux-musl-x64 --no-restore -o ./publish
 
 FROM mcr.microsoft.com/dotnet/core/runtime:3.0-alpine as runtime
+
+ENV ASPNETCORE_URLS=http://+:8080
 
 WORKDIR /app
 
