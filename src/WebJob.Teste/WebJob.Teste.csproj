@@ -21,12 +21,6 @@
     </Content>
   </ItemGroup>
 
-  <!-- <ItemGroup Condition="'$(Configuration)' == 'Debug'">
-    <None Include="appsettings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup> -->
-
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Email\Email.csproj" />
