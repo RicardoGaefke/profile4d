@@ -2,28 +2,19 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.0-alpine as build
 
 RUN apk update && apk upgrade && apk add --no-cache bash git openssh
 
-WORKDIR /app
-
-COPY *.sln .
-COPY src/. ./src/
+RUN git clone -b staging https://github.com/RicardoGaefke/profile4d.git ./app
 
 WORKDIR /app/src/WebJob.Teste
 
-RUN dotnet restore -r linux-musl-x64
+RUN dotnet publish -c Release ./WebJob.Teste.csproj -r linux-x64 -o out
 
-FROM build as publish
-
-WORKDIR /app/src/WebJob.Teste
-
-RUN dotnet publish -c Release ./WebJob.Teste.csproj -r linux-musl-x64 --no-restore -o out
-
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-alpine as runtime
+FROM mcr.microsoft.com/dotnet/core/runtime:3.0-alpine as runtime
 
 WORKDIR /app
 
-COPY --from=publish /app/src/WebJob.Teste/out ./
+COPY --from=build /app/src/WebJob.Teste/out ./
 
-ENTRYPOINT ["dotnet", "WebJob.Teste.dll"]
+ENTRYPOINT ["./WebJob.Teste"]
 
 # docker build -f .\Dockerfile.webjob.teste.cloud -t webjob_teste_cloud .
 # docker create webjob_teste_cloud
