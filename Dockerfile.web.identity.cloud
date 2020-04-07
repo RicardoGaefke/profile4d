@@ -25,7 +25,7 @@ RUN apt install -y -qq nodejs
 
 RUN export PATH=$PATH:/usr/bin/node:/usr/share/doc/nodejs
 
-ENV ASPNETCORE_URLS=http://+:8080
+ENV ASPNETCORE_URLS=http://+:5000
 
 WORKDIR /app
 
