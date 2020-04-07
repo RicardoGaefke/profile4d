@@ -26,8 +26,6 @@ FROM mcr.microsoft.com/dotnet/core/runtime:3.0 as runtime
 RUN apt update
 RUN apt install -y -qq nodejs
 
-RUN dpkg-query -L nodejs
-
 RUN export PATH=$PATH:/usr/bin/node:/usr/share/doc/nodejs
 
 ENV ASPNETCORE_URLS=http://+:5000
