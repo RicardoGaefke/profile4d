@@ -1,8 +1,6 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0-alpine AS build
 
-RUN apt-get install curl
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash
-RUN apt-get install -y -qq nodejs
+RUN apk update && apk add --no-cache bash git openssh nodejs npm
 
 WORKDIR /app
 
@@ -11,7 +9,7 @@ COPY src/. ./src/
 
 WORKDIR /app/src/Web.Identity
 
-RUN dotnet restore -r linux-x64 ./Web.Identity.csproj
+RUN NODE_OPTIONS=--max_old_space_size=32768‬
 
 RUN npm install
 
@@ -19,12 +17,11 @@ RUN npm run lint-fix
 
 RUN npm run production
 
-RUN dotnet publish -c Release ./Web.Identity.csproj --no-restore -r linux-x64 -o ./publish
+RUN dotnet publish -c Release ./Web.Identity.csproj -r linux-musl-x64 -o ./publish
 
-FROM mcr.microsoft.com/dotnet/core/runtime:3.0 as runtime
+FROM mcr.microsoft.com/dotnet/core/runtime:3.0-alpine as runtime
 
-RUN apt update
-RUN apt install -y -qq nodejs
+RUN apk update && apk add --no-cache nodejs npm nodejs-npm
 
 RUN export PATH=$PATH:/usr/bin/node:/usr/share/doc/nodejs
 

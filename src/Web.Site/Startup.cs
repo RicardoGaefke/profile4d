@@ -50,7 +50,7 @@ namespace Profile4d.Web.Site
         {
           if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
           {
-            options.ProjectPath = Path.GetFullPath("/home/site/wwwroot");
+            options.ProjectPath = Path.GetFullPath("/app");
           }
         }
       );

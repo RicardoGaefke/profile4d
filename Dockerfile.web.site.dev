@@ -23,9 +23,9 @@ FROM mcr.microsoft.com/dotnet/core/runtime:3.0-alpine as runtime
 
 RUN apk update && apk add --no-cache nodejs npm nodejs-npm
 
-# RUN env PATH="/usr/bin/nodejs:/usr/bin/node:${PATH}"
+RUN export PATH=$PATH:/usr/bin/node:/usr/share/doc/nodejs
 
-# RUN echo $PATH
+ENV ASPNETCORE_URLS=http://+:5000
 
 WORKDIR /app
 
