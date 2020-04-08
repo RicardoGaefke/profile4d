@@ -1,0 +1,25 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0-alpine AS build
+
+RUN apk update && apk add --no-cache bash git openssh
+
+RUN git clone -b staging https://github.com/RicardoGaefke/profile4d.git ./app
+
+WORKDIR /app/src/Web.Api
+
+RUN dotnet restore -r linux-musl-x64 ./Web.Api.csproj
+
+RUN dotnet publish -c Release ./Web.Api.csproj -r linux-musl-x64 --no-restore -o ./publish
+
+FROM mcr.microsoft.com/dotnet/core/runtime:3.0-alpine as runtime
+
+ENV ASPNETCORE_URLS=http://+:5000
+
+WORKDIR /app
+
+COPY --from=build /app/src/Web.Api/publish ./
+
+ENTRYPOINT ["./Web.Api"]
+
+# docker build -f .\Dockerfile.web.api.cloud -t web_api:cloud --no-cache .
+# docker tag web_api:cloud ricardogaefke/profile4d:web_api_cloud
+# docker push ricardogaefke/profile4d:web_api_cloud
