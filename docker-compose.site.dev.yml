@@ -1,0 +1,21 @@
+version: '3'
+#networks
+networks:
+  my-network:
+    driver: bridge
+services:
+  #web_api
+  web_api:
+    image: web_site_dev
+    container_name: web-api
+    networks:
+      - my-network
+  #nginx
+  nginx:
+    image: mynginx_dev
+    container_name: nginx-proxy
+    ports:
+      - "8000:80"
+      - "8001:443"
+    networks:
+      - my-network
