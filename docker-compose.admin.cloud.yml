@@ -4,15 +4,14 @@ networks:
     driver: bridge
 services:
   web_api:
-    image: web_identity_dev
+    image: ricardogaefke/profile4d:web_admin_cloud
     container_name: web-api
     networks:
       - my-network
   nginx:
-    image: mynginx_dev
+    image: ricardogaefke/profile4d:mynginx_cloud
     container_name: nginx-proxy
     ports:
-      - "8000:80"
-      - "8001:443"
+      - "8080:8080"
     networks:
       - my-network
