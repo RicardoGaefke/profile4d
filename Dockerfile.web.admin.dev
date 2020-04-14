@@ -25,7 +25,7 @@ RUN apk update && apk add --no-cache nodejs npm nodejs-npm
 
 RUN export PATH=$PATH:/usr/bin/node:/usr/share/doc/nodejs
 
-ENV ASPNETCORE_URLS=https://+:5000
+ENV ASPNETCORE_URLS=http://+:5000
 
 WORKDIR /app
 
