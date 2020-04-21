@@ -156,6 +156,7 @@ export interface ILanguage {
   competentlegends: string,
   // twelvecompetencestable: string,
   questions: string,
+  questionsSelected: string,
   profileName: string,
   featuresDominant: string,
   personalityForces: string,
