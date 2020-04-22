@@ -12,8 +12,9 @@ export default makeStyles((theme: Theme): IStyles => ({
     flexWrap: 'wrap',
     '& > *': {
       margin: theme.spacing(1),
-      width: theme.spacing(32),
+      minWidth: '100%',
     },
+    padding: theme.spacing(2),
   },
   progress: {
     height: 12,

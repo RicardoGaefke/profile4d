@@ -91,9 +91,52 @@ export default withTranslation()(
             ) : (
               <>
                 <Grid
-                  justify="flex-end"
                   container
+                  spacing={2}
+                  justify="center"
+                  alignItems="center"
+                  className={classes.questions}
                 >
+                  <Grid
+                    item
+                    md={6}
+                    xs={12}
+                  >
+                    <Typography
+                      component="p"
+                      className={classes.title}
+                    >
+                      {`${t('DynamicQuestions:subtitle')}:`}
+                    </Typography>
+                    <FormControl
+                      margin="dense"
+                      variant="outlined"
+                      fullWidth
+                    >
+                      <InputLabel>
+                        {t('DynamicQuestions:label')}
+                      </InputLabel>
+                      <Select
+                        label="Categories"
+                        value={selectChanges.categories}
+                        onChange={(value: any): void => {
+                          setSelectChanges(value);
+                        }}
+                        inputProps={{
+                          id: 'selectChanges.categories',
+                          name: 'selectChanges.categories',
+                        }}
+                      >
+                        {
+                          SelectedValues.map((s: ITemporarySelect): React.ReactElement<HTMLElement> => (
+                            <MenuItem key={s.id} value={s.name}>
+                              {s.name}
+                            </MenuItem>
+                          ))
+                        }
+                      </Select>
+                    </FormControl>
+                  </Grid>
                   <Grid
                     item
                     md={6}
@@ -109,64 +152,29 @@ export default withTranslation()(
                       }).length}
                     />
                   </Grid>
-                  <Grid item md={12} xs={12}>
-                    <Typography
-                      variant="h4"
-                      component="p"
-                      gutterBottom
-                    >
-                      Select a category to questions:
-                    </Typography>
-                  </Grid>
-                  {/* Initializing select */}
-                  <Grid
-                    item
-                    md={12}
-                    xs={12}
-                  >
-                    <FormControl
-                      margin="dense"
-                      variant="outlined"
-                      fullWidth
-                    >
-                      <InputLabel>
-                        Categories:
-                      </InputLabel>
-                      <Select
-                        label="Categories"
-                        value={selectChanges.categories}
-                        onChange={handleChange}
-                        inputProps={{
-                          id: 'SelectedValues',
-                          name: 'SelectedValues',
-                        }}
-                      >
-                        {
-                          SelectedValues.map((s: ITemporarySelect): React.ReactElement<HTMLElement> => (
-                            <MenuItem key={s.id} value={s.name}>
-                              {s.name}
-                            </MenuItem>
-                          ))
-                        }
-                      </Select>
-                    </FormControl>
-                  </Grid>
-                  {/* End of the select */}
                 </Grid>
-                <List>
-                  {state.Questions.map((q, i): React.ReactElement => (
-                    <React.Fragment key={`Frag-${q.Guid}`}>
-                      {/* // alterar o nome da rota para o editar                                               ▼ */}
-                      <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} to="questionsSelected" />
-                      <Divider key={`Div-${q.Guid}`} />
-                    </React.Fragment>
-                  ))}
-                </List>
+                <Grid
+                  container
+                  alignItems="center"
+                  className={classes.questions}
+                >
+                  <Grid item md={12} xs={12}>
+                    <List>
+                      {state.Questions.map((q, i): React.ReactElement => (
+                        <React.Fragment key={`Frag-${q.Guid}`}>
+                          {/* // alterar o nome da rota para o editar                                               ▼ */}
+                          <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} to="questionsSelected" />
+                          <Divider key={`Div-${q.Guid}`} />
+                        </React.Fragment>
+                      ))}
+                    </List>
+                  </Grid>
+                </Grid>
               </>
             )
           }
           {/* // alterar apenas o nome da rota ▼ */}
-          <Add to="/dynamicContent/QuestionsSelected/add" />
+          <Add to="/dynamicContent/questionsSelected/add" />
         </Container>
       );
     },

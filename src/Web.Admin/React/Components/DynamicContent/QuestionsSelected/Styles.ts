@@ -7,6 +7,8 @@ interface IStyles {
   divider: {},
   progress: {},
   add: {},
+  questions: {},
+  title: {},
 }
 
 export default makeStyles((theme: Theme): IStyles => ({
@@ -33,5 +35,13 @@ export default makeStyles((theme: Theme): IStyles => ({
     position: 'fixed',
     bottom: 85,
     right: 45,
+  },
+  questions: {
+    marginTop: '1rem',
+    marginBottom: '1rem',
+  },
+  title: {
+    fontSize: '1rem',
+    fontWeight: 'bold',
   },
 }));
