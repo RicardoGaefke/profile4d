@@ -5,7 +5,7 @@ import { withTranslation, WithTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
 import { withSnackbar, WithSnackbarProps } from 'notistack';
 import {
-  Typography, Grid, Container, List, Divider, FormControl, InputLabel, Select, MenuItem,
+  Typography, Grid, Container, List, Divider,
 } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
 import { IQuestions, IQuestion } from '../../../../../TypeScript/Interfaces/IQuestion';
@@ -18,11 +18,12 @@ import Add from '../AddButton/Add';
 import setLanguage from './Language';
 import useStyles from './Styles';
 import MyAxios from '../../../Utils/MyAxios';
-// These imports are just to use Select without API values
-// eslint-disable-next-line no-unused-vars
-import SelectedValues, { ITemporarySelect } from './TemporarySelect';
-// eslint-disable-next-line no-unused-vars
-import { ISelect } from './ISelect';
+import QuestionsSelect from '../Select/Select';
+// // These imports are just to use Select without API values
+// // eslint-disable-next-line no-unused-vars
+// import SelectedValues, { ITemporarySelect } from './TemporarySelect';
+// // eslint-disable-next-line no-unused-vars
+// import { ISelect } from './ISelect';
 
 type IProps = WithTranslation & WithSnackbarProps;
 
@@ -36,8 +37,8 @@ export default withTranslation()(
       // eslint-disable-next-line no-unused-vars
       const [state, setState] = useState({} as IQuestions);
 
-      // eslint-disable-next-line no-unused-vars
-      const [selectChanges, setSelectChanges] = useState({} as ISelect);
+      // // eslint-disable-next-line no-unused-vars
+      // const [selectChanges, setSelectChanges] = useState({} as ISelect);
 
       const fetchQuestions = (): void => {
         MyAxios(window.location.href)
@@ -102,7 +103,8 @@ export default withTranslation()(
                     md={6}
                     xs={12}
                   >
-                    <Typography
+                    <QuestionsSelect />
+                    {/* <Typography
                       component="p"
                       className={classes.title}
                     >
@@ -135,7 +137,7 @@ export default withTranslation()(
                           ))
                         }
                       </Select>
-                    </FormControl>
+                    </FormControl> */}
                   </Grid>
                   <Grid
                     item
