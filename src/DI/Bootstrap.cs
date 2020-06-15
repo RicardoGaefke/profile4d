@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.DependencyInjection;
 using Profile4d.Domain;
 
@@ -150,6 +151,14 @@ namespace Profile4d.DI
     public static void CookieMiddleware(IApplicationBuilder app)
     {
       app.UseCookiePolicy();
+    }
+
+    public static void Headers(IApplicationBuilder app)
+    {
+      app.UseForwardedHeaders(new ForwardedHeadersOptions
+      {
+        ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+      });
     }
   }
 }

@@ -59,10 +59,7 @@ namespace Profile4d.Web.Admin
 
     public void Configure(IApplicationBuilder app, IHostEnvironment env)
     {
-      app.UseForwardedHeaders(new ForwardedHeadersOptions
-      {
-        ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-      });
+      Bootstrap.Headers(app);
 
       // var configuration = app.ApplicationServices.GetService<Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration>();
       var cachePeriod = env.IsDevelopment() ? "600" : "31557600";
