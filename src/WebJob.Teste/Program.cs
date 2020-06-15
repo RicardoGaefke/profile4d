@@ -15,35 +15,6 @@ namespace Profile4d.WebJob.Teste
     static void Main(string[] args)
     {
       CreateHostBuilder(args).Build().Run();
-
-      // var builder = new HostBuilder();
-      
-      // builder.ConfigureWebJobs(b =>
-      // {
-      //   b.AddAzureStorageCoreServices();
-      //   b.AddAzureStorage();
-      // });
-      
-      // builder.ConfigureLogging((context, b) => {
-      //   b.AddConsole();
-      // });
-
-      // builder.ConfigureServices((context, services) => {
-      //   // Inject config
-      //   services.Configure<Secrets.ConnectionStrings>(context.Configuration.GetSection("ConnectionStrings"));
-      //   services.AddHostedService<Functions>();
-      //   services.AddHostedService<MyEmail>();
-      //   services.AddHostedService<IMyFunc, MyFunc>();
-
-      //   services.BuildServiceProvider();
-      // });
-
-      // var host = builder.Build();
-      
-      // using (host)
-      // {
-      //   host.Run();
-      // }
     }
 
     public static IHostBuilder CreateHostBuilder(string[] args) =>
