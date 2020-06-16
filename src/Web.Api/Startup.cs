@@ -144,6 +144,7 @@ namespace Profile4d.Web.Api
       services.AddSwaggerDocument(options => {
         options.Title = "API for Profile4d";
         options.Version = "1.20";
+        options.Description = "Made by www.ricardogaefke.com";
       });
 
       // ngix config
