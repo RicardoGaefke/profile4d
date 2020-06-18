@@ -81,7 +81,6 @@ namespace Profile4d.Web.Admin
         app.UseHsts();
       }
 
-      app.UseResponseCompression();
       app.UseHttpsRedirection();
       app.UseCookiePolicy();
 
