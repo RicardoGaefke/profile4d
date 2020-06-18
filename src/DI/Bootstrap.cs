@@ -39,6 +39,8 @@ namespace Profile4d.DI
       Services.Configure<CookiePolicyOptions>(options =>
       {
         options.CheckConsentNeeded = context => true;
+        options.ConsentCookie.SecurePolicy = CookieSecurePolicy.Always;
+        options.ConsentCookie.SameSite = SameSiteMode.None;
         if (IsDev)
         {
           options.ConsentCookie.Domain = "localhost";
@@ -139,6 +141,7 @@ namespace Profile4d.DI
           options.Cookie.HttpOnly = true;
           options.Cookie.SameSite = SameSiteMode.None;
           options.Cookie.Domain = _host;
+          options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
           options.EventsType = typeof(CustomCookieAuthenticationEvents);
         })
       ;

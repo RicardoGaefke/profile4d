@@ -81,7 +81,7 @@ namespace Profile4d.Web.Admin
         app.UseHsts();
       }
 
-      // app.UseHttpsRedirection();
+      app.UseHttpsRedirection();
       app.UseCookiePolicy();
 
       app.UseStaticFiles(new StaticFileOptions
@@ -90,12 +90,6 @@ namespace Profile4d.Web.Admin
         {
           ctx.Context.Response.Headers.Append("Cache-Control", $"public, max-age={cachePeriod}");
         }
-      });
-
-      // nginx config
-      app.UseForwardedHeaders(new ForwardedHeadersOptions
-      {
-        ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
       });
 
       app.UseRouting();
