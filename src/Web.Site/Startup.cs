@@ -1,10 +1,11 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Runtime.InteropServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.SpaServices.Extensions;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -39,6 +40,12 @@ namespace Profile4d.Web.Site
       //  add cors
       Bootstrap.ConfigCors(services, Configuration, HostingEnvironment.IsDevelopment());
 
+      // ngix config --- not used here
+      services.Configure<ForwardedHeadersOptions>(options =>
+      {
+        options.KnownProxies.Add(IPAddress.Parse("10.0.0.100"));
+      });
+
       //  DI config
       Bootstrap.DataProtection(services, Configuration);
       Bootstrap.ConsentCookie(services, Configuration, HostingEnvironment.IsDevelopment());
@@ -56,8 +63,6 @@ namespace Profile4d.Web.Site
       );
 
       services.AddRazorPages();
-
-      Bootstrap.Compression(services);
     }
 
     public void Configure(IApplicationBuilder app, IHostEnvironment env)
@@ -77,7 +82,6 @@ namespace Profile4d.Web.Site
         app.UseHsts();
       }
 
-      app.UseResponseCompression();
       app.UseHttpsRedirection();
       app.UseCookiePolicy();
 
@@ -87,6 +91,12 @@ namespace Profile4d.Web.Site
         {
           ctx.Context.Response.Headers.Append("Cache-Control", $"public, max-age={cachePeriod}");
         }
+      });
+
+      // nginx config
+      app.UseForwardedHeaders(new ForwardedHeadersOptions
+      {
+        ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
       });
 
       app.UseRouting();
