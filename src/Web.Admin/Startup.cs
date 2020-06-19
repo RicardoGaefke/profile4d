@@ -1,10 +1,8 @@
 using System.IO;
 using System.Linq;
-using System.Net;
 using System.Runtime.InteropServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -38,12 +36,6 @@ namespace Profile4d.Web.Admin
 
       //  add cors
       Bootstrap.ConfigCors(services, Configuration, HostingEnvironment.IsDevelopment());
-
-      // ngix config --- not used here
-      services.Configure<ForwardedHeadersOptions>(options =>
-      {
-        options.KnownProxies.Add(IPAddress.Parse("10.0.0.100"));
-      });
 
       //  DI config
       Bootstrap.DataProtection(services, Configuration);

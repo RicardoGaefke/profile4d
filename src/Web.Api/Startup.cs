@@ -1,6 +1,4 @@
-using System.Net;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -29,10 +27,11 @@ namespace Profile4d.Web.Api
     {
       // Add your AppInsights ID here to make it globally available //
       // services.AddApplicationInsightsTelemetry("9e5cc6db-d8d8-49c5-aa18-d60b4d06196b");
-
+      
       // Config data before config cookies so logged users can be checked on SqlServer
       services.Configure<Secrets.ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
       //  data
+      #region DataServices
       services.AddSingleton<MyIdentity>();
       services.AddSingleton<StaticContent>();
       services.AddSingleton<Images>();
@@ -121,6 +120,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<PartnerTwo>();
       services.AddSingleton<IdealPartner>();
       services.AddSingleton<BehavioralResources>();
+      #endregion
       //  storage
       services.AddSingleton<Blob>();
 
@@ -146,12 +146,6 @@ namespace Profile4d.Web.Api
         options.Version = "1.20";
         options.Description = "Made by www.ricardogaefke.com";
       });
-
-      // ngix config
-      services.Configure<ForwardedHeadersOptions>(options =>
-      {
-        options.KnownProxies.Add(IPAddress.Parse("10.0.0.100"));
-      });
     }
 
       // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -159,8 +153,10 @@ namespace Profile4d.Web.Api
     {
       if (env.IsDevelopment())
       {
-          app.UseDeveloperExceptionPage();
+        app.UseDeveloperExceptionPage();
       }
+
+      Bootstrap.Headers(app);
 
       app.UseCookiePolicy();
 
@@ -173,12 +169,6 @@ namespace Profile4d.Web.Api
 
       app.UseOpenApi();
       app.UseSwaggerUi3();
-
-      // nginx config
-      app.UseForwardedHeaders(new ForwardedHeadersOptions
-      {
-        ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-      });
 
       app.UseAuthentication();
       app.UseAuthorization();
