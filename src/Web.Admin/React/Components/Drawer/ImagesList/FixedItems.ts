@@ -24,4 +24,8 @@ export default [
     link: 'imagefourstages',
     title: 'imagefourstages',
   },
+  {
+    link: 'imagenotfound',
+    title: 'imagenotfound',
+  },
 ] as IStaticMenuItem[];
