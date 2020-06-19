@@ -16,6 +16,7 @@
     <PackageReference Include="Microsoft.AspNetCore.DataProtection" Version="3.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.DataProtection.AzureKeyVault" Version="3.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.DataProtection.AzureStorage" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.HttpOverrides" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.ResponseCompression" Version="2.2.0" />
     <PackageReference Include="Microsoft.Azure.KeyVault" Version="3.0.4" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.0" />

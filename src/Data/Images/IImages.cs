@@ -17,5 +17,8 @@ namespace Profile4d.Data
 
     public Image FourStages();
     public BasicReturn FourStagesEdit(Image data);
+
+    public Image NotFound();
+    public BasicReturn NotFoundEdit(Image data);
   }
 }

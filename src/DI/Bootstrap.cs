@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.DependencyInjection;
 using Profile4d.Domain;
 
@@ -38,6 +39,8 @@ namespace Profile4d.DI
       Services.Configure<CookiePolicyOptions>(options =>
       {
         options.CheckConsentNeeded = context => true;
+        options.ConsentCookie.SecurePolicy = CookieSecurePolicy.Always;
+        options.ConsentCookie.SameSite = SameSiteMode.None;
         if (IsDev)
         {
           options.ConsentCookie.Domain = "localhost";
@@ -138,6 +141,7 @@ namespace Profile4d.DI
           options.Cookie.HttpOnly = true;
           options.Cookie.SameSite = SameSiteMode.None;
           options.Cookie.Domain = _host;
+          options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
           options.EventsType = typeof(CustomCookieAuthenticationEvents);
         })
       ;
@@ -150,6 +154,14 @@ namespace Profile4d.DI
     public static void CookieMiddleware(IApplicationBuilder app)
     {
       app.UseCookiePolicy();
+    }
+
+    public static void Headers(IApplicationBuilder app)
+    {
+      app.UseForwardedHeaders(new ForwardedHeadersOptions
+      {
+        ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+      });
     }
   }
 }

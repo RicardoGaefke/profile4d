@@ -11,6 +11,7 @@ import MyImageTrinoBrain from '../ImageTrinoBrain/Page';
 import MyImageFourIntelligenceCenters from '../ImageFourIntelligenceCenters/Page';
 import MyImageThreeDimensions from '../ImageThreeDimensions/Page';
 import MyImageFourStages from '../ImageFourStages/Page';
+import MyImageNotFound from '../ImageNotFound/Page';
 
 export default withRouter(
   (props: RouteComponentProps): React.ReactElement<RouteComponentProps> => {
@@ -23,6 +24,7 @@ export default withRouter(
         <Route path={`${match.url}/imagefourintelligencecenters/`} component={MyImageFourIntelligenceCenters} />
         <Route path={`${match.url}/imagethreedimensions`} component={MyImageThreeDimensions} />
         <Route path={`${match.url}/imagefourstages`} component={MyImageFourStages} />
+        <Route path={`${match.url}/imagenotfound`} component={MyImageNotFound} />
       </MyTemplate>
     );
   },

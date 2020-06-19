@@ -1,10 +1,8 @@
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Serialization;
-using System.Net;
 using Profile4d.DI;
 using Profile4d.Data;
 using Profile4d.Storage;
@@ -29,13 +27,14 @@ namespace Profile4d.Web.Api
     {
       // Add your AppInsights ID here to make it globally available //
       // services.AddApplicationInsightsTelemetry("9e5cc6db-d8d8-49c5-aa18-d60b4d06196b");
-
+      
       // Config data before config cookies so logged users can be checked on SqlServer
       services.Configure<Secrets.ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
       //  data
+      #region DataServices
       services.AddSingleton<MyIdentity>();
       services.AddSingleton<StaticContent>();
-      services.AddSingleton<Images>();
+      services.AddSingleton<IImages, Images>();
       services.AddSingleton<Questions>();
       services.AddSingleton<ProfileName>();
       services.AddSingleton<FeaturesDominant>();
@@ -121,6 +120,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<PartnerTwo>();
       services.AddSingleton<IdealPartner>();
       services.AddSingleton<BehavioralResources>();
+      #endregion
       //  storage
       services.AddSingleton<Blob>();
 
@@ -144,12 +144,7 @@ namespace Profile4d.Web.Api
       services.AddSwaggerDocument(options => {
         options.Title = "API for Profile4d";
         options.Version = "1.20";
-      });
-
-      // ngix config
-      services.Configure<ForwardedHeadersOptions>(options =>
-      {
-        options.KnownProxies.Add(IPAddress.Parse("10.0.0.100"));
+        options.Description = "Made by www.ricardogaefke.com";
       });
     }
 
@@ -158,8 +153,10 @@ namespace Profile4d.Web.Api
     {
       if (env.IsDevelopment())
       {
-          app.UseDeveloperExceptionPage();
+        app.UseDeveloperExceptionPage();
       }
+
+      Bootstrap.Headers(app);
 
       app.UseCookiePolicy();
 
@@ -172,12 +169,6 @@ namespace Profile4d.Web.Api
 
       app.UseOpenApi();
       app.UseSwaggerUi3();
-
-      // nginx config
-      app.UseForwardedHeaders(new ForwardedHeadersOptions
-      {
-        ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-      });
 
       app.UseAuthentication();
       app.UseAuthorization();

@@ -1,3 +1,4 @@
+using System.IO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,14 +18,14 @@ namespace Profile4d.Web.Api.Controllers
   {
     private readonly ILogger<IdentityController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
-    private readonly Images _myImages;
+    private readonly IImages _myImages;
     private readonly Blob _blob;
     private string _user;
 
     public ImageController(
       ILogger<IdentityController> logger,
       IHttpContextAccessor httpContextAccessor,
-      Images MyImages,
+      IImages MyImages,
       Blob Blob
     )
     {
@@ -45,7 +46,22 @@ namespace Profile4d.Web.Api.Controllers
     [HttpGet("show/{file}")]
     public object Show(string file)
     {
-      return File(_blob.ShowImage(file).Content, "image/png");
+      try
+      {
+        Response.Headers.Add("Cache-Control", $"public, max-age=31557600");
+        FileStreamResult _response = File(_blob.ShowImage(file).Content, "image/png");
+        return _response;
+      }
+      catch (FileNotFoundException)
+      {
+        Response.Headers.Add("FileStatus", "Not found");
+        return File(_blob.ShowImage(_myImages.NotFound().Id.ToString() + ".png").Content, "image/png");
+      }
+      catch (System.Exception ex)
+      {
+        Response.Headers.Add("FileStatus", ex.Message);
+        return File(_blob.ShowImage(_myImages.NotFound().Id.ToString() + ".png").Content, "image/png");
+      }
     }
 
     [Authorize(Roles = "Admin")]
@@ -273,6 +289,54 @@ namespace Profile4d.Web.Api.Controllers
       {
         data.CreatedBy = _user;
         _return = _myImages.FourStagesEdit(data);
+        data.Name = _return.Code + ".png";
+        _blob.SaveBase64(data);
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = data.Src;
+        _return.Details = ex.StackTrace;
+
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("ImageNotFound")]
+    public ActionResult<Image> ImageNotFound()
+    {
+      Image _return = new Image();
+
+      try
+      {
+        _return = _myImages.NotFound();
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPost("ImageNotFoundEdit")]
+    public ActionResult<BasicReturn> ImageNotFoundEdit(Image data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        data.CreatedBy = _user;
+        _return = _myImages.NotFoundEdit(data);
         data.Name = _return.Code + ".png";
         _blob.SaveBase64(data);
         return _return;

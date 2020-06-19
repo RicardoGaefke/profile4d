@@ -11,7 +11,7 @@ import Main from './Main';
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('Web.Identity -> 404.Main', (): void => {
+describe('Web.Site -> 404.Main', (): void => {
   const App = (): React.ReactElement => (
     <MyStateProvider initialContext={appData}>
       <MyApp>
@@ -56,9 +56,9 @@ describe('Web.Identity -> 404.Main', (): void => {
       const wrapper = shallow(<App />);
       expect(wrapper.find(MyStateProvider).props().initialContext.KeepConnected).equal(false);
     });
-    it('Should return App with Drawer context like "true" by default', (): void => {
+    it('Should return App with Drawer context like "false" by default', (): void => {
       const wrapper = shallow(<App />);
-      expect(wrapper.find(MyStateProvider).props().initialContext.Drawer).equal(true);
+      expect(wrapper.find(MyStateProvider).props().initialContext.Drawer).equal(false);
     });
     it('Should return App with IsAuthenticated context like "false" by default', (): void => {
       const wrapper = shallow(<App />);

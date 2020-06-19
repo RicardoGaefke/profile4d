@@ -8,4 +8,5 @@ export default {
   imagefourintelligencecenters: 'Quatro centros de Inteligência (estáticos)',
   imagethreedimensions: 'As três dimensões que compõem a Competência (estática)',
   imagefourstages: 'Quatro estágios (estático)',
+  imagenotfound: 'Imagem não encontrada',
 } as ILanguage;

@@ -3,7 +3,6 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -53,17 +52,12 @@ namespace Profile4d.Web.Identity
       );
 
       services.AddRazorPages();
-
-      Bootstrap.Compression(services);
     }
 
     public void Configure(IApplicationBuilder app, IHostEnvironment env)
     {
-      app.UseForwardedHeaders(new ForwardedHeadersOptions
-      {
-        ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-      });
-      
+      Bootstrap.Headers(app);
+
       // var configuration = app.ApplicationServices.GetService<Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration>();
       var cachePeriod = env.IsDevelopment() ? "600" : "31557600";
 
@@ -79,7 +73,6 @@ namespace Profile4d.Web.Identity
         app.UseHsts();
       }
 
-      app.UseResponseCompression();
       app.UseHttpsRedirection();
       app.UseCookiePolicy();
 
