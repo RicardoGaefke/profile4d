@@ -17,14 +17,14 @@ namespace Profile4d.Web.Api.Controllers
   {
     private readonly ILogger<IdentityController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
-    private readonly Images _myImages;
+    private readonly IImages _myImages;
     private readonly Blob _blob;
     private string _user;
 
     public ImageController(
       ILogger<IdentityController> logger,
       IHttpContextAccessor httpContextAccessor,
-      Images MyImages,
+      IImages MyImages,
       Blob Blob
     )
     {

@@ -34,7 +34,7 @@ namespace Profile4d.Web.Api
       #region DataServices
       services.AddSingleton<MyIdentity>();
       services.AddSingleton<StaticContent>();
-      services.AddSingleton<Images>();
+      services.AddSingleton<IImages, Images>();
       services.AddSingleton<Questions>();
       services.AddSingleton<ProfileName>();
       services.AddSingleton<FeaturesDominant>();

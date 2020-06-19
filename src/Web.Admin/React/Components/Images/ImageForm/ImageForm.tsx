@@ -50,7 +50,7 @@ const MyImageForm = withFormik<WithTranslation & WithSnackbarProps & IProps, ISt
   },
 })(ImageForm);
 
-export const Login = withTranslation()(withSnackbar(MyImageForm));
+const Image = withTranslation()(withSnackbar(MyImageForm));
 
 export default withTranslation()(
   (props: WithTranslation & IProps): React.ReactElement<WithTranslation & IProps> => {
@@ -67,7 +67,7 @@ export default withTranslation()(
         >
           {t('FirstPageImages:logo')}
         </Typography>
-        <Login myValues={myValues} />
+        <Image myValues={myValues} />
       </div>
     );
   },
