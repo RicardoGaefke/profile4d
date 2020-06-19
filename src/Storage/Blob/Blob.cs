@@ -35,6 +35,11 @@ namespace Profile4d.Storage
       BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient("images-staging");
       BlobClient blobClient = containerClient.GetBlobClient(file);
 
+      if (!blobClient.Exists())
+      {
+        throw new FileNotFoundException("Blob not found", file);
+      }
+
       return blobClient.Download();
     }
   }

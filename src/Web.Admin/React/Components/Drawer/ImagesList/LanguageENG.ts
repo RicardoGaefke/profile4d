@@ -8,4 +8,5 @@ export default {
   imagefourintelligencecenters: 'Four Intelligence Centers (static)',
   imagethreedimensions: 'The three dimensions that make up the Competency (static)',
   imagefourstages: 'Four stages (static)',
+  imagenotfound: 'Image not found',
 } as ILanguage;
