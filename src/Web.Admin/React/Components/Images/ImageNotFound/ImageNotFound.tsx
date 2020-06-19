@@ -18,7 +18,7 @@ interface IProps {
 }
 
 const MyImageFourStages = withFormik<WithTranslation & WithSnackbarProps & IProps, IStaticImageForm>({
-  displayName: 'Static Content Image Four Stages',
+  displayName: 'Static Content Image Not Found',
   enableReinitialize: true,
   mapPropsToValues: (props: IProps):IStaticImageForm => props.myValues,
   validationSchema: Validation,
