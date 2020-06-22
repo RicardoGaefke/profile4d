@@ -29,7 +29,7 @@ namespace Profile4d.WebJob.Email
     }
 
     public async Task EnviarEmailsMI4D(
-      [QueueTrigger("%queueName-mi4d%")]
+      [QueueTrigger("%queueName_mi4d%")]
       string message,
       int DequeueCount,
       ILogger logger)
