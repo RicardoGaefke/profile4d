@@ -32,15 +32,17 @@ const MyApp = (): React.ReactElement<any> => {
           autoHideDuration={6000}
           dense
         >
-          <AppBar />
-          {(ConsentCookie) ? <MyConsentCookie /> : null}
-          <div className={classes.main}>
-            <ErrorBoundary>
-              <Template />
-            </ErrorBoundary>
-          </div>
-          <Footer />
-          <ConfigDrawer />
+          <>
+            <AppBar />
+            {(ConsentCookie) ? <MyConsentCookie /> : null}
+            <div className={classes.main}>
+              <ErrorBoundary>
+                <Template />
+              </ErrorBoundary>
+            </div>
+            <Footer />
+            <ConfigDrawer />
+          </>
         </SnackbarProvider>
       </div>
       <CssBaseline />

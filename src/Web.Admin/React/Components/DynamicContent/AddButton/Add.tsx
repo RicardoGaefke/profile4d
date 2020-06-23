@@ -29,15 +29,17 @@ export default withTranslation()(
       };
 
       return (
-        <Tooltip title={t('AddQuestion:title')} placement="right">
-          <Fab
-            color="primary"
-            aria-label={t('AddQuestion:title')}
-            onClick={newQuestion}
-            className={classes.add}
-          >
-            <AddIcon />
-          </Fab>
+        <Tooltip title={(t('AddQuestion:title')) as unknown as string} placement="right">
+          <>
+            <Fab
+              color="primary"
+              aria-label={t('AddQuestion:title')}
+              onClick={newQuestion}
+              className={classes.add}
+            >
+              <AddIcon />
+            </Fab>
+          </>
         </Tooltip>
       );
     },

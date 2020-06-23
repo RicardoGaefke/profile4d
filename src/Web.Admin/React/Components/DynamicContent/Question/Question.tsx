@@ -27,7 +27,8 @@ export default withTranslation()(
       t, number, question, handleChange, to,
     } = props;
     const {
-      Title_PT, Text_PT, Title_ENG, Text_ENG, Guid, Active,
+      Title_PT, Text_PT, Title_ENG, Text_ENG,
+      Guid, Active, Category,
     } = question;
 
     return (
@@ -70,6 +71,8 @@ export default withTranslation()(
             <>
               <EditButton to={`/dynamicContent/${to}/edit/${Guid}`} />
               <MyActive Active={Active} handleChange={handleChange} Guid={Guid} />
+              <br />
+              {Category}
             </>
           </Grid>
         </Grid>
