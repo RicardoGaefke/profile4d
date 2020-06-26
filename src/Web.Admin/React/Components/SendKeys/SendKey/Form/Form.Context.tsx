@@ -11,6 +11,7 @@ import initialValues, { IForm } from './Form.InitialValues';
 import Validation from './Form.Validation';
 import MyForm from './Form';
 import useStyles from '../../../../Utils/Form.Styles';
+import myAxios from '../../../../Utils/MyAxios';
 
 const SuperForm = withFormik<WithTranslation & WithSnackbarProps, IForm>({
   displayName: 'DefaultForm',
@@ -19,11 +20,29 @@ const SuperForm = withFormik<WithTranslation & WithSnackbarProps, IForm>({
   validationSchema: Validation,
   handleSubmit: async (values: IForm, { resetForm, setSubmitting, props }): Promise<void> => {
     const { enqueueSnackbar, t } = props;
-    enqueueSnackbar(t('SendKey:feedback.success'), {
-      variant: 'success',
+
+    await myAxios(window.location.href).post<IForm>('SendKey/Send', {
+      Email: values.Email,
+    }).then((response): void => {
+      const { data } = response;
+
+      if (data.Success) {
+        enqueueSnackbar(t('SendKey:feedback.success'), {
+          variant: 'success',
+        });
+        resetForm();
+      } else {
+        enqueueSnackbar(t('SendKey:feedback.failure'), {
+          variant: 'error',
+        });
+      }
+      setSubmitting(false);
+    }).catch((): void => {
+      enqueueSnackbar(t('SendKey:feedback.failure'), {
+        variant: 'error',
+      });
+      setSubmitting(false);
     });
-    setSubmitting(false);
-    resetForm();
   },
 })(MyForm);
 
