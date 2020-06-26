@@ -59,5 +59,26 @@ namespace Profile4d.Web.Api.Controllers
         return _return;
       }
     }
+
+    [Authorize(Roles = "Admin,Consultant")]
+    [HttpPost("Transfer")]
+    public ActionResult<BasicReturn> Transfer(Key data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        Key key = new Key(data.Email, Convert.ToInt32(_user), Convert.ToInt32(data.Keys), DateTime.Now);
+        _sendKey.TransferKeys(key);
+        _return.Success = true;
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        return _return;
+      }
+    }
   }
 }

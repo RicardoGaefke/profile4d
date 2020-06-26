@@ -15,7 +15,7 @@ export type IMyForm = FormikProps<IForm> & WithTranslation;
 
 export default (props: IMyForm): React.ReactElement<IMyForm> => {
   const classes = useStyles({});
-  const { t, i18n } = useTranslation('SendKey');
+  const { t, i18n } = useTranslation('TransferKeys');
 
   const {
     values,
@@ -43,7 +43,7 @@ export default (props: IMyForm): React.ReactElement<IMyForm> => {
       <Grid
         container
         spacing={2}
-        justify="center"
+        justify="flex-start"
         alignItems="center"
       >
         <Grid
@@ -53,8 +53,8 @@ export default (props: IMyForm): React.ReactElement<IMyForm> => {
           lg={12}
         >
           <Alert
-            title={t('SendKey:alert.title')}
-            text={t('SendKey:alert.text')}
+            title={t('TransferKeys:alert.title')}
+            text={t('TransferKeys:alert.text')}
             severity="warning"
           />
         </Grid>
@@ -67,8 +67,8 @@ export default (props: IMyForm): React.ReactElement<IMyForm> => {
           <TextField
             margin="dense"
             error={errors.Email as any && touched.Email as any}
-            label={t('SendKey:email.text')}
-            title={t('SendKey:email.title')}
+            label={t('TransferKeys:email.text')}
+            title={t('TransferKeys:email.title')}
             name="Email"
             id="Email"
             type="email"
@@ -90,8 +90,8 @@ export default (props: IMyForm): React.ReactElement<IMyForm> => {
           <TextField
             margin="dense"
             error={errors.ConfirmEmail as any && touched.ConfirmEmail as any}
-            label={t('SendKey:confirmEmail.text')}
-            title={t('SendKey:confirmEmail.title')}
+            label={t('TransferKeys:confirmEmail.text')}
+            title={t('TransferKeys:confirmEmail.title')}
             name="ConfirmEmail"
             id="ConfirmEmail"
             type="email"
@@ -99,6 +99,30 @@ export default (props: IMyForm): React.ReactElement<IMyForm> => {
             onChange={handleChange}
             onBlur={handleBlur}
             helperText={(errors.ConfirmEmail && touched.ConfirmEmail) && errors.ConfirmEmail}
+            variant="outlined"
+            className={classes.item}
+            fullWidth
+          />
+        </Grid>
+
+        <Grid
+          item
+          xs={12}
+          md={12}
+          lg={6}
+        >
+          <TextField
+            margin="dense"
+            error={errors.ConfirmEmail as any && touched.ConfirmEmail as any}
+            label={t('TransferKeys:keys.text')}
+            title={t('TransferKeys:keys.title')}
+            name="Keys"
+            id="Keys"
+            type="number"
+            value={values.Keys}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            helperText={(errors.Keys && touched.Keys) && errors.Keys}
             variant="outlined"
             className={classes.item}
             fullWidth
@@ -115,10 +139,10 @@ export default (props: IMyForm): React.ReactElement<IMyForm> => {
             color="primary"
             variant="contained"
             type="submit"
-            title={t('SendKey:button.title')}
+            title={t('TransferKeys:button.title')}
             disabled={isSubmitting}
           >
-            {t('SendKey:button.text')}
+            {t('TransferKeys:button.text')}
           </Button>
         </Grid>
       </Grid>

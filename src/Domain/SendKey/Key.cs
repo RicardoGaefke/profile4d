@@ -9,6 +9,7 @@ namespace Profile4d.Domain
     public string Email { get; set; }
     public int SentBy { get; set; }
     public int Consultant { get; set; }
+    public int Keys { get; set; }
     public int SentWhen { get; set; }
     public DateTime Started { get; set; }
     public DateTime Finished { get; set; }
@@ -28,6 +29,17 @@ namespace Profile4d.Domain
       this.Email = email;
       this.SentBy = sentBy;
       this.Consultant = consultant;
+    }
+
+    public Key(string email, int sentBy, int keys, DateTime? when)
+    {
+      DomainException.When(!string.IsNullOrEmpty(email), "Email is required!");
+      DomainException.When(!(sentBy < 1), "SentBy is required!");
+      DomainException.When(!(keys < 1), "Keys is required!");
+
+      this.Email = email;
+      this.SentBy = sentBy;
+      this.Keys = keys;
     }
   }
 }
