@@ -12,4 +12,5 @@ export interface IDynamicContent extends IBasicReturn, ICreated
   Title_ENG: string;
   Text_PT: string;
   Text_ENG: string;
+  Category?: number;
 }

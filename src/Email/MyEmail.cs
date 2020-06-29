@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
@@ -17,11 +16,6 @@ namespace Profile4d.Email
       _connectionStrings = ConnectionStrings;
     }
 
-    public string SendGridKey()
-    {
-      return _connectionStrings.Value.SendGrid;
-    }
-
     public async Task<string> SendTestEmail()
     {
       SendGridClient client = new SendGridClient(_connectionStrings.Value.SendGrid);
@@ -37,6 +31,31 @@ namespace Profile4d.Email
       msg.AddTo(new EmailAddress("lucasneves.dev@gmail.com", "Lucas Neves"));
 
       Response response = await client.SendEmailAsync(msg);
+
+      return response.Headers.GetValues("x-message-id").FirstOrDefault();
+    }
+
+    public async Task<string> SendMI4DEmail(MyEmails email)
+    {
+      SendGridClient client = new SendGridClient(_connectionStrings.Value.SendGrid);
+
+      var msg = new SendGridMessage();
+      msg.SetFrom(new EmailAddress("suporte@mi3dplus.com", "Suporte MI3D Plus"));
+      msg.SetSubject(email.Subject);
+      msg.AddContent(MimeType.Html, email.Body);
+      msg.AddTo(new EmailAddress(email.To.First().Address, email.To.First().DisplayName));
+      
+      if (email.To.First().Address != "coachcarlosdesouza@hotmail.com")
+      {
+        msg.AddCc(new EmailAddress("coachcarlosdesouza@hotmail.com", "Carlos de Souza"));
+      }
+
+      if (email.To.First().Address != "ricardogaefke@gmail.com")
+      {
+        msg.AddCc(new EmailAddress("ricardogaefke@gmail.com", "Ricardo Gaefke"));
+      }
+
+      var response = await client.SendEmailAsync(msg);
 
       return response.Headers.GetValues("x-message-id").FirstOrDefault();
     }

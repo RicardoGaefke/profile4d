@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React, { useState } from 'react';
 import {
-  Grid, TextField, Button,
+  Grid, TextField, Button, InputLabel, FormControl, Select, MenuItem,
 } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
@@ -14,6 +14,10 @@ import { Editor, EditorState, RichUtils } from 'draft-js';
 import { IDynamicContent } from '../../../../../TypeScript/Interfaces/IDynamicContent';
 import Createdby from '../../Created/Created';
 import useStyles from '../../../Utils/Form.Styles';
+
+export interface IProps {
+  category: boolean,
+}
 
 export type IForm = FormikProps<IDynamicContent> & WithTranslation;
 
@@ -103,6 +107,39 @@ export default (props: IForm): React.ReactElement<IForm> => {
         autoComplete="off"
         onSubmit={handleSubmit}
       >
+        {
+          (values.Category !== 0) ? (
+            <Grid
+              item
+              xs={12}
+              md={12}
+              lg={12}
+            >
+              <FormControl className={classes.item}>
+                <InputLabel id="Category-label">{t('DynamicForm:category.text')}</InputLabel>
+                <Select
+                  labelId="Category-label"
+                  id="Category"
+                  name="Category"
+                  value={values.Category}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  title={t('DynamicForm:category:title')}
+                >
+                  <MenuItem value={1}>{t('DynamicForm:category:text1')}</MenuItem>
+                  <MenuItem value={2}>{t('DynamicForm:category:text2')}</MenuItem>
+                  <MenuItem value={3}>{t('DynamicForm:category:text3')}</MenuItem>
+                  <MenuItem value={4}>{t('DynamicForm:category:text4')}</MenuItem>
+                  <MenuItem value={5}>{t('DynamicForm:category:text5')}</MenuItem>
+                  <MenuItem value={6}>{t('DynamicForm:category:text6')}</MenuItem>
+                  <MenuItem value={7}>{t('DynamicForm:category:text7')}</MenuItem>
+                  <MenuItem value={8}>{t('DynamicForm:category:text8')}</MenuItem>
+                  <MenuItem value={9}>{t('DynamicForm:category:text9')}</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+          ) : null
+        }
         <Grid
           container
           spacing={2}

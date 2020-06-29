@@ -14,6 +14,7 @@ const Quest: IQuestion = {
   Active: true,
   Active_Created: '2020-03-06 21:33:22.087',
   Active_CreatedBy: 'Ricardo Gaefke',
+  Category: 2,
   Title_PT: 'Título em Português',
   Title_ENG: 'Title in English',
   Text_PT: 'Texto em Português',

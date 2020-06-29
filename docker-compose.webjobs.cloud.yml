@@ -1,0 +1,5 @@
+version: '3'
+services:
+  webjob_email:
+    image: ricardogaefke/profile4d:webjob_email_cloud
+    container_name: webjob_email

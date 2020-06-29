@@ -7,6 +7,7 @@ import MyPolicy from '../Views/Policy/Policy';
 import FixedContentRouter from '../Components/FixedContent/Router/FixedContentRouter';
 import ImageFormRouter from '../Components/Images/Router/ImagesRouter';
 import DynamicRouter from '../Components/DynamicContent/Router/DynamicRouter';
+import SendKeyRouter from '../Components/SendKeys/Router/SendKeysRouter';
 
 export default (): React.ReactElement => (
   <Switch>
@@ -15,6 +16,7 @@ export default (): React.ReactElement => (
     <Route path="/fixedcontent/" component={FixedContentRouter} />
     <Route path="/imageform/" component={ImageFormRouter} />
     <Route path="/dynamicContent/" component={DynamicRouter} />
+    <Route path="/transferKeys/" component={SendKeyRouter} />
     <Route path="/about" component={MyAbout} />
     <Route path="/policy" component={MyPolicy} />
     <Route path="/404" component={MyNotFound} />

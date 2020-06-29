@@ -29,6 +29,7 @@ const MyQuestion = withFormik<WithTranslation & WithSnackbarProps & RouteCompone
     const { enqueueSnackbar, t, history } = props;
     // alterar o webservice apenas, não a função Edit                ▼
     await myAxios(window.location.href).post<IDynamicContent>('Questions/Edit', {
+      Category: values.Category,
       Title_PT: values.Title_PT,
       Title_ENG: values.Title_ENG,
       Text_PT: values.Text_PT,
