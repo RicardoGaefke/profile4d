@@ -8,6 +8,7 @@ import Styles from './Styles';
 import FixedContentList from './FixedItemsList/FixedContentList';
 import ImagesList from './ImagesList/ImagesList';
 import DynamicContent from './DynamicContentList/DynamicContentList';
+import SendKeys from './SendKeys/SendKeys';
 
 export default withTranslation()(
   (): React.ReactElement<WithTranslation> => {
@@ -29,6 +30,8 @@ export default withTranslation()(
         onClose={toggle}
       >
         <div className={classes.root}>
+          <SendKeys />
+          <Divider className={classes.divider} />
           <FixedContentList />
           <Divider className={classes.divider} />
           <ImagesList />

@@ -10,6 +10,7 @@ import EditButton from '../EditButton/EditButton';
 // eslint-disable-next-line no-unused-vars
 import { IQuestion } from '../../../../../TypeScript/Interfaces/IQuestion';
 import MyActive from '../Active/Active';
+import setLanguage from '../Language';
 
 interface MyProps {
   to: string,
@@ -22,12 +23,14 @@ type IProps = WithTranslation & MyProps;
 
 export default withTranslation()(
   (props: IProps): React.ReactElement<IProps> => {
+    setLanguage();
+
     const {
-      // eslint-disable-next-line no-unused-vars
       t, number, question, handleChange, to,
     } = props;
     const {
-      Title_PT, Text_PT, Title_ENG, Text_ENG, Guid, Active,
+      Title_PT, Text_PT, Title_ENG, Text_ENG,
+      Guid, Active, Category,
     } = question;
 
     return (
@@ -70,6 +73,8 @@ export default withTranslation()(
             <>
               <EditButton to={`/dynamicContent/${to}/edit/${Guid}`} />
               <MyActive Active={Active} handleChange={handleChange} Guid={Guid} />
+              <br />
+              {t(`DynamicForm:category:text${Category}`)}
             </>
           </Grid>
         </Grid>

@@ -29,7 +29,7 @@ export type IForm = FormikProps<IStaticImageForm> & WithTranslation & WithSnackb
 
 export default (props: IForm): React.ReactElement<IForm> => {
   const classes = useStyles({});
-  const { t, i18n } = useTranslation('StaticImageFourStages');
+  const { t, i18n } = useTranslation('StaticImageNotFound');
   setLanguage();
   const Api = new Hosts(window.location.href);
 
@@ -51,7 +51,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
   useEffect((): void => {
     if (!isSubmitting) {
       MyAxios(window.location.href)
-        .get<IStaticImageForm>('Image/ImageFourStages')
+        .get<IStaticImageForm>('Image/ImageNotFound')
         .then((response): void => {
           const { data } = response;
 

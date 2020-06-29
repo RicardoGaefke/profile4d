@@ -1,0 +1,21 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine as build
+
+RUN apk update && apk upgrade && apk add --no-cache bash git openssh
+
+RUN git clone -b master https://github.com/RicardoGaefke/profile4d.git ./app
+
+WORKDIR /app/src/WebJob.Email
+
+RUN dotnet publish -c Release ./WebJob.Email.csproj -r linux-musl-x64 -o out
+
+FROM mcr.microsoft.com/dotnet/core/runtime:3.1-alpine as runtime
+
+WORKDIR /app
+
+COPY --from=build /app/src/WebJob.Email/out ./
+
+ENTRYPOINT ["./WebJob.Email"]
+
+# docker build -f .\Dockerfile.webjob.email.cloud -t webjob_email_cloud .
+# docker create webjob_email_cloud
+# docker run -it --rm webjob_email_cloud

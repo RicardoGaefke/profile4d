@@ -31,12 +31,14 @@ const MyApp = (props: React.PropsWithChildren<any>): React.ReactElement => {
           autoHideDuration={6000}
           dense
         >
-          <AppBar />
-          <div className={classes.main}>
-            {children}
-          </div>
-          <Footer />
-          <ConfigDrawer />
+          <>
+            <AppBar />
+            <div className={classes.main}>
+              {children}
+            </div>
+            <Footer />
+            <ConfigDrawer />
+          </>
         </SnackbarProvider>
       </div>
       <CssBaseline />

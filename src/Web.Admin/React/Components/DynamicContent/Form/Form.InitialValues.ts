@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { IDynamicContent } from '../../../../../TypeScript/Interfaces/IDynamicContent';
 
-const initialValues: IDynamicContent = {
+export default {
   Id: 1,
   Guid: '',
   Active: true,
@@ -18,6 +18,5 @@ const initialValues: IDynamicContent = {
   Code: 'Undefined',
   Details: 'Undefined',
   Url: 'www.staging.profile4d.com',
-};
-
-export default initialValues;
+  Category: 1,
+} as IDynamicContent;

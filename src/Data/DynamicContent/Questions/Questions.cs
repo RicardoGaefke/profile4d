@@ -40,12 +40,13 @@ namespace Profile4d.Data
                 MyDR.GetBoolean(1),
                 MyDR.GetDateTime(2).ToString("yyyy-MM-dd HH:mm:ss.fff"),
                 MyDR.GetString(3),
-                MyDR.GetString(4),
+                MyDR.GetInt32(4),
                 MyDR.GetString(5),
                 MyDR.GetString(6),
                 MyDR.GetString(7),
-                MyDR.GetDateTime(8).ToString("yyyy-MM-dd HH:mm:ss.fff"),
-                MyDR.GetString(9)
+                MyDR.GetString(8),
+                MyDR.GetDateTime(9).ToString("yyyy-MM-dd HH:mm:ss.fff"),
+                MyDR.GetString(10)
               );
 
               _list.Add(_question);
@@ -73,6 +74,7 @@ namespace Profile4d.Data
           Cmd.CommandText = "[sp_QUESTIONS_ADD]";
 
           Cmd.Parameters.AddWithValue("@USER", data.CreatedBy);
+          Cmd.Parameters.AddWithValue("@CATEGORY", data.Category);
           Cmd.Parameters.AddWithValue("@TITLE_PT", data.Title_PT);
           Cmd.Parameters.AddWithValue("@TEXT_PT", data.Text_PT);
           Cmd.Parameters.AddWithValue("@TITLE_ENG", data.Title_ENG);
@@ -135,12 +137,13 @@ namespace Profile4d.Data
           {
             MyDR.Read();
 
-            _return.Title_PT = MyDR.GetString(0);
-            _return.Text_PT = MyDR.GetString(1);
-            _return.Title_ENG = MyDR.GetString(2);
-            _return.Text_ENG = MyDR.GetString(3);
-            _return.Created = MyDR.GetDateTime(4).ToString("yyyy-MM-dd HH:mm:ss.fff");
-            _return.CreatedBy = MyDR.GetString(5);
+            _return.Category = MyDR.GetInt32(0);
+            _return.Title_PT = MyDR.GetString(2);
+            _return.Text_PT = MyDR.GetString(2);
+            _return.Title_ENG = MyDR.GetString(3);
+            _return.Text_ENG = MyDR.GetString(4);
+            _return.Created = MyDR.GetDateTime(5).ToString("yyyy-MM-dd HH:mm:ss.fff");
+            _return.CreatedBy = MyDR.GetString(6);
           }
         }
       }
@@ -164,6 +167,7 @@ namespace Profile4d.Data
 
           Cmd.Parameters.AddWithValue("@GUID", data.Guid);
           Cmd.Parameters.AddWithValue("@USER", data.CreatedBy);
+          Cmd.Parameters.AddWithValue("@CATEGORY", data.Category);
           Cmd.Parameters.AddWithValue("@TITLE_PT", data.Title_PT);
           Cmd.Parameters.AddWithValue("@TEXT_PT", data.Text_PT);
           Cmd.Parameters.AddWithValue("@TITLE_ENG", data.Title_ENG);
