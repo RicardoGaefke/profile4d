@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-  Grid, TextField, Button,
+  Grid, TextField, Button, FormControl,
+  FormLabel, FormHelperText,
 } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
@@ -10,6 +11,7 @@ import { FormikProps } from 'formik';
 import { IStaticIntroduction } from '../../../../../../TypeScript/Interfaces/IStaticContent';
 import Createdby from '../../../Created/Created';
 import useStyles from '../../../../Utils/Form.Styles';
+import Editor from '../../../Editor/RichEditor';
 
 export type IForm = FormikProps<IStaticIntroduction> & WithTranslation;
 
@@ -96,7 +98,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
           lg={6}
         >
-          <TextField
+          {/* <TextField
             margin="dense"
             error={errors.Text_PT as any && touched.Text_PT as any}
             label={t('StaticIntroduction:textPT.text')}
@@ -113,7 +115,17 @@ export default (props: IForm): React.ReactElement<IForm> => {
             rowsMax={30}
             className={classes.item}
             fullWidth
-          />
+          /> */}
+          <FormControl>
+            <FormLabel>{t('StaticIntroduction:textPT.text')}</FormLabel>
+            <Editor
+              name="Text_PT"
+              value={values.Text_PT}
+              handleChange={handleChange}
+              handleBlur={handleBlur}
+            />
+            <FormHelperText>{(errors.Text_PT && touched.Text_PT) && errors.Text_PT}</FormHelperText>
+          </FormControl>
         </Grid>
         <Grid
           item
