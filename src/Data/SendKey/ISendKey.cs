@@ -4,8 +4,8 @@ namespace Profile4d.Data
 {
   public interface ISendKey
   {
-    void SendKey(Key data);
+    string SendKey(Key data);
 
-    void TransferKeys(Key data);
+    string TransferKeys(Key data);
   }
 }

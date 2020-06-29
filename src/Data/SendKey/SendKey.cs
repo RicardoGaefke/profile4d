@@ -13,7 +13,7 @@ namespace Profile4d.Data
     {
       _connStr = ConnectionStrings;
     }
-    public void SendKey(Key data)
+    public string SendKey(Key data)
     {
       using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
       {
@@ -29,12 +29,17 @@ namespace Profile4d.Data
 
           Con.Open();
 
-          Cmd.ExecuteNonQuery();
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            return MyDR.GetGuid(0).ToString();
+          }
         }
       }
     }
 
-    public void TransferKeys(Key data)
+    public string TransferKeys(Key data)
     {
       using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
       {
@@ -50,7 +55,12 @@ namespace Profile4d.Data
 
           Con.Open();
 
-          Cmd.ExecuteNonQuery();
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            return MyDR.GetGuid(0).ToString();
+          }
         }
       }
     }

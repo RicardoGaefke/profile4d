@@ -33,6 +33,7 @@ namespace Profile4d.Web.Api
       //  data
       #region DataServices
       services.AddSingleton<ISendKey, Keys>();
+      services.AddSingleton<IEmail, Email>();
       services.AddSingleton<MyIdentity>();
       services.AddSingleton<StaticContent>();
       services.AddSingleton<IImages, Images>();
