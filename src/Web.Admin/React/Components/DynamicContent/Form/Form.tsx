@@ -96,7 +96,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
   // eslint-disable-next-line no-unused-vars
   const toggleInlineStyle = (inlineStyle): any => {
     onChange(
-      RichUtils.toggleInlineStyle(state.editorState, inlineStyle)
+      RichUtils.toggleInlineStyle(state.editorState, inlineStyle),
     );
   };
 
