@@ -8,12 +8,18 @@ import MyEditor from './RichEditor';
 
 const App = (): React.ReactElement => (
   <MyThemeHOC>
-    <MyEditor value="teste" name="Text" />
+    <MyEditor
+      value="teste"
+      name="Text"
+    />
   </MyThemeHOC>
 );
 
 const JustEditor = (): React.ReactElement => (
-  <MyEditor value="teste" name="Text" />
+  <MyEditor
+    value="teste"
+    name="Text"
+  />
 );
 
 storiesOf('RichEditor', module)
