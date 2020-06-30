@@ -83,6 +83,8 @@
     "react-router-dom": "^5.1.2",
     "react-spring": "^8.0.27",
     "sinon": "^7.5.0",
+    "suneditor": "^2.30.6",
+    "suneditor-react": "^2.12.3",
     "webpack-merge": "^4.2.1",
     "yup": "^0.27.0"
   },
