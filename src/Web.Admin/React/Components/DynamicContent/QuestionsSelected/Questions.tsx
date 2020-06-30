@@ -18,6 +18,12 @@ import Add from '../AddButton/Add';
 import setLanguage from './Language';
 import useStyles from './Styles';
 import MyAxios from '../../../Utils/MyAxios';
+import QuestionsSelect from '../Select/Select';
+// // These imports are just to use Select without API values
+// // eslint-disable-next-line no-unused-vars
+// import SelectedValues, { ITemporarySelect } from './TemporarySelect';
+// // eslint-disable-next-line no-unused-vars
+// import { ISelect } from './ISelect';
 
 type IProps = WithTranslation & WithSnackbarProps;
 
@@ -31,10 +37,13 @@ export default withTranslation()(
       // eslint-disable-next-line no-unused-vars
       const [state, setState] = useState({} as IQuestions);
 
+      // // eslint-disable-next-line no-unused-vars
+      // const [selectChanges, setSelectChanges] = useState({} as ISelect);
+
       const fetchQuestions = (): void => {
         MyAxios(window.location.href)
           // alterar o webservice ▼
-          .get<IQuestions>('/Questions')
+          .get<IQuestions>('/QuestionsSelected')
           .then((response): void => setState(response.data));
       };
 
@@ -51,7 +60,7 @@ export default withTranslation()(
         MyAxios(window.location.href)
           // alterar o webservice - apenas o nome do serviço
           // não a função ChangeActive) ▼
-          .post<IBasicReturn>('/Questions/ChangeActive',
+          .post<IBasicReturn>('/QuestionsSelected/ChangeActive',
           {
             Guid: event.target.value,
             Active: event.target.checked,
@@ -87,10 +96,52 @@ export default withTranslation()(
                   spacing={2}
                   justify="center"
                   alignItems="center"
+                  className={classes.questions}
                 >
                   <Grid
                     item
-                    md={12}
+                    md={6}
+                    xs={12}
+                  >
+                    <QuestionsSelect />
+                    {/* <Typography
+                      component="p"
+                      className={classes.title}
+                    >
+                      {`${t('DynamicQuestions:subtitle')}:`}
+                    </Typography>
+                    <FormControl
+                      margin="dense"
+                      variant="outlined"
+                      fullWidth
+                    >
+                      <InputLabel>
+                        {t('DynamicQuestions:label')}
+                      </InputLabel>
+                      <Select
+                        label="Categories"
+                        value={selectChanges.categories}
+                        onChange={(value: any): void => {
+                          setSelectChanges(value);
+                        }}
+                        inputProps={{
+                          id: 'selectChanges.categories',
+                          name: 'selectChanges.categories',
+                        }}
+                      >
+                        {
+                          SelectedValues.map((s: ITemporarySelect): React.ReactElement<HTMLElement> => (
+                            <MenuItem key={s.id} value={s.name}>
+                              {s.name}
+                            </MenuItem>
+                          ))
+                        }
+                      </Select>
+                    </FormControl> */}
+                  </Grid>
+                  <Grid
+                    item
+                    md={6}
                     xs={12}
                   >
                     <Quantity
@@ -104,20 +155,28 @@ export default withTranslation()(
                     />
                   </Grid>
                 </Grid>
-                <List>
-                  {state.Questions.map((q, i): React.ReactElement => (
-                    <React.Fragment key={`Frag-${q.Guid}`}>
-                      {/* // alterar o nome da rota para o editar                                               ▼ */}
-                      <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} to="questions" />
-                      <Divider key={`Div-${q.Guid}`} />
-                    </React.Fragment>
-                  ))}
-                </List>
+                <Grid
+                  container
+                  alignItems="center"
+                  className={classes.questions}
+                >
+                  <Grid item md={12} xs={12}>
+                    <List>
+                      {state.Questions.map((q, i): React.ReactElement => (
+                        <React.Fragment key={`Frag-${q.Guid}`}>
+                          {/* // alterar o nome da rota para o editar                                               ▼ */}
+                          <Question number={(i + 1)} question={q} key={q.Guid} handleChange={handleChange} to="questionsSelected" />
+                          <Divider key={`Div-${q.Guid}`} />
+                        </React.Fragment>
+                      ))}
+                    </List>
+                  </Grid>
+                </Grid>
               </>
             )
           }
           {/* // alterar apenas o nome da rota ▼ */}
-          <Add to="/dynamicContent/questions/add" />
+          <Add to="/dynamicContent/questionsSelected/add" />
         </Container>
       );
     },

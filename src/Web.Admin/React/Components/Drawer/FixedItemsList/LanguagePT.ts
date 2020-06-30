@@ -160,6 +160,7 @@ export default {
   // twelvecompetencestable: 'Tabela das Doze Competências',
   //  dynamic content
   questions: 'Perguntas',
+  questionsSelected: 'Perguntas com categorias',
   profileName: 'Nome do perfil',
   featuresDominant: 'Recursos do seu perfil dominante',
   personalityForces: 'As quatro forças da personalidade',
