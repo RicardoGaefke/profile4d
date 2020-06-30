@@ -5,7 +5,7 @@ import 'suneditor/dist/css/suneditor.min.css';
 interface IProps {
   value: string,
   name: string,
-  handleChange?: (content: string) => void,
+  handleChange?: (field: string, value: any, shouldValidate?: boolean | undefined) => void,
   handleBlur?: (event: FocusEvent, content: string) => void,
 }
 
@@ -14,12 +14,19 @@ export default (props: IProps): React.ReactElement => {
     value, name, handleChange, handleBlur,
   } = props;
 
+  const onChange = (content: string): void => {
+    if (handleChange) {
+      handleChange(name, content);
+    }
+  };
+
   return (
     <SunEditor
       name={name}
       setContents={value}
-      onChange={handleChange}
+      onChange={onChange}
       onBlur={handleBlur}
+      width="100%"
     />
   );
 };

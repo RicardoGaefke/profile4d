@@ -28,6 +28,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
     handleBlur,
     handleSubmit,
     setFieldTouched,
+    setFieldValue,
   } = props;
 
   i18n.on('languageChanged', (): void => {
@@ -98,30 +99,14 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
           lg={6}
         >
-          {/* <TextField
-            margin="dense"
-            error={errors.Text_PT as any && touched.Text_PT as any}
-            label={t('StaticIntroduction:textPT.text')}
-            title={t('StaticIntroduction:textPT.title')}
-            name="Text_PT"
-            id="Text_PT"
-            value={values.Text_PT}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            helperText={(errors.Text_PT && touched.Text_PT) && errors.Text_PT}
-            variant="outlined"
-            multiline
-            rows={15}
-            rowsMax={30}
-            className={classes.item}
+          <FormControl
             fullWidth
-          /> */}
-          <FormControl>
+          >
             <FormLabel>{t('StaticIntroduction:textPT.text')}</FormLabel>
             <Editor
               name="Text_PT"
               value={values.Text_PT}
-              handleChange={handleChange}
+              handleChange={setFieldValue}
               handleBlur={handleBlur}
             />
             <FormHelperText>{(errors.Text_PT && touched.Text_PT) && errors.Text_PT}</FormHelperText>
