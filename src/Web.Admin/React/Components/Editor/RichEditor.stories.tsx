@@ -1,5 +1,4 @@
 import React from 'react';
-// import { withFormik } from 'formik';
 import { storiesOf } from '@storybook/react';
 import { withConsole } from '@storybook/addon-console';
 import 'suneditor/dist/css/suneditor.min.css';
