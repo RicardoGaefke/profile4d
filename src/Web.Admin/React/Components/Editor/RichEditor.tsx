@@ -1,6 +1,12 @@
 import React from 'react';
-import SunEditor from 'suneditor-react';
-import 'suneditor/dist/css/suneditor.min.css';
+import dynamic from 'next/dynamic';
+// eslint-disable-next-line no-unused-vars
+import { SunEditorReactProps } from 'suneditor-react';
+
+const SunEditor = dynamic<SunEditorReactProps>(
+  (): any => import('suneditor-react').then((mod): any => mod.default),
+  { ssr: false },
+);
 
 interface IProps {
   value: string,
@@ -21,12 +27,18 @@ export default (props: IProps): React.ReactElement => {
   };
 
   return (
-    <SunEditor
-      name={name}
-      setContents={value}
-      onChange={onChange}
-      onBlur={handleBlur}
-      width="100%"
-    />
+    <>
+      <SunEditor
+        name={name}
+        setContents={value}
+        onChange={onChange}
+        onBlur={handleBlur}
+        width="100%"
+        setOptions={{
+          minHeight: 300,
+          icons: {},
+        }}
+      />
+    </>
   );
 };
