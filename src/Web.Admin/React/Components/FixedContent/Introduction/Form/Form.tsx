@@ -100,6 +100,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
           lg={6}
         >
           <FormControl
+            error={errors.Text_PT as any && touched.Text_PT as any}
             fullWidth
           >
             <FormLabel>{t('StaticIntroduction:textPT.text')}</FormLabel>
@@ -118,24 +119,19 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
           lg={6}
         >
-          <TextField
-            margin="dense"
+          <FormControl
             error={errors.Text_ENG as any && touched.Text_ENG as any}
-            label={t('StaticIntroduction:textENG.text')}
-            title={t('StaticIntroduction:textENG.title')}
-            name="Text_ENG"
-            id="Text_ENG"
-            value={values.Text_ENG}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            helperText={(errors.Text_ENG && touched.Text_ENG) && errors.Text_ENG}
-            variant="outlined"
-            multiline
-            rows={15}
-            rowsMax={30}
-            className={classes.item}
             fullWidth
-          />
+          >
+            <FormLabel>{t('StaticIntroduction:textENG.text')}</FormLabel>
+            <Editor
+              name="Text_ENG"
+              value={values.Text_ENG}
+              handleChange={setFieldValue}
+              handleBlur={handleBlur}
+            />
+            <FormHelperText>{(errors.Text_ENG && touched.Text_ENG) && errors.Text_ENG}</FormHelperText>
+          </FormControl>
         </Grid>
         <Grid
           item

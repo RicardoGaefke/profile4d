@@ -13,6 +13,7 @@ export default (props: WithTranslation): object => Yup.object().shape({
     .max(95, props.t('StaticIntroduction:titleENG.max')),
   Text_PT: Yup.string()
     .required(props.t('StaticIntroduction:textPT.required'))
+    .matches(new RegExp('<p></p>'), props.t('StaticIntroduction:textPT.required'))
     .min(5, props.t('StaticIntroduction:textPT.min'))
     .max(8000, props.t('StaticIntroduction:textPT.max')),
   Text_ENG: Yup.string()

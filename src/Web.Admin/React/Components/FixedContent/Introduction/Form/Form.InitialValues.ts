@@ -7,7 +7,7 @@ const initialValues: IStaticIntroduction = {
   Title_ENG: 'Title in English',
   Text_PT: 'Texto em Português',
   Text_ENG: 'Text in English',
-  Created: 'R. Gaefke',
+  Created: '25/07/2021',
   CreatedBy: 'R. Gaefke',
   Success: true,
   Message: 'Success',
