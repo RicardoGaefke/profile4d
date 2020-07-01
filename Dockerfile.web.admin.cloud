@@ -10,6 +10,8 @@ RUN npm install
 
 RUN npm run lint-fix
 
+RUN npm run copy
+
 RUN npm run production
 
 RUN dotnet publish -c Release ./Web.Admin.csproj -r linux-musl-x64 -o ./publish
