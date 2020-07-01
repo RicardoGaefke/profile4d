@@ -87,7 +87,7 @@
     "react-spring": "^8.0.27",
     "sinon": "^7.5.0",
     "suneditor": "^2.30.6",
-    "suneditor-react": "^2.12.3",
+    "suneditor-react": "^2.12.4",
     "webpack-merge": "^4.2.1",
     "yup": "^0.27.0"
   },

@@ -36,7 +36,15 @@ export default (props: IProps): React.ReactElement => {
         width="100%"
         setOptions={{
           minHeight: 300,
-          icons: {},
+          mode: 'classic',
+          formats: ['p', 'h3'],
+          buttonList: [
+            ['undo', 'redo'],
+            ['formatBlock'],
+            ['bold', 'underline', 'italic', 'fontColor'],
+            ['fullScreen', 'showBlocks', 'codeView'],
+            ['preview', 'print'],
+          ],
         }}
       />
     </>
