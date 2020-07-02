@@ -24,6 +24,7 @@ const Quest: IQuestion = {
 };
 
 const handleChange = (event: ChangeEvent<HTMLInputElement>, checked: boolean): void => {
+  // eslint-disable-next-line no-console
   console.log(checked);
 };
 

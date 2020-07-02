@@ -83,18 +83,14 @@ export default withTranslation()(
             ) : (
               <>
                 <Grid
+                  justify="flex-end"
                   container
-                  spacing={2}
-                  justify="center"
-                  alignItems="center"
                 >
                   <Grid
                     item
-                    md={12}
-                    xs={12}
                   >
                     <Quantity
-                      minimum={99}
+                      minimum={9}
                       total={state.Questions.filter((value): boolean => {
                         if (value.Active) {
                           return true;

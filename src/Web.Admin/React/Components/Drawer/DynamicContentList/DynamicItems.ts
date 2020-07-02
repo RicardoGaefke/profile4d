@@ -9,10 +9,6 @@ export default [
     title: 'questions',
   },
   {
-    link: 'questionsSelected',
-    title: 'questionsSelected',
-  },
-  {
     link: 'profileName',
     title: 'profileName',
   },
