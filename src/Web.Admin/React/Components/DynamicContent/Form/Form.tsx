@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Grid, TextField, Button, InputLabel, FormControl, Select, MenuItem,
+  FormLabel, FormHelperText,
 } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
@@ -10,6 +11,7 @@ import { FormikProps } from 'formik';
 import { IDynamicContent } from '../../../../../TypeScript/Interfaces/IDynamicContent';
 import Createdby from '../../Created/Created';
 import useStyles from '../../../Utils/Form.Styles';
+import Editor from '../../Editor/RichEditor';
 
 export interface IProps {
   category: boolean,
@@ -30,6 +32,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
     handleBlur,
     handleSubmit,
     setFieldTouched,
+    setFieldValue,
   } = props;
 
   i18n.on('languageChanged', (): void => {
@@ -127,7 +130,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
             fullWidth
           />
         </Grid>
-        <Grid
+        {/* <Grid
           item
           xs={12}
           md={12}
@@ -176,6 +179,46 @@ export default (props: IForm): React.ReactElement<IForm> => {
             className={classes.item}
             fullWidth
           />
+        </Grid> */}
+        <Grid
+          item
+          xs={12}
+          md={12}
+          lg={6}
+        >
+          <FormControl
+            error={errors.Text_PT as any && touched.Text_PT as any}
+            fullWidth
+          >
+            <FormLabel>{t('DynamicForm:textPT.text')}</FormLabel>
+            <Editor
+              name="Text_PT"
+              value={values.Text_PT}
+              handleChange={setFieldValue}
+              handleBlur={handleBlur}
+            />
+            <FormHelperText>{(errors.Text_PT && touched.Text_PT) && errors.Text_PT}</FormHelperText>
+          </FormControl>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={12}
+          lg={6}
+        >
+          <FormControl
+            error={errors.Text_ENG as any && touched.Text_ENG as any}
+            fullWidth
+          >
+            <FormLabel>{t('DynamicForm:textENG.text')}</FormLabel>
+            <Editor
+              name="Text_ENG"
+              value={values.Text_ENG}
+              handleChange={setFieldValue}
+              handleBlur={handleBlur}
+            />
+            <FormHelperText>{(errors.Text_ENG && touched.Text_ENG) && errors.Text_ENG}</FormHelperText>
+          </FormControl>
         </Grid>
         {
           (values.CreatedBy !== '') ? (
