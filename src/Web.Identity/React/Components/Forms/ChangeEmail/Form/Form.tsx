@@ -62,6 +62,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <TextField
+            margin="dense"
             error={errors.Email as any && touched.Email as any}
             label={t('ChangeEmailForm:email.title')}
             title={t('ChangeEmailForm:email.text')}
@@ -82,6 +83,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <TextField
+            margin="dense"
             error={errors.ConfirmEmail as any && touched.ConfirmEmail as any}
             label={t('ChangeEmailForm:confirmEmail.title')}
             title={t('ChangeEmailForm:confirmEmail.text')}

@@ -57,13 +57,14 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps & RouteComponentPr
         enqueueSnackbar(t('ChangeNameForm:feedback.failure'), {
           variant: 'error',
         });
+        setSubmitting(false);
       }
     }).catch((): void => {
       enqueueSnackbar(t('ChangeNameForm:feedback.failure'), {
         variant: 'error',
       });
+      setSubmitting(false);
     });
-    setSubmitting(false);
   },
 })(LoginForm);
 

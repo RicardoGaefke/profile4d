@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices.ComTypes;
 using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.Options;
@@ -209,6 +210,59 @@ namespace Profile4d.Data
           Cmd.Parameters.AddWithValue("@PASSWORD", Password);
           Cmd.Parameters.AddWithValue("@NEW_PASSWORD", NewPassword);
           Cmd.Parameters.AddWithValue("@URL", Url);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+    }
+
+    public User ForgotPassword(string email)
+    {
+      User _return = new User();
+      string pwd = User.CreatePassword();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_FORGOT_PASSWORD]";
+
+          Cmd.Parameters.AddWithValue("@EMAIL", email);
+          Cmd.Parameters.AddWithValue("@PASSWORD", pwd);
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            _return.Id = MyDR.GetInt32(0);
+            _return.Guid = MyDR.GetGuid(1).ToString();
+            _return.Name = MyDR.GetString(2);
+            _return.Password = pwd;
+          }
+        }
+      }
+
+      return _return;
+    }
+
+    public void ForgotActivate(User data)
+    {
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_FORGOT_ACTIVATE]";
+
+          Cmd.Parameters.AddWithValue("@GUID", data.Guid);
+          Cmd.Parameters.AddWithValue("@ID", data.Id);
 
           Con.Open();
 

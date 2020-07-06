@@ -13,4 +13,8 @@ export default {
     text: 'Recuperar senha',
     title: 'Clique aqui para recuperar sua senha',
   },
+  feedback: {
+    success: 'Se o email enserido estiver correto, uma mensagem de instruções será enviada!',
+    failure: 'Não foi possível recuperar a senha! Por favor tente novamente.',
+  },
 } as ILanguage;

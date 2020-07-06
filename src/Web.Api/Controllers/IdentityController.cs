@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Security.Claims;
@@ -20,12 +21,44 @@ namespace Profile4d.Web.Api.Controllers
     private readonly ILogger<IdentityController> _logger;
     private readonly MyIdentity _myIdentity;
     private readonly IHttpContextAccessor _httpContextAccessor;
+    private readonly IEmail _email;
+    private readonly User _user;
 
-    public IdentityController(ILogger<IdentityController> logger, MyIdentity MyIdentity, IHttpContextAccessor httpContextAccessor)
+    public IdentityController(
+      ILogger<IdentityController> logger,
+      MyIdentity MyIdentity,
+      IHttpContextAccessor httpContextAccessor,
+      IEmail Email
+    )
     {
       _logger = logger;
       _myIdentity = MyIdentity;
       _httpContextAccessor = httpContextAccessor;
+      _email = Email;
+
+      if (_httpContextAccessor.HttpContext.User.Identity.IsAuthenticated)
+      {
+        string id = (from c in _httpContextAccessor.HttpContext.User.Claims
+                     where c.Type == "UserID"
+                     select c.Value).FirstOrDefault()
+      ;
+
+        string name = (from c in _httpContextAccessor.HttpContext.User.Claims
+                       where c.Type == ClaimTypes.Name
+                       select c.Value).FirstOrDefault()
+        ;
+
+        string email = (from c in _httpContextAccessor.HttpContext.User.Claims
+                        where c.Type == ClaimTypes.Email
+                        select c.Value).FirstOrDefault()
+        ;
+
+        _user = new User(id, name, email);
+      }
+      else
+      {
+        _user = new User();
+      }
     }
 
     [HttpPost("SignIn")]
@@ -68,25 +101,7 @@ namespace Profile4d.Web.Api.Controllers
         var authProperties = new AuthenticationProperties
         {
           AllowRefresh = true,
-          // Refreshing the authentication session should be allowed.
-
-          //ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(10),
-          // The time at which the authentication ticket expires. A 
-          // value set here overrides the ExpireTimeSpan option of 
-          // CookieAuthenticationOptions set with AddCookie.
-
           IsPersistent = user.KeepConnected,
-          // Whether the authentication session is persisted across 
-          // multiple requests. When used with cookies, controls
-          // whether the cookie's lifetime is absolute (matching the
-          // lifetime of the authentication ticket) or session-based.
-
-          //IssuedUtc = <DateTimeOffset>,
-          // The time at which the authentication ticket was issued.
-
-          //RedirectUri = <string>
-          // The full path or absolute URI to be used as an http 
-          // redirect response value.
         };
 
         await HttpContext.SignInAsync(
@@ -156,7 +171,8 @@ namespace Profile4d.Web.Api.Controllers
         int _userID = Convert.ToInt32(User.FindFirst(claim => claim.Type == "UserID")?.Value);
         string _url = _httpContextAccessor.HttpContext.Request.Host + _httpContextAccessor.HttpContext.Request.Path;
         _myIdentity.ChangeName(_userID, user.Name, user.Password, _url);
-
+        EmailMessageModels.Content content = EmailMessageModels.ChangeName(_user.Name);
+        _email.CreateEmail(_user.Name, _user.Email, _user.Id, content);
         _return.Success = true;
       }
       catch (SqlException ex)
@@ -188,7 +204,8 @@ namespace Profile4d.Web.Api.Controllers
         int _userID = Convert.ToInt32(User.FindFirst(claim => claim.Type == "UserID")?.Value);
         string _url = _httpContextAccessor.HttpContext.Request.Host + _httpContextAccessor.HttpContext.Request.Path;
         _myIdentity.ChangeEmail(_userID, user.Email, user.Password, _url);
-
+        EmailMessageModels.Content content = EmailMessageModels.ChangeEmail(_user.Name);
+        _email.CreateEmail(_user.Name, user.Email, _user.Id, content);
         _return.Success = true;
       }
       catch (SqlException ex)
@@ -220,7 +237,8 @@ namespace Profile4d.Web.Api.Controllers
         int _userID = Convert.ToInt32(User.FindFirst(claim => claim.Type == "UserID")?.Value);
         string _url = _httpContextAccessor.HttpContext.Request.Host + _httpContextAccessor.HttpContext.Request.Path;
         _myIdentity.ChangePassword(_userID, user.NewPassword, user.Password, _url);
-
+        EmailMessageModels.Content content = EmailMessageModels.ChangePassword(_user.Name);
+        _email.CreateEmail(_user.Name, _user.Email, _user.Id, content);
         _return.Success = true;
       }
       catch (SqlException ex)
@@ -228,17 +246,44 @@ namespace Profile4d.Web.Api.Controllers
         _return.Success = false;
         _return.Message = ex.Message;
         _return.Code = ex.Number.ToString();
-
         return _return;
       }
       catch (Exception ex)
       {
         _return.Success = false;
         _return.Message = ex.Message;
-
         return _return;
       }
+      return _return;
+    }
 
+    [HttpPost("ForgotPassword")]
+    public ActionResult<BasicReturn> ForgotPassword(User user)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      User data = new User(user.Email);
+
+      try
+      {
+        User myUser = _myIdentity.ForgotPassword(data.Email);
+        EmailMessageModels.Content content = EmailMessageModels.ForgotPassword(myUser);
+        _email.CreateEmail(myUser.Name, data.Email, myUser.Id, content);
+        _return.Success = true;
+      }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = ex.Number.ToString();
+        return _return;
+      }
+      catch (Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        return _return;
+      }
       return _return;
     }
   }

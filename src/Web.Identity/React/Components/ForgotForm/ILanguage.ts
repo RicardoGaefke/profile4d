@@ -9,5 +9,9 @@ export interface ILanguage {
   button: {
     text: string;
     title: string;
-  }
+  },
+  feedback: {
+    success: string,
+    failure: string,
+  },
 }

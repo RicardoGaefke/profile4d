@@ -24,7 +24,7 @@ export default {
     max: 'Tamanho mínimo de 20 caracteres',
   },
   button: {
-    text: 'Salvar novo nome',
+    text: 'Salvar nova senha',
     title: 'Clique aqui para salvar as alterações',
   },
   alert: {

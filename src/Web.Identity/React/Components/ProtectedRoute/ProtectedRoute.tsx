@@ -4,8 +4,6 @@ import {
 } from 'react-router-dom';
 import MyAxios from '../../Utils/MyAxios';
 import Loading from '../Connected/Loading/Loading';
-// eslint-disable-next-line no-unused-vars
-import { IInitialContext } from '../../../../TypeScript/Interfaces/IInitialContext';
 import { useStateValue } from '../../Initial/Context/StateProvider';
 
 interface IProps {
@@ -15,7 +13,7 @@ interface IProps {
 }
 
 export default ({ component: Component, path: Path, ...rest }: IProps): React.ReactElement<IProps> => {
-  const [dispatch] = useStateValue();
+  const [{ IsAuthenticated }, dispatch] = useStateValue();
   const [loading, setLoading] = useState(true);
   const history = useHistory();
   const match = useRouteMatch({
@@ -24,26 +22,28 @@ export default ({ component: Component, path: Path, ...rest }: IProps): React.Re
     sensitive: true,
   });
 
+  const useEffAsync = async (): Promise<void> => {
+    await MyAxios(window.location.href).get<boolean>('Identity/IsAuthenticated',
+      {}).then((response): void => {
+      const { data } = response;
+
+      if (!data) {
+        history.push('/');
+        if (IsAuthenticated) {
+          dispatch({
+            type: 'changeAuth',
+            value: false,
+          });
+        }
+        return;
+      }
+
+      setLoading(false);
+    });
+  };
+
   useEffect((): void => {
     if (match?.url === window.location.pathname) {
-      const useEffAsync = async (): Promise<void> => {
-        await MyAxios(window.location.href).get<boolean>('Identity/IsAuthenticated',
-          {}).then((response): void => {
-          const { data } = response;
-
-          if (!data) {
-            history.push('/');
-            dispatch({
-              type: 'changeAuth',
-              value: false,
-            });
-            return;
-          }
-
-          setLoading(false);
-        });
-      };
-
       useEffAsync();
     }
   }, [match]);

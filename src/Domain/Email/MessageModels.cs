@@ -60,5 +60,75 @@ namespace Profile4d.Domain
 
       return new Content(subject.ToString(), body.ToString());
     }
+
+    public static Content ChangeName(string name)
+    {
+      StringBuilder subject = new StringBuilder("Profile4d - Nome alterado / Name changed");
+
+      StringBuilder body = new StringBuilder();
+      body.Append($"<p>Olá/Hello, {name},</p>");
+      body.AppendLine();
+      body.Append($"<p>Você está recebendo esta mensagem porque teu nome foi alterado no sistema.</p>");
+      body.AppendLine();
+      body.Append($"<p>You are receiving this message because your name was changed in the system.</p>");
+      body.AppendLine();
+
+      return new Content(subject.ToString(), body.ToString());
+    }
+
+    public static Content ChangeEmail(string name)
+    {
+      StringBuilder subject = new StringBuilder("Profile4d - Email alterado / Email changed");
+
+      StringBuilder body = new StringBuilder();
+      body.Append($"<p>Olá/Hello, {name},</p>");
+      body.AppendLine();
+      body.Append($"<p>Você está recebendo esta mensagem porque teu email foi alterado no sistema.</p>");
+      body.AppendLine();
+      body.Append($"<p>You are receiving this message because your email was changed in the system.</p>");
+      body.AppendLine();
+
+      return new Content(subject.ToString(), body.ToString());
+    }
+
+    public static Content ChangePassword(string name)
+    {
+      StringBuilder subject = new StringBuilder("Profile4d - Senha alterada / Password changed");
+
+      StringBuilder body = new StringBuilder();
+      body.Append($"<p>Olá/Hello, {name},</p>");
+      body.AppendLine();
+      body.Append($"<p>Você está recebendo esta mensagem porque tua senha foi alterado no sistema.</p>");
+      body.AppendLine();
+      body.Append($"<p>You are receiving this message because your password was changed in the system.</p>");
+      body.AppendLine();
+
+      return new Content(subject.ToString(), body.ToString());
+    }
+
+    public static Content ForgotPassword(User data)
+    {
+      StringBuilder subject = new StringBuilder("Profile4d - Recuperação de senha / Password recovery");
+
+      StringBuilder body = new StringBuilder();
+      body.Append($"<p>Olá/Hello, {data.Name},</p>");
+      body.AppendLine();
+      body.Append($"<p>Você está recebendo esta mensagem com uma nova senha. Clique no link abaixo para ativá-la e utilize a senha abaixo:</p>");
+      body.AppendLine();
+      body.Append($"<p>You are receiving this message with a new password. Click the link below to activate it and use the password bellow:</p>");
+      body.AppendLine();
+      body.Append($"<p>{data.Password}</p>");
+      body.AppendLine();
+      body.Append($@"<p>
+                      <a
+                        href='https://identity.profile4d.com/remember/{data.Guid}/{data.Id}'
+                        title='Profile4D'
+                      >
+                        https://identity.profile4d.com/remember/{data.Guid}/{data.Id}
+                      </a>
+                  </p>");
+
+      return new Content(subject.ToString(), body.ToString());
+    }
   }
 }

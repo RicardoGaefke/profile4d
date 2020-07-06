@@ -12,7 +12,6 @@ type IForm = FormikProps<IForgotForm> & WithTranslation;
 
 export default (props: IForm): React.ReactElement<IForm> => {
   const classes = useStyles({});
-  // eslint-disable-next-line no-unused-vars
   const { t, i18n } = useTranslation('ForgotForm');
   const {
     values,
@@ -49,6 +48,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <TextField
+            margin="dense"
             error={errors.Email as any && touched.Email as any}
             label={t('ForgotForm:email.title')}
             title={t('ForgotForm:email.text')}
