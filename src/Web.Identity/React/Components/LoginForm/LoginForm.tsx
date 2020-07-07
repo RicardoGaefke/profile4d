@@ -66,13 +66,14 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps & IContext, ILogin
         enqueueSnackbar(t('LoginForm:feedback.failure'), {
           variant: 'error',
         });
+        setSubmitting(false);
       }
     }).catch((): void => {
       enqueueSnackbar(t('LoginForm:feedback.failure'), {
         variant: 'error',
       });
+      setSubmitting(false);
     });
-    setSubmitting(false);
   },
 })(LoginForm);
 

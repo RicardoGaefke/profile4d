@@ -42,4 +42,12 @@ export default {
     text: 'Cancel and go back home',
     title: 'Cancel and go back home',
   },
+  feedback: {
+    success: 'Successfully create user!',
+    failure: 'Sorry but it was not possible to generate user!',
+  },
+  blockedEmail: {
+    title: 'This email is already in use!',
+    text: 'This email is already in use!',
+  },
 } as ILanguage;

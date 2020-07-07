@@ -1,5 +1,14 @@
 export interface ILanguage {
   title: string,
+  titleApps: string,
+  clientApp: {
+    text: string,
+    title: string,
+  },
+  clientAdmin: {
+    text: string,
+    title: string,
+  },
   changeName: {
     text: string,
     title: string,

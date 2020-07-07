@@ -17,13 +17,14 @@ const Quest: IQuestion = {
   Category: 2,
   Title_PT: 'Título em Português',
   Title_ENG: 'Title in English',
-  Text_PT: 'Texto em Português',
-  Text_ENG: 'Text in English',
+  Text_PT: '<p>Texto em Português</p>',
+  Text_ENG: '<p>Text in English</p>',
   CreatedBy: 'Ricardo Gaefke',
   Created: '2020-03-06 21:33:22.093',
 };
 
 const handleChange = (event: ChangeEvent<HTMLInputElement>, checked: boolean): void => {
+  // eslint-disable-next-line no-console
   console.log(checked);
 };
 

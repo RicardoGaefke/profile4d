@@ -43,6 +43,7 @@ namespace Profile4d.WebJob.Email
           services.Configure<Secrets.ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
           services.AddSingleton<IMyEmail, MyEmail>();
           services.AddSingleton<IEmailMI4D, EmailMI4D>();
+          services.AddSingleton<IEmail, Profile4d.Data.Email>();
         })
         .UseConsoleLifetime()
       ;

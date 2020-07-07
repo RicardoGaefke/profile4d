@@ -65,13 +65,14 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps & RouteComponentPr
             variant: 'error',
           });
         }
+        setSubmitting(false);
       }
     }).catch((): void => {
       enqueueSnackbar(t('ChangeEmailForm:feedback.failure'), {
         variant: 'error',
       });
+      setSubmitting(false);
     });
-    setSubmitting(false);
   },
 })(LoginForm);
 

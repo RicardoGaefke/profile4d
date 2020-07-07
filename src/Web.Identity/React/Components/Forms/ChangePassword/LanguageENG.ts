@@ -24,7 +24,7 @@ export default {
     max: '20 characters maximum',
   },
   button: {
-    text: 'Save new name',
+    text: 'Save new password',
     title: 'Click here to save the changes',
   },
   alert: {

@@ -13,4 +13,8 @@ export default {
     text: 'Recover password',
     title: 'Click here to recover your password',
   },
+  feedback: {
+    success: 'If your email is correct a message with instruction will be sent!',
+    failure: 'Sorry but it was not possible to recorver your password! Please try again later.',
+  },
 } as ILanguage;

@@ -67,6 +67,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <TextField
+            margin="dense"
             id="Family-Email"
             variant="outlined"
             name="Email"
@@ -94,6 +95,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <TextField
+            margin="dense"
             id="Family-Password"
             name="Password"
             variant="outlined"

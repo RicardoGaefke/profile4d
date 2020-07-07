@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 /* eslint-disable camelcase */
 // eslint-disable-next-line no-unused-vars
 import React, { ChangeEvent } from 'react';
@@ -52,7 +53,7 @@ export default withTranslation()(
               {Title_PT}
             </Typography>
             <Typography variant="body1">
-              {Text_PT}
+              <span dangerouslySetInnerHTML={{ __html: Text_PT }} />
             </Typography>
           </Grid>
           <Grid
@@ -63,7 +64,7 @@ export default withTranslation()(
               {Title_ENG}
             </Typography>
             <Typography variant="body1">
-              {Text_ENG}
+              <span dangerouslySetInnerHTML={{ __html: Text_ENG }} />
             </Typography>
           </Grid>
           <Grid

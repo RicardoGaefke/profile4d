@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/web.site/bin/Debug/netcoreapp3.0/web.site.dll",
+            "program": "${workspaceFolder}/src/WebJob.Email/bin/Debug/netcoreapp3.1/WebJob.Email.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/web.site",
+            "cwd": "${workspaceFolder}/src/WebJob.Email",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {

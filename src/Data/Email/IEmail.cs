@@ -5,5 +5,7 @@ namespace Profile4d.Data
   public interface IEmail
   {
     void CreateEmail(string name, string email, int sentBy, EmailMessageModels.Content content);
+    EmailMessage.Message Info(int id);
+    void UpdateSendGridInfo(int id, string sgKey);
   }
 }
