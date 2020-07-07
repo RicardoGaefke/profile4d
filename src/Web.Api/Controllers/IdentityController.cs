@@ -286,5 +286,34 @@ namespace Profile4d.Web.Api.Controllers
       }
       return _return;
     }
+
+    [HttpPost("CreateUser")]
+    public ActionResult<BasicReturn> CreateUser(User user)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        int id = _myIdentity.CreateUser(user);
+        EmailMessageModels.Content content = EmailMessageModels.CreateUser(user.Name);
+        _email.CreateEmail(user.Name, user.Email, id, content);
+        _return.Success = true;
+      }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = ex.Number.ToString();
+        return _return;
+      }
+      catch (Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        return _return;
+      }
+
+      return _return;
+    }
   }
 }

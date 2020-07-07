@@ -15,5 +15,6 @@ namespace Profile4d.Data
     void ChangePassword(int UserID, string NewPassword, string Password, string Url);
     User ForgotPassword(string email);
     void ForgotActivate(User data);
+    int CreateUser(User data);
   }
 }

@@ -48,6 +48,18 @@ namespace Profile4d.Domain
       this.Email = email;
     }
 
+    public User(string name, string email, string password, bool? admin)
+    {
+      DomainException.When(!string.IsNullOrEmpty(name), "Name is required!");
+      DomainException.When(!string.IsNullOrEmpty(email), "Email is required!");
+      DomainException.When(!string.IsNullOrEmpty(password), "Password is required!");
+      DomainException.When(!(password.Length < 6), "Password minimum 6 chars!");
+
+      this.Name = name;
+      this.Email = email;
+      this.Password = password;
+    }
+
     public User(string email, string password)
     {
       DomainException.When(!string.IsNullOrEmpty(email), "Email is required!");

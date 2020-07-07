@@ -43,4 +43,12 @@ export default {
     text: 'Cancelar e voltar ao início',
     title: 'Cancelar e voltar ao início',
   },
+  feedback: {
+    success: 'Usuário criado com sucesso!',
+    failure: 'Desculpe, mas não foi possível criar o usuário!',
+  },
+  blockedEmail: {
+    title: 'Este email já está em uso no sistema!',
+    text: 'Este email já está em uso no sistema!',
+  },
 } as ILanguage;

@@ -270,5 +270,33 @@ namespace Profile4d.Data
         }
       }
     }
+
+    public int CreateUser(User data)
+    {
+      User user = new User(data.Name, data.Email, data.Password, false);
+      
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_CREATE_USER]";
+
+          Cmd.Parameters.AddWithValue("@NAME", user.Name);
+          Cmd.Parameters.AddWithValue("@EMAIL", user.Email);
+          Cmd.Parameters.AddWithValue("@PASSWORD", user.Password);
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            return MyDR.GetInt32(0);
+          }
+        }
+      }
+    }
   }
 }

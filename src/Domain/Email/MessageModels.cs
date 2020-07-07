@@ -130,5 +130,28 @@ namespace Profile4d.Domain
 
       return new Content(subject.ToString(), body.ToString());
     }
+
+    public static Content CreateUser(string name)
+    {
+      StringBuilder subject = new StringBuilder("Profile4d - Criação de usuário / User creation");
+
+      StringBuilder body = new StringBuilder();
+      body.Append($"<p>Olá/Hello, {name},</p>");
+      body.AppendLine();
+      body.Append($"<p>Você está recebendo esta mensagem porque criou um perfil em nossa plataforma. Clique no link abaixo para acessar:</p>");
+      body.AppendLine();
+      body.Append($"<p>You are receiving this message because you submitted a profile. Click the link below to access it:</p>");
+      body.AppendLine();
+      body.Append($@"<p>
+                      <a
+                        href='https://identity.profile4d.com'
+                        title='Profile4D'
+                      >
+                        https://identity.profile4d.com
+                      </a>
+                  </p>");
+
+      return new Content(subject.ToString(), body.ToString());
+    }
   }
 }

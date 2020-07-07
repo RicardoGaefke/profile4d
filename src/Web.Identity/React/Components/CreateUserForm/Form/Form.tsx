@@ -67,6 +67,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <TextField
+            margin="dense"
             error={errors.Name as any && touched.Name as any}
             label={t('CreateUserForm:name.title')}
             title={t('CreateUserForm:name.text')}
@@ -87,6 +88,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <TextField
+            margin="dense"
             error={errors.Email as any && touched.Email as any}
             label={t('CreateUserForm:email.title')}
             title={t('CreateUserForm:email.text')}
@@ -107,6 +109,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <TextField
+            margin="dense"
             error={errors.ConfirmEmail as any && touched.ConfirmEmail as any}
             label={t('CreateUserForm:confirmEmail.title')}
             title={t('CreateUserForm:confirmEmail.text')}
@@ -127,6 +130,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <TextField
+            margin="dense"
             id="Create-Password"
             name="Password"
             variant="outlined"
@@ -161,6 +165,7 @@ export default (props: IForm): React.ReactElement<IForm> => {
           md={12}
         >
           <TextField
+            margin="dense"
             id="Create-ConfirmPassword"
             name="ConfirmPassword"
             variant="outlined"
