@@ -16,19 +16,43 @@ namespace Profile4d.Email
       _connectionStrings = ConnectionStrings;
     }
 
-    public async Task<string> SendTestEmail()
+    public async Task<string> SendEmail(EmailMessage.Message message)
     {
       SendGridClient client = new SendGridClient(_connectionStrings.Value.SendGrid);
 
       var msg = new SendGridMessage()
       {
-        From = new EmailAddress("atendimento@profile4d.com", "Atendimento Profile4D"),
-        Subject = "Suporte Profile4D",
-        HtmlContent = "<strong>Enviado pelo sistema with C# and DI</strong>"
+        From = new EmailAddress("naoresponda@profile4d.com", "Atendimento Profile4D"),
+        Subject = message.Content.Subject,
+        HtmlContent = message.Content.Body
+      };
+
+      if (!string.IsNullOrEmpty(message.Name) && message.Name != "New User")
+      {
+        msg.AddTo(new EmailAddress(message.Email, message.Name));
+      }
+      else
+      {
+        msg.AddTo(new EmailAddress(message.Email));
+      }
+
+      Response response = await client.SendEmailAsync(msg);
+
+      return response.Headers.GetValues("x-message-id").FirstOrDefault();
+    }
+
+     public async Task<string> SendEmailPoison(string message)
+    {
+      SendGridClient client = new SendGridClient(_connectionStrings.Value.SendGrid);
+
+      var msg = new SendGridMessage()
+      {
+        From = new EmailAddress("naoresponda@profile4d.com", "Atendimento Profile4D"),
+        Subject = "Email Poison",
+        HtmlContent = $"<strong>Email poison: {message}</strong>"
       };
 
       msg.AddTo(new EmailAddress("ricardogaefke@gmail.com", "Ricardo Gaefke"));
-      msg.AddTo(new EmailAddress("lucasneves.dev@gmail.com", "Lucas Neves"));
 
       Response response = await client.SendEmailAsync(msg);
 
