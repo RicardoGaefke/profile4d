@@ -12,6 +12,8 @@ import { withTranslation, WithTranslation } from 'react-i18next';
 import setLanguage from './Language';
 import SignOut from './SignOut';
 import useStyles from './Styles';
+import onClientClick from './onClientClick';
+import AdminMenuItem from './AdminMenuItem';
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement => {
@@ -20,54 +22,78 @@ export default withTranslation()(
     setLanguage();
 
     return (
-      <List
-        component="nav"
-        aria-labelledby="nested-list-subheader"
-        subheader={
-          (
-            <ListSubheader component="div" id="nested-list-subheader">
-              {t('Connected:title')}
-            </ListSubheader>
-          )
-        }
-      >
-        <ListItem button component={NavLink} to="/connected/changeName" className={classes.navlink}>
-          <ListItemIcon>
-            <LoyaltyIcon />
-          </ListItemIcon>
-          <ListItemText
-            primary={t('Connected:changeName.text')}
-            title={t('Connected:changeName.title')}
-          />
-        </ListItem>
-        <ListItem button component={NavLink} to="/connected/changeEmail" className={classes.navlink}>
-          <ListItemIcon>
-            <AlternateEmailIcon />
-          </ListItemIcon>
-          <ListItemText
-            primary={t('Connected:changeEmail.text')}
-            title={t('Connected:changeEmail.title')}
-          />
-        </ListItem>
-        <ListItem button component={NavLink} to="/connected/changePassword" className={classes.navlink}>
-          <ListItemIcon>
-            <VpnKeyIcon />
-          </ListItemIcon>
-          <ListItemText
-            primary={t('Connected:changePassword.text')}
-            title={t('Connected:changePassword.title')}
-          />
-        </ListItem>
-        <ListItem button onClick={SignOut}>
-          <ListItemIcon>
-            <ExitToAppIcon />
-          </ListItemIcon>
-          <ListItemText
-            primary={t('Connected:signOut.text')}
-            title={t('Connected:signOut.title')}
-          />
-        </ListItem>
-      </List>
+      <>
+        <List
+          component="nav"
+          aria-labelledby="nested-list-subheader"
+          subheader={
+            (
+              <ListSubheader component="div" id="nested-list-subheader">
+                {t('Connected:title')}
+              </ListSubheader>
+            )
+          }
+        >
+          <ListItem button onClick={onClientClick} className={classes.navlink}>
+            <ListItemIcon>
+              <VpnKeyIcon />
+            </ListItemIcon>
+            <ListItemText
+              primary={t('Connected:clientApp.text')}
+              title={t('Connected:clientApp.title')}
+            />
+          </ListItem>
+          <AdminMenuItem />
+        </List>
+        <List
+          component="nav"
+          aria-labelledby="nested-list-subheader"
+          subheader={
+            (
+              <ListSubheader component="div" id="nested-list-subheader">
+                {t('Connected:title')}
+              </ListSubheader>
+            )
+          }
+        >
+          <ListItem button component={NavLink} to="/connected/changeName" className={classes.navlink}>
+            <ListItemIcon>
+              <LoyaltyIcon />
+            </ListItemIcon>
+            <ListItemText
+              primary={t('Connected:changeName.text')}
+              title={t('Connected:changeName.title')}
+            />
+          </ListItem>
+          <ListItem button component={NavLink} to="/connected/changeEmail" className={classes.navlink}>
+            <ListItemIcon>
+              <AlternateEmailIcon />
+            </ListItemIcon>
+            <ListItemText
+              primary={t('Connected:changeEmail.text')}
+              title={t('Connected:changeEmail.title')}
+            />
+          </ListItem>
+          <ListItem button component={NavLink} to="/connected/changePassword" className={classes.navlink}>
+            <ListItemIcon>
+              <VpnKeyIcon />
+            </ListItemIcon>
+            <ListItemText
+              primary={t('Connected:changePassword.text')}
+              title={t('Connected:changePassword.title')}
+            />
+          </ListItem>
+          <ListItem button onClick={SignOut}>
+            <ListItemIcon>
+              <ExitToAppIcon />
+            </ListItemIcon>
+            <ListItemText
+              primary={t('Connected:signOut.text')}
+              title={t('Connected:signOut.title')}
+            />
+          </ListItem>
+        </List>
+      </>
     );
   },
 );

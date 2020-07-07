@@ -33,6 +33,20 @@ export default class Hosts {
     return myHost;
   };
 
+  Client = (): string => {
+    let myHost: string;
+
+    if (this.Host.includes('localhost')) {
+      myHost = 'https://localhost:5070/';
+    } else if (this.Host.includes('staging')) {
+      myHost = 'https://client.staging.profile4d.com/';
+    } else {
+      myHost = 'https://client.profile4d.com/';
+    }
+
+    return myHost;
+  };
+
   Identity = (): string => {
     let myHost: string;
 

@@ -137,6 +137,12 @@ namespace Profile4d.Web.Api.Controllers
       return HttpContext.User.Identity.IsAuthenticated;
     }
 
+    [HttpGet("IsAdmin")]
+    public ActionResult<Boolean> IsAdmin()
+    {
+      return HttpContext.User.IsInRole("Admin");
+    }
+
     [HttpGet("SignOut")]
     public async Task<ActionResult<BasicReturn>> SignOut()
     {
