@@ -8,6 +8,7 @@ using System.Linq;
 using System.Security.Claims;
 using Profile4d.Data;
 using Profile4d.Domain;
+using Profile4d.Storage;
 
 namespace Profile4d.Web.Api.Controllers
 {
@@ -22,20 +23,23 @@ namespace Profile4d.Web.Api.Controllers
     private readonly ISendKey _sendKey;
     private readonly IEmail _email;
     private readonly IConfiguration _configuration;
+    private readonly IQueue _queue;
 
     public SendKeyController(
       ILogger<IdentityController> logger,
       IHttpContextAccessor httpContextAccessor,
-      ISendKey Keys,
-      IEmail Email,
-      IConfiguration Configuration
+      ISendKey keys,
+      IEmail email,
+      IConfiguration configuration,
+      IQueue queue
     )
     {
       _logger = logger;
-      _sendKey = Keys;
-      _email = Email;
+      _sendKey = keys;
+      _email = email;
       _httpContextAccessor = httpContextAccessor;
-      _configuration = Configuration;
+      _configuration = configuration;
+      _queue = queue;
       
       ClaimsPrincipal currentUser = this.User;
       _user = (from c in _httpContextAccessor.HttpContext.User.Claims
@@ -55,7 +59,8 @@ namespace Profile4d.Web.Api.Controllers
         Key key = new Key(data.Email, Convert.ToInt32(_user), Convert.ToInt32(_user));
         string guid = _sendKey.SendKey(key);
         EmailMessageModels.Content content = EmailMessageModels.SendKey(guid, _configuration.GetValue<string>("domain"));
-        _email.CreateEmail("New User", data.Email, Convert.ToInt32(_user), content);
+        int messageId = _email.CreateEmail("New User", data.Email, Convert.ToInt32(_user), content);
+        _queue.SaveMessage("email", messageId.ToString());
         _return.Success = true;
         return _return;
       }
@@ -78,7 +83,8 @@ namespace Profile4d.Web.Api.Controllers
         Key key = new Key(data.Email, Convert.ToInt32(_user), Convert.ToInt32(data.Keys), DateTime.Now);
         string guid = _sendKey.TransferKeys(key);
         EmailMessageModels.Content content = EmailMessageModels.TransferKeys(guid, _configuration.GetValue<string>("domain"), Convert.ToInt32(data.Keys));
-        _email.CreateEmail("New User", data.Email, Convert.ToInt32(_user), content);
+        int messageId = _email.CreateEmail("New User", data.Email, Convert.ToInt32(_user), content);
+        _queue.SaveMessage("email", messageId.ToString());
         _return.Success = true;
         return _return;
       }

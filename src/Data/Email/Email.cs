@@ -14,8 +14,10 @@ namespace Profile4d.Data
       _connStr = ConnectionStrings;
     }
 
-    public void CreateEmail(string name, string email, int sentBy, EmailMessageModels.Content content)
+    public int CreateEmail(string name, string email, int sentBy, EmailMessageModels.Content content)
     {
+      int messageId;
+
       EmailMessage.Message data = new EmailMessage.Message(name, email, content, sentBy);
 
       using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
@@ -34,9 +36,16 @@ namespace Profile4d.Data
 
           Con.Open();
 
-          Cmd.ExecuteNonQuery();
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            messageId = MyDR.GetInt32(0);
+          }
         }
       }
+
+      return messageId;
     }
 
     public EmailMessage.Message Info(int id)
