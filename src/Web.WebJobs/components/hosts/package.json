@@ -1,0 +1,13 @@
+{
+  "name": "@bit/ricardogaefke.profile4d.hosts",
+  "version": "0.0.4",
+  "homepage": "https://bit.dev/ricardogaefke/profile4d/hosts",
+  "main": "Hosts.ts",
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {},
+  "license": "SEE LICENSE IN LICENSE",
+  "bit": {
+    "env": {}
+  }
+}
