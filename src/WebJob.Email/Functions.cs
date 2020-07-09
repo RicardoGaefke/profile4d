@@ -57,7 +57,7 @@ namespace Profile4d.WebJob.Email
       
       EmailMessage.Message mailMessage = _data.Info(messageId);
       string sgKey = await _email.SendEmail(mailMessage);
-      _data.UpdateSendGridInfo(messageId, sgKey);
+      _data.UpdateSendGridInfo(messageId, sgKey, DequeueCount);
     }
 
     public async Task EnviarEmailsPoison(

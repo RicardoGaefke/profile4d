@@ -3,23 +3,20 @@ import { makeStyles, Theme } from '@material-ui/core';
 
 interface IStyles {
   main: {},
-  text: {},
-  divider: {},
+  tabs: {},
+  table: {},
 }
 
 // eslint-disable-next-line no-unused-vars
 export default makeStyles((theme: Theme): IStyles => ({
   main: {
-    paddingTop: 50,
-    paddingBottom: 50,
+    paddingTop: 30,
+    paddingBottom: 30,
   },
-  text: {
-    fontWeight: 'normal',
-    fontSize: '.9rem',
-    textAlign: 'justify',
-    paddingBottom: '1.3rem',
+  tabs: {
+    flexGrow: 1,
   },
-  divider: {
-    borderRight: `1px solid ${theme.palette.divider}`,
+  table: {
+    minWidth: 650,
   },
 }));

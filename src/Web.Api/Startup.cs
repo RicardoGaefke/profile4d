@@ -35,6 +35,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<ISendKey, Keys>();
       services.AddSingleton<IQueue, Queue>();
       services.AddSingleton<IEmail, Email>();
+      services.AddSingleton<IEmailMI4D, EmailMI4D>();
       services.AddSingleton<MyIdentity>();
       services.AddSingleton<StaticContent>();
       services.AddSingleton<IImages, Images>();

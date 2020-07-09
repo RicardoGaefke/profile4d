@@ -4,16 +4,16 @@ import { storiesOf } from '@storybook/react';
 import { withConsole } from '@storybook/addon-console';
 // eslint-disable-next-line no-unused-vars
 import { action, HandlerFunction } from '@storybook/addon-actions';
-import MyThemeHoc from '../../../Initial/Theme/StoryBookHOC';
-import Testimonials from './Testimonials';
+import MyThemeHoc from '../../Initial/Theme/StoryBookHOC';
+import Home from './Home';
 
 const App = (): React.ReactElement => (
   <MyThemeHoc>
-    <Testimonials />
+    <Home />
   </MyThemeHoc>
 );
 
-storiesOf('Home-Testimonials', module)
+storiesOf('Home.Page', module)
   .addDecorator((story: any): React.ReactElement => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))
