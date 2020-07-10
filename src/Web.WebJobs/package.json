@@ -38,6 +38,7 @@
     "@material-ui/lab": "^4.0.0-alpha.34",
     "@material-ui/pickers": "^3.2.8",
     "@material-ui/styles": "^4.7.1",
+    "@microsoft/signalr": "^3.1.5",
     "@primer/octicons-react": "^9.1.1",
     "@storybook/addon-a11y": "^5.2.6",
     "@storybook/addon-actions": "^5.2.6",

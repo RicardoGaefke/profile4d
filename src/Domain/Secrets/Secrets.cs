@@ -18,5 +18,10 @@ namespace Profile4d.Domain
       public string AzureWebJobsDashboard { get; set; }
       public string AzureWebJobsStorage { get; set; }
     }
+
+    public class Config
+    {
+      public string domain { get; set; }
+    }
   }
 }

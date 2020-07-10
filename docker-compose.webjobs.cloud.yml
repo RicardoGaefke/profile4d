@@ -1,5 +1,22 @@
 version: '3'
+networks:
+  my-network:
+    driver: bridge
 services:
+  web_api:
+    image: ricardogaefke/profile4d:web_webjobs_cloud
+    container_name: web-api
+    networks:
+      - my-network
+  nginx:
+    image: ricardogaefke/profile4d:mynginx_cloud
+    container_name: nginx-proxy
+    ports:
+      - "8080:8080"
+    networks:
+      - my-network
   webjob_email:
     image: ricardogaefke/profile4d:webjob_email_cloud
     container_name: webjob_email
+    networks:
+      - my-network

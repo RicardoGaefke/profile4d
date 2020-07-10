@@ -10,6 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Profile4d.DI;
 using Profile4d.Domain;
 using Profile4d.Data;
+using Profile4d.SignalR;
 
 namespace Profile4d.Web.WebJobs
 {
@@ -51,6 +52,7 @@ namespace Profile4d.Web.WebJobs
       );
 
       services.AddRazorPages();
+      services.AddSignalR();
     }
 
     public void Configure(IApplicationBuilder app, IHostEnvironment env)
@@ -101,6 +103,7 @@ namespace Profile4d.Web.WebJobs
           pattern: "{controller=Home}/{action=Index}/{id?}"
         );
         endpoints.MapFallbackToController("Index", "Home");
+        endpoints.MapHub<WebJobsHub>("/hubs/webjobs");
       });
     }
   }

@@ -5,6 +5,7 @@ interface IStyles {
   main: {},
   tabs: {},
   table: {},
+  fab: {},
 }
 
 // eslint-disable-next-line no-unused-vars
@@ -18,5 +19,10 @@ export default makeStyles((theme: Theme): IStyles => ({
   },
   table: {
     minWidth: 650,
+  },
+  fab: {
+    position: 'fixed',
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
   },
 }));
