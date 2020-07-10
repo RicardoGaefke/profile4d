@@ -12,6 +12,10 @@ export default {
     text: 'Acessar módulo admin',
     title: 'Clique aqui para acessar o módulo administrativo',
   },
+  clientWebJobs: {
+    text: 'Relatório de emails',
+    title: 'Clique aqui para acessar o relatório de emails enviados',
+  },
   changeName: {
     text: 'Trocar nome',
     title: 'Clique aqui para trocar o nome utilizado pelo sistema',

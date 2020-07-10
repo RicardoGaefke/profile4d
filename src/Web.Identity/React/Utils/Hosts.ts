@@ -74,4 +74,18 @@ export default class Hosts {
 
     return myHost;
   };
+
+  WebJobs = (): string => {
+    let myHost: string;
+
+    if (this.Host.includes('localhost')) {
+      myHost = 'https://localhost:5075/';
+    } else if (this.Host.includes('staging')) {
+      myHost = 'https://webjobs.staging.profile4d.com/';
+    } else {
+      myHost = 'https://webjobs.profile4d.com/';
+    }
+
+    return myHost;
+  };
 }

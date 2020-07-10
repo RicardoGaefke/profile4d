@@ -9,6 +9,10 @@ export interface ILanguage {
     text: string,
     title: string,
   },
+  clientWebJobs: {
+    text: string,
+    title: string,
+  },
   changeName: {
     text: string,
     title: string,
