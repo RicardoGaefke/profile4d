@@ -16,7 +16,7 @@ namespace Profile4d.Web.WebJobs.Controllers
       _logger = logger;
     }
 
-    // [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     public IActionResult Index()
     {
       ViewData["Title"] = "Profile4D";
