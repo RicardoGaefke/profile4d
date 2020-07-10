@@ -128,9 +128,6 @@ namespace Profile4d.Web.Api
       //  storage
       services.AddSingleton<Blob>();
 
-      // add cors
-      Bootstrap.ConfigCors(services, Configuration, HostEnvironment.IsDevelopment());
-
       //  DI config
       Bootstrap.DataProtection(services, Configuration);
       Bootstrap.ConsentCookie(services, Configuration, HostEnvironment.IsDevelopment());
@@ -161,19 +158,12 @@ namespace Profile4d.Web.Api
       }
 
       Bootstrap.Headers(app);
-
       app.UseCookiePolicy();
-
       app.UseHttpsRedirection();
-
       app.UseRouting();
-
-      app.UseCors();
       app.UseStaticFiles();
-
       app.UseOpenApi();
       app.UseSwaggerUi3();
-
       app.UseAuthentication();
       app.UseAuthorization();
 
