@@ -122,6 +122,17 @@ namespace Profile4d.Web.Api.Controllers
 
         return _return;
       }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Code = "SQL";
+        _return.Message = ex.Message;
+        _return.Email = "Error";
+        _return.Name = ex.Message;
+        _return.Password = ex.StackTrace;
+
+        return _return;
+      }
       catch (System.Exception ex)
       {
         _return.Success = false;

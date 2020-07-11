@@ -149,7 +149,7 @@ namespace Profile4d.Web.Api
       services.AddSwaggerDocument(options =>
       {
         options.Title = "API for Profile4d";
-        options.Version = "1.20";
+        options.Version = "1.21";
         options.Description = "Made by www.ricardogaefke.com";
       });
     }
@@ -166,7 +166,7 @@ namespace Profile4d.Web.Api
 
       app.UseCookiePolicy();
 
-      app.UseHttpsRedirection();
+      // app.UseHttpsRedirection();
 
       app.UseRouting();
 
