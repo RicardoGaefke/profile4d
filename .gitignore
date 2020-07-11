@@ -383,3 +383,4 @@ test.json
 commit.txt
 .env
 docker-compose.env
+nginx/localhost.crt
