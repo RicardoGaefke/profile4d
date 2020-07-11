@@ -3,9 +3,6 @@ networks:
   my-network:
     driver: bridge
 services:
-  # webjob_teste:
-  #   image: ricardogaefke/profile4d:webjob_teste_cloud
-  #   container_name: webjob-teste
   web_api:
     image: ricardogaefke/profile4d:web_api_cloud
     container_name: web-api
