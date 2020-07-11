@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -30,6 +31,18 @@ namespace Profile4d.Web.Api
 
       // Config data before config cookies so logged users can be checked on SqlServer
       services.Configure<Secrets.ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
+
+      services.Configure<ApiBehaviorOptions>(a =>{
+        a.InvalidModelStateResponseFactory = context => {
+          var problemDetails = new CustomBadRequest(context);
+
+          return new BadRequestObjectResult(problemDetails)
+          {
+            ContentTypes = { "application/problem+json", "application/problem+xml" }
+          };
+        };
+      });
+
       //  data
       #region DataServices
       services.AddSingleton<ISendKey, Keys>();
