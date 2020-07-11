@@ -14,8 +14,8 @@ namespace Profile4d.Web.Api
   {
     public Startup(IConfiguration configuration, IHostEnvironment hostEnvironment)
     {
-        Configuration = configuration;
-        HostEnvironment = hostEnvironment;
+      Configuration = configuration;
+      HostEnvironment = hostEnvironment;
     }
 
     // readonly string RicardoGaefkeCors = "_ricardoGaefkeCors";
@@ -27,7 +27,7 @@ namespace Profile4d.Web.Api
     {
       // Add your AppInsights ID here to make it globally available //
       // services.AddApplicationInsightsTelemetry("9e5cc6db-d8d8-49c5-aa18-d60b4d06196b");
-      
+
       // Config data before config cookies so logged users can be checked on SqlServer
       services.Configure<Secrets.ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
       //  data
@@ -128,6 +128,9 @@ namespace Profile4d.Web.Api
       //  storage
       services.AddSingleton<Blob>();
 
+      // add cors
+      Bootstrap.ConfigCors(services, Configuration, HostEnvironment.IsDevelopment());
+
       //  DI config
       Bootstrap.DataProtection(services, Configuration);
       Bootstrap.ConsentCookie(services, Configuration, HostEnvironment.IsDevelopment());
@@ -135,21 +138,23 @@ namespace Profile4d.Web.Api
 
       services
         .AddControllers()
-        .AddNewtonsoftJson(options => {
+        .AddNewtonsoftJson(options =>
+        {
           options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
           options.SerializerSettings.DefaultValueHandling = Newtonsoft.Json.DefaultValueHandling.Ignore;
           options.SerializerSettings.ContractResolver = new DefaultContractResolver();
         })
       ;
 
-      services.AddSwaggerDocument(options => {
+      services.AddSwaggerDocument(options =>
+      {
         options.Title = "API for Profile4d";
         options.Version = "1.20";
         options.Description = "Made by www.ricardogaefke.com";
       });
     }
 
-      // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IHostEnvironment env)
     {
       if (env.IsDevelopment())
@@ -158,12 +163,19 @@ namespace Profile4d.Web.Api
       }
 
       Bootstrap.Headers(app);
+
       app.UseCookiePolicy();
+
       app.UseHttpsRedirection();
+
       app.UseRouting();
+
+      app.UseCors();
       app.UseStaticFiles();
+
       app.UseOpenApi();
       app.UseSwaggerUi3();
+
       app.UseAuthentication();
       app.UseAuthorization();
 
