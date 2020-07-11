@@ -2,5 +2,5 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Start session',
+  title: 'Manage login',
 } as ILanguage;

@@ -2,7 +2,7 @@ import React from 'react';
 import {
   ListItem, ListItemIcon, ListItemText,
 } from '@material-ui/core';
-import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
+import EmailIcon from '@material-ui/icons/Email';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import useStyles from './Styles';
@@ -16,7 +16,7 @@ export default withTranslation()(
     return (
       <ListItem button onClick={onWebJobsClick} className={classes.navlink}>
         <ListItemIcon>
-          <SupervisorAccountIcon />
+          <EmailIcon />
         </ListItemIcon>
         <ListItemText
           primary={t('Connected:clientWebJobs.text')}
