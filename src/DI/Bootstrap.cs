@@ -77,7 +77,8 @@ namespace Profile4d.DI
             {
               builder
                 .WithOrigins(
-                  $"https://*.{Configuration.GetValue<string>("domain")}"
+                  "https://*.profile4d.com",
+                  "https://*.staging.profile4d.com"
                 ).SetIsOriginAllowedToAllowWildcardSubdomains()
                 .AllowAnyMethod()
                 .AllowAnyHeader()
