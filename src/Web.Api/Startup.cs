@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -14,8 +15,8 @@ namespace Profile4d.Web.Api
   {
     public Startup(IConfiguration configuration, IHostEnvironment hostEnvironment)
     {
-        Configuration = configuration;
-        HostEnvironment = hostEnvironment;
+      Configuration = configuration;
+      HostEnvironment = hostEnvironment;
     }
 
     // readonly string RicardoGaefkeCors = "_ricardoGaefkeCors";
@@ -27,13 +28,27 @@ namespace Profile4d.Web.Api
     {
       // Add your AppInsights ID here to make it globally available //
       // services.AddApplicationInsightsTelemetry("9e5cc6db-d8d8-49c5-aa18-d60b4d06196b");
-      
+
       // Config data before config cookies so logged users can be checked on SqlServer
       services.Configure<Secrets.ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
+
+      services.Configure<ApiBehaviorOptions>(a =>{
+        a.InvalidModelStateResponseFactory = context => {
+          var problemDetails = new CustomBadRequest(context);
+
+          return new BadRequestObjectResult(problemDetails)
+          {
+            ContentTypes = { "application/problem+json", "application/problem+xml" }
+          };
+        };
+      });
+
       //  data
       #region DataServices
       services.AddSingleton<ISendKey, Keys>();
+      services.AddSingleton<IQueue, Queue>();
       services.AddSingleton<IEmail, Email>();
+      services.AddSingleton<IEmailMI4D, EmailMI4D>();
       services.AddSingleton<MyIdentity>();
       services.AddSingleton<StaticContent>();
       services.AddSingleton<IImages, Images>();
@@ -136,21 +151,23 @@ namespace Profile4d.Web.Api
 
       services
         .AddControllers()
-        .AddNewtonsoftJson(options => {
+        .AddNewtonsoftJson(options =>
+        {
           options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
           options.SerializerSettings.DefaultValueHandling = Newtonsoft.Json.DefaultValueHandling.Ignore;
           options.SerializerSettings.ContractResolver = new DefaultContractResolver();
         })
       ;
 
-      services.AddSwaggerDocument(options => {
+      services.AddSwaggerDocument(options =>
+      {
         options.Title = "API for Profile4d";
-        options.Version = "1.20";
+        options.Version = "1.21";
         options.Description = "Made by www.ricardogaefke.com";
       });
     }
 
-      // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IHostEnvironment env)
     {
       if (env.IsDevelopment())
@@ -162,7 +179,7 @@ namespace Profile4d.Web.Api
 
       app.UseCookiePolicy();
 
-      app.UseHttpsRedirection();
+      // app.UseHttpsRedirection();
 
       app.UseRouting();
 

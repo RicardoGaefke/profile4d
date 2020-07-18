@@ -12,6 +12,10 @@ export default {
     text: 'Access admin module',
     title: 'Click here to access admin module',
   },
+  clientWebJobs: {
+    text: 'Emails report',
+    title: 'Click here to access report of sent emails',
+  },
   changeName: {
     text: 'Change name',
     title: 'Click here to change the name used by system',

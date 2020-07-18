@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Profile4d.Data;
 using Profile4d.Domain;
+using Profile4d.Storage;
 
 namespace Profile4d.Web.Api.Controllers
 {
@@ -23,18 +24,21 @@ namespace Profile4d.Web.Api.Controllers
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly IEmail _email;
     private readonly User _user;
+    private readonly IQueue _queue;
 
     public IdentityController(
       ILogger<IdentityController> logger,
-      MyIdentity MyIdentity,
+      MyIdentity myIdentity,
       IHttpContextAccessor httpContextAccessor,
-      IEmail Email
+      IEmail emailService,
+      IQueue queue
     )
     {
       _logger = logger;
-      _myIdentity = MyIdentity;
+      _myIdentity = myIdentity;
       _httpContextAccessor = httpContextAccessor;
-      _email = Email;
+      _email = emailService;
+      _queue = queue;
 
       if (_httpContextAccessor.HttpContext.User.Identity.IsAuthenticated)
       {
@@ -118,6 +122,17 @@ namespace Profile4d.Web.Api.Controllers
 
         return _return;
       }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Code = "SQL";
+        _return.Message = ex.Message;
+        _return.Email = "Error";
+        _return.Name = ex.Message;
+        _return.Password = ex.StackTrace;
+
+        return _return;
+      }
       catch (System.Exception ex)
       {
         _return.Success = false;
@@ -178,7 +193,8 @@ namespace Profile4d.Web.Api.Controllers
         string _url = _httpContextAccessor.HttpContext.Request.Host + _httpContextAccessor.HttpContext.Request.Path;
         _myIdentity.ChangeName(_userID, user.Name, user.Password, _url);
         EmailMessageModels.Content content = EmailMessageModels.ChangeName(_user.Name);
-        _email.CreateEmail(_user.Name, _user.Email, _user.Id, content);
+        int messageId = _email.CreateEmail(_user.Name, _user.Email, _user.Id, content);
+        _queue.SaveMessage("email", messageId.ToString());
         _return.Success = true;
       }
       catch (SqlException ex)
@@ -211,7 +227,8 @@ namespace Profile4d.Web.Api.Controllers
         string _url = _httpContextAccessor.HttpContext.Request.Host + _httpContextAccessor.HttpContext.Request.Path;
         _myIdentity.ChangeEmail(_userID, user.Email, user.Password, _url);
         EmailMessageModels.Content content = EmailMessageModels.ChangeEmail(_user.Name);
-        _email.CreateEmail(_user.Name, user.Email, _user.Id, content);
+        int messageId = _email.CreateEmail(_user.Name, user.Email, _user.Id, content);
+        _queue.SaveMessage("email", messageId.ToString());
         _return.Success = true;
       }
       catch (SqlException ex)
@@ -244,7 +261,8 @@ namespace Profile4d.Web.Api.Controllers
         string _url = _httpContextAccessor.HttpContext.Request.Host + _httpContextAccessor.HttpContext.Request.Path;
         _myIdentity.ChangePassword(_userID, user.NewPassword, user.Password, _url);
         EmailMessageModels.Content content = EmailMessageModels.ChangePassword(_user.Name);
-        _email.CreateEmail(_user.Name, _user.Email, _user.Id, content);
+        int messageId = _email.CreateEmail(_user.Name, _user.Email, _user.Id, content);
+        _queue.SaveMessage("email", messageId.ToString());
         _return.Success = true;
       }
       catch (SqlException ex)
@@ -274,7 +292,8 @@ namespace Profile4d.Web.Api.Controllers
       {
         User myUser = _myIdentity.ForgotPassword(data.Email);
         EmailMessageModels.Content content = EmailMessageModels.ForgotPassword(myUser);
-        _email.CreateEmail(myUser.Name, data.Email, myUser.Id, content);
+        int messageId = _email.CreateEmail(myUser.Name, data.Email, myUser.Id, content);
+        _queue.SaveMessage("email", messageId.ToString());
         _return.Success = true;
       }
       catch (SqlException ex)
@@ -302,7 +321,8 @@ namespace Profile4d.Web.Api.Controllers
       {
         int id = _myIdentity.CreateUser(user);
         EmailMessageModels.Content content = EmailMessageModels.CreateUser(user.Name);
-        _email.CreateEmail(user.Name, user.Email, id, content);
+        int messageId = _email.CreateEmail(user.Name, user.Email, id, content);
+        _queue.SaveMessage("email", messageId.ToString());
         _return.Success = true;
       }
       catch (SqlException ex)

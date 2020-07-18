@@ -1,6 +1,8 @@
+using System.Net.WebSockets;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -16,20 +18,41 @@ namespace Profile4d.WebJob.Email
   public class Functions
   {
     private readonly IOptions<Secrets.ConnectionStrings> _connStr;
+    private readonly IOptions<Secrets.Config> _config;
     private readonly IMyEmail _email;
     private readonly IEmail _data;
     private readonly IEmailMI4D _emailMI4D;
+    private HubConnection _connection;
+    private string _host;
     public Functions(
       IOptions<Secrets.ConnectionStrings> ConnectionStrings,
+      IOptions<Secrets.Config> config,
       IMyEmail MyEmail,
       IEmailMI4D MyEmailMI4D,
       IEmail Email
     )
     {
       _connStr = ConnectionStrings;
+      _config = config;
       _email = MyEmail;
       _emailMI4D = MyEmailMI4D;
       _data = Email;
+
+      if (_config.Value.domain == "localhost")
+      {
+        _host = "https://localhost:5075";
+      } else
+      {
+        _host = "http://web_api:5000";
+      }
+
+      _connection = new HubConnectionBuilder()
+        .WithUrl($"{_host}/hubs/webjobs")
+        .WithAutomaticReconnect()
+        .Build()
+      ;
+
+      Task.Run(() => _connection.StartAsync()).Wait();
     }
 
     public async Task EnviarEmailsMI4D(
@@ -44,6 +67,8 @@ namespace Profile4d.WebJob.Email
       string SgId = await _email.SendMI4DEmail(email);
 
       _emailMI4D.SaveEmailData(SgId, email.To.First().Address, DequeueCount);
+
+      await _connection.InvokeAsync("MI4D", SgId);
     }
 
     public async Task EnviarEmails(
@@ -57,7 +82,8 @@ namespace Profile4d.WebJob.Email
       
       EmailMessage.Message mailMessage = _data.Info(messageId);
       string sgKey = await _email.SendEmail(mailMessage);
-      _data.UpdateSendGridInfo(messageId, sgKey);
+      _data.UpdateSendGridInfo(messageId, sgKey, DequeueCount);
+      await _connection.InvokeAsync("Profile4D", sgKey);
     }
 
     public async Task EnviarEmailsPoison(

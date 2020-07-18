@@ -381,3 +381,6 @@ Src/Web.Site/appsettings.json
 
 test.json
 commit.txt
+.env
+docker-compose.env
+nginx/localhost.crt

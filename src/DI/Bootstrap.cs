@@ -65,7 +65,8 @@ namespace Profile4d.DI
                   "https://localhost:5050",
                   "https://localhost:5055",
                   "https://localhost:5060",
-                  "https://localhost:5065"
+                  "https://localhost:5065",
+                  "https://localhost:5075"
                 )
                 .AllowAnyMethod()
                 .AllowAnyHeader()
@@ -76,7 +77,8 @@ namespace Profile4d.DI
             {
               builder
                 .WithOrigins(
-                  $"https://*.{Configuration.GetValue<string>("domain")}"
+                  "https://*.profile4d.com",
+                  "https://*.staging.profile4d.com"
                 ).SetIsOriginAllowedToAllowWildcardSubdomains()
                 .AllowAnyMethod()
                 .AllowAnyHeader()

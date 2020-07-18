@@ -1,4 +1,5 @@
 using Microsoft.Extensions.Options;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using Profile4d.Domain;
@@ -14,8 +15,10 @@ namespace Profile4d.Data
       _connStr = ConnectionStrings;
     }
 
-    public void CreateEmail(string name, string email, int sentBy, EmailMessageModels.Content content)
+    public int CreateEmail(string name, string email, int sentBy, EmailMessageModels.Content content)
     {
+      int messageId;
+
       EmailMessage.Message data = new EmailMessage.Message(name, email, content, sentBy);
 
       using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
@@ -34,9 +37,16 @@ namespace Profile4d.Data
 
           Con.Open();
 
-          Cmd.ExecuteNonQuery();
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            messageId = MyDR.GetInt32(0);
+          }
         }
       }
+
+      return messageId;
     }
 
     public EmailMessage.Message Info(int id)
@@ -75,7 +85,7 @@ namespace Profile4d.Data
       return _return;
     }
 
-    public void UpdateSendGridInfo(int id, string sgKey)
+    public void UpdateSendGridInfo(int id, string sgKey, int dequeue)
     {
       using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
       {
@@ -87,12 +97,48 @@ namespace Profile4d.Data
 
           Cmd.Parameters.AddWithValue("@ID", id);
           Cmd.Parameters.AddWithValue("@SENDGRID_KEY", sgKey);
+          Cmd.Parameters.AddWithValue("@DEQUEUE", dequeue);
 
           Con.Open();
 
           Cmd.ExecuteNonQuery();
         }
       }
+    }
+
+    public IEnumerable<EmailReport> List()
+    {
+      List<EmailReport> _return = new List<EmailReport>();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_EMAILS_PROFILE4D_LIST]";
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            while (MyDR.Read())
+            {
+              EmailReport er = new EmailReport(
+                MyDR.GetInt32(0),
+                MyDR.GetString(1),
+                MyDR.GetInt32(2),
+                MyDR.GetString(3),
+                MyDR.GetDateTime(4)
+              );
+
+              _return.Add(er);
+            }
+          }
+        }
+      }
+
+      return _return;
     }
   }
 }

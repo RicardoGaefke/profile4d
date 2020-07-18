@@ -8,6 +8,7 @@ import { withTranslation, WithTranslation } from 'react-i18next';
 import useStyles from './Styles';
 import onAdminClick from './onAdminClick';
 import AdminAsyncEffect from './AdminAsyncEffect';
+import WebJobsMenuItem from './WebJobsMenuItem';
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
@@ -23,15 +24,18 @@ export default withTranslation()(
       <>
         {
           (!admin) ? null : (
-            <ListItem button onClick={onAdminClick} className={classes.navlink}>
-              <ListItemIcon>
-                <SupervisorAccountIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary={t('Connected:clientAdmin.text')}
-                title={t('Connected:clientAdmin.title')}
-              />
-            </ListItem>
+            <>
+              <ListItem button onClick={onAdminClick} className={classes.navlink}>
+                <ListItemIcon>
+                  <SupervisorAccountIcon />
+                </ListItemIcon>
+                <ListItemText
+                  primary={t('Connected:clientAdmin.text')}
+                  title={t('Connected:clientAdmin.title')}
+                />
+              </ListItem>
+              <WebJobsMenuItem />
+            </>
           )
         }
       </>

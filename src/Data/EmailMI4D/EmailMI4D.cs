@@ -1,4 +1,5 @@
 using Microsoft.Extensions.Options;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using Profile4d.Domain;
@@ -33,6 +34,41 @@ namespace Profile4d.Data
           Cmd.ExecuteNonQuery();
         }
       }
+    }
+
+    public IEnumerable<EmailReport> List()
+    {
+      List<EmailReport> _return = new List<EmailReport>();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_EMAILS_MI4D_LIST]";
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            while (MyDR.Read())
+            {
+              EmailReport er = new EmailReport(
+                MyDR.GetInt32(0),
+                MyDR.GetString(1),
+                MyDR.GetInt32(2),
+                MyDR.GetString(3),
+                MyDR.GetDateTime(4)
+              );
+
+              _return.Add(er);
+            }
+          }
+        }
+      }
+
+      return _return;
     }
   }
 }
