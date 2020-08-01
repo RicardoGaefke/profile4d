@@ -7,16 +7,14 @@ import {
   Typography, FormControl, RadioGroup, FormControlLabel, Radio, Button, Grid, FormHelperText,
 } from '@material-ui/core';
 import Validation from './RadioOptions.validation';
+// eslint-disable-next-line no-unused-vars
+import radioData, { IRadio } from './Radio.data';
 import useStyles from './Styles';
 import setLanguage from './Language';
 
 interface IForm {
   option: string;
 }
-
-const MyOptions: React.ReactNode[] = [
-  'disagreeStrongly', 'disagreePartially', 'noAgreeOrDisagree', 'agreePartially', 'agreeStrongly',
-];
 
 type IRadioForm = FormikProps<IForm> & WithTranslation;
 
@@ -29,7 +27,6 @@ const RadioForm = (props: IRadioForm): React.ReactElement<IRadioForm> => {
     isSubmitting,
     setFieldTouched,
     handleSubmit,
-    handleReset,
     handleChange,
     handleBlur,
   } = props;
@@ -46,7 +43,6 @@ const RadioForm = (props: IRadioForm): React.ReactElement<IRadioForm> => {
   return (
     <Grid
       container
-      spacing={2}
       justify="flex-start"
       alignItems="center"
       className={classes.main}
@@ -75,13 +71,15 @@ const RadioForm = (props: IRadioForm): React.ReactElement<IRadioForm> => {
               className={classes.form}
             >
               {
-                MyOptions.map((opt: string): React.ReactElement<HTMLElement> => (
+                radioData.map((opt: IRadio): React.ReactElement<IRadio> => (
                   <FormControlLabel
-                    value={opt}
+                    key={opt.id}
+                    value={opt.id.toString()}
+                    className={classes.radio}
                     control={(
                       <Radio color="primary" />
                     )}
-                    label={t(`RadioOptions:options.${opt}`)}
+                    label={t(`RadioOptions:options.${opt.name}`)}
                   />
                 ))
               }
@@ -102,14 +100,6 @@ const RadioForm = (props: IRadioForm): React.ReactElement<IRadioForm> => {
           >
             {t('RadioOptions:buttonConfirm')}
           </Button>
-          <Button
-            variant="contained"
-            color="default"
-            onClick={handleReset}
-            className={classes.button}
-          >
-            {t('RadioOptions:buttonReset')}
-          </Button>
         </Grid>
       </form>
     </Grid>
@@ -123,7 +113,7 @@ export default withFormik<WithTranslation, IForm>({
   mapPropsToValues: (): IForm => ({ option: '' }),
   handleSubmit: (values: IForm, { resetForm, setSubmitting }): void => {
     // eslint-disable-next-line no-alert
-    alert(JSON.stringify(values));
+    alert(`option: ${parseFloat(values.option)}`);
     setSubmitting(false);
     resetForm();
   },
