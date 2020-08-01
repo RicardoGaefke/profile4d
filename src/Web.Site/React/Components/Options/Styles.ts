@@ -8,6 +8,7 @@ interface IStyles {
   btnGrid: {},
   button: {},
   helperText: {},
+  radio: {},
 }
 
 // eslint-disable-next-line no-unused-vars
@@ -19,26 +20,99 @@ export default makeStyles((theme: Theme): IStyles => ({
   title: {
     fontWeight: 'bold',
     fontSize: '1rem',
-    marginBottom: '5px',
+    marginBottom: 5,
   },
   form: {
     display: 'flex',
     flexDirection: 'row',
+    alignItems: 'flex-end',
     '@media(max-width: 767px)': {
       flexDirection: 'column',
+      alignItems: 'flex-start',
     },
   },
   btnGrid: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    marginTop: '5px',
+    marginTop: 5,
   },
   button: {
-    marginLeft: '10px',
+    marginLeft: 10,
   },
   helperText: {
-    marginTop: '0px',
-    marginBottom: '5px',
+    marginTop: 0,
+    marginBottom: 5,
+  },
+  radio: {
+    padding: 10,
+    '@media(max-width: 767px)': {
+      padding: 0,
+    },
+    '&:nth-child(1)': {
+      '&': {
+        flexDirection: 'row',
+      },
+      '@media(min-width: 768px)': {
+        '& svg': {
+          fontSize: '2rem',
+        },
+        '&': {
+          flexDirection: 'column',
+        },
+      },
+    },
+    '&:nth-child(2)': {
+      '&': {
+        flexDirection: 'row',
+      },
+      '@media(min-width: 768px)': {
+        '& svg': {
+          fontSize: '1.5rem',
+        },
+        '&': {
+          flexDirection: 'column',
+        },
+      },
+    },
+    '&:nth-child(3)': {
+      '&': {
+        flexDirection: 'row',
+      },
+      '@media(min-width: 768px)': {
+        '& svg': {
+          fontSize: '1rem',
+        },
+        '&': {
+          flexDirection: 'column',
+        },
+      },
+    },
+    '&:nth-child(4)': {
+      '&': {
+        flexDirection: 'row',
+      },
+      '@media(min-width: 768px)': {
+        '& svg': {
+          fontSize: '1.5rem',
+        },
+        '&': {
+          flexDirection: 'column',
+        },
+      },
+    },
+    '&:nth-child(5)': {
+      '&': {
+        flexDirection: 'row',
+      },
+      '@media(min-width: 768px)': {
+        '& svg': {
+          fontSize: '2rem',
+        },
+        '&': {
+          flexDirection: 'column',
+        },
+      },
+    },
   },
 }));
