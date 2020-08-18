@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Logging;
 using Profile4d.Web.Client.Models;
 
@@ -19,6 +20,7 @@ namespace Profile4d.Web.Client
       _logger = logger;
     }
 
+    [Authorize]
     public IActionResult Index()
     {
       ViewData["Title"] = "Profile4D";
