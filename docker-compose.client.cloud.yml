@@ -1,0 +1,17 @@
+version: '3'
+networks:
+  my-network:
+    driver: bridge
+services:
+  web_api:
+    image: ricardogaefke/profile4d:web_client_cloud
+    container_name: web-api
+    networks:
+      - my-network
+  nginx:
+    image: ricardogaefke/profile4d:mynginx_cloud
+    container_name: nginx-proxy
+    ports:
+      - "8080:8080"
+    networks:
+      - my-network
