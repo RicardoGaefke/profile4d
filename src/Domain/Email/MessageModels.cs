@@ -19,6 +19,26 @@ namespace Profile4d.Domain
       }
     }
 
+    private static string ServerAddress(string domain)
+    {
+      StringBuilder address = new StringBuilder();
+
+      if (domain.Contains("localhost"))
+      {
+        address.Append("localhost:5080");
+      }
+      else if (domain.Contains("staging"))
+      {
+        address.Append("client.staging.profile4d.com");
+      }
+      else
+      {
+        address.Append("client.profile4d.com");
+      }
+
+      return address.ToString();
+    }
+
     public static Content SendKey(string guid, string domain)
     {
       StringBuilder subject = new StringBuilder("Profile4d - Nova chave/New key");
@@ -31,10 +51,10 @@ namespace Profile4d.Domain
       body.Append("<p>Click on the link below to complete the registration and access the assessment.</p>");
       body.AppendLine();
       body.Append($@"<p><a
-                        href=""https://{domain}/confirmKey/{guid}""
+                        href=""https://{ServerAddress(domain)}/confirmKey/{guid}""
                         title=""Nova chave / New Key""
                       >
-                      https://{domain}/confirmKey/{guid}
+                      https://{ServerAddress(domain)}/confirmKey/{guid}
                     </a></p>");
 
       return new Content(subject.ToString(), body.ToString());
@@ -52,10 +72,10 @@ namespace Profile4d.Domain
       body.Append($"<p>You are receiving {keys.ToString()} key(s) from the Profile4d system. Please click on the link below to confirm your registration.</p>");
       body.AppendLine();
       body.Append($@"<p><a
-                        href=""https://{domain}/receiveKeys/{guid}""
+                        href=""https://{ServerAddress(domain)}/receiveKeys/{guid}""
                         title=""Nova chave / New Key""
                       >
-                      https://{domain}/receiveKeys/{guid}
+                      https://{ServerAddress(domain)}/receiveKeys/{guid}
                     </a></p>");
 
       return new Content(subject.ToString(), body.ToString());

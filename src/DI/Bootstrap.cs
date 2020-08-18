@@ -66,7 +66,8 @@ namespace Profile4d.DI
                   "https://localhost:5055",
                   "https://localhost:5060",
                   "https://localhost:5065",
-                  "https://localhost:5075"
+                  "https://localhost:5075",
+                  "https://localhost:5080"
                 )
                 .AllowAnyMethod()
                 .AllowAnyHeader()
