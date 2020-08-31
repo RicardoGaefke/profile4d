@@ -42,8 +42,6 @@ namespace Profile4d.Web.Client
       Bootstrap.DataProtection(services, Configuration);
       Bootstrap.ConsentCookie(services, Configuration, HostingEnvironment.IsDevelopment());
       Bootstrap.CookiesAuth(services, Configuration, HostingEnvironment.IsDevelopment());
-
-      Console.WriteLine(RuntimeInformation.OSDescription);
       
       services.AddNodeServices(options =>
         {
@@ -88,6 +86,7 @@ namespace Profile4d.Web.Client
       });
 
       app.UseRouting();
+      app.UseCors();
 
       app.Use((context, next) =>
       {
@@ -97,7 +96,7 @@ namespace Profile4d.Web.Client
         return next.Invoke();
       });
 
-      app.UseAuthorization();
+      app.UseAuthentication();
       app.UseAuthorization();
 
       app.UseEndpoints(endpoints =>

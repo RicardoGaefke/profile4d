@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography } from '@material-ui/core';
+import { Container, Typography, Link } from '@material-ui/core';
 import useStyles from './Styles';
 
 export default (): React.ReactElement<any> => {
@@ -14,7 +14,15 @@ export default (): React.ReactElement<any> => {
           {' '}
           {date.getFullYear()}
           {' '}
-          by Ricardo Gaefke
+          by
+          {' '}
+          <Link
+            href="https://www.ricardogaefke.com"
+            color="inherit"
+            title="Ricardo Gaefke"
+          >
+            Ricardo Gaefke
+          </Link>
         </Typography>
       </Container>
     </footer>
