@@ -173,5 +173,24 @@ namespace Profile4d.Domain
 
       return new Content(subject.ToString(), body.ToString());
     }
+
+    public static Content RequestKeys(string phone, string name, string email)
+    {
+      StringBuilder subject = new StringBuilder("Profile4d - Solicitação de chaves");
+
+      StringBuilder body = new StringBuilder();
+      body.Append($"<p>Olá, Carlos,</p>");
+      body.AppendLine();
+      body.Append($"<p>Você está recebendo esta mensagem porque o usuário abaixo solicitou chaves:</p>");
+      body.AppendLine();
+      body.Append($"<p><strong>Nome:</strong> {name}</p>");
+      body.AppendLine();
+      body.Append($"<p><strong>Email:</strong> {email}</p>");
+      body.AppendLine();
+      body.Append($"<p><strong>Telefone:</strong> {phone}</p>");
+      body.AppendLine();
+
+      return new Content(subject.ToString(), body.ToString());
+    }
   }
 }

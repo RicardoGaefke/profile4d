@@ -16,14 +16,14 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class ImageController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<ImageController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly IImages _myImages;
     private readonly Blob _blob;
     private string _user;
 
     public ImageController(
-      ILogger<IdentityController> logger,
+      ILogger<ImageController> logger,
       IHttpContextAccessor httpContextAccessor,
       IImages MyImages,
       Blob Blob
