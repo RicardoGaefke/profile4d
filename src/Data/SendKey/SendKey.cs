@@ -1,4 +1,6 @@
+using System;
 using Microsoft.Extensions.Options;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using Profile4d.Domain;
@@ -63,6 +65,41 @@ namespace Profile4d.Data
           }
         }
       }
+    }
+
+    public List<Key> ActiveKeys(int user)
+    {
+      List<Key> _return = new List<Key>();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_KEYS_LIST_ACTIVE]";
+
+          Cmd.Parameters.AddWithValue("@USER", user);
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            while (MyDR.Read())
+            {
+              Key key = new Key(
+                MyDR.GetInt32(0),
+                MyDR.GetGuid(1).ToString(),
+                (MyDR.IsDBNull(2)) ? DateTime.MinValue : MyDR.GetDateTime(2)
+              );
+
+              _return.Add(key);
+            }
+          }
+        }
+      }
+
+      return _return;
     }
   }
 }

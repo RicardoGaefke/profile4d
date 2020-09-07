@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using Profile4d.Data;
@@ -94,6 +95,13 @@ namespace Profile4d.Web.Api.Controllers
         _return.Message = ex.Message;
         return _return;
       }
+    }
+
+    [Authorize]
+    [HttpGet("GetActives")]
+    public ActionResult<List<Key>> GetActives()
+    {
+      return _sendKey.ActiveKeys(Convert.ToInt32(_user));
     }
   }
 }
