@@ -85,7 +85,8 @@ const AssessmentsList = withTranslation()(
                         </TableCell>
                         <TableCell>
                           <Button
-                            variant="outlined"
+                            variant="contained"
+                            color="default"
                             title={
                               (key.Started?.includes('0001')) ? t('Assessment:item.action.start.title') : t('Assessment:item.action.continue.title')
                             }
