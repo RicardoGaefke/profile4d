@@ -10,10 +10,10 @@ namespace Profile4d.Domain
     public int SentBy { get; set; }
     public int Consultant { get; set; }
     public int Keys { get; set; }
-    public int SentWhen { get; set; }
-    public DateTime Started { get; set; }
+    public DateTime SentWhen { get; set; }
+    public DateTime? Started { get; set; }
     public DateTime Finished { get; set; }
-    public DateTime Canceled { get; set; }
+    public bool Canceled { get; set; }
     public int CanceledBy { get; set; }
     public DateTime CanceledWhen { get; set; }
 
@@ -29,6 +29,22 @@ namespace Profile4d.Domain
       this.Email = email;
       this.SentBy = sentBy;
       this.Consultant = consultant;
+    }
+
+    /// <summary>
+    /// Constructor for active keys list
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="guid"></param>
+    /// <param name="started"></param>
+    public Key(int id, string guid, DateTime? started)
+    {
+      DomainException.When(!(id < 1), "Id is required!");
+      DomainException.When(!string.IsNullOrEmpty(guid), "Guid is required!");
+
+      this.Id = id;
+      this.Guid = guid;
+      this.Started = started;
     }
 
     public Key(string email, int sentBy, int keys, DateTime? when)

@@ -7,5 +7,15 @@ namespace Profile4d.Domain
     public string Details;
     public string Code;
     public string Url;
+
+    public BasicReturn()
+    {}
+
+    public BasicReturn(bool success, string message, string details)
+    {
+      this.Success = success;
+      this.Message = message;
+      this.Details = details;
+    }
   }
 }
