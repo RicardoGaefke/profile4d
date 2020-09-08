@@ -52,5 +52,28 @@ namespace Profile4d.Domain
       this.Alt_ENG = alt_ENG;
       this.CreatedBy = user;
     }
+
+    /// <summary>
+    /// Constructor for Intro
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="alt_PT"></param>
+    /// <param name="alt_ENG"></param>
+    public Image(int id, string alt_PT, string alt_ENG)
+    {
+      DomainException.When(!(id < 1), "Id is required!");
+
+      DomainException.When(!string.IsNullOrEmpty(alt_PT), "Alt_PT is required!");
+      DomainException.When(!(alt_PT.Length < 5), "Alt_PT - 5 character minimum!");
+      DomainException.When(!(alt_PT.Length > 95), "Alt_PT - 95 character maximum!");
+
+      DomainException.When(!string.IsNullOrEmpty(alt_ENG), "Alt_ENG is required!");
+      DomainException.When(!(alt_ENG.Length < 5), "Alt_ENG - 5 character minimum!");
+      DomainException.When(!(alt_ENG.Length > 95), "Alt_ENG - 95 character maximum!");
+
+      this.Id = id;
+      this.Alt_PT = alt_PT;
+      this.Alt_ENG = alt_ENG;
+    }
   }
 }

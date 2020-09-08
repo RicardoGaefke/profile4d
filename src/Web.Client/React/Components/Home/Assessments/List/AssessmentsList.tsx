@@ -33,84 +33,82 @@ const AssessmentsList = withTranslation()(
     }, []);
 
     return (
-      <TableContainer component={Paper}>
-        {
-          (loading) ? (
-            <Grid
-              container
-              justify="center"
-              alignContent="center"
-            >
-              <Grid item>
-                <CircularProgress size={100} />
-              </Grid>
-            </Grid>
-          ) : (
-            <Table aria-label="Assessments list">
-              <TableHead>
-                <TableRow>
-                  <TableCell>ID</TableCell>
-                  <TableCell>Status</TableCell>
-                  <TableCell>{t('Assessment:item.header.action')}</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {
-                  (keys.length === 0) ? (
-                    <TableRow>
-                      <TableCell colSpan={3} align="center">
-                        <Typography variant="body1">
-                          Você não possui nenhuma chave ativa.
+      (loading) ? (
+        <Grid
+          container
+          justify="center"
+          alignContent="center"
+        >
+          <Grid item>
+            <CircularProgress size={100} />
+          </Grid>
+        </Grid>
+      ) : (
+        <TableContainer component={Paper}>
+          <Table aria-label="Assessments list">
+            <TableHead>
+              <TableRow>
+                <TableCell>ID</TableCell>
+                <TableCell>Status</TableCell>
+                <TableCell>{t('Assessment:item.header.action')}</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {
+                (keys.length === 0) ? (
+                  <TableRow>
+                    <TableCell colSpan={3} align="center">
+                      <Typography variant="body1">
+                        Você não possui nenhuma chave ativa.
+                      </Typography>
+                    </TableCell>
+                  </TableRow>
+                ) : (
+                  keys.map((key): React.ReactNode => (
+                    <TableRow key={key.Id}>
+                      <TableCell>
+                        <Typography>
+                          {key.Guid}
                         </Typography>
                       </TableCell>
+                      <TableCell>
+                        <Typography variant="body1">
+                          {
+                            (key.Started?.includes('0001')) ? (
+                              t('Assessment:item.status.0.text')
+                            ) : (
+                              t('Assessment:item.status.1.text')
+                            )
+                          }
+                        </Typography>
+                      </TableCell>
+                      <TableCell>
+                        <Button
+                          variant="contained"
+                          color="default"
+                          title={
+                            (key.Started?.includes('0001')) ? t('Assessment:item.action.start.title') : t('Assessment:item.action.continue.title')
+                          }
+                          component={NavLink}
+                          to={`/answer/intro/${key.Guid}`}
+                        >
+                          {
+                            (key.Started?.includes('0001')) ? (
+                              t('Assessment:item.action.start.text')
+                            ) : (
+                              t('Assessment:item.action.continue.text')
+                            )
+                          }
+                        </Button>
+                      </TableCell>
                     </TableRow>
-                  ) : (
-                    keys.map((key): React.ReactNode => (
-                      <TableRow key={key.Id}>
-                        <TableCell>
-                          <Typography>
-                            {key.Guid}
-                          </Typography>
-                        </TableCell>
-                        <TableCell>
-                          <Typography variant="body1">
-                            {
-                              (key.Started?.includes('0001')) ? (
-                                t('Assessment:item.status.0.text')
-                              ) : (
-                                t('Assessment:item.status.1.text')
-                              )
-                            }
-                          </Typography>
-                        </TableCell>
-                        <TableCell>
-                          <Button
-                            variant="contained"
-                            color="default"
-                            title={
-                              (key.Started?.includes('0001')) ? t('Assessment:item.action.start.title') : t('Assessment:item.action.continue.title')
-                            }
-                            component={NavLink}
-                            to={`/answer/${key.Guid}`}
-                          >
-                            {
-                              (key.Started?.includes('0001')) ? (
-                                t('Assessment:item.action.start.text')
-                              ) : (
-                                t('Assessment:item.action.continue.text')
-                              )
-                            }
-                          </Button>
-                        </TableCell>
-                      </TableRow>
-                    ))
-                  )
-                }
-              </TableBody>
-            </Table>
-          )
-        }
-      </TableContainer>
+                  ))
+                )
+              }
+            </TableBody>
+          </Table>
+        </TableContainer>
+      )
     );
   },
 );

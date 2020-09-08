@@ -101,5 +101,48 @@ namespace Profile4d.Data
 
       return _return;
     }
+
+    public Intro Intro()
+    {
+      Intro _return = new Intro();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_INTRO]";
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            Image image = new Image(MyDR.GetInt32(0), MyDR.GetString(1), MyDR.GetString(2));
+
+            _return.Image = image;
+
+            MyDR.NextResult();
+
+            MyDR.Read();
+
+            StaticFirstPage texts = new StaticFirstPage(
+              MyDR.GetString(0),
+              MyDR.GetString(1),
+              MyDR.GetString(2),
+              MyDR.GetString(3)
+            );
+
+            _return.Success = true;
+
+            _return.Texts = texts;
+          }
+        }
+      }
+
+      return _return;
+    }
   }
 }

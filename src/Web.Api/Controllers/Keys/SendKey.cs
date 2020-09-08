@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Claims;
 using Profile4d.Data;
@@ -102,6 +103,38 @@ namespace Profile4d.Web.Api.Controllers
     public ActionResult<List<Key>> GetActives()
     {
       return _sendKey.ActiveKeys(Convert.ToInt32(_user));
+    }
+
+    [Authorize]
+    [HttpGet("Intro")]
+    public ActionResult<Intro> Intro()
+    {
+      Intro _return = new Intro();
+      
+      try
+      {
+        _return = _sendKey.Intro();
+        _return.Success = true;
+        
+        return _return;
+      }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Details = ex.StackTrace;
+        _return.Code = "SQL";
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Details = ex.StackTrace;
+        
+        return _return;
+      }
     }
   }
 }
