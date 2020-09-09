@@ -1,5 +1,4 @@
 import React from 'react';
-import { withTranslation } from 'react-i18next';
 import { MemoryRouter } from 'react-router';
 import { storiesOf } from '@storybook/react';
 import { withConsole } from '@storybook/addon-console';
@@ -8,11 +7,9 @@ import { action, HandlerFunction } from '@storybook/addon-actions';
 import MyThemeHoc from '../../Initial/Theme/StoryBookHOC';
 import RadioOptionsForm from './RadioOptions.form';
 
-const DefaultForm = withTranslation()(RadioOptionsForm);
-
 const App = (): React.ReactElement => (
   <MyThemeHoc>
-    <DefaultForm />
+    <RadioOptionsForm Answer="2" Id={5} />
   </MyThemeHoc>
 );
 

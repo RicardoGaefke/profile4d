@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
   TableContainer, Paper, Table, TableHead, TableCell, TableRow, TableBody, CircularProgress, Grid, Typography, Button,
 } from '@material-ui/core';
+import { CloudDownload } from '@material-ui/icons';
 import { NavLink } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
@@ -74,32 +75,48 @@ const AssessmentsList = withTranslation()(
                       <TableCell>
                         <Typography variant="body1">
                           {
+                            // eslint-disable-next-line no-nested-ternary
                             (key.Started?.includes('0001')) ? (
                               t('Assessment:item.status.0.text')
                             ) : (
-                              t('Assessment:item.status.1.text')
+                              (key.Finished?.includes('0001')) ? t('Assessment:item.status.1.text') : t('Assessment:item.status.5.text')
                             )
                           }
                         </Typography>
                       </TableCell>
                       <TableCell>
-                        <Button
-                          variant="contained"
-                          color="default"
-                          title={
-                            (key.Started?.includes('0001')) ? t('Assessment:item.action.start.title') : t('Assessment:item.action.continue.title')
-                          }
-                          component={NavLink}
-                          to={`/answer/intro/${key.Guid}`}
-                        >
-                          {
-                            (key.Started?.includes('0001')) ? (
-                              t('Assessment:item.action.start.text')
-                            ) : (
-                              t('Assessment:item.action.continue.text')
-                            )
-                          }
-                        </Button>
+                        {
+                          (key.Finished?.includes('0001')) ? (
+                            <Button
+                              variant="contained"
+                              color="default"
+                              title={
+                                (key.Started?.includes('0001')) ? t('Assessment:item.action.start.title') : t('Assessment:item.action.continue.title')
+                              }
+                              component={NavLink}
+                              to={`/answer/intro/${key.Guid}`}
+                            >
+                              {
+                                (key.Started?.includes('0001')) ? (
+                                  t('Assessment:item.action.start.text')
+                                ) : (
+                                  t('Assessment:item.action.continue.text')
+                                )
+                              }
+                            </Button>
+                          ) : (
+                            <Button
+                              variant="contained"
+                              color="primary"
+                              title={t('Assessment:item.action.report.title')}
+                              endIcon={<CloudDownload />}
+                              component={NavLink}
+                              to={`/answer/report/${key.Guid}`}
+                            >
+                              {t('Assessment:item.action.report.text')}
+                            </Button>
+                          )
+                        }
                       </TableCell>
                     </TableRow>
                   ))

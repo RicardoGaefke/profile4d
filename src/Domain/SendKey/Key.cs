@@ -12,7 +12,7 @@ namespace Profile4d.Domain
     public int Keys { get; set; }
     public DateTime SentWhen { get; set; }
     public DateTime? Started { get; set; }
-    public DateTime Finished { get; set; }
+    public DateTime? Finished { get; set; }
     public bool Canceled { get; set; }
     public int CanceledBy { get; set; }
     public DateTime CanceledWhen { get; set; }
@@ -37,7 +37,8 @@ namespace Profile4d.Domain
     /// <param name="id"></param>
     /// <param name="guid"></param>
     /// <param name="started"></param>
-    public Key(int id, string guid, DateTime? started)
+    /// <param name="finished"></param>
+    public Key(int id, string guid, DateTime? started, DateTime? finished)
     {
       DomainException.When(!(id < 1), "Id is required!");
       DomainException.When(!string.IsNullOrEmpty(guid), "Guid is required!");
@@ -45,6 +46,7 @@ namespace Profile4d.Domain
       this.Id = id;
       this.Guid = guid;
       this.Started = started;
+      this.Finished = finished;
     }
 
     public Key(string email, int sentBy, int keys, DateTime? when)

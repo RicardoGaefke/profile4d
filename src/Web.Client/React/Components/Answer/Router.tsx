@@ -5,10 +5,12 @@ import {
 } from 'react-router-dom';
 import Intro from './Intro/Intro';
 import NotFound from '../404/Main/Main';
+import Answer from './Answer';
 
 const Router = (): React.ReactElement<RouteComponentProps> => (
   <Switch>
     <Route path="/answer/intro/:guid" exact component={Intro} />
+    <Route path="/answer/assessment/:guid" exact component={Answer} />
     <Route component={NotFound} />
   </Switch>
 );

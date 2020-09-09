@@ -136,5 +136,69 @@ namespace Profile4d.Web.Api.Controllers
         return _return;
       }
     }
+
+    [Authorize]
+    [HttpGet("Question/{guid}")]
+    public ActionResult<Question> Question(string guid)
+    {
+      Question _return = new Question();
+
+      try
+      {
+        _return = _sendKey.Question(guid);
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Details = ex.StackTrace;
+        _return.Code = ex.ErrorCode.ToString();
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Details = ex.StackTrace;
+
+        return _return;
+      }
+    }
+
+    [Authorize]
+    [HttpPost("Answer")]
+    public ActionResult<BasicReturn> Answer(Question data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        _sendKey.Answer(data);
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Details = ex.StackTrace;
+        _return.Code = ex.ErrorCode.ToString();
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Details = ex.StackTrace;
+
+        return _return;
+      }
+    }
   }
 }

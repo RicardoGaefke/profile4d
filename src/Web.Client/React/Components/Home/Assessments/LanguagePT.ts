@@ -33,6 +33,10 @@ export default {
         text: 'Vencida',
         title: 'Esta avaliação foi concluída há mais de 180 dias',
       },
+      5: {
+        text: 'Completa',
+        title: 'Você já pode conferir o relatório',
+      },
     },
     expiration: 'Validade:',
     action: {
@@ -43,6 +47,10 @@ export default {
       continue: {
         text: 'Continuar',
         title: 'Finalizar esta avaliação',
+      },
+      report: {
+        text: 'Relatório',
+        title: 'Conferir meu relatório',
       },
     },
   },

@@ -33,6 +33,10 @@ export default {
         text: 'Overdue',
         title: 'This review was completed more than 180 days ago',
       },
+      5: {
+        text: 'Complete',
+        title: 'You can now check the report',
+      },
     },
     expiration: 'Expiration:',
     action: {
@@ -43,6 +47,10 @@ export default {
       continue: {
         text: 'Continue',
         title: 'Continue this assessment',
+      },
+      report: {
+        text: 'Report',
+        title: 'Check on my report',
       },
     },
   },

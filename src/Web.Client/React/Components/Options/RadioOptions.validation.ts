@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import { WithTranslation } from 'react-i18next';
 
 export default (props: WithTranslation): object => Yup.object().shape({
-  option: Yup
+  Answer: Yup
     .string()
     .required(`${props.t('RadioOptions:error')}`),
 });

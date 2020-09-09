@@ -1,6 +1,7 @@
+/* eslint-disable react/no-unused-prop-types */
 import React from 'react';
 // eslint-disable-next-line no-unused-vars
-import { WithTranslation, useTranslation } from 'react-i18next';
+import { WithTranslation, useTranslation, withTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
 import { withFormik, FormikProps } from 'formik';
 import {
@@ -11,14 +12,20 @@ import Validation from './RadioOptions.validation';
 import radioData, { IRadio } from './Radio.data';
 import useStyles from './Styles';
 import setLanguage from './Language';
+// eslint-disable-next-line no-unused-vars
+import { IQuestion } from '../../../../TypeScript/Interfaces/IQuestion';
+import Axios from '../../Utils/Axios';
+// eslint-disable-next-line no-unused-vars
+import { IBasicReturn } from '../../../../TypeScript/Interfaces/IBasicReturn';
 
-interface IForm {
-  option: string;
+interface ICustom {
+  // eslint-disable-next-line react/require-default-props
+  submitAction?: () => void;
 }
 
-type IRadioForm = FormikProps<IForm> & WithTranslation;
+type IRadioForm = FormikProps<IQuestion> & WithTranslation & IQuestion & ICustom;
 
-const RadioForm = (props: IRadioForm): React.ReactElement<IRadioForm> => {
+const RadioForm = (props: IRadioForm): JSX.Element => {
   const { t, i18n } = useTranslation('RadioOptions');
   const {
     values,
@@ -29,6 +36,7 @@ const RadioForm = (props: IRadioForm): React.ReactElement<IRadioForm> => {
     handleSubmit,
     handleChange,
     handleBlur,
+    Message = 'Esta é uma pergunta modelo. Supondo que esta seja mesmo uma pergunta modelo, você concorda?',
   } = props;
 
   const classes = useStyles({});
@@ -43,7 +51,7 @@ const RadioForm = (props: IRadioForm): React.ReactElement<IRadioForm> => {
   return (
     <Grid
       container
-      justify="flex-start"
+      justify="center"
       alignItems="center"
       className={classes.main}
     >
@@ -53,19 +61,21 @@ const RadioForm = (props: IRadioForm): React.ReactElement<IRadioForm> => {
             variant="body1"
             component="p"
             className={classes.title}
+            gutterBottom
           >
-            {t('RadioOptions:title')}
+            {Message}
           </Typography>
         </Grid>
         <Grid item md={12} xs={12}>
+          <input type="hidden" name="Id" value={values.Id} />
           <FormControl
             component="fieldset"
-            error={touched.option as any && errors.option as any}
+            error={errors.Answer as any && touched.Answer as any}
           >
             <RadioGroup
-              aria-label="option"
-              name="option"
-              value={values.option}
+              aria-label="Anwer"
+              name="Answer"
+              value={values.Answer?.toString()}
               onChange={handleChange}
               onBlur={handleBlur}
               className={classes.form}
@@ -87,7 +97,7 @@ const RadioForm = (props: IRadioForm): React.ReactElement<IRadioForm> => {
             <FormHelperText
               className={classes.helperText}
             >
-              {(touched.option && errors.option) && errors.option}
+              {(touched.Answer && errors.Answer) && errors.Answer}
             </FormHelperText>
           </FormControl>
         </Grid>
@@ -106,15 +116,33 @@ const RadioForm = (props: IRadioForm): React.ReactElement<IRadioForm> => {
   );
 };
 
-export default withFormik<WithTranslation, IForm>({
+const AnswerForm = withFormik<WithTranslation & IQuestion & ICustom, IQuestion>({
   displayName: 'RadioForm',
   enableReinitialize: true,
   validationSchema: Validation,
-  mapPropsToValues: (): IForm => ({ option: '' }),
-  handleSubmit: (values: IForm, { resetForm, setSubmitting }): void => {
-    // eslint-disable-next-line no-alert
-    alert(`option: ${parseFloat(values.option)}`);
+  mapPropsToValues: (props: IRadioForm): IQuestion => ({ Answer: '', Id: props.Id }),
+  handleSubmit: (values, { resetForm, setSubmitting, props }): void => {
+    const { submitAction } = props;
+
+    Axios(window.location.href).post<IBasicReturn>('SendKey/Answer', values).then((response): void => {
+      const { data } = response;
+
+      if (data.Success) {
+        if (submitAction) {
+          submitAction();
+        }
+      }
+    });
+
     setSubmitting(false);
     resetForm();
   },
 })(RadioForm);
+
+AnswerForm.displayName = 'AnswerForm';
+
+AnswerForm.defaultProps = {
+  submitAction: (): void => {},
+};
+
+export default withTranslation()(AnswerForm);
