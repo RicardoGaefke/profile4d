@@ -16,6 +16,7 @@ namespace Profile4d.Domain
     public string Text_ENG { get; set; }
     public string CreatedBy { get; set; }
     public string Created { get; set; }
+    public int Answer { get; set; }
 
     public Question()
     {}

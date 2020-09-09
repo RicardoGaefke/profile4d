@@ -15,5 +15,6 @@ export default makeStyles((theme: Theme): IStyles => ({
     display: 'block',
     marginLeft: 'auto',
     marginRight: 'auto',
+    maxHeight: 330,
   },
 }));

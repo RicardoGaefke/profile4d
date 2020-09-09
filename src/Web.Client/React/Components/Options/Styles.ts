@@ -19,8 +19,8 @@ export default makeStyles((theme: Theme): IStyles => ({
   },
   title: {
     fontWeight: 'bold',
-    fontSize: '1rem',
-    marginBottom: 5,
+    fontSize: '1.5rem',
+    marginBottom: 20,
   },
   form: {
     display: 'flex',
@@ -34,8 +34,8 @@ export default makeStyles((theme: Theme): IStyles => ({
   btnGrid: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'flex-start',
-    marginTop: 5,
+    justifyContent: 'center',
+    marginTop: 20,
   },
   button: {
     marginLeft: 10,

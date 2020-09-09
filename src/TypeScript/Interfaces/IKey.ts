@@ -9,7 +9,7 @@ export interface IKey extends IBasicReturn {
   Keys?: number;
   SentWhen?: string;
   Started?: string;
-  Fihished?: string;
+  Finished?: string;
   Canceled?: boolean;
   CanceledBy?: number;
   CanceledWhen?: string;

@@ -10,5 +10,9 @@ namespace Profile4d.Data
     List<Key> ActiveKeys(int user);
 
     Intro Intro();
+
+    Question Question(string guid);
+
+    void Answer(Question data);
   }
 }

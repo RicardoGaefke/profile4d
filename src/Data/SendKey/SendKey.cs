@@ -90,7 +90,8 @@ namespace Profile4d.Data
               Key key = new Key(
                 MyDR.GetInt32(0),
                 MyDR.GetGuid(1).ToString(),
-                (MyDR.IsDBNull(2)) ? DateTime.MinValue : MyDR.GetDateTime(2)
+                (MyDR.IsDBNull(2)) ? DateTime.MinValue : MyDR.GetDateTime(2),
+                (MyDR.IsDBNull(3)) ? DateTime.MinValue : MyDR.GetDateTime(3)
               );
 
               _return.Add(key);
@@ -143,6 +144,56 @@ namespace Profile4d.Data
       }
 
       return _return;
+    }
+
+    public Question Question(string guid)
+    {
+      Question _return = new Question();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_ASSESSMENT]";
+
+          Cmd.Parameters.AddWithValue("@GUID", guid);
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            _return.Id = MyDR.GetInt32(0);
+            _return.Text_PT = MyDR.GetString(1);
+            _return.Text_ENG = MyDR.GetString(2);
+          }
+        }
+      }
+
+      return _return;
+    }
+
+    public void Answer(Question data)
+    {
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_ASSESSMENT_SAVE]";
+
+          Cmd.Parameters.AddWithValue("@QUESTION", data.Id);
+          Cmd.Parameters.AddWithValue("@ANSWER", data.Answer);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
     }
   }
 }

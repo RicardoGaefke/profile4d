@@ -1,5 +1,4 @@
 import React from 'react';
-import { withTranslation } from 'react-i18next';
 import chai, { expect } from 'chai';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -12,13 +11,11 @@ import RadioOptionsForm from './RadioOptions.form';
 chai.use(chaiEnzyme());
 Enzyme.configure({ adapter: new Adapter() });
 
-const DefaultForm = withTranslation()(RadioOptionsForm);
-
 describe('Web.Site -> Home.RadioOptionsForm', (): void => {
   const App = (): React.ReactElement<any> => (
     <MyStateProvider initialContext={appData}>
       <MyApp>
-        <DefaultForm />
+        <RadioOptionsForm />
       </MyApp>
     </MyStateProvider>
   );

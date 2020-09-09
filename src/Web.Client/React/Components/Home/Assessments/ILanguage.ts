@@ -20,11 +20,13 @@ export interface ILanguage {
       2: LinkProps;
       3: LinkProps;
       4: LinkProps;
+      5: LinkProps;
     };
     expiration: string;
     action: {
       start: LinkProps;
       continue: LinkProps;
+      report: LinkProps;
     }
   };
 }
