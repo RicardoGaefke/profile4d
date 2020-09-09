@@ -4,10 +4,12 @@ import {
   RouteComponentProps, Route, withRouter, Switch,
 } from 'react-router-dom';
 import Intro from './Intro/Intro';
+import NotFound from '../404/Main/Main';
 
 const Router = (): React.ReactElement<RouteComponentProps> => (
   <Switch>
     <Route path="/answer/intro/:guid" exact component={Intro} />
+    <Route component={NotFound} />
   </Switch>
 );
 

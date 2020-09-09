@@ -8,7 +8,7 @@ import {
 import useStyles from './Styles';
 import setLanguage from './Language';
 
-export default withTranslation()(
+const NotFound = withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
     const { t } = props;
     const classes = useStyles({});
@@ -42,3 +42,7 @@ export default withTranslation()(
     );
   },
 );
+
+NotFound.displayName = 'NotFound';
+
+export default NotFound;
