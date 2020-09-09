@@ -105,7 +105,7 @@ const Answer = withTranslation()(
                   title={t('Answer:button.title')}
                   endIcon={<ArrowForward />}
                   component={NavLink}
-                  to={`/anser/assessment/${guid}`}
+                  to={`/answer/assessment/${guid}`}
                 >
                   {t('Answer:button.text')}
                 </Button>
