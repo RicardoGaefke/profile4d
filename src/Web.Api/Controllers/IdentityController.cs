@@ -114,6 +114,7 @@ namespace Profile4d.Web.Api.Controllers
           authProperties
         );
 
+
         _return.Name = _myUser.Name;
         _return.Email = _myUser.Email;
         _return.IsAuthenticated = HttpContext.User.Identity.IsAuthenticated;
