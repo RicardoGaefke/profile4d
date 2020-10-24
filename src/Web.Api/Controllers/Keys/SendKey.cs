@@ -26,6 +26,7 @@ namespace Profile4d.Web.Api.Controllers
     private readonly IEmail _email;
     private readonly IConfiguration _configuration;
     private readonly IQueue _queue;
+    private readonly IDataReport _report;
 
     public SendKeyController(
       ILogger<IdentityController> logger,
@@ -33,7 +34,8 @@ namespace Profile4d.Web.Api.Controllers
       ISendKey keys,
       IEmail email,
       IConfiguration configuration,
-      IQueue queue
+      IQueue queue,
+      IDataReport report
     )
     {
       _logger = logger;
@@ -42,6 +44,7 @@ namespace Profile4d.Web.Api.Controllers
       _httpContextAccessor = httpContextAccessor;
       _configuration = configuration;
       _queue = queue;
+      _report = report;
       
       ClaimsPrincipal currentUser = this.User;
       _user = (from c in _httpContextAccessor.HttpContext.User.Claims
@@ -178,6 +181,38 @@ namespace Profile4d.Web.Api.Controllers
       try
       {
         _sendKey.Answer(data);
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Details = ex.StackTrace;
+        _return.Code = ex.ErrorCode.ToString();
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Details = ex.StackTrace;
+
+        return _return;
+      }
+    }
+
+    [Authorize]
+    [HttpGet("Report/{guid}")]
+    public ActionResult<Report> Report(string guid)
+    {
+      Report _return = new Report();
+
+      try
+      {
+        _return = _report.GetReport(guid);
         _return.Success = true;
 
         return _return;

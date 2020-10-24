@@ -45,6 +45,7 @@ namespace Profile4d.Web.Api
 
       //  data
       #region DataServices
+      services.AddSingleton<IDataReport, DataReport>();
       services.AddSingleton<ISendKey, Keys>();
       services.AddSingleton<IQueue, Queue>();
       services.AddSingleton<IEmail, Email>();

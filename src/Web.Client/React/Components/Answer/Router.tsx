@@ -6,11 +6,17 @@ import {
 import Intro from './Intro/Intro';
 import NotFound from '../404/Main/Main';
 import Answer from './Answer';
+import Report from '../Report/Report';
+
+export interface IAnswerRouterProps {
+  guid: string;
+}
 
 const Router = (): React.ReactElement<RouteComponentProps> => (
   <Switch>
     <Route path="/answer/intro/:guid" exact component={Intro} />
     <Route path="/answer/assessment/:guid" exact component={Answer} />
+    <Route path="/answer/report/:guid" exact component={Report} />
     <Route component={NotFound} />
   </Switch>
 );

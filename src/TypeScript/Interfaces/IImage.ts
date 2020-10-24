@@ -5,6 +5,8 @@ export interface IImage {
   Id?: number;
   Src: string,
   Alt: string,
+  Alt_PT?: string;
+  Alt_ENG?: string;
   Data?: string,
   Mime?: string,
   Height?: number,
