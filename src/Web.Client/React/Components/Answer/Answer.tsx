@@ -10,9 +10,11 @@ import Axios from '../../Utils/Axios';
 import { IQuestion } from '../../../../TypeScript/Interfaces/IQuestion';
 import AnswerForm from '../Options/RadioOptions.form';
 import { useStateValue } from '../../Initial/Context/StateProvider';
+// eslint-disable-next-line no-unused-vars
+import { IAnswerRouterProps } from './Router';
 
 const Answer = (props: WithSnackbarProps): JSX.Element => {
-  const { guid } = useParams();
+  const { guid } = useParams<IAnswerRouterProps>();
   const [loading, setLoading] = useState<boolean>(true);
   const [question, setQuestion] = useState<IQuestion>({} as IQuestion);
   const [{ Language }] = useStateValue();

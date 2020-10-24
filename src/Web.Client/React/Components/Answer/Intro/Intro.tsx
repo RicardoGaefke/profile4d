@@ -13,11 +13,13 @@ import Axios from '../../../Utils/Axios';
 // eslint-disable-next-line no-unused-vars
 import { IIntro } from '../../../../../TypeScript/Interfaces/IIntro';
 import setLanguage from './Language';
+// eslint-disable-next-line no-unused-vars
+import { IAnswerRouterProps } from '../Router';
 
 const Answer = withTranslation()(
   (props:WithTranslation): JSX.Element => {
     const { t } = props;
-    const { guid } = useParams();
+    const { guid } = useParams<IAnswerRouterProps>();
     const [{ Language }] = useStateValue();
     const classes = useStyles();
 

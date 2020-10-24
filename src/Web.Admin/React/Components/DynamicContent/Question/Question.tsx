@@ -53,7 +53,7 @@ export default withTranslation()(
               {Title_PT}
             </Typography>
             <Typography variant="body1">
-              <span dangerouslySetInnerHTML={{ __html: Text_PT }} />
+              <span dangerouslySetInnerHTML={{ __html: Text_PT || '' }} />
             </Typography>
           </Grid>
           <Grid
@@ -64,7 +64,7 @@ export default withTranslation()(
               {Title_ENG}
             </Typography>
             <Typography variant="body1">
-              <span dangerouslySetInnerHTML={{ __html: Text_ENG }} />
+              <span dangerouslySetInnerHTML={{ __html: Text_ENG || '' }} />
             </Typography>
           </Grid>
           <Grid
@@ -73,7 +73,7 @@ export default withTranslation()(
           >
             <>
               <EditButton to={`/dynamicContent/${to}/edit/${Guid}`} />
-              <MyActive Active={Active} handleChange={handleChange} Guid={Guid} />
+              <MyActive Active={Active || false} handleChange={handleChange} Guid={Guid || ''} />
               <br />
               {t(`DynamicForm:category:text${Category}`)}
             </>
