@@ -62,9 +62,8 @@ const RadioForm = (props: IRadioForm): JSX.Element => {
             component="p"
             className={classes.title}
             gutterBottom
-          >
-            {Message}
-          </Typography>
+            dangerouslySetInnerHTML={{ __html: Message }}
+          />
         </Grid>
         <Grid item md={12} xs={12}>
           <input type="hidden" name="Id" value={values.Id} />
