@@ -25,149 +25,140 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
   return (
     <>
+      {FilteredImage(1)}
       <ReportTitle title={staticTitle(1)} />
       <ReportText text={staticText(1)} />
-      {FilteredImage(1)}
+
       <ReportTitle title={staticTitle(2)} />
       {FilteredImage(2)}
-      <ReportText text={staticText(3)} />
+
       {FilteredImage(3)}
-      <ReportTitle title={staticTitle(4)} />
+      <ReportText text={staticText(3)} />
+
       <ReportText text={staticText(4)} />
+
       <ReportTitle title={staticTitle(5)} />
-      <ReportTitle title={staticTitle(6)} />
+
       <ReportText text={staticText(6)} />
-      <ReportTitle title={staticTitle(7)} />
+
       <ReportText text={staticText(7)} />
 
-      <ReportTitle title="título dinâmico 8" />
+      <ReportTitle title="título dinâmico 2" />
+      <ReportText text="texto dinâmico 2" />
 
       <ReportTitle title={staticTitle(10)} />
-      <ReportText text="texto dinâmico 10" />
+      <ReportText text="texto dinâmico 3" />
 
       <ReportTitle title={staticTitle(11)} />
-      <ReportText text="texto dinâmico 11" />
+      <ReportText text="texto dinâmico 4" />
 
       <ReportTitle title={staticTitle(12)} />
-      <ReportText text="texto dinâmico 12" />
+      <ReportText text="texto dinâmico 5" />
 
       <ReportTitle title={staticTitle(13)} />
-      <ReportText text="texto dinâmico 13" />
+      <ReportText text="texto dinâmico 6" />
 
       <ReportTitle title={staticTitle(14)} />
-      <ReportText text="texto dinâmico 14" />
+      <ReportText text="texto dinâmico 7" />
 
       <ReportTitle title={staticTitle(15)} />
-      <ReportText text="texto dinâmico 15" />
+      <ReportText text="texto dinâmico 8" />
 
       <ReportTitle title={staticTitle(16)} />
-      <ReportText text="texto dinâmico 16" />
+      <ReportText text="texto dinâmico 9" />
 
       <ReportTitle title={staticTitle(17)} />
-      <ReportText text="texto dinâmico 17" />
+      <ReportText text="texto dinâmico 10" />
 
       <ReportTitle title={staticTitle(18)} />
-      <ReportText text="texto dinâmico 18" />
+      <ReportText text="texto dinâmico 11" />
 
       <ReportTitle title={staticTitle(19)} />
-      <ReportText text="texto dinâmico 19" />
 
-      <ReportTitle title={staticTitle(20)} />
-      <ReportText text="texto dinâmico 20" />
+      <ReportText text={staticText(20)} />
 
-      <ReportTitle title={staticTitle(21)} />
-      <ReportText text="texto dinâmico 21" />
+      <ReportText text={staticText(21)} />
 
-      <ReportTitle title={staticTitle(22)} />
-      <ReportText text="texto dinâmico 22" />
+      <ReportTitle title="título dinâmico 12" />
+      <ReportText text="texto dinâmico 12" />
 
       <ReportTitle title={staticTitle(23)} />
-      <ReportText text="texto dinâmico 23" />
+      <ReportText text="texto dinâmico 13" />
 
       <ReportTitle title={staticTitle(24)} />
-      <ReportText text="texto dinâmico 24" />
+      <ReportText text="texto dinâmico 14" />
 
       <ReportTitle title={staticTitle(25)} />
-      <ReportText text="texto dinâmico 25" />
+      <ReportText text="texto dinâmico 15" />
 
       <ReportTitle title={staticTitle(26)} />
-      <ReportText text="texto dinâmico 26" />
+      <ReportText text="texto dinâmico 16" />
 
       <ReportTitle title={staticTitle(27)} />
-      <ReportText text="texto dinâmico 27" />
+      <ReportText text="texto dinâmico 17" />
 
       <ReportTitle title={staticTitle(28)} />
-      <ReportText text="texto dinâmico 28" />
+      <ReportText text="texto dinâmico 18" />
 
       <ReportTitle title={staticTitle(29)} />
-      <ReportText text="texto dinâmico 29" />
+      <ReportText text="texto dinâmico 19" />
 
       <ReportTitle title={staticTitle(30)} />
-      <ReportText text="texto dinâmico 30" />
+      <ReportText text="texto dinâmico 20" />
 
       <ReportTitle title={staticTitle(31)} />
-      <ReportText text="texto dinâmico 31" />
+      <ReportText text="texto dinâmico 21" />
 
       <ReportTitle title={staticTitle(32)} />
-      <ReportText text="texto dinâmico 32" />
+      <ReportText text="texto dinâmico 22" />
 
       <ReportTitle title={staticTitle(33)} />
-      <ReportText text="texto dinâmico 33" />
+      <ReportText text="texto dinâmico 23" />
 
-      <ReportTitle title={staticTitle(38)} />
+      <ReportText text={staticText(38)} />
 
-      <ReportTitle title={staticTitle(39)} />
       <ReportText text={staticText(39)} />
 
-      <ReportTitle title={staticTitle(40)} />
       <ReportText text={staticText(40)} />
 
-      <ReportTitle title="título dinâmico 41" />
-
-      <ReportTitle title={staticTitle(34)} />
-      <ReportText text="texto dinâmico 34" />
-
-      <ReportTitle title={staticTitle(42)} />
-      <ReportText text="texto dinâmico 42" />
-
-      <ReportTitle title={staticTitle(43)} />
-      <ReportText text={staticText(43)} />
-
-      <ReportTitle title="título dinâmico 44" />
+      <ReportTitle title="título dinâmico 2" />
+      <ReportTitle title="texto dinâmico 2" />
 
       <ReportTitle title={staticTitle(35)} />
-      <ReportText text="texto dinâmico 35" />
+      <ReportText text="texto dinâmico 03" />
 
       <ReportTitle title={staticTitle(45)} />
-      <ReportText text="texto dinâmico 45" />
+      <ReportText text="texto dinâmico 04" />
 
-      <ReportTitle title={staticTitle(46)} />
+      <ReportText text={staticText(46)} />
 
-      <ReportTitle title={staticTitle(47)} />
       <ReportText text={staticText(47)} />
 
-      <ReportTitle title={staticTitle(48)} />
       <ReportText text={staticText(48)} />
 
-      <ReportTitle title="título dinâmico 49" />
+      <ReportTitle title="título dinâmico 12" />
+      <ReportTitle title="texto dinâmico 12" />
 
       <ReportTitle title={staticTitle(36)} />
-      <ReportText text="texto dinâmico 36" />
+      <ReportText text="texto dinâmico 13" />
 
       <ReportTitle title={staticTitle(50)} />
-      <ReportText text="texto dinâmico 50" />
+      <ReportText text="texto dinâmico 17" />
 
-      <ReportTitle title={staticTitle(51)} />
       <ReportText text={staticText(51)} />
 
-      <ReportTitle title="título dinâmico 52" />
+      <ReportTitle title="título dinâmico 12" />
+      <ReportTitle title="texto dinâmico 12" />
 
       <ReportTitle title={staticTitle(37)} />
-      <ReportText text="texto dinâmico 37" />
+      <ReportText text="texto dinâmico 13" />
+
+      <ReportTitle title={staticTitle(53)} />
+      <ReportText text="texto dinâmico 17" />
 
       <ReportTitle title={staticTitle(54)} />
 
-      <ReportTitle title={staticTitle(55)} />
+      <ReportText text={staticText(51)} />
       <ReportText text="gráfico 1" />
 
       <ReportText text={staticText(56)} />
@@ -175,273 +166,233 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(57)} />
       <ReportText text="gráfico 2" />
 
-      <ReportTitle title={staticTitle(58)} />
       <ReportText text={staticText(58)} />
 
       <ReportTitle title={staticTitle(59)} />
-      <ReportText text="texto dinâmico 59" />
+      <ReportText text="texto dinâmico 34" />
 
-      <ReportTitle title={staticTitle(60)} />
       <ReportText text={staticText(60)} />
       <ReportText text="gráfico 3" />
 
-      <ReportText text="texto dinâmico 62" />
+      <ReportText text="texto dinâmico 35" />
 
-      <ReportTitle title="título dinâmico 64" />
-      <ReportText text="texto dinâmico 64" />
+      <ReportTitle title={staticTitle(64)} />
+      <ReportText text="texto dinâmico 38" />
 
       <ReportTitle title={staticTitle(65)} />
       <ReportText text="gráfico 4" />
 
-      <ReportTitle title={staticTitle(61)} />
       <ReportText text={staticText(61)} />
 
-      <ReportTitle title="título dinâmico 9" />
-      <ReportText text="texto dinâmico 9" />
+      <ReportTitle title={staticTitle(69)} />
+      <ReportText text="texto dinâmico 40" />
 
-      <ReportTitle title={staticTitle(67)} />
+      <ReportTitle title={staticTitle(70)} />
+      <ReportText text="texto dinâmico 41" />
+
+      <ReportTitle title={staticTitle(71)} />
+      <ReportText text="texto dinâmico 42" />
+
+      <ReportTitle title={staticTitle(72)} />
+      <ReportText text="texto dinâmico 43" />
+
+      <ReportTitle title={staticTitle(9)} />
+      <ReportText text="texto dinâmico 39" />
+
       <ReportText text={staticText(67)} />
 
       <ReportTitle title={staticTitle(73)} />
-      <ReportText text={staticText(73)} />
-
-      <ReportText text="texto dinâmico 63" />
-
-      <ReportTitle title={staticTitle(69)} />
-      <ReportText text="texto dinâmico 69" />
-
-      <ReportTitle title={staticTitle(70)} />
-      <ReportText text="texto dinâmico 70" />
-
-      <ReportTitle title={staticTitle(71)} />
-      <ReportText text="texto dinâmico 71" />
-
-      <ReportTitle title={staticTitle(72)} />
-      <ReportText text="texto dinâmico 72" />
+      <ReportText text="texto dinâmico 59" />
 
       <ReportTitle title={staticTitle(74)} />
 
       <ReportTitle title={staticTitle(82)} />
-      <ReportText text="texto dinâmico 82" />
+      <ReportText text="texto dinâmico 47" />
 
       <ReportTitle title={staticTitle(83)} />
-      <ReportText text="texto dinâmico 83" />
+      <ReportText text="texto dinâmico 48" />
 
-      <ReportTitle title={staticTitle(92)} />
-      <ReportText text="texto dinâmico 92" />
+      <ReportText text={staticText(92)} />
 
       <ReportTitle title={staticTitle(84)} />
-      <ReportText text="texto dinâmico 84" />
+      <ReportText text="texto dinâmico 49" />
 
       {/* parte avançada */}
 
       <ReportTitle title={staticTitle(68)} />
 
-      <ReportTitle title={staticTitle(75)} />
       <ReportText text={staticText(75)} />
       {FilteredImage(4)}
 
       <ReportText text={staticText(76)} />
       {FilteredImage(5)}
 
-      <ReportTitle title={staticTitle(77)} />
+      <ReportText text={staticText(77)} />
 
-      <ReportTitle title={staticTitle(78)} />
       <ReportText text={staticText(78)} />
 
       <ReportTitle title={staticTitle(79)} />
-      <ReportText text="texto dinâmico 79" />
+      <ReportText text="texto dinâmico 44" />
 
       <ReportTitle title={staticTitle(80)} />
-      <ReportText text="texto dinâmico 80" />
+      <ReportText text="texto dinâmico 45" />
 
       <ReportTitle title={staticTitle(81)} />
-      <ReportText text="texto dinâmico 81" />
+      <ReportText text="texto dinâmico 46" />
 
       <ReportTitle title={staticTitle(85)} />
       <ReportText text={staticText(85)} />
 
       <ReportTitle title={staticTitle(86)} />
-      <ReportText text="texto dinâmico 86" />
+      <ReportText text="texto dinâmico 50" />
 
       <ReportTitle title={staticTitle(87)} />
-      <ReportText text="texto dinâmico 87" />
+      <ReportText text="texto dinâmico 51" />
 
-      <ReportTitle title={staticTitle(88)} />
       <ReportText text={staticText(88)} />
 
       <ReportTitle title={staticTitle(89)} />
-      <ReportText text="texto dinâmico 89" />
+      <ReportText text="texto dinâmico 52" />
 
       <ReportTitle title={staticTitle(90)} />
       <ReportText text={staticText(90)} />
 
       <ReportTitle title={staticTitle(91)} />
-      <ReportText text="texto dinâmico 91" />
+      <ReportText text="texto dinâmico 53" />
 
       <ReportTitle title={staticTitle(93)} />
-      <ReportText text="texto dinâmico 93" />
+      <ReportText text="texto dinâmico 54" />
 
       <ReportTitle title={staticTitle(94)} />
-      <ReportText text="texto dinâmico 94" />
+      <ReportText text="texto dinâmico 55" />
 
       <ReportTitle title={staticTitle(95)} />
-      <ReportText text="texto dinâmico 95" />
+      <ReportText text="texto dinâmico 56" />
 
       {/* análise profissional */}
 
       <ReportTitle title={staticTitle(96)} />
       {FilteredImage(6)}
 
-      <ReportTitle title={staticTitle(97)} />
       <ReportText text={staticText(97)} />
 
-      <ReportTitle title={staticTitle(101)} />
       <ReportText text={staticText(101)} />
 
-      <ReportTitle title={staticTitle(102)} />
       <ReportText text={staticText(102)} />
       <ReportText text="gráfico 5" />
 
-      <ReportText text="texto dinâmico 103" />
+      <ReportText text="texto dinâmico 57" />
 
-      <ReportTitle title={staticTitle(104)} />
       <ReportText text={staticText(104)} />
 
       <ReportTitle title={staticTitle(105)} />
       <ReportText text={staticText(105)} />
       <ReportText text="gráfico 6" />
 
-      <ReportText text="texto dinâmico 106" />
+      <ReportText text="texto dinâmico 57" />
 
-      <ReportTitle title={staticTitle(107)} />
       <ReportText text={staticText(107)} />
 
-      <ReportTitle title={staticTitle(108)} />
       <ReportText text={staticText(108)} />
       <ReportText text="gráfico 7" />
 
-      <ReportText text="texto dinâmico 109" />
+      <ReportText text="texto dinâmico 57" />
 
-      <ReportTitle title={staticTitle(110)} />
       <ReportText text={staticText(110)} />
 
-      <ReportTitle title={staticTitle(111)} />
       <ReportText text={staticText(111)} />
       <ReportText text="gráfico 8" />
 
-      <ReportText text="texto dinâmico 112" />
+      <ReportText text="texto dinâmico 57" />
 
-      <ReportTitle title={staticTitle(113)} />
       <ReportText text={staticText(113)} />
 
-      <ReportTitle title={staticTitle(114)} />
       <ReportText text={staticText(114)} />
       <ReportText text="gráfico 9" />
 
-      <ReportText text="texto dinâmico 115" />
+      <ReportText text="texto dinâmico 57" />
 
-      <ReportTitle title={staticTitle(116)} />
       <ReportText text={staticText(116)} />
 
-      <ReportTitle title={staticTitle(117)} />
       <ReportText text={staticText(117)} />
       <ReportText text="gráfico 10" />
 
-      <ReportText text="texto dinâmico 118" />
+      <ReportText text="texto dinâmico 57" />
 
-      <ReportTitle title={staticTitle(119)} />
       <ReportText text={staticText(119)} />
 
-      <ReportTitle title={staticTitle(120)} />
       <ReportText text={staticText(120)} />
       <ReportText text="gráfico 11" />
 
-      <ReportText text="texto dinâmico 121" />
+      <ReportText text="texto dinâmico 57" />
 
-      <ReportTitle title={staticTitle(122)} />
       <ReportText text={staticText(122)} />
 
-      <ReportTitle title={staticTitle(123)} />
       <ReportText text={staticText(123)} />
       <ReportText text="gráfico 12" />
 
-      <ReportText text="texto dinâmico 124" />
+      <ReportText text="texto dinâmico 57" />
 
-      <ReportTitle title={staticTitle(125)} />
       <ReportText text={staticText(125)} />
 
-      <ReportTitle title={staticTitle(126)} />
       <ReportText text={staticText(126)} />
       <ReportText text="gráfico 13" />
 
-      <ReportText text="texto dinâmico 127" />
+      <ReportText text="texto dinâmico 57" />
 
-      <ReportTitle title={staticTitle(128)} />
       <ReportText text={staticText(128)} />
 
-      <ReportTitle title={staticTitle(129)} />
       <ReportText text={staticText(129)} />
       <ReportText text="gráfico 14" />
 
-      <ReportText text="texto dinâmico 130" />
+      <ReportText text="texto dinâmico 57" />
 
-      <ReportTitle title={staticTitle(131)} />
       <ReportText text={staticText(131)} />
 
-      <ReportTitle title={staticTitle(132)} />
       <ReportText text={staticText(132)} />
       <ReportText text="gráfico 15" />
 
-      <ReportText text="texto dinâmico 133" />
+      <ReportText text="texto dinâmico 57" />
 
-      <ReportTitle title={staticTitle(134)} />
       <ReportText text={staticText(134)} />
 
-      <ReportTitle title={staticTitle(135)} />
       <ReportText text={staticText(135)} />
       <ReportText text="gráfico 16" />
 
-      <ReportText text="texto dinâmico 136" />
+      <ReportText text="texto dinâmico 57" />
 
-      <ReportTitle title={staticTitle(137)} />
       <ReportText text={staticText(137)} />
 
       <ReportTitle title={staticTitle(138)} />
       <ReportText text={staticText(138)} />
       <ReportText text="gráfico 17" />
 
-      <ReportTitle title={staticTitle(139)} />
       <ReportText text={staticText(139)} />
 
-      <ReportTitle title={staticTitle(140)} />
       <ReportText text={staticText(140)} />
 
-      <ReportTitle title={staticTitle(141)} />
       <ReportText text={staticText(141)} />
 
-      <ReportTitle title={staticTitle(142)} />
       <ReportText text={staticText(142)} />
 
-      <ReportTitle title={staticTitle(143)} />
       <ReportText text={staticText(143)} />
 
       <ReportTitle title={staticTitle(144)} />
 
       <ReportTitle title={staticTitle(145)} />
-      <ReportText text="texto dinâmico 145" />
+      <ReportText text="texto dinâmico 40" />
 
       <ReportTitle title={staticTitle(147)} />
-      <ReportText text="texto dinâmico 147" />
+      <ReportText text="texto dinâmico 41" />
 
       <ReportTitle title={staticTitle(148)} />
-      <ReportText text="texto dinâmico 148" />
+      <ReportText text="texto dinâmico 42" />
 
       <ReportTitle title={staticTitle(149)} />
-      <ReportText text="texto dinâmico 149" />
+      <ReportText text="texto dinâmico 43" />
 
       <ReportTitle title={staticTitle(146)} />
-      <ReportText text="texto dinâmico 146" />
+      <ReportText text="texto dinâmico 03" />
     </>
   );
 };
