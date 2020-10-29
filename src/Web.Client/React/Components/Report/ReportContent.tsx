@@ -115,7 +115,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(33)} />
       <ReportText text="texto dinâmico 23" />
 
-      <ReportText text={staticText(38)} />
+      <ReportTitle title={staticTitle(38)} />
 
       <ReportText text={staticText(39)} />
 
@@ -127,10 +127,21 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(35)} />
       <ReportText text="texto dinâmico 03" />
 
+      <ReportTitle title={staticTitle(42)} />
+      <ReportText text="texto dinâmico 04" />
+
+      <ReportText text={staticText(43)} />
+
+      <ReportTitle title="título dinâmico 2" />
+      <ReportTitle title="texto dinâmico 2" />
+
+      <ReportTitle title={staticTitle(35)} />
+      <ReportText text="texto dinâmico 03" />
+
       <ReportTitle title={staticTitle(45)} />
       <ReportText text="texto dinâmico 04" />
 
-      <ReportText text={staticText(46)} />
+      <ReportTitle title={staticTitle(46)} />
 
       <ReportText text={staticText(47)} />
 
@@ -158,7 +169,8 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportTitle title={staticTitle(54)} />
 
-      <ReportText text={staticText(51)} />
+      <ReportTitle title={staticTitle(55)} />
+
       <ReportText text="gráfico 1" />
 
       <ReportText text={staticText(56)} />
@@ -171,6 +183,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(59)} />
       <ReportText text="texto dinâmico 34" />
 
+      <ReportTitle title={staticTitle(60)} />
       <ReportText text={staticText(60)} />
       <ReportText text="gráfico 3" />
 
@@ -227,7 +240,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(76)} />
       {FilteredImage(5)}
 
-      <ReportText text={staticText(77)} />
+      <ReportTitle title={staticTitle(77)} />
 
       <ReportText text={staticText(78)} />
 
@@ -285,7 +298,6 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportText text={staticText(104)} />
 
-      <ReportTitle title={staticTitle(105)} />
       <ReportText text={staticText(105)} />
       <ReportText text="gráfico 6" />
 
@@ -378,21 +390,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(143)} />
 
       <ReportTitle title={staticTitle(144)} />
-
-      <ReportTitle title={staticTitle(145)} />
-      <ReportText text="texto dinâmico 40" />
-
-      <ReportTitle title={staticTitle(147)} />
-      <ReportText text="texto dinâmico 41" />
-
-      <ReportTitle title={staticTitle(148)} />
-      <ReportText text="texto dinâmico 42" />
-
-      <ReportTitle title={staticTitle(149)} />
-      <ReportText text="texto dinâmico 43" />
-
-      <ReportTitle title={staticTitle(146)} />
-      <ReportText text="texto dinâmico 03" />
+      <ReportText text={staticText(144)} />
     </>
   );
 };
