@@ -4,10 +4,11 @@ import useStyles from './Styles';
 
 export interface ReportTextProps {
   text: string;
+  border?: boolean;
 }
 
 const ReportText = (props: ReportTextProps): JSX.Element => {
-  const { text } = props;
+  const { text, border = false } = props;
   const classes = useStyles();
 
   return (
@@ -16,7 +17,7 @@ const ReportText = (props: ReportTextProps): JSX.Element => {
       component="div"
       align="justify"
       dangerouslySetInnerHTML={{ __html: text }}
-      className={classes.item}
+      className={(border) ? classes.itemWithBorder : classes.item}
     />
   );
 };
