@@ -32,8 +32,8 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(2)} />
       {FilteredImage(2)}
 
-      {FilteredImage(3)}
       <ReportText text={staticText(3)} />
+      {FilteredImage(3)}
 
       <ReportText text={staticText(4)} />
 
