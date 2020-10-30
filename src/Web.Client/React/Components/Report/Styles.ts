@@ -3,6 +3,7 @@ import { makeStyles, Theme } from '@material-ui/core';
 
 interface IStyles {
   item: {},
+  itemWithBorder: {},
   image: {},
   container: {},
 }
@@ -11,6 +12,11 @@ export default makeStyles((theme: Theme): IStyles => ({
   item: {
     padding: theme.spacing(4),
     width: '100%',
+  },
+  itemWithBorder: {
+    padding: theme.spacing(4),
+    width: '100%',
+    border: 'solid 1px darkgray',
   },
   image: {
     maxWidth: '100%',
