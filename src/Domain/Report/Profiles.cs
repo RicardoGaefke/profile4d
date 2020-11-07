@@ -4,6 +4,9 @@ namespace Profile4d.Domain
   {
     public string Name;
     public int Total;
+    public string Color;
+    public int ExternalNumber;
+    public int InternalNumber;
 
     public Profiles()
     {}
