@@ -8,6 +8,7 @@ import ReportText from './ReportText';
 import { filterStaticTitle, filterStaticText } from './filterStatic';
 // eslint-disable-next-line no-unused-vars
 import { IImage } from '../../../../TypeScript/Interfaces/IImage';
+import Chart1 from './Chart1';
 
 export interface ReportContentProps {
   data: IReport;
@@ -171,7 +172,11 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportTitle title={staticTitle(55)} />
 
-      <ReportText text="gráfico 1" />
+      <Chart1
+        Azul={108}
+        Vermelho={106}
+        Amarelo={105}
+      />
 
       <ReportText text={staticText(56)} />
 
