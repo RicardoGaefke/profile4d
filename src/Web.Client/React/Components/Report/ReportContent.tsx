@@ -10,6 +10,7 @@ import { filterStaticTitle, filterStaticText } from './filterStatic';
 import { IImage } from '../../../../TypeScript/Interfaces/IImage';
 import Chart1 from './Chart1';
 import Chart2 from './Chart2';
+import Chart3 from './Chart3';
 
 export interface ReportContentProps {
   data: IReport;
@@ -191,7 +192,10 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportTitle title={staticTitle(60)} />
       <ReportText text={staticText(60)} />
-      <ReportText text="gráfico 3" />
+
+      <Chart3
+        profiles={data.Profiles || []}
+      />
 
       <ReportText text="texto dinâmico 35" />
 
