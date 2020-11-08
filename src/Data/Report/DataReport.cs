@@ -43,7 +43,10 @@ namespace Profile4d.Data
                 new Profiles()
                 {
                   Name = MyDR.GetString(0),
-                  Total = MyDR.GetInt32(1)
+                  Total = MyDR.GetInt32(1),
+                  Color = MyDR.GetString(2),
+                  ExternalNumber = MyDR.GetInt32(3),
+                  InternalNumber = MyDR.GetInt32(4)
                 }
               );
             }

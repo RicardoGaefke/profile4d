@@ -4,7 +4,27 @@ import { IReport } from '../../../../TypeScript/Interfaces/IReport';
 
 
 const fakeData = {
-  Profiles: [{ Name: 'Perfil Analítico', Total: 41 }, { Name: 'Perfil Comandante', Total: 34 }, { Name: 'Perfil Criativo', Total: 36 }, { Name: 'Perfil Mediador', Total: 35 }, { Name: 'Perfil Organizador', Total: 36 }, { Name: 'Perfil Planejador', Total: 33 }, { Name: 'Perfil Prestativo', Total: 37 }, { Name: 'Perfil Realizador', Total: 33 }, { Name: 'Perfil Visionário', Total: 34 }],
+  Profiles: [
+    {
+      Name: 'Perfil Organizador', Total: 36, Color: 'Amarelo', ExternalNumber: 3, InternalNumber: 1,
+    }, {
+      Name: 'Perfil Criativo', Total: 36, Color: 'Vermelho', ExternalNumber: 2, InternalNumber: 1,
+    }, {
+      Name: 'Perfil Comandante', Total: 34, Color: 'Amarelo', ExternalNumber: 3, InternalNumber: 2,
+    }, {
+      Name: 'Perfil Planejador', Total: 33, Color: 'Azul', ExternalNumber: 1, InternalNumber: 3,
+    }, {
+      Name: 'Perfil Visionário', Total: 34, Color: 'Azul', ExternalNumber: 1, InternalNumber: 2,
+    }, {
+      Name: 'Perfil Prestativo', Total: 37, Color: 'Vermelho', ExternalNumber: 2, InternalNumber: 2,
+    }, {
+      Name: 'Perfil Analítico', Total: 41, Color: 'Azul', ExternalNumber: 1, InternalNumber: 1,
+    }, {
+      Name: 'Perfil Mediador', Total: 35, Color: 'Amarelo', ExternalNumber: 3, InternalNumber: 3,
+    }, {
+      Name: 'Perfil Realizador', Total: 33, Color: 'Vermelho', ExternalNumber: 2, InternalNumber: 3,
+    },
+  ],
   StaticContent: [{
     Id: 1, Title_PT: 'Seja bem-vindo ao Assessment Profile4d', Title_ENG: 'will soon be available', Text_PT: '<p>O Profile4d – DNA Comportamental, considera as quatro dimensões do ser:<strong><span style="color: rgb(153, 138, 0);"> física</span></strong>, <strong><span style="color: rgb(152, 0, 0);">emocional</span></strong>,<strong><span style="color: rgb(0, 51, 153);"> intelectual</span></strong> e <strong><span style="color: rgb(153, 0, 133);">espiritual.</span></strong> Foi desenvolvido por Carlos de Souza, especialista comportamental e autor do livro “Você em Dezoito Versões”.</p><p>É um processo auto avaliativo sobre inteligência comportamental, que coleta informações, cruza dados e, ao final, produz relatórios completos, com emissão de gráficos e estatísticas que oferecem maior precisão aos processos de avaliação pessoal e profissional.</p><p>As seis fontes de inspiração utilizadas na metodologia:<br></p><p>Psicologia Corporal (Wilhelm Reich), Psicologia Analítica (Carl Gustav Jung), Eneagrama (George Gurdjieff e Cláudio Naranjo), Neurociência (Paul MacLean), Psicologia Positiva (Barbara Fredrickson), Programação Neurolinguística (Richard Bandler e John Grinder).</p><p>As informações desse relatório podem contribuir para o sucesso de processos de contratação ou promoção, desenvolvimento de competências (as <em>Soft Skills</em>), formação de equipes ou identificação de lideranças, <em>coaching</em> e <em>mentoring</em>.</p><p><span style="color: rgb(53, 53, 53); letter-spacing: 0.01071em;"><br></span></p><p>E<span style="color: rgb(53, 53, 53); letter-spacing: 0.01071em;">ste relatório tem validade por 6 meses.</span></p>', Text_ENG: '<p>will soon be available</p><p><br></p>',
   }, {
