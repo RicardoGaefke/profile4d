@@ -11,6 +11,18 @@ import { IImage } from '../../../../TypeScript/Interfaces/IImage';
 import Chart1 from './Chart1';
 import Chart2 from './Chart2';
 import Chart3 from './Chart3';
+import Chart5 from './Chart5';
+import Chart6 from './Chart6';
+import Chart7 from './Chart7';
+import Chart8 from './Chart8';
+import Chart9 from './Chart9';
+import Chart10 from './Chart10';
+import Chart11 from './Chart11';
+import Chart12 from './Chart12';
+import Chart13 from './Chart13';
+import Chart14 from './Chart14';
+import Chart15 from './Chart15';
+import Chart16 from './Chart16';
 
 export interface ReportContentProps {
   data: IReport;
@@ -302,84 +314,85 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(101)} />
 
       <ReportText text={staticText(102)} />
-      <ReportText text="gráfico 5" />
+
+      <Chart5 profiles={data.Profiles || []} />
 
       <ReportText text="texto dinâmico 57" />
 
       <ReportText text={staticText(104)} />
 
       <ReportText text={staticText(105)} />
-      <ReportText text="gráfico 6" />
+      <Chart6 profiles={data.Profiles || []} />
 
       <ReportText text="texto dinâmico 57" />
 
       <ReportText text={staticText(107)} />
 
       <ReportText text={staticText(108)} />
-      <ReportText text="gráfico 7" />
+      <Chart7 profiles={data.Profiles || []} />
 
       <ReportText text="texto dinâmico 57" />
 
       <ReportText text={staticText(110)} />
 
       <ReportText text={staticText(111)} />
-      <ReportText text="gráfico 8" />
+      <Chart8 profiles={data.Profiles || []} />
 
       <ReportText text="texto dinâmico 57" />
 
       <ReportText text={staticText(113)} />
 
       <ReportText text={staticText(114)} />
-      <ReportText text="gráfico 9" />
+      <Chart9 profiles={data.Profiles || []} />
 
       <ReportText text="texto dinâmico 57" />
 
       <ReportText text={staticText(116)} />
 
       <ReportText text={staticText(117)} />
-      <ReportText text="gráfico 10" />
+      <Chart10 profiles={data.Profiles || []} />
 
       <ReportText text="texto dinâmico 57" />
 
       <ReportText text={staticText(119)} />
 
       <ReportText text={staticText(120)} />
-      <ReportText text="gráfico 11" />
+      <Chart11 profiles={data.Profiles || []} />
 
       <ReportText text="texto dinâmico 57" />
 
       <ReportText text={staticText(122)} />
 
       <ReportText text={staticText(123)} />
-      <ReportText text="gráfico 12" />
+      <Chart12 profiles={data.Profiles || []} />
 
       <ReportText text="texto dinâmico 57" />
 
       <ReportText text={staticText(125)} />
 
       <ReportText text={staticText(126)} />
-      <ReportText text="gráfico 13" />
+      <Chart13 profiles={data.Profiles || []} />
 
       <ReportText text="texto dinâmico 57" />
 
       <ReportText text={staticText(128)} />
 
       <ReportText text={staticText(129)} />
-      <ReportText text="gráfico 14" />
+      <Chart14 profiles={data.Profiles || []} />
 
       <ReportText text="texto dinâmico 57" />
 
       <ReportText text={staticText(131)} />
 
       <ReportText text={staticText(132)} />
-      <ReportText text="gráfico 15" />
+      <Chart15 profiles={data.Profiles || []} />
 
       <ReportText text="texto dinâmico 57" />
 
       <ReportText text={staticText(134)} />
 
       <ReportText text={staticText(135)} />
-      <ReportText text="gráfico 16" />
+      <Chart16 profiles={data.Profiles || []} />
 
       <ReportText text="texto dinâmico 57" />
 
