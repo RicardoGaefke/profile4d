@@ -20,7 +20,7 @@ const Chart11 = (props: Chart11Props): JSX.Element => {
     labels: ['Desenvolvimento de pessoas'],
     datasets: [
       {
-        label: amarelo.Name,
+        label: `${amarelo.Name} - ${((amarelo.Total / 165) * 100).toFixed(2).toString()}%`,
         data: [
           ((amarelo.Total / 165) * 100).toFixed(2),
         ],
@@ -29,7 +29,7 @@ const Chart11 = (props: Chart11Props): JSX.Element => {
         ],
       },
       {
-        label: vermelho.Name,
+        label: `${vermelho.Name} - ${((vermelho.Total / 165) * 100).toFixed(2).toString()}%`,
         data: [
           ((vermelho.Total / 165) * 100).toFixed(2),
         ],
@@ -38,7 +38,7 @@ const Chart11 = (props: Chart11Props): JSX.Element => {
         ],
       },
       {
-        label: azul.Name,
+        label: `${azul.Name} - ${((azul.Total / 165) * 100).toFixed(2).toString()}%`,
         data: [
           ((azul.Total / 165) * 100).toFixed(2),
         ],
