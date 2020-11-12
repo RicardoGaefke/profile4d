@@ -18,11 +18,11 @@ const Chart1 = (props: Chart1Props): JSX.Element => {
 
   const data = {
     datasets: [{
-      data: [Azul, Vermelho, Amarelo],
+      data: [Vermelho, Amarelo, Azul],
       backgroundColor: [
-        '#002060',
         '#c00000',
         '#ffff00',
+        '#002060',
       ],
     }],
     labels: [
