@@ -12,7 +12,7 @@ const Chart7 = (props: Chart7Props): JSX.Element => {
 
   const amarelo = profiles.filter((item): boolean => item.Name === 'Perfil Mediador')[0];
 
-  const vermelho = profiles.filter((item): boolean => item.Name === 'Perfil Prestativo')[0];
+  const vermelho = profiles.filter((item): boolean => item.Name === 'Perfil Criativo')[0];
 
   const azul = profiles.filter((item): boolean => item.Name === 'Perfil Visionário')[0];
 
@@ -20,7 +20,7 @@ const Chart7 = (props: Chart7Props): JSX.Element => {
     labels: ['Adaptabilidade'],
     datasets: [
       {
-        label: amarelo.Name,
+        label: `${amarelo.Name} - ${((amarelo.Total / 165) * 100).toFixed(2).toString()}%`,
         data: [
           ((amarelo.Total / 165) * 100).toFixed(2),
         ],
@@ -29,7 +29,7 @@ const Chart7 = (props: Chart7Props): JSX.Element => {
         ],
       },
       {
-        label: vermelho.Name,
+        label: `${vermelho.Name} - ${((vermelho.Total / 165) * 100).toFixed(2).toString()}%`,
         data: [
           ((vermelho.Total / 165) * 100).toFixed(2),
         ],
@@ -38,7 +38,7 @@ const Chart7 = (props: Chart7Props): JSX.Element => {
         ],
       },
       {
-        label: azul.Name,
+        label: `${azul.Name} - ${((azul.Total / 165) * 100).toFixed(2).toString()}%`,
         data: [
           ((azul.Total / 165) * 100).toFixed(2),
         ],
