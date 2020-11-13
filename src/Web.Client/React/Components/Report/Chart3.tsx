@@ -26,7 +26,7 @@ const Chart3 = (props: Chart3Props): JSX.Element => {
     labels: ['Perfis comportamentais e suas respectivas energias'],
     datasets: [
       {
-        label: amarelo.Name,
+        label: `${amarelo.Name} - ${amarelo.Total.toFixed(2)}%`,
         data: [
           ((amarelo.Total / 165) * 100).toFixed(2),
         ],
@@ -35,7 +35,7 @@ const Chart3 = (props: Chart3Props): JSX.Element => {
         ],
       },
       {
-        label: vermelho.Name,
+        label: `${vermelho.Name} - ${vermelho.Total.toFixed(2)}%`,
         data: [
           ((vermelho.Total / 165) * 100).toFixed(2),
         ],
@@ -44,7 +44,7 @@ const Chart3 = (props: Chart3Props): JSX.Element => {
         ],
       },
       {
-        label: azul.Name,
+        label: `${azul.Name} - ${azul.Total.toFixed(2)}%`,
         data: [
           ((azul.Total / 165) * 100).toFixed(2),
         ],

@@ -23,6 +23,7 @@ import Chart13 from './Chart13';
 import Chart14 from './Chart14';
 import Chart15 from './Chart15';
 import Chart16 from './Chart16';
+import Chart17 from './Chart17';
 
 export interface ReportContentProps {
   data: IReport;
@@ -400,7 +401,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportTitle title={staticTitle(138)} />
       <ReportText text={staticText(138)} />
-      <ReportText text="gráfico 17" />
+      <Chart17 profiles={data.Profiles || []} />
 
       <ReportText text={staticText(139)} />
 
