@@ -188,9 +188,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(55)} />
 
       <Chart1
-        Azul={108}
-        Vermelho={106}
-        Amarelo={105}
+        profiles={data.Profiles || []}
       />
 
       <ReportText text={staticText(56)} />
