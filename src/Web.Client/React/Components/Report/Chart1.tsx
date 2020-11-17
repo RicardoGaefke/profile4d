@@ -29,10 +29,6 @@ const Chart1 = (props: Chart1Props): JSX.Element => {
   // eslint-disable-next-line max-len
   const azul = parseFloat(((analitico / 165) * 100).toFixed(2)) + parseFloat(((planejador / 165) * 100).toFixed(2)) + parseFloat(((visionario / 165) * 100).toFixed(2));
 
-  // const percentualAzul = ((Azul / total) * 100).toFixed(2);
-  // const percentualVermelho = ((Vermelho / total) * 100).toFixed(2);
-  // const percentualAmarelo = (100 - parseFloat(percentualAzul) - parseFloat(percentualVermelho)).toFixed(2);
-
   const data = {
     datasets: [{
       data: [vermelho.toFixed(2), amarelo.toFixed(2), azul.toFixed(2)],
@@ -43,9 +39,9 @@ const Chart1 = (props: Chart1Props): JSX.Element => {
       ],
     }],
     labels: [
-      `${azul.toFixed(2)} %`,
-      `${vermelho.toFixed(2)} %`,
-      `${amarelo.toFixed(2)} %`,
+      `${vermelho.toFixed(2)}%`,
+      `${amarelo.toFixed(2)}%`,
+      `${azul.toFixed(2)}%`,
     ],
   };
 
