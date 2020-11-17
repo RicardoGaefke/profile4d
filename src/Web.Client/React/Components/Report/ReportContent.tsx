@@ -24,6 +24,7 @@ import Chart14 from './Chart14';
 import Chart15 from './Chart15';
 import Chart16 from './Chart16';
 import Chart17 from './Chart17';
+import Chart4 from './Chart4';
 
 export interface ReportContentProps {
   data: IReport;
@@ -214,7 +215,9 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text="texto dinâmico 38" />
 
       <ReportTitle title={staticTitle(65)} />
-      <ReportText text="gráfico 4" />
+      <Chart4
+        profiles={data.Profiles || []}
+      />
 
       <ReportText text={staticText(61)} />
 
