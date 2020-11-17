@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import { Radar } from 'react-chartjs-2';
 // eslint-disable-next-line no-unused-vars
@@ -20,6 +21,19 @@ const Chart4 = (props: Chart4Props): JSX.Element => {
   const planejador = profiles.filter((item): boolean => item.Name === 'Perfil Planejador')[0];
   const analitico = profiles.filter((item): boolean => item.Name === 'Perfil Analítico')[0];
 
+  // eslint-disable-next-line consistent-return
+  const parceiroIdeal = (perfil: string): IProfiles => {
+    if (perfil === 'Perfil Comandante') return prestativo;
+    if (perfil === 'Perfil Mediador') return realizador;
+    if (perfil === 'Perfil Organizador') return visionario;
+    if (perfil === 'Perfil Prestativo') return analitico;
+    if (perfil === 'Perfil Realizador') return planejador;
+    if (perfil === 'Perfil Analítico') return comandante;
+    if (perfil === 'Perfil Planejador') return mediador;
+    if (perfil === 'Perfil Visionário') return criativo;
+    return criativo;
+  };
+
   const amarelos = profiles.filter((item): boolean => item.Color === 'Amarelo');
   amarelos.sort((a, b): number => b.Total - a.Total || b.InternalNumber - a.InternalNumber);
   const amarelo = amarelos[0];
@@ -32,17 +46,23 @@ const Chart4 = (props: Chart4Props): JSX.Element => {
   azuis.sort((a, b): number => b.Total - a.Total || b.InternalNumber - a.InternalNumber);
   const azul = azuis[0];
 
+  const todos: IProfiles[] = profiles || [];
+  todos.sort((a, b): number => b.Total - a.Total || (b.ExternalNumber || 0) - (a.ExternalNumber || 0) || b.InternalNumber - a.InternalNumber);
+  const primeiro = todos[0];
+  const segundo = todos[1];
+  const terceiro = todos[2];
+
   const data = {
     labels: [
-      `${criativo.Name} ${((criativo.Total / 165) * 100).toFixed(2)}%`,
-      `${realizador.Name} ${((realizador.Total / 165) * 100).toFixed(2)}%`,
-      `${prestativo.Name} ${((prestativo.Total / 165) * 100).toFixed(2)}%`,
-      `${organizador.Name} ${((organizador.Total / 165) * 100).toFixed(2)}%`,
-      `${mediador.Name} ${((mediador.Total / 165) * 100).toFixed(2)}%`,
-      `${comandante.Name} ${((comandante.Total / 165) * 100).toFixed(2)}%`,
-      `${visionario.Name} ${((visionario.Total / 165) * 100).toFixed(2)}%`,
-      `${planejador.Name} ${((planejador.Total / 165) * 100).toFixed(2)}%`,
-      `${analitico.Name} ${((analitico.Total / 165) * 100).toFixed(2)}%`,
+      `${criativo.Name.replace('Perfil ', '')} ${((criativo.Total / 165) * 100).toFixed(2)}%`,
+      `${realizador.Name.replace('Perfil ', '')} ${((realizador.Total / 165) * 100).toFixed(2)}%`,
+      `${prestativo.Name.replace('Perfil ', '')} ${((prestativo.Total / 165) * 100).toFixed(2)}%`,
+      `${organizador.Name.replace('Perfil ', '')} ${((organizador.Total / 165) * 100).toFixed(2)}%`,
+      `${mediador.Name.replace('Perfil ', '')} ${((mediador.Total / 165) * 100).toFixed(2)}%`,
+      `${comandante.Name.replace('Perfil ', '')} ${((comandante.Total / 165) * 100).toFixed(2)}%`,
+      `${visionario.Name.replace('Perfil ', '')} ${((visionario.Total / 165) * 100).toFixed(2)}%`,
+      `${planejador.Name.replace('Perfil ', '')} ${((planejador.Total / 165) * 100).toFixed(2)}%`,
+      `${analitico.Name.replace('Perfil ', '')} ${((analitico.Total / 165) * 100).toFixed(2)}%`,
     ],
     datasets: [
       {
@@ -61,6 +81,60 @@ const Chart4 = (props: Chart4Props): JSX.Element => {
           (azul.Name === 'Perfil Visionário') ? ((azul.Total / 165) * 100).toFixed(2) : null,
           (azul.Name === 'Perfil Planejador') ? ((azul.Total / 165) * 100).toFixed(2) : null,
           (azul.Name === 'Perfil Analítico') ? ((azul.Total / 165) * 100).toFixed(2) : null,
+        ],
+      },
+      {
+        label: 'Tríade adaptada',
+        backgroundColor: 'rgba(250,15,31,0.2)',
+        borderColor: 'rgba(250,15,31,0.7)',
+        pointColor: 'rgba(250,15,31,1)',
+        spanGaps: true,
+        data: [
+          (primeiro.Name === 'Perfil Criativo' || segundo.Name === 'Perfil Criativo' || terceiro.Name === 'Perfil Criativo')
+            ? (primeiro.Name === 'Perfil Criativo') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Criativo') ? ((parceiroIdeal(segundo.Name).Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Criativo') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
+          (primeiro.Name === 'Perfil Realizador' || segundo.Name === 'Perfil Realizador' || terceiro.Name === 'Perfil Realizador')
+            ? (primeiro.Name === 'Perfil Realizador') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Realizador') ? ((parceiroIdeal(segundo.Name).Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Realizador') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
+          (primeiro.Name === 'Perfil Prestativo' || segundo.Name === 'Perfil Prestativo' || terceiro.Name === 'Perfil Prestativo')
+            ? (primeiro.Name === 'Perfil Prestativo') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Prestativo') ? ((parceiroIdeal(segundo.Name).Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Prestativo') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
+          (primeiro.Name === 'Perfil Organizador' || segundo.Name === 'Perfil Organizador' || terceiro.Name === 'Perfil Organizador')
+            ? (primeiro.Name === 'Perfil Organizador') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Organizador') ? ((parceiroIdeal(segundo.Name).Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Organizador') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
+          (primeiro.Name === 'Perfil Mediador' || segundo.Name === 'Perfil Mediador' || terceiro.Name === 'Perfil Mediador')
+            ? (primeiro.Name === 'Perfil Mediador') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Mediador') ? ((parceiroIdeal(segundo.Name).Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Mediador') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
+          (primeiro.Name === 'Perfil Comandante' || segundo.Name === 'Perfil Comandante' || terceiro.Name === 'Perfil Comandante')
+            ? (primeiro.Name === 'Perfil Comandante') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Comandante') ? ((parceiroIdeal(segundo.Name).Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Comandante') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
+          (primeiro.Name === 'Perfil Visionário' || segundo.Name === 'Perfil Visionário' || terceiro.Name === 'Perfil Visionário')
+            ? (primeiro.Name === 'Perfil Visionário') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Visionário') ? ((parceiroIdeal(segundo.Name).Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Visionário') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
+          (primeiro.Name === 'Perfil Planejador' || segundo.Name === 'Perfil Planejador' || terceiro.Name === 'Perfil Planejador')
+            ? (primeiro.Name === 'Perfil Planejador') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Planejador') ? ((parceiroIdeal(segundo.Name).Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Planejador') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
+          (primeiro.Name === 'Perfil Analítico' || segundo.Name === 'Perfil Analítico' || terceiro.Name === 'Perfil Analítico')
+            ? (primeiro.Name === 'Perfil Analítico') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Analítico') ? ((parceiroIdeal(segundo.Name).Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Analítico') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
         ],
       },
     ],
