@@ -47,7 +47,7 @@ const Chart4 = (props: Chart4Props): JSX.Element => {
   const azul = azuis[0];
 
   const todos: IProfiles[] = profiles || [];
-  todos.sort((a, b): number => b.Total - a.Total || (b.ExternalNumber || 0) - (a.ExternalNumber || 0) || b.InternalNumber - a.InternalNumber);
+  todos.sort((a, b): number => b.Total - a.Total || (a.ExternalNumber || 0) - (b.ExternalNumber || 0) || b.InternalNumber - a.InternalNumber);
   const primeiro = todos[0];
   const segundo = todos[1];
   const terceiro = todos[2];
