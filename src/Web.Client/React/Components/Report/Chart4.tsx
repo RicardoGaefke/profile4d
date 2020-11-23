@@ -46,11 +46,17 @@ const Chart4 = (props: Chart4Props): JSX.Element => {
   azuis.sort((a, b): number => b.Total - a.Total || b.InternalNumber - a.InternalNumber);
   const azul = azuis[0];
 
-  const todos: IProfiles[] = profiles || [];
-  todos.sort((a, b): number => b.Total - a.Total || (a.ExternalNumber || 0) - (b.ExternalNumber || 0) || b.InternalNumber - a.InternalNumber);
-  const primeiro = todos[0];
-  const segundo = todos[1];
-  const terceiro = todos[2];
+  const original = [
+    amarelo,
+    vermelho,
+    azul,
+  ];
+
+  original.sort((a, b): number => b.Total - a.Total || (a.ExternalNumber || 0) - (b.ExternalNumber || 0));
+
+  const primeiro = original[0];
+  const segundo = original[1];
+  const terceiro = original[2];
 
   const data = {
     labels: [
@@ -72,15 +78,51 @@ const Chart4 = (props: Chart4Props): JSX.Element => {
         pointColor: 'rgba(31,15,250,1)',
         spanGaps: true,
         data: [
-          (vermelho.Name === 'Perfil Criativo') ? ((vermelho.Total / 165) * 100).toFixed(2) : null,
-          (vermelho.Name === 'Perfil Realizador') ? ((vermelho.Total / 165) * 100).toFixed(2) : null,
-          (vermelho.Name === 'Perfil Prestativo') ? ((vermelho.Total / 165) * 100).toFixed(2) : null,
-          (amarelo.Name === 'Perfil Organizador') ? ((amarelo.Total / 165) * 100).toFixed(2) : null,
-          (amarelo.Name === 'Perfil Mediador') ? ((amarelo.Total / 165) * 100).toFixed(2) : null,
-          (amarelo.Name === 'Perfil Comandante') ? ((amarelo.Total / 165) * 100).toFixed(2) : null,
-          (azul.Name === 'Perfil Visionário') ? ((azul.Total / 165) * 100).toFixed(2) : null,
-          (azul.Name === 'Perfil Planejador') ? ((azul.Total / 165) * 100).toFixed(2) : null,
-          (azul.Name === 'Perfil Analítico') ? ((azul.Total / 165) * 100).toFixed(2) : null,
+          (primeiro.Name === 'Perfil Criativo' || segundo.Name === 'Perfil Criativo' || terceiro.Name === 'Perfil Criativo')
+            ? (primeiro.Name === 'Perfil Criativo') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Criativo') ? ((segundo.Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Criativo') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
+          (primeiro.Name === 'Perfil Realizador' || segundo.Name === 'Perfil Realizador' || terceiro.Name === 'Perfil Realizador')
+            ? (primeiro.Name === 'Perfil Realizador') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Realizador') ? ((segundo.Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Realizador') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
+          (primeiro.Name === 'Perfil Prestativo' || segundo.Name === 'Perfil Prestativo' || terceiro.Name === 'Perfil Prestativo')
+            ? (primeiro.Name === 'Perfil Prestativo') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Prestativo') ? ((segundo.Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Prestativo') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
+          (primeiro.Name === 'Perfil Organizador' || segundo.Name === 'Perfil Organizador' || terceiro.Name === 'Perfil Organizador')
+            ? (primeiro.Name === 'Perfil Organizador') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Organizador') ? ((segundo.Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Organizador') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
+          (primeiro.Name === 'Perfil Mediador' || segundo.Name === 'Perfil Mediador' || terceiro.Name === 'Perfil Mediador')
+            ? (primeiro.Name === 'Perfil Mediador') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Mediador') ? ((segundo.Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Mediador') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
+          (primeiro.Name === 'Perfil Comandante' || segundo.Name === 'Perfil Comandante' || terceiro.Name === 'Perfil Comandante')
+            ? (primeiro.Name === 'Perfil Comandante') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Comandante') ? ((segundo.Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Comandante') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
+          (primeiro.Name === 'Perfil Visionário' || segundo.Name === 'Perfil Visionário' || terceiro.Name === 'Perfil Visionário')
+            ? (primeiro.Name === 'Perfil Visionário') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Visionário') ? ((segundo.Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Visionário') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
+          (primeiro.Name === 'Perfil Planejador' || segundo.Name === 'Perfil Planejador' || terceiro.Name === 'Perfil Planejador')
+            ? (primeiro.Name === 'Perfil Planejador') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Planejador') ? ((segundo.Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Planejador') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
+          (primeiro.Name === 'Perfil Analítico' || segundo.Name === 'Perfil Analítico' || terceiro.Name === 'Perfil Analítico')
+            ? (primeiro.Name === 'Perfil Analítico') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+              || (segundo.Name === 'Perfil Analítico') ? ((segundo.Total / 165) * 100).toFixed(2) : null
+              || (terceiro.Name === 'Perfil Analítico') ? ((terceiro.Total / 165) * 100).toFixed(2) : null
+            : null,
         ],
       },
       {
