@@ -4,8 +4,9 @@ import { IStaticIntroduction } from './IStaticContent';
 import { IImage } from './IImage';
 
 export interface IReport extends IBasicReturn
-  {
-    Profiles?: IProfiles[];
-    StaticContent?: IStaticIntroduction[];
-    Images?: IImage[];
-  }
+{
+  Profiles?: IProfiles[];
+  StaticContent?: IStaticIntroduction[];
+  DynamicContent?: IStaticIntroduction[];
+  Images?: IImage[];
+}
