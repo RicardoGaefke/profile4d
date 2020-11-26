@@ -36,6 +36,10 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
   const staticTitle = (contentId: number): string => filterStaticTitle(contentId, Language, data.StaticContent || []);
   const staticText = (contentId: number): string => filterStaticText(contentId, Language, data.StaticContent || []);
+
+  const dynamicTitle = (contentId: number): string => filterStaticTitle(contentId, Language, data.DynamicContent || []);
+  const dynamicText = (contentId: number): string => filterStaticText(contentId, Language, data.DynamicContent || []);
+
   const staticImages: IImage[] = data.Images || [];
 
   const FilteredImage = (imageId: number): JSX.Element => <FilterImage id={imageId} images={staticImages} />;
@@ -60,35 +64,35 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportText text={staticText(7)} />
 
-      <ReportTitle title="título dinâmico 2" />
-      <ReportText text="texto dinâmico 2" />
+      <ReportTitle title={dynamicTitle(2)} />
+      <ReportText text={dynamicText(2)} />
 
       <ReportTitle title={staticTitle(10)} />
-      <ReportText text="texto dinâmico 3" />
+      <ReportText text={dynamicText(3)} />
 
       <ReportTitle title={staticTitle(11)} />
-      <ReportText text="texto dinâmico 4" />
+      <ReportText text={dynamicText(4)} />
 
       <ReportTitle title={staticTitle(12)} />
-      <ReportText text="texto dinâmico 5" />
+      <ReportText text={dynamicText(5)} />
 
       <ReportTitle title={staticTitle(13)} />
-      <ReportText text="texto dinâmico 6" />
+      <ReportText text={dynamicText(6)} />
 
       <ReportTitle title={staticTitle(14)} />
-      <ReportText text="texto dinâmico 7" />
+      <ReportText text={dynamicText(7)} />
 
       <ReportTitle title={staticTitle(15)} />
-      <ReportText text="texto dinâmico 8" />
+      <ReportText text={dynamicText(8)} />
 
       <ReportTitle title={staticTitle(16)} />
-      <ReportText text="texto dinâmico 9" />
+      <ReportText text={dynamicText(9)} />
 
       <ReportTitle title={staticTitle(17)} />
-      <ReportText text="texto dinâmico 10" />
+      <ReportText text={dynamicText(10)} />
 
       <ReportTitle title={staticTitle(18)} />
-      <ReportText text="texto dinâmico 11" />
+      <ReportText text={dynamicText(11)} />
 
       <ReportTitle title={staticTitle(19)} />
 
@@ -96,41 +100,41 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportText text={staticText(21)} />
 
-      <ReportTitle title="título dinâmico 12" />
-      <ReportText text="texto dinâmico 12" />
+      <ReportTitle title={dynamicTitle(12)} />
+      <ReportText text={dynamicText(12)} />
 
       <ReportTitle title={staticTitle(23)} />
-      <ReportText text="texto dinâmico 13" />
+      <ReportText text={dynamicText(13)} />
 
       <ReportTitle title={staticTitle(24)} />
-      <ReportText text="texto dinâmico 14" />
+      <ReportText text={dynamicText(14)} />
 
       <ReportTitle title={staticTitle(25)} />
-      <ReportText text="texto dinâmico 15" />
+      <ReportText text={dynamicText(15)} />
 
       <ReportTitle title={staticTitle(26)} />
-      <ReportText text="texto dinâmico 16" />
+      <ReportText text={dynamicText(16)} />
 
       <ReportTitle title={staticTitle(27)} />
-      <ReportText text="texto dinâmico 17" />
+      <ReportText text={dynamicText(17)} />
 
       <ReportTitle title={staticTitle(28)} />
-      <ReportText text="texto dinâmico 18" />
+      <ReportText text={dynamicText(18)} />
 
       <ReportTitle title={staticTitle(29)} />
       <ReportText text="texto dinâmico 19" />
 
       <ReportTitle title={staticTitle(30)} />
-      <ReportText text="texto dinâmico 20" />
+      <ReportText text={dynamicText(20)} />
 
       <ReportTitle title={staticTitle(31)} />
-      <ReportText text="texto dinâmico 21" />
+      <ReportText text={dynamicText(21)} />
 
       <ReportTitle title={staticTitle(32)} />
-      <ReportText text="texto dinâmico 22" />
+      <ReportText text={dynamicText(22)} />
 
       <ReportTitle title={staticTitle(33)} />
-      <ReportText text="texto dinâmico 23" />
+      <ReportText text={dynamicText(23)} />
 
       <ReportTitle title={staticTitle(38)} />
 
