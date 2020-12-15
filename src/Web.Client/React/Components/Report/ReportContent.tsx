@@ -230,13 +230,13 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(61)} />
 
       <ReportTitle title={staticTitle(69)} />
-      <ReportText text="texto dinâmico 40" border />
+      <ReportText text={dynamicText(40)} border />
 
       <ReportTitle title={staticTitle(70)} />
-      <ReportText text="texto dinâmico 41" border />
+      <ReportText text={dynamicText(41)} border />
 
       <ReportTitle title={staticTitle(71)} />
-      <ReportText text="texto dinâmico 42" border />
+      <ReportText text={dynamicText(42)} border />
 
       <ReportTitle title={staticTitle(72)} />
       <ReportText text="texto dinâmico 43" border />
