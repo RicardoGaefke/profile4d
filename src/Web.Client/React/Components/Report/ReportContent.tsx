@@ -142,8 +142,8 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportText text={staticText(40)} />
 
-      <ReportTitle title={dynamicTitle(2)} />
-      <ReportText text={dynamicText(2)} />
+      <ReportTitle title={dynamicTitle(86)} />
+      <ReportText text={dynamicText(86)} />
 
       <ReportTitle title={staticTitle(35)} />
       <ReportText text={dynamicText(3)} />
@@ -153,8 +153,8 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportText text={staticText(43)} />
 
-      <ReportTitle title={dynamicTitle(2)} />
-      <ReportText text={dynamicText(2)} />
+      <ReportTitle title={dynamicTitle(89)} />
+      <ReportText text={dynamicText(89)} />
 
       <ReportTitle title={staticTitle(35)} />
       <ReportText text="texto dinâmico 03" />
