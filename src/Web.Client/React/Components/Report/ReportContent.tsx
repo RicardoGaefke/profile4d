@@ -171,7 +171,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(48)} />
 
       {/* SABOTADOR DO APOIO */}
-      <ReportTitle title={staticTitle(92)} />
+      <ReportTitle title={dynamicTitle(92)} />
       <ReportText text={dynamicText(92)} />
 
       <ReportTitle title={staticTitle(36)} />
@@ -183,7 +183,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(51)} />
 
       {/* SABOTADOR DO COMPLEMENTAR */}
-      <ReportTitle title={staticTitle(95)} />
+      <ReportTitle title={dynamicTitle(95)} />
       <ReportText text={dynamicText(95)} />
 
       <ReportTitle title={staticTitle(37)} />
