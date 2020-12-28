@@ -39,6 +39,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
   const dynamicTitle = (contentId: number): string => filterStaticTitle(contentId, Language, data.DynamicContent || []);
   const dynamicText = (contentId: number): string => filterStaticText(contentId, Language, data.DynamicContent || []);
+  const dynamicText56 = (contentId: number): string => filterStaticText(contentId, Language, data.DynamicContent56 || []);
 
   const staticImages: IImage[] = data.Images || [];
 
@@ -312,7 +313,10 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={dynamicText(55)} />
 
       <ReportTitle title={staticTitle(95)} />
-      <ReportText text="texto dinâmico 56" />
+
+      {data.DynamicContent56?.map((record): React.ReactNode => (
+        <ReportText key={record.Id} text={dynamicText56(record.Id)} />
+      ))}
 
       {/* análise profissional */}
 
