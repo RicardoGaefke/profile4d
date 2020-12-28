@@ -8,5 +8,7 @@ export interface IReport extends IBasicReturn
   Profiles?: IProfiles[];
   StaticContent?: IStaticIntroduction[];
   DynamicContent?: IStaticIntroduction[];
+  DynamicContent56?: IStaticIntroduction[];
+  DynamicContent57?: IStaticIntroduction[];
   Images?: IImage[];
 }

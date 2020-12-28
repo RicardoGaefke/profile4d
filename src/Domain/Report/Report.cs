@@ -7,6 +7,8 @@ namespace Profile4d.Domain
     public List<Profiles> Profiles;
     public List<StaticFirstPage> StaticContent;
     public List<StaticFirstPage> DynamicContent;
+    public List<StaticFirstPage> DynamicContent56;
+    public List<StaticFirstPage> DynamicContent57;
     public List<Image> Images;
 
     public Report()
