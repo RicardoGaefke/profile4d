@@ -27,6 +27,18 @@ const Dynamic57 = (props: IDynamic57): JSX.Element => {
 
   const [{ Language }] = useStateValue();
 
+  const amarelos = profiles.filter((item): boolean => item.Color === 'Amarelo');
+  amarelos.sort((a, b): number => b.Total - a.Total || b.InternalNumber - a.InternalNumber);
+  const maiorAmarelo = amarelos[0];
+
+  const vermelhos = profiles.filter((item): boolean => item.Color === 'Vermelho');
+  vermelhos.sort((a, b): number => b.Total - a.Total || b.InternalNumber - a.InternalNumber);
+  const maiorVermelho = vermelhos[0];
+
+  const azuis = profiles.filter((item): boolean => item.Color === 'Azul');
+  azuis.sort((a, b): number => b.Total - a.Total || b.InternalNumber - a.InternalNumber);
+  const maiorAzul = azuis[0];
+
   const amarelo = profiles.filter((item): boolean => item.Name === profile1)[0];
   const vermelho = profiles.filter((item): boolean => item.Name === profile2)[0];
   const azul = profiles.filter((item): boolean => item.Name === profile3)[0];
@@ -51,7 +63,7 @@ const Dynamic57 = (props: IDynamic57): JSX.Element => {
 
   const dynamicText57 = (contentId: number): string => filterStaticText(contentId, Language, options || []);
 
-  if (percentAmarelo < 16 || percentVermelho < 16 || percentAzul < 16) {
+  if (atencao.length > 0) {
     return (
       <>
         <ReportText text={dynamicText57(1)} />
@@ -65,6 +77,12 @@ const Dynamic57 = (props: IDynamic57): JSX.Element => {
           }
         </List>
       </>
+    );
+  }
+
+  if (atencao.length === 0 && maiorAmarelo === amarelo && maiorVermelho === vermelho && maiorAzul === azul) {
+    return (
+      <ReportText text={dynamicText57(3)} />
     );
   }
 
