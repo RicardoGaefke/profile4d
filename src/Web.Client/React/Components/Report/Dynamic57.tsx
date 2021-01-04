@@ -1,4 +1,5 @@
 import React from 'react';
+import { List, ListItem, ListItemText } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
 import { IStaticIntroduction } from '../../../../TypeScript/Interfaces/IStaticContent';
 import { filterStaticText } from './filterStatic';
@@ -34,11 +35,36 @@ const Dynamic57 = (props: IDynamic57): JSX.Element => {
   const percentVermelho = ((vermelho.Total / 165) * 100);
   const percentAzul = ((azul.Total / 165) * 100);
 
+  const atencao: string[] = [];
+
+  if (percentAmarelo < 16) {
+    atencao.push(amarelo.Name);
+  }
+
+  if (percentVermelho < 16) {
+    atencao.push(vermelho.Name);
+  }
+
+  if (percentAzul < 16) {
+    atencao.push(azul.Name);
+  }
+
   const dynamicText57 = (contentId: number): string => filterStaticText(contentId, Language, options || []);
 
   if (percentAmarelo < 16 || percentVermelho < 16 || percentAzul < 16) {
     return (
-      <ReportText text={dynamicText57(1)} />
+      <>
+        <ReportText text={dynamicText57(1)} />
+        <List>
+          {
+            atencao.map((point): React.ReactNode => (
+              <ListItem key={point}>
+                <ListItemText color="red"><strong>{point}</strong></ListItemText>
+              </ListItem>
+            ))
+          }
+        </List>
+      </>
     );
   }
 
