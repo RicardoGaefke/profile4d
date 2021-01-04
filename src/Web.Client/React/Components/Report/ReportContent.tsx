@@ -25,6 +25,7 @@ import Chart15 from './Chart15';
 import Chart16 from './Chart16';
 import Chart17 from './Chart17';
 import Chart4 from './Chart4';
+import Dynamic57 from './Dynamic57';
 
 export interface ReportContentProps {
   data: IReport;
@@ -331,84 +332,156 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <Chart5 profiles={data.Profiles || []} />
 
-      <ReportText text="texto dinâmico 57" />
+      <Dynamic57
+        profiles={data.Profiles || []}
+        profile1="Perfil Organizador"
+        profile2="Perfil Criativo"
+        profile3="Perfil Analítico"
+        options={data.DynamicContent57 || []}
+      />
 
       <ReportText text={staticText(104)} />
 
       <ReportText text={staticText(105)} />
       <Chart6 profiles={data.Profiles || []} />
 
-      <ReportText text="texto dinâmico 57" />
+      <Dynamic57
+        profiles={data.Profiles || []}
+        profile1="Perfil Mediador"
+        profile2="Perfil Prestativo"
+        profile3="Perfil Planejador"
+        options={data.DynamicContent57 || []}
+      />
 
       <ReportText text={staticText(107)} />
 
       <ReportText text={staticText(108)} />
       <Chart7 profiles={data.Profiles || []} />
 
-      <ReportText text="texto dinâmico 57" />
+      <Dynamic57
+        profiles={data.Profiles || []}
+        profile1="Perfil Mediador"
+        profile2="Perfil Criativo"
+        profile3="Perfil Visionário"
+        options={data.DynamicContent57 || []}
+      />
 
       <ReportText text={staticText(110)} />
 
       <ReportText text={staticText(111)} />
       <Chart8 profiles={data.Profiles || []} />
 
-      <ReportText text="texto dinâmico 57" />
+      <Dynamic57
+        profiles={data.Profiles || []}
+        profile1="Perfil Comandante"
+        profile2="Perfil Realizador"
+        profile3="Perfil Analítico"
+        options={data.DynamicContent57 || []}
+      />
 
       <ReportText text={staticText(113)} />
 
       <ReportText text={staticText(114)} />
       <Chart9 profiles={data.Profiles || []} />
 
-      <ReportText text="texto dinâmico 57" />
+      <Dynamic57
+        profiles={data.Profiles || []}
+        profile1="Perfil Mediador"
+        profile2="Perfil Prestativo"
+        profile3="Perfil Visionário"
+        options={data.DynamicContent57 || []}
+      />
 
       <ReportText text={staticText(116)} />
 
       <ReportText text={staticText(117)} />
       <Chart10 profiles={data.Profiles || []} />
 
-      <ReportText text="texto dinâmico 57" />
+      <Dynamic57
+        profiles={data.Profiles || []}
+        profile1="Perfil Organizador"
+        profile2="Perfil Prestativo"
+        profile3="Perfil Analítico"
+        options={data.DynamicContent57 || []}
+      />
 
       <ReportText text={staticText(119)} />
 
       <ReportText text={staticText(120)} />
       <Chart11 profiles={data.Profiles || []} />
 
-      <ReportText text="texto dinâmico 57" />
+      <Dynamic57
+        profiles={data.Profiles || []}
+        profile1="Perfil Organizador"
+        profile2="Perfil Prestativo"
+        profile3="Perfil Planejador"
+        options={data.DynamicContent57 || []}
+      />
 
       <ReportText text={staticText(122)} />
 
       <ReportText text={staticText(123)} />
       <Chart12 profiles={data.Profiles || []} />
 
-      <ReportText text="texto dinâmico 57" />
+      <Dynamic57
+        profiles={data.Profiles || []}
+        profile1="Perfil Mediador"
+        profile2="Perfil Realizador"
+        profile3="Perfil Visionário"
+        options={data.DynamicContent57 || []}
+      />
 
       <ReportText text={staticText(125)} />
 
       <ReportText text={staticText(126)} />
       <Chart13 profiles={data.Profiles || []} />
 
-      <ReportText text="texto dinâmico 57" />
+      <Dynamic57
+        profiles={data.Profiles || []}
+        profile1="Perfil Organizador"
+        profile2="Perfil Criativo"
+        profile3="Perfil Visionário"
+        options={data.DynamicContent57 || []}
+      />
 
       <ReportText text={staticText(128)} />
 
       <ReportText text={staticText(129)} />
       <Chart14 profiles={data.Profiles || []} />
 
-      <ReportText text="texto dinâmico 57" />
+      <Dynamic57
+        profiles={data.Profiles || []}
+        profile1="Perfil Comandante"
+        profile2="Perfil Realizador"
+        profile3="Perfil Visionário"
+        options={data.DynamicContent57 || []}
+      />
 
       <ReportText text={staticText(131)} />
 
       <ReportText text={staticText(132)} />
       <Chart15 profiles={data.Profiles || []} />
 
-      <ReportText text="texto dinâmico 57" />
+      <Dynamic57
+        profiles={data.Profiles || []}
+        profile1="Perfil Organizador"
+        profile2="Perfil Realizador"
+        profile3="Perfil Planejador"
+        options={data.DynamicContent57 || []}
+      />
 
       <ReportText text={staticText(134)} />
 
       <ReportText text={staticText(135)} />
       <Chart16 profiles={data.Profiles || []} />
 
-      <ReportText text="texto dinâmico 57" />
+      <Dynamic57
+        profiles={data.Profiles || []}
+        profile1="Perfil Organizador"
+        profile2="Perfil Realizador"
+        profile3="Perfil Visionário"
+        options={data.DynamicContent57 || []}
+      />
 
       <ReportText text={staticText(137)} />
 
