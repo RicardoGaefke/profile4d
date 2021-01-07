@@ -41,6 +41,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
   const dynamicTitle = (contentId: number): string => filterStaticTitle(contentId, Language, data.DynamicContent || []);
   const dynamicText = (contentId: number): string => filterStaticText(contentId, Language, data.DynamicContent || []);
   const dynamicText56 = (contentId: number): string => filterStaticText(contentId, Language, data.DynamicContent56 || []);
+  const dynamicText19 = (contentId: number): string => filterStaticText(contentId, Language, data.DynamicContent19 || []);
 
   const staticImages: IImage[] = data.Images || [];
 
@@ -124,7 +125,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={dynamicText(18)} />
 
       <ReportTitle title={staticTitle(29)} />
-      <ReportText text="texto dinâmico 19" />
+      <ReportText text={dynamicText19(1)} />
 
       <ReportTitle title={staticTitle(30)} />
       <ReportText text={dynamicText(20)} />
