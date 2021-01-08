@@ -43,7 +43,9 @@ const Dynamic35 = (props: IDynamic35): JSX.Element => {
     const apoio = perfs[1];
     const apoioPercent = ((apoio.Total / 165) * 100);
 
-    if (Math.abs(dominantePercent - apoioPercent) > 8) {
+    const apoioMax = (apoioPercent * 1.08);
+
+    if (dominantePercent > apoioMax) {
       setResultado(2);
     }
   }, []);
