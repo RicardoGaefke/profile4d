@@ -11,6 +11,7 @@ namespace Profile4d.Domain
     public List<StaticFirstPage> DynamicContent57;
     public List<StaticFirstPage> DynamicContent19;
     public List<StaticFirstPage> DynamicContent34;
+    public List<StaticFirstPage> DynamicContent35;
     public List<Image> Images;
 
     public Report()

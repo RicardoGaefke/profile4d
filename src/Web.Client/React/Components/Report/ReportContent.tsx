@@ -27,6 +27,7 @@ import Chart17 from './Chart17';
 import Chart4 from './Chart4';
 import Dynamic57 from './Dynamic57';
 import Dynamic34 from './Dynamic34';
+import Dynamic35 from './Dynamic35';
 
 export interface ReportContentProps {
   data: IReport;
@@ -221,7 +222,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
         profiles={data.Profiles || []}
       />
 
-      <ReportText text="texto dinâmico 35" />
+      <Dynamic35 options={data.DynamicContent35 || []} profiles={data.Profiles || []} />
 
       <ReportTitle title={staticTitle(64)} />
       <ReportText text="texto dinâmico 38" />
