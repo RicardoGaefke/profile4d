@@ -12,5 +12,6 @@ export interface IReport extends IBasicReturn
   DynamicContent57?: IStaticIntroduction[];
   DynamicContent19?: IStaticIntroduction[];
   DynamicContent34?: IStaticIntroduction[];
+  DynamicContent35?: IStaticIntroduction[];
   Images?: IImage[];
 }

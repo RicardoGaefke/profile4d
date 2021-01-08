@@ -26,6 +26,7 @@ namespace Profile4d.Data
       List<StaticFirstPage> dynamics57 = new List<StaticFirstPage>();
       List<StaticFirstPage> dynamics19 = new List<StaticFirstPage>();
       List<StaticFirstPage> dynamics34 = new List<StaticFirstPage>();
+      List<StaticFirstPage> dynamics35 = new List<StaticFirstPage>();
       List<Image> images = new List<Image>();
 
       using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
@@ -166,6 +167,22 @@ namespace Profile4d.Data
                 }
               );
             }
+
+            MyDR.NextResult();
+
+            while (MyDR.Read())
+            {
+              dynamics35.Add(
+                new StaticFirstPage()
+                {
+                  Id = MyDR.GetInt32(0),
+                  Title_PT = MyDR.GetString(1),
+                  Text_PT = MyDR.GetString(2),
+                  Title_ENG = MyDR.GetString(3),
+                  Text_ENG = MyDR.GetString(4)
+                }
+              );
+            }
           }
         }
       }
@@ -178,6 +195,7 @@ namespace Profile4d.Data
       _return.DynamicContent57 = dynamics57;
       _return.DynamicContent19 = dynamics19;
       _return.DynamicContent34 = dynamics34;
+      _return.DynamicContent35 = dynamics35;
 
       return _return;
     }
