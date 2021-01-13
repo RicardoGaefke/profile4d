@@ -6,7 +6,6 @@ import { filterStaticText } from './filterStatic';
 import { useStateValue } from '../../Initial/Context/StateProvider';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
-import ReportText from './ReportText';
 
 export interface IDynamic34 {
   profiles: IProfiles[];
@@ -19,8 +18,7 @@ const Dynamic34 = (props: IDynamic34): JSX.Element => {
   const [{ Language }] = useStateValue();
 
   const [conflitos, setConflitos] = useState<string[]>([]);
-
-  const abaixoDe16 = profiles.filter((item): boolean => ((item.Total / 165) * 100) < 16);
+  const [ready, setReady] = useState<boolean>(false);
 
   const dynamicText34 = (contentId: number): string => filterStaticText(contentId, Language, options || []);
 
@@ -43,93 +41,64 @@ const Dynamic34 = (props: IDynamic34): JSX.Element => {
   let visionario = profiles.filter((item): boolean => item.Name === 'Perfil Visionário')[0].Total || 0;
   visionario = ((visionario / 165) * 100);
 
-  useEffect((): void => {
-    const conflicts: string[] = [];
+  const AddOrDont = (total1: number, total2: number, conflictId: number): void => {
+    if (total1 < 16 || total2 < 16) return;
 
-    if (Math.abs(analitico - organizador) <= 8) {
-      conflicts.push(dynamicText34(1));
-    }
+    const min = Math.min(total1, total2);
+    const max = Math.max(total1, total2);
 
-    if (Math.abs(analitico - criativo) <= 8) {
-      conflicts.push(dynamicText34(2));
-    }
+    const percent = (min * 1.08);
 
-    if (Math.abs(realizador - planejador) <= 8) {
-      conflicts.push(dynamicText34(3));
-    }
+    const conflicts: string[] = conflitos;
 
-    if (Math.abs(visionario - prestativo) <= 8) {
-      conflicts.push(dynamicText34(4));
-    }
-
-    if (Math.abs(visionario - analitico) <= 8) {
-      conflicts.push(dynamicText34(5));
-    }
-
-    if (Math.abs(prestativo - criativo) <= 8) {
-      conflicts.push(dynamicText34(6));
-    }
-
-    if (Math.abs(comandante - mediador) <= 8) {
-      conflicts.push(dynamicText34(8));
-    }
-
-    if (Math.abs(visionario - comandante) <= 8) {
-      conflicts.push(dynamicText34(9));
-    }
-
-    if (Math.abs(organizador - mediador) <= 8) {
-      conflicts.push(dynamicText34(10));
-    }
-
-    if (Math.abs(comandante - organizador) <= 8) {
-      conflicts.push(dynamicText34(11));
-    }
-
-    if (Math.abs(comandante - criativo) <= 8) {
-      conflicts.push(dynamicText34(12));
-    }
-
-    if (Math.abs(planejador - visionario) <= 8) {
-      conflicts.push(dynamicText34(13));
-    }
-
-    if (Math.abs(planejador - analitico) <= 8) {
-      conflicts.push(dynamicText34(14));
-    }
-
-    if (Math.abs(realizador - criativo) <= 8) {
-      conflicts.push(dynamicText34(15));
-    }
-
-    if (Math.abs(realizador - prestativo) <= 8) {
-      conflicts.push(dynamicText34(16));
-    }
-
-    if (Math.abs(prestativo - organizador) <= 8) {
-      conflicts.push(dynamicText34(17));
+    if (max <= percent) {
+      conflicts.push(dynamicText34(conflictId));
     }
 
     setConflitos(conflicts);
+  };
+
+  const groupAll = (): void => {
+    AddOrDont(analitico, organizador, 1);
+    AddOrDont(analitico, criativo, 2);
+    AddOrDont(realizador, planejador, 3);
+    AddOrDont(visionario, prestativo, 4);
+    AddOrDont(visionario, analitico, 5);
+    AddOrDont(prestativo, criativo, 6);
+    AddOrDont(comandante, mediador, 8);
+    AddOrDont(visionario, comandante, 9);
+    AddOrDont(organizador, mediador, 10);
+    AddOrDont(comandante, organizador, 11);
+    AddOrDont(comandante, criativo, 12);
+    AddOrDont(planejador, visionario, 13);
+    AddOrDont(planejador, analitico, 14);
+    AddOrDont(realizador, criativo, 15);
+    AddOrDont(realizador, prestativo, 16);
+    AddOrDont(prestativo, organizador, 17);
+
+    if (conflitos.length === 0) {
+      setConflitos([dynamicText34(7)]);
+    }
+  };
+
+  useEffect((): void => {
+    groupAll();
+    setReady(true);
   }, []);
 
-  if (abaixoDe16.length > 0 || conflitos.length === 0) {
-    return (
-      <ReportText text={dynamicText34(7)} />
-    );
-  }
-
-  return (
+  return (!ready) ? (
+    <>
+      preparando a lista
+    </>
+  ) : (
     <List>
       {
         conflitos.map((item, index): React.ReactNode => (
           // eslint-disable-next-line react/no-array-index-key
           <ListItem key={index}>
             <ListItemText color="red">
-              <strong>
-                {/* eslint-disable-next-line react/no-danger */ }
-                <div dangerouslySetInnerHTML={{ __html: item }} />
-              </strong>
+              {/* eslint-disable-next-line react/no-danger */}
+              <div dangerouslySetInnerHTML={{ __html: item }} />
             </ListItemText>
           </ListItem>
         ))
