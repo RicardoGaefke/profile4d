@@ -22,7 +22,7 @@ const Dynamic38 = (props: IDynamic38): JSX.Element => {
 
   const dynamicText38 = (contentId: number): string => filterStaticText(contentId, Language, options || []);
 
-  useEffect((): void => {
+  const create38 = (): void => {
     const amarelos = profiles.filter((item): boolean => item.Color === 'Amarelo');
     amarelos.sort((a, b): number => b.Total - a.Total || b.InternalNumber - a.InternalNumber);
     const amarelo = amarelos[0];
@@ -48,77 +48,95 @@ const Dynamic38 = (props: IDynamic38): JSX.Element => {
     if (perfis.includes('Perfil Mediador') && perfis.includes('Perfil Analítico') && perfis.includes('Perfil Criativo')) {
       setResultado(1);
       setReady(true);
+      return;
     }
 
     if (perfis.includes('Perfil Comandante') && perfis.includes('Perfil Realizador') && perfis.includes('Perfil Visionário')) {
       setResultado(2);
       setReady(true);
+      return;
     }
 
     if (perfis.includes('Perfil Organizador') && perfis.includes('Perfil Prestativo') && perfis.includes('Perfil Planejador')) {
       setResultado(3);
       setReady(true);
+      return;
     }
 
     if (perfis.includes('Perfil Mediador') && perfis.includes('Perfil Prestativo') && perfis.includes('Perfil Visionário')) {
       setResultado(4);
       setReady(true);
+      return;
     }
 
     if (perfis.includes('Perfil Analítico') && perfis.includes('Perfil Realizador') && perfis.includes('Perfil Organizador')) {
       setResultado(5);
       setReady(true);
-
-      if (perfis.includes('Perfil Planejador') && perfis.includes('Perfil Criativo') && perfis.includes('Perfil Comandante')) {
-        setResultado(6);
-        setReady(true);
-      }
-
-      if (primeiro.Name === 'Perfil Realizador' && segundo.Name === 'Perfil Planejador' && terceiro.Name === 'Perfil Mediador') {
-        setResultado(7);
-        setReady(true);
-      }
-
-      if (primeiro.Name === 'Perfil Planejador' && segundo.Name === 'Perfil Mediador' && terceiro.Name === 'Perfil Realizador') {
-        setResultado(7);
-        setReady(true);
-      }
-
-      if (primeiro.Name === 'Perfil Mediador' && segundo.Name === 'Perfil Realizador' && terceiro.Name === 'Perfil Planejador') {
-        setResultado(7);
-        setReady(true);
-      }
-
-      if (primeiro.Name === 'Perfil Visionário' && segundo.Name === 'Perfil Criativo' && terceiro.Name === 'Perfil Organizador') {
-        setResultado(8);
-        setReady(true);
-      }
-
-      if (primeiro.Name === 'Perfil Criativo' && segundo.Name === 'Perfil Organizador' && terceiro.Name === 'Perfil Visionário') {
-        setResultado(8);
-        setReady(true);
-      }
-
-      if (primeiro.Name === 'Perfil Organizador' && segundo.Name === 'Perfil Visionário' && terceiro.Name === 'Perfil Criativo') {
-        setResultado(8);
-        setReady(true);
-      }
-
-      if (primeiro.Name === 'Perfil Prestativo' && segundo.Name === 'Perfil Analítico' && terceiro.Name === 'Perfil Comandante') {
-        setResultado(9);
-        setReady(true);
-      }
-
-      if (primeiro.Name === 'Perfil Comandante' && segundo.Name === 'Perfil Prestativo' && terceiro.Name === 'Perfil Analítico') {
-        setResultado(9);
-        setReady(true);
-      }
-
-      if (primeiro.Name === 'Perfil Analítico' && segundo.Name === 'Perfil Comandante' && terceiro.Name === 'Perfil Prestativo') {
-        setResultado(9);
-        setReady(true);
-      }
+      return;
     }
+
+    if (perfis.includes('Perfil Planejador') && perfis.includes('Perfil Criativo') && perfis.includes('Perfil Comandante')) {
+      setResultado(6);
+      setReady(true);
+      return;
+    }
+
+    if (primeiro.Name === 'Perfil Realizador' && segundo.Name === 'Perfil Planejador' && terceiro.Name === 'Perfil Mediador') {
+      setResultado(7);
+      setReady(true);
+      return;
+    }
+
+    if (primeiro.Name === 'Perfil Planejador' && segundo.Name === 'Perfil Mediador' && terceiro.Name === 'Perfil Realizador') {
+      setResultado(7);
+      setReady(true);
+      return;
+    }
+
+    if (primeiro.Name === 'Perfil Mediador' && segundo.Name === 'Perfil Realizador' && terceiro.Name === 'Perfil Planejador') {
+      setResultado(7);
+      setReady(true);
+      return;
+    }
+
+    if (primeiro.Name === 'Perfil Visionário' && segundo.Name === 'Perfil Criativo' && terceiro.Name === 'Perfil Organizador') {
+      setResultado(8);
+      setReady(true);
+      return;
+    }
+
+    if (primeiro.Name === 'Perfil Criativo' && segundo.Name === 'Perfil Organizador' && terceiro.Name === 'Perfil Visionário') {
+      setResultado(8);
+      setReady(true);
+      return;
+    }
+
+    if (primeiro.Name === 'Perfil Organizador' && segundo.Name === 'Perfil Visionário' && terceiro.Name === 'Perfil Criativo') {
+      setResultado(8);
+      setReady(true);
+      return;
+    }
+
+    if (primeiro.Name === 'Perfil Prestativo' && segundo.Name === 'Perfil Analítico' && terceiro.Name === 'Perfil Comandante') {
+      setResultado(9);
+      setReady(true);
+      return;
+    }
+
+    if (primeiro.Name === 'Perfil Comandante' && segundo.Name === 'Perfil Prestativo' && terceiro.Name === 'Perfil Analítico') {
+      setResultado(9);
+      setReady(true);
+      return;
+    }
+
+    if (primeiro.Name === 'Perfil Analítico' && segundo.Name === 'Perfil Comandante' && terceiro.Name === 'Perfil Prestativo') {
+      setResultado(9);
+      setReady(true);
+    }
+  };
+
+  useEffect((): void => {
+    create38();
   }, []);
 
   return (ready) ? (<ReportText text={dynamicText38(resultado)} />) : (<></>);
