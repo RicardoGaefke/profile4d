@@ -47,6 +47,11 @@ const Chart1 = (props: Chart1Props): JSX.Element => {
 
   return (
     <Pie
+      options={{
+        legend: {
+          position: 'bottom',
+        },
+      }}
       data={data}
     />
   );
