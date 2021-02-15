@@ -119,6 +119,9 @@ const Chart2 = (props: Chart2Props): JSX.Element => {
             },
           }],
         },
+        legend: {
+          position: 'bottom',
+        },
       }}
     />
   );
