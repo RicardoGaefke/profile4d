@@ -89,6 +89,9 @@ const Chart17 = (props: Chart17Props): JSX.Element => {
             },
           }],
         },
+        legend: {
+          position: 'bottom',
+        },
       }}
     />
   );

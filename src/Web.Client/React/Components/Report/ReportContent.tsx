@@ -224,9 +224,10 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
         profiles={data.Profiles || []}
       />
 
+      <ReportTitle title={staticTitle(64)} />
+
       <Dynamic35 options={data.DynamicContent35 || []} profiles={data.Profiles || []} />
 
-      <ReportTitle title={staticTitle(64)} />
       <Dynamic38 options={data.DynamicContent38 || []} profiles={data.Profiles || []} />
 
       <ReportTitle title={staticTitle(65)} />
