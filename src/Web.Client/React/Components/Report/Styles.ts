@@ -6,6 +6,7 @@ interface IStyles {
   itemWithBorder: {},
   image: {},
   container: {},
+  pdfContainer: {},
 }
 
 export default makeStyles((theme: Theme): IStyles => ({
@@ -28,5 +29,10 @@ export default makeStyles((theme: Theme): IStyles => ({
   container: {
     padding: theme.spacing(4),
     maxWidth: '800px',
+  },
+  pdfContainer: {
+    padding: 0,
+    width: '100%',
+    height: 'calc(100vh - 105px)',
   },
 }));

@@ -4,31 +4,35 @@ import { useParams } from 'react-router';
 import {
   Grid, CircularProgress,
 } from '@material-ui/core';
+import {
+  // eslint-disable-next-line no-unused-vars
+  PDFViewer, Document, Page, View, Image,
+} from '@react-pdf/renderer';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
 import { withSnackbar, WithSnackbarProps } from 'notistack';
 // eslint-disable-next-line no-unused-vars
-import { IAnswerRouterProps } from '../Answer/Router';
+import { IAnswerRouterProps } from '../../Answer/Router';
 // eslint-disable-next-line no-unused-vars
-import { IReport } from '../../../../TypeScript/Interfaces/IReport';
-import getReport from './getReport';
-import ReportContent from './ReportContent';
-import useStyles from './Styles';
-import setLanguage from './Language';
+import { IReport } from '../../../../../TypeScript/Interfaces/IReport';
+import getReport from '../getReport';
+import setLanguage from '../Language';
+import useStyles from '../Styles';
+import Page01 from './Page01';
+import styles from './Styles';
 
-export type ReportProps = WithSnackbarProps & WithTranslation;
+export type ReportPDFProps = WithSnackbarProps & WithTranslation;
 
-const Report = withTranslation()(
-  (props: ReportProps): JSX.Element => {
+const ReportPDF = withTranslation()(
+  (props: ReportPDFProps): JSX.Element => {
     const { enqueueSnackbar } = props;
     const { guid } = useParams<IAnswerRouterProps>();
     const history = useHistory();
-    const classes = useStyles();
     setLanguage();
+    const classes = useStyles();
 
     const [loading, setLoading] = useState<boolean>(true);
-    // eslint-disable-next-line no-unused-vars
     const [data, setData] = useState<IReport>({} as IReport);
 
     const updateReport = (): void => {
@@ -58,6 +62,7 @@ const Report = withTranslation()(
 
     return (
       <Grid
+        className={classes.pdfContainer}
         container
         spacing={0}
         direction="column"
@@ -70,16 +75,27 @@ const Report = withTranslation()(
               <CircularProgress size={100} />
             </Grid>
           ) : (
-            <Grid
-              item
-              container
-              justify="center"
-              className={classes.container}
+            <PDFViewer
+              style={{
+                display: 'flex',
+                width: '100%',
+                height: '100%',
+                flex: 1,
+                border: 0,
+              }}
             >
-              <div>
-                <ReportContent data={data} />
-              </div>
-            </Grid>
+              <Document>
+                <Page01 data={data} />
+                <Page size="A4">
+                  <View style={styles.imageWrapper}>
+                    {/* <Image
+                      source="/img/locker.jpg"
+                      style={styles.image}
+                    /> */}
+                  </View>
+                </Page>
+              </Document>
+            </PDFViewer>
           )
         }
       </Grid>
@@ -87,6 +103,6 @@ const Report = withTranslation()(
   },
 );
 
-Report.displayName = 'Report';
+ReportPDF.displayName = 'ReportPDF';
 
-export default withSnackbar(Report);
+export default withSnackbar(ReportPDF);
