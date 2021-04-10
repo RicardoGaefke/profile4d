@@ -1,7 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { IReport } from '../../../../TypeScript/Interfaces/IReport';
-import { useStateValue } from '../../Initial/Context/StateProvider';
+// import { useStateValue } from '../../Initial/Context/StateProvider';
 import FilterImage from './FilterImage';
 import ReportTitle from './ReportTitle';
 import ReportText from './ReportText';
@@ -37,7 +37,9 @@ export interface ReportContentProps {
 
 const ReportContent = (props: ReportContentProps): JSX.Element => {
   const { data } = props;
-  const [{ Language }] = useStateValue();
+  // const [{ Language = 'PT' }] = useStateValue();
+  const Language: string = 'PT';
+
 
   const staticTitle = (contentId: number): string => filterStaticTitle(contentId, Language, data.StaticContent || []);
   const staticText = (contentId: number): string => filterStaticText(contentId, Language, data.StaticContent || []);
@@ -57,7 +59,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(1)} />
       <ReportText text={staticText(1)} />
 
-      <ReportTitle title={staticTitle(2)} />
+      <ReportTitle title={staticTitle(2)} breakPage />
       {FilteredImage(2)}
 
       <ReportText text={staticText(3)} />
