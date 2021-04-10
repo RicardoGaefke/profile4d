@@ -40,6 +40,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
   // const [{ Language = 'PT' }] = useStateValue();
   const Language: string = 'PT';
 
+
   const staticTitle = (contentId: number): string => filterStaticTitle(contentId, Language, data.StaticContent || []);
   const staticText = (contentId: number): string => filterStaticText(contentId, Language, data.StaticContent || []);
 
@@ -58,7 +59,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(1)} />
       <ReportText text={staticText(1)} />
 
-      <ReportTitle title={staticTitle(2)} />
+      <ReportTitle title={staticTitle(2)} breakPage />
       {FilteredImage(2)}
 
       <ReportText text={staticText(3)} />

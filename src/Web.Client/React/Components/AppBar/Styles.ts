@@ -11,6 +11,9 @@ export default makeStyles((theme: Theme): IStyles => ({
   root: {
     flexGrow: 0,
     marginTop: 65,
+    '@media print': {
+      display: 'none',
+    },
   },
   title: {
     flexGrow: 1,
