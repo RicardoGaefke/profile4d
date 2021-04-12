@@ -9,6 +9,7 @@ interface IStyles {
   container: {},
   pdfContainer: {},
   brakePage: {},
+  itemBrakePage: {},
 }
 
 export default makeStyles((theme: Theme): IStyles => ({
@@ -31,8 +32,6 @@ export default makeStyles((theme: Theme): IStyles => ({
     },
   },
   itemWithBorder: {
-    padding: theme.spacing(4),
-    width: '100%',
     border: 'solid 1px darkgray',
   },
   image: {
@@ -55,10 +54,15 @@ export default makeStyles((theme: Theme): IStyles => ({
     padding: theme.spacing(4),
     width: '100%',
     '@media print': {
-      pageBrakeBefore: 'always',
+      'page-break-before': 'always',
       font: '20pt Calibri, Georgia, "Times New Roman", Times, serif',
       lineHeight: 1.3,
       padding: theme.spacing(1),
+    },
+  },
+  itemBrakePage: {
+    '@media print': {
+      'page-break-before': 'always',
     },
   },
 }));
