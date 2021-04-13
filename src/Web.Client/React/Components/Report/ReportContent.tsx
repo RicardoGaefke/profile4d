@@ -30,6 +30,7 @@ import Dynamic34 from './Dynamic34';
 import Dynamic35 from './Dynamic35';
 import Dynamic38 from './Dynamic38';
 import Dynamic59 from './Dynamic59';
+// import useStyles from './Styles';
 
 export interface ReportContentProps {
   data: IReport;
@@ -39,6 +40,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
   const { data } = props;
   // const [{ Language = 'PT' }] = useStateValue();
   const Language: string = 'PT';
+  // const classes = useStyles();
 
 
   const staticTitle = (contentId: number): string => filterStaticTitle(contentId, Language, data.StaticContent || []);
