@@ -10,6 +10,7 @@ interface IStyles {
   pdfContainer: {},
   brakePage: {},
   itemBrakePage: {},
+  chart: {},
 }
 
 export default makeStyles((theme: Theme): IStyles => ({
@@ -19,7 +20,7 @@ export default makeStyles((theme: Theme): IStyles => ({
     '@media print': {
       font: '10pt Calibri, Georgia, "Times New Roman", Times, serif',
       lineHeight: 1.3,
-      padding: theme.spacing(1),
+      padding: theme.spacing(2),
     },
   },
   title: {
@@ -28,7 +29,7 @@ export default makeStyles((theme: Theme): IStyles => ({
     '@media print': {
       font: '20pt Calibri, Georgia, "Times New Roman", Times, serif',
       lineHeight: 1.3,
-      padding: theme.spacing(1),
+      padding: theme.spacing(2),
     },
   },
   itemWithBorder: {
@@ -57,12 +58,18 @@ export default makeStyles((theme: Theme): IStyles => ({
       'page-break-before': 'always',
       font: '20pt Calibri, Georgia, "Times New Roman", Times, serif',
       lineHeight: 1.3,
-      padding: theme.spacing(1),
+      padding: theme.spacing(2),
     },
   },
   itemBrakePage: {
     '@media print': {
       'page-break-before': 'always',
+    },
+  },
+  chart: {
+    '@media print': {
+      width: '80%',
+      padding: theme.spacing(4),
     },
   },
 }));
