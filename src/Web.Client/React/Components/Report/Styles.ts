@@ -20,7 +20,7 @@ export default makeStyles((theme: Theme): IStyles => ({
     '@media print': {
       font: '10pt Calibri, Georgia, "Times New Roman", Times, serif',
       lineHeight: 1.3,
-      padding: theme.spacing(2),
+      padding: theme.spacing(1),
     },
   },
   title: {
@@ -29,7 +29,7 @@ export default makeStyles((theme: Theme): IStyles => ({
     '@media print': {
       font: '20pt Calibri, Georgia, "Times New Roman", Times, serif',
       lineHeight: 1.3,
-      padding: theme.spacing(2),
+      padding: theme.spacing(1),
     },
   },
   itemWithBorder: {
@@ -58,7 +58,7 @@ export default makeStyles((theme: Theme): IStyles => ({
       'page-break-before': 'always',
       font: '20pt Calibri, Georgia, "Times New Roman", Times, serif',
       lineHeight: 1.3,
-      padding: theme.spacing(2),
+      padding: theme.spacing(1),
     },
   },
   itemBrakePage: {
@@ -68,8 +68,7 @@ export default makeStyles((theme: Theme): IStyles => ({
   },
   chart: {
     '@media print': {
-      width: '80%',
-      padding: theme.spacing(4),
+      margin: '0 20% 0 20%',
     },
   },
 }));
