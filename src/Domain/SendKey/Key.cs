@@ -7,6 +7,7 @@ namespace Profile4d.Domain
     public int Id { get; set; }
     public string Guid { get; set; }
     public string Email { get; set; }
+    public bool BlockResult { get; set; }
     public int SentBy { get; set; }
     public int Consultant { get; set; }
     public int Keys { get; set; }
@@ -29,6 +30,18 @@ namespace Profile4d.Domain
       this.Email = email;
       this.SentBy = sentBy;
       this.Consultant = consultant;
+    }
+
+    public Key(string email, int sentBy, int consultant, bool blockRestult)
+    {
+      DomainException.When(!string.IsNullOrEmpty(email), "Email is required!");
+      DomainException.When(!(sentBy < 1), "SentBy is required!");
+      DomainException.When(!(consultant < 1), "Consultant is required!");
+
+      this.Email = email;
+      this.SentBy = sentBy;
+      this.Consultant = consultant;
+      this.BlockResult = blockRestult;
     }
 
     /// <summary>

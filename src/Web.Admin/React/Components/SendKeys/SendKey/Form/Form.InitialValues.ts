@@ -4,9 +4,11 @@ import { IBasicReturn } from '../../../../../../TypeScript/Interfaces/IBasicRetu
 export interface IForm extends IBasicReturn {
   Email: string,
   ConfirmEmail: string,
+  BlockResult: boolean,
 }
 
 export default {
   Email: '',
   ConfirmEmail: '',
+  BlockResult: true,
 } as IForm;

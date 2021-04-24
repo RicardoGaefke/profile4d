@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Grid, TextField, Button,
+  Grid, TextField, Button, FormControlLabel, Checkbox,
 } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
@@ -26,7 +26,15 @@ export default (props: IMyForm): React.ReactElement<IMyForm> => {
     handleBlur,
     handleSubmit,
     setFieldTouched,
+    setFieldValue,
   } = props;
+
+  const handleCheck = (
+    event: React.ChangeEvent<HTMLInputElement>,
+    checked: boolean,
+  ): void => {
+    setFieldValue('BlockResult', !checked);
+  };
 
   i18n.on('languageChanged', (): void => {
     Object.keys(errors).forEach((fieldName): void => {
@@ -102,6 +110,26 @@ export default (props: IMyForm): React.ReactElement<IMyForm> => {
             variant="outlined"
             className={classes.item}
             fullWidth
+          />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={12}
+          lg={12}
+        >
+          <FormControlLabel
+            control={
+              (
+                <Checkbox
+                  checked={values.BlockResult}
+                  onChange={(event): void => handleCheck(event, values.BlockResult)}
+                  name="checkedB"
+                  color="primary"
+                />
+              )
+            }
+            label="Bloquear resultado?"
           />
         </Grid>
         <Grid
