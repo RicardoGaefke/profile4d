@@ -69,11 +69,11 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportText text={staticText(4)} />
 
-      <ReportTitle title={staticTitle(5)} />
+      <ReportTitle title={staticTitle(5)} breakPage />
 
       <ReportText text={staticText(6)} />
 
-      <ReportText text={staticText(7)} breakPage />
+      <ReportText text={staticText(7)} />
 
       <ReportTitle title={dynamicTitle(2)} />
       <ReportText text={dynamicText(2)} />
@@ -380,7 +380,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportText text={staticText(107)} />
 
-      <ReportText text={staticText(108)} breakPage />
+      <ReportText text={staticText(108)} />
 
       <div className={classes.chart}>
         <Chart7 profiles={data.Profiles || []} />
