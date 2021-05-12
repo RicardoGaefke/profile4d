@@ -18,9 +18,10 @@ export default makeStyles((theme: Theme): IStyles => ({
     padding: theme.spacing(4),
     width: '100%',
     '@media print': {
-      font: '10pt Calibri, Georgia, "Times New Roman", Times, serif',
+      font: '12pt Calibri, Georgia, "Times New Roman", Times, serif',
       lineHeight: 1.3,
-      padding: theme.spacing(1),
+      padding: theme.spacing(0.2),
+      'page-break-inside': 'avoid',
     },
   },
   title: {
@@ -29,7 +30,8 @@ export default makeStyles((theme: Theme): IStyles => ({
     '@media print': {
       font: '20pt Calibri, Georgia, "Times New Roman", Times, serif',
       lineHeight: 1.3,
-      padding: theme.spacing(1),
+      padding: theme.spacing(0.2),
+      'page-break-inside': 'avoid',
     },
   },
   itemWithBorder: {
@@ -45,6 +47,9 @@ export default makeStyles((theme: Theme): IStyles => ({
   container: {
     padding: theme.spacing(4),
     maxWidth: '800px',
+    '@media print': {
+      padding: '10mm',
+    },
   },
   pdfContainer: {
     padding: 0,
@@ -58,7 +63,8 @@ export default makeStyles((theme: Theme): IStyles => ({
       'page-break-before': 'always',
       font: '20pt Calibri, Georgia, "Times New Roman", Times, serif',
       lineHeight: 1.3,
-      padding: theme.spacing(1),
+      padding: theme.spacing(0.2),
+      'page-break-inside': 'avoid',
     },
   },
   itemBrakePage: {

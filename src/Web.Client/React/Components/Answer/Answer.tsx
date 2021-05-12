@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router';
+import { useParams, useHistory } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { withSnackbar, WithSnackbarProps } from 'notistack';
 import {
@@ -12,6 +12,7 @@ import AnswerForm from '../Options/RadioOptions.form';
 import { useStateValue } from '../../Initial/Context/StateProvider';
 // eslint-disable-next-line no-unused-vars
 import { IAnswerRouterProps } from './Router';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 const Answer = (props: WithSnackbarProps): JSX.Element => {
   const { guid } = useParams<IAnswerRouterProps>();
@@ -20,6 +21,7 @@ const Answer = (props: WithSnackbarProps): JSX.Element => {
   const [{ Language }] = useStateValue();
 
   const { enqueueSnackbar } = props;
+  const history = useHistory();
 
   const getQuestion = async (): Promise<void> => {
     setLoading(true);
@@ -34,6 +36,8 @@ const Answer = (props: WithSnackbarProps): JSX.Element => {
           enqueueSnackbar('Já respondido!', {
             variant: 'warning',
           });
+        } else {
+          history.push('/');
         }
       },
     );
@@ -63,13 +67,36 @@ const Answer = (props: WithSnackbarProps): JSX.Element => {
             </Grid>
           </Grid>
         ) : (
-          <AnswerForm
-            Id={question.Id}
-            Message={(Language === 'ENG') ? question.Text_ENG : question.Text_PT}
-            submitAction={(): void => {
-              getQuestion();
-            }}
-          />
+          <>
+            <Grid
+              container
+              justify="center"
+              alignContent="center"
+            >
+              <Grid item>
+                <AnswerForm
+                  Id={question.Id}
+                  Message={(Language === 'ENG') ? question.Text_ENG : question.Text_PT}
+                  submitAction={(): void => {
+                    getQuestion();
+                  }}
+                />
+              </Grid>
+            </Grid>
+            <Grid
+              container
+              justify="center"
+              alignContent="center"
+            >
+              <Grid
+                item
+                xs={12}
+                md={6}
+              >
+                <ProgressBar Completed={40} Total={99} />
+              </Grid>
+            </Grid>
+          </>
         )
       }
     </Grid>

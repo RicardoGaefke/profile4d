@@ -1,3 +1,4 @@
+using System.Xml.Linq;
 using System;
 using Microsoft.Extensions.Options;
 using System.Collections.Generic;
@@ -195,6 +196,57 @@ namespace Profile4d.Data
           Cmd.ExecuteNonQuery();
         }
       }
+    }
+
+    public KeysPreview GetKeysByConsuntant(int consultant)
+    {
+      KeysPreview list = new KeysPreview();
+      List<Key> keys = new List<Key>();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[spGetLicensesByConsultant]";
+
+          Cmd.Parameters.AddWithValue("@ConsultantId", consultant);
+
+          Con.Open();
+
+          using (SqlDataReader reader = Cmd.ExecuteReader())
+          {
+            reader.Read();
+
+            list.Total = reader.GetInt32(0);
+
+            reader.NextResult();
+
+            reader.Read();
+
+            list.Available = reader.GetInt32(0);
+
+            reader.NextResult();
+
+            while (reader.Read())
+            {
+              Key key = new Key()
+              {
+                Guid = reader.GetGuid(0).ToString(),
+                Email = reader.GetString(1),
+                Finished = reader.GetDateTime(2)
+              };
+
+              keys.Add(key);
+            }
+          }
+        }
+      }
+
+      list.Keys = keys;
+
+      return list;
     }
   }
 }
