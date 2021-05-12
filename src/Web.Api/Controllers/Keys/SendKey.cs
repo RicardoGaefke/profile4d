@@ -235,5 +235,36 @@ namespace Profile4d.Web.Api.Controllers
         return _return;
       }
     }
+
+    [Authorize]
+    [HttpGet("GetLicensesByConsultant")]
+    public ActionResult<KeysPreview> GetLicensesByConsultant()
+    {
+      try
+      {
+        KeysPreview preview = _sendKey.GetKeysByConsuntant(Convert.ToInt32(_user));
+        preview.Success = true;
+
+        return preview;
+      }
+      catch (SqlException ex)
+      {
+        return new KeysPreview()
+        {
+          Code = "SQL",
+          Success = false,
+          Message = ex.Message
+        };
+      }
+      catch (System.Exception ex)
+      {
+        return new KeysPreview()
+        {
+          Code = "SQL",
+          Success = false,
+          Message = ex.Message
+        };
+      }
+    }
   }
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router';
+import { useParams, useHistory } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { withSnackbar, WithSnackbarProps } from 'notistack';
 import {
@@ -20,6 +20,7 @@ const Answer = (props: WithSnackbarProps): JSX.Element => {
   const [{ Language }] = useStateValue();
 
   const { enqueueSnackbar } = props;
+  const history = useHistory();
 
   const getQuestion = async (): Promise<void> => {
     setLoading(true);
@@ -34,6 +35,8 @@ const Answer = (props: WithSnackbarProps): JSX.Element => {
           enqueueSnackbar('Já respondido!', {
             variant: 'warning',
           });
+        } else {
+          history.push('/');
         }
       },
     );
