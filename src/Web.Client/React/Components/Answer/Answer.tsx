@@ -72,6 +72,20 @@ const Answer = (props: WithSnackbarProps): JSX.Element => {
               container
               justify="center"
               alignContent="center"
+              xs={12}
+            >
+              <Grid
+                item
+                xs={12}
+                md={6}
+              >
+                <ProgressBar Completed={10} Total={99} />
+              </Grid>
+            </Grid>
+            <Grid
+              container
+              justify="center"
+              alignContent="center"
             >
               <Grid item>
                 <AnswerForm
@@ -83,19 +97,7 @@ const Answer = (props: WithSnackbarProps): JSX.Element => {
                 />
               </Grid>
             </Grid>
-            <Grid
-              container
-              justify="center"
-              alignContent="center"
-            >
-              <Grid
-                item
-                xs={12}
-                md={6}
-              >
-                <ProgressBar Completed={40} Total={99} />
-              </Grid>
-            </Grid>
+            
           </>
         )
       }
