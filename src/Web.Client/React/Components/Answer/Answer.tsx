@@ -68,6 +68,7 @@ const Answer = (props: WithSnackbarProps): JSX.Element => {
           </Grid>
         ) : (
           <>
+          
             <Grid
               container
               justify="center"
