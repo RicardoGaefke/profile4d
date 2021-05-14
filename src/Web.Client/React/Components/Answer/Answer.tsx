@@ -36,6 +36,7 @@ const Answer = (props: WithSnackbarProps): JSX.Element => {
           enqueueSnackbar('Já respondido!', {
             variant: 'warning',
           });
+          history.push('/');
         } else {
           history.push('/');
         }
@@ -68,21 +69,6 @@ const Answer = (props: WithSnackbarProps): JSX.Element => {
           </Grid>
         ) : (
           <>
-          
-            <Grid
-              container
-              justify="center"
-              alignContent="center"
-              xs={12}
-            >
-              <Grid
-                item
-                xs={12}
-                md={6}
-              >
-                <ProgressBar Completed={10} Total={99} />
-              </Grid>
-            </Grid>
             <Grid
               container
               justify="center"
@@ -98,7 +84,19 @@ const Answer = (props: WithSnackbarProps): JSX.Element => {
                 />
               </Grid>
             </Grid>
-            
+            <Grid
+              container
+              justify="center"
+              alignContent="center"
+            >
+              <Grid
+                item
+                xs={12}
+                md={6}
+              >
+                <ProgressBar Completed={question.Respondidas as number} Total={question.Total as number} />
+              </Grid>
+            </Grid>
           </>
         )
       }
