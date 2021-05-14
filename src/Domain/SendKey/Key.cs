@@ -51,7 +51,8 @@ namespace Profile4d.Domain
     /// <param name="guid"></param>
     /// <param name="started"></param>
     /// <param name="finished"></param>
-    public Key(int id, string guid, DateTime? started, DateTime? finished)
+    /// <param name="blocked"></param>
+    public Key(int id, string guid, DateTime? started, DateTime? finished, bool blocked)
     {
       DomainException.When(!(id < 1), "Id is required!");
       DomainException.When(!string.IsNullOrEmpty(guid), "Guid is required!");
@@ -60,6 +61,7 @@ namespace Profile4d.Domain
       this.Guid = guid;
       this.Started = started;
       this.Finished = finished;
+      this.BlockResult = blocked;
     }
 
     public Key(string email, int sentBy, int keys, DateTime? when)

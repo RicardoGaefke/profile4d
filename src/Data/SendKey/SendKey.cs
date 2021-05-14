@@ -93,7 +93,8 @@ namespace Profile4d.Data
                 MyDR.GetInt32(0),
                 MyDR.GetGuid(1).ToString(),
                 (MyDR.IsDBNull(2)) ? DateTime.MinValue : MyDR.GetDateTime(2),
-                (MyDR.IsDBNull(3)) ? DateTime.MinValue : MyDR.GetDateTime(3)
+                (MyDR.IsDBNull(3)) ? DateTime.MinValue : MyDR.GetDateTime(3),
+                MyDR.GetBoolean(4)
               );
 
               _return.Add(key);
@@ -242,7 +243,10 @@ namespace Profile4d.Data
               {
                 Guid = reader.GetGuid(0).ToString(),
                 Email = reader.GetString(1),
-                Finished = reader.GetDateTime(2)
+                SentWhen = reader.GetDateTime(2),
+                Started = reader.GetDateTime(3),
+                Finished = reader.GetDateTime(4),
+                BlockResult = reader.GetBoolean(5)
               };
 
               keys.Add(key);
@@ -254,6 +258,25 @@ namespace Profile4d.Data
       list.Keys = keys;
 
       return list;
+    }
+
+    public void DesbloquearChave(string keyGuid)
+    {
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[dbo].[spDesbloquearChave]";
+
+          Cmd.Parameters.AddWithValue("@KeyGuid", keyGuid);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
     }
   }
 }
