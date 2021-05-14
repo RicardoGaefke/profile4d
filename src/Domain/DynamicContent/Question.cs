@@ -17,6 +17,8 @@ namespace Profile4d.Domain
     public string CreatedBy { get; set; }
     public string Created { get; set; }
     public int Answer { get; set; }
+    public int Total { get; set; }
+    public int Respondidas { get; set; }
 
     public Question()
     {}

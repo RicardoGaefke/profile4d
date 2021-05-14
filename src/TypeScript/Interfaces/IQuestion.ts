@@ -16,6 +16,8 @@ export interface IQuestion extends IBasicReturn
   Created?: string;
   Answer?: string | number;
   Finished?: boolean;
+  Total?: number;
+  Respondidas?: number;
 }
 
 export interface IQuestions extends IBasicReturn

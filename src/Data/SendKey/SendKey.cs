@@ -171,6 +171,13 @@ namespace Profile4d.Data
             _return.Id = MyDR.GetInt32(0);
             _return.Text_PT = MyDR.GetString(1);
             _return.Text_ENG = MyDR.GetString(2);
+
+            MyDR.NextResult();
+
+            MyDR.Read();
+
+            _return.Total = MyDR.GetInt32(0);
+            _return.Respondidas = MyDR.GetInt32(1);
           }
         }
       }

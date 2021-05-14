@@ -36,6 +36,7 @@ const Answer = (props: WithSnackbarProps): JSX.Element => {
           enqueueSnackbar('Já respondido!', {
             variant: 'warning',
           });
+          history.push('/');
         } else {
           history.push('/');
         }
@@ -93,7 +94,7 @@ const Answer = (props: WithSnackbarProps): JSX.Element => {
                 xs={12}
                 md={6}
               >
-                <ProgressBar Completed={40} Total={99} />
+                <ProgressBar Completed={question.Respondidas as number} Total={question.Total as number} />
               </Grid>
             </Grid>
           </>
