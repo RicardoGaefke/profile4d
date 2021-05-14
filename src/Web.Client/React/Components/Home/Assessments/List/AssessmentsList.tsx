@@ -51,6 +51,7 @@ const AssessmentsList = withTranslation()(
               <TableRow>
                 <TableCell>ID</TableCell>
                 <TableCell>Status</TableCell>
+                <TableCell>Disponível?</TableCell>
                 <TableCell>{t('Assessment:item.header.action')}</TableCell>
               </TableRow>
             </TableHead>
@@ -85,6 +86,13 @@ const AssessmentsList = withTranslation()(
                         </Typography>
                       </TableCell>
                       <TableCell>
+                        <Typography>
+                          {
+                            (key.BlockResult) ? 'Aguardando liberação' : 'Liberada'
+                          }
+                        </Typography>
+                      </TableCell>
+                      <TableCell>
                         {
                           (key.Finished?.includes('0001')) ? (
                             <Button
@@ -112,6 +120,7 @@ const AssessmentsList = withTranslation()(
                               endIcon={<CloudDownload />}
                               component={NavLink}
                               to={`/answer/report/${key.Guid}`}
+                              disabled={key.BlockResult}
                             >
                               {t('Assessment:item.action.report.text')}
                             </Button>
