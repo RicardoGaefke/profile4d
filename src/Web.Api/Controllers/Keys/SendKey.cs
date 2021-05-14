@@ -266,5 +266,20 @@ namespace Profile4d.Web.Api.Controllers
         };
       }
     }
+
+    [Authorize]
+    [HttpGet("DesbloquearChave/{chave}")]
+    public ActionResult<BasicReturn> DesbloquearChave(string chave)
+    {
+      try
+      {
+        _sendKey.DesbloquearChave(chave);
+        return new BasicReturn(true);
+      }
+      catch (System.Exception ex)
+      {
+        return new BasicReturn(false, ex.Message, ex.StackTrace);
+      }
+    }
   }
 }
