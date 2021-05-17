@@ -278,5 +278,25 @@ namespace Profile4d.Data
         }
       }
     }
+
+    public void CancelarChave(string keyGuid, int userId)
+    {
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[dbo].[spCancelaChaveEnviada]";
+
+          Cmd.Parameters.AddWithValue("@GuidDaChave", keyGuid);
+          Cmd.Parameters.AddWithValue("@UserId", userId);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+    }
   }
 }

@@ -52,6 +52,22 @@ const Licencas = withTranslation()(
       );
     };
 
+    const cancelarChave = async (guid: string): Promise<void> => {
+      await Axios(window.location.href).get<IBasicReturn>(`SendKey/CancelarChave/${guid}`).then(
+        (response): void => {
+          const { data } = response;
+
+          if (data.Success) {
+            getKeys();
+          } else {
+            enqueueSnackbar('Desculpe, falha ao cancelar chave! Provavelmente já foi iniciada!', {
+              variant: 'error',
+            });
+          }
+        },
+      );
+    };
+
     useEffect((): void => {
       getKeys();
     }, []);
@@ -104,12 +120,12 @@ const Licencas = withTranslation()(
             <Paper elevation={0}>
               {licencas.Available}
               {' '}
-              Disponíveis
+              Usadas
             </Paper>
             <Paper elevation={0}>
               {(licencas.Total as number) - (licencas.Available as number)}
               {' '}
-              usadas
+              Disponíveis
             </Paper>
           </div>
         </Grid>
@@ -120,7 +136,7 @@ const Licencas = withTranslation()(
           md={12}
           lg={12}
         >
-          <ListaDeLicencas keys={licencas.Keys as IKey[]} onDesbloquear={desbloquearChave} />
+          <ListaDeLicencas keys={licencas.Keys as IKey[]} onDesbloquear={desbloquearChave} onCancelar={cancelarChave} />
         </Grid>
       </Grid>
     );

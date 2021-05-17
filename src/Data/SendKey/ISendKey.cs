@@ -13,5 +13,6 @@ namespace Profile4d.Data
     void Answer(Question data);
     KeysPreview GetKeysByConsuntant(int consultant);
     void DesbloquearChave(string keyGuid);
+    void CancelarChave(string keyGuid, int userId);
   }
 }

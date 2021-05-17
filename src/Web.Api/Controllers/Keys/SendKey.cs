@@ -281,5 +281,20 @@ namespace Profile4d.Web.Api.Controllers
         return new BasicReturn(false, ex.Message, ex.StackTrace);
       }
     }
+
+    [Authorize]
+    [HttpGet("CancelarChave/{chave}")]
+    public ActionResult<BasicReturn> CancelarChave(string chave)
+    {
+      try
+      {
+        _sendKey.CancelarChave(chave, Convert.ToInt32(_user));
+        return new BasicReturn(true);
+      }
+      catch (System.Exception ex)
+      {
+        return new BasicReturn(false, ex.Message, ex.StackTrace);
+      }
+    }
   }
 }

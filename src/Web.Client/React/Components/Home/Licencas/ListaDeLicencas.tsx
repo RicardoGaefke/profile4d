@@ -12,11 +12,12 @@ import { IKey } from '../../../../../TypeScript/Interfaces/IKey';
 export interface ListaDeLicencasProps extends WithTranslation {
   keys: IKey[];
   onDesbloquear: (guid: string) => void;
+  onCancelar: (guid: string) => void;
 }
 
 const ListaDeLicencas = withTranslation()(
   (props: ListaDeLicencasProps): JSX.Element => {
-    const { keys, onDesbloquear } = props;
+    const { keys, onDesbloquear, onCancelar } = props;
 
     return (
       <TableContainer component={Paper}>
@@ -26,6 +27,7 @@ const ListaDeLicencas = withTranslation()(
               <TableCell>email</TableCell>
               <TableCell>Status</TableCell>
               <TableCell>Bloqueada</TableCell>
+              <TableCell>&nbsp;</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -75,6 +77,20 @@ const ListaDeLicencas = withTranslation()(
                     ) : (
                       <Typography>Desbloqueada</Typography>
                     )}
+                  </TableCell>
+                  <TableCell>
+                    {
+                      (key.Started?.includes('1900')) && (
+                        <Button
+                          variant="contained"
+                          color="default"
+                          title="Cancelar envio de chave"
+                          onClick={(): void => { onCancelar(key.Guid as string); }}
+                        >
+                          Cancelar
+                        </Button>
+                      )
+                    }
                   </TableCell>
                 </TableRow>
               ))
