@@ -278,5 +278,51 @@ namespace Profile4d.Data
         }
       }
     }
+
+    public void CancelarChave(string keyGuid, int userId)
+    {
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[dbo].[spCancelaChaveEnviada]";
+
+          Cmd.Parameters.AddWithValue("@GuidDaChave", keyGuid);
+          Cmd.Parameters.AddWithValue("@UserId", userId);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+    }
+
+    public string SendKeyConsultor(Key data)
+    {
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_SEND_KEY_INSERT_CONSULTOR]";
+
+          Cmd.Parameters.AddWithValue("@EMAIL", data.Email);
+          Cmd.Parameters.AddWithValue("@SENT_BY", data.SentBy);
+          Cmd.Parameters.AddWithValue("@BLOCK_RESULT", data.BlockResult);
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            return MyDR.GetGuid(0).ToString();
+          }
+        }
+      }
+    }
   }
 }

@@ -15,6 +15,7 @@ import ListaDeLicencas from './ListaDeLicencas';
 import { IKey } from '../../../../../TypeScript/Interfaces/IKey';
 // eslint-disable-next-line no-unused-vars
 import { IBasicReturn } from '../../../../../TypeScript/Interfaces/IBasicReturn';
+import EnviaLicencas from './Form/Form.Context';
 
 const Licencas = withTranslation()(
   (props: WithSnackbarProps & WithTranslation): JSX.Element => {
@@ -45,6 +46,22 @@ const Licencas = withTranslation()(
             getKeys();
           } else {
             enqueueSnackbar('Desculpe, falha ao desbloquear chave!', {
+              variant: 'error',
+            });
+          }
+        },
+      );
+    };
+
+    const cancelarChave = async (guid: string): Promise<void> => {
+      await Axios(window.location.href).get<IBasicReturn>(`SendKey/CancelarChave/${guid}`).then(
+        (response): void => {
+          const { data } = response;
+
+          if (data.Success) {
+            getKeys();
+          } else {
+            enqueueSnackbar('Desculpe, falha ao cancelar chave! Provavelmente já foi iniciada!', {
               variant: 'error',
             });
           }
@@ -104,12 +121,12 @@ const Licencas = withTranslation()(
             <Paper elevation={0}>
               {licencas.Available}
               {' '}
-              Disponíveis
+              Usadas
             </Paper>
             <Paper elevation={0}>
               {(licencas.Total as number) - (licencas.Available as number)}
               {' '}
-              usadas
+              Disponíveis
             </Paper>
           </div>
         </Grid>
@@ -120,7 +137,31 @@ const Licencas = withTranslation()(
           md={12}
           lg={12}
         >
-          <ListaDeLicencas keys={licencas.Keys as IKey[]} onDesbloquear={desbloquearChave} />
+          <Typography
+            variant="h4"
+            align="center"
+            gutterBottom
+          >
+            Enviar avaliação
+          </Typography>
+        </Grid>
+        <Grid
+          item
+          container
+          xs={12}
+          md={12}
+          lg={12}
+        >
+          <EnviaLicencas />
+        </Grid>
+        <Grid
+          item
+          container
+          xs={12}
+          md={12}
+          lg={12}
+        >
+          <ListaDeLicencas keys={licencas.Keys as IKey[]} onDesbloquear={desbloquearChave} onCancelar={cancelarChave} />
         </Grid>
       </Grid>
     );
