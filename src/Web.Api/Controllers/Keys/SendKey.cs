@@ -296,5 +296,29 @@ namespace Profile4d.Web.Api.Controllers
         return new BasicReturn(false, ex.Message, ex.StackTrace);
       }
     }
+
+    [Authorize]
+    [HttpPost("SendConsultor")]
+    public ActionResult<BasicReturn> SendConsultor(Key data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        Key key = new Key(data.Email, Convert.ToInt32(_user), Convert.ToInt32(_user), data.BlockResult);
+        string guid = _sendKey.SendKeyConsultor(key);
+        EmailMessageModels.Content content = EmailMessageModels.SendKey(guid, _configuration.GetValue<string>("domain"));
+        int messageId = _email.CreateEmail("New User", data.Email, Convert.ToInt32(_user), content);
+        _queue.SaveMessage("email", messageId.ToString());
+        _return.Success = true;
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        return _return;
+      }
+    }
   }
 }

@@ -15,6 +15,7 @@ import ListaDeLicencas from './ListaDeLicencas';
 import { IKey } from '../../../../../TypeScript/Interfaces/IKey';
 // eslint-disable-next-line no-unused-vars
 import { IBasicReturn } from '../../../../../TypeScript/Interfaces/IBasicReturn';
+import EnviaLicencas from './Form/Form.Context';
 
 const Licencas = withTranslation()(
   (props: WithSnackbarProps & WithTranslation): JSX.Element => {
@@ -128,6 +129,30 @@ const Licencas = withTranslation()(
               Disponíveis
             </Paper>
           </div>
+        </Grid>
+        <Grid
+          item
+          container
+          xs={12}
+          md={12}
+          lg={12}
+        >
+          <Typography
+            variant="h4"
+            align="center"
+            gutterBottom
+          >
+            Enviar avaliação
+          </Typography>
+        </Grid>
+        <Grid
+          item
+          container
+          xs={12}
+          md={12}
+          lg={12}
+        >
+          <EnviaLicencas />
         </Grid>
         <Grid
           item
