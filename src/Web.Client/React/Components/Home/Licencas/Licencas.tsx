@@ -4,7 +4,7 @@ import { withTranslation, WithTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
 import { withSnackbar, WithSnackbarProps } from 'notistack';
 import {
-  CircularProgress, Grid, Paper, Typography,
+  CircularProgress, Grid, Typography,
 } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
 import { IKeysPreview } from '../../../../../TypeScript/Interfaces/IKeysPreview';
@@ -16,6 +16,7 @@ import { IKey } from '../../../../../TypeScript/Interfaces/IKey';
 // eslint-disable-next-line no-unused-vars
 import { IBasicReturn } from '../../../../../TypeScript/Interfaces/IBasicReturn';
 import EnviaLicencas from './Form/Form.Context';
+import CardsProfile from '../../CardsProfile/CardsProfile';
 
 const Licencas = withTranslation()(
   (props: WithSnackbarProps & WithTranslation): JSX.Element => {
@@ -113,21 +114,9 @@ const Licencas = withTranslation()(
           lg={12}
         >
           <div className={classes.root}>
-            <Paper elevation={0}>
-              {licencas.Total}
-              {' '}
-              Total
-            </Paper>
-            <Paper elevation={0}>
-              {licencas.Available}
-              {' '}
-              Usadas
-            </Paper>
-            <Paper elevation={0}>
-              {(licencas.Total as number) - (licencas.Available as number)}
-              {' '}
-              Disponíveis
-            </Paper>
+            <CardsProfile CardsText={`${licencas.Total} `} CardsProfileTitle="Total" />
+            <CardsProfile CardsText={`${licencas.Available}`} CardsProfileTitle="Disponíveis" />
+            <CardsProfile CardsText={`${(licencas.Total as number) - (licencas.Available as number)}`} CardsProfileTitle="Usados" />
           </div>
         </Grid>
         <Grid
