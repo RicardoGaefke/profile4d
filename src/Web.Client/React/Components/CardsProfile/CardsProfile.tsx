@@ -36,11 +36,11 @@ const CardsProfile = withTranslation()(
     return (
       <Card className={classes.root} variant="outlined">
         <CardContent>
-          <Typography variant="h5" component="h2" align="center">
-            {CardsProfileTitle}
-          </Typography>
           <Typography className={classes.title} color="textSecondary" align="center" gutterBottom>
             {CardsText}
+          </Typography>
+          <Typography variant="h5" component="h2" align="center">
+            {CardsProfileTitle}
           </Typography>
         </CardContent>
       </Card>
