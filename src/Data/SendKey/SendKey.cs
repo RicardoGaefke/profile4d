@@ -94,7 +94,8 @@ namespace Profile4d.Data
                 MyDR.GetGuid(1).ToString(),
                 (MyDR.IsDBNull(2)) ? DateTime.MinValue : MyDR.GetDateTime(2),
                 (MyDR.IsDBNull(3)) ? DateTime.MinValue : MyDR.GetDateTime(3),
-                MyDR.GetBoolean(4)
+                MyDR.GetBoolean(4),
+                MyDR.GetString(5)
               );
 
               _return.Add(key);
