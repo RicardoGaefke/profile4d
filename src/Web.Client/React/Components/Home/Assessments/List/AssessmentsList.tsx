@@ -49,7 +49,7 @@ const AssessmentsList = withTranslation()(
           <Table aria-label="Assessments list">
             <TableHead>
               <TableRow>
-                <TableCell>Email</TableCell>
+                <TableCell>Enviada por</TableCell>
                 <TableCell>ID</TableCell>
                 <TableCell>Status</TableCell>
                 <TableCell>Disponível?</TableCell>
