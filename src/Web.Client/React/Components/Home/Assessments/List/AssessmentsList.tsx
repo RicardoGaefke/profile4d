@@ -49,6 +49,7 @@ const AssessmentsList = withTranslation()(
           <Table aria-label="Assessments list">
             <TableHead>
               <TableRow>
+                <TableCell>Enviada por</TableCell>
                 <TableCell>ID</TableCell>
                 <TableCell>Status</TableCell>
                 <TableCell>Disponível?</TableCell>
@@ -68,6 +69,11 @@ const AssessmentsList = withTranslation()(
                 ) : (
                   keys.map((key): React.ReactNode => (
                     <TableRow key={key.Id}>
+                      <TableCell>
+                        <Typography>
+                          {key.Email}
+                        </Typography>
+                      </TableCell>
                       <TableCell>
                         <Typography>
                           {key.Guid}

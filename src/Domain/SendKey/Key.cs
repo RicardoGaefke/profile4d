@@ -64,6 +64,20 @@ namespace Profile4d.Domain
       this.BlockResult = blocked;
     }
 
+    public Key(int id, string guid, DateTime? started, DateTime? finished, bool blocked, string email)
+    {
+      DomainException.When(!(id < 1), "Id is required!");
+      DomainException.When(!string.IsNullOrEmpty(guid), "Guid is required!");
+      DomainException.When(!string.IsNullOrEmpty(email), "Email is required!");
+
+      this.Id = id;
+      this.Guid = guid;
+      this.Started = started;
+      this.Finished = finished;
+      this.BlockResult = blocked;
+      this.Email = email;
+    }
+
     public Key(string email, int sentBy, int keys, DateTime? when)
     {
       DomainException.When(!string.IsNullOrEmpty(email), "Email is required!");
