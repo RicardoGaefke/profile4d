@@ -61,6 +61,9 @@ const Chart13 = (props: Chart13Props): JSX.Element => {
             },
           }],
         },
+        legend: {
+          position: 'bottom',
+        },
       }}
     />
   );

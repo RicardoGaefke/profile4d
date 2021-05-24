@@ -31,6 +31,7 @@ const Chart4 = (props: Chart4Props): JSX.Element => {
     if (perfil === 'Perfil Analítico') return comandante;
     if (perfil === 'Perfil Planejador') return mediador;
     if (perfil === 'Perfil Visionário') return criativo;
+    if (perfil === 'Perfil Criativo') return organizador;
     return criativo;
   };
 

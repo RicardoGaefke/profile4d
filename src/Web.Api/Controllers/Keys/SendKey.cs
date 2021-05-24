@@ -61,7 +61,7 @@ namespace Profile4d.Web.Api.Controllers
 
       try
       {
-        Key key = new Key(data.Email, Convert.ToInt32(_user), Convert.ToInt32(_user));
+        Key key = new Key(data.Email, Convert.ToInt32(_user), Convert.ToInt32(_user), data.BlockResult);
         string guid = _sendKey.SendKey(key);
         EmailMessageModels.Content content = EmailMessageModels.SendKey(guid, _configuration.GetValue<string>("domain"));
         int messageId = _email.CreateEmail("New User", data.Email, Convert.ToInt32(_user), content);
@@ -232,6 +232,91 @@ namespace Profile4d.Web.Api.Controllers
         _return.Message = ex.Message;
         _return.Details = ex.StackTrace;
 
+        return _return;
+      }
+    }
+
+    [Authorize]
+    [HttpGet("GetLicensesByConsultant")]
+    public ActionResult<KeysPreview> GetLicensesByConsultant()
+    {
+      try
+      {
+        KeysPreview preview = _sendKey.GetKeysByConsuntant(Convert.ToInt32(_user));
+        preview.Success = true;
+
+        return preview;
+      }
+      catch (SqlException ex)
+      {
+        return new KeysPreview()
+        {
+          Code = "SQL",
+          Success = false,
+          Message = ex.Message
+        };
+      }
+      catch (System.Exception ex)
+      {
+        return new KeysPreview()
+        {
+          Code = "SQL",
+          Success = false,
+          Message = ex.Message
+        };
+      }
+    }
+
+    [Authorize]
+    [HttpGet("DesbloquearChave/{chave}")]
+    public ActionResult<BasicReturn> DesbloquearChave(string chave)
+    {
+      try
+      {
+        _sendKey.DesbloquearChave(chave);
+        return new BasicReturn(true);
+      }
+      catch (System.Exception ex)
+      {
+        return new BasicReturn(false, ex.Message, ex.StackTrace);
+      }
+    }
+
+    [Authorize]
+    [HttpGet("CancelarChave/{chave}")]
+    public ActionResult<BasicReturn> CancelarChave(string chave)
+    {
+      try
+      {
+        _sendKey.CancelarChave(chave, Convert.ToInt32(_user));
+        return new BasicReturn(true);
+      }
+      catch (System.Exception ex)
+      {
+        return new BasicReturn(false, ex.Message, ex.StackTrace);
+      }
+    }
+
+    [Authorize]
+    [HttpPost("SendConsultor")]
+    public ActionResult<BasicReturn> SendConsultor(Key data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        Key key = new Key(data.Email, Convert.ToInt32(_user), Convert.ToInt32(_user), data.BlockResult);
+        string guid = _sendKey.SendKeyConsultor(key);
+        EmailMessageModels.Content content = EmailMessageModels.SendKey(guid, _configuration.GetValue<string>("domain"));
+        int messageId = _email.CreateEmail("New User", data.Email, Convert.ToInt32(_user), content);
+        _queue.SaveMessage("email", messageId.ToString());
+        _return.Success = true;
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
         return _return;
       }
     }

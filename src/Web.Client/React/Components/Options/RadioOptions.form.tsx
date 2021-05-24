@@ -63,6 +63,7 @@ const RadioForm = (props: IRadioForm): JSX.Element => {
             className={classes.title}
             gutterBottom
             dangerouslySetInnerHTML={{ __html: Message }}
+            align="center"
           />
         </Grid>
         <Grid item md={12} xs={12}>
