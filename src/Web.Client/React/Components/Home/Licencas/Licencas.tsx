@@ -91,9 +91,12 @@ const Licencas = withTranslation()(
         alignContent="center"
         direction="column"
       >
+        <div />
         <Grid
           item
           container
+          alignItems="center"
+          justify="center"
           xs={12}
           md={12}
           lg={12}
@@ -109,6 +112,8 @@ const Licencas = withTranslation()(
         <Grid
           item
           container
+          alignItems="center"
+          justify="center"
           xs={12}
           md={12}
           lg={12}
@@ -119,9 +124,12 @@ const Licencas = withTranslation()(
             <CardsProfile CardsText={`${(licencas.Total as number) - (licencas.Available as number)}`} CardsProfileTitle="Usados" />
           </div>
         </Grid>
+        <div />
         <Grid
           item
           container
+          alignItems="center"
+          justify="center"
           xs={12}
           md={12}
           lg={12}
