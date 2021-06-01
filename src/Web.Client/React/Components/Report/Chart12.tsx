@@ -51,6 +51,7 @@ const Chart12 = (props: Chart12Props): JSX.Element => {
 
   return (
     <Bar
+      type="bar"
       data={data}
       options={{
         scales: {

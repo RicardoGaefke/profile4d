@@ -11,6 +11,7 @@ interface IStyles {
   brakePage: {},
   itemBrakePage: {},
   chart: {},
+  chartImage: {},
 }
 
 export default makeStyles((theme: Theme): IStyles => ({
@@ -76,5 +77,12 @@ export default makeStyles((theme: Theme): IStyles => ({
     '@media print': {
       margin: '0 20% 0 20%',
     },
+  },
+  chartImage: {
+    maxWidth: '100%',
+    display: 'block',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    maxHeight: 250,
   },
 }));
