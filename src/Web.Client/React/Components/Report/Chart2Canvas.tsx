@@ -1,29 +1,22 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useEffect, useRef } from 'react';
-import { Bar } from 'react-chartjs-2';
+import React, { useEffect, useRef, useState } from 'react';
+// eslint-disable-next-line no-unused-vars
+import { Chart, ChartConfiguration } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
+import useStyles from './Styles';
 
 export interface Chart2Props {
   profiles: IProfiles[];
 }
 
-const Chart2 = (props: Chart2Props): JSX.Element => {
+const Chart2Canvas = (props: Chart2Props): JSX.Element => {
   const { profiles } = props;
 
-  const refChart = useRef(null);
-  const refImage = useRef<HTMLImageElement | null>(null);
+  const classes = useStyles();
 
-  useEffect((): void => {
-    if (refChart && refChart.current) {
-      // @ts-ignore
-      console.log(refChart.current);
-      // @ts-ignore
-      refImage.current?.src = refChart.current?.chart?.ctx.toDataURL('image/jpeg').split(';base64,')[1] || '';
-    } else {
-      console.log('refChart is null');
-    }
-  }, [refChart]);
+  const refChart = useRef<HTMLCanvasElement>(null);
+  const refImage = useRef<HTMLImageElement | null>(null);
 
   const comandante = profiles.filter((item): boolean => item.Name === 'Perfil Comandante')[0].Total || 0;
   const mediador = profiles.filter((item): boolean => item.Name === 'Perfil Mediador')[0].Total || 0;
@@ -122,31 +115,51 @@ const Chart2 = (props: Chart2Props): JSX.Element => {
     ],
   };
 
+  const chartConfig = {
+    type: 'bar',
+    data,
+    scales: {
+      yAxes: [{
+        ticks: {
+          min: 0,
+          max: 35,
+        },
+      }],
+    },
+    legend: {
+      position: 'bottom',
+    },
+  } as ChartConfiguration<'bar', string[], string>;
+
+  useEffect((): void => {
+    if (refChart && refChart.current) {
+      const newChartInstance = new Chart(refChart.current, chartConfig);
+
+      newChartInstance.options.animation = {
+        onComplete: (): void => {
+          if (refImage && refImage.current) {
+            refImage.current.src = newChartInstance.toBase64Image();
+          }
+        },
+      };
+    }
+  }, [refChart]);
+
+  const [printing, setPrinting] = useState<boolean>(false);
+
+  useEffect((): void => {
+    window.onbeforeprint = (): void => { setPrinting(true); };
+    window.onafterprint = (): void => { setPrinting(true); };
+  }, []);
+
   return (
     <>
-      <Bar
-        type="bar"
-        ref={refChart}
-        data={data}
-        options={{
-          scales: {
-            yAxes: [{
-              ticks: {
-                min: 0,
-                max: 35,
-              },
-            }],
-          },
-          legend: {
-            position: 'bottom',
-          },
-        }}
-      />
-      <img alt="printing chart" ref={refImage} />
+      <canvas ref={refChart} style={{ display: (printing) ? 'none' : 'block' }} />
+      <img alt="printing chart" ref={refImage} className={classes.chartImage} style={{ display: (printing) ? 'block' : 'none' }} />
     </>
   );
 };
 
-Chart2.displayName = 'Chart2';
+Chart2Canvas.displayName = 'Chart2Canvas';
 
-export default Chart2;
+export default Chart2Canvas;

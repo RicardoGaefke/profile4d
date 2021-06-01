@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     borderRadius: 25,
   },
   title: {
-    fontSize: 28,
+    fontSize: 33,
     color: '#ffffff',
     font: 'Helvetica',
   },
