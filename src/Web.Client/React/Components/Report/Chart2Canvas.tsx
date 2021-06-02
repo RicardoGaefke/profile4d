@@ -149,7 +149,7 @@ const Chart2Canvas = (props: Chart2Props): JSX.Element => {
 
   useEffect((): void => {
     window.onbeforeprint = (): void => { setPrinting(true); };
-    window.onafterprint = (): void => { setPrinting(true); };
+    window.onafterprint = (): void => { setPrinting(false); };
   }, []);
 
   return (
