@@ -80,9 +80,8 @@ export default makeStyles((theme: Theme): IStyles => ({
   },
   chartImage: {
     maxWidth: '100%',
-    display: 'block',
+    maxHeight: 300,
     marginLeft: 'auto',
     marginRight: 'auto',
-    maxHeight: 250,
   },
 }));
