@@ -1,18 +1,17 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { Chart, ChartConfiguration } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 import useStyles from './Styles';
 
-export interface Chart2Props {
+export interface Chart2CanvasProps {
   profiles: IProfiles[];
+  printing: boolean;
 }
 
-const Chart2Canvas = (props: Chart2Props): JSX.Element => {
-  const { profiles } = props;
-
+const Chart2Canvas = (props: Chart2CanvasProps): JSX.Element => {
+  const { profiles, printing } = props;
   const classes = useStyles();
 
   const refChart = useRef<HTMLCanvasElement>(null);
@@ -145,17 +144,17 @@ const Chart2Canvas = (props: Chart2Props): JSX.Element => {
     }
   }, [refChart]);
 
-  const [printing, setPrinting] = useState<boolean>(false);
-
-  useEffect((): void => {
-    window.onbeforeprint = (): void => { setPrinting(true); };
-    window.onafterprint = (): void => { setPrinting(false); };
-  }, []);
-
   return (
     <>
       <canvas ref={refChart} style={{ display: (printing) ? 'none' : 'block' }} />
-      <img alt="printing chart" ref={refImage} className={classes.chartImage} style={{ display: (printing) ? 'block' : 'none' }} />
+      <img
+        alt="printing chart"
+        ref={refImage}
+        className={classes.chartImage}
+        style={{
+          display: (printing) ? 'block' : 'none',
+        }}
+      />
     </>
   );
 };

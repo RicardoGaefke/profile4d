@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { IReport } from '../../../../TypeScript/Interfaces/IReport';
 // import { useStateValue } from '../../Initial/Context/StateProvider';
@@ -8,9 +8,10 @@ import ReportText from './ReportText';
 import { filterStaticTitle, filterStaticText } from './filterStatic';
 // eslint-disable-next-line no-unused-vars
 import { IImage } from '../../../../TypeScript/Interfaces/IImage';
-import Chart1 from './Chart1';
+import Chart1 from './Chart1Canvas';
 import Chart2 from './Chart2Canvas';
-import Chart3 from './Chart3';
+import Chart3 from './Chart3Canvas';
+import Chart4 from './Chart4Canvas';
 import Chart5 from './Chart5';
 import Chart6 from './Chart6';
 import Chart7 from './Chart7';
@@ -24,13 +25,14 @@ import Chart14 from './Chart14';
 import Chart15 from './Chart15';
 import Chart16 from './Chart16';
 import Chart17 from './Chart17';
-import Chart4 from './Chart4';
 import Dynamic57 from './Dynamic57';
 import Dynamic34 from './Dynamic34';
 import Dynamic35 from './Dynamic35';
 import Dynamic38 from './Dynamic38';
 import Dynamic59 from './Dynamic59';
 import useStyles from './Styles';
+// eslint-disable-next-line no-unused-vars
+import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 
 export interface ReportContentProps {
   data: IReport;
@@ -42,6 +44,12 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
   const Language: string = 'PT';
   const classes = useStyles();
 
+  const [printing, setPrinting] = useState<boolean>(false);
+
+  useEffect((): void => {
+    window.onbeforeprint = (): void => { setPrinting(true); };
+    window.onafterprint = (): void => { setPrinting(false); };
+  }, []);
 
   const staticTitle = (contentId: number): string => filterStaticTitle(contentId, Language, data.StaticContent || []);
   const staticText = (contentId: number): string => filterStaticText(contentId, Language, data.StaticContent || []);
@@ -208,15 +216,16 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(55)} />
 
       <div className={classes.chart}>
-        <Chart1
-          profiles={data.Profiles || []}
-        />
+        <Chart1 profiles={data.Profiles as IProfiles[]} printing={printing} />
       </div>
 
       <ReportText text={staticText(56)} />
 
       <ReportTitle title={staticTitle(57)} breakPage />
-      <Chart2 profiles={data.Profiles || []} />
+
+      <div className={classes.chart}>
+        <Chart2 profiles={data.Profiles as IProfiles[]} printing={printing} />
+      </div>
 
       <ReportText text={staticText(58)} />
 
@@ -227,9 +236,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(60)} />
 
       <div className={classes.chart}>
-        <Chart3
-          profiles={data.Profiles || []}
-        />
+        <Chart3 profiles={data.Profiles as IProfiles[]} printing={printing} />
       </div>
 
       <ReportTitle title={staticTitle(64)} />
@@ -242,7 +249,8 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <div className={classes.chart}>
         <Chart4
-          profiles={data.Profiles || []}
+          profiles={data.Profiles as IProfiles[]}
+          printing={printing}
         />
       </div>
 
