@@ -105,6 +105,7 @@ const Licencas = withTranslation()(
             variant="h4"
             align="center"
             gutterBottom
+            style={{ paddingTop: 16 }}
           >
             Tuas licenças
           </Typography>
@@ -124,7 +125,6 @@ const Licencas = withTranslation()(
             <CardsProfile CardsText={`${(licencas.Total as number) - (licencas.Available as number)}`} CardsProfileTitle="Usados" />
           </div>
         </Grid>
-        <div />
         <Grid
           item
           container
@@ -138,6 +138,7 @@ const Licencas = withTranslation()(
             variant="h4"
             align="center"
             gutterBottom
+            style={{ paddingTop: 26 }}
           >
             Enviar avaliação
           </Typography>
