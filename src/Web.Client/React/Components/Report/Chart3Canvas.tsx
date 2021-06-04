@@ -92,7 +92,6 @@ const Chart3Canvas = (props: Chart3CanvasProps): JSX.Element => {
       };
     }
   }, [refChart3]);
-
   return (
     <>
       <canvas ref={refChart3} style={{ display: (printing) ? 'none' : 'block' }} />
