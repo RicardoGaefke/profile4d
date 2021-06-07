@@ -51,6 +51,9 @@ const Chart17Canvas = (props: Chart17CanvasProps): JSX.Element => {
         backgroundColor: [
           '#e04d53',
         ],
+        axis: 'y',
+        fill: false,
+        borderWidth: 1,
       },
       {
         label: `Execução e controle - ${amarelo.toFixed(2)}%`,
@@ -60,6 +63,9 @@ const Chart17Canvas = (props: Chart17CanvasProps): JSX.Element => {
         backgroundColor: [
           '#fee433',
         ],
+        axis: 'y',
+        fill: false,
+        borderWidth: 1,
       },
       {
         label: `Inovação e Criatividade - ${verde.toFixed(2)}%`,
@@ -69,6 +75,9 @@ const Chart17Canvas = (props: Chart17CanvasProps): JSX.Element => {
         backgroundColor: [
           '#6bd78b',
         ],
+        axis: 'y',
+        fill: false,
+        borderWidth: 1,
       },
       {
         label: `Planejamento - ${azul.toFixed(2)}%`,
@@ -78,6 +87,9 @@ const Chart17Canvas = (props: Chart17CanvasProps): JSX.Element => {
         backgroundColor: [
           '#43a9d7',
         ],
+        axis: 'y',
+        fill: false,
+        borderWidth: 1,
       },
     ],
   };
@@ -91,7 +103,7 @@ const Chart17Canvas = (props: Chart17CanvasProps): JSX.Element => {
     options: {
       indexAxis: 'y',
       scales: {
-        yAxes: {
+        y: {
           ticks: {
             min: 0,
             max: 100,
