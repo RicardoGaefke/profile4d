@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-// eslint-disable-next-line no-unused-vars
-import { Chart, ChartConfiguration } from 'chart.js';
+import {
+  // eslint-disable-next-line no-unused-vars
+  Chart, ChartConfiguration, LinearScale, BarController, BarElement,
+} from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 import useStyles from './Styles';
@@ -14,6 +16,8 @@ const Chart17Canvas = (props: Chart17CanvasProps): JSX.Element => {
   const { profiles = [], printing } = props;
 
   const classes = useStyles();
+
+  Chart.register(LinearScale, BarController, BarElement);
 
   const prestativo = profiles.filter((item): boolean => item.Name === 'Perfil Prestativo')[0];
   const visionario = profiles.filter((item): boolean => item.Name === 'Perfil Visionário')[0];
@@ -44,6 +48,7 @@ const Chart17Canvas = (props: Chart17CanvasProps): JSX.Element => {
     labels: ['Energia por área de atuação'],
     datasets: [
       {
+        axis: 'y',
         label: `Relacionamento - ${vermelho.toFixed(2)}%`,
         data: [
           vermelho.toFixed(2),
@@ -51,11 +56,11 @@ const Chart17Canvas = (props: Chart17CanvasProps): JSX.Element => {
         backgroundColor: [
           '#e04d53',
         ],
-        axis: 'y',
         fill: false,
         borderWidth: 1,
       },
       {
+        axis: 'y',
         label: `Execução e controle - ${amarelo.toFixed(2)}%`,
         data: [
           amarelo.toFixed(2),
@@ -63,11 +68,11 @@ const Chart17Canvas = (props: Chart17CanvasProps): JSX.Element => {
         backgroundColor: [
           '#fee433',
         ],
-        axis: 'y',
         fill: false,
         borderWidth: 1,
       },
       {
+        axis: 'y',
         label: `Inovação e Criatividade - ${verde.toFixed(2)}%`,
         data: [
           verde.toFixed(2),
@@ -75,11 +80,11 @@ const Chart17Canvas = (props: Chart17CanvasProps): JSX.Element => {
         backgroundColor: [
           '#6bd78b',
         ],
-        axis: 'y',
         fill: false,
         borderWidth: 1,
       },
       {
+        axis: 'y',
         label: `Planejamento - ${azul.toFixed(2)}%`,
         data: [
           azul.toFixed(2),
@@ -87,7 +92,6 @@ const Chart17Canvas = (props: Chart17CanvasProps): JSX.Element => {
         backgroundColor: [
           '#43a9d7',
         ],
-        axis: 'y',
         fill: false,
         borderWidth: 1,
       },
@@ -109,7 +113,7 @@ const Chart17Canvas = (props: Chart17CanvasProps): JSX.Element => {
             max: 100,
             stacked: true,
           },
-          xAxes: [{
+          yAxes: [{
             ticks: { beginAtZero: true },
           }],
         },

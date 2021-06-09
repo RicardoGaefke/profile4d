@@ -24,7 +24,7 @@ import Chart13 from './Chart13Canvas';
 import Chart14 from './Chart14Canvas';
 import Chart15 from './Chart15Canvas';
 import Chart16 from './Chart16Canvas';
-import Chart17 from './Chart17';
+import Chart17 from './Chart17Canvas';
 import Dynamic57 from './Dynamic57';
 import Dynamic34 from './Dynamic34';
 import Dynamic35 from './Dynamic35';
@@ -69,7 +69,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(1)} />
       <ReportText text={staticText(1)} />
 
-      <ReportTitle title={staticTitle(2)} breakPage />
+      <ReportTitle title={staticTitle(2)} />
       {FilteredImage(2)}
 
       <ReportText text={staticText(3)} />
@@ -300,7 +300,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(76)} />
       {FilteredImage(5)}
 
-      <ReportTitle title={staticTitle(77)} breakPage />
+      <ReportTitle title={staticTitle(77)} />
 
       <ReportText text={staticText(78)} />
 
@@ -588,6 +588,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <div className={classes.chart}>
         <Chart17
           profiles={data.Profiles as IProfiles[]}
+          printing={printing}
         />
       </div>
 

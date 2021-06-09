@@ -1,5 +1,7 @@
-// eslint-disable-next-line no-unused-vars
-import { ChartConfiguration, Chart } from 'chart.js';
+import {
+  // eslint-disable-next-line no-unused-vars
+  ChartConfiguration, Chart, PieController, ArcElement,
+} from 'chart.js';
 import React, { useEffect, useRef } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
@@ -14,6 +16,8 @@ const Chart1Canvas = (props: Chart1CanvasProps): JSX.Element => {
   const { profiles, printing } = props;
 
   const classes = useStyles();
+
+  Chart.register(PieController, ArcElement);
 
   const refChart1 = useRef<HTMLCanvasElement>(null);
   const refImage1 = useRef<HTMLImageElement | null>(null);

@@ -19,7 +19,7 @@ export default makeStyles((theme: Theme): IStyles => ({
     padding: theme.spacing(4),
     width: '100%',
     '@media print': {
-      font: '12pt Calibri, Georgia, "Times New Roman", Times, serif',
+      font: '9pt Roboto, Calibri, Georgia, "Times New Roman", Times, serif',
       lineHeight: 1.0,
       padding: theme.spacing(0.1),
       'page-break-inside': 'avoid',
@@ -29,7 +29,7 @@ export default makeStyles((theme: Theme): IStyles => ({
     padding: theme.spacing(4),
     width: '100%',
     '@media print': {
-      font: '15pt Calibri, Georgia, "Times New Roman", Times, serif',
+      font: '13pt Roboto, Calibri, Georgia, "Times New Roman", Times, serif',
       lineHeight: 1.0,
       padding: theme.spacing(0.1),
       'page-break-inside': 'avoid',
@@ -62,7 +62,7 @@ export default makeStyles((theme: Theme): IStyles => ({
     width: '100%',
     '@media print': {
       'page-break-before': 'always',
-      font: '15pt Calibri, Georgia, "Times New Roman", Times, serif',
+      font: '13pt Roboto, Calibri, Georgia, "Times New Roman", Times, serif',
       lineHeight: 1.0,
       padding: theme.spacing(0.1),
       'page-break-inside': 'avoid',

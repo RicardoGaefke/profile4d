@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 // eslint-disable-next-line no-unused-vars
-import { Chart, ChartConfiguration } from 'chart.js';
+import { Chart, ChartConfiguration, BarController } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 import useStyles from './Styles';
@@ -14,6 +14,8 @@ const Chart13Canvas = (props: Chart13CanvasProps): JSX.Element => {
   const { profiles = [], printing } = props;
 
   const classes = useStyles();
+
+  Chart.register(BarController);
 
   const amarelo = profiles.filter((item): boolean => item.Name === 'Perfil Organizador')[0];
 
