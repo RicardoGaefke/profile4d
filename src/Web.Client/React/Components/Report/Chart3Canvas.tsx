@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 // eslint-disable-next-line no-unused-vars
-import { Chart, ChartConfiguration } from 'chart.js';
+import { Chart, ChartConfiguration, BarController } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 import useStyles from './Styles';
@@ -14,6 +14,8 @@ const Chart3Canvas = (props: Chart3CanvasProps): JSX.Element => {
   const { profiles = [], printing } = props;
 
   const classes = useStyles();
+
+  Chart.register(BarController);
 
   const amarelos = profiles.filter((item): boolean => item.Color === 'Amarelo');
   amarelos.sort((a, b): number => b.Total - a.Total || b.InternalNumber - a.InternalNumber);
@@ -92,7 +94,6 @@ const Chart3Canvas = (props: Chart3CanvasProps): JSX.Element => {
       };
     }
   }, [refChart3]);
-
   return (
     <>
       <canvas ref={refChart3} style={{ display: (printing) ? 'none' : 'block' }} />

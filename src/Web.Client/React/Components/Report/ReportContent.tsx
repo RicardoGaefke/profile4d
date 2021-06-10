@@ -12,19 +12,19 @@ import Chart1 from './Chart1Canvas';
 import Chart2 from './Chart2Canvas';
 import Chart3 from './Chart3Canvas';
 import Chart4 from './Chart4Canvas';
-import Chart5 from './Chart5';
-import Chart6 from './Chart6';
-import Chart7 from './Chart7';
-import Chart8 from './Chart8';
-import Chart9 from './Chart9';
-import Chart10 from './Chart10';
-import Chart11 from './Chart11';
-import Chart12 from './Chart12';
-import Chart13 from './Chart13';
-import Chart14 from './Chart14';
-import Chart15 from './Chart15';
-import Chart16 from './Chart16';
-import Chart17 from './Chart17';
+import Chart5 from './Chart5Canvas';
+import Chart6 from './Chart6Canvas';
+import Chart7 from './Chart7Canvas';
+import Chart8 from './Chart8Canvas';
+import Chart9 from './Chart9Canvas';
+import Chart10 from './Chart10Canvas';
+import Chart11 from './Chart11Canvas';
+import Chart12 from './Chart12Canvas';
+import Chart13 from './Chart13Canvas';
+import Chart14 from './Chart14Canvas';
+import Chart15 from './Chart15Canvas';
+import Chart16 from './Chart16Canvas';
+import Chart17 from './Chart17Canvas';
 import Dynamic57 from './Dynamic57';
 import Dynamic34 from './Dynamic34';
 import Dynamic35 from './Dynamic35';
@@ -69,7 +69,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(1)} />
       <ReportText text={staticText(1)} />
 
-      <ReportTitle title={staticTitle(2)} breakPage />
+      <ReportTitle title={staticTitle(2)} />
       {FilteredImage(2)}
 
       <ReportText text={staticText(3)} />
@@ -77,7 +77,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportText text={staticText(4)} />
 
-      <ReportTitle title={staticTitle(5)} breakPage />
+      <ReportTitle title={staticTitle(5)} />
 
       <ReportText text={staticText(6)} />
 
@@ -113,7 +113,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(18)} />
       <ReportText text={dynamicText(11)} />
 
-      <ReportTitle title={staticTitle(19)} breakPage />
+      <ReportTitle title={staticTitle(19)} />
 
       <ReportText text={staticText(20)} />
 
@@ -183,7 +183,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(45)} />
       <ReportText text={dynamicText(91)} />
 
-      <ReportTitle title={staticTitle(46)} breakPage />
+      <ReportTitle title={staticTitle(46)} />
 
       <ReportText text={staticText(47)} />
 
@@ -232,7 +232,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(59)} />
       <Dynamic34 options={data.DynamicContent34 || []} profiles={data.Profiles || []} />
 
-      <ReportTitle title={staticTitle(60)} breakPage />
+      <ReportTitle title={staticTitle(60)} />
       <ReportText text={staticText(60)} />
 
       <div className={classes.chart}>
@@ -269,7 +269,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(72)} />
       <ReportText text={dynamicText(43)} border />
 
-      <ReportTitle title={staticTitle(9)} breakPage />
+      <ReportTitle title={staticTitle(9)} />
       <ReportText text={dynamicText(39)} />
 
       <ReportText text={staticText(67)} />
@@ -277,7 +277,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(73)} />
       <Dynamic59 options={data.DynamicContent59 || []} profiles={data.Profiles || []} />
 
-      <ReportTitle title={staticTitle(74)} breakPage />
+      <ReportTitle title={staticTitle(74)} />
 
       <ReportTitle title={staticTitle(82)} />
       <ReportText text={dynamicText(47)} />
@@ -300,7 +300,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(76)} />
       {FilteredImage(5)}
 
-      <ReportTitle title={staticTitle(77)} breakPage />
+      <ReportTitle title={staticTitle(77)} />
 
       <ReportText text={staticText(78)} />
 
@@ -339,7 +339,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(94)} />
       <ReportText text={dynamicText(55)} />
 
-      <ReportTitle title={staticTitle(95)} breakPage />
+      <ReportTitle title={staticTitle(95)} />
 
       {data.DynamicContent56?.map((record): React.ReactNode => (
         <ReportText key={record.Id} text={dynamicText56(record.Id)} />
@@ -347,17 +347,20 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       {/* análise profissional */}
 
-      <ReportTitle title={staticTitle(96)} breakPage />
+      <ReportTitle title={staticTitle(96)} />
       {FilteredImage(6)}
 
-      <ReportText text={staticText(97)} breakPage />
+      <ReportText text={staticText(97)} />
 
-      <ReportText text={staticText(101)} breakPage />
+      <ReportText text={staticText(101)} />
 
       <ReportText text={staticText(102)} />
 
       <div className={classes.chart}>
-        <Chart5 profiles={data.Profiles || []} />
+        <Chart5
+          profiles={data.Profiles as IProfiles[]}
+          printing={printing}
+        />
       </div>
 
       <Dynamic57
@@ -373,7 +376,10 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(105)} />
 
       <div className={classes.chart}>
-        <Chart6 profiles={data.Profiles || []} />
+        <Chart6
+          profiles={data.Profiles as IProfiles[]}
+          printing={printing}
+        />
       </div>
 
       <Dynamic57
@@ -389,7 +395,10 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(108)} />
 
       <div className={classes.chart}>
-        <Chart7 profiles={data.Profiles || []} />
+        <Chart7
+          profiles={data.Profiles as IProfiles[]}
+          printing={printing}
+        />
       </div>
 
       <Dynamic57
@@ -405,7 +414,10 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(111)} />
 
       <div className={classes.chart}>
-        <Chart8 profiles={data.Profiles || []} />
+        <Chart8
+          profiles={data.Profiles as IProfiles[]}
+          printing={printing}
+        />
       </div>
 
       <Dynamic57
@@ -421,7 +433,10 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(114)} breakPage />
 
       <div className={classes.chart}>
-        <Chart9 profiles={data.Profiles || []} />
+        <Chart9
+          profiles={data.Profiles as IProfiles[]}
+          printing={printing}
+        />
       </div>
 
       <Dynamic57
@@ -437,7 +452,10 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(117)} />
 
       <div className={classes.chart}>
-        <Chart10 profiles={data.Profiles || []} />
+        <Chart10
+          profiles={data.Profiles as IProfiles[]}
+          printing={printing}
+        />
       </div>
 
       <Dynamic57
@@ -453,7 +471,10 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(120)} breakPage />
 
       <div className={classes.chart}>
-        <Chart11 profiles={data.Profiles || []} />
+        <Chart11
+          profiles={data.Profiles as IProfiles[]}
+          printing={printing}
+        />
       </div>
 
       <Dynamic57
@@ -469,7 +490,10 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(123)} />
 
       <div className={classes.chart}>
-        <Chart12 profiles={data.Profiles || []} />
+        <Chart12
+          profiles={data.Profiles as IProfiles[]}
+          printing={printing}
+        />
       </div>
 
       <Dynamic57
@@ -485,7 +509,10 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(126)} breakPage />
 
       <div className={classes.chart}>
-        <Chart13 profiles={data.Profiles || []} />
+        <Chart13
+          profiles={data.Profiles as IProfiles[]}
+          printing={printing}
+        />
       </div>
 
       <Dynamic57
@@ -501,7 +528,10 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(129)} />
 
       <div className={classes.chart}>
-        <Chart14 profiles={data.Profiles || []} />
+        <Chart14
+          profiles={data.Profiles as IProfiles[]}
+          printing={printing}
+        />
       </div>
 
       <Dynamic57
@@ -517,7 +547,10 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(132)} />
 
       <div className={classes.chart}>
-        <Chart15 profiles={data.Profiles || []} />
+        <Chart15
+          profiles={data.Profiles as IProfiles[]}
+          printing={printing}
+        />
       </div>
 
       <Dynamic57
@@ -533,7 +566,10 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(135)} />
 
       <div className={classes.chart}>
-        <Chart16 profiles={data.Profiles || []} />
+        <Chart16
+          profiles={data.Profiles as IProfiles[]}
+          printing={printing}
+        />
       </div>
 
       <Dynamic57
@@ -550,7 +586,10 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(138)} />
 
       <div className={classes.chart}>
-        <Chart17 profiles={data.Profiles || []} />
+        <Chart17
+          profiles={data.Profiles as IProfiles[]}
+          printing={printing}
+        />
       </div>
 
       <ReportText text={staticText(139)} />
@@ -564,7 +603,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(143)} />
 
       <ReportTitle title={staticTitle(144)} />
-      <ReportText text={staticText(144)} breakPage />
+      <ReportText text={staticText(144)} />
     </>
   );
 };

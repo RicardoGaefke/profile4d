@@ -1,7 +1,9 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useRef } from 'react';
-// eslint-disable-next-line no-unused-vars
-import { Chart, ChartConfiguration } from 'chart.js';
+import {
+  // eslint-disable-next-line no-unused-vars
+  Chart, ChartConfiguration, RadarController, RadialLinearScale, PointElement, LineElement,
+} from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 import useStyles from './Styles';
@@ -15,6 +17,8 @@ const Chart4Canvas = (props: Chart4CanvasProps): JSX.Element => {
   const { profiles = [], printing } = props;
 
   const classes = useStyles();
+
+  Chart.register(RadarController, RadialLinearScale, PointElement, LineElement);
 
   const criativo = profiles.filter((item): boolean => item.Name === 'Perfil Criativo')[0];
   const realizador = profiles.filter((item): boolean => item.Name === 'Perfil Realizador')[0];
@@ -233,19 +237,21 @@ const Chart4Canvas = (props: Chart4CanvasProps): JSX.Element => {
     datasets: [
       {
         label: 'Tríade original',
+        data: dataOriginal,
         backgroundColor: 'rgba(31,15,250,0.2)',
         borderColor: 'rgba(31,15,250,0.7)',
         pointColor: 'rgba(31,15,250,1)',
         spanGaps: true,
-        data: dataOriginal,
+        fill: true,
       },
       {
         label: 'Tríade adaptada',
+        data: dataAdaptada,
         backgroundColor: 'rgba(250,15,31,0.2)',
         borderColor: 'rgba(250,15,31,0.7)',
         pointColor: 'rgba(250,15,31,1)',
         spanGaps: true,
-        data: dataAdaptada,
+        fill: true,
       },
     ],
   };
@@ -253,13 +259,13 @@ const Chart4Canvas = (props: Chart4CanvasProps): JSX.Element => {
   const chartConfig = {
     type: 'radar',
     data,
-    scales: {
-      yAxes: [{
-        ticks: {
-          min: 0,
+    options: {
+      scales: {
+        r: {
+          beginAtZero: true,
           max: 35,
         },
-      }],
+      },
     },
   } as ChartConfiguration<'radar', string[], string>;
 

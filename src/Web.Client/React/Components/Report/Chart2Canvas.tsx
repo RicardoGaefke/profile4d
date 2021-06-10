@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-// eslint-disable-next-line no-unused-vars
-import { Chart, ChartConfiguration } from 'chart.js';
+import {
+  // eslint-disable-next-line no-unused-vars
+  Chart, ChartConfiguration, BarController, CategoryScale, BarElement,
+} from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 import useStyles from './Styles';
@@ -13,6 +15,8 @@ export interface Chart2CanvasProps {
 const Chart2Canvas = (props: Chart2CanvasProps): JSX.Element => {
   const { profiles, printing } = props;
   const classes = useStyles();
+
+  Chart.register(BarController, CategoryScale, BarElement);
 
   const refChart = useRef<HTMLCanvasElement>(null);
   const refImage = useRef<HTMLImageElement | null>(null);
