@@ -69,7 +69,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(1)} />
       <ReportText text={staticText(1)} />
 
-      <ReportTitle title={staticTitle(2)} />
+      <ReportTitle title={staticTitle(2)} breakPage />
       {FilteredImage(2)}
 
       <ReportText text={staticText(3)} />
@@ -77,7 +77,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportText text={staticText(4)} />
 
-      <ReportTitle title={staticTitle(5)} />
+      <ReportTitle title={staticTitle(5)} breakPage />
 
       <ReportText text={staticText(6)} />
 
@@ -113,7 +113,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(18)} />
       <ReportText text={dynamicText(11)} />
 
-      <ReportTitle title={staticTitle(19)} />
+      <ReportTitle title={staticTitle(19)} breakPage />
 
       <ReportText text={staticText(20)} />
 
@@ -183,7 +183,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(45)} />
       <ReportText text={dynamicText(91)} />
 
-      <ReportTitle title={staticTitle(46)} />
+      <ReportTitle title={staticTitle(46)} breakPage />
 
       <ReportText text={staticText(47)} />
 
@@ -232,7 +232,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(59)} />
       <Dynamic34 options={data.DynamicContent34 || []} profiles={data.Profiles || []} />
 
-      <ReportTitle title={staticTitle(60)} />
+      <ReportTitle title={staticTitle(60)} breakPage />
       <ReportText text={staticText(60)} />
 
       <div className={classes.chart}>
@@ -269,7 +269,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(72)} />
       <ReportText text={dynamicText(43)} border />
 
-      <ReportTitle title={staticTitle(9)} />
+      <ReportTitle title={staticTitle(9)} breakPage />
       <ReportText text={dynamicText(39)} />
 
       <ReportText text={staticText(67)} />
@@ -277,7 +277,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportTitle title={staticTitle(73)} />
       <Dynamic59 options={data.DynamicContent59 || []} profiles={data.Profiles || []} />
 
-      <ReportTitle title={staticTitle(74)} />
+      <ReportTitle title={staticTitle(74)} breakPage />
 
       <ReportTitle title={staticTitle(82)} />
       <ReportText text={dynamicText(47)} />
@@ -300,7 +300,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
       <ReportText text={staticText(76)} />
       {FilteredImage(5)}
 
-      <ReportTitle title={staticTitle(77)} />
+      <ReportTitle title={staticTitle(77)} breakPage />
 
       <ReportText text={staticText(78)} />
 
@@ -347,12 +347,12 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       {/* análise profissional */}
 
-      <ReportTitle title={staticTitle(96)} />
+      <ReportTitle title={staticTitle(96)} breakPage />
       {FilteredImage(6)}
 
       <ReportText text={staticText(97)} />
 
-      <ReportText text={staticText(101)} />
+      <ReportText text={staticText(101)} breakPage />
 
       <ReportText text={staticText(102)} />
 
@@ -392,7 +392,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportText text={staticText(107)} />
 
-      <ReportText text={staticText(108)} />
+      <ReportText text={staticText(108)} breakPage />
 
       <div className={classes.chart}>
         <Chart7
@@ -544,7 +544,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportText text={staticText(131)} />
 
-      <ReportText text={staticText(132)} />
+      <ReportText text={staticText(132)} breakPage />
 
       <div className={classes.chart}>
         <Chart15
@@ -582,7 +582,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportText text={staticText(137)} />
 
-      <ReportTitle title={staticTitle(138)} />
+      <ReportTitle title={staticTitle(138)} breakPage />
       <ReportText text={staticText(138)} />
 
       <div className={classes.chart}>
