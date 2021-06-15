@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
@@ -6,7 +7,6 @@ import {
   Paper, Table, TableContainer, TableHead, TableRow, TableCell, TableBody,
   Typography, Button, Grid,
 } from '@material-ui/core';
-import DoneAllIcon from '@material-ui/icons/DoneAll';
 // eslint-disable-next-line no-unused-vars
 import { IKey } from '../../../../../TypeScript/Interfaces/IKey';
 
@@ -43,56 +43,7 @@ const ListaDeLicencas = withTranslation()(
                   <TableCell>
                     {
                       // eslint-disable-next-line no-nested-ternary
-                      (!key.Finished?.includes('1900')) && (
-                        <Button
-                          variant="contained"
-                          color="default"
-                          title="Abrir resultado"
-                          component={NavLink}
-                          to={`/answer/report/${key.Guid}`}
-                        >
-                          Resultado
-                        </Button>
-                      )
-                    }
-                    {
-                      // eslint-disable-next-line no-nested-ternary
-                    (!key.Started?.includes('1900')) ? (
-                      <Grid
-                        item
-                        container
-                        xs={12}
-                        md={12}
-                        lg={12}
-                      >
-                        <Grid
-                          item
-                          xs={6}
-                          spacing={0}
-                        >
-                          <Typography>Iniciada</Typography>
-                        </Grid>
-                      </Grid>
-                    ) : (!key.Started?.includes('1900') && key.Finished?.includes('1900')) ? (
-                      <Grid
-                        item
-                        container
-                        xs={12}
-                        md={12}
-                        lg={12}
-                      >
-                        <Grid>
-                          <DoneAllIcon style={{ color: '#00c853' }} />
-                        </Grid>
-                        <Grid
-                          item
-                          xs={6}
-                          spacing={0}
-                        >
-                          <Typography>Finalizada</Typography>
-                        </Grid>
-                      </Grid>
-                    ) : (
+                    (key.Started?.includes('1900')) ? (
                       <Grid
                         item
                         container
@@ -108,8 +59,42 @@ const ListaDeLicencas = withTranslation()(
                           <Typography>Não Iniciada</Typography>
                         </Grid>
                       </Grid>
+                    ) : (!key.Started?.includes('1900') && !key.Finished?.includes('1900')) ? (
+                      <Grid
+                        item
+                        container
+                        xs={12}
+                        md={12}
+                        lg={12}
+                      >
+                        <Button
+                          variant="contained"
+                          color="default"
+                          title="Abrir resultado"
+                          component={NavLink}
+                          to={`/answer/report/${key.Guid}`}
+                        >
+                          Resultado
+                        </Button>
+                      </Grid>
+                    ) : (
+                      <Grid
+                        item
+                        container
+                        xs={12}
+                        md={12}
+                        lg={12}
+                      >
+                        <Grid
+                          item
+                          xs={6}
+                          spacing={0}
+                        >
+                          <Typography>Iniciada</Typography>
+                        </Grid>
+                      </Grid>
                     )
-                  }
+                    }
                   </TableCell>
                   <TableCell>
                     {(key.BlockResult) ? (
