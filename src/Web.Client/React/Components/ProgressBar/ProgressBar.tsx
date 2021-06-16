@@ -15,7 +15,7 @@ const ProgressBar = withTranslation()(
     const [percent, setPercent] = useState<number>(0);
 
     useEffect((): void => {
-      const calc = Completed / Total * 100;
+      const calc = Number.isNaN(Completed / Total * 100) ? 0 : Completed / Total * 100;
       setPercent(calc);
     }, []);
 
