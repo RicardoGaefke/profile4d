@@ -120,9 +120,21 @@ const Licencas = withTranslation()(
           lg={12}
         >
           <div className={classes.root}>
-            <CardsProfile CardsText={`${licencas.Total} `} CardsProfileTitle="Total" />
-            <CardsProfile CardsText={`${licencas.Available}`} CardsProfileTitle="Disponíveis" />
-            <CardsProfile CardsText={`${(licencas.Total as number) - (licencas.Available as number)}`} CardsProfileTitle="Usados" />
+            <CardsProfile
+              CardsText={`${licencas.Total} != "undefined` ? `${licencas.Total}` : `${0}`}
+              CardsProfileTitle="Total"
+            />
+            <CardsProfile
+              CardsText={`${licencas.Available} != "undefined` ? `${licencas.Available}` : `${0}`}
+              CardsProfileTitle="Disponíveis"
+            />
+            <CardsProfile
+              CardsText={
+                `${(licencas.Total as number) - (licencas.Available as number)} != "NaN"`
+                  ? `${(licencas.Total as number) - (licencas.Available as number)}`
+                  : `${0}`}
+              CardsProfileTitle="Usados"
+            />
           </div>
         </Grid>
         <Grid
