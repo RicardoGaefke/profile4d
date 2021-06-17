@@ -69,7 +69,7 @@ const ListaDeLicencas = withTranslation()(
                       >
                         <Button
                           variant="contained"
-                          color="default"
+                          color="primary"
                           title="Abrir resultado"
                           component={NavLink}
                           to={`/answer/report/${key.Guid}`}
