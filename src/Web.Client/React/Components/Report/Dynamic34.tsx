@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { List, ListItem, ListItemText } from '@material-ui/core';
+import { List, Typography } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
 import { IStaticIntroduction } from '../../../../TypeScript/Interfaces/IStaticContent';
 import { filterStaticText } from './filterStatic';
 import { useStateValue } from '../../Initial/Context/StateProvider';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
+import useStyles from './Styles';
 
 export interface IDynamic34 {
   profiles: IProfiles[];
@@ -14,6 +15,7 @@ export interface IDynamic34 {
 
 const Dynamic34 = (props: IDynamic34): JSX.Element => {
   const { profiles, options } = props;
+  const classes = useStyles();
 
   const [{ Language }] = useStateValue();
 
@@ -88,19 +90,21 @@ const Dynamic34 = (props: IDynamic34): JSX.Element => {
 
   return (!ready) ? (
     <>
-      preparando a lista
+      -
     </>
   ) : (
     <List>
       {
         conflitos.map((item, index): React.ReactNode => (
+          <Typography
           // eslint-disable-next-line react/no-array-index-key
-          <ListItem key={index}>
-            <ListItemText color="red">
-              {/* eslint-disable-next-line react/no-danger */}
-              <div dangerouslySetInnerHTML={{ __html: item }} />
-            </ListItemText>
-          </ListItem>
+            key={index}
+            variant="body1"
+            component="div"
+            align="justify"
+            dangerouslySetInnerHTML={{ __html: item }}
+            className={classes.item}
+          />
         ))
       }
     </List>
