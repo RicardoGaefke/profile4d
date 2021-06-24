@@ -54,7 +54,6 @@ const ListaDeLicencas = withTranslation()(
                         <Grid
                           item
                           xs={6}
-                          spacing={0}
                         >
                           <Typography>Não Iniciada</Typography>
                         </Grid>
@@ -88,7 +87,6 @@ const ListaDeLicencas = withTranslation()(
                         <Grid
                           item
                           xs={6}
-                          spacing={0}
                         >
                           <Typography>Iniciada</Typography>
                         </Grid>
