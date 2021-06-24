@@ -95,7 +95,9 @@ namespace Profile4d.Data
                 (MyDR.IsDBNull(2)) ? DateTime.MinValue : MyDR.GetDateTime(2),
                 (MyDR.IsDBNull(3)) ? DateTime.MinValue : MyDR.GetDateTime(3),
                 MyDR.GetBoolean(4),
-                MyDR.GetString(5)
+                MyDR.GetString(5),
+                MyDR.GetString(6),
+                (MyDR.IsDBNull(7)) ? DateTime.MinValue : MyDR.GetDateTime(7)
               );
 
               _return.Add(key);
@@ -247,7 +249,8 @@ namespace Profile4d.Data
                 SentWhen = reader.GetDateTime(2),
                 Started = reader.GetDateTime(3),
                 Finished = reader.GetDateTime(4),
-                BlockResult = reader.GetBoolean(5)
+                BlockResult = reader.GetBoolean(5),
+                Name = reader.GetString(6)
               };
 
               keys.Add(key);
