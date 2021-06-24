@@ -25,8 +25,11 @@ const ListaDeLicencas = withTranslation()(
         <Table aria-label="Assessments list">
           <TableHead>
             <TableRow>
+              <TableCell>Nome</TableCell>
               <TableCell>email</TableCell>
               <TableCell>Status</TableCell>
+              <TableCell>Enviada</TableCell>
+              <TableCell>Iniciada</TableCell>
               <TableCell>Bloqueada</TableCell>
               <TableCell>&nbsp;</TableCell>
             </TableRow>
@@ -35,6 +38,11 @@ const ListaDeLicencas = withTranslation()(
             {
               keys.map((key): React.ReactNode => (
                 <TableRow key={key.Guid}>
+                  <TableCell>
+                    <Typography>
+                      {key.Name}
+                    </Typography>
+                  </TableCell>
                   <TableCell>
                     <Typography>
                       {key.Email}
@@ -93,6 +101,16 @@ const ListaDeLicencas = withTranslation()(
                       </Grid>
                     )
                     }
+                  </TableCell>
+                  <TableCell>
+                    <Typography>
+                      {new Date(key.SentWhen as string).toLocaleDateString()}
+                    </Typography>
+                  </TableCell>
+                  <TableCell>
+                    <Typography>
+                      {((key.Started as string).includes('1900')) ? '---' : new Date(key.Started as string).toLocaleDateString()}
+                    </Typography>
                   </TableCell>
                   <TableCell>
                     {(key.BlockResult) ? (
