@@ -9,7 +9,7 @@ import { filterStaticTitle, filterStaticText } from './filterStatic';
 // eslint-disable-next-line no-unused-vars
 import { IImage } from '../../../../TypeScript/Interfaces/IImage';
 import Chart1 from './Chart1Canvas';
-import Chart2 from './Chart2Canvas';
+import Chart2 from './Chart2CanvasV2';
 import Chart3 from './Chart3Canvas';
 import Chart4 from './Chart4Canvas';
 import Chart5 from './Chart5Canvas';
@@ -83,8 +83,8 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportText text={staticText(7)} />
 
-      <ReportTitle title={dynamicTitle(2)} />
-      <ReportText text={dynamicText(2)} />
+      {/* <ReportTitle title={dynamicTitle(2)} />
+      <ReportText text={dynamicText(2)} /> */}
 
       <ReportTitle title={staticTitle(10)} />
       <ReportText text={dynamicText(3)} />
@@ -119,8 +119,8 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportText text={staticText(21)} />
 
-      <ReportTitle title={dynamicTitle(12)} />
-      <ReportText text={dynamicText(12)} />
+      {/* <ReportTitle title={dynamicTitle(12)} />
+      <ReportText text={dynamicText(12)} /> */}
 
       <ReportTitle title={staticTitle(23)} />
       <ReportText text={dynamicText(13)} />
