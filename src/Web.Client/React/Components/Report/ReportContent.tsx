@@ -9,7 +9,7 @@ import { filterStaticTitle, filterStaticText } from './filterStatic';
 // eslint-disable-next-line no-unused-vars
 import { IImage } from '../../../../TypeScript/Interfaces/IImage';
 import Chart1 from './Chart1Canvas';
-import Chart2 from './Chart2Canvas';
+import Chart2 from './Chart2CanvasV2';
 import Chart3 from './Chart3Canvas';
 import Chart4 from './Chart4Canvas';
 import Chart5 from './Chart5Canvas';

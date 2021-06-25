@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-// eslint-disable-next-line no-unused-vars
-import { Chart, ChartConfiguration, BarController } from 'chart.js';
+import {
+  // eslint-disable-next-line no-unused-vars
+  Chart, ChartConfiguration, BarController, ChartData, CategoryScale, LinearScale, BarElement,
+} from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 import useStyles from './Styles';
@@ -15,7 +17,7 @@ const Chart3Canvas = (props: Chart3CanvasProps): JSX.Element => {
 
   const classes = useStyles();
 
-  Chart.register(BarController);
+  Chart.register(BarController, CategoryScale, LinearScale, BarElement);
 
   const amarelos = profiles.filter((item): boolean => item.Color === 'Amarelo');
   amarelos.sort((a, b): number => b.Total - a.Total || b.InternalNumber - a.InternalNumber);
@@ -30,56 +32,95 @@ const Chart3Canvas = (props: Chart3CanvasProps): JSX.Element => {
   const azul = azuis[0];
 
   const data = {
-    labels: ['Perfis comportamentais e suas respectivas energias'],
+    labels: [
+      `${amarelo.Name} - ${((amarelo.Total / 165) * 100).toFixed(2)}%`,
+      `${vermelho.Name} - ${((vermelho.Total / 165) * 100).toFixed(2)}%`,
+      `${azul.Name} - ${((azul.Total / 165) * 100).toFixed(2)}%`,
+    ],
     datasets: [
       {
-        label: `${amarelo.Name} - ${((amarelo.Total / 165) * 100).toFixed(2)}%`,
+        label: '3. Perfis dominantes',
         data: [
-          ((amarelo.Total / 165) * 100).toFixed(2),
+          ((amarelo.Total / 165) * 100),
+          ((vermelho.Total / 165) * 100),
+          ((azul.Total / 165) * 100),
         ],
         backgroundColor: [
-          '#ffff00',
+          'rgba(230, 230, 0, .8)',
+          'rgba(173, 0, 0, .8)',
+          'rgba(0, 29, 86, .8)',
         ],
-      },
-      {
-        label: `${vermelho.Name} - ${((vermelho.Total / 165) * 100).toFixed(2)}%`,
-        data: [
-          ((vermelho.Total / 165) * 100).toFixed(2),
+        borderColor: [
+          'rgba(230, 230, 0, 1)',
+          'rgba(173, 0, 0, 1)',
+          'rgba(0, 29, 86, 1)',
         ],
-        backgroundColor: [
-          '#c00000',
-        ],
-      },
-      {
-        label: `${azul.Name} - ${((azul.Total / 165) * 100).toFixed(2)}%`,
-        data: [
-          ((azul.Total / 165) * 100).toFixed(2),
-        ],
-        backgroundColor: [
-          '#002060',
-        ],
+        borderWidth: 2,
       },
     ],
-  };
+  } as ChartData<'bar', number[], string>;
 
   const refChart3 = useRef<HTMLCanvasElement>(null);
   const refImage3 = useRef<HTMLImageElement>(null);
 
   const chartConfig = {
+    responsive: false,
+    scaleShowValues: true,
     type: 'bar',
     data,
     scales: {
       yAxes: [{
         ticks: {
-          min: 0,
+          beginAtZero: true,
+          autoSkip: false,
+          stepSize: 5,
           max: 35,
+          includeBounds: true,
+          display: true,
+          showLabelBackdrop: true,
         },
       }],
+      xAxes: [
+        {
+          ticks: {
+            maxRotation: 90,
+            minRotation: 80,
+            autoSkip: false,
+          },
+          gridLines: {
+            offsetGridLines: true,
+          },
+        },
+        {
+          position: 'top',
+          ticks: {
+            maxRotation: 90,
+            minRotation: 80,
+            autoSkip: false,
+          },
+          gridLines: {
+            offsetGridLines: true,
+          },
+        },
+      ],
     },
-    legend: {
-      position: 'bottom',
+    options: {
+      plugins: {
+        legend: {
+          display: true,
+          text: 'legend',
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+        },
+        title: {
+          display: true,
+          text: 'Chart.js Line Chart',
+        },
+      },
     },
-  } as ChartConfiguration<'bar', string[], string>;
+  } as ChartConfiguration<'bar', number[], string>;
 
   useEffect((): void => {
     if (refChart3 && refChart3.current) {
