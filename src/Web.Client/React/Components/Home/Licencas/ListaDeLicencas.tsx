@@ -7,6 +7,11 @@ import {
   Paper, Table, TableContainer, TableHead, TableRow, TableCell, TableBody,
   Typography, Button, Grid,
 } from '@material-ui/core';
+import LockIcon from '@material-ui/icons/Lock';
+import LockOpenIcon from '@material-ui/icons/LockOpen';
+import CancelIcon from '@material-ui/icons/Cancel';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 // eslint-disable-next-line no-unused-vars
 import { IKey } from '../../../../../TypeScript/Interfaces/IKey';
 
@@ -31,6 +36,7 @@ const ListaDeLicencas = withTranslation()(
               <TableCell>Enviada</TableCell>
               <TableCell>Iniciada</TableCell>
               <TableCell>Bloqueada</TableCell>
+              <TableCell>&nbsp;</TableCell>
               <TableCell>&nbsp;</TableCell>
             </TableRow>
           </TableHead>
@@ -61,9 +67,16 @@ const ListaDeLicencas = withTranslation()(
                       >
                         <Grid
                           item
-                          xs={6}
+                          xs={12}
                         >
-                          <Typography>Não Iniciada</Typography>
+                          <Button
+                            variant="contained"
+                            color="primary"
+                            title="Representar o Em execução"
+                            style={{ backgroundColor: '#808080', fontWeight: 'bold' }}
+                          >
+                            Não iniciado
+                          </Button>
                         </Grid>
                       </Grid>
                     ) : (!key.Started?.includes('1900') && !key.Finished?.includes('1900')) ? (
@@ -77,9 +90,8 @@ const ListaDeLicencas = withTranslation()(
                         <Button
                           variant="contained"
                           color="primary"
-                          title="Abrir resultado"
-                          component={NavLink}
-                          to={`/answer/report/${key.Guid}`}
+                          title="resultado"
+                          style={{ backgroundColor: '#009900', fontWeight: 'bold' }}
                         >
                           Resultado
                         </Button>
@@ -92,12 +104,14 @@ const ListaDeLicencas = withTranslation()(
                         md={12}
                         lg={12}
                       >
-                        <Grid
-                          item
-                          xs={6}
+                        <Button
+                          variant="contained"
+                          color="primary"
+                          title="Representar o Em execução"
+                          style={{ backgroundColor: '#FF8000', fontWeight: 'bold' }}
                         >
-                          <Typography>Iniciada</Typography>
-                        </Grid>
+                          Em Execução
+                        </Button>
                       </Grid>
                     )
                     }
@@ -116,14 +130,25 @@ const ListaDeLicencas = withTranslation()(
                     {(key.BlockResult) ? (
                       <Button
                         variant="contained"
-                        color="default"
+                        color="secondary"
+                        style={{ backgroundColor: '#FF0000', fontWeight: 'bold' }}
                         title="Desbloquear"
                         onClick={(): void => { onDesbloquear(key.Guid as string); }}
                       >
-                        Desbloquear
+                        <Grid>
+                          <LockIcon style={{ color: '#FFFFF', fontSize: 20, marginBottom: -4 }} />
+                        </Grid>
                       </Button>
                     ) : (
-                      <Typography>Desbloqueada</Typography>
+                      <Button
+                        variant="contained"
+                        color="secondary"
+                        style={{ backgroundColor: '#009900', fontWeight: 'bold' }}
+                      >
+                        <Grid>
+                          <LockOpenIcon style={{ color: '#FFFFF', fontSize: 20, marginBottom: -4 }} />
+                        </Grid>
+                      </Button>
                     )}
                   </TableCell>
                   <TableCell>
@@ -131,12 +156,60 @@ const ListaDeLicencas = withTranslation()(
                       (key.Started?.includes('1900')) && (
                         <Button
                           variant="contained"
-                          color="default"
+                          color="primary"
+                          style={{ backgroundColor: '#E0E0E0' }}
                           title="Cancelar envio de chave"
                           onClick={(): void => { onCancelar(key.Guid as string); }}
                         >
-                          Cancelar
+                          <Grid>
+                            <CancelIcon style={{ color: '#A0A0A0', fontSize: 20, marginBottom: -4 }} />
+                          </Grid>
                         </Button>
+                      )
+                    }
+                  </TableCell>
+                  <TableCell>
+                    {
+                      (!key.Started?.includes('1900') && !key.Finished?.includes('1900')) ? (
+                        <Grid
+                          item
+                          container
+                          xs={12}
+                          md={12}
+                          lg={12}
+                        >
+                          <Button
+                            variant="contained"
+                            color="primary"
+                            title="Abrir resultado"
+                            component={NavLink}
+                            to={`/answer/report/${key.Guid}`}
+                            style={{ fontWeight: 'bold' }}
+                          >
+                            <Grid>
+                              <VisibilityIcon style={{ fontSize: 20, marginBottom: -4 }} />
+                            </Grid>
+                          </Button>
+                        </Grid>
+                      ) : (
+                        <Grid
+                          item
+                          container
+                          xs={12}
+                          md={12}
+                          lg={12}
+                        >
+                          <Button
+                            variant="contained"
+                            color="primary"
+                            title="Representar o Em execução"
+                            style={{ backgroundColor: '#E0E0E0', fontWeight: 'bold' }}
+                          >
+                            <Grid>
+                              <VisibilityOffIcon style={{ color: '#A0A0A0', fontSize: 20, marginBottom: -4 }} />
+                            </Grid>
+                          </Button>
+                        </Grid>
                       )
                     }
                   </TableCell>
