@@ -32,7 +32,7 @@ const Chart2Canvas = (props: Chart2CanvasProps): JSX.Element => {
   const visionario = profiles.filter((item): boolean => item.Name === 'Perfil Visionário')[0].Total || 0;
 
   const data = {
-    labels: ['Perfis comportamentais e suas respectivas energias'],
+    labels: ['2. Perfis comportamentais e suas respectivas energias'],
     datasets: [
       {
         label: `Comandante ${((comandante / 165) * 100).toFixed(2)}%`,
