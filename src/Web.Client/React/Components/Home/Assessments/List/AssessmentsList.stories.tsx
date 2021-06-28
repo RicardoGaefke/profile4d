@@ -4,11 +4,8 @@ import { storiesOf } from '@storybook/react';
 import { withConsole } from '@storybook/addon-console';
 import {
   TableHead, TableRow, TableCell, TableBody,
-  Typography, Button, Grid,
+  Typography, Button,
 } from '@material-ui/core';
-import LockIcon from '@material-ui/icons/Lock';
-import LockOpenIcon from '@material-ui/icons/LockOpen';
-import CancelIcon from '@material-ui/icons/Cancel';
 import { CloudDownload } from '@material-ui/icons';
 import MyThemeHoc from '../../../../Initial/Theme/StoryBookHOC';
 
@@ -32,7 +29,7 @@ const App = (): React.ReactElement => (
         </TableCell>
         <TableCell>
           <Typography>
-              1c52ce92-adec-46aa-baf5-49feed1d50f
+            1c52ce92-adec-46aa-baf5-49feed1d50f
           </Typography>
         </TableCell>
         <TableCell>
@@ -64,7 +61,7 @@ const App = (): React.ReactElement => (
         </TableCell>
         <TableCell>
           <Typography>
-              1c52ce92-adec-46aa-baf5-49feed1d50f
+            1c52ce92-adec-46aa-baf5-49feed1d50f
           </Typography>
         </TableCell>
         <TableCell>
@@ -95,7 +92,7 @@ const App = (): React.ReactElement => (
         </TableCell>
         <TableCell>
           <Typography>
-              1c52ce92-adec-46aa-baf5-49feed1d50f
+            1c52ce92-adec-46aa-baf5-49feed1d50f
           </Typography>
         </TableCell>
         <TableCell>
@@ -117,7 +114,7 @@ const App = (): React.ReactElement => (
             Iniciar
           </Button>
         </TableCell>
-      </TableRow>      
+      </TableRow>
     </TableBody>
   </MyThemeHoc>
 );
