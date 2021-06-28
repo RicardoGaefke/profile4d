@@ -80,7 +80,7 @@ export default makeStyles((theme: Theme): IStyles => ({
   },
   chartImage: {
     maxWidth: '100%',
-    maxHeight: 300,
+    maxHeight: 400,
     marginLeft: 'auto',
     marginRight: 'auto',
   },
