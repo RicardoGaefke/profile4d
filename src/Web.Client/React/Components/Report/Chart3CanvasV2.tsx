@@ -12,8 +12,8 @@ export interface Chart3CanvasProps {
   printing: boolean;
 }
 
-const Chart3Canvas = (props: Chart3CanvasProps): JSX.Element => {
-  const { profiles = [], printing } = props;
+const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
+  const { profiles, printing } = props;
 
   const classes = useStyles();
 
@@ -137,12 +137,12 @@ const Chart3Canvas = (props: Chart3CanvasProps): JSX.Element => {
   }, [refChart3]);
   return (
     <>
-      <canvas ref={refChart3} style={{ display: (printing) ? 'none' : 'block' }} />
+      <canvas ref={refChart3} style={{ display: (printing) ? 'none' : 'block' }} width="100%" />
       <img alt="printing chart" ref={refImage3} className={classes.chartImage} style={{ display: (printing) ? 'block' : 'none' }} />
     </>
   );
 };
 
-Chart3Canvas.displayName = 'Chart3Canvas';
+Chart3CanvasV2.displayName = 'Chart3CanvasV2';
 
-export default Chart3Canvas;
+export default Chart3CanvasV2;
