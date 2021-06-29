@@ -114,7 +114,7 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
   }, [refChart6]);
   return (
     <>
-      <canvas ref={refChart6} style={{ display: (printing) ? 'none' : 'block' }} />
+      <canvas ref={refChart6} style={{ display: (printing) ? 'none' : 'block' }} width="100%" />
       <img alt="printing chart" ref={refImage6} className={classes.chartImage} style={{ display: (printing) ? 'block' : 'none' }} />
     </>
   );
