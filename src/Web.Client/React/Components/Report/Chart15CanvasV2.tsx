@@ -7,23 +7,23 @@ import {
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 import useStyles from './Styles';
 
-export interface Chart7CanvasProps {
+export interface Chart15CanvasProps {
   profiles: IProfiles[];
   printing: boolean;
 }
 
-const Chart7CanvasV2 = (props: Chart7CanvasProps): JSX.Element => {
+const Chart15CanvasV2 = (props: Chart15CanvasProps): JSX.Element => {
   const { profiles, printing } = props;
 
   const classes = useStyles();
 
-  Chart.register(BarController, CategoryScale, LinearScale, BarElement);
+  Chart.register(BarController, CategoryScale, BarElement, LinearScale);
 
-  const amarelo = profiles.filter((item): boolean => item.Name === 'Perfil Mediador')[0];
+  const amarelo = profiles.filter((item): boolean => item.Name === 'Perfil Organizador')[0];
 
-  const vermelho = profiles.filter((item): boolean => item.Name === 'Perfil Criativo')[0];
+  const vermelho = profiles.filter((item): boolean => item.Name === 'Perfil Realizador')[0];
 
-  const azul = profiles.filter((item): boolean => item.Name === 'Perfil Visionário')[0];
+  const azul = profiles.filter((item): boolean => item.Name === 'Perfil Planejador')[0];
 
   const data = {
     labels: [
@@ -33,7 +33,7 @@ const Chart7CanvasV2 = (props: Chart7CanvasProps): JSX.Element => {
     ],
     datasets: [
       {
-        label: 'Adaptabilidade',
+        label: 'Planejamento estratégico',
         data: [
           ((amarelo.Total / 165) * 100).toFixed(2),
           ((vermelho.Total / 165) * 100).toFixed(2),
@@ -52,10 +52,11 @@ const Chart7CanvasV2 = (props: Chart7CanvasProps): JSX.Element => {
         borderWidth: 2,
       },
     ],
+
   } as unknown as ChartData<'bar', number[], string>;
 
-  const refChart7 = useRef<HTMLCanvasElement>(null);
-  const refImage7 = useRef<HTMLImageElement>(null);
+  const refChart15 = useRef<HTMLCanvasElement>(null);
+  const refImage15 = useRef<HTMLImageElement>(null);
 
   const chartConfig = {
     responsive: false,
@@ -101,26 +102,27 @@ const Chart7CanvasV2 = (props: Chart7CanvasProps): JSX.Element => {
   } as ChartConfiguration<'bar', number[], string>;
 
   useEffect((): void => {
-    if (refChart7 && refChart7.current) {
-      const newChartInstance = new Chart(refChart7.current, chartConfig);
+    if (refChart15 && refChart15.current) {
+      const newChartInstance = new Chart(refChart15.current, chartConfig);
 
       newChartInstance.options.animation = {
         onComplete: (): void => {
-          if (refImage7 && refImage7.current) {
-            refImage7.current.src = newChartInstance.toBase64Image();
+          if (refImage15 && refImage15.current) {
+            refImage15.current.src = newChartInstance.toBase64Image();
           }
         },
       };
     }
-  }, [refChart7]);
+  }, [refChart15]);
+
   return (
     <>
-      <canvas ref={refChart7} style={{ display: (printing) ? 'none' : 'block' }} width="100%" />
-      <img alt="printing chart" ref={refImage7} className={classes.chartImage} style={{ display: (printing) ? 'block' : 'none' }} />
+      <canvas ref={refChart15} style={{ display: (printing) ? 'none' : 'block' }} width="100%" />
+      <img alt="printing chart" ref={refImage15} className={classes.chartImage} style={{ display: (printing) ? 'block' : 'none' }} />
     </>
   );
 };
 
-Chart7CanvasV2.displayName = 'Chart7CanvasV2';
+Chart15CanvasV2.displayName = 'Chart15CanvasV2';
 
-export default Chart7CanvasV2;
+export default Chart15CanvasV2;
