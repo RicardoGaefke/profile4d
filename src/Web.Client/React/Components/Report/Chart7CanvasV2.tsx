@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import {
   // eslint-disable-next-line no-unused-vars
-  Chart, ChartConfiguration, BarController, ChartData, CategoryScale, LinearScale, BarElement,
+  Chart, ChartConfiguration, BarController, CategoryScale, BarElement, ChartData, LinearScale,
 } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
@@ -26,7 +26,7 @@ const Chart7CanvasV2 = (props: Chart7CanvasProps): JSX.Element => {
   const azul = profiles.filter((item): boolean => item.Name === 'Perfil Visionário')[0];
 
   const data = {
-    label: [
+    labels: [
       `${amarelo.Name} - ${((amarelo.Total / 165) * 100).toFixed(2).toString()}%`,
       `${vermelho.Name} - ${((vermelho.Total / 165) * 100).toFixed(2).toString()}%`,
       `${azul.Name} - ${((azul.Total / 165) * 100).toFixed(2).toString()}%`,
