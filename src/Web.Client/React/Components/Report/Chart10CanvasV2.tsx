@@ -7,23 +7,23 @@ import {
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 import useStyles from './Styles';
 
-export interface Chart6CanvasProps {
+export interface Chart10CanvasProps {
   profiles: IProfiles[];
   printing: boolean;
 }
 
-const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
+const Chart10CanvasV2 = (props: Chart10CanvasProps): JSX.Element => {
   const { profiles, printing } = props;
 
   const classes = useStyles();
 
   Chart.register(BarController, CategoryScale, BarElement, LinearScale);
 
-  const amarelo = profiles.filter((item): boolean => item.Name === 'Perfil Mediador')[0];
+  const amarelo = profiles.filter((item): boolean => item.Name === 'Perfil Organizador')[0];
 
   const vermelho = profiles.filter((item): boolean => item.Name === 'Perfil Prestativo')[0];
 
-  const azul = profiles.filter((item): boolean => item.Name === 'Perfil Planejador')[0];
+  const azul = profiles.filter((item): boolean => item.Name === 'Perfil Analítico')[0];
 
   const data = {
     labels: [
@@ -31,30 +31,31 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
       `${vermelho.Name} - ${((vermelho.Total / 165) * 100).toFixed(2).toString()}%`,
       `${azul.Name} - ${((azul.Total / 165) * 100).toFixed(2).toString()}%`,
     ],
-    datasets: [{
-      label: 'Resolução de conflitos',
-      data: [
-        ((amarelo.Total / 165) * 100).toFixed(2),
-        ((vermelho.Total / 165) * 100).toFixed(2),
-        ((azul.Total / 165) * 100).toFixed(2),
-      ],
-      backgroundColor: [
-        '#ffff00',
-        '#c00000',
-        '#002060',
-      ],
-      borderColor: [
-        '#ffff00',
-        '#c00000',
-        '#002060',
-      ],
-      borderWidth: 2,
-    },
+    datasets: [
+      {
+        label: 'Orientação para o cliente',
+        data: [
+          ((amarelo.Total / 165) * 100).toFixed(2),
+          ((vermelho.Total / 165) * 100).toFixed(2),
+          ((azul.Total / 165) * 100).toFixed(2),
+        ],
+        backgroundColor: [
+          '#ffff00',
+          '#c00000',
+          '#002060',
+        ],
+        borderColor: [
+          '#ffff00',
+          '#c00000',
+          '#002060',
+        ],
+        borderWidth: 2,
+      },
     ],
   } as unknown as ChartData<'bar', number[], string>;
 
-  const refChart6 = useRef<HTMLCanvasElement>(null);
-  const refImage6 = useRef<HTMLImageElement>(null);
+  const refChart10 = useRef<HTMLCanvasElement>(null);
+  const refImage10 = useRef<HTMLImageElement>(null);
 
   const chartConfig = {
     responsive: false,
@@ -100,26 +101,27 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
   } as ChartConfiguration<'bar', number[], string>;
 
   useEffect((): void => {
-    if (refChart6 && refChart6.current) {
-      const newChartInstance = new Chart(refChart6.current, chartConfig);
+    if (refChart10 && refChart10.current) {
+      const newChartInstance = new Chart(refChart10.current, chartConfig);
 
       newChartInstance.options.animation = {
         onComplete: (): void => {
-          if (refImage6 && refImage6.current) {
-            refImage6.current.src = newChartInstance.toBase64Image();
+          if (refImage10 && refImage10.current) {
+            refImage10.current.src = newChartInstance.toBase64Image();
           }
         },
       };
     }
-  }, [refChart6]);
+  }, [refChart10]);
+
   return (
     <>
-      <canvas ref={refChart6} style={{ display: (printing) ? 'none' : 'block' }} width="100%" />
-      <img alt="printing chart" ref={refImage6} className={classes.chartImage} style={{ display: (printing) ? 'block' : 'none' }} />
+      <canvas ref={refChart10} style={{ display: (printing) ? 'none' : 'block' }} width="100%" />
+      <img alt="printing chart" ref={refImage10} className={classes.chartImage} style={{ display: (printing) ? 'block' : 'none' }} />
     </>
   );
 };
 
-Chart6CanvasV2.displayName = 'Chart6CanvasV2';
+Chart10CanvasV2.displayName = 'Chart10CanvasV2';
 
-export default Chart6CanvasV2;
+export default Chart10CanvasV2;

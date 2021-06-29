@@ -7,12 +7,12 @@ import {
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 import useStyles from './Styles';
 
-export interface Chart6CanvasProps {
+export interface Chart9CanvasProps {
   profiles: IProfiles[];
   printing: boolean;
 }
 
-const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
+const Chart9CanvasV2 = (props: Chart9CanvasProps): JSX.Element => {
   const { profiles, printing } = props;
 
   const classes = useStyles();
@@ -23,7 +23,7 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
 
   const vermelho = profiles.filter((item): boolean => item.Name === 'Perfil Prestativo')[0];
 
-  const azul = profiles.filter((item): boolean => item.Name === 'Perfil Planejador')[0];
+  const azul = profiles.filter((item): boolean => item.Name === 'Perfil Visionário')[0];
 
   const data = {
     labels: [
@@ -32,7 +32,7 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
       `${azul.Name} - ${((azul.Total / 165) * 100).toFixed(2).toString()}%`,
     ],
     datasets: [{
-      label: 'Resolução de conflitos',
+      label: 'Relacionamento interpessoal',
       data: [
         ((amarelo.Total / 165) * 100).toFixed(2),
         ((vermelho.Total / 165) * 100).toFixed(2),
@@ -53,8 +53,8 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
     ],
   } as unknown as ChartData<'bar', number[], string>;
 
-  const refChart6 = useRef<HTMLCanvasElement>(null);
-  const refImage6 = useRef<HTMLImageElement>(null);
+  const refChart9 = useRef<HTMLCanvasElement>(null);
+  const refImage9 = useRef<HTMLImageElement>(null);
 
   const chartConfig = {
     responsive: false,
@@ -100,26 +100,27 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
   } as ChartConfiguration<'bar', number[], string>;
 
   useEffect((): void => {
-    if (refChart6 && refChart6.current) {
-      const newChartInstance = new Chart(refChart6.current, chartConfig);
+    if (refChart9 && refChart9.current) {
+      const newChartInstance = new Chart(refChart9.current, chartConfig);
 
       newChartInstance.options.animation = {
         onComplete: (): void => {
-          if (refImage6 && refImage6.current) {
-            refImage6.current.src = newChartInstance.toBase64Image();
+          if (refImage9 && refImage9.current) {
+            refImage9.current.src = newChartInstance.toBase64Image();
           }
         },
       };
     }
-  }, [refChart6]);
+  }, [refChart9]);
+
   return (
     <>
-      <canvas ref={refChart6} style={{ display: (printing) ? 'none' : 'block' }} width="100%" />
-      <img alt="printing chart" ref={refImage6} className={classes.chartImage} style={{ display: (printing) ? 'block' : 'none' }} />
+      <canvas ref={refChart9} style={{ display: (printing) ? 'none' : 'block' }} width="100%" />
+      <img alt="printing chart" ref={refImage9} className={classes.chartImage} style={{ display: (printing) ? 'block' : 'none' }} />
     </>
   );
 };
 
-Chart6CanvasV2.displayName = 'Chart6CanvasV2';
+Chart9CanvasV2.displayName = 'Chart9CanvasV2';
 
-export default Chart6CanvasV2;
+export default Chart9CanvasV2;
