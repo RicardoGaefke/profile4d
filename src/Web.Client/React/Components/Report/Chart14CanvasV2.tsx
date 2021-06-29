@@ -14,7 +14,6 @@ export interface Chart14CanvasProps {
 
 const Chart14CanvasV2 = (props: Chart14CanvasProps): JSX.Element => {
   const { profiles, printing } = props;
-
   const classes = useStyles();
 
   Chart.register(BarController, CategoryScale, BarElement, LinearScale);
