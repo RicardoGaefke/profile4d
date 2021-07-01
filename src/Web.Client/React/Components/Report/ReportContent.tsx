@@ -8,10 +8,10 @@ import ReportText from './ReportText';
 import { filterStaticTitle, filterStaticText } from './filterStatic';
 // eslint-disable-next-line no-unused-vars
 import { IImage } from '../../../../TypeScript/Interfaces/IImage';
-import Chart1 from './Chart1Canvas';
+import Chart1 from './Chart1CanvasV2';
 import Chart2 from './Chart2CanvasV2';
 import Chart3 from './Chart3CanvasV2';
-import Chart4 from './Chart4Canvas';
+import Chart4 from './Chart4CanvasV2';
 import Chart5 from './Chart5CanvasV2';
 import Chart6 from './Chart6CanvasV2';
 import Chart7 from './Chart7CanvasV2';
