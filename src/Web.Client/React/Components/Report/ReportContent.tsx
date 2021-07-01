@@ -203,7 +203,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       {/* SABOTADOR DO COMPLEMENTAR */}
       <ReportTitle title={dynamicTitle(95)} />
-      <ReportText text={dynamicText(95)} />
+      {/* <ReportText text={dynamicText(95)} /> */}
 
       <ReportTitle title={staticTitle(37)} />
       <ReportText text={dynamicText(96)} />
