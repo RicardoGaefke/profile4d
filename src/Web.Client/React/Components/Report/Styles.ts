@@ -12,6 +12,7 @@ interface IStyles {
   itemBrakePage: {},
   chart: {},
   chartImage: {},
+  chartImageFull: {},
 }
 
 export default makeStyles((theme: Theme): IStyles => ({
@@ -81,6 +82,13 @@ export default makeStyles((theme: Theme): IStyles => ({
   chartImage: {
     maxWidth: '100%',
     maxHeight: 400,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  chartImageFull: {
+    maxWidth: '100%',
+    width: '18cm',
+    maxHeight: 800,
     marginLeft: 'auto',
     marginRight: 'auto',
   },
