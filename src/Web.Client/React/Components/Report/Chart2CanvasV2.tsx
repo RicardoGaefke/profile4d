@@ -151,7 +151,7 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
       <img
         alt="printing chart"
         ref={refImage}
-        className={classes.chartImage}
+        className={classes.chartImageFull}
         style={{
           display: (printing) ? 'block' : 'none',
         }}

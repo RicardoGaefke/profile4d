@@ -8,10 +8,10 @@ import ReportText from './ReportText';
 import { filterStaticTitle, filterStaticText } from './filterStatic';
 // eslint-disable-next-line no-unused-vars
 import { IImage } from '../../../../TypeScript/Interfaces/IImage';
-import Chart1 from './Chart1Canvas';
+import Chart1 from './Chart1CanvasV2';
 import Chart2 from './Chart2CanvasV2';
 import Chart3 from './Chart3CanvasV2';
-import Chart4 from './Chart4Canvas';
+import Chart4 from './Chart4CanvasV2';
 import Chart5 from './Chart5CanvasV2';
 import Chart6 from './Chart6CanvasV2';
 import Chart7 from './Chart7CanvasV2';
@@ -191,7 +191,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       {/* SABOTADOR DO APOIO */}
       <ReportTitle title={dynamicTitle(92)} />
-      <ReportText text={dynamicText(92)} />
+      {/* <ReportText text={dynamicText(92)} /> */}
 
       <ReportTitle title={staticTitle(36)} />
       <ReportText text={dynamicText(93)} />
@@ -203,7 +203,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       {/* SABOTADOR DO COMPLEMENTAR */}
       <ReportTitle title={dynamicTitle(95)} />
-      <ReportText text={dynamicText(95)} />
+      {/* <ReportText text={dynamicText(95)} /> */}
 
       <ReportTitle title={staticTitle(37)} />
       <ReportText text={dynamicText(96)} />
@@ -223,7 +223,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportTitle title={staticTitle(57)} breakPage />
 
-      <div className={classes.chart}>
+      <div className={classes.chartFull}>
         <Chart2 profiles={data.Profiles as IProfiles[]} printing={printing} />
       </div>
 

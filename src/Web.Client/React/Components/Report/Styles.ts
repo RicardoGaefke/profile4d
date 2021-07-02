@@ -11,7 +11,9 @@ interface IStyles {
   brakePage: {},
   itemBrakePage: {},
   chart: {},
+  chartFull: {},
   chartImage: {},
+  chartImageFull: {},
 }
 
 export default makeStyles((theme: Theme): IStyles => ({
@@ -47,7 +49,7 @@ export default makeStyles((theme: Theme): IStyles => ({
   },
   container: {
     padding: theme.spacing(4),
-    maxWidth: '800px',
+    maxWidth: '1200px',
     '@media print': {
       padding: '10mm',
     },
@@ -78,10 +80,25 @@ export default makeStyles((theme: Theme): IStyles => ({
       margin: '0 20% 0 20%',
     },
   },
+  chartFull: {
+    '@media print': {
+      margin: '0 3% 0 5%',
+    },
+  },
   chartImage: {
     maxWidth: '100%',
     maxHeight: 400,
     marginLeft: 'auto',
     marginRight: 'auto',
+  },
+  chartImageFull: {
+    width: '17cm',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    '@media print': {
+      width: '17cm',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    },
   },
 }));
