@@ -191,7 +191,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       {/* SABOTADOR DO APOIO */}
       <ReportTitle title={dynamicTitle(92)} />
-      <ReportText text={dynamicText(92)} />
+      {/* <ReportText text={dynamicText(92)} /> */}
 
       <ReportTitle title={staticTitle(36)} />
       <ReportText text={dynamicText(93)} />
@@ -203,7 +203,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       {/* SABOTADOR DO COMPLEMENTAR */}
       <ReportTitle title={dynamicTitle(95)} />
-      <ReportText text={dynamicText(95)} />
+      {/* <ReportText text={dynamicText(95)} /> */}
 
       <ReportTitle title={staticTitle(37)} />
       <ReportText text={dynamicText(96)} />
@@ -223,7 +223,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportTitle title={staticTitle(57)} breakPage />
 
-      <div className={classes.chart}>
+      <div className={classes.chartFull}>
         <Chart2 profiles={data.Profiles as IProfiles[]} printing={printing} />
       </div>
 
