@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-// eslint-disable-next-line no-unused-vars
-import { Chart, ChartConfiguration, BarController } from 'chart.js';
+import {
+  // eslint-disable-next-line no-unused-vars
+  Chart, ChartConfiguration, BarController, CategoryScale, BarElement, ChartData, LinearScale,
+} from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 import useStyles from './Styles';
@@ -10,12 +12,12 @@ export interface Chart8CanvasProps {
   printing: boolean;
 }
 
-const Chart8Canvas = (props: Chart8CanvasProps): JSX.Element => {
-  const { profiles = [], printing } = props;
+const Chart8CanvasV2 = (props: Chart8CanvasProps): JSX.Element => {
+  const { profiles, printing } = props;
 
   const classes = useStyles();
 
-  Chart.register(BarController);
+  Chart.register(BarController, CategoryScale, BarElement, LinearScale);
 
   const amarelo = profiles.filter((item): boolean => item.Name === 'Perfil Comandante')[0];
 
@@ -24,56 +26,78 @@ const Chart8Canvas = (props: Chart8CanvasProps): JSX.Element => {
   const azul = profiles.filter((item): boolean => item.Name === 'Perfil Analítico')[0];
 
   const data = {
-    labels: ['Proatividade'],
-    datasets: [
-      {
-        label: `${amarelo.Name} - ${((amarelo.Total / 165) * 100).toFixed(2).toString()}%`,
-        data: [
-          ((amarelo.Total / 165) * 100).toFixed(2),
-        ],
-        backgroundColor: [
-          '#ffff00',
-        ],
-      },
-      {
-        label: `${vermelho.Name} - ${((vermelho.Total / 165) * 100).toFixed(2).toString()}%`,
-        data: [
-          ((vermelho.Total / 165) * 100).toFixed(2),
-        ],
-        backgroundColor: [
-          '#c00000',
-        ],
-      },
-      {
-        label: `${azul.Name} - ${((azul.Total / 165) * 100).toFixed(2).toString()}%`,
-        data: [
-          ((azul.Total / 165) * 100).toFixed(2),
-        ],
-        backgroundColor: [
-          '#002060',
-        ],
-      },
+    labels: [
+      `${amarelo.Name} - ${((amarelo.Total / 165) * 100).toFixed(2).toString()}%`,
+      `${vermelho.Name} - ${((vermelho.Total / 165) * 100).toFixed(2).toString()}%`,
+      `${azul.Name} - ${((azul.Total / 165) * 100).toFixed(2).toString()}%`,
     ],
-  };
+    datasets: [{
+      label: 'Proatividade',
+      data: [
+        ((amarelo.Total / 165) * 100).toFixed(2),
+        ((vermelho.Total / 165) * 100).toFixed(2),
+        ((azul.Total / 165) * 100).toFixed(2),
+      ],
+      backgroundColor: [
+        '#ffff00',
+        '#c00000',
+        '#002060',
+      ],
+      borderColor: [
+        '#ffff00',
+        '#c00000',
+        '#002060',
+      ],
+      borderWidth: 2,
+    },
+    ],
+  } as unknown as ChartData<'bar', number[], string>;
 
   const refChart8 = useRef<HTMLCanvasElement>(null);
   const refImage8 = useRef<HTMLImageElement>(null);
 
   const chartConfig = {
+    responsive: false,
+    scaleShowValues: true,
     type: 'bar',
     data,
     scales: {
       yAxes: [{
         ticks: {
-          min: 0,
+          beginAtZero: true,
+          autoSkip: false,
+          stepSize: 5,
           max: 35,
+          includeBounds: true,
+          display: true,
+          showLabelBackdrop: true,
         },
       }],
+      xAxes: [
+        {
+          ticks: {
+            maxRotation: 90,
+            minRotation: 80,
+            autoSkip: false,
+          },
+          gridLines: {
+            offsetGridLines: true,
+          },
+        },
+        {
+          position: 'top',
+          ticks: {
+            maxRotation: 90,
+            minRotation: 80,
+            autoSkip: false,
+          },
+          gridLines: {
+            offsetGridLines: true,
+          },
+        },
+      ],
     },
-    legend: {
-      position: 'bottom',
-    },
-  } as ChartConfiguration<'bar', string[], string>;
+  } as ChartConfiguration<'bar', number[], string>;
 
   useEffect((): void => {
     if (refChart8 && refChart8.current) {
@@ -92,12 +116,12 @@ const Chart8Canvas = (props: Chart8CanvasProps): JSX.Element => {
 
   return (
     <>
-      <canvas ref={refChart8} style={{ display: (printing) ? 'none' : 'block' }} />
+      <canvas ref={refChart8} style={{ display: (printing) ? 'none' : 'block' }} width="100%" />
       <img alt="printing chart" ref={refImage8} className={classes.chartImage} style={{ display: (printing) ? 'block' : 'none' }} />
     </>
   );
 };
 
-Chart8Canvas.displayName = 'Chart8Canvas';
+Chart8CanvasV2.displayName = 'Chart8CanvasV2';
 
-export default Chart8Canvas;
+export default Chart8CanvasV2;
