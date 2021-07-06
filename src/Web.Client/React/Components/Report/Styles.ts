@@ -82,7 +82,7 @@ export default makeStyles((theme: Theme): IStyles => ({
   },
   chartFull: {
     '@media print': {
-      margin: '0 3% 0 5%',
+      margin: '0 5% 0 5%',
     },
   },
   chartImage: {
@@ -92,11 +92,11 @@ export default makeStyles((theme: Theme): IStyles => ({
     marginRight: 'auto',
   },
   chartImageFull: {
-    width: '17cm',
+    width: '100%',
     marginLeft: 'auto',
     marginRight: 'auto',
     '@media print': {
-      width: '17cm',
+      width: '100%',
       marginLeft: 'auto',
       marginRight: 'auto',
     },

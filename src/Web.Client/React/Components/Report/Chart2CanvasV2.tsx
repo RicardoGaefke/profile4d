@@ -112,17 +112,6 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
             offsetGridLines: true,
           },
         },
-        {
-          position: 'top',
-          ticks: {
-            maxRotation: 90,
-            minRotation: 80,
-            autoSkip: false,
-          },
-          gridLines: {
-            offsetGridLines: true,
-          },
-        },
       ],
     },
   } as ChartConfiguration<'bar', number[], string>;
