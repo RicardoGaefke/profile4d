@@ -101,7 +101,6 @@ const Chart8CanvasV2 = (props: Chart8CanvasProps): JSX.Element => {
 
   useEffect((): void => {
     if (refChart8 && refChart8.current) {
-      Chart.defaults.font.size = 16;
       const newChartInstance = new Chart(refChart8.current, chartConfig);
 
       newChartInstance.options.animation = {
