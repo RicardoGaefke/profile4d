@@ -1,6 +1,6 @@
 import {
   // eslint-disable-next-line no-unused-vars
-  ChartConfiguration, Chart, PieController, ArcElement,
+  ChartConfiguration, Chart, PieController, ArcElement, ChartData,
 } from 'chart.js';
 import React, { useEffect, useRef } from 'react';
 // eslint-disable-next-line no-unused-vars
@@ -42,31 +42,44 @@ const Chart1Canvas = (props: Chart1CanvasProps): JSX.Element => {
   const azul = parseFloat(((analitico / 165) * 100).toFixed(2)) + parseFloat(((planejador / 165) * 100).toFixed(2)) + parseFloat(((visionario / 165) * 100).toFixed(2));
 
   const data = {
-    datasets: [{
-      data: [vermelho.toFixed(2), amarelo.toFixed(2), azul.toFixed(2)],
-      backgroundColor: [
-        '#c00000',
-        '#ffff00',
-        '#002060',
-      ],
-    }],
     labels: [
       `${vermelho.toFixed(2)}%`,
       `${amarelo.toFixed(2)}%`,
       `${azul.toFixed(2)}%`,
     ],
-  };
+    datasets: [
+      {
+        label: '1. Os centros de inteligências e suas respectivas energias',
+        data: [
+          vermelho,
+          amarelo,
+          azul,
+        ],
+        backgroundColor: [
+          'rgba(173, 0, 0, .8)',
+          'rgba(230, 230, 0, .8)',
+          'rgba(0, 29, 86, .8)',
+        ],
+        borderColor: [
+          'rgba(173, 0, 0, 1)',
+          'rgba(230, 230, 0, 1)',
+          'rgba(0, 29, 86, 1)',
+        ],
+        borderWidth: 2,
+      },
+    ],
+  } as ChartData<'pie', number[], string>;
 
   const chartConfig = {
+    responsive: false,
+    scaleShowValues: true,
     type: 'pie',
     data,
-    legend: {
-      position: 'bottom',
-    },
-  } as ChartConfiguration<'pie', string[], string>;
+  } as ChartConfiguration<'pie', number[], string>;
 
   useEffect((): void => {
     if (refChart1 && refChart1.current) {
+      Chart.defaults.font.size = 16;
       const newChartInstance = new Chart(refChart1.current, chartConfig);
 
       newChartInstance.options.animation = {
@@ -81,8 +94,8 @@ const Chart1Canvas = (props: Chart1CanvasProps): JSX.Element => {
 
   return (
     <>
-      <canvas ref={refChart1} style={{ display: (printing) ? 'none' : 'block' }} />
-      <img alt="printing chart" ref={refImage1} className={classes.chartImage} style={{ display: (printing) ? 'block' : 'none' }} />
+      <canvas ref={refChart1} style={{ display: (printing) ? 'none' : 'block' }} width="60%" />
+      <img alt="printing chart" ref={refImage1} className={classes.chartImageSmall} style={{ display: (printing) ? 'block' : 'none' }} />
     </>
   );
 };
