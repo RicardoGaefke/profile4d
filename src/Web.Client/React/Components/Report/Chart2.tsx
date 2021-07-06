@@ -1,4 +1,5 @@
-import React from 'react';
+// eslint-disable-next-line no-unused-vars
+import React, { useEffect, useRef } from 'react';
 import { Bar } from 'react-chartjs-2';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
@@ -9,6 +10,20 @@ export interface Chart2Props {
 
 const Chart2 = (props: Chart2Props): JSX.Element => {
   const { profiles } = props;
+
+  const refChart = useRef(null);
+  const refImage = useRef<HTMLImageElement | null>(null);
+
+  useEffect((): void => {
+    if (refChart && refChart.current) {
+      // @ts-ignore
+      console.log(refChart.current);
+      // @ts-ignore
+      refImage.current?.src = refChart.current?.chart?.ctx.toDataURL('image/jpeg').split(';base64,')[1] || '';
+    } else {
+      console.log('refChart is null');
+    }
+  }, [refChart]);
 
   const comandante = profiles.filter((item): boolean => item.Name === 'Perfil Comandante')[0].Total || 0;
   const mediador = profiles.filter((item): boolean => item.Name === 'Perfil Mediador')[0].Total || 0;
@@ -108,22 +123,27 @@ const Chart2 = (props: Chart2Props): JSX.Element => {
   };
 
   return (
-    <Bar
-      data={data}
-      options={{
-        scales: {
-          yAxes: [{
-            ticks: {
-              min: 0,
-              max: 35,
-            },
-          }],
-        },
-        legend: {
-          position: 'bottom',
-        },
-      }}
-    />
+    <>
+      <Bar
+        type="bar"
+        ref={refChart}
+        data={data}
+        options={{
+          scales: {
+            yAxes: [{
+              ticks: {
+                min: 0,
+                max: 35,
+              },
+            }],
+          },
+          legend: {
+            position: 'bottom',
+          },
+        }}
+      />
+      <img alt="printing chart" ref={refImage} />
+    </>
   );
 };
 

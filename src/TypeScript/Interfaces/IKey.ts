@@ -4,7 +4,9 @@ export interface IKey extends IBasicReturn {
   Id?: number;
   Guid?: string;
   Email?: string;
+  Name?: string;
   SentBy?: number;
+  BlockResult?: boolean;
   Consultant?: number;
   Keys?: number;
   SentWhen?: string;

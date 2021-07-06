@@ -1,5 +1,4 @@
 import React from 'react';
-import { List, ListItem, ListItemText } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
 import { IStaticIntroduction } from '../../../../TypeScript/Interfaces/IStaticContent';
 import { filterStaticText } from './filterStatic';
@@ -67,7 +66,7 @@ const Dynamic57 = (props: IDynamic57): JSX.Element => {
     return (
       <>
         <ReportText text={dynamicText57(1)} />
-        <List>
+        {/* <List>
           {
             atencao.map((point): React.ReactNode => (
               <ListItem key={point}>
@@ -75,7 +74,7 @@ const Dynamic57 = (props: IDynamic57): JSX.Element => {
               </ListItem>
             ))
           }
-        </List>
+        </List> */}
       </>
     );
   }

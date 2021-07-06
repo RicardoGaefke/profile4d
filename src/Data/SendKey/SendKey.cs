@@ -1,3 +1,4 @@
+using System.Xml.Linq;
 using System;
 using Microsoft.Extensions.Options;
 using System.Collections.Generic;
@@ -28,6 +29,7 @@ namespace Profile4d.Data
           Cmd.Parameters.AddWithValue("@EMAIL", data.Email);
           Cmd.Parameters.AddWithValue("@SENT_BY", data.SentBy);
           Cmd.Parameters.AddWithValue("@CONSULTANT", data.Consultant);
+          Cmd.Parameters.AddWithValue("@BLOCK_RESULT", data.BlockResult);
 
           Con.Open();
 
@@ -91,7 +93,11 @@ namespace Profile4d.Data
                 MyDR.GetInt32(0),
                 MyDR.GetGuid(1).ToString(),
                 (MyDR.IsDBNull(2)) ? DateTime.MinValue : MyDR.GetDateTime(2),
-                (MyDR.IsDBNull(3)) ? DateTime.MinValue : MyDR.GetDateTime(3)
+                (MyDR.IsDBNull(3)) ? DateTime.MinValue : MyDR.GetDateTime(3),
+                MyDR.GetBoolean(4),
+                MyDR.GetString(5),
+                MyDR.GetString(6),
+                (MyDR.IsDBNull(7)) ? DateTime.MinValue : MyDR.GetDateTime(7)
               );
 
               _return.Add(key);
@@ -169,6 +175,13 @@ namespace Profile4d.Data
             _return.Id = MyDR.GetInt32(0);
             _return.Text_PT = MyDR.GetString(1);
             _return.Text_ENG = MyDR.GetString(2);
+
+            MyDR.NextResult();
+
+            MyDR.Read();
+
+            _return.Total = MyDR.GetInt32(0);
+            _return.Respondidas = MyDR.GetInt32(1);
           }
         }
       }
@@ -192,6 +205,126 @@ namespace Profile4d.Data
           Con.Open();
 
           Cmd.ExecuteNonQuery();
+        }
+      }
+    }
+
+    public KeysPreview GetKeysByConsuntant(int consultant)
+    {
+      KeysPreview list = new KeysPreview();
+      List<Key> keys = new List<Key>();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[spGetLicensesByConsultant]";
+
+          Cmd.Parameters.AddWithValue("@ConsultantId", consultant);
+
+          Con.Open();
+
+          using (SqlDataReader reader = Cmd.ExecuteReader())
+          {
+            reader.Read();
+
+            list.Total = reader.GetInt32(0);
+
+            reader.NextResult();
+
+            reader.Read();
+
+            list.Available = reader.GetInt32(0);
+
+            reader.NextResult();
+
+            while (reader.Read())
+            {
+              Key key = new Key()
+              {
+                Guid = reader.GetGuid(0).ToString(),
+                Email = reader.GetString(1),
+                SentWhen = reader.GetDateTime(2),
+                Started = reader.GetDateTime(3),
+                Finished = reader.GetDateTime(4),
+                BlockResult = reader.GetBoolean(5),
+                Name = reader.GetString(6)
+              };
+
+              keys.Add(key);
+            }
+          }
+        }
+      }
+
+      list.Keys = keys;
+
+      return list;
+    }
+
+    public void DesbloquearChave(string keyGuid)
+    {
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[dbo].[spDesbloquearChave]";
+
+          Cmd.Parameters.AddWithValue("@KeyGuid", keyGuid);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+    }
+
+    public void CancelarChave(string keyGuid, int userId)
+    {
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[dbo].[spCancelaChaveEnviada]";
+
+          Cmd.Parameters.AddWithValue("@GuidDaChave", keyGuid);
+          Cmd.Parameters.AddWithValue("@UserId", userId);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
+        }
+      }
+    }
+
+    public string SendKeyConsultor(Key data)
+    {
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_SEND_KEY_INSERT_CONSULTOR]";
+
+          Cmd.Parameters.AddWithValue("@EMAIL", data.Email);
+          Cmd.Parameters.AddWithValue("@SENT_BY", data.SentBy);
+          Cmd.Parameters.AddWithValue("@BLOCK_RESULT", data.BlockResult);
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            return MyDR.GetGuid(0).ToString();
+          }
         }
       }
     }

@@ -4,10 +4,11 @@ import useStyles from './Styles';
 
 export interface ReportTitleProps {
   title: string;
+  breakPage?: boolean;
 }
 
 const ReportTitle = (props: ReportTitleProps): JSX.Element => {
-  const { title } = props;
+  const { title, breakPage = false } = props;
   const classes = useStyles();
 
   return (
@@ -15,7 +16,7 @@ const ReportTitle = (props: ReportTitleProps): JSX.Element => {
       variant="h4"
       gutterBottom
       dangerouslySetInnerHTML={{ __html: title }}
-      className={classes.item}
+      className={(breakPage) ? classes.brakePage : classes.title}
     />
   );
 };

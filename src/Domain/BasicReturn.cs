@@ -11,6 +11,11 @@ namespace Profile4d.Domain
     public BasicReturn()
     {}
 
+    public BasicReturn(bool success)
+    {
+      this.Success = success;
+    }
+
     public BasicReturn(bool success, string message, string details)
     {
       this.Success = success;

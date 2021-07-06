@@ -49,8 +49,10 @@ const AssessmentsList = withTranslation()(
           <Table aria-label="Assessments list">
             <TableHead>
               <TableRow>
+                <TableCell>Enviada por</TableCell>
                 <TableCell>ID</TableCell>
                 <TableCell>Status</TableCell>
+                <TableCell>Disponível?</TableCell>
                 <TableCell>{t('Assessment:item.header.action')}</TableCell>
               </TableRow>
             </TableHead>
@@ -69,6 +71,11 @@ const AssessmentsList = withTranslation()(
                     <TableRow key={key.Id}>
                       <TableCell>
                         <Typography>
+                          {key.Email}
+                        </Typography>
+                      </TableCell>
+                      <TableCell>
+                        <Typography>
                           {key.Guid}
                         </Typography>
                       </TableCell>
@@ -81,6 +88,13 @@ const AssessmentsList = withTranslation()(
                             ) : (
                               (key.Finished?.includes('0001')) ? t('Assessment:item.status.1.text') : t('Assessment:item.status.5.text')
                             )
+                          }
+                        </Typography>
+                      </TableCell>
+                      <TableCell>
+                        <Typography>
+                          {
+                            (key.BlockResult) ? 'Aguardando liberação' : 'Liberada'
                           }
                         </Typography>
                       </TableCell>
@@ -112,6 +126,7 @@ const AssessmentsList = withTranslation()(
                               endIcon={<CloudDownload />}
                               component={NavLink}
                               to={`/answer/report/${key.Guid}`}
+                              disabled={key.BlockResult}
                             >
                               {t('Assessment:item.action.report.text')}
                             </Button>

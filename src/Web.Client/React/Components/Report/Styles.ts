@@ -3,19 +3,43 @@ import { makeStyles, Theme } from '@material-ui/core';
 
 interface IStyles {
   item: {},
+  title: {},
   itemWithBorder: {},
   image: {},
   container: {},
+  pdfContainer: {},
+  brakePage: {},
+  itemBrakePage: {},
+  chart: {},
+  chartFull: {},
+  chartSmall: {},
+  chartImage: {},
+  chartImageSmall: {},
+  chartImageFull: {},
 }
 
 export default makeStyles((theme: Theme): IStyles => ({
   item: {
     padding: theme.spacing(4),
     width: '100%',
+    '@media print': {
+      font: '9pt Roboto, Calibri, Georgia, "Times New Roman", Times, serif',
+      lineHeight: 1.0,
+      padding: theme.spacing(0.1),
+      'page-break-inside': 'avoid',
+    },
   },
-  itemWithBorder: {
+  title: {
     padding: theme.spacing(4),
     width: '100%',
+    '@media print': {
+      font: '13pt Roboto, Calibri, Georgia, "Times New Roman", Times, serif',
+      lineHeight: 1.0,
+      padding: theme.spacing(0.1),
+      'page-break-inside': 'avoid',
+    },
+  },
+  itemWithBorder: {
     border: 'solid 1px darkgray',
   },
   image: {
@@ -23,10 +47,74 @@ export default makeStyles((theme: Theme): IStyles => ({
     display: 'block',
     marginLeft: 'auto',
     marginRight: 'auto',
-    maxHeight: 330,
+    maxHeight: 300,
   },
   container: {
     padding: theme.spacing(4),
-    maxWidth: '800px',
+    maxWidth: '1200px',
+    '@media print': {
+      padding: '10mm',
+    },
+  },
+  pdfContainer: {
+    padding: 0,
+    width: '100%',
+    height: 'calc(100vh - 105px)',
+  },
+  brakePage: {
+    padding: theme.spacing(4),
+    width: '100%',
+    '@media print': {
+      'page-break-before': 'always',
+      font: '13pt Roboto, Calibri, Georgia, "Times New Roman", Times, serif',
+      lineHeight: 1.0,
+      padding: theme.spacing(0.1),
+      'page-break-inside': 'avoid',
+    },
+  },
+  itemBrakePage: {
+    '@media print': {
+      'page-break-before': 'always',
+    },
+  },
+  chart: {
+    '@media print': {
+      margin: '0 20% 0 20%',
+    },
+  },
+  chartFull: {
+    '@media print': {
+      margin: '0 5% 0 5%',
+    },
+  },
+  chartSmall: {
+    width: '60%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    '@media print': {
+      margin: '0 30% 0 30%',
+    },
+  },
+  chartImage: {
+    maxWidth: '100%',
+    maxHeight: 400,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  chartImageSmall: {
+    maxWidth: '100%',
+    maxHeight: 350,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  chartImageFull: {
+    width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    '@media print': {
+      width: '100%',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    },
   },
 }));

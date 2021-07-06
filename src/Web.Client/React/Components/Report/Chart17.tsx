@@ -1,5 +1,5 @@
 import React from 'react';
-import { HorizontalBar } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 
@@ -78,7 +78,8 @@ const Chart17 = (props: Chart17Props): JSX.Element => {
   };
 
   return (
-    <HorizontalBar
+    <Bar
+      type="horizontalBar"
       data={data}
       options={{
         scales: {

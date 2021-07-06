@@ -28,6 +28,7 @@ const Report = withTranslation()(
     setLanguage();
 
     const [loading, setLoading] = useState<boolean>(true);
+    // eslint-disable-next-line no-unused-vars
     const [data, setData] = useState<IReport>({} as IReport);
 
     const updateReport = (): void => {
@@ -69,16 +70,16 @@ const Report = withTranslation()(
               <CircularProgress size={100} />
             </Grid>
           ) : (
-            <>
-              <Grid
-                item
-                container
-                justify="center"
-                className={classes.container}
-              >
+            <Grid
+              item
+              container
+              justify="center"
+              className={classes.container}
+            >
+              <div>
                 <ReportContent data={data} />
-              </Grid>
-            </>
+              </div>
+            </Grid>
           )
         }
       </Grid>

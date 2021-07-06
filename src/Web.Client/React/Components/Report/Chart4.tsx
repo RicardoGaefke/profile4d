@@ -247,6 +247,7 @@ const Chart4 = (props: Chart4Props): JSX.Element => {
 
   return (
     <Radar
+      type="radar"
       data={data}
       options={{
         scale: {
