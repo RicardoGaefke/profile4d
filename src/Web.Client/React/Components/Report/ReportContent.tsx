@@ -215,7 +215,7 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
       <ReportTitle title={staticTitle(55)} />
 
-      <div className={classes.chart}>
+      <div className={classes.chartSmall}>
         <Chart1 profiles={data.Profiles as IProfiles[]} printing={printing} />
       </div>
 

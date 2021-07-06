@@ -238,7 +238,7 @@ const Chart4Canvas = (props: Chart4CanvasProps): JSX.Element => {
       {
         label: 'Tríade original',
         data: dataOriginal,
-        backgroundColor: 'rgba(31,15,250,0.2)',
+        backgroundColor: 'rgba(31,15,250,0.5)',
         borderColor: 'rgba(31,15,250,0.7)',
         pointColor: 'rgba(31,15,250,1)',
         spanGaps: true,
@@ -264,6 +264,7 @@ const Chart4Canvas = (props: Chart4CanvasProps): JSX.Element => {
         r: {
           beginAtZero: true,
           max: 35,
+          startAngle: 20,
         },
       },
     },

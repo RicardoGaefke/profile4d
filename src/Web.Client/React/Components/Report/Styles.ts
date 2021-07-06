@@ -12,7 +12,9 @@ interface IStyles {
   itemBrakePage: {},
   chart: {},
   chartFull: {},
+  chartSmall: {},
   chartImage: {},
+  chartImageSmall: {},
   chartImageFull: {},
 }
 
@@ -85,9 +87,23 @@ export default makeStyles((theme: Theme): IStyles => ({
       margin: '0 5% 0 5%',
     },
   },
+  chartSmall: {
+    width: '60%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    '@media print': {
+      margin: '0 30% 0 30%',
+    },
+  },
   chartImage: {
     maxWidth: '100%',
     maxHeight: 400,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  chartImageSmall: {
+    maxWidth: '100%',
+    maxHeight: 350,
     marginLeft: 'auto',
     marginRight: 'auto',
   },
