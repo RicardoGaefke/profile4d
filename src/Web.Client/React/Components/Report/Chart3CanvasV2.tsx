@@ -124,6 +124,7 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
 
   useEffect((): void => {
     if (refChart3 && refChart3.current) {
+      Chart.defaults.font.size = 16;
       const newChartInstance = new Chart(refChart3.current, chartConfig);
 
       newChartInstance.options.animation = {

@@ -77,6 +77,7 @@ const Chart15Canvas = (props: Chart15CanvasProps): JSX.Element => {
 
   useEffect((): void => {
     if (refChart15 && refChart15.current) {
+      Chart.defaults.font.size = 16;
       const newChartInstance = new Chart(refChart15.current, chartConfig);
 
       newChartInstance.options.animation = {

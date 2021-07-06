@@ -26,6 +26,7 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
   const azul = profiles.filter((item): boolean => item.Name === 'Perfil Planejador')[0];
 
   const data = {
+    label: 'Resolução de conflitos',
     labels: [
       `${amarelo.Name} - ${((amarelo.Total / 165) * 100).toFixed(2).toString()}%`,
       `${vermelho.Name} - ${((vermelho.Total / 165) * 100).toFixed(2).toString()}%`,
@@ -101,6 +102,7 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
 
   useEffect((): void => {
     if (refChart6 && refChart6.current) {
+      Chart.defaults.font.size = 16;
       const newChartInstance = new Chart(refChart6.current, chartConfig);
 
       newChartInstance.options.animation = {
