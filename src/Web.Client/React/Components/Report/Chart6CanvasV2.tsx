@@ -26,6 +26,7 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
   const azul = profiles.filter((item): boolean => item.Name === 'Perfil Planejador')[0];
 
   const data = {
+    label: 'Resolução de conflitos',
     labels: [
       `${amarelo.Name} - ${((amarelo.Total / 165) * 100).toFixed(2).toString()}%`,
       `${vermelho.Name} - ${((vermelho.Total / 165) * 100).toFixed(2).toString()}%`,
