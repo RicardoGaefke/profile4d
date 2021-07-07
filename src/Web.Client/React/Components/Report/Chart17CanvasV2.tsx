@@ -77,43 +77,26 @@ const Chart17CanvasV2 = (props: Chart17CanvasProps): JSX.Element => {
   const refImage17 = useRef<HTMLImageElement>(null);
 
   const chartConfig = {
-    responsive: false,
-    scaleShowValues: true,
     type: 'bar',
     data,
     options: {
       indexAxis: 'y',
       scales: {
+        x: {
+          ticks: {
+            font: {
+              size: 20,
+            },
+          },
+        },
         y: {
           ticks: {
-            min: 0,
-            max: 100,
-            stacked: true,
+            startAtZero: true,
+            stepSize: 5,
+            font: {
+              size: 20,
+            },
           },
-          yAxes: [
-            {
-              ticks: {
-                beginAtZero: true,
-                maxRotation: 90,
-                minRotation: 80,
-                autoSkip: false,
-              },
-              gridLines: {
-                offsetGridLines: true,
-              },
-            },
-            {
-              position: 'top',
-              ticks: {
-                maxRotation: 90,
-                minRotation: 80,
-                autoSkip: false,
-              },
-              gridLines: {
-                offsetGridLines: true,
-              },
-            },
-          ],
         },
       },
     },
