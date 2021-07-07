@@ -19,7 +19,6 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
   const classes = useStyles();
 
   Chart.register(RadarController, RadialLinearScale, PointElement, LineElement);
-  Chart.defaults.font.size = 20;
 
   const criativo = profiles.filter((item): boolean => item.Name === 'Perfil Criativo')[0];
   const realizador = profiles.filter((item): boolean => item.Name === 'Perfil Realizador')[0];
@@ -255,7 +254,7 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
         fill: true,
       },
     ],
-  } as unknown as ChartData<'radar', number[], string>;
+  } as unknown as ChartData<'radar', string[], string>;
 
   const chartConfig = {
     type: 'radar',
@@ -265,6 +264,14 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
         r: {
           beginAtZero: true,
           max: 35,
+          startAngle: 20,
+          ticks: {
+          },
+          pointLabels: {
+            font: {
+              size: 20,
+            },
+          },
         },
       },
     },

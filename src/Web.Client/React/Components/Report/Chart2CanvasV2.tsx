@@ -17,7 +17,6 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
   const classes = useStyles();
 
   Chart.register(BarController, CategoryScale, BarElement, LinearScale);
-  Chart.defaults.font.size = 20;
 
   const refChart = useRef<HTMLCanvasElement>(null);
   const refImage = useRef<HTMLImageElement | null>(null);
@@ -39,7 +38,7 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
       `Organizador - ${((organizador / 165) * 100).toFixed(2)}%`,
       `Prestativo - ${((prestativo / 165) * 100).toFixed(2)}%`,
       `Realizador - ${((realizador / 165) * 100).toFixed(2)}%`,
-      `Criativo - ${((criativo / 165) * 100).toFixed(2)}`,
+      `Criativo - ${((criativo / 165) * 100).toFixed(2)}%`,
       `Analítico - ${((analitico / 165) * 100).toFixed(2)}%`,
       `Planejador - ${((planejador / 165) * 100).toFixed(2)}%`,
       `Visionário - ${((visionario / 165) * 100).toFixed(2)}%`,
@@ -89,55 +88,26 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
     type: 'bar',
     data,
     options: {
-      responsive: true,
-      font: {
-        size: 20,
-      },
-      plugins: {
-        title: {
-          display: true,
-          text: 'Chart Title',
-        },
-        subtitle: {
-          display: true,
-          text: 'Chart Subtitle',
-          color: 'blue',
-          font: {
-            size: 12,
-            family: 'tahoma',
-            weight: 'normal',
-            style: 'italic',
-          },
-          padding: {
-            bottom: 10,
-          },
-        },
-      },
-    },
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true,
-          autoSkip: false,
-          stepSize: 5,
-          max: 35,
-          includeBounds: true,
-          display: true,
-          showLabelBackdrop: true,
-        },
-      }],
-      xAxes: [
-        {
+      scales: {
+        x: {
           ticks: {
             maxRotation: 90,
-            minRotation: 80,
-            autoSkip: false,
-          },
-          gridLines: {
-            offsetGridLines: true,
+            minRotation: 45,
+            font: {
+              size: 20,
+            },
           },
         },
-      ],
+        y: {
+          ticks: {
+            startAtZero: true,
+            stepSize: 5,
+            font: {
+              size: 20,
+            },
+          },
+        },
+      },
     },
   } as ChartConfiguration<'bar', number[], string>;
 
