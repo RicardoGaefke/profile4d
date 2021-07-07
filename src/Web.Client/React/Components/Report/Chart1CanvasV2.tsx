@@ -18,6 +18,7 @@ const Chart1CanvasV2 = (props: Chart1CanvasProps): JSX.Element => {
   const classes = useStyles();
 
   Chart.register(PieController, CategoryScale, ArcElement);
+  Chart.defaults.font.size = 20;
 
   const refChart1 = useRef<HTMLCanvasElement>(null);
   const refImage1 = useRef<HTMLImageElement | null>(null);

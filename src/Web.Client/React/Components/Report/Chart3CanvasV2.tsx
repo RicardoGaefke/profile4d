@@ -18,6 +18,7 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
   const classes = useStyles();
 
   Chart.register(BarController, CategoryScale, LinearScale, BarElement);
+  Chart.defaults.font.size = 20;
 
   const amarelos = profiles.filter((item): boolean => item.Color === 'Amarelo');
   amarelos.sort((a, b): number => b.Total - a.Total || b.InternalNumber - a.InternalNumber);

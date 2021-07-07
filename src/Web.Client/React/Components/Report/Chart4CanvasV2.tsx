@@ -19,6 +19,7 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
   const classes = useStyles();
 
   Chart.register(RadarController, RadialLinearScale, PointElement, LineElement);
+  Chart.defaults.font.size = 20;
 
   const criativo = profiles.filter((item): boolean => item.Name === 'Perfil Criativo')[0];
   const realizador = profiles.filter((item): boolean => item.Name === 'Perfil Realizador')[0];

@@ -18,6 +18,7 @@ const Chart12CanvasV2 = (props: Chart12CanvasProps): JSX.Element => {
   const classes = useStyles();
 
   Chart.register(BarController, CategoryScale, BarElement, LinearScale);
+  Chart.defaults.font.size = 20;
 
   const amarelo = profiles.filter((item): boolean => item.Name === 'Perfil Mediador')[0];
 

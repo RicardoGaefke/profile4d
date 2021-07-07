@@ -18,6 +18,7 @@ const Chart17CanvasV2 = (props: Chart17CanvasProps): JSX.Element => {
   const classes = useStyles();
 
   Chart.register(BarController, CategoryScale, BarElement, LinearScale);
+  Chart.defaults.font.size = 20;
 
   const prestativo = profiles.filter((item): boolean => item.Name === 'Perfil Prestativo')[0];
   const visionario = profiles.filter((item): boolean => item.Name === 'Perfil Visionário')[0];

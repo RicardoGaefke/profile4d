@@ -17,6 +17,7 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
   const classes = useStyles();
 
   Chart.register(BarController, CategoryScale, BarElement, LinearScale);
+  Chart.defaults.font.size = 20;
 
   const refChart = useRef<HTMLCanvasElement>(null);
   const refImage = useRef<HTMLImageElement | null>(null);
@@ -85,10 +86,34 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
   } as ChartData<'bar', number[], string>;
 
   const chartConfig = {
-    responsive: false,
-    scaleShowValues: true,
     type: 'bar',
     data,
+    options: {
+      responsive: true,
+      font: {
+        size: 20,
+      },
+      plugins: {
+        title: {
+          display: true,
+          text: 'Chart Title',
+        },
+        subtitle: {
+          display: true,
+          text: 'Chart Subtitle',
+          color: 'blue',
+          font: {
+            size: 12,
+            family: 'tahoma',
+            weight: 'normal',
+            style: 'italic',
+          },
+          padding: {
+            bottom: 10,
+          },
+        },
+      },
+    },
     scales: {
       yAxes: [{
         ticks: {
