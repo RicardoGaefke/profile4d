@@ -88,11 +88,14 @@ export default makeStyles((theme: Theme): IStyles => ({
     },
   },
   chartSmall: {
-    width: '60%',
+    width: '50%',
     marginLeft: 'auto',
     marginRight: 'auto',
     '@media print': {
+      width: '100%',
       margin: '0 30% 0 30%',
+      marginLeft: 'auto',
+      marginRight: 'auto',
     },
   },
   chartImage: {

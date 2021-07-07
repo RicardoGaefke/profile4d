@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import {
   // eslint-disable-next-line no-unused-vars
-  Chart, ChartConfiguration, BarController, CategoryScale, BarElement, ChartData, LinearScale,
+  Chart, ChartConfiguration, BarController, CategoryScale, BarElement, ChartData, LinearScale, Title, Legend, Tooltip,
 } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
@@ -17,7 +17,7 @@ const Chart17CanvasV2 = (props: Chart17CanvasProps): JSX.Element => {
 
   const classes = useStyles();
 
-  Chart.register(BarController, CategoryScale, BarElement, LinearScale);
+  Chart.register(BarController, CategoryScale, BarElement, LinearScale, Title, Legend, Tooltip);
 
   const prestativo = profiles.filter((item): boolean => item.Name === 'Perfil Prestativo')[0];
   const visionario = profiles.filter((item): boolean => item.Name === 'Perfil Visionário')[0];
@@ -53,7 +53,7 @@ const Chart17CanvasV2 = (props: Chart17CanvasProps): JSX.Element => {
     ],
     datasets: [
       {
-        label: 'Energia por área de atuação',
+        label: '',
         data: [
           vermelho.toFixed(2),
           amarelo.toFixed(2),
@@ -80,6 +80,18 @@ const Chart17CanvasV2 = (props: Chart17CanvasProps): JSX.Element => {
     type: 'bar',
     data,
     options: {
+      plugins: {
+        title: {
+          display: true,
+          text: '17. Energia por área de atuação',
+          font: {
+            size: 20,
+          },
+        },
+        legend: {
+          display: false,
+        },
+      },
       indexAxis: 'y',
       scales: {
         x: {

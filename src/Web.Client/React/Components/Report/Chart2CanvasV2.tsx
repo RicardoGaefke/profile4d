@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import {
   // eslint-disable-next-line no-unused-vars
-  Chart, ChartConfiguration, BarController, CategoryScale, BarElement, ChartData, LinearScale,
+  Chart, ChartConfiguration, BarController, CategoryScale, BarElement, ChartData, LinearScale, Title, Legend, Tooltip,
 } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
@@ -16,7 +16,7 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
   const { profiles, printing } = props;
   const classes = useStyles();
 
-  Chart.register(BarController, CategoryScale, BarElement, LinearScale);
+  Chart.register(BarController, CategoryScale, BarElement, LinearScale, Title, Legend, Tooltip);
 
   const refChart = useRef<HTMLCanvasElement>(null);
   const refImage = useRef<HTMLImageElement | null>(null);
@@ -45,7 +45,6 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
     ],
     datasets: [
       {
-        label: '2. Perfis comportamentais e suas respectivas energias',
         data: [
           ((comandante / 165) * 100),
           ((mediador / 165) * 100),
@@ -88,6 +87,18 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
     type: 'bar',
     data,
     options: {
+      plugins: {
+        title: {
+          display: true,
+          text: '2. Perfis comportamentais e suas respectivas energias',
+          font: {
+            size: 20,
+          },
+        },
+        legend: {
+          display: false,
+        },
+      },
       scales: {
         x: {
           ticks: {

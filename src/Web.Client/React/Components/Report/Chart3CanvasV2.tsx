@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import {
   // eslint-disable-next-line no-unused-vars
-  Chart, ChartConfiguration, BarController, ChartData, CategoryScale, LinearScale, BarElement,
+  Chart, ChartConfiguration, BarController, ChartData, CategoryScale, LinearScale, BarElement, Title, Legend, Tooltip,
 } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
@@ -17,7 +17,7 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
 
   const classes = useStyles();
 
-  Chart.register(BarController, CategoryScale, LinearScale, BarElement);
+  Chart.register(BarController, CategoryScale, LinearScale, BarElement, Title, Legend, Tooltip);
 
   const amarelos = profiles.filter((item): boolean => item.Color === 'Amarelo');
   amarelos.sort((a, b): number => b.Total - a.Total || b.InternalNumber - a.InternalNumber);
@@ -39,7 +39,7 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
     ],
     datasets: [
       {
-        label: '3. Perfis dominantes',
+        label: '',
         data: [
           ((amarelo.Total / 165) * 100),
           ((vermelho.Total / 165) * 100),
@@ -67,6 +67,18 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
     type: 'bar',
     data,
     options: {
+      plugins: {
+        title: {
+          display: true,
+          text: '3. Perfis dominantes',
+          font: {
+            size: 20,
+          },
+        },
+        legend: {
+          display: false,
+        },
+      },
       scales: {
         x: {
           ticks: {

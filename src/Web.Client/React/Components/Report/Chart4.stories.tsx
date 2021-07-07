@@ -31,7 +31,7 @@ const App = (): React.ReactElement => {
           justify="center"
           className={classes.container}
         >
-          <div className={classes.chartSmall}>
+          <div style={{ width: '65%' }}>
             <Chart4 profiles={fakeData.Profiles as IProfiles[]} printing={false} />
           </div>
         </Grid>
@@ -40,7 +40,7 @@ const App = (): React.ReactElement => {
   );
 };
 
-storiesOf('Chart4', module)
+storiesOf('Chart04', module)
   .addDecorator((story: any): React.ReactElement => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))

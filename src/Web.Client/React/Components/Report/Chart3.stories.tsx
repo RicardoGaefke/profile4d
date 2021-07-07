@@ -41,7 +41,7 @@ const App = (): React.ReactElement => {
   );
 };
 
-storiesOf('Chart3', module)
+storiesOf('Chart03', module)
   .addDecorator((story: any): React.ReactElement => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))
