@@ -254,7 +254,7 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
         fill: true,
       },
     ],
-  } as unknown as ChartData<'radar', number[], string>;
+  } as unknown as ChartData<'radar', string[], string>;
 
   const chartConfig = {
     type: 'radar',
@@ -264,6 +264,14 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
         r: {
           beginAtZero: true,
           max: 35,
+          startAngle: 20,
+          ticks: {
+          },
+          pointLabels: {
+            font: {
+              size: 20,
+            },
+          },
         },
       },
     },

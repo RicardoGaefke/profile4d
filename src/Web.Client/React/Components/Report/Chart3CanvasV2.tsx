@@ -64,59 +64,25 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
   const refImage3 = useRef<HTMLImageElement>(null);
 
   const chartConfig = {
-    responsive: false,
-    scaleShowValues: true,
     type: 'bar',
     data,
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true,
-          autoSkip: false,
-          stepSize: 5,
-          max: 35,
-          includeBounds: true,
-          display: true,
-          showLabelBackdrop: true,
-        },
-      }],
-      xAxes: [
-        {
-          ticks: {
-            maxRotation: 90,
-            minRotation: 80,
-            autoSkip: false,
-          },
-          gridLines: {
-            offsetGridLines: true,
-          },
-        },
-        {
-          position: 'top',
-          ticks: {
-            maxRotation: 90,
-            minRotation: 80,
-            autoSkip: false,
-          },
-          gridLines: {
-            offsetGridLines: true,
-          },
-        },
-      ],
-    },
     options: {
-      plugins: {
-        legend: {
-          display: true,
-          text: 'legend',
+      scales: {
+        x: {
+          ticks: {
+            font: {
+              size: 20,
+            },
+          },
         },
-        tooltip: {
-          mode: 'index',
-          intersect: false,
-        },
-        title: {
-          display: true,
-          text: 'Chart.js Line Chart',
+        y: {
+          ticks: {
+            startAtZero: true,
+            stepSize: 5,
+            font: {
+              size: 20,
+            },
+          },
         },
       },
     },

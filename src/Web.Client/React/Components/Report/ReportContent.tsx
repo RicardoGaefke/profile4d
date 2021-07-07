@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Chart } from 'chart.js';
+// import { Chart } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IReport } from '../../../../TypeScript/Interfaces/IReport';
 // import { useStateValue } from '../../Initial/Context/StateProvider';
@@ -47,10 +47,9 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
 
   const [printing, setPrinting] = useState<boolean>(false);
 
-  useEffect((): void => {
-    Chart.defaults.font.size = 16;
-    Chart.defaults.plugins.legend.display = true;
-  }, []);
+  // useEffect((): void => {
+  //   Chart.defaults.font.size = 20;
+  // }, []);
 
   useEffect((): void => {
     window.onbeforeprint = (): void => { setPrinting(true); };

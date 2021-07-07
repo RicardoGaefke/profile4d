@@ -38,7 +38,7 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
       `Organizador - ${((organizador / 165) * 100).toFixed(2)}%`,
       `Prestativo - ${((prestativo / 165) * 100).toFixed(2)}%`,
       `Realizador - ${((realizador / 165) * 100).toFixed(2)}%`,
-      `Criativo - ${((criativo / 165) * 100).toFixed(2)}`,
+      `Criativo - ${((criativo / 165) * 100).toFixed(2)}%`,
       `Analítico - ${((analitico / 165) * 100).toFixed(2)}%`,
       `Planejador - ${((planejador / 165) * 100).toFixed(2)}%`,
       `Visionário - ${((visionario / 165) * 100).toFixed(2)}%`,
@@ -85,34 +85,29 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
   } as ChartData<'bar', number[], string>;
 
   const chartConfig = {
-    responsive: false,
-    scaleShowValues: true,
     type: 'bar',
     data,
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true,
-          autoSkip: false,
-          stepSize: 5,
-          max: 35,
-          includeBounds: true,
-          display: true,
-          showLabelBackdrop: true,
-        },
-      }],
-      xAxes: [
-        {
+    options: {
+      scales: {
+        x: {
           ticks: {
             maxRotation: 90,
-            minRotation: 80,
-            autoSkip: false,
-          },
-          gridLines: {
-            offsetGridLines: true,
+            minRotation: 45,
+            font: {
+              size: 20,
+            },
           },
         },
-      ],
+        y: {
+          ticks: {
+            startAtZero: true,
+            stepSize: 5,
+            font: {
+              size: 20,
+            },
+          },
+        },
+      },
     },
   } as ChartConfiguration<'bar', number[], string>;
 

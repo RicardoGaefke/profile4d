@@ -6,7 +6,7 @@ import { withConsole } from '@storybook/addon-console';
 // eslint-disable-next-line no-unused-vars
 import { action, HandlerFunction } from '@storybook/addon-actions';
 import MyThemeHoc from '../../Initial/Theme/StoryBookHOC';
-import Chart4 from './Chart4Canvas';
+import Chart4 from './Chart4CanvasV2';
 import fakeData from './fakeData';
 import useStyles from './Styles';
 // eslint-disable-next-line no-unused-vars
