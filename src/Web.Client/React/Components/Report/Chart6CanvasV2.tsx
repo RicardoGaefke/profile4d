@@ -26,6 +26,7 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
   const azul = profiles.filter((item): boolean => item.Name === 'Perfil Planejador')[0];
 
   const data = {
+    label: 'Resolução de conflitos',
     labels: [
       `${amarelo.Name} - ${((amarelo.Total / 165) * 100).toFixed(2).toString()}%`,
       `${vermelho.Name} - ${((vermelho.Total / 165) * 100).toFixed(2).toString()}%`,
@@ -57,45 +58,27 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
   const refImage6 = useRef<HTMLImageElement>(null);
 
   const chartConfig = {
-    responsive: false,
-    scaleShowValues: true,
     type: 'bar',
     data,
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true,
-          autoSkip: false,
-          stepSize: 5,
-          max: 35,
-          includeBounds: true,
-          display: true,
-          showLabelBackdrop: true,
-        },
-      }],
-      xAxes: [
-        {
+    options: {
+      scales: {
+        x: {
           ticks: {
-            maxRotation: 90,
-            minRotation: 80,
-            autoSkip: false,
-          },
-          gridLines: {
-            offsetGridLines: true,
+            font: {
+              size: 20,
+            },
           },
         },
-        {
-          position: 'top',
+        y: {
           ticks: {
-            maxRotation: 90,
-            minRotation: 80,
-            autoSkip: false,
-          },
-          gridLines: {
-            offsetGridLines: true,
+            startAtZero: true,
+            stepSize: 5,
+            font: {
+              size: 20,
+            },
           },
         },
-      ],
+      },
     },
   } as ChartConfiguration<'bar', number[], string>;
 
