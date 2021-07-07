@@ -6,7 +6,7 @@ import { withConsole } from '@storybook/addon-console';
 // eslint-disable-next-line no-unused-vars
 import { action, HandlerFunction } from '@storybook/addon-actions';
 import MyThemeHoc from '../../Initial/Theme/StoryBookHOC';
-import Chart1 from './Chart1CanvasV2';
+import Chart9 from './Chart9CanvasV2';
 import fakeData from './fakeData';
 import useStyles from './Styles';
 // eslint-disable-next-line no-unused-vars
@@ -31,16 +31,17 @@ const App = (): React.ReactElement => {
           justify="center"
           className={classes.container}
         >
-          <div style={{ width: '50%' }}>
-            <Chart1 profiles={fakeData.Profiles as IProfiles[]} printing={false} />
-          </div>
+          <Chart9
+            printing={false}
+            profiles={fakeData.Profiles as IProfiles[]}
+          />
         </Grid>
       </Grid>
     </MyThemeHoc>
   );
 };
 
-storiesOf('Chart01', module)
+storiesOf('Chart09', module)
   .addDecorator((story: any): React.ReactElement => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))

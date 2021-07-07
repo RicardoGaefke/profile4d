@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import {
   // eslint-disable-next-line no-unused-vars
-  Chart, ChartData, ChartConfiguration, RadarController, RadialLinearScale, PointElement, LineElement,
+  Chart, ChartData, ChartConfiguration, RadarController, RadialLinearScale, PointElement, LineElement, Title, Legend, Tooltip, Filler,
 } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
@@ -18,7 +18,7 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
 
   const classes = useStyles();
 
-  Chart.register(RadarController, RadialLinearScale, PointElement, LineElement);
+  Chart.register(RadarController, RadialLinearScale, PointElement, LineElement, Title, Legend, Tooltip, Filler);
 
   const criativo = profiles.filter((item): boolean => item.Name === 'Perfil Criativo')[0];
   const realizador = profiles.filter((item): boolean => item.Name === 'Perfil Realizador')[0];
@@ -260,12 +260,28 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
     type: 'radar',
     data,
     options: {
+      plugins: {
+        title: {
+          display: true,
+          text: '4. Tríade original x tríade adaptada',
+          font: {
+            size: 20,
+          },
+        },
+        legend: {
+          display: true,
+          position: 'bottom',
+        },
+      },
       scales: {
         r: {
           beginAtZero: true,
           max: 35,
           startAngle: 20,
           ticks: {
+            font: {
+              size: 20,
+            },
           },
           pointLabels: {
             font: {

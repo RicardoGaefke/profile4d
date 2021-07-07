@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import {
   // eslint-disable-next-line no-unused-vars
-  Chart, ChartConfiguration, BarController, CategoryScale, BarElement, ChartData, LinearScale,
+  Chart, ChartConfiguration, BarController, CategoryScale, BarElement, ChartData, LinearScale, Title, Legend, Tooltip,
 } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
@@ -17,7 +17,7 @@ const Chart12CanvasV2 = (props: Chart12CanvasProps): JSX.Element => {
 
   const classes = useStyles();
 
-  Chart.register(BarController, CategoryScale, BarElement, LinearScale);
+  Chart.register(BarController, CategoryScale, BarElement, LinearScale, Title, Legend, Tooltip);
 
   const amarelo = profiles.filter((item): boolean => item.Name === 'Perfil Mediador')[0];
 
@@ -61,6 +61,18 @@ const Chart12CanvasV2 = (props: Chart12CanvasProps): JSX.Element => {
     type: 'bar',
     data,
     options: {
+      plugins: {
+        title: {
+          display: true,
+          text: '12. Negociação / persuasão',
+          font: {
+            size: 20,
+          },
+        },
+        legend: {
+          display: false,
+        },
+      },
       scales: {
         x: {
           ticks: {
