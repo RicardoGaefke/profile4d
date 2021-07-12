@@ -59,7 +59,7 @@ const Chart1CanvasV2 = (props: Chart1CanvasProps): JSX.Element => {
         'rgba(230, 230, 0, 1)',
         'rgba(0, 29, 86, 1)',
       ],
-      borderWidth: 2,
+      borderWidth: 0.1,
       label: 'Dataset 1',
     },
     ],
@@ -72,12 +72,14 @@ const Chart1CanvasV2 = (props: Chart1CanvasProps): JSX.Element => {
       responsive: true,
       plugins: {
         title: {
-          display: true,
+          display: false,
           text: '1. Os centros de inteligências e suas respectivas energias',
+          color: 'black',
           fullSize: true,
           position: 'top',
           font: {
             size: 20,
+            fontFamily: "'Roboto', sans-serif",
           },
         },
         tooltip: {
@@ -88,6 +90,13 @@ const Chart1CanvasV2 = (props: Chart1CanvasProps): JSX.Element => {
         legend: {
           display: true,
           position: 'bottom',
+          labels: {
+            font: {
+              size: 24,
+              fontFamily: "'Roboto', sans-serif",
+            },
+            color: 'black',
+          },
         },
       },
     },
