@@ -63,11 +63,12 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
     options: {
       plugins: {
         title: {
-          display: true,
+          display: false,
           text: '6. Resolução de conflitos',
           font: {
             size: 20,
           },
+          color: 'black',
         },
         legend: {
           display: false,
@@ -78,7 +79,9 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
           ticks: {
             font: {
               size: 20,
+              fontFamily: "'Roboto', sans-serif",
             },
+            color: 'black',
           },
         },
         y: {
@@ -87,7 +90,9 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
             stepSize: 5,
             font: {
               size: 20,
+              fontFamily: "'Roboto', sans-serif",
             },
+            color: 'black',
           },
         },
       },
