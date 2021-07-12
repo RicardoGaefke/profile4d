@@ -90,7 +90,9 @@ const ListaDeLicencas = withTranslation()(
                         <Button
                           variant="contained"
                           color="primary"
-                          title="resultado"
+                          title="Abrir resultado"
+                          component={NavLink}
+                          to={`/answer/report/${key.Guid}`}
                           style={{ backgroundColor: '#009900', fontWeight: 'bold' }}
                         >
                           Resultado
