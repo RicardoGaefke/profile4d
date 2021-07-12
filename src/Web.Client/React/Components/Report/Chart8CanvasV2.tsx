@@ -62,11 +62,13 @@ const Chart8CanvasV2 = (props: Chart8CanvasProps): JSX.Element => {
     options: {
       plugins: {
         title: {
-          display: true,
+          display: false,
           text: '8. Proatividade',
           font: {
             size: 20,
+            fontFamily: "'Roboto', sans-serif",
           },
+          color: 'black',
         },
         legend: {
           display: false,
@@ -77,7 +79,9 @@ const Chart8CanvasV2 = (props: Chart8CanvasProps): JSX.Element => {
           ticks: {
             font: {
               size: 20,
+              fontFamily: "'Roboto', sans-serif",
             },
+            color: 'black',
           },
         },
         y: {
@@ -86,7 +90,9 @@ const Chart8CanvasV2 = (props: Chart8CanvasProps): JSX.Element => {
             stepSize: 5,
             font: {
               size: 20,
+              fontFamily: "'Roboto', sans-serif",
             },
+            color: 'black',
           },
         },
       },
