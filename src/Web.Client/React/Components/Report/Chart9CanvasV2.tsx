@@ -62,11 +62,12 @@ const Chart9CanvasV2 = (props: Chart9CanvasProps): JSX.Element => {
     options: {
       plugins: {
         title: {
-          display: true,
+          display: false,
           text: '9. Relacionamento interpessoal',
           font: {
             size: 20,
           },
+          color: 'black',
         },
         legend: {
           display: false,
@@ -77,7 +78,9 @@ const Chart9CanvasV2 = (props: Chart9CanvasProps): JSX.Element => {
           ticks: {
             font: {
               size: 20,
+              fontFamily: "'Roboto', sans-serif",
             },
+            color: 'black',
           },
         },
         y: {
@@ -86,7 +89,9 @@ const Chart9CanvasV2 = (props: Chart9CanvasProps): JSX.Element => {
             stepSize: 5,
             font: {
               size: 20,
+              fontFamily: "'Roboto', sans-serif",
             },
+            color: 'black',
           },
         },
       },
