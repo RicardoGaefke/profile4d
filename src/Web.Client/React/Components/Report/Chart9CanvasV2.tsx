@@ -66,7 +66,6 @@ const Chart9CanvasV2 = (props: Chart9CanvasProps): JSX.Element => {
           text: '9. Relacionamento interpessoal',
           font: {
             size: 20,
-            fontFamily: "'Roboto', sans-serif",
           },
           color: 'black',
         },
