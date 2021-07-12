@@ -89,10 +89,12 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
     options: {
       plugins: {
         title: {
-          display: true,
+          display: false,
           text: '2. Perfis comportamentais e suas respectivas energias',
+          color: 'black',
           font: {
             size: 20,
+            fontFamily: "'Roboto', sans-serif",
           },
         },
         legend: {
@@ -106,7 +108,9 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
             minRotation: 45,
             font: {
               size: 20,
+              fontFamily: "'Roboto', sans-serif",
             },
+            color: 'black',
           },
         },
         y: {
@@ -116,6 +120,7 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
             font: {
               size: 20,
             },
+            color: 'black',
           },
         },
       },
