@@ -69,10 +69,12 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
     options: {
       plugins: {
         title: {
-          display: true,
+          display: false,
           text: '3. Perfis dominantes',
+          color: 'black',
           font: {
             size: 20,
+            fontFamily: 'Roboto',
           },
         },
         legend: {
@@ -84,7 +86,9 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
           ticks: {
             font: {
               size: 20,
+              fontFamily: 'Roboto',
             },
+            color: 'black',
           },
         },
         y: {
@@ -94,6 +98,7 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
             font: {
               size: 20,
             },
+            color: 'black',
           },
         },
       },
