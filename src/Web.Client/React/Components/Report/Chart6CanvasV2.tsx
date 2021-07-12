@@ -68,6 +68,7 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
           font: {
             size: 20,
           },
+          color: 'black',
         },
         legend: {
           display: false,
