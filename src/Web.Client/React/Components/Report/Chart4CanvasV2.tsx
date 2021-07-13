@@ -260,6 +260,11 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
     type: 'radar',
     data,
     options: {
+      layout: {
+        padding: {
+          bottom: 45,
+        },
+      },
       plugins: {
         title: {
           display: false,
