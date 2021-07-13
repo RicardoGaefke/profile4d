@@ -66,8 +66,9 @@ const Chart10CanvasV2 = (props: Chart10CanvasProps): JSX.Element => {
           display: false,
           text: '10. Orientação para o cliente',
           font: {
-            size: 20,
+            size: 33,
           },
+          color: 'black',
         },
         legend: {
           display: false,
@@ -77,7 +78,7 @@ const Chart10CanvasV2 = (props: Chart10CanvasProps): JSX.Element => {
         x: {
           ticks: {
             font: {
-              size: 20,
+              size: 33,
               fontFamily: "'Roboto', sans-serif",
             },
             color: 'black',
@@ -88,7 +89,7 @@ const Chart10CanvasV2 = (props: Chart10CanvasProps): JSX.Element => {
             startAtZero: true,
             stepSize: 5,
             font: {
-              size: 20,
+              size: 33,
               fontFamily: "'Roboto', sans-serif",
             },
             color: 'black',
