@@ -61,12 +61,18 @@ const Chart7CanvasV2 = (props: Chart7CanvasProps): JSX.Element => {
     type: 'bar',
     data,
     options: {
+      layout: {
+        padding: {
+          top: 45,
+          bottom: 45,
+        },
+      },
       plugins: {
         title: {
           display: false,
           text: '7. Adaptabilidade',
           font: {
-            size: 20,
+            size: 33,
           },
         },
         legend: {
@@ -77,7 +83,7 @@ const Chart7CanvasV2 = (props: Chart7CanvasProps): JSX.Element => {
         x: {
           ticks: {
             font: {
-              size: 20,
+              size: 33,
               fontFamily: "'Roboto', sans-serif",
             },
             color: 'black',
@@ -88,7 +94,7 @@ const Chart7CanvasV2 = (props: Chart7CanvasProps): JSX.Element => {
             startAtZero: true,
             stepSize: 5,
             font: {
-              size: 20,
+              size: 33,
               fontFamily: "'Roboto', sans-serif",
             },
             color: 'black',
