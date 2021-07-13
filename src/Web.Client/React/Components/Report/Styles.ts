@@ -79,7 +79,7 @@ export default makeStyles((theme: Theme): IStyles => ({
   },
   chart: {
     '@media print': {
-      margin: '0 20% 0 20%',
+      margin: '0 15% 0 15%',
     },
   },
   chartFull: {
