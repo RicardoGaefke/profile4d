@@ -266,7 +266,7 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
           text: '4. Tríade original x tríade adaptada',
           color: 'black',
           font: {
-            size: 20,
+            size: 42,
           },
         },
         legend: {
@@ -274,7 +274,7 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
           position: 'bottom',
           labels: {
             font: {
-              size: 20,
+              size: 42,
             },
             color: 'black',
           },
@@ -282,19 +282,25 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
       },
       scales: {
         r: {
+          angleLines: {
+            color: 'black',
+          },
+          grid: {
+            color: 'black',
+          },
           beginAtZero: true,
           max: 35,
           startAngle: 20,
           color: 'black',
           ticks: {
             font: {
-              size: 20,
+              size: 44,
             },
             color: 'black',
           },
           pointLabels: {
             font: {
-              size: 20,
+              size: 35,
             },
             color: 'black',
           },
