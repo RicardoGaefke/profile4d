@@ -67,6 +67,12 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
     type: 'bar',
     data,
     options: {
+      layout: {
+        padding: {
+          top: 50,
+          bottom: 50,
+        },
+      },
       plugins: {
         title: {
           display: false,
@@ -84,9 +90,11 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
       scales: {
         x: {
           ticks: {
+            maxRotation: 90,
+            minRotation: 15,
             font: {
-              size: 20,
-              fontFamily: 'Roboto',
+              size: 30,
+              fontFamily: "'Roboto', sans-serif",
             },
             color: 'black',
           },
@@ -96,7 +104,8 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
             startAtZero: true,
             stepSize: 5,
             font: {
-              size: 20,
+              size: 30,
+              fontFamily: "'Roboto', sans-serif",
             },
             color: 'black',
           },
@@ -121,7 +130,7 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
   return (
     <>
       <canvas ref={refChart3} style={{ display: (printing) ? 'none' : 'block' }} width="100%" />
-      <img alt="printing chart" ref={refImage3} className={classes.chartImage} style={{ display: (printing) ? 'block' : 'none' }} />
+      <img alt="printing chart" ref={refImage3} className={classes.chartImageFull} style={{ display: (printing) ? 'block' : 'none' }} />
     </>
   );
 };
