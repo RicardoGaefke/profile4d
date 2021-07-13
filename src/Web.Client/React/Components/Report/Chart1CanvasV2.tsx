@@ -69,6 +69,12 @@ const Chart1CanvasV2 = (props: Chart1CanvasProps): JSX.Element => {
     type: 'pie',
     data,
     options: {
+      layout: {
+        padding: {
+          top: 50,
+          bottom: 50,
+        },
+      },
       responsive: true,
       plugins: {
         title: {

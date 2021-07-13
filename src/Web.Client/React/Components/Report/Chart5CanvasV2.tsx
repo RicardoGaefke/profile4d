@@ -60,13 +60,19 @@ const Chart5CanvasV2 = (props: Chart5CanvasProps): JSX.Element => {
     type: 'bar',
     data,
     options: {
+      layout: {
+        padding: {
+          top: 45,
+          bottom: 45,
+        },
+      },
       plugins: {
         title: {
           display: false,
           text: '5. Compromisso com a excelência',
           color: 'black',
           font: {
-            size: 20,
+            size: 33,
           },
         },
         legend: {
@@ -77,7 +83,7 @@ const Chart5CanvasV2 = (props: Chart5CanvasProps): JSX.Element => {
         x: {
           ticks: {
             font: {
-              size: 20,
+              size: 33,
               fontFamily: "'Roboto', sans-serif",
             },
             color: 'black',
@@ -88,7 +94,7 @@ const Chart5CanvasV2 = (props: Chart5CanvasProps): JSX.Element => {
             startAtZero: true,
             stepSize: 5,
             font: {
-              size: 20,
+              size: 33,
               fontFamily: "'Roboto', sans-serif",
             },
             color: 'black',
