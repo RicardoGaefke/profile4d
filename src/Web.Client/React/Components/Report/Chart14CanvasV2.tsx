@@ -60,13 +60,21 @@ const Chart14CanvasV2 = (props: Chart14CanvasProps): JSX.Element => {
     type: 'bar',
     data,
     options: {
+      layout: {
+        padding: {
+          top: 45,
+          bottom: 45,
+        },
+      },
       plugins: {
         title: {
-          display: true,
+          display: false,
           text: '14. Orientação para resultados',
           font: {
-            size: 20,
+            size: 33,
+            fontFamily: "'Roboto', sans-serif",
           },
+          color: 'black',
         },
         legend: {
           display: false,
@@ -76,8 +84,10 @@ const Chart14CanvasV2 = (props: Chart14CanvasProps): JSX.Element => {
         x: {
           ticks: {
             font: {
-              size: 20,
+              size: 33,
+              fontFamily: "'Roboto', sans-serif",
             },
+            color: 'black',
           },
         },
         y: {
@@ -85,8 +95,9 @@ const Chart14CanvasV2 = (props: Chart14CanvasProps): JSX.Element => {
             startAtZero: true,
             stepSize: 5,
             font: {
-              size: 20,
+              size: 33,
             },
+            color: 'black',
           },
         },
       },

@@ -61,13 +61,21 @@ const Chart11CanvasV2 = (props: Chart11CanvasProps): JSX.Element => {
     type: 'bar',
     data,
     options: {
+      layout: {
+        padding: {
+          top: 45,
+          bottom: 45,
+        },
+      },
       plugins: {
         title: {
-          display: true,
+          display: false,
           text: '11. Desenvolvimento de pessoas',
           font: {
-            size: 20,
+            size: 33,
+            fontFamily: "'Roboto', sans-serif",
           },
+          color: 'black',
         },
         legend: {
           display: false,
@@ -77,8 +85,10 @@ const Chart11CanvasV2 = (props: Chart11CanvasProps): JSX.Element => {
         x: {
           ticks: {
             font: {
-              size: 20,
+              size: 33,
+              fontFamily: "'Roboto', sans-serif",
             },
+            color: 'black',
           },
         },
         y: {
@@ -86,8 +96,10 @@ const Chart11CanvasV2 = (props: Chart11CanvasProps): JSX.Element => {
             startAtZero: true,
             stepSize: 5,
             font: {
-              size: 20,
+              size: 33,
+              fontFamily: "'Roboto', sans-serif",
             },
+            color: 'black',
           },
         },
       },
