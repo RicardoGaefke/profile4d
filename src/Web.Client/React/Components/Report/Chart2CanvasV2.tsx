@@ -107,7 +107,7 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
             maxRotation: 90,
             minRotation: 45,
             font: {
-              size: 20,
+              size: 28,
               fontFamily: "'Roboto', sans-serif",
             },
             color: 'black',
@@ -118,7 +118,7 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
             startAtZero: true,
             stepSize: 5,
             font: {
-              size: 20,
+              size: 30,
             },
             color: 'black',
           },
