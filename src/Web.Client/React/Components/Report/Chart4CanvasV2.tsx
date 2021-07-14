@@ -299,7 +299,7 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
           color: 'black',
           ticks: {
             font: {
-              size: 44,
+              size: 34,
             },
             color: 'black',
           },
