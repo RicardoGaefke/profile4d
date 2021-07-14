@@ -34,7 +34,7 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
   const data = {
     labels: [
       `Comandante - ${((comandante / 165) * 100).toFixed(2)}%`,
-      `Mediador - ${((comandante / 165) * 100).toFixed(2)}%`,
+      `Mediador - ${((mediador / 165) * 100).toFixed(2)}%`,
       `Organizador - ${((organizador / 165) * 100).toFixed(2)}%`,
       `Prestativo - ${((prestativo / 165) * 100).toFixed(2)}%`,
       `Realizador - ${((realizador / 165) * 100).toFixed(2)}%`,
