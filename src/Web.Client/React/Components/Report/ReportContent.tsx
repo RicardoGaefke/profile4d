@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Typography } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
 import { IReport } from '../../../../TypeScript/Interfaces/IReport';
 // import { useStateValue } from '../../Initial/Context/StateProvider';
@@ -67,7 +68,21 @@ const ReportContent = (props: ReportContentProps): JSX.Element => {
     <div>
       <div id="Degustacao">
         {FilteredImage(1)}
+
         <ReportTitle title={staticTitle(133)} />
+        <Typography
+          className={classes.footerTitlePrint}
+        >
+          <strong>
+            Nome:&nbsp;&nbsp;
+          </strong>
+          Carlos Henrique ferreira Neto
+          <br />
+          <strong>
+            Data de realização:&nbsp;&nbsp;
+          </strong>
+          20/12/2023
+        </Typography>
         <ReportText text={staticText(133)} />
 
         <ReportTitle title={staticTitle(2)} breakPage />
