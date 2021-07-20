@@ -12,6 +12,8 @@ import { withSnackbar, WithSnackbarProps } from 'notistack';
 import { IAnswerRouterProps } from '../Answer/Router';
 // eslint-disable-next-line no-unused-vars
 import { IReport } from '../../../../TypeScript/Interfaces/IReport';
+// eslint-disable-next-line no-unused-vars
+import { IKey } from '../../../../TypeScript/Interfaces/IKey';
 import getReport from './getReport';
 import ReportContent from './ReportContent';
 import useStyles from './Styles';
@@ -30,6 +32,8 @@ const Report = withTranslation()(
     const [loading, setLoading] = useState<boolean>(true);
     // eslint-disable-next-line no-unused-vars
     const [data, setData] = useState<IReport>({} as IReport);
+    // eslint-disable-next-line no-unused-vars
+    const [key, setKey] = useState<IKey>({ Finished: '2021-05-18T16:27:17.44', Name: 'Herique' } as IKey);
 
     const updateReport = (): void => {
       getReport(guid)
@@ -77,7 +81,7 @@ const Report = withTranslation()(
               className={classes.container}
             >
               <div>
-                <ReportContent data={data} />
+                <ReportContent chave={key} data={data} />
               </div>
             </Grid>
           )
