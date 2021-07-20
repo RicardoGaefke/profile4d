@@ -10,7 +10,6 @@ import ReportContent from './ReportContent';
 import fakeData from './fakeData';
 import useStyles from './Styles';
 
-
 const App = (): React.ReactElement => {
   const classes = useStyles();
 
@@ -29,7 +28,7 @@ const App = (): React.ReactElement => {
           justify="center"
           className={classes.container}
         >
-          <ReportContent data={fakeData} />
+          <ReportContent chave={{ Finished: '2021-05-18T16:27:17.44', Name: 'Herique' }} data={fakeData} />
         </Grid>
       </Grid>
     </MyThemeHoc>
