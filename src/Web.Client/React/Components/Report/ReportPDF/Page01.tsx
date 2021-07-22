@@ -4,12 +4,16 @@ import {
   Page, View, Text, Image,
 } from '@react-pdf/renderer';
 // eslint-disable-next-line no-unused-vars
-import { ReportContentProps } from '../ReportContent';
+import { IReport } from '../../../../../TypeScript/Interfaces/IReport';
 import { filterStaticTitle, filterStaticText } from '../filterStatic';
 import styles from './Styles';
 import HtmlParser from './HtmlParser';
 
-const Page01 = (props: ReportContentProps): JSX.Element => {
+export interface Page01Props {
+  data: IReport;
+}
+
+const Page01 = (props: Page01Props): JSX.Element => {
   const { data } = props;
 
   const Language: string = 'PT';

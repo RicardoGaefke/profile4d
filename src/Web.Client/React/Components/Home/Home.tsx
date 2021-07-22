@@ -10,6 +10,9 @@ const Home = (): JSX.Element => {
 
   return (
     <Grid
+      direction="column"
+      justify="center"
+      alignItems="center"
       container
       spacing={0}
       className={classes.main}
@@ -22,33 +25,41 @@ const Home = (): JSX.Element => {
         className={classes.inner}
       >
         <Grid
+          direction="column"
           item
           container
           justify="center"
+          alignItems="center"
           className={classes.item}
         >
           {null}
         </Grid>
         <Grid
+          direction="column"
           item
           container
           justify="center"
+          alignItems="center"
           className={classes.item}
         >
           <Assessment />
         </Grid>
         <Grid
+          direction="column"
           item
           container
           justify="center"
+          alignItems="center"
           className={classes.bottom}
         >
           <RequestKey />
         </Grid>
         <Grid
+          direction="column"
           item
           container
           justify="center"
+          alignItems="center"
           className={classes.item}
         >
           <Licencas />
