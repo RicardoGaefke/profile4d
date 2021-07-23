@@ -121,18 +121,18 @@ const Licencas = withTranslation()(
         >
           <div className={classes.root}>
             <CardsProfile
-              CardsText={`${licencas.Total} != "undefined` ? `${licencas.Total}` : `${0}`}
+              CardsText={((licencas.Total === undefined) ? '0' : licencas.Total.toString())}
               CardsProfileTitle="Total"
             />
             <CardsProfile
-              CardsText={`${licencas.Available} != "undefined` ? `${licencas.Available}` : `${0}`}
+              CardsText={((licencas.Available === undefined) ? '0' : licencas.Available.toString())}
               CardsProfileTitle="Disponíveis"
             />
             <CardsProfile
               CardsText={
-                `${(licencas.Total as number) - (licencas.Available as number)} != "NaN"`
-                  ? `${(licencas.Total as number) - (licencas.Available as number)}`
-                  : `${0}`}
+                ((licencas.Total === undefined)
+                  ? '0'
+                  : (licencas.Total - (licencas.Available || 0)).toString())}
               CardsProfileTitle="Usados"
             />
           </div>
