@@ -1,7 +1,9 @@
 import React from 'react';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
-import { Divider, Drawer as MyDrawer } from '@material-ui/core';
+import {
+  Divider, Drawer as MyDrawer, List, ListItem, ListItemText, ListSubheader,
+} from '@material-ui/core';
+import { NavLink } from 'react-router-dom';
 import setLanguage from './Language';
 import { useStateValue } from '../../Initial/Context/StateProvider';
 import Styles from './Styles';
@@ -30,6 +32,28 @@ export default withTranslation()(
         onClose={toggle}
       >
         <div className={classes.root}>
+          <List
+            component="nav"
+            aria-labelledby="fixed-content-header"
+            subheader={
+              (
+                <ListSubheader component="div" id="fixed-content-header">
+                  Admin users
+                </ListSubheader>
+              )
+            }
+          >
+            <ListItem
+              button
+              component={NavLink}
+              to="/usersAdmin"
+              title="Gerenciar usuários"
+              className={classes.navlink}
+            >
+              <ListItemText primary="Gerenciar usuários" />
+            </ListItem>
+          </List>
+          <Divider className={classes.divider} />
           <SendKeys />
           <Divider className={classes.divider} />
           <FixedContentList />

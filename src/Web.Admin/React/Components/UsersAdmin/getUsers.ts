@@ -1,8 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IPagination } from '../../../../TypeScript/Interfaces/IPagination';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IBasicReturn } from '../../../../TypeScript/Interfaces/IBasicReturn';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IUser } from '../../../../TypeScript/Interfaces/IUser';
 import myAxios from '../../Utils/MyAxios';
 

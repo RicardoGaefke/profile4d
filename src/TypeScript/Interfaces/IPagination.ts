@@ -1,4 +1,3 @@
-// @ts-ignore
 export interface IPagination<T = {}> {
   Page?: number;
   PageSize?: number;
