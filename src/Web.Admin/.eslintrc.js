@@ -11,19 +11,16 @@ module.exports = {
       }
     }
   },
-  extends: 'airbnb',
+  extends: ['airbnb-typescript'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    "parserOptions": {
-      "jsx": true,
-      "useJSXTextNode": true,
-      "project": "./tsconfig.json"
-    },
-    ecmaVersion: 2018,
+    project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
+    ecmaVersion: 2017,
     sourceType: 'module',
   },
   plugins: [
@@ -34,11 +31,20 @@ module.exports = {
   ],
   "rules": {
     "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/naming-convention": "off",
     "import/no-unresolved": "off",
+    "import/no-named-as-default": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "off",
+    "react/jsx-fragments": "off",
     "react/prefer-stateless-function": "error",
+    "react/require-default-props": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
     "max-len": [2, 150, 2]
-  }
+  },
+  settings: {
+    react: {
+      version: "latest", // "detect" automatically picks the version you have installed.
+    },
+  },
 };

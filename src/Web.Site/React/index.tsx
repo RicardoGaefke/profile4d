@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { ICustomWindow } from '../../TypeScript/Interfaces/ICustomWindow';
 import MyStateProvider from './Initial/Context/AppContext';
 import MyApp from './Initial/App';

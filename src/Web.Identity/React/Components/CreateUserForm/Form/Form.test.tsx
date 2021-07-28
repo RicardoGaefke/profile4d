@@ -5,9 +5,9 @@ import chaiEnzyme from 'chai-enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { TextField, Button } from '@material-ui/core';
 import { withFormik } from 'formik';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { ICreateUser } from '../../../../../TypeScript/Interfaces/ICreateUser';
 import Validation from './Form.Validation';
 import InitialValues from './Form.InitialValues';

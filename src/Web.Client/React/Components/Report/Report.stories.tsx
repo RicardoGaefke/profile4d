@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core';
 import { MemoryRouter } from 'react-router';
 import { storiesOf } from '@storybook/react';
 import { withConsole } from '@storybook/addon-console';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { action, HandlerFunction } from '@storybook/addon-actions';
 import MyThemeHoc from '../../Initial/Theme/StoryBookHOC';
 import ReportContent from './ReportContent';

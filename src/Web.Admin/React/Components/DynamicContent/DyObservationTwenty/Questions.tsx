@@ -1,15 +1,15 @@
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { useEffect, useState, ChangeEvent } from 'react';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withSnackbar, WithSnackbarProps } from 'notistack';
 import {
   Typography, Grid, Container, List, Divider,
 } from '@material-ui/core';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IQuestions, IQuestion } from '../../../../../TypeScript/Interfaces/IQuestion';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IBasicReturn } from '../../../../../TypeScript/Interfaces/IBasicReturn';
 import Loading from '../../Loading/Loading';
 import Quantity from '../Quantity/Quantity';
@@ -28,7 +28,7 @@ export default withTranslation()(
       const { t, enqueueSnackbar } = props;
       const classes = useStyles();
 
-      // eslint-disable-next-line no-unused-vars
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const [state, setState] = useState({} as IQuestions);
 
       const fetchQuestions = (): void => {

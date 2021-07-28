@@ -4,7 +4,7 @@ module.exports = {
       {
         test: /\.(t|j)sx?$/,
         exclude: /node_modules/,
-        use: ['awesome-typescript-loader', 'eslint-loader'],
+        use: ['ts-loader', 'eslint-loader'],
       },
       {
         test: /\.css$/,

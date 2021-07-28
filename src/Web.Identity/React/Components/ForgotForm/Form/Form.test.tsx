@@ -5,11 +5,11 @@ import Adapter from 'enzyme-adapter-react-16';
 import chaiEnzyme from 'chai-enzyme';
 import { TextField, Button } from '@material-ui/core';
 import { withFormik } from 'formik';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import Validation from './Form.Validation';
 import InitialValues from './Form.InitialValues';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IForgotForm } from '../../../../../TypeScript/Interfaces/IForgotForm';
 import ForgotForm from './Form';
 

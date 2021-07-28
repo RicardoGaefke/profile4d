@@ -1,14 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import {
-  // eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   ListItem, ListSubheader, ListItemText, List,
 } from '@material-ui/core';
 import setLanguage from './Language';
 import Styles from '../FixedItemsList/Styles';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import FixedItems, { IStaticMenuItem } from './KeysItems';
 
 export default withTranslation()(
@@ -26,7 +26,8 @@ export default withTranslation()(
             <ListSubheader component="div" id="fixed-content-header">
               {t('DrawerAdminKeys:title')}
             </ListSubheader>
-        )}
+          )
+        }
         className={classes.root}
       >
         {
