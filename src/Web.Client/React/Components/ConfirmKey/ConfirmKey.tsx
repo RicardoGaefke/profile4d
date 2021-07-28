@@ -1,19 +1,19 @@
 import { Button, Grid, Typography } from '@material-ui/core';
 import { useHistory, useParams } from 'react-router-dom';
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import useStyles from './Styles';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { RouteWithGuidProps } from '../../../../TypeScript/Interfaces/IRouteWithProps';
 
 const ConfirmKey = withTranslation()(
   (props: WithTranslation): JSX.Element => {
-    // eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { t } = props;
     const history = useHistory();
     const classes = useStyles();
-    // eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { guid } = useParams<RouteWithGuidProps>();
 
     return (

@@ -1,11 +1,11 @@
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { makeStyles, Theme } from '@material-ui/core';
 
 interface IStyles {
   snackbar: {},
 }
 
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default makeStyles((theme: Theme): IStyles => ({
   snackbar: {
     margin: theme.spacing(1),

@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IBasicReturn } from '../../../../../../TypeScript/Interfaces/IBasicReturn';
 
 export interface IForm extends IBasicReturn {

@@ -1,6 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import {
@@ -12,7 +12,7 @@ import LockOpenIcon from '@material-ui/icons/LockOpen';
 import CancelIcon from '@material-ui/icons/Cancel';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IKey } from '../../../../../TypeScript/Interfaces/IKey';
 
 export interface ListaDeLicencasProps extends WithTranslation {

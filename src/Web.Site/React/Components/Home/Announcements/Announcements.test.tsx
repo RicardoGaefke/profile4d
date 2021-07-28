@@ -1,6 +1,6 @@
 import React from 'react';
 import chai, { expect } from 'chai';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Enzyme, { shallow, mount } from 'enzyme';
 import chaiEnzyme from 'chai-enzyme';
 import Adapter from 'enzyme-adapter-react-16';

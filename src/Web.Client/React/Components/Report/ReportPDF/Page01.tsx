@@ -1,9 +1,9 @@
 import React from 'react';
 import {
-  // eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   Page, View, Text, Image,
 } from '@react-pdf/renderer';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IReport } from '../../../../../TypeScript/Interfaces/IReport';
 import { filterStaticTitle, filterStaticText } from '../filterStatic';
 import styles from './Styles';

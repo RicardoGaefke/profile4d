@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { createMuiTheme, Theme } from '@material-ui/core/styles';
 
 const MyTheme = (t: string = 'dark'): Theme => {

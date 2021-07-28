@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import { useParams } from 'react-router';
 import { NavLink } from 'react-router-dom';
@@ -10,10 +10,10 @@ import { ArrowForward } from '@material-ui/icons';
 import { useStateValue } from '../../../Initial/Context/StateProvider';
 import useStyles from './Styles';
 import Axios from '../../../Utils/Axios';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IIntro } from '../../../../../TypeScript/Interfaces/IIntro';
 import setLanguage from './Language';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IAnswerRouterProps } from '../Router';
 
 const Answer = withTranslation()(

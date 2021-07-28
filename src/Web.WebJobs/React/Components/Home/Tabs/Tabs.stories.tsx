@@ -2,11 +2,11 @@ import React from 'react';
 import { MemoryRouter } from 'react-router';
 import { storiesOf } from '@storybook/react';
 import { withConsole } from '@storybook/addon-console';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { action, HandlerFunction } from '@storybook/addon-actions';
 import MyThemeHoc from '../../../Initial/Theme/StoryBookHOC';
 import Tabs from './Tabs';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IEmailRow } from '../Table/IProps';
 
 const data = [

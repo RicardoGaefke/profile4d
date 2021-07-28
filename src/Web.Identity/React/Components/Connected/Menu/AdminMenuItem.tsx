@@ -3,7 +3,7 @@ import {
   ListItem, ListItemIcon, ListItemText,
 } from '@material-ui/core';
 import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import useStyles from './Styles';
 import onAdminClick from './onAdminClick';

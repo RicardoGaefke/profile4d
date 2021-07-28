@@ -4,10 +4,10 @@ import {
 } from '@material-ui/core';
 import { CloudDownload } from '@material-ui/icons';
 import { NavLink } from 'react-router-dom';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import Axios from '../../../../Utils/Axios';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IKey } from '../../../../../../TypeScript/Interfaces/IKey';
 
 const AssessmentsList = withTranslation()(

@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IDynamicContent } from '../../../../../../TypeScript/Interfaces/IDynamicContent';
 
 const initialValues: IDynamicContent = {

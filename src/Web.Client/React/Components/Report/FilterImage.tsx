@@ -1,5 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IImage } from '../../../../TypeScript/Interfaces/IImage';
 // import { useStateValue } from '../../Initial/Context/StateProvider';
 import useStyles from './Styles';

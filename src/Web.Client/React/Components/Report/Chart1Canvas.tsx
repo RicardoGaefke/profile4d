@@ -1,9 +1,9 @@
 import {
-  // eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   ChartConfiguration, Chart, PieController, ArcElement, ChartData,
 } from 'chart.js';
 import React, { useEffect, useRef } from 'react';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 import useStyles from './Styles';
 

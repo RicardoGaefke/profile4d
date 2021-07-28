@@ -1,10 +1,10 @@
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import { Drawer, Typography, Divider } from '@material-ui/core';
 import setLanguage from './Language';
 import {
-  // eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   useStateValue,
 } from '../../Initial/Context/StateProvider';
 import Styles from './Styles';
