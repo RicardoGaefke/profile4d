@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import psl, { ParsedDomain, ParseError } from 'psl';
 
 // eslint-disable-next-line import/prefer-default-export

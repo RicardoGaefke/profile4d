@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = () => {
   const clientBundle = merge(common, {
@@ -23,6 +24,7 @@ module.exports = () => {
         template: './Views/Home/Template.cshtml',
         excludeChunks: ['app'],
       }),
+      new ESLintPlugin({ fix: true, failOnError: false }),
     ],
   });
 

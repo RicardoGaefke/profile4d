@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import {
   Typography, FormControl, InputLabel, Select, MenuItem,
 } from '@material-ui/core';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { ISelect } from './ISelect';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import SelectValues, { ITemporarySelect } from './TempSelect';
 import setLanguage from '../Questions/Language';
 import useStyles from './Style';
@@ -17,7 +17,7 @@ export default withTranslation()(
     setLanguage();
     const classes = useStyles();
 
-    // eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [selectChanges, setSelectChanges] = useState({} as ISelect);
 
     return (

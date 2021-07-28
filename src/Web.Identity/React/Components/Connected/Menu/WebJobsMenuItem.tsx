@@ -3,7 +3,7 @@ import {
   ListItem, ListItemIcon, ListItemText,
 } from '@material-ui/core';
 import EmailIcon from '@material-ui/icons/Email';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import useStyles from './Styles';
 import onWebJobsClick from './onWebJobsClick';

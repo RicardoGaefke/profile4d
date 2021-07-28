@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import EditIcon from '@material-ui/icons/Edit';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import { Button } from '@material-ui/core';
 import setLanguage from './Language';

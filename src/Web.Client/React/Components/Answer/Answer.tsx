@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withSnackbar, WithSnackbarProps } from 'notistack';
 import {
   Grid, CircularProgress,
 } from '@material-ui/core';
 import Axios from '../../Utils/Axios';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IQuestion } from '../../../../TypeScript/Interfaces/IQuestion';
 import AnswerForm from '../Options/RadioOptions.form';
 import { useStateValue } from '../../Initial/Context/StateProvider';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IAnswerRouterProps } from './Router';
 import ProgressBar from '../ProgressBar/ProgressBar';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import {
   Paper, Typography, LinearProgress,
@@ -28,7 +28,7 @@ export default withTranslation()(
           </Typography>
           <LinearProgress
             variant="determinate"
-            value={(total >= minimum) ? minimum : (total * 100 / minimum)}
+            value={(total >= minimum) ? minimum : ((total * 100) / minimum)}
             valueBuffer={minimum}
             color={(total >= minimum) ? 'primary' : 'secondary'}
             className={classes.progress}

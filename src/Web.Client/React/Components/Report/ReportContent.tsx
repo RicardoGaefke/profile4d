@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Typography } from '@material-ui/core';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IReport } from '../../../../TypeScript/Interfaces/IReport';
 // import { useStateValue } from '../../Initial/Context/StateProvider';
 import FilterImage from './FilterImage';
 import ReportTitle from './ReportTitle';
 import ReportText from './ReportText';
 import { filterStaticTitle, filterStaticText } from './filterStatic';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IImage } from '../../../../TypeScript/Interfaces/IImage';
 import Chart1 from './Chart1CanvasV2';
 import Chart2 from './Chart2CanvasV2';
@@ -34,9 +34,9 @@ import Dynamic35 from './Dynamic35';
 import Dynamic38 from './Dynamic38';
 import Dynamic59 from './Dynamic59';
 import useStyles from './Styles';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IKey } from '../../../../TypeScript/Interfaces/IKey';
 
 export interface ReportContentProps extends WithTranslation {

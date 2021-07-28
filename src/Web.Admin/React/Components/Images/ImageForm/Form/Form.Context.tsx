@@ -1,9 +1,9 @@
 import React from 'react';
 import { withFormik } from 'formik';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { WithTranslation, withTranslation } from 'react-i18next';
 import setLanguage from './Language';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IStaticImageForm } from '../../../../../../TypeScript/Interfaces/IStaticImageForm';
 import Validation from './Form.Validation';
 import MyForm from './Form';

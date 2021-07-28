@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IStaticIntroduction } from '../../../../TypeScript/Interfaces/IStaticContent';
 import { filterStaticText } from './filterStatic';
 import { useStateValue } from '../../Initial/Context/StateProvider';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 import ReportText from './ReportText';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Grid } from '@material-ui/core';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { WithTranslation, withTranslation, useTranslation } from 'react-i18next';
 import Styles from './Styles';
 import MyImage from '../../../Utils/MyImage';

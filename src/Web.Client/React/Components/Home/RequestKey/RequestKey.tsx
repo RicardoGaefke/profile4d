@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { WithTranslation, withTranslation } from 'react-i18next';
 import {
   Button, Dialog, DialogTitle, DialogContent, DialogContentText, TextField, DialogActions,
 } from '@material-ui/core';
 import { Add } from '@material-ui/icons';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { WithSnackbarProps, withSnackbar } from 'notistack';
 import Axios from '../../../Utils/Axios';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IBasicReturn } from '../../../../../TypeScript/Interfaces/IBasicReturn';
 import setLanguage from './Language';
 

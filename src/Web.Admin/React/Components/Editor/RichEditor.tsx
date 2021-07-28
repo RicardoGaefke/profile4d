@@ -1,6 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { SunEditorReactProps } from 'suneditor-react';
 
 const SunEditor = dynamic<SunEditorReactProps>(
