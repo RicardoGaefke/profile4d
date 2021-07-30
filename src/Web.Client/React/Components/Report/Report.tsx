@@ -4,15 +4,15 @@ import { useParams } from 'react-router';
 import {
   Grid, CircularProgress,
 } from '@material-ui/core';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { withSnackbar, WithSnackbarProps } from 'notistack';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IAnswerRouterProps } from '../Answer/Router';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IReport } from '../../../../TypeScript/Interfaces/IReport';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IKey } from '../../../../TypeScript/Interfaces/IKey';
 import getReport from './getReport';
 import ReportContent from './ReportContent';
@@ -33,7 +33,7 @@ const Report = withTranslation()(
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [data, setData] = useState<IReport>({} as IReport);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [key, setKey] = useState<IKey>({ Finished: '2021-05-18T16:27:17.44', Name: 'Herique' } as IKey);
+    const [key] = useState<IKey>({ Finished: '2021-05-18T16:27:17.44', Name: 'Herique' } as IKey);
 
     const updateReport = (): void => {
       getReport(guid)
