@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // eslint-disable-next-line no-unused-vars
   Chart, ChartConfiguration, LinearScale, BarController, BarElement,
 } from 'chart.js';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 import useStyles from './Styles';
 
