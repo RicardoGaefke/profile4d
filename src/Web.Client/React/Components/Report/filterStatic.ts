@@ -1,4 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IStaticIntroduction } from '../../../../TypeScript/Interfaces/IStaticContent';
 
 export const filterStaticTitle = (id: number, Language: string, staticContent: IStaticIntroduction[]): string => {

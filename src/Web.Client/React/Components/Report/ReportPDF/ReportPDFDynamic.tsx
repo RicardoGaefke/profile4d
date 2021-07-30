@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { ReportPDFProps } from './ReportPDF';
 
 const ReportDynamic = dynamic<ReportPDFProps>(
