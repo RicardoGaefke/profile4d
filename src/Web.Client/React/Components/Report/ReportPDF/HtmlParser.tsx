@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable react/no-array-index-key */
 import React, { useEffect, useState } from 'react';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import ReactPDF, { View, Text } from '@react-pdf/renderer';
 import reactStringReplace from 'react-string-replace';
 import styles from './Styles';

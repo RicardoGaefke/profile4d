@@ -2,9 +2,9 @@ import React from 'react';
 import {
   Typography, CardContent, Card,
 } from '@material-ui/core';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { makeStyles } from '@material-ui/core/styles';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 
 const useStyles = makeStyles({
