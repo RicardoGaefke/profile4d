@@ -1,4 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import i18n, { TFunction, Module } from 'i18next';
 import { initReactI18next } from 'react-i18next';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import i18next from 'i18next';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import {
   Radio, RadioGroup, FormControl, FormLabel, FormControlLabel, Divider,

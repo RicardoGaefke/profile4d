@@ -1,7 +1,7 @@
 import React from 'react';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { withSnackbar, WithSnackbarProps } from 'notistack';
 import { withFormik } from 'formik';
 import { Typography, Divider } from '@material-ui/core';
@@ -12,12 +12,12 @@ import CreateUserLink from './CreateUserLink/CreateUserLink';
 import ForgotPassword from './ForgotPassword/ForgotPassword';
 import InitialValues from './Form/Form.InitialValues';
 import Validation from './Form/Form.Validation';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { ILoginForm } from '../../../../TypeScript/Interfaces/ILoginForm';
 import myAxios from '../../Utils/MyAxios';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IInitialContext } from '../../../../TypeScript/Interfaces/IInitialContext';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { withContext, IContext } from '../../Initial/Context/StateProvider';
 
 const MyForm = withFormik<WithTranslation & WithSnackbarProps & IContext, ILoginForm>({
@@ -33,7 +33,7 @@ const MyForm = withFormik<WithTranslation & WithSnackbarProps & IContext, ILogin
       KeepConnected: values.KeepConnected,
     }).then((response): void => {
       const { data } = response;
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      // eslint-disable-next-line no-unused-vars
       const [ctx, dispatch] = props.context;
 
       if (data.Success) {
