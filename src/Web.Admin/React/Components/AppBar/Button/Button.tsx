@@ -1,5 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Button, ButtonProps } from '@material-ui/core';
 import Styles from './Styles';
 
@@ -9,6 +9,7 @@ export default (props: ButtonProps): React.ReactElement<any> => {
   return (
     <Button
       className={classes.btn}
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
     />
   );

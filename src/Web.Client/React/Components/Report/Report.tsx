@@ -30,10 +30,10 @@ const Report = withTranslation()(
     setLanguage();
 
     const [loading, setLoading] = useState<boolean>(true);
-    // eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [data, setData] = useState<IReport>({} as IReport);
-    // eslint-disable-next-line no-unused-vars
-    const [key, setKey] = useState<IKey>({ Finished: '2021-05-18T16:27:17.44', Name: 'Herique' } as IKey);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [key] = useState<IKey>({ Finished: '2021-05-18T16:27:17.44', Name: 'Herique' } as IKey);
 
     const updateReport = (): void => {
       getReport(guid)

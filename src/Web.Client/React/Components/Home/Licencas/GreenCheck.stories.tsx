@@ -12,11 +12,11 @@ const App = (): React.ReactElement => (
       spacing={0}
       direction="column"
       justify="center"
-      alignItems="center"      
+      alignItems="center"
     >
-        <Grid>
-          <DoneAllIcon style={{ color: '#00c853', fontSize: 80 }} />
-        </Grid>
+      <Grid>
+        <DoneAllIcon style={{ color: '#00c853', fontSize: 80 }} />
+      </Grid>
     </Grid>
   </MyThemeHoc>
 );

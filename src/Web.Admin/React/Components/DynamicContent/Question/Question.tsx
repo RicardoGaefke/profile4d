@@ -1,14 +1,14 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable camelcase */
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { ChangeEvent } from 'react';
 import {
   Grid, ListItem, Typography, ListItemAvatar, Avatar,
 } from '@material-ui/core';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import EditButton from '../EditButton/EditButton';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IQuestion } from '../../../../../TypeScript/Interfaces/IQuestion';
 import MyActive from '../Active/Active';
 import setLanguage from '../Language';

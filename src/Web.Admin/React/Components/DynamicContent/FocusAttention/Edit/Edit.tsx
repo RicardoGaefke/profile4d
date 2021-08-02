@@ -1,9 +1,9 @@
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withRouter, RouteComponentProps } from 'react-router';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withSnackbar, WithSnackbarProps } from 'notistack';
 import { withFormik } from 'formik';
 import { Typography } from '@material-ui/core';
@@ -12,7 +12,7 @@ import setLanguage from '../Language';
 import setLanguageForm from '../../Language';
 import Form from '../../Form/Form';
 import Validation from '../../Form/Form.Validation';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IDynamicContent } from '../../../../../../TypeScript/Interfaces/IDynamicContent';
 import myAxios from '../../../../Utils/MyAxios';
 

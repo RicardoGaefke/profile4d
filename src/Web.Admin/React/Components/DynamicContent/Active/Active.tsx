@@ -1,6 +1,6 @@
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { ChangeEvent, useState } from 'react';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import { FormControlLabel, Checkbox } from '@material-ui/core';
 import setLanguage from './Language';
@@ -23,7 +23,7 @@ export default withTranslation()(
 
     const [state, setState] = useState(Active);
 
-    // eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const onChange = (event: ChangeEvent<HTMLInputElement>, checked): void => {
       setState(event.target.checked);
       handleChange(event, checked);

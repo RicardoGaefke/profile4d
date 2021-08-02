@@ -31,7 +31,7 @@ export default class ErrorBoundary extends Component<IErrorBoundaryProps, IError
   componentDidCatch = (error, info): void => {
     // eslint-disable-next-line no-console
     console.log(error, info);
-  }
+  };
 
   render(): any {
     const { hasError } = this.state;
