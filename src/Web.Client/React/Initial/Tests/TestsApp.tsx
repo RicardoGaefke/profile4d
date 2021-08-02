@@ -9,7 +9,7 @@ import myTheme from './Theme';
 import AppBar from '../../Components/AppBar/AppBar';
 import ConfigDrawer from '../../Components/ConfigDrawer/Drawer';
 import Footer from '../../Components/Footer/Footer';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import useStyles, { IStyles } from '../Styles';
 
 const MyApp = (props: React.PropsWithChildren<any>): React.ReactElement<any> => {

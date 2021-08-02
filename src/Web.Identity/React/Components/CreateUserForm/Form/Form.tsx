@@ -3,11 +3,11 @@ import {
   Grid, TextField, Button, IconButton, InputAdornment,
 } from '@material-ui/core';
 import { Visibility, VisibilityOff } from '@material-ui/icons';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { FormikProps } from 'formik';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { ICreateUser } from '../../../../../TypeScript/Interfaces/ICreateUser';
 import useStyles from './Form.Styles';
 
@@ -15,7 +15,7 @@ export type IForm = FormikProps<ICreateUser> & WithTranslation;
 
 export default (props: IForm): React.ReactElement<IForm> => {
   const classes = useStyles({});
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // eslint-disable-next-line no-unused-vars
   const { t, i18n } = useTranslation('CreateUserForm');
   const {
     values,

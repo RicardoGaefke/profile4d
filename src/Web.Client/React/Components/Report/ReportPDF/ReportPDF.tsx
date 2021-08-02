@@ -5,16 +5,16 @@ import {
   Grid, CircularProgress,
 } from '@material-ui/core';
 import {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // eslint-disable-next-line no-unused-vars
   PDFViewer, Document, Page, View, Image,
 } from '@react-pdf/renderer';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { withSnackbar, WithSnackbarProps } from 'notistack';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IAnswerRouterProps } from '../../Answer/Router';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IReport } from '../../../../../TypeScript/Interfaces/IReport';
 import getReport from '../getReport';
 import setLanguage from '../Language';

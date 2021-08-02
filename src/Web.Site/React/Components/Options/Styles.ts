@@ -1,4 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { makeStyles, Theme } from '@material-ui/core';
 
 interface IStyles {
@@ -11,7 +11,7 @@ interface IStyles {
   radio: {},
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 export default makeStyles((theme: Theme): IStyles => ({
   main: {
     minHeight: 200,

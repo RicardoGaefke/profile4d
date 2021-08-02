@@ -1,21 +1,21 @@
 /* eslint-disable react/no-unused-prop-types */
 import React from 'react';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation, withTranslation } from 'react-i18next';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { withFormik, FormikProps } from 'formik';
 import {
   Typography, FormControl, RadioGroup, FormControlLabel, Radio, Button, Grid, FormHelperText,
 } from '@material-ui/core';
 import Validation from './RadioOptions.validation';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import radioData, { IRadio } from './Radio.data';
 import useStyles from './Styles';
 import setLanguage from './Language';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IQuestion } from '../../../../TypeScript/Interfaces/IQuestion';
 import Axios from '../../Utils/Axios';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IBasicReturn } from '../../../../TypeScript/Interfaces/IBasicReturn';
 
 interface ICustom {

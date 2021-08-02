@@ -1,4 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { makeStyles, Theme } from '@material-ui/core/styles';
 
 interface IStyles {

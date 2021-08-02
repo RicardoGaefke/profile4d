@@ -1,22 +1,22 @@
 import React from 'react';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { withSnackbar, WithSnackbarProps, SnackbarProvider } from 'notistack';
 import chai, { expect } from 'chai';
 import Enzyme, { mount } from 'enzyme';
 import chaiEnzyme from 'chai-enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { withFormik } from 'formik';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import {
   TextField, Checkbox, Button,
 } from '@material-ui/core';
 import InitialValues from './Form.InitialValues';
 import Validation from './Form.Validation';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { ILoginForm } from '../../../../../TypeScript/Interfaces/ILoginForm';
 import myAxios from '../../../Utils/MyAxios';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IInitialContext } from '../../../../../TypeScript/Interfaces/IInitialContext';
 import LoginFormUser from './Form';
 
