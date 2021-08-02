@@ -1,11 +1,11 @@
 import React from 'react';
 import chai, { expect } from 'chai';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import Enzyme, { shallow } from 'enzyme';
 import chaiEnzyme from 'chai-enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { Link as RLink } from 'react-router-dom';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import Error from './Error';
 
 chai.use(chaiEnzyme());
