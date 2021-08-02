@@ -4,7 +4,7 @@ import { MemoryRouter } from 'react-router';
 import { storiesOf } from '@storybook/react';
 import { PDFViewer, Document } from '@react-pdf/renderer';
 import { withConsole } from '@storybook/addon-console';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { action, HandlerFunction } from '@storybook/addon-actions';
 import MyThemeHoc from '../../../Initial/Theme/StoryBookHOC';
 import fakeData from '../fakeData';
@@ -13,7 +13,7 @@ import Page01 from './Page01';
 
 
 const App = (): React.ReactElement => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // eslint-disable-next-line no-unused-vars
   const classes = useStyles();
 
   return (

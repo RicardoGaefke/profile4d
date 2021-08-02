@@ -4,7 +4,7 @@ import {
   AppBar, Tabs, Tab, Typography,
 } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import TabPanel from './TabPanel';
 import useStyles from './Styles';
