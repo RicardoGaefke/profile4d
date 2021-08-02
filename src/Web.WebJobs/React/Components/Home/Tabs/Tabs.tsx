@@ -3,7 +3,7 @@ import {
   Box, Typography, Tab, Tabs, AppBar,
 } from '@material-ui/core';
 import useStyles from '../Styles';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IEmailRow } from '../Table/IProps';
 import Table from '../Table/Table';
 

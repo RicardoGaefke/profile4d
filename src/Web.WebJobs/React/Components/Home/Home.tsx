@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { HubConnectionBuilder, HubConnection } from '@microsoft/signalr';
 import {
   Container, Typography,
 } from '@material-ui/core';
 import useStyles from './Styles';
 import Tabs from './Tabs/Tabs';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IEmailRow } from './Table/IProps';
 import myAxios from '../../Utils/MyAxios';
 
