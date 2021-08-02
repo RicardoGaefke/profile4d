@@ -3,7 +3,7 @@ import {
   TableContainer, Table, TableHead, TableRow, TableCell, TableBody,
 } from '@material-ui/core';
 import useStyles from '../Styles';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IEmailRows, IEmailRow } from './IProps';
 
 export default (props: IEmailRows): React.ReactElement => {

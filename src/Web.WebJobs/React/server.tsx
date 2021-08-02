@@ -6,7 +6,7 @@ import { createServerRenderer } from 'aspnet-prerendering';
 import { ServerStyleSheets } from '@material-ui/styles';
 import MyStateProvider from './Initial/Context/AppContext';
 import MyApp from './Initial/App';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IInitialContext } from '../../TypeScript/Interfaces/IInitialContext';
 
 export default createServerRenderer((params): Promise<any> => new Promise((resolve): void => {
