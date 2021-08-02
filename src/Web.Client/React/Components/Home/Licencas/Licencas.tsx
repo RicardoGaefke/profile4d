@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { withSnackbar, WithSnackbarProps } from 'notistack';
 import {
   CircularProgress, Grid, Typography,
 } from '@material-ui/core';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IKeysPreview } from '../../../../../TypeScript/Interfaces/IKeysPreview';
 import Axios from '../../../Utils/Axios';
 import useStyles from './Styles';
 import ListaDeLicencas from './ListaDeLicencas';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IKey } from '../../../../../TypeScript/Interfaces/IKey';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IBasicReturn } from '../../../../../TypeScript/Interfaces/IBasicReturn';
 import EnviaLicencas from './Form/Form.Context';
 import CardsProfile from '../../CardsProfile/CardsProfile';

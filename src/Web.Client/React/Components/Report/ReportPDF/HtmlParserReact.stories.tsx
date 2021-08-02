@@ -3,12 +3,12 @@
 import React, { useEffect, useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withConsole } from '@storybook/addon-console';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import ReactPDF, {
   PDFViewer, Document, Page, View, Text,
 } from '@react-pdf/renderer';
 import reactStringReplace from 'react-string-replace';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import convertRGBToHex from './CollorParser';
 import styles from './Styles';
 

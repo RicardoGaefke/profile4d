@@ -1,10 +1,10 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useRef } from 'react';
 import {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // eslint-disable-next-line no-unused-vars
   Chart, ChartData, ChartConfiguration, RadarController, RadialLinearScale, PointElement, LineElement, Title, Legend, Tooltip, Filler,
 } from 'chart.js';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 import useStyles from './Styles';
 
