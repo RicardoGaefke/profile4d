@@ -1,7 +1,7 @@
 import React, {
   createContext, useContext, useReducer,
 } from 'react';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IInitialContext } from '../../../../TypeScript/Interfaces/IInitialContext';
 
 export const StateContext = createContext<IInitialContext | any>({});
