@@ -2,9 +2,9 @@ import React from 'react';
 import {
   Typography, Card, CardMedia, CardContent, Divider,
 } from '@material-ui/core';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation, useTranslation } from 'react-i18next';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IImage } from '../../../../../TypeScript/Interfaces/IImage';
 import setLanguage from './Language';
 import Styles from '../Styles';
