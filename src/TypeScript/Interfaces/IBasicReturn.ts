@@ -1,5 +1,5 @@
 export interface IBasicReturn {
-  Success: boolean;
+  Success?: boolean;
   Message?: string;
   Details?: string;
   Code?: string;
@@ -8,7 +8,7 @@ export interface IBasicReturn {
 
 export interface IBasicReturn<T = {}>
 {
-  Success: boolean;
+  Success?: boolean;
   Message?: string;
   Details?: string;
   Code?: string;
