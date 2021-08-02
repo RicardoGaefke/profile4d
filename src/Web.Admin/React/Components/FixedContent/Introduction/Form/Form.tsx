@@ -3,11 +3,11 @@ import {
   Grid, TextField, Button, FormControl,
   FormLabel, FormHelperText,
 } from '@material-ui/core';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { FormikProps } from 'formik';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IStaticIntroduction } from '../../../../../../TypeScript/Interfaces/IStaticContent';
 import Createdby from '../../../Created/Created';
 import useStyles from '../../../../Utils/Form.Styles';

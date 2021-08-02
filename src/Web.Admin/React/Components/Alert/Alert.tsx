@@ -1,6 +1,6 @@
 import React from 'react';
 import { Alert, AlertTitle } from '@material-ui/lab';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { IAlert } from './IAlert';
 
 export default (props: IAlert): React.ReactElement<IAlert> => {
