@@ -1,12 +1,12 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { withFormik } from 'formik';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { WithTranslation, withTranslation } from 'react-i18next';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { WithSnackbarProps, withSnackbar } from 'notistack';
 import setLanguage from '../Language';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import initialValues, { IForm } from './Form.InitialValues';
 import Validation from './Form.Validation';
 import MyForm from './Form';
