@@ -12,7 +12,7 @@ describe('Web.Identity -> ErrorBoundary.ErrorBoundary', (): void => {
   describe('Smoke Tests', (): void => {
     it('Should exist a module ErrorBoundary', (): void => {
       const wrapper = shallow(<ErrorBoundary />);
-      // eslint-disable-next-line no-unused-expressions
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       expect(wrapper).to.exist;
     });
   });

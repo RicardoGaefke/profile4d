@@ -23,7 +23,7 @@ describe('Web.Identity -> Policy', (): void => {
   describe('Smoke Tests', (): void => {
     it('Should exist Policy', (): void => {
       const wrapper = shallow(<App />);
-      // eslint-disable-next-line no-unused-expressions
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       expect(wrapper).to.exist;
     });
   });
