@@ -8,13 +8,13 @@ import {
 import PublishIcon from '@material-ui/icons/Publish';
 // eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { withSnackbar, WithSnackbarProps } from 'notistack';
 // eslint-disable-next-line no-unused-vars
 import { FormikProps } from 'formik';
 // eslint-disable-next-line no-unused-vars
 import { IStaticImageForm } from '../../../../../../TypeScript/Interfaces/IStaticImageForm';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IImage } from '../../../../../../TypeScript/Interfaces/IImage';
 import setLanguage from './Language';
 import Createdby from '../../../Created/Created';

@@ -19,6 +19,7 @@ const Pagination = withTranslation()(
   (props: PaginationProps): JSX.Element => {
     const {
       // eslint-disable-next-line no-unused-vars
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       t, Page, Last, onChange,
     } = props;
     const classes = useStyles({});

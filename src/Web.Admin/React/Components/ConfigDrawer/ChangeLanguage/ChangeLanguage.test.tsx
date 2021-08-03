@@ -23,7 +23,7 @@ describe('Web.Identity -> ConfigDrawer.ChangeLanguage', (): void => {
   describe('Smoke Tests', (): void => {
     it('Should exist ChangeLanguage', (): void => {
       const wrapper = shallow(<App />);
-      // eslint-disable-next-line no-unused-expressions
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       expect(wrapper).to.exist;
     });
   });
