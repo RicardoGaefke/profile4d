@@ -23,7 +23,7 @@ describe('Web.Identity -> AppBar.ConfigButton', (): void => {
   describe('Smoke Tests', (): void => {
     it('Should exist ConfigButton', (): void => {
       const wrapper = shallow(<App />);
-      // eslint-disable-next-line no-unused-expressions
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       expect(wrapper).to.exist;
     });
   });

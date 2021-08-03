@@ -33,7 +33,7 @@ describe('Web.Admin -> YourMotivations', (): void => {
   describe('Smoke Tests', (): void => {
     it('Should exist YourMotivations', (): void => {
       const wrapper = mount(<App />);
-      // eslint-disable-next-line no-unused-expressions
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       expect(wrapper).to.exist;
     });
   });
