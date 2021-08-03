@@ -33,7 +33,7 @@ describe('Web.Admin -> PersonalAnalyze', (): void => {
   describe('Smoke Tests', (): void => {
     it('Should exist PersonalAnalyze', (): void => {
       const wrapper = mount(<App />);
-      // eslint-disable-next-line no-unused-expressions
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       expect(wrapper).to.exist;
     });
   });

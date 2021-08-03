@@ -8,7 +8,7 @@ import { IBasicReturn, BasicReturn } from '../../../../TypeScript/Interfaces/IBa
 
 const UsersAdmin = withTranslation()(
   (props: WithTranslation): JSX.Element => {
-    // eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { t } = props;
 
     const initialPagination: IBasicReturn<IUser[]> = new BasicReturn(true);

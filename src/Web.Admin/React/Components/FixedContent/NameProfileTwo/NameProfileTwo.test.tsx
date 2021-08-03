@@ -33,7 +33,7 @@ describe('Web.Admin -> NameProfileTwo', (): void => {
   describe('Smoke Tests', (): void => {
     it('Should exist NameProfileTwo', (): void => {
       const wrapper = mount(<App />);
-      // eslint-disable-next-line no-unused-expressions
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       expect(wrapper).to.exist;
     });
   });

@@ -129,7 +129,7 @@ const ReportContent = withTranslation()(
           <ReportTitle title={staticTitle(16)} />
           <ReportText text={dynamicText(9)} />
 
-          <ReportTitle title={staticTitle(17)} />
+          <ReportTitle title={staticTitle(17)} breakPage />
           <ReportText text={dynamicText(10)} />
 
           <ReportTitle title={staticTitle(18)} />
