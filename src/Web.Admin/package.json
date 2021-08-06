@@ -42,7 +42,7 @@
     "@primer/octicons-react": "^9.1.1",
     "@storybook/addon-a11y": "^5.2.6",
     "@storybook/addon-actions": "^5.2.6",
-    "@storybook/addon-console": "^1.2.1",
+    "@storybook/addon-console": "1.2.3",
     "@storybook/addon-knobs": "^5.2.6",
     "@storybook/addon-viewport": "^5.2.6",
     "@storybook/react": "^5.2.6",

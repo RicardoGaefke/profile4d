@@ -24,7 +24,7 @@ export default withTranslation()(
     const [state, setState] = useState(Active);
 
     // eslint-disable-next-line no-unused-vars
-    const onChange = (event: ChangeEvent<HTMLInputElement>, checked): void => {
+    const onChange = (event: ChangeEvent<HTMLInputElement>, checked: boolean): void => {
       setState(event.target.checked);
       handleChange(event, checked);
     };

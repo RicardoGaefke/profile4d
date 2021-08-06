@@ -5,17 +5,9 @@ const STORIES_PATH = path.join(__dirname, '../React');
 
 module.exports = ({config}) => {
   config.module.rules.push({
-    test: /\.(ts|tsx)$/,
-    include: [SRC_PATH, STORIES_PATH],
-      use: [
-        {
-          loader: require.resolve('awesome-typescript-loader'),
-          options: {
-            configFileName: './tsconfig.json'
-          }
-        },
-        { loader: require.resolve('react-docgen-typescript-loader') }
-      ]
+    test: /\.(t|j)sx?$/,
+    exclude: /node_modules/,
+    use: ['ts-loader'],
   });
   config.resolve.extensions.push('.ts', '.tsx');
   return config;
