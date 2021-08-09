@@ -8,7 +8,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 module.exports = () => {
   const clientBundle = merge(common, {
     mode: 'production',
-    devtool: '#source-map',
+    devtool: 'source-map',
     entry: {
       app: path.resolve(__dirname, './React/index.tsx'),
     },
@@ -31,7 +31,7 @@ module.exports = () => {
   const serverBundle = merge(common, {
     mode: 'production',
     target: 'node',
-    devtool: '#source-map',
+    devtool: 'source-map',
     devServer: {
       contentBase: './wwwwroot/dist',
     },
