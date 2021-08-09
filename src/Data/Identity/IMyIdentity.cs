@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Profile4d.Domain;
 namespace Profile4d.Data
 {
@@ -16,5 +17,6 @@ namespace Profile4d.Data
     User ForgotPassword(string email);
     void ForgotActivate(User data);
     int CreateUser(User data);
+    Pagination<IEnumerable<User>> GetUsersForAdminView(Pagination pagination);
   }
 }

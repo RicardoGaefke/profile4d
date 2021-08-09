@@ -298,5 +298,42 @@ namespace Profile4d.Data
         }
       }
     }
+
+    public Pagination<IEnumerable<User>> GetUsersForAdminView(Pagination pagination)
+    {
+      SqlParameter[] sqlParameters = new SqlParameter[]{
+        /* 00 */ new SqlParameter("@Page", pagination.Page),
+        /* 01 */ new SqlParameter("@PageSize", pagination.PageSize),
+      };
+
+      SqlDataReader reader = SqlHelper.ExecuteReader(_connStr.Value.SqlServer, "[spUsersListForAdmin]", sqlParameters);
+
+      reader.Read();
+
+      Pagination<IEnumerable<User>> _return = new Pagination<IEnumerable<User>>(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2));
+
+      reader.NextResult();
+
+      List<User> users = new List<User>();
+
+      while (reader.Read())
+      {
+        User user = new User()
+        {
+          Guid = reader.GetGuid(0).ToString(),
+          Name = reader.GetString(1),
+          Active = reader.GetBoolean(2),
+          Email = reader.GetString(3)
+        };
+
+        users.Add(user);
+      }
+
+      _return.Object = users;
+
+      reader.Close();
+
+      return _return;
+    }
   }
 }
