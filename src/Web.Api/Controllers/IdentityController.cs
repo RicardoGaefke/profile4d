@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
@@ -20,7 +21,7 @@ namespace Profile4d.Web.Api.Controllers
   public class IdentityController : ControllerBase
     {
     private readonly ILogger<IdentityController> _logger;
-    private readonly MyIdentity _myIdentity;
+    private readonly IMyIdentity _myIdentity;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly IEmail _email;
     private readonly User _user;
@@ -28,7 +29,7 @@ namespace Profile4d.Web.Api.Controllers
 
     public IdentityController(
       ILogger<IdentityController> logger,
-      MyIdentity myIdentity,
+      IMyIdentity myIdentity,
       IHttpContextAccessor httpContextAccessor,
       IEmail emailService,
       IQueue queue
@@ -341,6 +342,25 @@ namespace Profile4d.Web.Api.Controllers
       }
 
       return _return;
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("UsersForAdminView/{page}/{pageSize}")]
+    public ActionResult<BasicReturn<Pagination<IEnumerable<User>>>> UsersForAdminView(int page = 1, int pageSize = 50)
+    {
+      try
+      {
+        Pagination pagination = new Pagination(page, pageSize);
+        return new BasicReturn<Pagination<IEnumerable<User>>>(true, _myIdentity.GetUsersForAdminView(pagination));
+      }
+      catch (SqlException ex)
+      {
+        return new BasicReturn<Pagination<IEnumerable<User>>>(false, ex.Message, "SQL");
+      }
+      catch (System.Exception ex)
+      {
+        return new BasicReturn<Pagination<IEnumerable<User>>>(false, ex.Message, ex.StackTrace);
+      }
     }
   }
 }

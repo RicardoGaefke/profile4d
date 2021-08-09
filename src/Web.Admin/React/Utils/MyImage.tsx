@@ -6,12 +6,12 @@ interface IMyImage {
   src: string | string[],
   alt: string,
   customLoader?: React.ReactElement,
-  className?: {},
+  className?: string,
 }
 
 const MyImage = (props: IMyImage): React.ReactElement<IMyImage> => {
   const {
-    src, className = {}, customLoader = null, alt,
+    src, className = '', customLoader = null, alt,
   } = props;
   const mySrc: string[] = [];
 
