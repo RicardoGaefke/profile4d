@@ -51,6 +51,7 @@ namespace Profile4d.Web.Api
       services.AddSingleton<IEmail, Email>();
       services.AddSingleton<IEmailMI4D, EmailMI4D>();
       services.AddSingleton<MyIdentity>();
+      services.AddSingleton<IMyIdentity, MyIdentity>();
       services.AddSingleton<StaticContent>();
       services.AddSingleton<IImages, Images>();
       services.AddSingleton<Questions>();

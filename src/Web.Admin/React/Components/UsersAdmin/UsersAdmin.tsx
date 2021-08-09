@@ -4,14 +4,13 @@ import { IPagination, Pagination as PaginationClass } from '../../../../TypeScri
 import { IUser } from '../../../../TypeScript/Interfaces/IUser';
 import Loading from '../Loading/Loading';
 import getUsers from './getUsers';
-import { IBasicReturn, BasicReturn } from '../../../../TypeScript/Interfaces/IBasicReturn';
 
 const UsersAdmin = withTranslation()(
   (props: WithTranslation): JSX.Element => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { t } = props;
 
-    const initialPagination: IBasicReturn<IUser[]> = new BasicReturn(true);
+    const initialPagination: IPagination<IUser[]> = new PaginationClass(1, 50, 50);
 
     const [loading, setLoading] = useState<boolean>(true);
     const [users, setUsers] = useState<IPagination<IUser[]>>(new PaginationClass(1, 50, 50));
