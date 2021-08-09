@@ -6,6 +6,7 @@ const STORIES_PATH = path.join(__dirname, '../React');
 module.exports = ({config}) => {
   config.module.rules.push({
     test: /\.(t|j)sx?$/,
+    include: [SRC_PATH, STORIES_PATH],
     exclude: /node_modules/,
     use: ['ts-loader'],
   });
