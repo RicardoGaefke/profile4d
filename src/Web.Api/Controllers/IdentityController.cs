@@ -362,5 +362,90 @@ namespace Profile4d.Web.Api.Controllers
         return new BasicReturn<Pagination<IEnumerable<User>>>(false, ex.Message, ex.StackTrace);
       }
     }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("AdminUsersChangeActive/{userGuid}")]
+    public ActionResult<BasicReturn> AdminUsersChangeActive(string userGuid)
+    {
+      try
+      {
+        User user = new User()
+        {
+          Guid = userGuid,
+          CreatedBy = _user.Id,
+        };
+
+        _myIdentity.AdminUsersChangeActive(user);
+
+        return new BasicReturn(true);
+      }
+      catch (SqlException ex)
+      {
+        return new BasicReturn(false, ex.Message, "SQL");
+      }
+      catch (System.Exception ex)
+      {
+        return new BasicReturn(false, ex.Message, ex.StackTrace);
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("AdminUsersChangeAdmin/{userGuid}")]
+    public ActionResult<BasicReturn> AdminUsersChangeAdmin(string userGuid)
+    {
+      try
+      {
+        User user = new User()
+        {
+          Guid = userGuid,
+          CreatedBy = _user.Id,
+        };
+
+        _myIdentity.AdminUsersChangeAdmin(user);
+
+        return new BasicReturn(true);
+      }
+      catch (SqlException ex)
+      {
+        return new BasicReturn(false, ex.Message, "SQL");
+      }
+      catch (System.Exception ex)
+      {
+        return new BasicReturn(false, ex.Message, ex.StackTrace);
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("AdminUsersChangePassword/{userGuid}")]
+    public ActionResult<BasicReturn> AdminUsersChangePassword(string userGuid)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      User data = new User(0, userGuid);
+
+      try
+      {
+        User myUser = _myIdentity.ForgotPasswordByGuid(data);
+        EmailMessageModels.Content content = EmailMessageModels.ForgotPassword(myUser);
+        int messageId = _email.CreateEmail(myUser.Name, myUser.Email, myUser.Id, content);
+        _queue.SaveMessage("email", messageId.ToString());
+        _return.Success = true;
+      }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = ex.Number.ToString();
+        return _return;
+      }
+      catch (Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Details = ex.StackTrace;
+        return _return;
+      }
+      return _return;
+    }
   }
 }
