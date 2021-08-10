@@ -11,6 +11,8 @@ import CancelIcon from '@material-ui/icons/Cancel';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import MyThemeHoc from '../../../Initial/Theme/StoryBookHOC';
+import SelectLicenca from './SelectLicenca/SelectLicenca';
+
 
 const App = (): React.ReactElement => (
   <MyThemeHoc>
@@ -19,9 +21,11 @@ const App = (): React.ReactElement => (
         <TableCell>Nome</TableCell>
         <TableCell>email</TableCell>
         <TableCell>Status</TableCell>
+        <TableCell>Tipo de licenças</TableCell>
         <TableCell>Enviada</TableCell>
         <TableCell>Iniciada</TableCell>
         <TableCell>Bloqueada</TableCell>
+        <TableCell>Alterar</TableCell>
         <TableCell>&nbsp;</TableCell>
         <TableCell>&nbsp;</TableCell>
       </TableRow>
@@ -58,6 +62,11 @@ const App = (): React.ReactElement => (
         </TableCell>
         <TableCell>
           <Typography>
+            Licença Degustação
+          </Typography>
+        </TableCell>
+        <TableCell>
+          <Typography>
             5/21/2021
           </Typography>
         </TableCell>
@@ -74,6 +83,13 @@ const App = (): React.ReactElement => (
           >
             <Grid>
               <LockOpenIcon style={{ color: '#FFFFF', fontSize: 20, marginBottom: -4 }} />
+            </Grid>
+          </Button>
+        </TableCell>
+        <TableCell>
+          <Button>
+            <Grid>
+              <SelectLicenca Completed={0} Total={0} />
             </Grid>
           </Button>
         </TableCell>
