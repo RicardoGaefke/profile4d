@@ -13,7 +13,7 @@ export default (props: React.PropsWithChildren<React.ReactNode>): React.ReactEle
         container
         spacing={2}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         alignItems="flex-start"
       >
         {children}

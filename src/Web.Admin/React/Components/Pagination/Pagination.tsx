@@ -18,7 +18,6 @@ export interface PaginationProps extends WithTranslation {
 const Pagination = withTranslation()(
   (props: PaginationProps): JSX.Element => {
     const {
-      // eslint-disable-next-line no-unused-vars
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       t, Page, Last, onChange,
     } = props;
@@ -96,7 +95,11 @@ const Pagination = withTranslation()(
           />
         </Box>
         <Box>
-          <Typography>de 5</Typography>
+          <Typography>
+            de
+            &nbsp;
+            {Last}
+          </Typography>
         </Box>
         <Box>
           <Button

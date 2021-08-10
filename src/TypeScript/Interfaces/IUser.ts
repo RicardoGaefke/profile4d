@@ -1,7 +1,7 @@
 export interface IUser {
-  ID?: number;
-  GUID?: string;
-  NAME?: string;
+  Id?: number;
+  Guid?: string;
+  Name?: string;
   Active?: boolean;
   Admin?: boolean;
   Email?: string;
