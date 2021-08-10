@@ -120,6 +120,7 @@ const SelectLicenca = withTranslation()(
               <RadioGroup defaultValue="female" aria-label="gender" name="customized-radios">
                 <FormControlLabel value="Degustação" control={<StyledRadio />} label="Degustação" />
                 <FormControlLabel value="Pessoal" control={<StyledRadio />} label="Pessoal" />
+                <FormControlLabel value="Avançada" control={<StyledRadio />} label="Pessoal" />
                 <FormControlLabel value="Profissional" control={<StyledRadio />} label="Profissional" />
                 { /* <FormControlLabel
                   value="disabled"
