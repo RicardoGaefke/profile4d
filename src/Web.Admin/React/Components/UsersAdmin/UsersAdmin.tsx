@@ -4,6 +4,7 @@ import { IPagination, Pagination as PaginationClass } from '../../../../TypeScri
 import { IUser } from '../../../../TypeScript/Interfaces/IUser';
 import Loading from '../Loading/Loading';
 import getUsers from './getUsers';
+import UsersAdminPage from './UsersAdminPage';
 
 const UsersAdmin = withTranslation()(
   (props: WithTranslation): JSX.Element => {
@@ -30,14 +31,21 @@ const UsersAdmin = withTranslation()(
         });
     };
 
+    const updatePage = (newPage: string): void => {
+      const newPagination = new PaginationClass(parseInt(newPage, 10), users.PageSize);
+      getData(newPagination);
+    };
+
     useEffect((): void => {
       getData();
     }, []);
 
     return (loading) ? (<Loading />) : (
-      <>
-        {users.Page}
-      </>
+      <UsersAdminPage
+        users={users.Object as IUser[]}
+        updatePage={updatePage}
+        getData={getData}
+      />
     );
   },
 );

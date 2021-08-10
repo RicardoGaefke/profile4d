@@ -15,8 +15,11 @@ namespace Profile4d.Data
     void ChangeEmail(int UserID, string Email, string Password, string Url);
     void ChangePassword(int UserID, string NewPassword, string Password, string Url);
     User ForgotPassword(string email);
+    User ForgotPasswordByGuid(User data);
     void ForgotActivate(User data);
     int CreateUser(User data);
     Pagination<IEnumerable<User>> GetUsersForAdminView(Pagination pagination);
+    void AdminUsersChangeActive(User data);
+    void AdminUsersChangeAdmin(User data);
   }
 }
