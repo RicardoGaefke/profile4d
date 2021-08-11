@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Grid, Typography } from '@material-ui/core';
 import useStyles from './Styles';
 
-export default (): React.ReactElement => {
+const MainHome = (): JSX.Element => {
   const classes = useStyles({});
 
   return (
@@ -11,7 +11,7 @@ export default (): React.ReactElement => {
         container
         spacing={2}
         direction="row"
-        justify="center"
+        justifyContent="center"
         alignItems="center"
       >
         <Grid
@@ -34,3 +34,7 @@ export default (): React.ReactElement => {
     </Container>
   );
 };
+
+MainHome.displayName = 'MainHome';
+
+export default MainHome;

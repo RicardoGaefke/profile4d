@@ -26,7 +26,7 @@ export default withTranslation()(
       <Grid
         container
         spacing={2}
-        justify="center"
+        justifyContent="center"
         alignItems="center"
       >
         <Grid

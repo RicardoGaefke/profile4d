@@ -449,8 +449,8 @@ namespace Profile4d.Web.Api.Controllers
     }
 
     [Authorize(Roles = "Admin")]
-    [HttpGet("AdminUserGetInfoById/{userGuid}")]
-    public ActionResult<BasicReturn<User>> AdminUserGetInfoById(string userGuid)
+    [HttpGet("AdminUserGetInfoByGuid/{userGuid}")]
+    public ActionResult<BasicReturn<User>> AdminUserGetInfoByGuid(string userGuid)
     {
       try
       {

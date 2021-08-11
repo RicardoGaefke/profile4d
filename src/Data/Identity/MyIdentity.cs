@@ -399,7 +399,7 @@ namespace Profile4d.Data
         /* 00 */ new SqlParameter("@UserGuid", data.Guid),
       };
 
-      SqlDataReader reader = SqlHelper.ExecuteReader(_connStr.Value.SqlServer, "[spUsersListForAdmin]", sqlParameters);
+      SqlDataReader reader = SqlHelper.ExecuteReader(_connStr.Value.SqlServer, "[spUserGetInfoByGuid]", sqlParameters);
 
       reader.Read();
 
