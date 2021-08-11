@@ -109,6 +109,26 @@ namespace Profile4d.Web.Api.Controllers
     }
 
     [Authorize]
+    [HttpGet("GetActivesByUserGuid/{userGuid}")]
+    public ActionResult<BasicReturn<List<Key>>> GetActivesByUserGuid(string userGuid)
+    {
+      try
+      {
+        User user = new User(0, userGuid);
+
+        return new BasicReturn<List<Key>>(true, _sendKey.ActiveKeysByUserGuid(user));
+      }
+      catch (SqlException ex)
+      {
+        return new BasicReturn<List<Key>>(false, ex.Message, "SQL");
+      }
+      catch (Exception ex)
+      {
+        return new BasicReturn<List<Key>>(false, ex.Message, "Erro");
+      }
+    }
+
+    [Authorize]
     [HttpGet("Intro")]
     public ActionResult<Intro> Intro()
     {
