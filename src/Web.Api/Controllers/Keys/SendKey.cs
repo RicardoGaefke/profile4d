@@ -19,7 +19,7 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class SendKeyController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<SendKeyController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private string _user;
     private readonly ISendKey _sendKey;
@@ -29,7 +29,7 @@ namespace Profile4d.Web.Api.Controllers
     private readonly IDataReport _report;
 
     public SendKeyController(
-      ILogger<IdentityController> logger,
+      ILogger<SendKeyController> logger,
       IHttpContextAccessor httpContextAccessor,
       ISendKey keys,
       IEmail email,

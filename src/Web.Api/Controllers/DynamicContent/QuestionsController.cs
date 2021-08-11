@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class QuestionsController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<QuestionsController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly Questions _questions;
     private string _user;
 
     public QuestionsController(
-      ILogger<IdentityController> logger,
+      ILogger<QuestionsController> logger,
       IHttpContextAccessor httpContextAccessor,
       Questions MyQuestions
     )

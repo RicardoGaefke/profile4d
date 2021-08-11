@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class NeuroticCompulsionController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<NeuroticCompulsionController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly NeuroticCompulsion _questions;
     private string _user;
 
     public NeuroticCompulsionController(
-      ILogger<IdentityController> logger,
+      ILogger<NeuroticCompulsionController> logger,
       IHttpContextAccessor httpContextAccessor,
       NeuroticCompulsion MyNeuroticCompulsion
     )

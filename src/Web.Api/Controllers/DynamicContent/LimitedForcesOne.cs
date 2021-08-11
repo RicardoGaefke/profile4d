@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class LimitedForcesOneController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<LimitedForcesOneController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly LimitedForcesOne _questions;
     private string _user;
 
     public LimitedForcesOneController(
-      ILogger<IdentityController> logger,
+      ILogger<LimitedForcesOneController> logger,
       IHttpContextAccessor httpContextAccessor,
       LimitedForcesOne MyLimitedForcesOne
     )

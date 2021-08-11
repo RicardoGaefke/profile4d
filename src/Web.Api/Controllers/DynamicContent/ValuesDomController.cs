@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class ValuesDomController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<ValuesDomController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly ValuesDom _questions;
     private string _user;
 
     public ValuesDomController(
-      ILogger<IdentityController> logger,
+      ILogger<ValuesDomController> logger,
       IHttpContextAccessor httpContextAccessor,
       ValuesDom MyValuesDom
     )

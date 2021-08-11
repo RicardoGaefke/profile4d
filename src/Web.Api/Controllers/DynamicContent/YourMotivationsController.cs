@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class YourMotivationsController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<YourMotivationsController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly YourMotivation _questions;
     private string _user;
 
     public YourMotivationsController(
-      ILogger<IdentityController> logger,
+      ILogger<YourMotivationsController> logger,
       IHttpContextAccessor httpContextAccessor,
       YourMotivation MyYourMotivation
     )

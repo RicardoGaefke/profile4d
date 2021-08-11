@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class MentalAddictionController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<MentalAddictionController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly MentalAddiction _questions;
     private string _user;
 
     public MentalAddictionController(
-      ILogger<IdentityController> logger,
+      ILogger<MentalAddictionController> logger,
       IHttpContextAccessor httpContextAccessor,
       MentalAddiction MyMentalAddiction
     )

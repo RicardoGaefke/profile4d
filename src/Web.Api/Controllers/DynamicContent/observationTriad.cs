@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class observationTriadController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<observationTriadController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly observationTriad _questions;
     private string _user;
 
     public observationTriadController(
-      ILogger<IdentityController> logger,
+      ILogger<observationTriadController> logger,
       IHttpContextAccessor httpContextAccessor,
       observationTriad MyobservationTriad
     )

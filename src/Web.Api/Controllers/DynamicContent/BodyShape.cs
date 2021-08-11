@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class BodyShapeController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<BodyShapeController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly BodyShape _questions;
     private string _user;
 
     public BodyShapeController(
-      ILogger<IdentityController> logger,
+      ILogger<BodyShapeController> logger,
       IHttpContextAccessor httpContextAccessor,
       BodyShape MyBodyShape
     )

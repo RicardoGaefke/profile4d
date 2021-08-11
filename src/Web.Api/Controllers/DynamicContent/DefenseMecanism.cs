@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class DefenseMecanismController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<DefenseMecanismController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly DefenseMecanism _questions;
     private string _user;
 
     public DefenseMecanismController(
-      ILogger<IdentityController> logger,
+      ILogger<DefenseMecanismController> logger,
       IHttpContextAccessor httpContextAccessor,
       DefenseMecanism MyDefenseMecanism
     )

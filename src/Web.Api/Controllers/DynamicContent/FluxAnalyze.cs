@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class FluxAnalyzeController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<FluxAnalyzeController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly FluxAnalyze _questions;
     private string _user;
 
     public FluxAnalyzeController(
-      ILogger<IdentityController> logger,
+      ILogger<FluxAnalyzeController> logger,
       IHttpContextAccessor httpContextAccessor,
       FluxAnalyze MyFluxAnalyze
     )

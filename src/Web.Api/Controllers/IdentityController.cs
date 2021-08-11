@@ -447,5 +447,25 @@ namespace Profile4d.Web.Api.Controllers
       }
       return _return;
     }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("AdminUserGetInfoById/{userGuid}")]
+    public ActionResult<BasicReturn<User>> AdminUserGetInfoById(string userGuid)
+    {
+      try
+      {
+        User data = new User(0, userGuid);
+        
+        return new BasicReturn<User>(true, _myIdentity.AdminUserGetInfoByGuid(data));
+      }
+      catch (SqlException ex)
+      {
+        return new BasicReturn<User>(false, ex.Message, "SQL");
+      }
+      catch (Exception ex)
+      {
+        return new BasicReturn<User>(false, ex.Message, "Erro");
+      }
+    }
   }
 }

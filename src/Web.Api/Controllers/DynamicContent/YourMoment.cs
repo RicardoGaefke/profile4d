@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class YourMomentController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<YourMomentController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly YourMoment _questions;
     private string _user;
 
     public YourMomentController(
-      ILogger<IdentityController> logger,
+      ILogger<YourMomentController> logger,
       IHttpContextAccessor httpContextAccessor,
       YourMoment MyYourMoment
     )

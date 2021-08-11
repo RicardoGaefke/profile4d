@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class TriadHeHoController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<TriadHeHoController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly TriadHeHo _questions;
     private string _user;
 
     public TriadHeHoController(
-      ILogger<IdentityController> logger,
+      ILogger<TriadHeHoController> logger,
       IHttpContextAccessor httpContextAccessor,
       TriadHeHo MyTriadHeHo
     )

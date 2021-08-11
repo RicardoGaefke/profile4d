@@ -392,5 +392,26 @@ namespace Profile4d.Data
 
       SqlHelper.ExecuteNotQuery(_connStr.Value.SqlServer, "[dbo].[spAdminUsersChangeAdmin]", sqlParameters);
     }
+
+    public User AdminUserGetInfoByGuid(User data)
+    {
+      SqlParameter[] sqlParameters = new SqlParameter[]{
+        /* 00 */ new SqlParameter("@UserGuid", data.Guid),
+      };
+
+      SqlDataReader reader = SqlHelper.ExecuteReader(_connStr.Value.SqlServer, "[spUsersListForAdmin]", sqlParameters);
+
+      reader.Read();
+
+      User user = new User()
+      {
+        Name = reader.GetString(0),
+        Email = reader.GetString(1)
+      };
+
+      reader.Close();
+
+      return user;
+    }
   }
 }
