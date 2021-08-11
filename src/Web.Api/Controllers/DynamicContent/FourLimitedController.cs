@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class FourLimitedController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<FourLimitedController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly FourLimited _questions;
     private string _user;
 
     public FourLimitedController(
-      ILogger<IdentityController> logger,
+      ILogger<FourLimitedController> logger,
       IHttpContextAccessor httpContextAccessor,
       FourLimited MyFourLimited
     )

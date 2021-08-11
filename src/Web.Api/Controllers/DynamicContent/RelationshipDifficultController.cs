@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class RelationshipDifficultController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<RelationshipDifficultController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly RelationshipDifficult _questions;
     private string _user;
 
     public RelationshipDifficultController(
-      ILogger<IdentityController> logger,
+      ILogger<RelationshipDifficultController> logger,
       IHttpContextAccessor httpContextAccessor,
       RelationshipDifficult MyRelationshipDifficult
     )

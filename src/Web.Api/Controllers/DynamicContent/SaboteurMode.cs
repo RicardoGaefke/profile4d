@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class SaboteurModeController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<SaboteurModeController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly SaboteurMode _questions;
     private string _user;
 
     public SaboteurModeController(
-      ILogger<IdentityController> logger,
+      ILogger<SaboteurModeController> logger,
       IHttpContextAccessor httpContextAccessor,
       SaboteurMode MySaboteurMode
     )

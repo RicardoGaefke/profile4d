@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class FeaturesDominantController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<FeaturesDominantController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly FeaturesDominant _questions;
     private string _user;
 
     public FeaturesDominantController(
-      ILogger<IdentityController> logger,
+      ILogger<FeaturesDominantController> logger,
       IHttpContextAccessor httpContextAccessor,
       FeaturesDominant MyFeaturesDominant
     )

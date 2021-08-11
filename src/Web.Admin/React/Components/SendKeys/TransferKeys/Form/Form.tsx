@@ -43,7 +43,7 @@ export default (props: IMyForm): React.ReactElement<IMyForm> => {
       <Grid
         container
         spacing={2}
-        justify="flex-start"
+        justifyContent="flex-start"
         alignItems="center"
       >
         <Grid

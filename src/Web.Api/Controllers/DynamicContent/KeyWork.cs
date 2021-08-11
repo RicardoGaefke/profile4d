@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class KeyWorkController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<KeyWorkController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly KeyWork _questions;
     private string _user;
 
     public KeyWorkController(
-      ILogger<IdentityController> logger,
+      ILogger<KeyWorkController> logger,
       IHttpContextAccessor httpContextAccessor,
       KeyWork MyKeyWork
     )

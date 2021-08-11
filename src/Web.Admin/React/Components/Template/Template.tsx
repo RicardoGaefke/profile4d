@@ -4,7 +4,7 @@ import MyDrawer from '../Drawer/Drawer';
 import useStyles from './Styles';
 import RootRouter from '../../Router/Root';
 
-export default (): React.ReactElement => {
+const Template = (): JSX.Element => {
   const classes = useStyles({});
 
   return (
@@ -14,3 +14,7 @@ export default (): React.ReactElement => {
     </Container>
   );
 };
+
+Template.displayName = 'Template';
+
+export default Template;

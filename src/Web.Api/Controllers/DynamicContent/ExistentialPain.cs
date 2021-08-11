@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class ExistentialPainController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<ExistentialPainController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly ExistentialPain _questions;
     private string _user;
 
     public ExistentialPainController(
-      ILogger<IdentityController> logger,
+      ILogger<ExistentialPainController> logger,
       IHttpContextAccessor httpContextAccessor,
       ExistentialPain MyExistentialPain
     )

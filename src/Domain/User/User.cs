@@ -14,6 +14,8 @@ namespace Profile4d.Domain
     public string NewPassword { get; set; }
     public bool Active {get; set;}
     public bool Admin { get; set; }
+    public int Enviadas { get; set; }
+    public int Recebidas { get; set; }
     public bool KeepConnected { get; set; }
     public bool IsAuthenticated {get; set;}
     public string LastChanged {get; set;}

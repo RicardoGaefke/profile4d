@@ -21,5 +21,6 @@ namespace Profile4d.Data
     Pagination<IEnumerable<User>> GetUsersForAdminView(Pagination pagination);
     void AdminUsersChangeActive(User data);
     void AdminUsersChangeAdmin(User data);
+    User AdminUserGetInfoByGuid(User data);
   }
 }

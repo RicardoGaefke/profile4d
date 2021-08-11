@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class EssentialCharacterController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<EssentialCharacterController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly EssentialCharacter _questions;
     private string _user;
 
     public EssentialCharacterController(
-      ILogger<IdentityController> logger,
+      ILogger<EssentialCharacterController> logger,
       IHttpContextAccessor httpContextAccessor,
       EssentialCharacter MyEssentialCharacter
     )

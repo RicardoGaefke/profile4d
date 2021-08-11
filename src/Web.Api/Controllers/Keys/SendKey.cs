@@ -19,7 +19,7 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class SendKeyController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<SendKeyController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private string _user;
     private readonly ISendKey _sendKey;
@@ -29,7 +29,7 @@ namespace Profile4d.Web.Api.Controllers
     private readonly IDataReport _report;
 
     public SendKeyController(
-      ILogger<IdentityController> logger,
+      ILogger<SendKeyController> logger,
       IHttpContextAccessor httpContextAccessor,
       ISendKey keys,
       IEmail email,
@@ -106,6 +106,26 @@ namespace Profile4d.Web.Api.Controllers
     public ActionResult<List<Key>> GetActives()
     {
       return _sendKey.ActiveKeys(Convert.ToInt32(_user));
+    }
+
+    [Authorize]
+    [HttpGet("GetActivesByUserGuid/{userGuid}")]
+    public ActionResult<BasicReturn<List<Key>>> GetActivesByUserGuid(string userGuid)
+    {
+      try
+      {
+        User user = new User(0, userGuid);
+
+        return new BasicReturn<List<Key>>(true, _sendKey.ActiveKeysByUserGuid(user));
+      }
+      catch (SqlException ex)
+      {
+        return new BasicReturn<List<Key>>(false, ex.Message, "SQL");
+      }
+      catch (Exception ex)
+      {
+        return new BasicReturn<List<Key>>(false, ex.Message, "Erro");
+      }
     }
 
     [Authorize]

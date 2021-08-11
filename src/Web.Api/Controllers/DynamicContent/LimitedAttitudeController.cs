@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class LimitedAttitudeController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<LimitedAttitudeController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly LimitedAttitude _questions;
     private string _user;
 
     public LimitedAttitudeController(
-      ILogger<IdentityController> logger,
+      ILogger<LimitedAttitudeController> logger,
       IHttpContextAccessor httpContextAccessor,
       LimitedAttitude MyLimitedAttitude
     )

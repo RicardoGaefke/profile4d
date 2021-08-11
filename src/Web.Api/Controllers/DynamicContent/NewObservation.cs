@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class NewObservationController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<NewObservationController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly NewObservation _questions;
     private string _user;
 
     public NewObservationController(
-      ILogger<IdentityController> logger,
+      ILogger<NewObservationController> logger,
       IHttpContextAccessor httpContextAccessor,
       NewObservation MyNewObservation
     )
