@@ -1,10 +1,15 @@
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+
 module.exports = {
   module: {
     rules: [
       {
         test: /\.(t|j)sx?$/,
         exclude: /node_modules/,
-        use: ['ts-loader'],
+        loader: 'ts-loader',
+        options: {
+          transpileOnly: true
+        }
       },
       {
         test: /\.css$/,
@@ -18,4 +23,9 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
+  plugins: [new ForkTsCheckerWebpackPlugin({
+    eslint: {
+      files: './**/*.{ts,tsx}'
+    }
+  })]
 };

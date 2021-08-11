@@ -83,6 +83,8 @@ const UsersAdminPage = withTranslation()(
               <TableCell>email</TableCell>
               <TableCell>Admin</TableCell>
               <TableCell>Ativo</TableCell>
+              <TableCell>Recebidas</TableCell>
+              <TableCell>Enviadas</TableCell>
               <TableCell>&nbsp;</TableCell>
               <TableCell>&nbsp;</TableCell>
               <TableCell>&nbsp;</TableCell>
@@ -116,6 +118,16 @@ const UsersAdminPage = withTranslation()(
                   <TableCell>
                     <Typography>
                       {(user.Active) ? 'Sim' : 'Não'}
+                    </Typography>
+                  </TableCell>
+                  <TableCell>
+                    <Typography>
+                      {user.Recebidas || 0}
+                    </Typography>
+                  </TableCell>
+                  <TableCell>
+                    <Typography>
+                      {user.Enviadas || 0}
                     </Typography>
                   </TableCell>
                   <TableCell>

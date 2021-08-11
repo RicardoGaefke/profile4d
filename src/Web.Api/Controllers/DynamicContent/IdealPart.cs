@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class IdealPartController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<IdealPartController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly IdealPart _questions;
     private string _user;
 
     public IdealPartController(
-      ILogger<IdentityController> logger,
+      ILogger<IdealPartController> logger,
       IHttpContextAccessor httpContextAccessor,
       IdealPart MyIdealPart
     )

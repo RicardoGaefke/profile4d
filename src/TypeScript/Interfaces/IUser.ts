@@ -5,4 +5,6 @@ export interface IUser {
   Active?: boolean;
   Admin?: boolean;
   Email?: string;
+  Recebidas?: number;
+  Enviadas?: number;
 }

@@ -83,7 +83,7 @@ export default withTranslation()(
             ) : (
               <>
                 <Grid
-                  justify="flex-end"
+                  justifyContent="flex-end"
                   container
                 >
                   <Grid

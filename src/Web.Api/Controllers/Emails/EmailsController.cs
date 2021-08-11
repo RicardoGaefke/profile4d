@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class EmailsController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<EmailsController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly IEmailMI4D _emailMI4D;
     private readonly IEmail _email;
 
     public EmailsController(
-      ILogger<IdentityController> logger,
+      ILogger<EmailsController> logger,
       IHttpContextAccessor httpContextAccessor,
       IEmailMI4D emailMI4D,
       IEmail email

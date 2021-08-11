@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class LeaderDifferentController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<LeaderDifferentController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly LeaderDifferent _questions;
     private string _user;
 
     public LeaderDifferentController(
-      ILogger<IdentityController> logger,
+      ILogger<LeaderDifferentController> logger,
       IHttpContextAccessor httpContextAccessor,
       LeaderDifferent MyLeaderDifferent
     )

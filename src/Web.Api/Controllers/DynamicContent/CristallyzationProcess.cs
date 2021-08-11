@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class CristallyzationProcessController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<CristallyzationProcessController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly CristallyzationProcess _questions;
     private string _user;
 
     public CristallyzationProcessController(
-      ILogger<IdentityController> logger,
+      ILogger<CristallyzationProcessController> logger,
       IHttpContextAccessor httpContextAccessor,
       CristallyzationProcess MyCristallyzationProcess
     )

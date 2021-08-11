@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class DyObservationNineController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<DyObservationNineController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly DyObservationNine _questions;
     private string _user;
 
     public DyObservationNineController(
-      ILogger<IdentityController> logger,
+      ILogger<DyObservationNineController> logger,
       IHttpContextAccessor httpContextAccessor,
       DyObservationNine MyDyObservationNine
     )

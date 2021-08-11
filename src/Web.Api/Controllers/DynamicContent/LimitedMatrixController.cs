@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class LimitedMatrixController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<LimitedMatrixController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly LimitedMatrix _questions;
     private string _user;
 
     public LimitedMatrixController(
-      ILogger<IdentityController> logger,
+      ILogger<LimitedMatrixController> logger,
       IHttpContextAccessor httpContextAccessor,
       LimitedMatrix MyLimitedMatrix
     )

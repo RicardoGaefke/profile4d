@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class BehavioralResourcesController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<BehavioralResourcesController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly BehavioralResources _questions;
     private string _user;
 
     public BehavioralResourcesController(
-      ILogger<IdentityController> logger,
+      ILogger<BehavioralResourcesController> logger,
       IHttpContextAccessor httpContextAccessor,
       BehavioralResources MyBehavioralResources
     )

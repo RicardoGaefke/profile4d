@@ -9,6 +9,7 @@ import ImageFormRouter from '../Components/Images/Router/ImagesRouter';
 import DynamicRouter from '../Components/DynamicContent/Router/DynamicRouter';
 import SendKeyRouter from '../Components/SendKeys/Router/SendKeysRouter';
 import UsersAdmin from '../Components/UsersAdmin/UsersAdmin';
+import UserInfo from '../Components/UsersAdmin/UserInfo/UserInfo';
 
 export default (): React.ReactElement => (
   <Switch>
@@ -21,6 +22,7 @@ export default (): React.ReactElement => (
     <Route path="/about" component={MyAbout} />
     <Route path="/policy" component={MyPolicy} />
     <Route path="/usersAdmin" component={UsersAdmin} />
+    <Route path="/userInfo/:guid" component={UserInfo} />
     <Route path="/404" component={MyNotFound} />
     <Route component={MyNotFound} />
   </Switch>

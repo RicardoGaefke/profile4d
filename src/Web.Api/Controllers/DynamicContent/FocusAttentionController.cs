@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class FocusAttentionController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<FocusAttentionController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly FocusAttention _questions;
     private string _user;
 
     public FocusAttentionController(
-      ILogger<IdentityController> logger,
+      ILogger<FocusAttentionController> logger,
       IHttpContextAccessor httpContextAccessor,
       FocusAttention MyFocusAttention
     )

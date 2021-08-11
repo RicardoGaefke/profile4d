@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class ComunicateModeController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<ComunicateModeController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly ComunicateMode _questions;
     private string _user;
 
     public ComunicateModeController(
-      ILogger<IdentityController> logger,
+      ILogger<ComunicateModeController> logger,
       IHttpContextAccessor httpContextAccessor,
       ComunicateMode MyComunicateMode
     )

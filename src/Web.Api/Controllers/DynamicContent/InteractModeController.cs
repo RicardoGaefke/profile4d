@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class InteractModeController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<InteractModeController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly InteractMode _questions;
     private string _user;
 
     public InteractModeController(
-      ILogger<IdentityController> logger,
+      ILogger<InteractModeController> logger,
       IHttpContextAccessor httpContextAccessor,
       InteractMode MyInteractMode
     )

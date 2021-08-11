@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class TwelveForcesController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<TwelveForcesController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly TwelveForces _questions;
     private string _user;
 
     public TwelveForcesController(
-      ILogger<IdentityController> logger,
+      ILogger<TwelveForcesController> logger,
       IHttpContextAccessor httpContextAccessor,
       TwelveForces MyTwelveForces
     )
