@@ -358,7 +358,9 @@ namespace Profile4d.Data
           Name = reader.GetString(1),
           Active = reader.GetBoolean(2),
           Email = reader.GetString(3),
-          Admin = reader.GetBoolean(4)
+          Admin = reader.GetBoolean(4),
+          Recebidas = reader.GetInt32(5),
+          Enviadas = reader.GetInt32(6)
         };
 
         users.Add(user);
