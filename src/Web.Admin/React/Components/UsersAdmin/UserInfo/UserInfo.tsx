@@ -13,6 +13,8 @@ import LicencasRecebidas from './LicencasRecebidas';
 import { IKey } from '../../../../../TypeScript/Interfaces/IKey';
 import getUserLicencasRecebidas from './getUserLicencasRecebidas';
 import setLanguage from '../Language';
+import getUserLicencasEnviadas from './getUserLicencasEnviadas';
+import LicencasEnviadas from './LicencasEnviadas';
 
 const UserInfo = withTranslation()(
   (props: WithTranslation & WithSnackbarProps): JSX.Element => {
@@ -24,6 +26,7 @@ const UserInfo = withTranslation()(
 
     const [userInfo, setUserInfo] = useState<IUser>({});
     const [licencasRecebidas, setLicencasRecebidas] = useState<IKey[]>([]);
+    const [licencasEnviadas, setLicencasEnviadas] = useState<IKey[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
 
     const getData = async (): Promise<void> => {
@@ -58,9 +61,26 @@ const UserInfo = withTranslation()(
         });
     };
 
+    const getLicencasEnviadas = async (): Promise<void> => {
+      setLoading(true);
+      await getUserLicencasEnviadas(guid)
+        .then((data): void => {
+          if (data.Success) {
+            setLicencasEnviadas(data.Object as IKey[]);
+            setLoading(false);
+          }
+        })
+        .catch((): void => {
+          enqueueSnackbar('Desculpe, mas houve um erro ao buscar licenças enviadas!', {
+            variant: 'error',
+          });
+        });
+    };
+
     useEffect((): void => {
       getData();
       getLicencasRecebidas();
+      getLicencasEnviadas();
     }, []);
 
     return (loading) ? (<Loading />) : (
@@ -72,6 +92,7 @@ const UserInfo = withTranslation()(
         <Typography variant="h4" align="center" gutterBottom>
           Licenças enviadas
         </Typography>
+        <LicencasEnviadas licencas={licencasEnviadas} />
         <Typography variant="h4" align="center" gutterBottom>
           Licenças recebidas
         </Typography>
