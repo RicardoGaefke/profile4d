@@ -26,7 +26,8 @@ export default withTranslation()(
             <ListSubheader component="div" id="fixed-content-header">
               {t('DrawerAdminImage:title')}
             </ListSubheader>
-        )}
+        )
+}
         className={classes.root}
       >
         {
@@ -47,7 +48,6 @@ export default withTranslation()(
     );
   },
 );
-
 
 // export default withTranslation()(
 //   (props: WithTranslation): React.ReactElement<WithTranslation> => {

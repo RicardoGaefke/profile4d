@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import {
   // eslint-disable-next-line no-unused-vars
-  Chart, ChartConfiguration, BarController, CategoryScale, BarElement, ChartData, LinearScale,
+  Chart, ChartConfiguration, BarController, CategoryScale, BarElement, ChartData, LinearScale, Title, Legend, Tooltip,
 } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
@@ -17,7 +17,7 @@ const Chart12CanvasV2 = (props: Chart12CanvasProps): JSX.Element => {
 
   const classes = useStyles();
 
-  Chart.register(BarController, CategoryScale, BarElement, LinearScale);
+  Chart.register(BarController, CategoryScale, BarElement, LinearScale, Title, Legend, Tooltip);
 
   const amarelo = profiles.filter((item): boolean => item.Name === 'Perfil Mediador')[0];
 
@@ -58,45 +58,50 @@ const Chart12CanvasV2 = (props: Chart12CanvasProps): JSX.Element => {
   const refImage12 = useRef<HTMLImageElement>(null);
 
   const chartConfig = {
-    responsive: false,
-    scaleShowValues: true,
     type: 'bar',
     data,
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true,
-          autoSkip: false,
-          stepSize: 5,
-          max: 35,
-          includeBounds: true,
-          display: true,
-          showLabelBackdrop: true,
+    options: {
+      layout: {
+        padding: {
+          top: 45,
+          bottom: 45,
         },
-      }],
-      xAxes: [
-        {
+      },
+      plugins: {
+        title: {
+          display: false,
+          text: '12. Negociação / persuasão',
+          font: {
+            size: 33,
+            fontFamily: "'Roboto', sans-serif",
+          },
+          color: 'black',
+        },
+        legend: {
+          display: false,
+        },
+      },
+      scales: {
+        x: {
           ticks: {
-            maxRotation: 90,
-            minRotation: 80,
-            autoSkip: false,
-          },
-          gridLines: {
-            offsetGridLines: true,
+            font: {
+              size: 33,
+              fontFamily: "'Roboto', sans-serif",
+            },
           },
         },
-        {
-          position: 'top',
+        y: {
           ticks: {
-            maxRotation: 90,
-            minRotation: 80,
-            autoSkip: false,
-          },
-          gridLines: {
-            offsetGridLines: true,
+            startAtZero: true,
+            stepSize: 5,
+            font: {
+              size: 33,
+              fontFamily: "'Roboto', sans-serif",
+            },
+            color: 'black',
           },
         },
-      ],
+      },
     },
   } as ChartConfiguration<'bar', number[], string>;
 

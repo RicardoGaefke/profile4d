@@ -6,7 +6,7 @@ import { withConsole } from '@storybook/addon-console';
 // eslint-disable-next-line no-unused-vars
 import { action, HandlerFunction } from '@storybook/addon-actions';
 import MyThemeHoc from '../../Initial/Theme/StoryBookHOC';
-import Chart3 from './Chart3Canvas';
+import Chart3 from './Chart3CanvasV2';
 import fakeData from './fakeData';
 import useStyles from './Styles';
 // eslint-disable-next-line no-unused-vars
@@ -41,7 +41,7 @@ const App = (): React.ReactElement => {
   );
 };
 
-storiesOf('Chart3', module)
+storiesOf('Chart03', module)
   .addDecorator((story: any): React.ReactElement => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))

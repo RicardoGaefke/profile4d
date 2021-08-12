@@ -13,7 +13,7 @@ describe('Web.Identity -> AppBar.Button', (): void => {
   describe('Smoke Tests', (): void => {
     it('Should exist Button', (): void => {
       const wrapper = shallow(<Button />);
-      // eslint-disable-next-line no-unused-expressions
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       expect(wrapper).to.exist;
     });
   });

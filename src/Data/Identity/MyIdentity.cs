@@ -251,6 +251,40 @@ namespace Profile4d.Data
       return _return;
     }
 
+    public User ForgotPasswordByGuid(User data)
+    {
+      User _return = new User();
+      string pwd = User.CreatePassword();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[sp_FORGOT_PASSWORD_BY_GUID]";
+
+          Cmd.Parameters.AddWithValue("@UserGuid", data.Guid);
+          Cmd.Parameters.AddWithValue("@PASSWORD", pwd);
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            MyDR.Read();
+
+            _return.Id = MyDR.GetInt32(0);
+            _return.Guid = MyDR.GetGuid(1).ToString();
+            _return.Name = MyDR.GetString(2);
+            _return.Email = MyDR.GetString(3);
+            _return.Password = pwd;
+          }
+        }
+      }
+
+      return _return;
+    }
+
     public void ForgotActivate(User data)
     {
       using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
@@ -297,6 +331,87 @@ namespace Profile4d.Data
           }
         }
       }
+    }
+
+    public Pagination<IEnumerable<User>> GetUsersForAdminView(Pagination pagination)
+    {
+      SqlParameter[] sqlParameters = new SqlParameter[]{
+        /* 00 */ new SqlParameter("@Page", pagination.Page),
+        /* 01 */ new SqlParameter("@PageSize", pagination.PageSize),
+      };
+
+      SqlDataReader reader = SqlHelper.ExecuteReader(_connStr.Value.SqlServer, "[spUsersListForAdmin]", sqlParameters);
+
+      reader.Read();
+
+      Pagination<IEnumerable<User>> _return = new Pagination<IEnumerable<User>>(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2));
+
+      reader.NextResult();
+
+      List<User> users = new List<User>();
+
+      while (reader.Read())
+      {
+        User user = new User()
+        {
+          Guid = reader.GetGuid(0).ToString(),
+          Name = reader.GetString(1),
+          Active = reader.GetBoolean(2),
+          Email = reader.GetString(3),
+          Admin = reader.GetBoolean(4),
+          Recebidas = reader.GetInt32(5),
+          Enviadas = reader.GetInt32(6)
+        };
+
+        users.Add(user);
+      }
+
+      _return.Object = users;
+
+      reader.Close();
+
+      return _return;
+    }
+
+    public void AdminUsersChangeActive(User data)
+    {
+      SqlParameter[] sqlParameters = new SqlParameter[]{
+        /* 00 */ new SqlParameter("@UserGuid", data.Guid),
+        /* 01 */ new SqlParameter("@CreatedBy", data.CreatedBy),
+      };
+
+      SqlHelper.ExecuteNotQuery(_connStr.Value.SqlServer, "[dbo].[spAdminUsersChangeActive]", sqlParameters);
+    }
+
+    public void AdminUsersChangeAdmin(User data)
+    {
+      SqlParameter[] sqlParameters = new SqlParameter[]{
+        /* 00 */ new SqlParameter("@UserGuid", data.Guid),
+        /* 01 */ new SqlParameter("@CreatedBy", data.CreatedBy),
+      };
+
+      SqlHelper.ExecuteNotQuery(_connStr.Value.SqlServer, "[dbo].[spAdminUsersChangeAdmin]", sqlParameters);
+    }
+
+    public User AdminUserGetInfoByGuid(User data)
+    {
+      SqlParameter[] sqlParameters = new SqlParameter[]{
+        /* 00 */ new SqlParameter("@UserGuid", data.Guid),
+      };
+
+      SqlDataReader reader = SqlHelper.ExecuteReader(_connStr.Value.SqlServer, "[spUserGetInfoByGuid]", sqlParameters);
+
+      reader.Read();
+
+      User user = new User()
+      {
+        Name = reader.GetString(0),
+        Email = reader.GetString(1)
+      };
+
+      reader.Close();
+
+      return user;
     }
   }
 }

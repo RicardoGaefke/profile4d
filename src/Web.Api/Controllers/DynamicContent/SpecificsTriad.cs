@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class SpecificsTriadController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<SpecificsTriadController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly SpecificsTriad _questions;
     private string _user;
 
     public SpecificsTriadController(
-      ILogger<IdentityController> logger,
+      ILogger<SpecificsTriadController> logger,
       IHttpContextAccessor httpContextAccessor,
       SpecificsTriad MySpecificsTriad
     )

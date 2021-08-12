@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import {
   // eslint-disable-next-line no-unused-vars
-  Chart, ChartConfiguration, BarController, CategoryScale, BarElement, ChartData, LinearScale,
+  Chart, ChartConfiguration, BarController, CategoryScale, BarElement, ChartData, LinearScale, Title, Legend, Tooltip,
 } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
@@ -17,7 +17,7 @@ const Chart17CanvasV2 = (props: Chart17CanvasProps): JSX.Element => {
 
   const classes = useStyles();
 
-  Chart.register(BarController, CategoryScale, BarElement, LinearScale);
+  Chart.register(BarController, CategoryScale, BarElement, LinearScale, Title, Legend, Tooltip);
 
   const prestativo = profiles.filter((item): boolean => item.Name === 'Perfil Prestativo')[0];
   const visionario = profiles.filter((item): boolean => item.Name === 'Perfil Visionário')[0];
@@ -53,7 +53,7 @@ const Chart17CanvasV2 = (props: Chart17CanvasProps): JSX.Element => {
     ],
     datasets: [
       {
-        label: 'Energia por área de atuação',
+        label: '',
         data: [
           vermelho.toFixed(2),
           amarelo.toFixed(2),
@@ -77,43 +77,50 @@ const Chart17CanvasV2 = (props: Chart17CanvasProps): JSX.Element => {
   const refImage17 = useRef<HTMLImageElement>(null);
 
   const chartConfig = {
-    responsive: false,
-    scaleShowValues: true,
     type: 'bar',
     data,
     options: {
+      layout: {
+        padding: {
+          top: 50,
+          bottom: 50,
+        },
+      },
+      plugins: {
+        title: {
+          display: false,
+          text: '17. Energia por área de atuação',
+          font: {
+            size: 28,
+            fontFamily: "'Roboto', sans-serif",
+          },
+          color: 'black',
+        },
+        legend: {
+          display: false,
+        },
+      },
       indexAxis: 'y',
       scales: {
+        x: {
+          ticks: {
+            font: {
+              size: 28,
+              fontFamily: "'Roboto', sans-serif",
+            },
+            color: 'black',
+          },
+        },
         y: {
           ticks: {
-            min: 0,
-            max: 100,
-            stacked: true,
+            startAtZero: true,
+            stepSize: 5,
+            font: {
+              size: 28,
+              fontFamily: "'Roboto', sans-serif",
+            },
+            color: 'black',
           },
-          yAxes: [
-            {
-              ticks: {
-                beginAtZero: true,
-                maxRotation: 90,
-                minRotation: 80,
-                autoSkip: false,
-              },
-              gridLines: {
-                offsetGridLines: true,
-              },
-            },
-            {
-              position: 'top',
-              ticks: {
-                maxRotation: 90,
-                minRotation: 80,
-                autoSkip: false,
-              },
-              gridLines: {
-                offsetGridLines: true,
-              },
-            },
-          ],
         },
       },
     },

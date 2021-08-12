@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class BenefitsContactController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<BenefitsContactController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly BenefitsContact _questions;
     private string _user;
 
     public BenefitsContactController(
-      ILogger<IdentityController> logger,
+      ILogger<BenefitsContactController> logger,
       IHttpContextAccessor httpContextAccessor,
       BenefitsContact MyBenefitsContact
     )

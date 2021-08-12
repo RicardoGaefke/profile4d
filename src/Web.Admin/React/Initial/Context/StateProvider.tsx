@@ -24,9 +24,10 @@ export const StateProvider = (props: IStateProvider): React.ReactElement => {
 
 export const useStateValue = (): IInitialContext | any => useContext(StateContext);
 
-export const withContext = (Component): any => (props: React.Props<any>): React.ReactElement => (
+export const withContext = (Component: any): any => (props: React.Props<any>): React.ReactElement => (
   <StateContext.Consumer>
     {(context): React.ReactElement => (
+      // eslint-disable-next-line react/jsx-props-no-spreading
       <Component {...props} context={context} />
     )}
   </StateContext.Consumer>

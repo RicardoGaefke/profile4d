@@ -6,12 +6,12 @@ interface IMyImage {
   src: string | string[],
   alt: string,
   customLoader?: React.ReactElement,
-  className?: {},
+  className?: string,
 }
 
-export default (props: IMyImage): React.ReactElement<IMyImage> => {
+const MyImage = (props: IMyImage): React.ReactElement<IMyImage> => {
   const {
-    src, className, customLoader, alt,
+    src, className = '', customLoader = null, alt,
   } = props;
   const mySrc: string[] = [];
 
@@ -32,3 +32,7 @@ export default (props: IMyImage): React.ReactElement<IMyImage> => {
     />
   );
 };
+
+MyImage.displayName = 'MyImage';
+
+export default MyImage;

@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class ConflictsIdentifiedController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<ConflictsIdentifiedController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly ConflictsIdentified _questions;
     private string _user;
 
     public ConflictsIdentifiedController(
-      ILogger<IdentityController> logger,
+      ILogger<ConflictsIdentifiedController> logger,
       IHttpContextAccessor httpContextAccessor,
       ConflictsIdentified MyConflictsIdentified
     )

@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
@@ -20,7 +21,7 @@ namespace Profile4d.Web.Api.Controllers
   public class IdentityController : ControllerBase
     {
     private readonly ILogger<IdentityController> _logger;
-    private readonly MyIdentity _myIdentity;
+    private readonly IMyIdentity _myIdentity;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly IEmail _email;
     private readonly User _user;
@@ -28,7 +29,7 @@ namespace Profile4d.Web.Api.Controllers
 
     public IdentityController(
       ILogger<IdentityController> logger,
-      MyIdentity myIdentity,
+      IMyIdentity myIdentity,
       IHttpContextAccessor httpContextAccessor,
       IEmail emailService,
       IQueue queue
@@ -341,6 +342,130 @@ namespace Profile4d.Web.Api.Controllers
       }
 
       return _return;
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("UsersForAdminView/{page}/{pageSize}")]
+    public ActionResult<BasicReturn<Pagination<IEnumerable<User>>>> UsersForAdminView(int page = 1, int pageSize = 50)
+    {
+      try
+      {
+        Pagination pagination = new Pagination(page, pageSize);
+        return new BasicReturn<Pagination<IEnumerable<User>>>(true, _myIdentity.GetUsersForAdminView(pagination));
+      }
+      catch (SqlException ex)
+      {
+        return new BasicReturn<Pagination<IEnumerable<User>>>(false, ex.Message, "SQL");
+      }
+      catch (System.Exception ex)
+      {
+        return new BasicReturn<Pagination<IEnumerable<User>>>(false, ex.Message, ex.StackTrace);
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("AdminUsersChangeActive/{userGuid}")]
+    public ActionResult<BasicReturn> AdminUsersChangeActive(string userGuid)
+    {
+      try
+      {
+        User user = new User()
+        {
+          Guid = userGuid,
+          CreatedBy = _user.Id,
+        };
+
+        _myIdentity.AdminUsersChangeActive(user);
+
+        return new BasicReturn(true);
+      }
+      catch (SqlException ex)
+      {
+        return new BasicReturn(false, ex.Message, "SQL");
+      }
+      catch (System.Exception ex)
+      {
+        return new BasicReturn(false, ex.Message, ex.StackTrace);
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("AdminUsersChangeAdmin/{userGuid}")]
+    public ActionResult<BasicReturn> AdminUsersChangeAdmin(string userGuid)
+    {
+      try
+      {
+        User user = new User()
+        {
+          Guid = userGuid,
+          CreatedBy = _user.Id,
+        };
+
+        _myIdentity.AdminUsersChangeAdmin(user);
+
+        return new BasicReturn(true);
+      }
+      catch (SqlException ex)
+      {
+        return new BasicReturn(false, ex.Message, "SQL");
+      }
+      catch (System.Exception ex)
+      {
+        return new BasicReturn(false, ex.Message, ex.StackTrace);
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("AdminUsersChangePassword/{userGuid}")]
+    public ActionResult<BasicReturn> AdminUsersChangePassword(string userGuid)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      User data = new User(0, userGuid);
+
+      try
+      {
+        User myUser = _myIdentity.ForgotPasswordByGuid(data);
+        EmailMessageModels.Content content = EmailMessageModels.ForgotPassword(myUser);
+        int messageId = _email.CreateEmail(myUser.Name, myUser.Email, myUser.Id, content);
+        _queue.SaveMessage("email", messageId.ToString());
+        _return.Success = true;
+      }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Code = ex.Number.ToString();
+        return _return;
+      }
+      catch (Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Details = ex.StackTrace;
+        return _return;
+      }
+      return _return;
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("AdminUserGetInfoByGuid/{userGuid}")]
+    public ActionResult<BasicReturn<User>> AdminUserGetInfoByGuid(string userGuid)
+    {
+      try
+      {
+        User data = new User(0, userGuid);
+        
+        return new BasicReturn<User>(true, _myIdentity.AdminUserGetInfoByGuid(data));
+      }
+      catch (SqlException ex)
+      {
+        return new BasicReturn<User>(false, ex.Message, "SQL");
+      }
+      catch (Exception ex)
+      {
+        return new BasicReturn<User>(false, ex.Message, "Erro");
+      }
     }
   }
 }

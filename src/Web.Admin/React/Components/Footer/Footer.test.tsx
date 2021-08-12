@@ -13,7 +13,7 @@ describe('Web.Identity -> Footer', (): void => {
   describe('Smoke Tests', (): void => {
     it('Should exist Footer', (): void => {
       const wrapper = shallow(<MyFooter />);
-      // eslint-disable-next-line no-unused-expressions
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       expect(wrapper).to.exist;
     });
   });

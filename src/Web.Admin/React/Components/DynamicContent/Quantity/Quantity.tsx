@@ -28,7 +28,7 @@ export default withTranslation()(
           </Typography>
           <LinearProgress
             variant="determinate"
-            value={(total >= minimum) ? minimum : (total * 100 / minimum)}
+            value={(total >= minimum) ? minimum : ((total * 100) / minimum)}
             valueBuffer={minimum}
             color={(total >= minimum) ? 'primary' : 'secondary'}
             className={classes.progress}

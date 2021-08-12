@@ -8,6 +8,7 @@ export default (props: IAlert): React.ReactElement<IAlert> => {
 
   return (
     <Alert
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
     >
       <AlertTitle>{title}</AlertTitle>

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import {
   // eslint-disable-next-line no-unused-vars
-  Chart, ChartConfiguration, BarController, CategoryScale, BarElement, ChartData, LinearScale,
+  Chart, ChartConfiguration, BarController, CategoryScale, BarElement, ChartData, LinearScale, Title, Legend, Tooltip,
 } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
@@ -16,7 +16,7 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
   const { profiles, printing } = props;
   const classes = useStyles();
 
-  Chart.register(BarController, CategoryScale, BarElement, LinearScale);
+  Chart.register(BarController, CategoryScale, BarElement, LinearScale, Title, Legend, Tooltip);
 
   const refChart = useRef<HTMLCanvasElement>(null);
   const refImage = useRef<HTMLImageElement | null>(null);
@@ -34,18 +34,17 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
   const data = {
     labels: [
       `Comandante - ${((comandante / 165) * 100).toFixed(2)}%`,
-      `Mediador - ${((comandante / 165) * 100).toFixed(2)}%`,
+      `Mediador - ${((mediador / 165) * 100).toFixed(2)}%`,
       `Organizador - ${((organizador / 165) * 100).toFixed(2)}%`,
       `Prestativo - ${((prestativo / 165) * 100).toFixed(2)}%`,
       `Realizador - ${((realizador / 165) * 100).toFixed(2)}%`,
-      `Criativo - ${((criativo / 165) * 100).toFixed(2)}`,
+      `Criativo - ${((criativo / 165) * 100).toFixed(2)}%`,
       `Analítico - ${((analitico / 165) * 100).toFixed(2)}%`,
       `Planejador - ${((planejador / 165) * 100).toFixed(2)}%`,
       `Visionário - ${((visionario / 165) * 100).toFixed(2)}%`,
     ],
     datasets: [
       {
-        label: '2. Perfis comportamentais e suas respectivas energias',
         data: [
           ((comandante / 165) * 100),
           ((mediador / 165) * 100),
@@ -85,34 +84,46 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
   } as ChartData<'bar', number[], string>;
 
   const chartConfig = {
-    responsive: false,
-    scaleShowValues: true,
     type: 'bar',
     data,
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true,
-          autoSkip: false,
-          stepSize: 5,
-          max: 35,
-          includeBounds: true,
-          display: true,
-          showLabelBackdrop: true,
+    options: {
+      plugins: {
+        title: {
+          display: false,
+          text: '2. Perfis comportamentais e suas respectivas energias',
+          color: 'black',
+          font: {
+            size: 20,
+            fontFamily: "'Roboto', sans-serif",
+          },
         },
-      }],
-      xAxes: [
-        {
+        legend: {
+          display: false,
+        },
+      },
+      scales: {
+        x: {
           ticks: {
             maxRotation: 90,
-            minRotation: 80,
-            autoSkip: false,
-          },
-          gridLines: {
-            offsetGridLines: true,
+            minRotation: 45,
+            font: {
+              size: 28,
+              fontFamily: "'Roboto', sans-serif",
+            },
+            color: 'black',
           },
         },
-      ],
+        y: {
+          ticks: {
+            startAtZero: true,
+            stepSize: 5,
+            font: {
+              size: 30,
+            },
+            color: 'black',
+          },
+        },
+      },
     },
   } as ChartConfiguration<'bar', number[], string>;
 

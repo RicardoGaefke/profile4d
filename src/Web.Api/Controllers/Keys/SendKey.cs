@@ -320,5 +320,45 @@ namespace Profile4d.Web.Api.Controllers
         return _return;
       }
     }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("GetActivesByUserGuid/{userGuid}")]
+    public ActionResult<BasicReturn<List<Key>>> GetActivesByUserGuid(string userGuid)
+    {
+      try
+      {
+        User user = new User(0, userGuid);
+
+        return new BasicReturn<List<Key>>(true, _sendKey.ActiveKeysByUserGuid(user));
+      }
+      catch (SqlException ex)
+      {
+        return new BasicReturn<List<Key>>(false, ex.Message, "SQL");
+      }
+      catch (Exception ex)
+      {
+        return new BasicReturn<List<Key>>(false, ex.Message, "Erro");
+      }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("GetActivesByConsultantGuid/{userGuid}")]
+    public ActionResult<BasicReturn<List<Key>>> GetActivesByConsultantGuid(string userGuid)
+    {
+      try
+      {
+        User user = new User(0, userGuid);
+
+        return new BasicReturn<List<Key>>(true, _sendKey.ActiveKeysByConsultantGuid(user));
+      }
+      catch (SqlException ex)
+      {
+        return new BasicReturn<List<Key>>(false, ex.Message, "SQL");
+      }
+      catch (Exception ex)
+      {
+        return new BasicReturn<List<Key>>(false, ex.Message, "Erro");
+      }
+    }
   }
 }

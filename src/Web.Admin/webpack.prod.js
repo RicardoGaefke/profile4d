@@ -3,11 +3,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = () => {
   const clientBundle = merge(common, {
     mode: 'production',
-    devtool: '#source-map',
+    devtool: 'source-map',
     entry: {
       app: path.resolve(__dirname, './React/index.tsx'),
     },
@@ -23,13 +24,14 @@ module.exports = () => {
         template: './Views/Home/Template.cshtml',
         excludeChunks: ['app'],
       }),
+      new ESLintPlugin({ fix: true, failOnError: false }),
     ],
   });
 
   const serverBundle = merge(common, {
     mode: 'production',
     target: 'node',
-    devtool: '#source-map',
+    devtool: 'source-map',
     devServer: {
       contentBase: './wwwwroot/dist',
     },

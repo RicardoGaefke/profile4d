@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import {
   // eslint-disable-next-line no-unused-vars
-  Chart, ChartConfiguration, BarController, CategoryScale, BarElement, ChartData, LinearScale,
+  Chart, ChartConfiguration, BarController, CategoryScale, BarElement, ChartData, LinearScale, Title, Legend, Tooltip,
 } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
@@ -16,7 +16,7 @@ const Chart14CanvasV2 = (props: Chart14CanvasProps): JSX.Element => {
   const { profiles, printing } = props;
   const classes = useStyles();
 
-  Chart.register(BarController, CategoryScale, BarElement, LinearScale);
+  Chart.register(BarController, CategoryScale, BarElement, LinearScale, Title, Legend, Tooltip);
 
   const amarelo = profiles.filter((item): boolean => item.Name === 'Perfil Comandante')[0];
 
@@ -57,45 +57,50 @@ const Chart14CanvasV2 = (props: Chart14CanvasProps): JSX.Element => {
   const refImage14 = useRef<HTMLImageElement>(null);
 
   const chartConfig = {
-    responsive: false,
-    scaleShowValues: true,
     type: 'bar',
     data,
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true,
-          autoSkip: false,
-          stepSize: 5,
-          max: 35,
-          includeBounds: true,
-          display: true,
-          showLabelBackdrop: true,
+    options: {
+      layout: {
+        padding: {
+          top: 45,
+          bottom: 45,
         },
-      }],
-      xAxes: [
-        {
+      },
+      plugins: {
+        title: {
+          display: false,
+          text: '14. Orientação para resultados',
+          font: {
+            size: 33,
+            fontFamily: "'Roboto', sans-serif",
+          },
+          color: 'black',
+        },
+        legend: {
+          display: false,
+        },
+      },
+      scales: {
+        x: {
           ticks: {
-            maxRotation: 90,
-            minRotation: 80,
-            autoSkip: false,
-          },
-          gridLines: {
-            offsetGridLines: true,
+            font: {
+              size: 33,
+              fontFamily: "'Roboto', sans-serif",
+            },
+            color: 'black',
           },
         },
-        {
-          position: 'top',
+        y: {
           ticks: {
-            maxRotation: 90,
-            minRotation: 80,
-            autoSkip: false,
-          },
-          gridLines: {
-            offsetGridLines: true,
+            startAtZero: true,
+            stepSize: 5,
+            font: {
+              size: 33,
+            },
+            color: 'black',
           },
         },
-      ],
+      },
     },
   } as ChartConfiguration<'bar', number[], string>;
 

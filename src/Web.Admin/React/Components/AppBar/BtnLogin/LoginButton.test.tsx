@@ -23,7 +23,7 @@ describe('Web.Identity -> AppBar.LoginButton', (): void => {
   describe('Smoke Tests', (): void => {
     it('Should exist LoginButton', (): void => {
       const wrapper = shallow(<App />);
-      // eslint-disable-next-line no-unused-expressions
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       expect(wrapper).to.exist;
     });
   });

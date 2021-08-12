@@ -10,6 +10,8 @@ interface IStyles {
   pdfContainer: {},
   brakePage: {},
   itemBrakePage: {},
+  footerTitle: {},
+  footerTitlePrint: {},
   chart: {},
   chartFull: {},
   chartSmall: {},
@@ -77,9 +79,31 @@ export default makeStyles((theme: Theme): IStyles => ({
       'page-break-before': 'always',
     },
   },
+  footerTitle: {
+    display: 'none',
+    paddingBottom: 15,
+    font: '13pt Roboto, Calibri, Georgia, "Times New Roman", Times, serif',
+    lineHeight: 1.0,
+    '@media print': {
+      display: 'none',
+    },
+  },
+  footerTitlePrint: {
+    paddingBottom: 15,
+    paddingLeft: 30,
+    font: '13pt Roboto, Calibri, Georgia, "Times New Roman", Times, serif',
+    lineHeight: 1.0,
+    '@media print': {
+      display: 'fixed',
+      font: '9pt Roboto, Calibri, Georgia, "Times New Roman", Times, serif',
+      paddingBottom: 25,
+      paddingTop: 25,
+      paddingLeft: 0,
+    },
+  },
   chart: {
     '@media print': {
-      margin: '0 20% 0 20%',
+      margin: '0 15% 0 15%',
     },
   },
   chartFull: {
@@ -88,11 +112,14 @@ export default makeStyles((theme: Theme): IStyles => ({
     },
   },
   chartSmall: {
-    width: '60%',
+    width: '50%',
     marginLeft: 'auto',
     marginRight: 'auto',
     '@media print': {
+      width: '100%',
       margin: '0 30% 0 30%',
+      marginLeft: 'auto',
+      marginRight: 'auto',
     },
   },
   chartImage: {

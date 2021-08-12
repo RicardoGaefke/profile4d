@@ -8,7 +8,7 @@ import Button from '../Button/Button';
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
-    // eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { t } = props;
     const [{ Config, IsAuthenticated }, dispatch] = useStateValue();
     setLanguage();

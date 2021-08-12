@@ -20,7 +20,7 @@ export default withTranslation()(
         container
         spacing={2}
         direction="row"
-        justify="center"
+        justifyContent="center"
         alignItems="center"
       >
         <Grid item>

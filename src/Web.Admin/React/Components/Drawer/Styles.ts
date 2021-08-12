@@ -4,6 +4,7 @@ import { makeStyles, Theme } from '@material-ui/core/styles';
 interface IStyles {
   root: {},
   divider: {},
+  navlink: {},
 }
 
 export default makeStyles((theme: Theme): IStyles => ({
@@ -14,5 +15,11 @@ export default makeStyles((theme: Theme): IStyles => ({
   },
   divider: {
     marginBottom: theme.spacing(1),
+  },
+  navlink: {
+    '&.active': {
+      backgroundColor: 'lightgray',
+      color: 'black',
+    },
   },
 }));

@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize(Roles = "Admin")]
   public class StaticContentController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<StaticContentController> _logger;
     private readonly StaticContent _myContent;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private string _user;
 
     public StaticContentController(
-      ILogger<IdentityController> logger,
+      ILogger<StaticContentController> logger,
       IHttpContextAccessor httpContextAccessor,
       StaticContent MyStaticContent
     )

@@ -14,6 +14,7 @@ import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 // eslint-disable-next-line no-unused-vars
 import { IKey } from '../../../../../TypeScript/Interfaces/IKey';
+import SelectLicenca from './SelectLicenca/SelectLicenca';
 
 export interface ListaDeLicencasProps extends WithTranslation {
   keys: IKey[];
@@ -33,9 +34,11 @@ const ListaDeLicencas = withTranslation()(
               <TableCell>Nome</TableCell>
               <TableCell>email</TableCell>
               <TableCell>Status</TableCell>
+              <TableCell>Tipo de licenças</TableCell>
               <TableCell>Enviada</TableCell>
               <TableCell>Iniciada</TableCell>
               <TableCell>Bloqueada</TableCell>
+              <TableCell>Alterar</TableCell>
               <TableCell>&nbsp;</TableCell>
               <TableCell>&nbsp;</TableCell>
             </TableRow>
@@ -90,7 +93,9 @@ const ListaDeLicencas = withTranslation()(
                         <Button
                           variant="contained"
                           color="primary"
-                          title="resultado"
+                          title="Abrir resultado"
+                          component={NavLink}
+                          to={`/answer/report/${key.Guid}`}
                           style={{ backgroundColor: '#009900', fontWeight: 'bold' }}
                         >
                           Resultado
@@ -115,6 +120,11 @@ const ListaDeLicencas = withTranslation()(
                       </Grid>
                     )
                     }
+                  </TableCell>
+                  <TableCell>
+                    <Typography>
+                      Licença Degustação
+                    </Typography>
                   </TableCell>
                   <TableCell>
                     <Typography>
@@ -150,6 +160,13 @@ const ListaDeLicencas = withTranslation()(
                         </Grid>
                       </Button>
                     )}
+                  </TableCell>
+                  <TableCell>
+                    <Button>
+                      <Grid>
+                        <SelectLicenca Completed={0} Total={0} />
+                      </Grid>
+                    </Button>
                   </TableCell>
                   <TableCell>
                     {

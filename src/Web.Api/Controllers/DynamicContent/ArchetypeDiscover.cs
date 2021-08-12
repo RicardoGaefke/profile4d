@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class ArchetypeDiscoverController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<ArchetypeDiscoverController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly ArchetypeDiscover _questions;
     private string _user;
 
     public ArchetypeDiscoverController(
-      ILogger<IdentityController> logger,
+      ILogger<ArchetypeDiscoverController> logger,
       IHttpContextAccessor httpContextAccessor,
       ArchetypeDiscover MyArchetypeDiscover
     )

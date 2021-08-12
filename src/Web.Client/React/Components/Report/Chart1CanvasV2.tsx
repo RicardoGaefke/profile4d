@@ -1,6 +1,6 @@
 import {
   // eslint-disable-next-line no-unused-vars
-  ChartConfiguration, Chart, PieController, ArcElement, ChartData, CategoryScale,
+  ChartConfiguration, Chart, PieController, ArcElement, ChartData, CategoryScale, Title, Tooltip, Legend,
 } from 'chart.js';
 import React, { useEffect, useRef } from 'react';
 // eslint-disable-next-line no-unused-vars
@@ -17,7 +17,7 @@ const Chart1CanvasV2 = (props: Chart1CanvasProps): JSX.Element => {
 
   const classes = useStyles();
 
-  Chart.register(PieController, CategoryScale, ArcElement);
+  Chart.register(PieController, CategoryScale, ArcElement, Title, Tooltip, Legend);
 
   const refChart1 = useRef<HTMLCanvasElement>(null);
   const refImage1 = useRef<HTMLImageElement | null>(null);
@@ -43,47 +43,70 @@ const Chart1CanvasV2 = (props: Chart1CanvasProps): JSX.Element => {
 
   const data = {
     labels: [
-      `${vermelho.toFixed(2)}%`,
-      `${amarelo.toFixed(2)}%`,
-      `${azul.toFixed(2)}%`,
+      `Emocional - ${vermelho.toFixed(2)}%`,
+      `Instintivo -  ${amarelo.toFixed(2)}%`,
+      `Intelectual - ${azul.toFixed(2)}%`,
     ],
     datasets: [{
-      data: [vermelho.toFixed(2), amarelo.toFixed(2), azul.toFixed(2)],
+      data: [vermelho, amarelo, azul],
       backgroundColor: [
-        '#c00000',
-        '#ffff00',
-        '#002060',
+        'rgba(173, 0, 0, .8)',
+        'rgba(230, 230, 0, .8)',
+        'rgba(0, 29, 86, .8)',
       ],
       borderColor: [
-        '#c00000',
-        '#ffff00',
-        '#002060',
+        'rgba(173, 0, 0, 1)',
+        'rgba(230, 230, 0, 1)',
+        'rgba(0, 29, 86, 1)',
       ],
-      borderWidth: 2,
+      borderWidth: 0.1,
+      label: 'Dataset 1',
     },
     ],
-  }as unknown as ChartData<'bar', number[], string>;
+  } as ChartData<'pie', number[], string>;
 
   const chartConfig = {
-    responsive: false,
-    scaleShowValues: true,
     type: 'pie',
     data,
     options: {
-      title: {
-        display: true,
-        text: 'teste',
-        position: 'top',
-        fontSize: 16,
-        fontColor: '#111',
-        padding: 20,
+      layout: {
+        padding: {
+          top: 50,
+          bottom: 50,
+        },
       },
-      legend: {
-        position: 'bottom',
-        display: true,
+      responsive: true,
+      plugins: {
+        title: {
+          display: false,
+          text: '1. Os centros de inteligências e suas respectivas energias',
+          color: 'black',
+          fullSize: true,
+          position: 'top',
+          font: {
+            size: 20,
+            fontFamily: "'Roboto', sans-serif",
+          },
+        },
+        tooltip: {
+          enabled: true,
+          intersect: false,
+          mode: 'index',
+        },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            font: {
+              size: 24,
+              fontFamily: "'Roboto', sans-serif",
+            },
+            color: 'black',
+          },
+        },
       },
     },
-  } as unknown as ChartConfiguration<'pie', string[], string>;
+  } as ChartConfiguration<'pie', number[], string>;
 
   useEffect((): void => {
     if (refChart1 && refChart1.current) {
@@ -102,7 +125,7 @@ const Chart1CanvasV2 = (props: Chart1CanvasProps): JSX.Element => {
   return (
     <>
       <canvas ref={refChart1} style={{ display: (printing) ? 'none' : 'block' }} width="100%" />
-      <img alt="printing chart" ref={refImage1} className={classes.chartImage} style={{ display: (printing) ? 'block' : 'none' }} />
+      <img alt="printing chart" ref={refImage1} className={classes.chartImageSmall} style={{ display: (printing) ? 'block' : 'none' }} />
     </>
   );
 };

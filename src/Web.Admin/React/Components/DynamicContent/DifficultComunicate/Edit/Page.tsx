@@ -7,12 +7,13 @@ import { IDynamicContent } from '../../../../../../TypeScript/Interfaces/IDynami
 import Loading from '../../../Loading/Loading';
 import Edit from './Edit';
 import MyAxios from '../../../../Utils/MyAxios';
+import { RouteWithIdProps } from '../../../../../../TypeScript/Interfaces/IRouteWithProps';
 
 export default withTranslation()(
   (props: WithTranslation): React.ReactElement<WithTranslation> => {
-    // eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { t } = props;
-    const { id } = useParams();
+    const { id } = useParams<RouteWithIdProps>();
 
     const [state, setState] = useState({} as IDynamicContent);
 

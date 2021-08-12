@@ -15,7 +15,7 @@ export default (props: IProps): React.ReactElement<IProps> => {
       container
       spacing={2}
       direction="row"
-      justify="center"
+      justifyContent="center"
       alignItems="center"
       className={classes.root}
     >

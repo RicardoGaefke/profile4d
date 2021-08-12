@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import {
   // eslint-disable-next-line no-unused-vars
-  Chart, ChartConfiguration, BarController, ChartData, CategoryScale, LinearScale, BarElement,
+  Chart, ChartConfiguration, BarController, ChartData, CategoryScale, LinearScale, BarElement, Title, Legend, Tooltip,
 } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
@@ -17,7 +17,7 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
 
   const classes = useStyles();
 
-  Chart.register(BarController, CategoryScale, LinearScale, BarElement);
+  Chart.register(BarController, CategoryScale, LinearScale, BarElement, Title, Legend, Tooltip);
 
   const amarelos = profiles.filter((item): boolean => item.Color === 'Amarelo');
   amarelos.sort((a, b): number => b.Total - a.Total || b.InternalNumber - a.InternalNumber);
@@ -39,7 +39,7 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
     ],
     datasets: [
       {
-        label: '3. Perfis dominantes',
+        label: '',
         data: [
           ((amarelo.Total / 165) * 100),
           ((vermelho.Total / 165) * 100),
@@ -64,59 +64,51 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
   const refImage3 = useRef<HTMLImageElement>(null);
 
   const chartConfig = {
-    responsive: false,
-    scaleShowValues: true,
     type: 'bar',
     data,
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true,
-          autoSkip: false,
-          stepSize: 5,
-          max: 35,
-          includeBounds: true,
-          display: true,
-          showLabelBackdrop: true,
-        },
-      }],
-      xAxes: [
-        {
-          ticks: {
-            maxRotation: 90,
-            minRotation: 80,
-            autoSkip: false,
-          },
-          gridLines: {
-            offsetGridLines: true,
-          },
-        },
-        {
-          position: 'top',
-          ticks: {
-            maxRotation: 90,
-            minRotation: 80,
-            autoSkip: false,
-          },
-          gridLines: {
-            offsetGridLines: true,
-          },
-        },
-      ],
-    },
     options: {
+      layout: {
+        padding: {
+          top: 50,
+          bottom: 50,
+        },
+      },
       plugins: {
-        legend: {
-          display: true,
-          text: 'legend',
-        },
-        tooltip: {
-          mode: 'index',
-          intersect: false,
-        },
         title: {
-          display: true,
-          text: 'Chart.js Line Chart',
+          display: false,
+          text: '3. Perfis dominantes',
+          color: 'black',
+          font: {
+            size: 20,
+            fontFamily: 'Roboto',
+          },
+        },
+        legend: {
+          display: false,
+        },
+      },
+      scales: {
+        x: {
+          ticks: {
+            maxRotation: 90,
+            minRotation: 15,
+            font: {
+              size: 30,
+              fontFamily: "'Roboto', sans-serif",
+            },
+            color: 'black',
+          },
+        },
+        y: {
+          ticks: {
+            startAtZero: true,
+            stepSize: 5,
+            font: {
+              size: 30,
+              fontFamily: "'Roboto', sans-serif",
+            },
+            color: 'black',
+          },
         },
       },
     },
@@ -138,7 +130,7 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
   return (
     <>
       <canvas ref={refChart3} style={{ display: (printing) ? 'none' : 'block' }} width="100%" />
-      <img alt="printing chart" ref={refImage3} className={classes.chartImage} style={{ display: (printing) ? 'block' : 'none' }} />
+      <img alt="printing chart" ref={refImage3} className={classes.chartImageFull} style={{ display: (printing) ? 'block' : 'none' }} />
     </>
   );
 };

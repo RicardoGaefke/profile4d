@@ -1,13 +1,11 @@
-// eslint-disable-next-line no-unused-vars
-import { makeStyles, Theme } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 
 interface IStyles {
   main: {},
   img: {},
 }
 
-// eslint-disable-next-line no-unused-vars
-export default makeStyles((theme: Theme): IStyles => ({
+export default makeStyles((): IStyles => ({
   main: {
     marginBottom: 30,
   },

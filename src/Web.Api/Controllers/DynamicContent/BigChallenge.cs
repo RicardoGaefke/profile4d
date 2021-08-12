@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class BigChallengeController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<BigChallengeController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly BigChallenge _questions;
     private string _user;
 
     public BigChallengeController(
-      ILogger<IdentityController> logger,
+      ILogger<BigChallengeController> logger,
       IHttpContextAccessor httpContextAccessor,
       BigChallenge MyBigChallenge
     )

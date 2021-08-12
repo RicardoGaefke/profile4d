@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import {
   // eslint-disable-next-line no-unused-vars
-  Chart, ChartData, ChartConfiguration, RadarController, RadialLinearScale, PointElement, LineElement,
+  Chart, ChartData, ChartConfiguration, RadarController, RadialLinearScale, PointElement, LineElement, Title, Legend, Tooltip, Filler,
 } from 'chart.js';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
@@ -18,7 +18,7 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
 
   const classes = useStyles();
 
-  Chart.register(RadarController, RadialLinearScale, PointElement, LineElement);
+  Chart.register(RadarController, RadialLinearScale, PointElement, LineElement, Title, Legend, Tooltip, Filler);
 
   const criativo = profiles.filter((item): boolean => item.Name === 'Perfil Criativo')[0];
   const realizador = profiles.filter((item): boolean => item.Name === 'Perfil Realizador')[0];
@@ -254,16 +254,61 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
         fill: true,
       },
     ],
-  } as unknown as ChartData<'radar', number[], string>;
+  } as unknown as ChartData<'radar', string[], string>;
 
   const chartConfig = {
     type: 'radar',
     data,
     options: {
+      layout: {
+        padding: {
+          bottom: 45,
+        },
+      },
+      plugins: {
+        title: {
+          display: false,
+          text: '4. Tríade original x tríade adaptada',
+          color: 'black',
+          font: {
+            size: 42,
+          },
+        },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            font: {
+              size: 42,
+            },
+            color: 'black',
+          },
+        },
+      },
       scales: {
         r: {
+          angleLines: {
+            color: 'black',
+          },
+          grid: {
+            color: 'black',
+          },
           beginAtZero: true,
           max: 35,
+          startAngle: 20,
+          color: 'black',
+          ticks: {
+            font: {
+              size: 34,
+            },
+            color: 'black',
+          },
+          pointLabels: {
+            font: {
+              size: 35,
+            },
+            color: 'black',
+          },
         },
       },
     },

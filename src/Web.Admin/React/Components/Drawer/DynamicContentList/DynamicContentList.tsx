@@ -27,7 +27,8 @@ export default withTranslation()(
             <ListSubheader component="div" id="fixed-content-header">
               {t('DrawerAdminFixed:dynamic')}
             </ListSubheader>
-        )}
+        )
+}
         className={classes.root}
       >
         {

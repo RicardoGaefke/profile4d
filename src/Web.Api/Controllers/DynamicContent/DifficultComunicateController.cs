@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class DifficultComunicateController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<DifficultComunicateController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly DifficultComunicate _questions;
     private string _user;
 
     public DifficultComunicateController(
-      ILogger<IdentityController> logger,
+      ILogger<DifficultComunicateController> logger,
       IHttpContextAccessor httpContextAccessor,
       DifficultComunicate MyDifficultComunicate
     )

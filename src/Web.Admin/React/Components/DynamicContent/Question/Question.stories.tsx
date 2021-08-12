@@ -10,6 +10,7 @@ import MyThemeHoc from '../../../Initial/Theme/StoryBookHOC';
 import MyApp from './Question';
 
 const Quest: IQuestion = {
+  Success: true,
   Guid: 'b60ae1ed-d32a-4e74-bcf9-0a6c18ac3501',
   Active: true,
   Active_Created: '2020-03-06 21:33:22.087',

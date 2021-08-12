@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class CompetentModeController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<CompetentModeController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly CompetentMode _questions;
     private string _user;
 
     public CompetentModeController(
-      ILogger<IdentityController> logger,
+      ILogger<CompetentModeController> logger,
       IHttpContextAccessor httpContextAccessor,
       CompetentMode MyCompetentMode
     )

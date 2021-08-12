@@ -9,6 +9,7 @@ export default (props: ButtonProps): React.ReactElement<any> => {
   return (
     <Button
       className={classes.btn}
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
     />
   );

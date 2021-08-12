@@ -11,6 +11,7 @@ storiesOf('Button', module)
     <Button>Hello Button</Button>
   ))
   .add('With alert', (): React.ReactElement => (
+    // eslint-disable-next-line no-alert
     <Button onClick={(): void => alert('Clicked!')}>Alert Me</Button>
   ))
   .add('Default View', (): React.ReactElement => (

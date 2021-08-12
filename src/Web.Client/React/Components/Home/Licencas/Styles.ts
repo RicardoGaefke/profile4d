@@ -6,7 +6,7 @@ interface IStyles {
   root: {},
 }
 
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default makeStyles((theme: Theme): IStyles => ({
   main: {
     width: '100%',

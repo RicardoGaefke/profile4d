@@ -14,13 +14,13 @@ namespace Profile4d.Web.Api.Controllers
   [Authorize]
   public class PartnerOneController : ControllerBase
   {
-    private readonly ILogger<IdentityController> _logger;
+    private readonly ILogger<PartnerOneController> _logger;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly PartnerOne _questions;
     private string _user;
 
     public PartnerOneController(
-      ILogger<IdentityController> logger,
+      ILogger<PartnerOneController> logger,
       IHttpContextAccessor httpContextAccessor,
       PartnerOne MyPartnerOne
     )
