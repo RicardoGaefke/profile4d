@@ -149,6 +149,46 @@ namespace Profile4d.Data
       return _return;
     }
 
+    public List<Key> ActiveKeysByConsultantGuid(User user)
+    {
+      List<Key> _return = new List<Key>();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[spKeysListByConsultantGuid]";
+
+          Cmd.Parameters.AddWithValue("@UserGuid", user.Guid);
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            while (MyDR.Read())
+            {
+              Key key = new Key(
+                MyDR.GetInt32(0),
+                MyDR.GetGuid(1).ToString(),
+                (MyDR.IsDBNull(2)) ? DateTime.MinValue : MyDR.GetDateTime(2),
+                (MyDR.IsDBNull(3)) ? DateTime.MinValue : MyDR.GetDateTime(3),
+                MyDR.GetBoolean(4),
+                MyDR.GetString(5),
+                MyDR.GetString(6),
+                (MyDR.IsDBNull(7)) ? DateTime.MinValue : MyDR.GetDateTime(7)
+              );
+
+              _return.Add(key);
+            }
+          }
+        }
+      }
+
+      return _return;
+    }
+
     public Intro Intro()
     {
       Intro _return = new Intro();

@@ -9,6 +9,7 @@ namespace Profile4d.Data
     string TransferKeys(Key data);
     List<Key> ActiveKeys(int user);
     List<Key> ActiveKeysByUserGuid(User user);
+    List<Key> ActiveKeysByConsultantGuid(User user);
     Intro Intro();
     Question Question(string guid);
     void Answer(Question data);
