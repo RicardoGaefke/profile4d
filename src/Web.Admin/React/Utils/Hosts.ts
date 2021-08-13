@@ -65,7 +65,7 @@ export default class Hosts {
     let myHost: string;
 
     if (this.Host.includes('localhost')) {
-      myHost = 'https://localhost:5060/';
+      myHost = 'https://localhost:5080/';
     } else if (this.Host.includes('staging')) {
       myHost = 'https://client.staging.profile4d.com/';
     } else {
