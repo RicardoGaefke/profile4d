@@ -8,19 +8,19 @@ const fakeData = {
     {
       Name: 'Perfil Organizador', Total: 36, Color: 'Amarelo', ExternalNumber: 3, InternalNumber: 1,
     }, {
-      Name: 'Perfil Criativo', Total: 36, Color: 'Vermelho', ExternalNumber: 2, InternalNumber: 1,
+      Name: 'Perfil Criativo', Total: 10, Color: 'Vermelho', ExternalNumber: 2, InternalNumber: 1,
     }, {
       Name: 'Perfil Comandante', Total: 34, Color: 'Amarelo', ExternalNumber: 3, InternalNumber: 2,
     }, {
       Name: 'Perfil Planejador', Total: 33, Color: 'Azul', ExternalNumber: 1, InternalNumber: 3,
     }, {
-      Name: 'Perfil Visionário', Total: 34, Color: 'Azul', ExternalNumber: 1, InternalNumber: 2,
+      Name: 'Perfil Visionário', Total: 12, Color: 'Azul', ExternalNumber: 1, InternalNumber: 2,
     }, {
       Name: 'Perfil Prestativo', Total: 37, Color: 'Vermelho', ExternalNumber: 2, InternalNumber: 2,
     }, {
       Name: 'Perfil Analítico', Total: 41, Color: 'Azul', ExternalNumber: 1, InternalNumber: 1,
     }, {
-      Name: 'Perfil Mediador', Total: 35, Color: 'Amarelo', ExternalNumber: 3, InternalNumber: 3,
+      Name: 'Perfil Mediador', Total: 15, Color: 'Amarelo', ExternalNumber: 3, InternalNumber: 3,
     }, {
       Name: 'Perfil Realizador', Total: 33, Color: 'Vermelho', ExternalNumber: 2, InternalNumber: 3,
     },

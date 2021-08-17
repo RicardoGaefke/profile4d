@@ -90,6 +90,8 @@ const Chart7CanvasV2 = (props: Chart7CanvasProps): JSX.Element => {
           },
         },
         y: {
+          max: 35,
+          min: 0,
           ticks: {
             startAtZero: true,
             stepSize: 5,
