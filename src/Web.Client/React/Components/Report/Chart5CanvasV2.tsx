@@ -90,9 +90,11 @@ const Chart5CanvasV2 = (props: Chart5CanvasProps): JSX.Element => {
           },
         },
         y: {
+          max: 35,
+          min: 0,
+          stepSize: 5,
           ticks: {
             startAtZero: true,
-            stepSize: 5,
             font: {
               size: 33,
               fontFamily: "'Roboto', sans-serif",
