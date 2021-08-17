@@ -7,6 +7,7 @@ import { withTranslation, WithTranslation } from 'react-i18next';
 import { CloudDownload } from '@material-ui/icons';
 import { NavLink } from 'react-router-dom';
 import { IKey } from '../../../../../TypeScript/Interfaces/IKey';
+import Hosts from '../../../Utils/Hosts';
 
 export interface LicencasEnviadasProps extends WithTranslation {
   licencas: IKey[];
@@ -96,9 +97,11 @@ const LicencasEnviadas = withTranslation()(
                             color="primary"
                             title={t('Assessment:item.action.report.title')}
                             endIcon={<CloudDownload />}
-                            component={NavLink}
-                            to={`/answer/report/${key.Guid}`}
                             disabled={key.BlockResult}
+                            onClick={(): void => {
+                              const MyHosts = new Hosts(window.location.href);
+                              window.open(`${MyHosts.Client()}answer/report/${key.Guid}`);
+                            }}
                           >
                             {t('Assessment:item.action.report.text')}
                           </Button>

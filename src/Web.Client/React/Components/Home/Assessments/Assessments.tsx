@@ -52,8 +52,6 @@ const Assessment = withTranslation()(
             aria-label="Assessments lists"
           >
             <Tab label={<strong>{t('Assessment:tabs.available')}</strong>} {...a11yProps(0)} />
-            <Tab label={<strong>{t('Assessment:tabs.canceled')}</strong>} {...a11yProps(1)} />
-            <Tab label={<strong>{t('Assessment:tabs.expired')}</strong>} {...a11yProps(2)} />
           </Tabs>
         </AppBar>
         <div className={classes.tab}>
