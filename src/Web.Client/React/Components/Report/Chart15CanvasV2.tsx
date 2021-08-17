@@ -93,6 +93,8 @@ const Chart15CanvasV2 = (props: Chart15CanvasProps): JSX.Element => {
           },
         },
         y: {
+          max: 35,
+          min: 0,
           ticks: {
             startAtZero: true,
             stepSize: 5,

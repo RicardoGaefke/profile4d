@@ -91,6 +91,8 @@ const Chart9CanvasV2 = (props: Chart9CanvasProps): JSX.Element => {
           },
         },
         y: {
+          max: 35,
+          min: 0,
           ticks: {
             startAtZero: true,
             stepSize: 5,
