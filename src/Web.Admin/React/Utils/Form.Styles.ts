@@ -12,6 +12,7 @@ export interface IStyles {
   form: {},
   dropzone: {},
   hidden: {},
+  formControl: {},
 }
 
 const useStyles = makeStyles((theme: Theme): IStyles => ({
@@ -47,6 +48,10 @@ const useStyles = makeStyles((theme: Theme): IStyles => ({
   },
   hidden: {
     display: 'none',
+  },
+  formControl: {
+    margin: theme.spacing(1),
+    width: '100%',
   },
 }));
 
