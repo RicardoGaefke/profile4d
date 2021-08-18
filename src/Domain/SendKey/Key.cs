@@ -59,6 +59,14 @@ namespace Profile4d.Domain
       this.Type = type;
     }
 
+    public Key(string guid, int type)
+    {
+      DomainException.When(!string.IsNullOrEmpty(guid), "Guid is required!");
+
+      this.Guid = guid;
+      this.Type = type;
+    }
+
     /// <summary>
     /// Constructor for active keys list
     /// </summary>
@@ -107,6 +115,23 @@ namespace Profile4d.Domain
       this.Email = email;
       this.Name = name;
       this.SentWhen = sentWhen;
+    }
+
+    public Key(int id, string guid, DateTime? started, DateTime? finished, bool blocked, string email, string name, DateTime sentWhen, int type)
+    {
+      DomainException.When(!(id < 1), "Id is required!");
+      DomainException.When(!string.IsNullOrEmpty(guid), "Guid is required!");
+      DomainException.When(!string.IsNullOrEmpty(email), "Email is required!");
+
+      this.Id = id;
+      this.Guid = guid;
+      this.Started = started;
+      this.Finished = finished;
+      this.BlockResult = blocked;
+      this.Email = email;
+      this.Name = name;
+      this.SentWhen = sentWhen;
+      this.Type = type;
     }
 
     public Key(string email, int sentBy, int keys, DateTime? when)

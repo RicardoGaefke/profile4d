@@ -360,5 +360,26 @@ namespace Profile4d.Web.Api.Controllers
         return new BasicReturn<List<Key>>(false, ex.Message, "Erro");
       }
     }
+
+    [Authorize]
+    [HttpPost("AlterarTipoDeLicenca")]
+    public ActionResult<BasicReturn> AlterarTipoDeLicenca(Key data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        Key key = new Key(data.Guid, data.Type);
+        _sendKey.AlteraTipoDeChave(key);
+        
+        return new BasicReturn(true);
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        return _return;
+      }
+    }
   }
 }
