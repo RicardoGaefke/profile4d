@@ -305,7 +305,7 @@ namespace Profile4d.Web.Api.Controllers
 
       try
       {
-        Key key = new Key(data.Email, Convert.ToInt32(_user), Convert.ToInt32(_user), data.BlockResult);
+        Key key = new Key(data.Email, Convert.ToInt32(_user), Convert.ToInt32(_user), data.BlockResult, data.Type);
         string guid = _sendKey.SendKeyConsultor(key);
         EmailMessageModels.Content content = EmailMessageModels.SendKey(guid, _configuration.GetValue<string>("domain"));
         int messageId = _email.CreateEmail("New User", data.Email, Convert.ToInt32(_user), content);

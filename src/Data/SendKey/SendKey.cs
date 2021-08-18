@@ -396,6 +396,7 @@ namespace Profile4d.Data
           Cmd.Parameters.AddWithValue("@EMAIL", data.Email);
           Cmd.Parameters.AddWithValue("@SENT_BY", data.SentBy);
           Cmd.Parameters.AddWithValue("@BLOCK_RESULT", data.BlockResult);
+          Cmd.Parameters.AddWithValue("@Type", data.Type);
 
           Con.Open();
 

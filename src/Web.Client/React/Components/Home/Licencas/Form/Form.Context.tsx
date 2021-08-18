@@ -24,6 +24,7 @@ const SuperForm = withFormik<WithTranslation & WithSnackbarProps, IForm>({
     await myAxios(window.location.href).post<IForm>('SendKey/SendConsultor', {
       Email: values.Email,
       BlockResult: values.BlockResult,
+      Type: values.Type,
     }).then((response): void => {
       const { data } = response;
 
