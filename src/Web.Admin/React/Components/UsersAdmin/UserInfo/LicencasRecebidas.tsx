@@ -72,23 +72,14 @@ const LicencasRecebidas = withTranslation()(
                     </TableCell>
                     <TableCell>
                       {
-                        (key.Finished?.includes('0001')) ? (
+                        (key.Started?.includes('0001')) ? (
                           <Button
                             variant="contained"
                             color="default"
-                            title={
-                              (key.Started?.includes('0001')) ? t('Assessment:item.action.start.title') : t('Assessment:item.action.continue.title')
-                            }
-                            component={NavLink}
-                            to={`/answer/intro/${key.Guid}`}
+                            title={t('Assessment:item.action.report.title')}
+                            disabled
                           >
-                            {
-                              (key.Started?.includes('0001')) ? (
-                                t('Assessment:item.action.start.text')
-                              ) : (
-                                t('Assessment:item.action.continue.text')
-                              )
-                            }
+                            {t('Assessment:item.action.report.text')}
                           </Button>
                         ) : (
                           <Button
