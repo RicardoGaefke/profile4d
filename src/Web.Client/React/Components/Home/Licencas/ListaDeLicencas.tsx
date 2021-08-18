@@ -20,11 +20,21 @@ export interface ListaDeLicencasProps extends WithTranslation {
   keys: IKey[];
   onDesbloquear: (guid: string) => void;
   onCancelar: (guid: string) => void;
+  onAlterar: (guid:string, type: number) => void;
 }
 
 const ListaDeLicencas = withTranslation()(
   (props: ListaDeLicencasProps): JSX.Element => {
-    const { keys, onDesbloquear, onCancelar } = props;
+    const {
+      keys, onDesbloquear, onCancelar, onAlterar,
+    } = props;
+
+    const tipoDeLicenca = (type: number): string => {
+      if (type === 1) return 'Degustação';
+      if (type === 2) return 'Pessoal';
+      if (type === 3) return 'Profissional';
+      return 'Avançada';
+    };
 
     return (
       <TableContainer component={Paper}>
@@ -123,7 +133,7 @@ const ListaDeLicencas = withTranslation()(
                   </TableCell>
                   <TableCell>
                     <Typography>
-                      Licença Degustação
+                      {tipoDeLicenca(key.Type as number)}
                     </Typography>
                   </TableCell>
                   <TableCell>
@@ -164,7 +174,7 @@ const ListaDeLicencas = withTranslation()(
                   <TableCell>
                     <Button>
                       <Grid>
-                        <SelectLicenca Completed={0} Total={0} />
+                        <SelectLicenca keyGuid={key.Guid as string} keyType={key.Type as number} onAlterar={onAlterar} />
                       </Grid>
                     </Button>
                   </TableCell>

@@ -5,7 +5,6 @@ import {
 import React from 'react';
 import { withTranslation, WithTranslation } from 'react-i18next';
 import { CloudDownload } from '@material-ui/icons';
-import { NavLink } from 'react-router-dom';
 import { IKey } from '../../../../../TypeScript/Interfaces/IKey';
 import Hosts from '../../../Utils/Hosts';
 
@@ -72,41 +71,19 @@ const LicencasEnviadas = withTranslation()(
                       </Typography>
                     </TableCell>
                     <TableCell>
-                      {
-                        (key.Finished?.includes('0001')) ? (
-                          <Button
-                            variant="contained"
-                            color="default"
-                            title={
-                              (key.Started?.includes('0001')) ? t('Assessment:item.action.start.title') : t('Assessment:item.action.continue.title')
-                            }
-                            component={NavLink}
-                            to={`/answer/intro/${key.Guid}`}
-                          >
-                            {
-                              (key.Started?.includes('0001')) ? (
-                                t('Assessment:item.action.start.text')
-                              ) : (
-                                t('Assessment:item.action.continue.text')
-                              )
-                            }
-                          </Button>
-                        ) : (
-                          <Button
-                            variant="contained"
-                            color="primary"
-                            title={t('Assessment:item.action.report.title')}
-                            endIcon={<CloudDownload />}
-                            disabled={key.BlockResult}
-                            onClick={(): void => {
-                              const MyHosts = new Hosts(window.location.href);
-                              window.open(`${MyHosts.Client()}answer/report/${key.Guid}`);
-                            }}
-                          >
-                            {t('Assessment:item.action.report.text')}
-                          </Button>
-                        )
-                      }
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        title={t('Assessment:item.action.report.title')}
+                        endIcon={<CloudDownload />}
+                        disabled={key.BlockResult}
+                        onClick={(): void => {
+                          const MyHosts = new Hosts(window.location.href);
+                          window.open(`${MyHosts.Client()}answer/report/${key.Guid}`);
+                        }}
+                      >
+                        {t('Assessment:item.action.report.text')}
+                      </Button>
                     </TableCell>
                   </TableRow>
                 ))

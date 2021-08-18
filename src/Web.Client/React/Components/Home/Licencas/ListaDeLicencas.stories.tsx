@@ -89,7 +89,7 @@ const App = (): React.ReactElement => (
         <TableCell>
           <Button>
             <Grid>
-              <SelectLicenca Completed={0} Total={0} />
+              <SelectLicenca keyGuid="2303" keyType={2} onAlterar={(): void => {}} />
             </Grid>
           </Button>
         </TableCell>

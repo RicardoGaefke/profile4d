@@ -97,7 +97,8 @@ namespace Profile4d.Data
                 MyDR.GetBoolean(4),
                 MyDR.GetString(5),
                 MyDR.GetString(6),
-                (MyDR.IsDBNull(7)) ? DateTime.MinValue : MyDR.GetDateTime(7)
+                (MyDR.IsDBNull(7)) ? DateTime.MinValue : MyDR.GetDateTime(7),
+                MyDR.GetInt32(8)
               );
 
               _return.Add(key);
@@ -330,7 +331,8 @@ namespace Profile4d.Data
                 Started = reader.GetDateTime(3),
                 Finished = reader.GetDateTime(4),
                 BlockResult = reader.GetBoolean(5),
-                Name = reader.GetString(6)
+                Name = reader.GetString(6),
+                Type = reader.GetInt32(7)
               };
 
               keys.Add(key);
@@ -396,6 +398,7 @@ namespace Profile4d.Data
           Cmd.Parameters.AddWithValue("@EMAIL", data.Email);
           Cmd.Parameters.AddWithValue("@SENT_BY", data.SentBy);
           Cmd.Parameters.AddWithValue("@BLOCK_RESULT", data.BlockResult);
+          Cmd.Parameters.AddWithValue("@Type", data.Type);
 
           Con.Open();
 
@@ -405,6 +408,26 @@ namespace Profile4d.Data
 
             return MyDR.GetGuid(0).ToString();
           }
+        }
+      }
+    }
+
+    public void AlteraTipoDeChave(Key data)
+    {
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[dbo].[spAlteraTipoDeChave]";
+
+          Cmd.Parameters.AddWithValue("@GuidDaChave", data.Guid);
+          Cmd.Parameters.AddWithValue("@TipoDaChave", data.Type);
+
+          Con.Open();
+
+          Cmd.ExecuteNonQuery();
         }
       }
     }
