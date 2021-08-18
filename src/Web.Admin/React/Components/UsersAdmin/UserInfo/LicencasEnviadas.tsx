@@ -71,19 +71,32 @@ const LicencasEnviadas = withTranslation()(
                       </Typography>
                     </TableCell>
                     <TableCell>
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        title={t('Assessment:item.action.report.title')}
-                        endIcon={<CloudDownload />}
-                        disabled={key.BlockResult}
-                        onClick={(): void => {
-                          const MyHosts = new Hosts(window.location.href);
-                          window.open(`${MyHosts.Client()}answer/report/${key.Guid}`);
-                        }}
-                      >
-                        {t('Assessment:item.action.report.text')}
-                      </Button>
+                      {
+                        (key.Started?.includes('0001')) ? (
+                          <Button
+                            variant="contained"
+                            color="default"
+                            title={t('Assessment:item.action.report.title')}
+                            disabled
+                          >
+                            {t('Assessment:item.action.report.text')}
+                          </Button>
+                        ) : (
+                          <Button
+                            variant="contained"
+                            color="primary"
+                            title={t('Assessment:item.action.report.title')}
+                            endIcon={<CloudDownload />}
+                            disabled={key.BlockResult}
+                            onClick={(): void => {
+                              const MyHosts = new Hosts(window.location.href);
+                              window.open(`${MyHosts.Client()}answer/report/${key.Guid}`);
+                            }}
+                          >
+                            {t('Assessment:item.action.report.text')}
+                          </Button>
+                        )
+                      }
                     </TableCell>
                   </TableRow>
                 ))
