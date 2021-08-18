@@ -17,7 +17,7 @@ const App = (): React.ReactElement => (
       alignItems="center"
     >
       <Grid item>
-        <SelectLicenca Completed={0} Total={0} />
+        <SelectLicenca keyGuid="2302332" keyType={2} onAlterar={(): void => {}} />
       </Grid>
     </Grid>
   </MyThemeHoc>

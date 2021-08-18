@@ -9,6 +9,7 @@ namespace Profile4d.Domain
     public string Email { get; set; }
     public string Name { get; set; }
     public bool BlockResult { get; set; }
+    public int Type { get; set; }
     public int SentBy { get; set; }
     public int Consultant { get; set; }
     public int Keys { get; set; }
@@ -43,6 +44,27 @@ namespace Profile4d.Domain
       this.SentBy = sentBy;
       this.Consultant = consultant;
       this.BlockResult = blockRestult;
+    }
+
+    public Key(string email, int sentBy, int consultant, bool blockRestult, int type)
+    {
+      DomainException.When(!string.IsNullOrEmpty(email), "Email is required!");
+      DomainException.When(!(sentBy < 1), "SentBy is required!");
+      DomainException.When(!(consultant < 1), "Consultant is required!");
+
+      this.Email = email;
+      this.SentBy = sentBy;
+      this.Consultant = consultant;
+      this.BlockResult = blockRestult;
+      this.Type = type;
+    }
+
+    public Key(string guid, int type)
+    {
+      DomainException.When(!string.IsNullOrEmpty(guid), "Guid is required!");
+
+      this.Guid = guid;
+      this.Type = type;
     }
 
     /// <summary>
@@ -93,6 +115,23 @@ namespace Profile4d.Domain
       this.Email = email;
       this.Name = name;
       this.SentWhen = sentWhen;
+    }
+
+    public Key(int id, string guid, DateTime? started, DateTime? finished, bool blocked, string email, string name, DateTime sentWhen, int type)
+    {
+      DomainException.When(!(id < 1), "Id is required!");
+      DomainException.When(!string.IsNullOrEmpty(guid), "Guid is required!");
+      DomainException.When(!string.IsNullOrEmpty(email), "Email is required!");
+
+      this.Id = id;
+      this.Guid = guid;
+      this.Started = started;
+      this.Finished = finished;
+      this.BlockResult = blocked;
+      this.Email = email;
+      this.Name = name;
+      this.SentWhen = sentWhen;
+      this.Type = type;
     }
 
     public Key(string email, int sentBy, int keys, DateTime? when)

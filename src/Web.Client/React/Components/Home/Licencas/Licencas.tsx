@@ -70,6 +70,36 @@ const Licencas = withTranslation()(
       );
     };
 
+    const alterarTipoDeChave = async (guid: string, type: number): Promise<void> => {
+      const chave = {
+        Guid: guid,
+        Type: type,
+      } as IKey;
+
+      await Axios(window.location.href).post<IBasicReturn>('SendKey/AlterarTipoDeLicenca', chave)
+        .then(
+          (response): void => {
+            const { data } = response;
+
+            if (data.Success) {
+              enqueueSnackbar('Tipo de chave alterado com sucesso!', {
+                variant: 'success',
+              });
+              getKeys();
+            } else {
+              enqueueSnackbar('Desculpe, falha ao alterar tipo de chave chave!', {
+                variant: 'error',
+              });
+            }
+          },
+        )
+        .catch((): void => {
+          enqueueSnackbar('Desculpe, falha ao alterar tipo de chave chave!', {
+            variant: 'error',
+          });
+        });
+    };
+
     useEffect((): void => {
       getKeys();
     }, []);
@@ -171,7 +201,12 @@ const Licencas = withTranslation()(
           md={12}
           lg={12}
         >
-          <ListaDeLicencas keys={licencas.Keys as IKey[]} onDesbloquear={desbloquearChave} onCancelar={cancelarChave} />
+          <ListaDeLicencas
+            keys={licencas.Keys as IKey[]}
+            onDesbloquear={desbloquearChave}
+            onCancelar={cancelarChave}
+            onAlterar={alterarTipoDeChave}
+          />
         </Grid>
       </Grid>
     );

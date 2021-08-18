@@ -1,6 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import clsx from 'clsx';
+import React, { useEffect, useState } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 import {
@@ -16,84 +14,42 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import EditIcon from '@material-ui/icons/Edit';
-import useStyles from './Styles';
 
 
 export interface SelectLicencaProps extends WithTranslation {
-    Completed: number;
-    Total: number;
-  }
+  keyGuid: string;
+  keyType: number;
+  onAlterar: (guid: string, type: number) => void;
+}
 
 const SelectLicenca = withTranslation()(
-  // eslint-disable-next-line no-unused-vars
   (props: SelectLicencaProps): JSX.Element => {
-    const [open, setOpen] = React.useState(false);
+    const { keyGuid, keyType, onAlterar } = props;
 
-    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-    const handleClickOpen = () => {
+    const [open, setOpen] = useState<boolean>(false);
+    const [guid, setGuid] = useState<string>(keyGuid);
+    const [type, setType] = useState<number>(keyType);
+
+    useEffect((): void => {
+      setGuid(guid);
+      setType(type);
+    }, []);
+
+    const handleClickOpen = (): void => {
       setOpen(true);
     };
 
-    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-    const handleClose = () => {
+    const handleClose = (): void => {
       setOpen(false);
     };
 
-    const classes = useStyles();
-
-    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-    function StyledRadio() {
-      return (
-        <Radio
-          className={classes.root}
-          disableRipple
-          color="default"
-          checkedIcon={<span className={clsx(classes.icon, classes.checkedIcon)} />}
-          icon={<span className={classes.icon} />}
-          {...props}
-        />
-      );
-    }
+    const save = (): void => {
+      setOpen(false);
+      onAlterar(guid, type);
+    };
 
     return (
       <div>
-        {/*
-        <div>
-          <Chip
-            icon={<EditIcon />}
-            label="Licença Degustação"
-            color="primary"
-            style={{
-              backgroundColor: '#009900',
-              fontWeight: 'bold',
-              marginBottom: 9,
-              marginTop: 40,
-              fontSize: 15,
-            }}
-          />
-        </div>
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={handleClickOpen}
-          style={{
-            whiteSpace: 'nowrap',
-            fontSize: 9,
-          }}
-        >
-          Alterar licença
-        </Button>
-        <Chip
-          color="primary"
-          onDelete={handleClickOpen}
-          deleteIcon={<EditIcon />}
-          style={{
-            backgroundColor: '#009900',
-            fontWeight: 'bold',
-            fontSize: 15,
-          }}
-        />
-        */}
         <Button
           variant="contained"
           color="secondary"
@@ -117,17 +73,16 @@ const SelectLicenca = withTranslation()(
           <DialogContent>
             <FormControl component="fieldset">
               <FormLabel component="legend">Licença</FormLabel>
-              <RadioGroup defaultValue="female" aria-label="gender" name="customized-radios">
-                <FormControlLabel value="Degustação" control={<StyledRadio />} label="Degustação" />
-                <FormControlLabel value="Pessoal" control={<StyledRadio />} label="Pessoal" />
-                <FormControlLabel value="Avançada" control={<StyledRadio />} label="Pessoal" />
-                <FormControlLabel value="Profissional" control={<StyledRadio />} label="Profissional" />
-                { /* <FormControlLabel
-                  value="disabled"
-                  disabled
-                  control={<StyledRadio />}
-                  label="(Disabled option)"
-               /> */}
+              <RadioGroup
+                aria-label="Tipo de licença"
+                name="keyType"
+                value={type.toString()}
+                onChange={(e): void => { setType(parseInt(e.target.value, 10)); }}
+              >
+                <FormControlLabel value="1" control={<Radio />} label="Degustação" />
+                <FormControlLabel value="2" control={<Radio />} label="Pessoal" />
+                <FormControlLabel value="3" control={<Radio />} label="Profissional" />
+                <FormControlLabel value="4" control={<Radio />} label="Avançada" />
               </RadioGroup>
             </FormControl>
           </DialogContent>
@@ -135,7 +90,7 @@ const SelectLicenca = withTranslation()(
             <Button onClick={handleClose} color="primary">
               Cancelar
             </Button>
-            <Button onClick={handleClose} color="primary" autoFocus>
+            <Button onClick={save} color="primary" autoFocus>
               Salvar
             </Button>
           </DialogActions>

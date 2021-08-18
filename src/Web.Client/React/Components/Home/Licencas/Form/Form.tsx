@@ -128,7 +128,7 @@ export default (props: IMyForm): React.ReactElement<IMyForm> => {
                 <Checkbox
                   checked={values.BlockResult}
                   onChange={(event): void => handleCheck(event, values.BlockResult)}
-                  name="checkedB"
+                  name="BlockResult"
                   color="primary"
                 />
               )
@@ -147,6 +147,8 @@ export default (props: IMyForm): React.ReactElement<IMyForm> => {
             <Select
               labelId="simple-select-label"
               id="simple-select"
+              value={values.Type}
+              onChange={(e): void => { setFieldValue('Type', e.target.value); }}
             >
               <MenuItem value={1}>Degustação</MenuItem>
               <MenuItem value={2}>Licença Pessoal</MenuItem>

@@ -305,7 +305,7 @@ namespace Profile4d.Web.Api.Controllers
 
       try
       {
-        Key key = new Key(data.Email, Convert.ToInt32(_user), Convert.ToInt32(_user), data.BlockResult);
+        Key key = new Key(data.Email, Convert.ToInt32(_user), Convert.ToInt32(_user), data.BlockResult, data.Type);
         string guid = _sendKey.SendKeyConsultor(key);
         EmailMessageModels.Content content = EmailMessageModels.SendKey(guid, _configuration.GetValue<string>("domain"));
         int messageId = _email.CreateEmail("New User", data.Email, Convert.ToInt32(_user), content);
@@ -358,6 +358,27 @@ namespace Profile4d.Web.Api.Controllers
       catch (Exception ex)
       {
         return new BasicReturn<List<Key>>(false, ex.Message, "Erro");
+      }
+    }
+
+    [Authorize]
+    [HttpPost("AlterarTipoDeLicenca")]
+    public ActionResult<BasicReturn> AlterarTipoDeLicenca(Key data)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        Key key = new Key(data.Guid, data.Type);
+        _sendKey.AlteraTipoDeChave(key);
+        
+        return new BasicReturn(true);
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        return _return;
       }
     }
   }
