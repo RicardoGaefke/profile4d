@@ -2,6 +2,10 @@ import React from 'react';
 import {
   Grid, TextField, Button, FormControlLabel, Checkbox,
 } from '@material-ui/core';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 // eslint-disable-next-line no-unused-vars
 import { WithTranslation, useTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
@@ -116,7 +120,7 @@ export default (props: IMyForm): React.ReactElement<IMyForm> => {
           item
           xs={12}
           md={12}
-          lg={12}
+          lg={6}
         >
           <FormControlLabel
             control={
@@ -131,6 +135,25 @@ export default (props: IMyForm): React.ReactElement<IMyForm> => {
             }
             label="Bloquear resultado?"
           />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={12}
+          lg={6}
+        >
+          <FormControl className={classes.formControl}>
+            <InputLabel id="simple-select-label">Tipo de Licença</InputLabel>
+            <Select
+              labelId="simple-select-label"
+              id="simple-select"
+            >
+              <MenuItem value={1}>Degustação</MenuItem>
+              <MenuItem value={2}>Licença Pessoal</MenuItem>
+              <MenuItem value={3}>Licença Avançada</MenuItem>
+              <MenuItem value={4}>Licença Profissional</MenuItem>
+            </Select>
+          </FormControl>
         </Grid>
         <Grid
           item
