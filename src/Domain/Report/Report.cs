@@ -15,6 +15,7 @@ namespace Profile4d.Domain
     public List<StaticFirstPage> DynamicContent38;
     public List<StaticFirstPage> DynamicContent59;
     public List<Image> Images;
+    public Key Chave;
 
     public Report()
     {}

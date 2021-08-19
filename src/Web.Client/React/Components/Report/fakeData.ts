@@ -4,6 +4,7 @@ import { IReport } from '../../../../TypeScript/Interfaces/IReport';
 
 
 const fakeData = {
+  Chave: { Finished: '2021-05-18T16:27:17.44', Name: 'Herique' },
   Profiles: [
     {
       Name: 'Perfil Organizador', Total: 36, Color: 'Amarelo', ExternalNumber: 3, InternalNumber: 1,
