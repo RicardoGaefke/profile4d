@@ -30,6 +30,7 @@ namespace Profile4d.Data
       List<StaticFirstPage> dynamics38 = new List<StaticFirstPage>();
       List<StaticFirstPage> dynamics59 = new List<StaticFirstPage>();
       List<Image> images = new List<Image>();
+      Key chave = new Key();
 
       using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
       {
@@ -217,6 +218,14 @@ namespace Profile4d.Data
                 }
               );
             }
+
+            MyDR.NextResult();
+
+            MyDR.Read();
+
+            chave.Name = MyDR.GetString(0);
+            chave.Finished = MyDR.GetDateTime(1);
+            chave.Type = MyDR.GetInt32(2);
           }
         }
       }
@@ -232,6 +241,7 @@ namespace Profile4d.Data
       _return.DynamicContent35 = dynamics35;
       _return.DynamicContent38 = dynamics38;
       _return.DynamicContent59 = dynamics59;
+      _return.Chave = chave;
 
       return _return;
     }

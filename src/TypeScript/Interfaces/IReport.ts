@@ -2,6 +2,7 @@ import { IBasicReturn } from './IBasicReturn';
 import { IProfiles } from './IProfiles';
 import { IStaticIntroduction } from './IStaticContent';
 import { IImage } from './IImage';
+import { IKey } from './IKey';
 
 export interface IReport extends IBasicReturn
 {
@@ -16,4 +17,5 @@ export interface IReport extends IBasicReturn
   DynamicContent38?: IStaticIntroduction[];
   DynamicContent59?: IStaticIntroduction[];
   Images?: IImage[];
+  Chave?: IKey;
 }

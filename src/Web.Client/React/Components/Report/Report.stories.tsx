@@ -28,7 +28,7 @@ const App = (): React.ReactElement => {
           justify="center"
           className={classes.container}
         >
-          <ReportContent chave={{ Finished: '2021-05-18T16:27:17.44', Name: 'Herique' }} data={fakeData} />
+          <ReportContent data={fakeData} />
         </Grid>
       </Grid>
     </MyThemeHoc>
