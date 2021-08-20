@@ -214,6 +214,7 @@ namespace Profile4d.Web.Api.Controllers
       {
         _return = _report.GetReport(guid);
         _return.Success = true;
+        _return.Code = "success";
 
         return _return;
       }
