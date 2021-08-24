@@ -313,66 +313,8 @@ const ReportContent = withTranslation()(
             <ReportText text={dynamicText(49)} />
           </div>
         )}
-        {(data.Chave?.Type as number >= 3) && (
+        {(data.Chave?.Type as number === 3) && (
           <div id="Profissional">
-            {/* parte profissional */}
-
-            <ReportTitle title={staticTitle(68)} breakPage />
-
-            <ReportText text={staticText(75)} />
-            {FilteredImage(4)}
-
-            <ReportText text={staticText(76)} />
-            {FilteredImage(5)}
-
-            <ReportTitle title={staticTitle(77)} breakPage />
-
-            <ReportText text={staticText(78)} />
-
-            <ReportTitle title={staticTitle(79)} />
-            <ReportText text={dynamicText(44)} />
-
-            <ReportTitle title={staticTitle(80)} />
-            <ReportText text={dynamicText(45)} />
-
-            <ReportTitle title={staticTitle(81)} />
-            <ReportText text={dynamicText(46)} />
-
-            <ReportTitle title={staticTitle(85)} />
-            <ReportText text={staticText(85)} />
-
-            <ReportTitle title={staticTitle(86)} />
-            <ReportText text={dynamicText(50)} />
-
-            <ReportTitle title={staticTitle(87)} breakPage />
-            <ReportText text={dynamicText(51)} />
-
-            <ReportText text={staticText(88)} />
-
-            <ReportTitle title={staticTitle(89)} />
-            <ReportText text={dynamicText(52)} />
-
-            <ReportTitle title={staticTitle(90)} />
-            <ReportText text={staticText(90)} />
-
-            <ReportTitle title={staticTitle(91)} />
-            <ReportText text={dynamicText(53)} />
-
-            <ReportTitle title={staticTitle(93)} />
-            <ReportText text={dynamicText(54)} />
-
-            <ReportTitle title={staticTitle(94)} breakPage />
-            <ReportText text={dynamicText(55)} />
-
-            <ReportTitle title={staticTitle(95)} />
-
-            {data.DynamicContent56?.map((record): React.ReactNode => (
-              <ReportText key={record.Id} text={dynamicText56(record.Id)} />
-            ))}
-          </div>
-        )}
-        {(data.Chave?.Type as number === 4) && (
-          <div id="Avancada">
             {/* análise profissional */}
 
             <ReportTitle title={staticTitle(96)} breakPage />
@@ -632,6 +574,64 @@ const ReportContent = withTranslation()(
 
             <ReportTitle title={staticTitle(144)} breakPage />
             <ReportText text={staticText(144)} />
+          </div>
+        )}
+        {(data.Chave?.Type as number >= 4) && (
+          <div id="Avancada">
+            {/* parte profissional */}
+
+            <ReportTitle title={staticTitle(68)} breakPage />
+
+            <ReportText text={staticText(75)} />
+            {FilteredImage(4)}
+
+            <ReportText text={staticText(76)} />
+            {FilteredImage(5)}
+
+            <ReportTitle title={staticTitle(77)} breakPage />
+
+            <ReportText text={staticText(78)} />
+
+            <ReportTitle title={staticTitle(79)} />
+            <ReportText text={dynamicText(44)} />
+
+            <ReportTitle title={staticTitle(80)} />
+            <ReportText text={dynamicText(45)} />
+
+            <ReportTitle title={staticTitle(81)} />
+            <ReportText text={dynamicText(46)} />
+
+            <ReportTitle title={staticTitle(85)} />
+            <ReportText text={staticText(85)} />
+
+            <ReportTitle title={staticTitle(86)} />
+            <ReportText text={dynamicText(50)} />
+
+            <ReportTitle title={staticTitle(87)} breakPage />
+            <ReportText text={dynamicText(51)} />
+
+            <ReportText text={staticText(88)} />
+
+            <ReportTitle title={staticTitle(89)} />
+            <ReportText text={dynamicText(52)} />
+
+            <ReportTitle title={staticTitle(90)} />
+            <ReportText text={staticText(90)} />
+
+            <ReportTitle title={staticTitle(91)} />
+            <ReportText text={dynamicText(53)} />
+
+            <ReportTitle title={staticTitle(93)} />
+            <ReportText text={dynamicText(54)} />
+
+            <ReportTitle title={staticTitle(94)} breakPage />
+            <ReportText text={dynamicText(55)} />
+
+            <ReportTitle title={staticTitle(95)} />
+
+            {data.DynamicContent56?.map((record): React.ReactNode => (
+              <ReportText key={record.Id} text={dynamicText56(record.Id)} />
+            ))}
           </div>
         )}
       </>
