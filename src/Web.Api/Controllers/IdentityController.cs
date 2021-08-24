@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
@@ -23,6 +24,7 @@ namespace Profile4d.Web.Api.Controllers
     private readonly ILogger<IdentityController> _logger;
     private readonly IMyIdentity _myIdentity;
     private readonly IHttpContextAccessor _httpContextAccessor;
+    private readonly IConfiguration _configuration;
     private readonly IEmail _email;
     private readonly User _user;
     private readonly IQueue _queue;
@@ -31,6 +33,7 @@ namespace Profile4d.Web.Api.Controllers
       ILogger<IdentityController> logger,
       IMyIdentity myIdentity,
       IHttpContextAccessor httpContextAccessor,
+      IConfiguration configuration,
       IEmail emailService,
       IQueue queue
     )
@@ -38,6 +41,7 @@ namespace Profile4d.Web.Api.Controllers
       _logger = logger;
       _myIdentity = myIdentity;
       _httpContextAccessor = httpContextAccessor;
+      _configuration = configuration; 
       _email = emailService;
       _queue = queue;
 
@@ -293,7 +297,7 @@ namespace Profile4d.Web.Api.Controllers
       try
       {
         User myUser = _myIdentity.ForgotPassword(data.Email);
-        EmailMessageModels.Content content = EmailMessageModels.ForgotPassword(myUser);
+        EmailMessageModels.Content content = EmailMessageModels.ForgotPassword(myUser, _configuration["domain"]);
         int messageId = _email.CreateEmail(myUser.Name, data.Email, myUser.Id, content);
         _queue.SaveMessage("email", messageId.ToString());
         _return.Success = true;
@@ -309,6 +313,7 @@ namespace Profile4d.Web.Api.Controllers
       {
         _return.Success = false;
         _return.Message = ex.Message;
+        _return.Code = ex.StackTrace;
         return _return;
       }
       return _return;
@@ -322,7 +327,7 @@ namespace Profile4d.Web.Api.Controllers
       try
       {
         int id = _myIdentity.CreateUser(user);
-        EmailMessageModels.Content content = EmailMessageModels.CreateUser(user.Name);
+        EmailMessageModels.Content content = EmailMessageModels.CreateUser(user.Name, _configuration["domain"]);
         int messageId = _email.CreateEmail(user.Name, user.Email, id, content);
         _queue.SaveMessage("email", messageId.ToString());
         _return.Success = true;
@@ -426,7 +431,7 @@ namespace Profile4d.Web.Api.Controllers
       try
       {
         User myUser = _myIdentity.ForgotPasswordByGuid(data);
-        EmailMessageModels.Content content = EmailMessageModels.ForgotPassword(myUser);
+        EmailMessageModels.Content content = EmailMessageModels.ForgotPassword(myUser, _configuration["domain"]);
         int messageId = _email.CreateEmail(myUser.Name, myUser.Email, myUser.Id, content);
         _queue.SaveMessage("email", messageId.ToString());
         _return.Success = true;
