@@ -319,6 +319,35 @@ namespace Profile4d.Web.Api.Controllers
       return _return;
     }
 
+    [HttpGet("ForgotActivate/{guid}/{id}")]
+    public ActionResult<BasicReturn> ForgotActivate(string guid, int id)
+    {
+      BasicReturn _return = new BasicReturn();
+
+      try
+      {
+        User user = new User(id, guid);
+        _myIdentity.ForgotActivate(user);
+
+        _return.Success = true;
+
+        return _return;
+      }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+
+        return _return;
+      }
+    }
+
     [HttpPost("CreateUser")]
     public ActionResult<BasicReturn> CreateUser(User user)
     {
