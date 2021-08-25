@@ -126,7 +126,7 @@ namespace Profile4d.Domain
       return new Content(subject.ToString(), body.ToString());
     }
 
-    public static Content ForgotPassword(User data)
+    public static Content ForgotPassword(User data, string domain)
     {
       StringBuilder subject = new StringBuilder("Profile4d - Recuperação de senha / Password recovery");
 
@@ -141,17 +141,17 @@ namespace Profile4d.Domain
       body.AppendLine();
       body.Append($@"<p>
                       <a
-                        href='https://identity.profile4d.com/remember/{data.Guid}/{data.Id}'
+                        href=""https://{ServerAddress(domain)}/remember/{data.Guid}/{data.Id}""
                         title='Profile4D'
                       >
-                        https://identity.profile4d.com/remember/{data.Guid}/{data.Id}
+                        https://{ServerAddress(domain)}/remember/{data.Guid}/{data.Id}
                       </a>
                   </p>");
 
       return new Content(subject.ToString(), body.ToString());
     }
 
-    public static Content CreateUser(string name)
+    public static Content CreateUser(string name, string domain)
     {
       StringBuilder subject = new StringBuilder("Profile4d - Criação de usuário / User creation");
 
@@ -164,10 +164,10 @@ namespace Profile4d.Domain
       body.AppendLine();
       body.Append($@"<p>
                       <a
-                        href='https://identity.profile4d.com'
+                        href=""https://{ServerAddress(domain)}""
                         title='Profile4D'
                       >
-                        https://identity.profile4d.com
+                        https://{ServerAddress(domain)}
                       </a>
                   </p>");
 
