@@ -22,7 +22,7 @@ namespace Profile4d.Web.Identity
       _identity = identity;
     }
 
-    [HttpGet("remember/{guid}/{id}")]
+    [HttpGet("rememberPassword/{guid}/{id}")]
     public RedirectResult Remember(string guid, string id)
     {
       try
