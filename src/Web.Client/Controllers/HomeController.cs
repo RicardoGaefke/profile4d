@@ -44,6 +44,30 @@ namespace Profile4d.Web.Client
       return View();
     }
 
+    [HttpGet("answer/report/{guid}")]
+    public IActionResult Report()
+    {
+      ViewData["Title"] = "Profile4D";
+
+      Request.HttpContext.Response.Headers.Add("Title", "Profile 4D");
+      Request.HttpContext.Response.Headers.Add("Description", "Profile 4D description");
+
+      ViewBag.Page = JsonSerializer.Serialize(new
+      {
+        Title = "Profile4D",
+        Description = "Profile4d description",
+        IsAuthenticated = false,
+        Name = "",
+        Email = "",
+        Language = "PT",
+        Theme = "light",
+        Drawer = false,
+        Config = false
+      });
+
+      return View("Index");
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
