@@ -44,7 +44,7 @@ namespace Profile4d.Web.Client
       return View();
     }
 
-    [HttpGet("answer/report/{guid}")]
+    [HttpGet("answer/report/{guid}/{pdf}")]
     public IActionResult Report()
     {
       ViewData["Title"] = "Profile4D";
