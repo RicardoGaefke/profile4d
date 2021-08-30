@@ -17,5 +17,9 @@ export default makeStyles((theme: Theme): IStyles => ({
       bottom: 40,
       left: 2,
     },
+
+    '@media print': {
+      display: 'none',
+    },
   },
 }));
