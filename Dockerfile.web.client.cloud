@@ -16,7 +16,9 @@ RUN dotnet publish -c Release ./Web.Client.csproj -r linux-musl-x64 -o ./publish
 
 FROM mcr.microsoft.com/dotnet/core/runtime:3.0-alpine as runtime
 
-RUN apk update && apk add --no-cache nodejs npm nodejs-npm chromium
+RUN apk update && apk add --no-cache nodejs npm nodejs-npm chromium nss
+
+RUN which chromium-browser
 
 RUN npm install puppeteer@10.2.0
 
