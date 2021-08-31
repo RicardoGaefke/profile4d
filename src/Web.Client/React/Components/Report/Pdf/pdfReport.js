@@ -12,7 +12,7 @@ module.exports = async (callback, url) => {
     });
 
   const buffer = await page.pdf({
-    path: 'hn.pdf',
+    // path: 'hn.pdf',
     format: 'a4',
     margin: {
       top: '1cm',
