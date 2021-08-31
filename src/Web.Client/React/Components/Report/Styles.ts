@@ -18,6 +18,7 @@ interface IStyles {
   chartImage: {},
   chartImageSmall: {},
   chartImageFull: {},
+  fab: {},
 }
 
 export default makeStyles((theme: Theme): IStyles => ({
@@ -127,6 +128,12 @@ export default makeStyles((theme: Theme): IStyles => ({
     maxHeight: 400,
     marginLeft: 'auto',
     marginRight: 'auto',
+    '@media print': {
+      maxWidth: '100%',
+      maxHeight: 400,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    },
   },
   chartImageSmall: {
     maxWidth: '100%',
@@ -142,6 +149,14 @@ export default makeStyles((theme: Theme): IStyles => ({
       width: '100%',
       marginLeft: 'auto',
       marginRight: 'auto',
+    },
+  },
+  fab: {
+    position: 'fixed',
+    bottom: theme.spacing(3),
+    right: theme.spacing(3),
+    '@media print': {
+      display: 'none',
     },
   },
 }));
