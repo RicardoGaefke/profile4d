@@ -19,7 +19,7 @@ module.exports = async (callback, url) => {
 
   await page.goto(`${url}/pdf`, {
     waitUntil: ['load', 'domcontentloaded', 'networkidle0', 'networkidle2'],
-    setTimeout: 0,
+    timeout: 0,
   })
     .catch((err) => {
       // eslint-disable-next-line no-console
