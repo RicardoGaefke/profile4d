@@ -18,7 +18,7 @@ FROM mcr.microsoft.com/dotnet/core/runtime:3.0-alpine as runtime
 
 RUN apk update && apk add --no-cache nodejs npm nodejs-npm
 
-RUN npm install
+RUN npm install puppeteer@10.2.0
 
 RUN export PATH=$PATH:/usr/bin/node:/usr/share/doc/nodejs
 
