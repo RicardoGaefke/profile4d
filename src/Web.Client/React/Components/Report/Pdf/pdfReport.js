@@ -1,7 +1,10 @@
 const puppeteer = require('puppeteer');
 
 module.exports = async (callback, url) => {
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--headless', '--disable-gpu', '--disable-dev-shm-usage'],
+  })
     .catch((err) => {
       // eslint-disable-next-line no-console
       console.log('lauch: ', err);
