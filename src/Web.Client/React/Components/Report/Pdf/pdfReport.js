@@ -3,6 +3,7 @@ const puppeteer = require('puppeteer');
 module.exports = async (callback, url) => {
   const browser = await puppeteer.launch({
     headless: true,
+    executablePath: (process.platform === 'win32') ? null : '/usr/bin/chromium-browser',
     args: ['--no-sandbox', '--headless', '--disable-gpu', '--disable-dev-shm-usage'],
   })
     .catch((err) => {
