@@ -16,7 +16,6 @@ namespace Profile4d.Web.Api.Controllers
 {
   [ApiController]
   [Route("[controller]")]
-  [Authorize]
   public class SendKeyController : ControllerBase
   {
     private readonly ILogger<IdentityController> _logger;
@@ -204,7 +203,6 @@ namespace Profile4d.Web.Api.Controllers
       }
     }
 
-    [Authorize]
     [HttpGet("Report/{guid}")]
     public ActionResult<Report> Report(string guid)
     {

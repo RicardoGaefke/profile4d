@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Typography } from '@material-ui/core';
+import { useParams } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
@@ -37,7 +38,7 @@ import useStyles from './Styles';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
 // eslint-disable-next-line no-unused-vars
-import { IKey } from '../../../../TypeScript/Interfaces/IKey';
+import { RouteWithGuidAndPdfProps } from '../../../../TypeScript/Interfaces/IRouteWithProps';
 
 export interface ReportContentProps extends WithTranslation {
   data: IReport;
@@ -50,11 +51,17 @@ const ReportContent = withTranslation()(
     const Language: string = 'PT';
     const classes = useStyles();
 
-    const [printing, setPrinting] = useState<boolean>(false);
+    const { pdf } = useParams<RouteWithGuidAndPdfProps>();
+
+    const [printing, setPrinting] = useState<boolean>(!!(pdf));
 
     useEffect((): void => {
       window.onbeforeprint = (): void => { setPrinting(true); };
       window.onafterprint = (): void => { setPrinting(false); };
+
+      if (pdf) {
+        setPrinting(true);
+      }
     }, []);
 
     const staticTitle = (contentId: number): string => filterStaticTitle(contentId, Language, data.StaticContent || []);
