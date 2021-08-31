@@ -1,8 +1,18 @@
 const puppeteer = require('puppeteer');
 
 module.exports = async (callback, url) => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
+  const browser = await puppeteer.launch()
+    .catch((err) => {
+      // eslint-disable-next-line no-console
+      console.log('lauch: ', err);
+    });
+
+  const page = await browser.newPage()
+    .catch((err) => {
+      // eslint-disable-next-line no-console
+      console.log('page: ', err);
+    });
+
   await page.goto(`${url}/pdf`, {
     waitUntil: ['load', 'domcontentloaded', 'networkidle0', 'networkidle2'],
   })
@@ -24,7 +34,11 @@ module.exports = async (callback, url) => {
       console.log('page.pdf: ', err);
     });
 
-  await browser.close();
+  await browser.close()
+    .catch((err) => {
+      // eslint-disable-next-line no-console
+      console.log('close: ', err);
+    });
 
   const base64 = buffer.toString('base64');
   return callback(null, base64);
