@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useParams } from 'react-router';
 import {
-  Grid, CircularProgress,
+  Grid, CircularProgress, Fab,
 } from '@material-ui/core';
+import { PictureAsPdf } from '@material-ui/icons';
 // eslint-disable-next-line no-unused-vars
 import { withTranslation, WithTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
@@ -80,6 +81,17 @@ const Report = withTranslation()(
             >
               <div>
                 <ReportContent data={data} />
+                <Fab
+                  aria-label="Gerar PDF"
+                  className={classes.fab}
+                  color="primary"
+                  size="large"
+                  onClick={(): void => {
+                    window.open(`/GetPdfFromReport/${guid}`);
+                  }}
+                >
+                  <PictureAsPdf />
+                </Fab>
               </div>
             </Grid>
           )
