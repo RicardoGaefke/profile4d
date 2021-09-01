@@ -26,6 +26,20 @@ module.exports = async (callback, url) => {
       console.log('goto: ', err);
     });
 
+  await page.$eval('body', (element) => {
+    const eventChange = new Event('change');
+    const eventPrint = new Event('beforeprint');
+    element.dispatchEvent(eventChange);
+    element.dispatchEvent(eventPrint);
+  });
+
+  await page.$eval('#printingReport', (element) => {
+    const eventChange = new Event('change');
+    const eventPrint = new Event('beforeprint');
+    element.dispatchEvent(eventChange);
+    element.dispatchEvent(eventPrint);
+  });
+
   const buffer = await page.pdf({
     // path: 'hn.pdf',
     format: 'a4',
