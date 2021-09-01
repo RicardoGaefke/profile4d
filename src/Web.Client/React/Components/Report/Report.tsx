@@ -66,6 +66,7 @@ const Report = withTranslation()(
         direction="column"
         justify="center"
         alignItems="center"
+        id="printingReport"
       >
         {
           (loading) ? (

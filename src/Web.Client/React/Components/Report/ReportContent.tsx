@@ -378,7 +378,7 @@ const ReportContent = withTranslation()(
             ))}
           </div>
         )}
-        {(data.Chave?.Type as number === 4) && (
+        {(data.Chave?.Type as number >= 3) && (
           <div id="Profissional">
             {/* análise profissional */}
 
