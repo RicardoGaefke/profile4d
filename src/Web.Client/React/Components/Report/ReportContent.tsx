@@ -320,7 +320,7 @@ const ReportContent = withTranslation()(
             <ReportText text={dynamicText(49)} />
           </div>
         )}
-        {(data.Chave?.Type as number === 3) && (
+        {(data.Chave?.Type as number === 4) && (
           <div id="Avancada">
             {/* parte avançada */}
 
