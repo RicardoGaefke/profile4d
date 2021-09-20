@@ -27,7 +27,7 @@ export default withTranslation()(
           <Card className={classes.card}>
             <CardMedia>
               <MyImage
-                src="https://api.staging.profile4d.com/firstpage/logo"
+                src="https://api.staging.meuperfil4d.com.br/firstpage/logo"
                 className={classes.image}
                 alt={t('FirstPageImages:logo')}
               />
@@ -50,7 +50,7 @@ export default withTranslation()(
           <Card className={classes.card}>
             <CardMedia>
               <MyImage
-                src="https://api.staging.profile4d.com/firstpage/logo"
+                src="https://api.staging.meuperfil4d.com.br/firstpage/logo"
                 className={classes.image}
                 alt={t('FirstPageImages:logo')}
               />

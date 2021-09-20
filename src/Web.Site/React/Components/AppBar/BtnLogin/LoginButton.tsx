@@ -18,12 +18,12 @@ export default withTranslation()(
       }
 
       if (window.location.href.includes('staging')) {
-        const loginUrl = new Href('www.staging.profile4d.com');
+        const loginUrl = new Href('www.staging.meuperfil4d.com.br');
         window.location.href = `https://${loginUrl.toLogin()}`;
         return;
       }
 
-      window.location.href = 'https://identity.profile4d.com';
+      window.location.href = 'https://identity.meuperfil4d.com.br';
     };
 
     return (

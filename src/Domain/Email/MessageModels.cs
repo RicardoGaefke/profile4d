@@ -29,11 +29,11 @@ namespace Profile4d.Domain
       }
       else if (domain.Contains("staging"))
       {
-        address.Append("client.staging.profile4d.com");
+        address.Append("client.staging.meuperfil4d.com.br");
       }
       else
       {
-        address.Append("client.profile4d.com");
+        address.Append("client.meuperfil4d.com.br");
       }
 
       return address.ToString();
