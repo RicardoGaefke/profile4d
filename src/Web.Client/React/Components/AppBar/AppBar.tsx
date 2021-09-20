@@ -25,7 +25,10 @@ export default (): React.ReactElement<{}> => {
               to="/"
               id="myProfile"
             >
-              Profile4d
+              <img
+                src="/img/logo.png"
+                alt="Profile4d"
+              />
             </Link>
           </Typography>
           <LoginButton />
