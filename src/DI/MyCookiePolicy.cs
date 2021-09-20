@@ -37,7 +37,7 @@ public class CustomCookieAuthenticationEvents : CookieAuthenticationEvents
     context.Response.StatusCode = 403;
 
     string _host = context.Request.Host.ToString();
-    string _identity = "https://identity.profile4d.com/403";
+    string _identity = "https://identity.meuperfil4d.com.br/403";
 
     if (_host.Contains("localhost"))
     {
@@ -46,7 +46,7 @@ public class CustomCookieAuthenticationEvents : CookieAuthenticationEvents
 
     if (_host.Contains("staging"))
     {
-      _identity = "https://identity.staging.profile4d.com/403";
+      _identity = "https://identity.staging.meuperfil4d.com.br/403";
     }
 
     if (!_host.Contains("api") && !_host.Contains("localhost:5065"))
@@ -60,7 +60,7 @@ public class CustomCookieAuthenticationEvents : CookieAuthenticationEvents
   public override Task RedirectToLogin(RedirectContext<CookieAuthenticationOptions> context)
   {
     string _host = context.Request.Host.ToString();
-    string _identity = "identity.profile4d.com";
+    string _identity = "identity.meuperfil4d.com.br";
 
     if (_host.Contains("localhost"))
     {
@@ -69,7 +69,7 @@ public class CustomCookieAuthenticationEvents : CookieAuthenticationEvents
 
     if (_host.Contains("staging"))
     {
-      _identity = "identity.staging.profile4d.com";
+      _identity = "identity.staging.meuperfil4d.com.br";
     }
 
     string _url = context.Request.Host + context.Request.Path;

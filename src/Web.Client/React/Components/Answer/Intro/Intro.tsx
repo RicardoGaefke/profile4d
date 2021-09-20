@@ -69,7 +69,7 @@ const Answer = withTranslation()(
                 className={classes.item}
               >
                 <img
-                  src={`https://api.staging.profile4d.com/Image/Show/${intro.Image.Id?.toString()}.png`}
+                  src={`https://api.staging.meuperfil4d.com.br/Image/Show/${intro.Image.Id?.toString()}.png`}
                   alt={(Language === 'ENG') ? intro.Image.Alt_ENG : intro.Image.Alt_PT}
                   className={classes.image}
                 />
