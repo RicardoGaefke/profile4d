@@ -431,5 +431,42 @@ namespace Profile4d.Data
         }
       }
     }
+
+    public List<Key> ChavesNaoRecebidasPorConsultor(User user)
+    {
+      List<Key> _return = new List<Key>();
+
+      using (SqlConnection Con = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand())
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Connection = Con;
+          Cmd.CommandText = "[dbo].[spGetChavesNaoRecebidas]";
+
+          Cmd.Parameters.AddWithValue("@Consultor", user.Id);
+
+          Con.Open();
+
+          using (SqlDataReader MyDR = Cmd.ExecuteReader())
+          {
+            while (MyDR.Read())
+            {
+              Key key = new Key()
+              {
+                Guid = MyDR.GetGuid(0).ToString(),
+                Email = MyDR.GetString(1),
+                Type = MyDR.GetInt32(2),
+                SentWhen = MyDR.GetDateTime(3),
+              };
+
+              _return.Add(key);
+            }
+          }
+        }
+      }
+
+      return _return;
+    }
   }
 }
