@@ -360,6 +360,26 @@ namespace Profile4d.Web.Api.Controllers
       }
     }
 
+    [Authorize(Roles = "Admin")]
+    [HttpGet("ChavesNaoRecebidasPorConsultor")]
+    public ActionResult<BasicReturn<List<Key>>> ChavesNaoRecebidasPorConsultor()
+    {
+      try
+      {
+        User user = new User(Convert.ToInt32(_user));
+
+        return new BasicReturn<List<Key>>(true, _sendKey.ChavesNaoRecebidasPorConsultor(user));
+      }
+      catch (SqlException ex)
+      {
+        return new BasicReturn<List<Key>>(false, ex.Message, $"SQL: {ex.StackTrace}");
+      }
+      catch (Exception ex)
+      {
+        return new BasicReturn<List<Key>>(false, ex.Message, "Erro");
+      }
+    }
+
     [Authorize]
     [HttpPost("AlterarTipoDeLicenca")]
     public ActionResult<BasicReturn> AlterarTipoDeLicenca(Key data)
