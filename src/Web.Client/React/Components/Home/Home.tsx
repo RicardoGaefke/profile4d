@@ -4,6 +4,7 @@ import RequestKey from './RequestKey/RequestKey';
 import useStyles from './Styles';
 import Assessment from './Assessments/Assessments';
 import Licencas from './Licencas/Licencas';
+import NaoRecebidas from './NaoRecebidas/NaoRecebidas';
 
 const Home = (): JSX.Element => {
   const classes = useStyles();
@@ -24,16 +25,6 @@ const Home = (): JSX.Element => {
         alignItems="center"
         className={classes.inner}
       >
-        <Grid
-          direction="column"
-          item
-          container
-          justify="center"
-          alignItems="center"
-          className={classes.item}
-        >
-          {null}
-        </Grid>
         <Grid
           direction="column"
           item
@@ -63,6 +54,16 @@ const Home = (): JSX.Element => {
           className={classes.item}
         >
           <Licencas />
+        </Grid>
+        <Grid
+          direction="column"
+          item
+          container
+          justify="center"
+          alignItems="center"
+          className={classes.item}
+        >
+          <NaoRecebidas />
         </Grid>
       </Grid>
     </Grid>
