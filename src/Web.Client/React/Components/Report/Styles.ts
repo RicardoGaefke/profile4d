@@ -128,12 +128,6 @@ export default makeStyles((theme: Theme): IStyles => ({
     maxHeight: 400,
     marginLeft: 'auto',
     marginRight: 'auto',
-    '@media print': {
-      maxWidth: '100%',
-      maxHeight: 400,
-      marginLeft: 'auto',
-      marginRight: 'auto',
-    },
   },
   chartImageSmall: {
     maxWidth: '100%',

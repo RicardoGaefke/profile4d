@@ -12,9 +12,9 @@ export default class Hosts {
     if (this.Host.includes('localhost')) {
       myHost = 'https://localhost:5065/';
     } else if (this.Host.includes('staging')) {
-      myHost = 'https://api.staging.profile4d.com/';
+      myHost = 'https://api.staging.meuperfil4d.com.br/';
     } else {
-      myHost = 'https://api.profile4d.com/';
+      myHost = 'https://api.meuperfil4d.com.br/';
     }
 
     return myHost;
@@ -26,9 +26,9 @@ export default class Hosts {
     if (this.Host.includes('localhost')) {
       myHost = 'https://localhost:5050/';
     } else if (this.Host.includes('staging')) {
-      myHost = 'https://www.staging.profile4d.com/';
+      myHost = 'https://www.staging.meuperfil4d.com.br/';
     } else {
-      myHost = 'https://www.profile4d.com/';
+      myHost = 'https://www.meuperfil4d.com.br/';
     }
 
     return myHost;
@@ -40,9 +40,9 @@ export default class Hosts {
     if (this.Host.includes('localhost')) {
       myHost = 'https://localhost:5055/';
     } else if (this.Host.includes('staging')) {
-      myHost = 'https://identity.staging.profile4d.com/';
+      myHost = 'https://identity.staging.meuperfil4d.com.br/';
     } else {
-      myHost = 'https://identity.profile4d.com/';
+      myHost = 'https://identity.meuperfil4d.com.br/';
     }
 
     return myHost;
@@ -54,9 +54,9 @@ export default class Hosts {
     if (this.Host.includes('localhost')) {
       myHost = 'https://localhost:5060/';
     } else if (this.Host.includes('staging')) {
-      myHost = 'https://admin.staging.profile4d.com/';
+      myHost = 'https://admin.staging.meuperfil4d.com.br/';
     } else {
-      myHost = 'https://admin.profile4d.com/';
+      myHost = 'https://admin.meuperfil4d.com.br/';
     }
 
     return myHost;
