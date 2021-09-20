@@ -22,7 +22,7 @@ namespace Profile4d.Email
 
       var msg = new SendGridMessage()
       {
-        From = new EmailAddress("naoresponda@profile4d.com", "Atendimento Profile4D"),
+        From = new EmailAddress("naoresponda@meuperfil4d.com.br", "Atendimento MeuPerfil4D"),
         Subject = message.Content.Subject,
         HtmlContent = message.Content.Body
       };
@@ -47,7 +47,7 @@ namespace Profile4d.Email
 
       var msg = new SendGridMessage()
       {
-        From = new EmailAddress("naoresponda@profile4d.com", "Atendimento Profile4D"),
+        From = new EmailAddress("naoresponda@meuperfil4d.com.br", "Atendimento MeuPerfil4D"),
         Subject = "Email Poison",
         HtmlContent = $"<strong>Email poison: {message}</strong>"
       };
@@ -64,7 +64,7 @@ namespace Profile4d.Email
       SendGridClient client = new SendGridClient(_connectionStrings.Value.SendGrid);
 
       var msg = new SendGridMessage();
-      msg.SetFrom(new EmailAddress("suporte@mi3dplus.com", "Suporte MI3D Plus"));
+      msg.SetFrom(new EmailAddress("suporte@mi3dplus.com", "Atendimento MeuPerfil4D"));
       msg.SetSubject(email.Subject);
       msg.AddContent(MimeType.Html, email.Body);
       msg.AddTo(new EmailAddress(email.To.First().Address, email.To.First().DisplayName));
