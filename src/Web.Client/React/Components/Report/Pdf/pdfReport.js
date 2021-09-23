@@ -26,19 +26,29 @@ module.exports = async (callback, url) => {
       console.log('goto: ', err);
     });
 
-  await page.$eval('body', (element) => {
-    const eventChange = new Event('change');
-    const eventPrint = new Event('beforeprint');
-    element.dispatchEvent(eventChange);
-    element.dispatchEvent(eventPrint);
+  await page.evaluate(async () => {
+    let scrollPosition = 0;
+    let documentHeight = document.body.scrollHeight;
+
+    while (documentHeight > scrollPosition) {
+      window.scrollBy(0, documentHeight);
+      // eslint-disable-next-line no-await-in-loop
+      await new Promise((resolve) => {
+        setTimeout(resolve, 100);
+      });
+      scrollPosition = documentHeight;
+      documentHeight = document.body.scrollHeight;
+    }
   });
 
-  await page.$eval('#printingReport', (element) => {
-    const eventChange = new Event('change');
-    const eventPrint = new Event('beforeprint');
-    element.dispatchEvent(eventChange);
-    element.dispatchEvent(eventPrint);
-  });
+  // await page.evaluate(async () => {
+  //   const matches = document.querySelectorAll('img');
+
+  //   matches.forEach((canv) => {
+  //     // eslint-disable-next-line no-param-reassign
+  //     canv.style.maxWidth = '80%';
+  //   });
+  // });
 
   const buffer = await page.pdf({
     // path: 'hn.pdf',

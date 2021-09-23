@@ -16,7 +16,6 @@ import Chart1 from './Chart1CanvasV2';
 import Chart2 from './Chart2CanvasV2';
 import Chart3 from './Chart3CanvasV2';
 import Chart4 from './Chart4CanvasV2';
-import Chart4pdf from './Chart4CanvasV2pdf';
 import Chart5 from './Chart5CanvasV2';
 import Chart6 from './Chart6CanvasV2';
 import Chart7 from './Chart7CanvasV2';
@@ -279,19 +278,10 @@ const ReportContent = withTranslation()(
             <ReportTitle title={staticTitle(65)} breakPage />
 
             <div className={classes.chart}>
-              {
-                (pdf) ? (
-                  <Chart4pdf
-                    profiles={data.Profiles as IProfiles[]}
-                    printing={printing}
-                  />
-                ) : (
-                  <Chart4
-                    profiles={data.Profiles as IProfiles[]}
-                    printing={printing}
-                  />
-                )
-              }
+              <Chart4
+                profiles={data.Profiles as IProfiles[]}
+                printing={printing}
+              />
             </div>
 
             <ReportText text={staticText(61)} />
