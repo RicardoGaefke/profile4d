@@ -55,12 +55,29 @@ const ReportContent = withTranslation()(
 
     const [printing, setPrinting] = useState<boolean>(!!(pdf));
 
+    const scrollPdf = async (): Promise<void> => {
+      let scrollPosition = 0;
+      let documentHeight = document.body.scrollHeight;
+
+      while (documentHeight > scrollPosition) {
+        window.scrollBy(0, documentHeight);
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise((resolve): void => {
+          setTimeout(resolve, 100);
+        });
+        scrollPosition = documentHeight;
+        documentHeight = document.body.scrollHeight;
+      }
+
+      setPrinting(true);
+    };
+
     useEffect((): void => {
       window.onbeforeprint = (): void => { setPrinting(true); };
       window.onafterprint = (): void => { setPrinting(false); };
 
       if (pdf) {
-        setPrinting(true);
+        scrollPdf();
       }
     }, []);
 
