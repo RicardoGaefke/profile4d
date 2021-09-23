@@ -41,6 +41,15 @@ module.exports = async (callback, url) => {
     }
   });
 
+  // await page.evaluate(async () => {
+  //   const matches = document.querySelectorAll('img');
+
+  //   matches.forEach((canv) => {
+  //     // eslint-disable-next-line no-param-reassign
+  //     canv.style.maxWidth = '80%';
+  //   });
+  // });
+
   const buffer = await page.pdf({
     // path: 'hn.pdf',
     format: 'a4',
