@@ -312,7 +312,7 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
         },
       },
     },
-  } as unknown as ChartConfiguration<'radar', string[], string>;
+  } as ChartConfiguration<'radar', string[], string>;
 
   const refChart = useRef<HTMLCanvasElement>(null);
   const refImage = useRef<HTMLImageElement>(null);
@@ -322,6 +322,7 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
       const newChartInstance = new Chart(refChart.current, chartConfig);
 
       newChartInstance.options.animation = {
+        duration: 5,
         onComplete: (): void => {
           if (refImage && refImage.current) {
             refImage.current.src = newChartInstance.toBase64Image();
