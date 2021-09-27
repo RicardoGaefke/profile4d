@@ -22,10 +22,10 @@ namespace Profile4d.Web.Identity.Controllers
 
     public IActionResult Index()
     {
-      ViewData["Title"] = "Profile4D";
+      ViewData["Title"] = "Meu Perfil 4D";
 
-      Request.HttpContext.Response.Headers.Add("Title", "Profile 4D");
-      Request.HttpContext.Response.Headers.Add("Description", "Profile 4D description");
+      Request.HttpContext.Response.Headers.Add("Title", "Meu Perfil 4D");
+      Request.HttpContext.Response.Headers.Add("Description", "Meu Perfil 4D description");
 
       string _name = "";
       string _email = "";
@@ -41,8 +41,8 @@ namespace Profile4d.Web.Identity.Controllers
 
       ViewBag.Page = JsonSerializer.Serialize(new
       {
-        Title = "Profile4D",
-        Description = "Profile4d description",
+        Title = "Meu Perfil 4D",
+        Description = "Meu Perfil 4D description",
         IsAuthenticated = Request.HttpContext.User.Identity.IsAuthenticated,
         Name = _name,
         Email = _email,

@@ -19,15 +19,15 @@ namespace Profile4d.Web.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public IActionResult Index()
     {
-      ViewData["Title"] = "Profile4D";
+      ViewData["Title"] = "Meu Perfil 4D";
 
-      Request.HttpContext.Response.Headers.Add("Title", "Profile 4D");
-      Request.HttpContext.Response.Headers.Add("Description", "Profile 4D description");
+      Request.HttpContext.Response.Headers.Add("Title", "Meu Perfil 4D");
+      Request.HttpContext.Response.Headers.Add("Description", "Meu Perfil 4D");
 
       ViewBag.Page = JsonSerializer.Serialize(new
       {
-        Title = "Profile4D",
-        Description = "Profile4d description",
+        Title = "Meu Perfil 4D",
+        Description = "Meu Perfil 4D description",
         IsAuthenticated = false,
         Name = "",
         Email = "",
