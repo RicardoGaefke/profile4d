@@ -320,7 +320,7 @@ namespace Profile4d.Web.Api.Controllers
       }
     }
 
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     [HttpGet("GetActivesByUserGuid/{userGuid}")]
     public ActionResult<BasicReturn<List<Key>>> GetActivesByUserGuid(string userGuid)
     {
@@ -340,7 +340,7 @@ namespace Profile4d.Web.Api.Controllers
       }
     }
 
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     [HttpGet("GetActivesByConsultantGuid/{userGuid}")]
     public ActionResult<BasicReturn<List<Key>>> GetActivesByConsultantGuid(string userGuid)
     {
@@ -360,7 +360,7 @@ namespace Profile4d.Web.Api.Controllers
       }
     }
 
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     [HttpGet("ChavesNaoRecebidasPorConsultor")]
     public ActionResult<BasicReturn<List<Key>>> ChavesNaoRecebidasPorConsultor()
     {

@@ -17,6 +17,12 @@ module.exports = async (callback, url) => {
       console.log('page: ', err);
     });
 
+  await page.setViewport({
+    width: 1280,
+    height: 1024,
+    deviceScaleFactor: 1,
+  });
+
   await page.goto(`${url}/pdf`, {
     waitUntil: ['load', 'domcontentloaded', 'networkidle0', 'networkidle2'],
     timeout: 0,
@@ -26,20 +32,20 @@ module.exports = async (callback, url) => {
       console.log('goto: ', err);
     });
 
-  // await page.evaluate(async () => {
-  //   let scrollPosition = 0;
-  //   let documentHeight = document.body.scrollHeight;
+  await page.evaluate(async () => {
+    let scrollPosition = 0;
+    let documentHeight = document.body.scrollHeight;
 
-  //   while (documentHeight > scrollPosition) {
-  //     window.scrollBy(0, documentHeight);
-  //     // eslint-disable-next-line no-await-in-loop
-  //     await new Promise((resolve) => {
-  //       setTimeout(resolve, 100);
-  //     });
-  //     scrollPosition = documentHeight;
-  //     documentHeight = document.body.scrollHeight;
-  //   }
-  // });
+    while (documentHeight > scrollPosition) {
+      window.scrollBy(0, documentHeight);
+      // eslint-disable-next-line no-await-in-loop
+      await new Promise((resolve) => {
+        setTimeout(resolve, 100);
+      });
+      scrollPosition = documentHeight;
+      documentHeight = document.body.scrollHeight;
+    }
+  });
 
   // await page.evaluate(async () => {
   //   const matches = document.querySelectorAll('img');
