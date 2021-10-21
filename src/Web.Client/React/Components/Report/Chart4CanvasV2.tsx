@@ -322,7 +322,7 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
       const newChartInstance = new Chart(refChart.current, chartConfig);
 
       newChartInstance.options.animation = {
-        duration: 5,
+        duration: 0,
         onComplete: (): void => {
           if (refImage && refImage.current) {
             refImage.current.src = newChartInstance.toBase64Image();
