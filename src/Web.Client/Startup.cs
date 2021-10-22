@@ -45,6 +45,7 @@ namespace Profile4d.Web.Client
       
       services.AddNodeServices(options =>
         {
+          options.InvocationTimeoutMilliseconds = 600000;
           if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
           {
             options.ProjectPath = Path.GetFullPath("/app");
