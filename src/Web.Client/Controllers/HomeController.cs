@@ -75,6 +75,7 @@ namespace Profile4d.Web.Client
 
     [AllowAnonymous]
     [HttpGet("GetPdfFromReport/{url}")]
+    [ResponseCache(Duration = 31536000)]
     public async Task<ActionResult<object>> GetPdfFromReport([FromServices]INodeServices nodeServices, string url)
     {
       try
