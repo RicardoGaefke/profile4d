@@ -141,10 +141,10 @@ namespace Profile4d.Domain
       body.AppendLine();
       body.Append($@"<p>
                       <a
-                        href=""https://{ServerAddress(domain)}/remember/{data.Guid}/{data.Id}""
+                        href=""https://identity.meuperfil4d.com.br/remember/{data.Guid}/{data.Id}""
                         title='Profile4D'
                       >
-                        https://{ServerAddress(domain)}/remember/{data.Guid}/{data.Id}
+                        https://identity.meuperfil4d.com.br/remember/{data.Guid}/{data.Id}
                       </a>
                   </p>");
 
