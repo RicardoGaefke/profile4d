@@ -35,7 +35,7 @@ export default withTranslation()(
           </Typography>
           <Typography variant="overline" className={classes.paragraph} component="p" gutterBottom>
             Comecei a desenvolver o Método MeuPerfil4d em 2013, inspirando-me em 6 fontes de saberes mundialmente reconhecidos:
-            eurociência, Psicologia Analítica, Psicologia Positiva, Eneagrama,  Psicologia corporal e Inteligência espiritual,
+            Neurociência, Psicologia Analítica, Psicologia Positiva, Eneagrama,  Psicologia corporal e Inteligência espiritual,
             com o objetivo de tornar o processo de desenvolvimento humano mais fácil, rápido e assertivo. Desde o seu lançamento,
             o MeuPerfil4d foi Reconhecido por profissionais que atuam na área de desenvolvimento humano, como uma das ferramentas
             mais completas e eficientes do mercado.
