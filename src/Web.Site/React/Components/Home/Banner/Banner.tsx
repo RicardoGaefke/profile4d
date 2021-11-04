@@ -14,6 +14,15 @@ export default withTranslation()(
     const classes = useStyles({});
     setLanguage();
 
+    const goToClient = (): void => {
+      if (window.location.href.includes('localhost')) {
+        window.location.href = 'https://localhost:5080/';
+        return;
+      }
+
+      window.location.href = 'https://client.meuperfil4d.com.br';
+    };
+
     return (
       <div className={classes.main}>
         <Container maxWidth="md" id="MyNestedContainer">
@@ -31,6 +40,15 @@ export default withTranslation()(
               to="/about/"
             >
               {t('HomeBanner:btn.label')}
+            </Button>
+            <Button
+              variant="outlined"
+              size="large"
+              className={classes.btn}
+              title={t('HomeBanner:client.title')}
+              onClick={(): void => { goToClient(); }}
+            >
+              {t('HomeBanner:client.label')}
             </Button>
           </div>
         </Container>

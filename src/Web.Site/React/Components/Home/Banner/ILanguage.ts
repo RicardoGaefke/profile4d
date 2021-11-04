@@ -4,4 +4,8 @@ export interface ILanguage {
     title: string,
     label: string,
   }
+  client: {
+    title: string,
+    label: string,
+  }
 }

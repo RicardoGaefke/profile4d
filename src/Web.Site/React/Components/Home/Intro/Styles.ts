@@ -4,6 +4,9 @@ import { makeStyles, Theme } from '@material-ui/core';
 interface IStyles {
   main: {},
   text: {},
+  paragraph: {},
+  imgContainer: {},
+  img: {},
 }
 
 // eslint-disable-next-line no-unused-vars
@@ -23,5 +26,21 @@ export default makeStyles((theme: Theme): IStyles => ({
       fontWeight: 'bold',
       float: 'left',
     },
+  },
+  paragraph: {
+    marginTop: 20,
+    fontWeight: 'normal',
+    fontSize: '.9rem',
+    textAlign: 'justify',
+  },
+  imgContainer: {
+    alignContent: 'center',
+    marginLeft: '20%',
+    marginRight: '20%',
+    marginTop: 40,
+    marginBottom: 40,
+  },
+  img: {
+    maxWidth: '100%',
   },
 }));
