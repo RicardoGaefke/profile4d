@@ -40,6 +40,7 @@ export default makeStyles((theme: Theme): IStyles => ({
   },
   btn: {
     marginTop: 50,
+    marginRight: 20,
     color: (theme.palette.type === 'dark') ? theme.palette.common.white : theme.palette.common.black,
     fontWeight: 'bold',
     border: (theme.palette.type === 'dark') ? 'solid 3px white' : 'solid 3px black',
