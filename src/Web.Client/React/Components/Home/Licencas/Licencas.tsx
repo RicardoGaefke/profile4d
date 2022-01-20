@@ -156,14 +156,14 @@ const Licencas = withTranslation()(
             />
             <CardsProfile
               CardsText={((licencas.Available === undefined) ? '0' : licencas.Available.toString())}
-              CardsProfileTitle="Disponíveis"
+              CardsProfileTitle="Usadas"
             />
             <CardsProfile
               CardsText={
                 ((licencas.Total === undefined)
                   ? '0'
                   : (licencas.Total - (licencas.Available || 0)).toString())}
-              CardsProfileTitle="Usados"
+              CardsProfileTitle="Disponíveis"
             />
           </div>
         </Grid>
