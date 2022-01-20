@@ -49,11 +49,11 @@ const AssessmentsList = withTranslation()(
           <Table aria-label="Assessments list">
             <TableHead>
               <TableRow>
+                <TableCell>{t('Assessment:item.header.action')}</TableCell>
                 <TableCell>Enviada por</TableCell>
                 <TableCell>ID</TableCell>
                 <TableCell>Status</TableCell>
                 <TableCell>Disponível?</TableCell>
-                <TableCell>{t('Assessment:item.header.action')}</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -69,35 +69,6 @@ const AssessmentsList = withTranslation()(
                 ) : (
                   keys.map((key): React.ReactNode => (
                     <TableRow key={key.Id}>
-                      <TableCell>
-                        <Typography>
-                          {key.Email}
-                        </Typography>
-                      </TableCell>
-                      <TableCell>
-                        <Typography>
-                          {key.Guid}
-                        </Typography>
-                      </TableCell>
-                      <TableCell>
-                        <Typography variant="body1">
-                          {
-                            // eslint-disable-next-line no-nested-ternary
-                            (key.Started?.includes('0001')) ? (
-                              t('Assessment:item.status.0.text')
-                            ) : (
-                              (key.Finished?.includes('0001')) ? t('Assessment:item.status.1.text') : t('Assessment:item.status.5.text')
-                            )
-                          }
-                        </Typography>
-                      </TableCell>
-                      <TableCell>
-                        <Typography>
-                          {
-                            (key.BlockResult) ? 'Aguardando liberação' : 'Liberada'
-                          }
-                        </Typography>
-                      </TableCell>
                       <TableCell>
                         {
                           (key.Finished?.includes('0001')) ? (
@@ -132,6 +103,35 @@ const AssessmentsList = withTranslation()(
                             </Button>
                           )
                         }
+                      </TableCell>
+                      <TableCell>
+                        <Typography>
+                          {key.Email}
+                        </Typography>
+                      </TableCell>
+                      <TableCell>
+                        <Typography>
+                          {key.Guid}
+                        </Typography>
+                      </TableCell>
+                      <TableCell>
+                        <Typography variant="body1">
+                          {
+                            // eslint-disable-next-line no-nested-ternary
+                            (key.Started?.includes('0001')) ? (
+                              t('Assessment:item.status.0.text')
+                            ) : (
+                              (key.Finished?.includes('0001')) ? t('Assessment:item.status.1.text') : t('Assessment:item.status.5.text')
+                            )
+                          }
+                        </Typography>
+                      </TableCell>
+                      <TableCell>
+                        <Typography>
+                          {
+                            (key.BlockResult) ? 'Aguardando liberação' : 'Liberada'
+                          }
+                        </Typography>
                       </TableCell>
                     </TableRow>
                   ))
