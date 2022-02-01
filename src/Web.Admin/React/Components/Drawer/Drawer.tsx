@@ -38,6 +38,26 @@ export default withTranslation()(
             subheader={
               (
                 <ListSubheader component="div" id="fixed-content-header">
+                  Gerenciar clientes
+                </ListSubheader>
+              )
+            }
+          >
+            <ListItem
+              button
+              title="Gerenciar clientes"
+              className={classes.navlink}
+              onClick={(): void => { window.location.href = 'https://clientes.meuperfil4d.com.br/identity'; }}
+            >
+              <ListItemText primary="Gerenciar clientes" />
+            </ListItem>
+          </List>
+          <List
+            component="nav"
+            aria-labelledby="fixed-content-header"
+            subheader={
+              (
+                <ListSubheader component="div" id="fixed-content-header">
                   Admin users
                 </ListSubheader>
               )

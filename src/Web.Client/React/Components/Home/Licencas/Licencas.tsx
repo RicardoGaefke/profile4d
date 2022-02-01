@@ -137,7 +137,7 @@ const Licencas = withTranslation()(
             gutterBottom
             style={{ paddingTop: 16 }}
           >
-            Tuas licenças
+            Licenças
           </Typography>
         </Grid>
         <Grid
