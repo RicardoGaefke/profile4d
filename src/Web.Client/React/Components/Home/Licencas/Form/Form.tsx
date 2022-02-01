@@ -152,8 +152,8 @@ export default (props: IMyForm): React.ReactElement<IMyForm> => {
             >
               <MenuItem value={1}>Degustação</MenuItem>
               <MenuItem value={2}>Licença Pessoal</MenuItem>
-              <MenuItem value={3}>Licença Avançada</MenuItem>
-              <MenuItem value={4}>Licença Profissional</MenuItem>
+              <MenuItem value={3}>Licença Profissional</MenuItem>
+              <MenuItem value={4}>Licença Avançada</MenuItem>
             </Select>
           </FormControl>
         </Grid>
