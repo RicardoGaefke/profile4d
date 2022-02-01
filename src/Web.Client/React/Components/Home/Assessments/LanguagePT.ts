@@ -2,7 +2,7 @@
 import { ILanguage } from './ILanguage';
 
 export default {
-  title: 'Tuas avaliações',
+  title: 'Avaliações',
   tabs: {
     available: 'Disponíveis',
     canceled: 'Canceladas',
