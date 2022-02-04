@@ -115,100 +115,106 @@ const Licencas = withTranslation()(
         </Grid>
       </Grid>
     ) : (
-      <Grid
-        container
-        justify="center"
-        alignContent="center"
-        direction="column"
-      >
-        <div />
-        <Grid
-          item
-          container
-          alignItems="center"
-          justify="center"
-          xs={12}
-          md={12}
-          lg={12}
-        >
-          <Typography
-            variant="h4"
-            align="center"
-            gutterBottom
-            style={{ paddingTop: 16 }}
-          >
-            Licenças
-          </Typography>
-        </Grid>
-        <Grid
-          item
-          container
-          alignItems="center"
-          justify="center"
-          xs={12}
-          md={12}
-          lg={12}
-        >
-          <div className={classes.root}>
-            <CardsProfile
-              CardsText={((licencas.Total === undefined) ? '0' : licencas.Total.toString())}
-              CardsProfileTitle="Total"
-            />
-            <CardsProfile
-              CardsText={((licencas.Available === undefined) ? '0' : licencas.Available.toString())}
-              CardsProfileTitle="Usadas"
-            />
-            <CardsProfile
-              CardsText={
-                ((licencas.Total === undefined)
-                  ? '0'
-                  : (licencas.Total - (licencas.Available || 0)).toString())}
-              CardsProfileTitle="Disponíveis"
-            />
-          </div>
-        </Grid>
-        <Grid
-          item
-          container
-          alignItems="center"
-          justify="center"
-          xs={12}
-          md={12}
-          lg={12}
-        >
-          <Typography
-            variant="h4"
-            align="center"
-            gutterBottom
-            style={{ paddingTop: 26 }}
-          >
-            Enviar avaliação
-          </Typography>
-        </Grid>
-        <Grid
-          item
-          container
-          xs={12}
-          md={12}
-          lg={12}
-        >
-          <EnviaLicencas />
-        </Grid>
-        <Grid
-          item
-          container
-          xs={12}
-          md={12}
-          lg={12}
-        >
-          <ListaDeLicencas
-            keys={licencas.Keys as IKey[]}
-            onDesbloquear={desbloquearChave}
-            onCancelar={cancelarChave}
-            onAlterar={alterarTipoDeChave}
-          />
-        </Grid>
-      </Grid>
+      <>
+        {
+          (licencas.Total && licencas.Total > 0) && (
+            <Grid
+              container
+              justify="center"
+              alignContent="center"
+              direction="column"
+            >
+              <div />
+              <Grid
+                item
+                container
+                alignItems="center"
+                justify="center"
+                xs={12}
+                md={12}
+                lg={12}
+              >
+                <Typography
+                  variant="h4"
+                  align="center"
+                  gutterBottom
+                  style={{ paddingTop: 16 }}
+                >
+                  Licenças
+                </Typography>
+              </Grid>
+              <Grid
+                item
+                container
+                alignItems="center"
+                justify="center"
+                xs={12}
+                md={12}
+                lg={12}
+              >
+                <div className={classes.root}>
+                  <CardsProfile
+                    CardsText={((licencas.Total === undefined) ? '0' : licencas.Total.toString())}
+                    CardsProfileTitle="Total"
+                  />
+                  <CardsProfile
+                    CardsText={((licencas.Available === undefined) ? '0' : licencas.Available.toString())}
+                    CardsProfileTitle="Usadas"
+                  />
+                  <CardsProfile
+                    CardsText={
+                      ((licencas.Total === undefined)
+                        ? '0'
+                        : (licencas.Total - (licencas.Available || 0)).toString())}
+                    CardsProfileTitle="Disponíveis"
+                  />
+                </div>
+              </Grid>
+              <Grid
+                item
+                container
+                alignItems="center"
+                justify="center"
+                xs={12}
+                md={12}
+                lg={12}
+              >
+                <Typography
+                  variant="h4"
+                  align="center"
+                  gutterBottom
+                  style={{ paddingTop: 26 }}
+                >
+                  Enviar avaliação
+                </Typography>
+              </Grid>
+              <Grid
+                item
+                container
+                xs={12}
+                md={12}
+                lg={12}
+              >
+                <EnviaLicencas />
+              </Grid>
+              <Grid
+                item
+                container
+                xs={12}
+                md={12}
+                lg={12}
+              >
+                <ListaDeLicencas
+                  keys={licencas.Keys as IKey[]}
+                  onDesbloquear={desbloquearChave}
+                  onCancelar={cancelarChave}
+                  onAlterar={alterarTipoDeChave}
+                />
+              </Grid>
+            </Grid>
+          )
+        }
+      </>
     );
   },
 );
