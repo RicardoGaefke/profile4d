@@ -117,7 +117,7 @@ const Licencas = withTranslation()(
     ) : (
       <>
         {
-          (licencas.Total && licencas.Total > 0) && (
+          (licencas.Available && licencas.Available > 0) && (
             <Grid
               container
               justify="center"
