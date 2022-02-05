@@ -93,45 +93,51 @@ const NaoRecebidas = withTranslation()(
         </Grid>
       </Grid>
     ) : (
-      <Grid
-        container
-        justify="center"
-        alignContent="center"
-        direction="column"
-      >
-        <div />
-        <Grid
-          item
-          container
-          alignItems="center"
-          justify="center"
-          xs={12}
-          md={12}
-          lg={12}
-        >
-          <Typography
-            variant="h4"
-            align="center"
-            gutterBottom
-            style={{ paddingTop: 16 }}
-          >
-            Licenças não entregues
-          </Typography>
-        </Grid>
-        <Grid
-          item
-          container
-          xs={12}
-          md={12}
-          lg={12}
-        >
-          <NaoRecebidasLista
-            keys={licencas as IKey[]}
-            onCancelar={cancelarChave}
-            onAlterar={alterarTipoDeChave}
-          />
-        </Grid>
-      </Grid>
+      <>
+        {
+          (licencas.length > 0) && (
+            <Grid
+              container
+              justify="center"
+              alignContent="center"
+              direction="column"
+            >
+              <div />
+              <Grid
+                item
+                container
+                alignItems="center"
+                justify="center"
+                xs={12}
+                md={12}
+                lg={12}
+              >
+                <Typography
+                  variant="h4"
+                  align="center"
+                  gutterBottom
+                  style={{ paddingTop: 16 }}
+                >
+                  Licenças não entregues
+                </Typography>
+              </Grid>
+              <Grid
+                item
+                container
+                xs={12}
+                md={12}
+                lg={12}
+              >
+                <NaoRecebidasLista
+                  keys={licencas as IKey[]}
+                  onCancelar={cancelarChave}
+                  onAlterar={alterarTipoDeChave}
+                />
+              </Grid>
+            </Grid>
+          )
+        }
+      </>
     );
   },
 );
