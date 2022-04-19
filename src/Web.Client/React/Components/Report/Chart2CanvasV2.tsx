@@ -33,28 +33,28 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
 
   const data = {
     labels: [
-      `Comandante - ${((comandante / 165) * 100).toFixed(2)}%`,
-      `Mediador - ${((mediador / 165) * 100).toFixed(2)}%`,
-      `Organizador - ${((organizador / 165) * 100).toFixed(2)}%`,
-      `Prestativo - ${((prestativo / 165) * 100).toFixed(2)}%`,
-      `Realizador - ${((realizador / 165) * 100).toFixed(2)}%`,
-      `Criativo - ${((criativo / 165) * 100).toFixed(2)}%`,
-      `Analítico - ${((analitico / 165) * 100).toFixed(2)}%`,
-      `Planejador - ${((planejador / 165) * 100).toFixed(2)}%`,
-      `Visionário - ${((visionario / 165) * 100).toFixed(2)}%`,
+      `Comandante - ${((comandante / 55) * 100).toFixed(2)}%`,
+      `Mediador - ${((mediador / 55) * 100).toFixed(2)}%`,
+      `Organizador - ${((organizador / 55) * 100).toFixed(2)}%`,
+      `Prestativo - ${((prestativo / 55) * 100).toFixed(2)}%`,
+      `Realizador - ${((realizador / 55) * 100).toFixed(2)}%`,
+      `Criativo - ${((criativo / 55) * 100).toFixed(2)}%`,
+      `Analítico - ${((analitico / 55) * 100).toFixed(2)}%`,
+      `Planejador - ${((planejador / 55) * 100).toFixed(2)}%`,
+      `Visionário - ${((visionario / 55) * 100).toFixed(2)}%`,
     ],
     datasets: [
       {
         data: [
-          ((comandante / 165) * 100),
-          ((mediador / 165) * 100),
-          ((organizador / 165) * 100),
-          ((prestativo / 165) * 100),
-          ((realizador / 165) * 100),
-          ((criativo / 165) * 100),
-          ((analitico / 165) * 100),
-          ((planejador / 165) * 100),
-          ((visionario / 165) * 100),
+          ((comandante / 55) * 100),
+          ((mediador / 55) * 100),
+          ((organizador / 55) * 100),
+          ((prestativo / 55) * 100),
+          ((realizador / 55) * 100),
+          ((criativo / 55) * 100),
+          ((analitico / 55) * 100),
+          ((planejador / 55) * 100),
+          ((visionario / 55) * 100),
         ],
         backgroundColor: [
           'rgba(230, 230, 0, .8)',
@@ -114,11 +114,11 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
           },
         },
         y: {
-          max: 35,
+          max: 100,
           min: 0,
           ticks: {
             startAtZero: true,
-            stepSize: 5,
+            stepSize: 10,
             font: {
               size: 30,
             },
