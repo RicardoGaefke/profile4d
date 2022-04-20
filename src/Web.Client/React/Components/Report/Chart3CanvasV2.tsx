@@ -33,17 +33,17 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
 
   const data = {
     labels: [
-      `${amarelo.Name} - ${((amarelo.Total / 165) * 100).toFixed(2)}%`,
-      `${vermelho.Name} - ${((vermelho.Total / 165) * 100).toFixed(2)}%`,
-      `${azul.Name} - ${((azul.Total / 165) * 100).toFixed(2)}%`,
+      `${amarelo.Name} - ${((amarelo.Total / 55) * 100).toFixed(2)}%`,
+      `${vermelho.Name} - ${((vermelho.Total / 55) * 100).toFixed(2)}%`,
+      `${azul.Name} - ${((azul.Total / 55) * 100).toFixed(2)}%`,
     ],
     datasets: [
       {
         label: '',
         data: [
-          ((amarelo.Total / 165) * 100),
-          ((vermelho.Total / 165) * 100),
-          ((azul.Total / 165) * 100),
+          ((amarelo.Total / 55) * 100),
+          ((vermelho.Total / 55) * 100),
+          ((azul.Total / 55) * 100),
         ],
         backgroundColor: [
           'rgba(230, 230, 0, .8)',
@@ -100,11 +100,11 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
           },
         },
         y: {
-          max: 35,
+          max: 100,
           min: 0,
           ticks: {
             startAtZero: true,
-            stepSize: 5,
+            stepSize: 10,
             font: {
               size: 30,
               fontFamily: "'Roboto', sans-serif",
