@@ -28,16 +28,16 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
   const data = {
     label: 'Resolução de conflitos',
     labels: [
-      `${amarelo.Name} - ${((amarelo.Total / 165) * 100).toFixed(2).toString()}%`,
-      `${vermelho.Name} - ${((vermelho.Total / 165) * 100).toFixed(2).toString()}%`,
-      `${azul.Name} - ${((azul.Total / 165) * 100).toFixed(2).toString()}%`,
+      `${amarelo.Name} - ${((amarelo.Total / 55) * 100).toFixed(2).toString()}%`,
+      `${vermelho.Name} - ${((vermelho.Total / 55) * 100).toFixed(2).toString()}%`,
+      `${azul.Name} - ${((azul.Total / 55) * 100).toFixed(2).toString()}%`,
     ],
     datasets: [{
       label: 'Resolução de conflitos',
       data: [
-        ((amarelo.Total / 165) * 100).toFixed(2),
-        ((vermelho.Total / 165) * 100).toFixed(2),
-        ((azul.Total / 165) * 100).toFixed(2),
+        ((amarelo.Total / 55) * 100).toFixed(2),
+        ((vermelho.Total / 55) * 100).toFixed(2),
+        ((azul.Total / 55) * 100).toFixed(2),
       ],
       backgroundColor: [
         '#ffff00',
@@ -93,10 +93,10 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
         },
         y: {
           min: 0,
-          max: 35,
+          max: 100,
           ticks: {
             startAtZero: true,
-            stepSize: 5,
+            stepSize: 10,
             font: {
               size: 33,
               fontFamily: "'Roboto', sans-serif",
