@@ -294,6 +294,7 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
             color: 'black',
           },
           beginAtZero: true,
+          stepSize: 20,
           max: 100,
           startAngle: 20,
           color: 'black',
