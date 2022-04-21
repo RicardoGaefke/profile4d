@@ -88,6 +88,7 @@ const Chart12CanvasV2 = (props: Chart12CanvasProps): JSX.Element => {
               size: 33,
               fontFamily: "'Roboto', sans-serif",
             },
+            color: 'black',
           },
         },
         y: {
