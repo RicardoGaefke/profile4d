@@ -122,9 +122,9 @@ const ReportContent = withTranslation()(
 
           <ReportText text={staticText(4)} />
 
-          <ReportTitle title={staticTitle(5)} breakPage />
+          {/* <ReportTitle title={staticTitle(5)} breakPage /> */}
 
-          <ReportText text={staticText(6)} />
+          <ReportText text={staticText(6)} breakPage />
 
           <ReportText text={staticText(7)} />
 
@@ -160,9 +160,9 @@ const ReportContent = withTranslation()(
         </div>
         {(data.Chave?.Type as number >= 2) && (
           <div id="Pessoal">
-            <ReportTitle title={staticTitle(19)} breakPage />
+            {/* <ReportTitle title={staticTitle(19)} /> */}
 
-            <ReportText text={staticText(20)} />
+            <ReportText text={staticText(20)} breakPage />
 
             <ReportText text={staticText(21)} />
 
