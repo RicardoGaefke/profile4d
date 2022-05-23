@@ -6,6 +6,8 @@ services:
   web_api:
     image: ricardogaefke/profile4d:web_api_cloud
     container_name: web-api
+    env_file:
+      - ./docker-compose.env
     networks:
       - my-network
   nginx:
