@@ -80,7 +80,8 @@ namespace Profile4d.DI
               builder
                 .WithOrigins(
                   "https://*.meuperfil4d.com.br",
-                  "https://*.staging.meuperfil4d.com.br"
+                  "https://*.staging.meuperfil4d.com.br",
+                  "https://*.performance9x.com.br"
                 ).SetIsOriginAllowedToAllowWildcardSubdomains()
                 .AllowAnyMethod()
                 .AllowAnyHeader()
