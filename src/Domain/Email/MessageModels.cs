@@ -29,11 +29,11 @@ namespace Profile4d.Domain
       }
       else if (domain.Contains("staging"))
       {
-        address.Append("client.staging.meuperfil4d.com.br");
+        address.Append("client.staging.performance9x.com.br");
       }
       else
       {
-        address.Append("client.meuperfil4d.com.br");
+        address.Append("client.performance9x.com.br");
       }
 
       return address.ToString();
@@ -141,10 +141,10 @@ namespace Profile4d.Domain
       body.AppendLine();
       body.Append($@"<p>
                       <a
-                        href=""https://identity.meuperfil4d.com.br/remember/{data.Guid}/{data.Id}""
+                        href=""https://identity.performance9x.com.br/remember/{data.Guid}/{data.Id}""
                         title='Profile4D'
                       >
-                        https://identity.meuperfil4d.com.br/remember/{data.Guid}/{data.Id}
+                        https://identity.performance9x.com.br/remember/{data.Guid}/{data.Id}
                       </a>
                   </p>");
 

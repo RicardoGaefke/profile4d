@@ -11,7 +11,7 @@ export const initialValues: IStaticImageForm = {
   Message: 'Success',
   Code: 'Undefined',
   Details: 'Undefined',
-  Url: 'www.staging.meuperfil4d.com.br',
+  Url: 'www.staging.performance9x.com.br',
   Src: '',
   Alt: '',
   Data: '',

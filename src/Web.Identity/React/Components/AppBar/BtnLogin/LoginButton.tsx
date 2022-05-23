@@ -13,7 +13,7 @@ export default withTranslation()(
 
     const myLogin = (): void => {
       // const url = new Href(window.location.href.replace(/https?:\/\//i, ''));
-      const url = new Href('www.staging.meuperfil4d.com.br');
+      const url = new Href('www.staging.performance9x.com.br');
       // window.location.href = url.toLogin();
       // eslint-disable-next-line no-console
       console.log(url.toLogin());

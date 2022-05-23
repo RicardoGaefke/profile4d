@@ -17,7 +17,7 @@ const initialValues: IDynamicContent = {
   Message: 'Success',
   Code: 'Undefined',
   Details: 'Undefined',
-  Url: 'www.staging.meuperfil4d.com.br',
+  Url: 'www.staging.performance9x.com.br',
 };
 
 export default initialValues;

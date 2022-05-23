@@ -17,6 +17,6 @@ export default {
   Message: 'Success',
   Code: 'Undefined',
   Details: 'Undefined',
-  Url: 'www.staging.meuperfil4d.com.br',
+  Url: 'www.staging.performance9x.com.br',
   Category: 1,
 } as IDynamicContent;

@@ -20,7 +20,7 @@ export default withTranslation()(
         return;
       }
 
-      window.location.href = 'https://client.meuperfil4d.com.br';
+      window.location.href = 'https://client.performance9x.com.br';
     };
 
     return (
