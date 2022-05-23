@@ -47,7 +47,7 @@ export default withTranslation()(
               button
               title="Gerenciar clientes"
               className={classes.navlink}
-              onClick={(): void => { window.location.href = 'https://clientes.meuperfil4d.com.br/identity'; }}
+              onClick={(): void => { window.location.href = 'https://clientes.performance9x.com.br/identity'; }}
             >
               <ListItemText primary="Gerenciar clientes" />
             </ListItem>
