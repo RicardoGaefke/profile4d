@@ -19,7 +19,7 @@ const FilterImage = (props: FilterImageProps): JSX.Element => {
   return (
     <div className={classes.item}>
       <img
-        src={`https://api.staging.performance9x.com.br/Image/Show/${image.Src}.png`}
+        src={`https://api.performance9x.com.br/Image/Show/${image.Src}.png`}
         alt={(Language === 'ENG') ? image.Alt_ENG : image.Alt_PT}
         title={(Language === 'ENG') ? image.Alt_ENG : image.Alt_PT}
         className={classes.image}
