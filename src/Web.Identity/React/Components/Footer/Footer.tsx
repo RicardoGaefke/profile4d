@@ -10,7 +10,7 @@ export default (): React.ReactElement<any> => {
     <footer className={classes.footer}>
       <Container maxWidth="sm">
         <Typography variant="body1" align="center">
-          Profile4D &copy;
+          Performance9x &copy;
           {' '}
           {date.getFullYear()}
           {' '}
