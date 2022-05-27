@@ -9,6 +9,9 @@ const MyTheme = (t: string = 'dark'): Theme => {
     palette: {
       type: 'dark',
     },
+    typography: {
+      fontFamily: '',
+    },
   });
 
   const myThemeLight = createMuiTheme({
