@@ -13,7 +13,7 @@ export default (): React.ReactElement => {
 
   return (
     <div className={classes.root} key={Language}>
-      <AppBar position="fixed">
+      <AppBar position="fixed" className={classes.bar}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             <Link
@@ -26,7 +26,7 @@ export default (): React.ReactElement => {
             >
               <img
                 src="/img/logo.png"
-                alt="Profile4d"
+                alt="Performance 9x"
               />
             </Link>
           </Typography>
