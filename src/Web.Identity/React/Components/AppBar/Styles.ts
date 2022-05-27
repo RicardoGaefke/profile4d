@@ -7,6 +7,7 @@ interface IStyles {
   bar: {},
 }
 
+// eslint-disable-next-line no-unused-vars
 export default makeStyles((theme: Theme): IStyles => ({
   root: {
     flexGrow: 0,
@@ -16,7 +17,7 @@ export default makeStyles((theme: Theme): IStyles => ({
     flexGrow: 1,
   },
   bar: {
-    backgroundColor: (theme.palette.type === 'dark') ? 'rgba(255,255,255,0.05)' : theme.palette.primary.main,
-    color: (theme.palette.type === 'dark') ? '#fff' : 'rgba(233,233,233,1)',
+    backgroundColor: '#fff',
+    color: '#000',
   },
 }));

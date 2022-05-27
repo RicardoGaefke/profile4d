@@ -14,7 +14,7 @@ export default (): React.ReactElement<{}> => {
 
   return (
     <div className={classes.root} key={language}>
-      <AppBar position="fixed">
+      <AppBar position="fixed" className={classes.bar}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             <Link
