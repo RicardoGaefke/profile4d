@@ -28,7 +28,7 @@ namespace Profile4d.Web.Client
     [Authorize]
     public IActionResult Index()
     {
-      ViewData["Title"] = "Meu Perfil 4D";
+      ViewData["Title"] = "Performance 9x";
 
       Request.HttpContext.Response.Headers.Add("Title", "Performance 9x");
       Request.HttpContext.Response.Headers.Add("Description", "Performance 9x description");
@@ -54,8 +54,8 @@ namespace Profile4d.Web.Client
     {
       ViewData["Title"] = "Performance 9x";
 
-      Request.HttpContext.Response.Headers.Add("Title", "Meu Perfil 4D");
-      Request.HttpContext.Response.Headers.Add("Description", "Meu Perfil 4D description");
+      Request.HttpContext.Response.Headers.Add("Title", "Performance 9x");
+      Request.HttpContext.Response.Headers.Add("Description", "Performance 9x description");
 
       ViewBag.Page = JsonSerializer.Serialize(new
       {
