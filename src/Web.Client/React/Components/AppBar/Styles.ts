@@ -19,5 +19,8 @@ export default makeStyles((theme: Theme): IStyles => ({
   bar: {
     backgroundColor: '#fff',
     color: '#000',
+    '@media print': {
+      display: 'none',
+    },
   },
 }));
