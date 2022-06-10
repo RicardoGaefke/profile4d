@@ -41,7 +41,7 @@ namespace Profile4d.Domain
 
     public static Content SendKey(string guid, string domain)
     {
-      StringBuilder subject = new StringBuilder("Profile4d - Nova chave/New key");
+      StringBuilder subject = new StringBuilder("Performance 9x - Nova chave/New key");
 
       StringBuilder body = new StringBuilder();
       body.Append("<p>Olá/Hello,</p>");
@@ -62,7 +62,7 @@ namespace Profile4d.Domain
 
     public static Content TransferKeys(string guid, string domain, int keys)
     {
-      StringBuilder subject = new StringBuilder("Profile4d - Nova chave/New key");
+      StringBuilder subject = new StringBuilder("Performance 9x - Nova chave/New key");
 
       StringBuilder body = new StringBuilder();
       body.Append("<p>Olá/Hello,</p>");
@@ -83,7 +83,7 @@ namespace Profile4d.Domain
 
     public static Content ChangeName(string name)
     {
-      StringBuilder subject = new StringBuilder("Profile4d - Nome alterado / Name changed");
+      StringBuilder subject = new StringBuilder("Performance 9x - Nome alterado / Name changed");
 
       StringBuilder body = new StringBuilder();
       body.Append($"<p>Olá/Hello, {name},</p>");
@@ -98,7 +98,7 @@ namespace Profile4d.Domain
 
     public static Content ChangeEmail(string name)
     {
-      StringBuilder subject = new StringBuilder("Profile4d - Email alterado / Email changed");
+      StringBuilder subject = new StringBuilder("Performance 9x - Email alterado / Email changed");
 
       StringBuilder body = new StringBuilder();
       body.Append($"<p>Olá/Hello, {name},</p>");
@@ -113,7 +113,7 @@ namespace Profile4d.Domain
 
     public static Content ChangePassword(string name)
     {
-      StringBuilder subject = new StringBuilder("Profile4d - Senha alterada / Password changed");
+      StringBuilder subject = new StringBuilder("Performance 9x - Senha alterada / Password changed");
 
       StringBuilder body = new StringBuilder();
       body.Append($"<p>Olá/Hello, {name},</p>");
@@ -128,7 +128,7 @@ namespace Profile4d.Domain
 
     public static Content ForgotPassword(User data, string domain)
     {
-      StringBuilder subject = new StringBuilder("Profile4d - Recuperação de senha / Password recovery");
+      StringBuilder subject = new StringBuilder("Performance 9x - Recuperação de senha / Password recovery");
 
       StringBuilder body = new StringBuilder();
       body.Append($"<p>Olá/Hello, {data.Name},</p>");
@@ -153,7 +153,7 @@ namespace Profile4d.Domain
 
     public static Content CreateUser(string name, string domain)
     {
-      StringBuilder subject = new StringBuilder("Profile4d - Criação de usuário / User creation");
+      StringBuilder subject = new StringBuilder("Performance 9x - Criação de usuário / User creation");
 
       StringBuilder body = new StringBuilder();
       body.Append($"<p>Olá/Hello, {name},</p>");
@@ -176,7 +176,7 @@ namespace Profile4d.Domain
 
     public static Content RequestKeys(string phone, string name, string email)
     {
-      StringBuilder subject = new StringBuilder("Profile4d - Solicitação de chaves");
+      StringBuilder subject = new StringBuilder("Performance 9x - Solicitação de chaves");
 
       StringBuilder body = new StringBuilder();
       body.Append($"<p>Olá, Carlos,</p>");
