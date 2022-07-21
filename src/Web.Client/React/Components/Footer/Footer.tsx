@@ -7,7 +7,7 @@ export default (): React.ReactElement<any> => {
   const date: Date = new Date();
 
   return (
-    <footer className={classes.footer}>
+    <footer className={classes.footer} data-remove-printing="remove">
       <Container maxWidth="sm">
         <Typography variant="body1" align="center">
           Performance 9x &copy;
