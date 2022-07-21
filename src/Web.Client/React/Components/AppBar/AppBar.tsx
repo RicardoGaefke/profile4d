@@ -13,7 +13,7 @@ export default (): React.ReactElement<{}> => {
   const classes = useStyles({});
 
   return (
-    <div className={classes.root} key={language}>
+    <div className={classes.root} key={language} data-remove-printing="remove">
       <AppBar position="fixed" className={classes.bar}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
