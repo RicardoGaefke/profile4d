@@ -32,6 +32,7 @@ export default withTranslation()(
         className={classes.snackbar}
         message={<ConsentMessage message={t('ConsentCookie:text')} text={t('ConsentCookie:link.text')} title={t('ConsentCookie:link.label')} />}
         action={<ConsentAction text={t('ConsentCookie:btn.text')} title={t('ConsentCookie:btn.label')} close={closeConsent} />}
+        data-remove-printing="remove"
       />
     );
   },

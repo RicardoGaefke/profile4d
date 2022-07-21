@@ -215,7 +215,7 @@ const Chart4CanvasV2 = (props: Chart4CanvasProps): JSX.Element => {
             || (terceiro.Name === 'Perfil Planejador') ? ((terceiro.Total / 55) * 100).toFixed(2) : null
         : null,
       (primeiro.Name === 'Perfil Analítico' || parceiro.Name === 'Perfil Analítico' || terceiro.Name === 'Perfil Analítico')
-        ? (primeiro.Name === 'Perfil Analítico') ? ((primeiro.Total / 165) * 100).toFixed(2) : null
+        ? (primeiro.Name === 'Perfil Analítico') ? ((primeiro.Total / 55) * 100).toFixed(2) : null
           || (parceiro.Name === 'Perfil Analítico') ? ((parceiro.Total / 55) * 100).toFixed(2) : null
             || (terceiro.Name === 'Perfil Analítico') ? ((terceiro.Total / 55) * 100).toFixed(2) : null
         : null,
