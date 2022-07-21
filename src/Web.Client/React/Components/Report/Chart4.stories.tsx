@@ -11,6 +11,7 @@ import fakeData from './fakeData';
 import useStyles from './Styles';
 // eslint-disable-next-line no-unused-vars
 import { IProfiles } from '../../../../TypeScript/Interfaces/IProfiles';
+import fakeDataAnalitico from './fakeDataAnalitico';
 
 
 const App = (): React.ReactElement => {
@@ -40,6 +41,33 @@ const App = (): React.ReactElement => {
   );
 };
 
+const AppAnalitico = (): React.ReactElement => {
+  const classes = useStyles();
+
+  return (
+    <MyThemeHoc>
+      <Grid
+        container
+        spacing={0}
+        direction="column"
+        justify="center"
+        alignItems="center"
+      >
+        <Grid
+          item
+          container
+          justify="center"
+          className={classes.container}
+        >
+          <div style={{ width: '65%' }}>
+            <Chart4 profiles={fakeDataAnalitico.Profiles as IProfiles[]} printing={false} />
+          </div>
+        </Grid>
+      </Grid>
+    </MyThemeHoc>
+  );
+};
+
 storiesOf('Chart04', module)
   .addDecorator((story: any): React.ReactElement => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
@@ -47,4 +75,7 @@ storiesOf('Chart04', module)
   .addDecorator((storyFn, context): React.ReactElement => withConsole()(storyFn)(context))
   .add('Basic', (): React.ReactElement => (
     <App />
+  ))
+  .add('Analitico', (): React.ReactElement => (
+    <AppAnalitico />
   ));
