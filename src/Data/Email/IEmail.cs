@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using System.Collections.Generic;
 using Profile4d.Domain;
 
@@ -9,5 +10,6 @@ namespace Profile4d.Data
     EmailMessage.Message Info(int id);
     void UpdateSendGridInfo(int id, string sgKey, int dequeue);
     IEnumerable<EmailReport> List();
+    Task<List<int>> EmailsDeChavesPorConsultorAsync(int consultorId);
   }
 }

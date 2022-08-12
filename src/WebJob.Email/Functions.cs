@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Net.WebSockets;
 using System;
 using System.Linq;
@@ -10,6 +11,7 @@ using Newtonsoft.Json;
 using Profile4d.Data;
 using Profile4d.Domain;
 using Profile4d.Email;
+using Profile4d.Storage;
 using Profile4d.WebJob.Filters;
 
 namespace Profile4d.WebJob.Email
@@ -22,6 +24,7 @@ namespace Profile4d.WebJob.Email
     private readonly IMyEmail _email;
     private readonly IEmail _data;
     private readonly IEmailMI4D _emailMI4D;
+    private readonly IQueue _queue;
     private HubConnection _connection;
     private string _host;
     public Functions(
@@ -29,7 +32,8 @@ namespace Profile4d.WebJob.Email
       IOptions<Secrets.Config> config,
       IMyEmail MyEmail,
       IEmailMI4D MyEmailMI4D,
-      IEmail Email
+      IEmail Email,
+      IQueue queue
     )
     {
       _connStr = ConnectionStrings;
@@ -37,6 +41,7 @@ namespace Profile4d.WebJob.Email
       _email = MyEmail;
       _emailMI4D = MyEmailMI4D;
       _data = Email;
+      _queue = queue;
 
       if (_config.Value.domain == "localhost")
       {
@@ -94,6 +99,21 @@ namespace Profile4d.WebJob.Email
     )
     {
       await _email.SendEmailPoison(message);
+    }
+
+    public async Task ColocaEmailsDeConsultorNaFilaDeEnvioAsync(
+      [QueueTrigger("email-chaves-consultor")]
+      string message,
+      int DequeueCount,
+      ILogger logger
+    )
+    {
+      List<int> emails = await _data.EmailsDeChavesPorConsultorAsync(890);
+
+      for (int i = 0; i < emails.Count; i++)
+      {
+        _queue.SaveMessage("email", emails[i].ToString());
+      }
     }
   }
 }

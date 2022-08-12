@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using Profile4d.Data;
 using Profile4d.Domain;
 using Profile4d.Email;
+using Profile4d.Storage;
 
 namespace Profile4d.WebJob.Email
 {
@@ -45,6 +46,7 @@ namespace Profile4d.WebJob.Email
           services.AddSingleton<IMyEmail, MyEmail>();
           services.AddSingleton<IEmailMI4D, EmailMI4D>();
           services.AddSingleton<IEmail, Profile4d.Data.Email>();
+          services.AddSingleton<IQueue, Queue>();
         })
         .UseConsoleLifetime()
       ;
