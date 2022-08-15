@@ -8,5 +8,6 @@ namespace Profile4d.Email
     Task<string> SendEmail(EmailMessage.Message message);
     Task<string> SendEmailPoison(string message);
     Task<string> SendMI4DEmail(MyEmails email);
+    Task<string> EnviarChaveAsync(User user, string url);
   }
 }

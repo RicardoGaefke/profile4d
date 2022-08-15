@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using System.Collections.Generic;
 using Profile4d.Domain;
 
@@ -19,5 +20,7 @@ namespace Profile4d.Data
     string SendKeyConsultor(Key data);
     void AlteraTipoDeChave(Key data);
     List<Key> ChavesNaoRecebidasPorConsultor(User user);
+    Task<int> TransfereChaveAsync(Key data);
+    Task<Key> EnvioDeChaveInfoParaEmailAsync(int chaveId);
   }
 }

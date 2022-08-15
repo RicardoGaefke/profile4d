@@ -2,6 +2,7 @@ using Microsoft.Extensions.Options;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 using Profile4d.Domain;
 
 namespace Profile4d.Data
@@ -139,6 +140,36 @@ namespace Profile4d.Data
       }
 
       return _return;
+    }
+
+    public async Task<List<int>> EmailsDeChavesPorConsultorAsync(int consultorId)
+    {
+      List<int> emails = new List<int>();
+
+      SqlParameter[] sqlParameters = new SqlParameter[]{
+        /* 00 */ new SqlParameter("@ConsultorId", consultorId),
+      };
+
+      using (SqlConnection Conn = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand("[Importing].[spEmaildeChavesNaoEnviadasPorConsultor]", Conn))
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Parameters.AddRange(sqlParameters);
+          await Conn.OpenAsync();
+          using (SqlDataReader reader = await Cmd.ExecuteReaderAsync())
+          {
+            while(await reader.ReadAsync()) {
+              emails.Add(reader.GetInt32(0));
+            }
+
+            await reader.CloseAsync();
+          }
+          await Conn.CloseAsync();
+        }
+      }
+
+      return emails;
     }
   }
 }
