@@ -25,6 +25,7 @@ namespace Profile4d.WebJob.Email
     private readonly IEmail _data;
     private readonly IEmailMI4D _emailMI4D;
     private readonly IQueue _queue;
+    private readonly ISendKey _sendKey;
     private HubConnection _connection;
     private string _host;
     public Functions(
@@ -33,6 +34,7 @@ namespace Profile4d.WebJob.Email
       IMyEmail MyEmail,
       IEmailMI4D MyEmailMI4D,
       IEmail Email,
+      ISendKey sendKey,
       IQueue queue
     )
     {
@@ -41,6 +43,7 @@ namespace Profile4d.WebJob.Email
       _email = MyEmail;
       _emailMI4D = MyEmailMI4D;
       _data = Email;
+      _sendKey = sendKey;
       _queue = queue;
 
       if (_config.Value.domain == "localhost")
@@ -51,13 +54,13 @@ namespace Profile4d.WebJob.Email
         _host = "http://web_api:5000";
       }
 
-      _connection = new HubConnectionBuilder()
-        .WithUrl($"{_host}/hubs/webjobs")
-        .WithAutomaticReconnect()
-        .Build()
-      ;
+      // _connection = new HubConnectionBuilder()
+      //   .WithUrl($"{_host}/hubs/webjobs")
+      //   .WithAutomaticReconnect()
+      //   .Build()
+      // ;
 
-      Task.Run(() => _connection.StartAsync()).Wait();
+      // Task.Run(() => _connection.StartAsync()).Wait();
     }
 
     public async Task EnviarEmailsMI4D(
@@ -114,6 +117,21 @@ namespace Profile4d.WebJob.Email
       {
         _queue.SaveMessage("email", emails[i].ToString());
       }
+    }
+
+    public async Task EnviaChavePorEmailAsync(
+      [QueueTrigger("email-chave")]
+      string message,
+      int DequeueCount,
+      ILogger logger
+    )
+    {
+      Key chave = await _sendKey.EnvioDeChaveInfoParaEmailAsync(Convert.ToInt32(message));
+      User user = new User(chave.Email);
+      string url = $"https://localhost:5080/confirmKey/{chave.Guid}";
+      string sg = await _email.EnviarChaveAsync(user, url);
+      logger.LogInformation(sg);
+      // salva info envio
     }
   }
 }

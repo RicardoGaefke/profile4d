@@ -1,9 +1,9 @@
-using System.Xml.Linq;
 using System;
-using Microsoft.Extensions.Options;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Options;
 using Profile4d.Domain;
 
 namespace Profile4d.Data
@@ -467,6 +467,66 @@ namespace Profile4d.Data
       }
 
       return _return;
+    }
+
+    public async Task<int> TransfereChaveAsync(Key data)
+    {
+      SqlParameter[] sqlParameters = new SqlParameter[]{
+        /* 00 */ new SqlParameter("@Email", data.Email),
+        /* 01 */ new SqlParameter("@EnviadoPor", data.SentBy),
+        /* 02 */ new SqlParameter("@BloquearResultado", data.BlockResult),
+        /* 03 */ new SqlParameter("@Tipo", data.Type),
+      };
+
+      object chave;
+
+      using (SqlConnection Conn = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand("[dbo].[spTransfereChaveERetornaId]", Conn))
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Parameters.AddRange(sqlParameters);
+          await Conn.OpenAsync();
+          chave = await Cmd.ExecuteScalarAsync();
+          await Conn.CloseAsync();
+        }
+      }
+
+      return Convert.ToInt32(chave);
+    }
+
+    public async Task<Key> EnvioDeChaveInfoParaEmailAsync(int chaveId)
+    {
+      SqlParameter[] sqlParameters = new SqlParameter[]{
+        /* 00 */ new SqlParameter("@ChaveId", chaveId),
+      };
+
+      Key chave;
+
+      using (SqlConnection Conn = new SqlConnection(_connStr.Value.SqlServer))
+      {
+        using (SqlCommand Cmd = new SqlCommand("[dbo].[spEnvioDeChaveInfoParaEmail]", Conn))
+        {
+          Cmd.CommandType = CommandType.StoredProcedure;
+          Cmd.Parameters.AddRange(sqlParameters);
+          await Conn.OpenAsync();
+          using (SqlDataReader reader = await Cmd.ExecuteReaderAsync())
+          {
+            await reader.ReadAsync();
+
+            chave = new Key()
+            {
+              Guid = reader.GetGuid(0).ToString(),
+              Email = reader.GetString(1),
+            };
+            
+            await reader.CloseAsync();
+          }
+          await Conn.CloseAsync();
+        }
+      }
+
+      return chave;
     }
   }
 }

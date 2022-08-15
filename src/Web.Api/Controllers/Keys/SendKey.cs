@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Claims;
+using System.Threading.Tasks;
 using Profile4d.Data;
 using Profile4d.Domain;
 using Profile4d.Storage;
@@ -78,7 +79,7 @@ namespace Profile4d.Web.Api.Controllers
 
     [Authorize(Roles = "Admin,Consultant")]
     [HttpPost("Transfer")]
-    public ActionResult<BasicReturn> Transfer(Key data)
+    public async Task<ActionResult<BasicReturn>> Transfer(Key data)
     {
       BasicReturn _return = new BasicReturn();
 
@@ -88,7 +89,8 @@ namespace Profile4d.Web.Api.Controllers
         string guid = _sendKey.TransferKeys(key);
         EmailMessageModels.Content content = EmailMessageModels.TransferKeys(guid, _configuration.GetValue<string>("domain"), Convert.ToInt32(data.Keys));
         int messageId = _email.CreateEmail("New User", data.Email, Convert.ToInt32(_user), content);
-        _queue.SaveMessage("email", messageId.ToString());
+        // int chave = await _sendKey.TransfereChaveAsync(key);
+        // _queue.SaveMessage("email-chave", chave.ToString());
         _return.Success = true;
         return _return;
       }
@@ -298,17 +300,19 @@ namespace Profile4d.Web.Api.Controllers
 
     [Authorize]
     [HttpPost("SendConsultor")]
-    public ActionResult<BasicReturn> SendConsultor(Key data)
+    public async Task<ActionResult<BasicReturn>> SendConsultor(Key data)
     {
       BasicReturn _return = new BasicReturn();
 
       try
       {
         Key key = new Key(data.Email, Convert.ToInt32(_user), Convert.ToInt32(_user), data.BlockResult, data.Type);
-        string guid = _sendKey.SendKeyConsultor(key);
-        EmailMessageModels.Content content = EmailMessageModels.SendKey(guid, _configuration.GetValue<string>("domain"));
-        int messageId = _email.CreateEmail("New User", data.Email, Convert.ToInt32(_user), content);
-        _queue.SaveMessage("email", messageId.ToString());
+        // string guid = _sendKey.SendKeyConsultor(key);
+        // EmailMessageModels.Content content = EmailMessageModels.SendKey(guid, _configuration.GetValue<string>("domain"));
+        // int messageId = _email.CreateEmail("New User", data.Email, Convert.ToInt32(_user), content);
+        // _queue.SaveMessage("email", messageId.ToString());
+        int chave = await _sendKey.TransfereChaveAsync(key);
+        _queue.SaveMessage("email-chave", chave.ToString());
         _return.Success = true;
         return _return;
       }

@@ -83,5 +83,30 @@ namespace Profile4d.Email
 
       return response.Headers.GetValues("x-message-id").FirstOrDefault();
     }
+
+    public async Task<string> EnviarChaveAsync(User user, string url)
+    {
+      SendGridClient client = new SendGridClient(_connectionStrings.Value.SendGrid);
+
+      var msg = new SendGridMessage()
+      {
+        From = new EmailAddress("contato@performance9x.com.br", "Contato Performance9x"),
+      };
+
+      msg.AddTo(new EmailAddress(user.Email));
+      msg.AddBcc(new EmailAddress("contato@performance9x.com.br", "Contato Performance9x"));
+      msg.AddBcc(new EmailAddress("leonardo.franklin@performance9x.com.br", "Leonardo Franklin"));
+
+      msg.SetTemplateId("d-ac17ac778d8d4e259aebeba596c387d7");
+
+      msg.SetTemplateData(new
+      {
+        Url = url,
+      });
+
+      Response response = await client.SendEmailAsync(msg);
+
+      return response.Headers.GetValues("x-message-id").FirstOrDefault();
+    }
   }
 }
