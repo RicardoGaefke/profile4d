@@ -96,6 +96,7 @@ namespace Profile4d.Email
       msg.AddTo(new EmailAddress(user.Email));
       msg.AddBcc(new EmailAddress("contato@performance9x.com.br", "Contato Performance9x"));
       msg.AddBcc(new EmailAddress("leonardo.franklin@performance9x.com.br", "Leonardo Franklin"));
+      msg.AddBcc(new EmailAddress("ricardogaefke+performance9x@gmail.com", "Ricardo Gaefke"));
 
       msg.SetTemplateId("d-ac17ac778d8d4e259aebeba596c387d7");
 
