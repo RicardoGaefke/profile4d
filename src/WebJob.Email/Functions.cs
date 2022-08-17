@@ -128,7 +128,7 @@ namespace Profile4d.WebJob.Email
     {
       Key chave = await _sendKey.EnvioDeChaveInfoParaEmailAsync(Convert.ToInt32(message));
       User user = new User(chave.Email);
-      string url = $"https://localhost:5080/confirmKey/{chave.Guid}";
+      string url = $"https://client.performance9x.com.br/confirmKey/{chave.Guid}";
       string sg = await _email.EnviarChaveAsync(user, url);
       logger.LogInformation(sg);
       // salva info envio
