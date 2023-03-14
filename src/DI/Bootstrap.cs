@@ -81,7 +81,8 @@ namespace Profile4d.DI
                 .WithOrigins(
                   "https://*.meuperfil4d.com.br",
                   "https://*.staging.meuperfil4d.com.br",
-                  "https://*.performance9x.com.br"
+                  "https://*.performance9x.com.br",
+                  "https://*.hextriade.com"
                 ).SetIsOriginAllowedToAllowWildcardSubdomains()
                 .AllowAnyMethod()
                 .AllowAnyHeader()
