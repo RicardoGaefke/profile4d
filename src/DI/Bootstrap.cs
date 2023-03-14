@@ -142,7 +142,7 @@ namespace Profile4d.DI
         .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
         .AddCookie(options =>
         {
-          options.Cookie.Name = "profile4d";
+          options.Cookie.Name = "hextriade";
           options.Cookie.IsEssential = true;
           options.Cookie.HttpOnly = true;
           options.Cookie.SameSite = SameSiteMode.None;
