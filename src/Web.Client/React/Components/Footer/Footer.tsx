@@ -10,18 +10,18 @@ export default (): React.ReactElement<any> => {
     <footer className={classes.footer} data-remove-printing="remove">
       <Container maxWidth="sm">
         <Typography variant="body1" align="center">
-          Performance 9x &copy;
+          Hextriade &copy;
           {' '}
           {date.getFullYear()}
           {' '}
           by
           {' '}
           <Link
-            href="https://www.ricardogaefke.com"
+            href="https://www.interdev.me"
             color="inherit"
             title="Ricardo Gaefke"
           >
-            Ricardo Gaefke
+            interdev.me
           </Link>
         </Typography>
       </Container>
