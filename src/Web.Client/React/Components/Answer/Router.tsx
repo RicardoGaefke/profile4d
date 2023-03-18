@@ -6,7 +6,8 @@ import {
 import Intro from './Intro/Intro';
 import NotFound from '../404/Main/Main';
 import Answer from './Answer';
-import ReportSete from '../ReportSete/ReportDynamic';
+import Report from '../Report/ReportDynamic';
+import ReportSete from '../ReportSete/ReportSeteDynamic';
 import ReportPDF from '../Report/ReportPDF/ReportPDFDynamic';
 
 export interface IAnswerRouterProps {
@@ -20,7 +21,7 @@ const Router = (): React.ReactElement<RouteComponentProps> => (
     <Route path="/answer/report/:guid/" exact component={Report} />
     <Route path="/answer/report/:guid/:pdf" exact component={Report} />
     <Route path="/answer/reportSete/:guid/" exact component={ReportSete} />
-    <Route path="/answer/reportSete/:guid/:pdf" exact component={Report} />
+    <Route path="/answer/reportSete/:guid/:pdf" exact component={ReportSete} />
     <Route path="/answer/reportPDF/:guid" exact component={ReportPDF} />
     <Route component={NotFound} />
   </Switch>

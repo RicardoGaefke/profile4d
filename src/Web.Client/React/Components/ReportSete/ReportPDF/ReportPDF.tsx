@@ -16,7 +16,7 @@ import { withSnackbar, WithSnackbarProps } from 'notistack';
 import { IAnswerRouterProps } from '../../Answer/Router';
 // eslint-disable-next-line no-unused-vars
 import { IReport } from '../../../../../TypeScript/Interfaces/IReport';
-import getReport from '../getReport';
+import getReport from '../getReportSete';
 import setLanguage from '../Language';
 import useStyles from '../Styles';
 import Page01 from './Page01';
