@@ -237,6 +237,38 @@ namespace Profile4d.Web.Api.Controllers
       }
     }
 
+    [HttpGet("ReportSete/{guid}")]
+    public ActionResult<Report> ReportSete(string guid)
+    {
+      Report _return = new Report();
+
+      try
+      {
+        _return = _report.GetReportSete(guid);
+        _return.Success = true;
+        _return.Code = "success";
+
+        return _return;
+      }
+      catch (SqlException ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Details = ex.StackTrace;
+        _return.Code = ex.ErrorCode.ToString();
+
+        return _return;
+      }
+      catch (System.Exception ex)
+      {
+        _return.Success = false;
+        _return.Message = ex.Message;
+        _return.Details = ex.StackTrace;
+
+        return _return;
+      }
+    }
+
     [Authorize]
     [HttpGet("GetLicensesByConsultant")]
     public ActionResult<KeysPreview> GetLicensesByConsultant()

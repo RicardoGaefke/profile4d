@@ -5,5 +5,6 @@ namespace Profile4d.Data
   public interface IDataReport
   {
     Report GetReport(string guid);
+    Report GetReportSete(string guid);
   }
 }
