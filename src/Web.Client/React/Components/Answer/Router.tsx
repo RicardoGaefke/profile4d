@@ -19,6 +19,8 @@ const Router = (): React.ReactElement<RouteComponentProps> => (
     <Route path="/answer/assessment/:guid" exact component={Answer} />
     <Route path="/answer/report/:guid/" exact component={Report} />
     <Route path="/answer/report/:guid/:pdf" exact component={Report} />
+    <Route path="/answer/reportSete/:guid/" exact component={Report} />
+    <Route path="/answer/reportSete/:guid/:pdf" exact component={Report} />
     <Route path="/answer/reportPDF/:guid" exact component={ReportPDF} />
     <Route component={NotFound} />
   </Switch>

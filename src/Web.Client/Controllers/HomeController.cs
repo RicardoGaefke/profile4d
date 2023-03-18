@@ -49,6 +49,57 @@ namespace Profile4d.Web.Client
       return View();
     }
 
+    [AllowAnonymous]
+    [HttpGet("answer/reportSete/{guid}")]
+    public IActionResult ReportSete()
+    {
+      ViewData["Title"] = "Performance 9x";
+
+      Request.HttpContext.Response.Headers.Add("Title", "Performance 9x");
+      Request.HttpContext.Response.Headers.Add("Description", "Performance 9x description");
+
+      ViewBag.Page = JsonSerializer.Serialize(new
+      {
+        Title = "Meu Perfil 4D",
+        Description = "Meu Perfil 4D description",
+        IsAuthenticated = false,
+        Name = "",
+        Email = "",
+        Language = "PT",
+        Theme = "light",
+        Drawer = false,
+        Config = false
+      });
+
+      return View("Index");
+    }
+
+    [AllowAnonymous]
+    [HttpGet("answer/report/{guid}/{pdf}")]
+    public IActionResult ReportSetePDF()
+    {
+      ViewData["Title"] = "Performance 9x";
+
+      Request.HttpContext.Response.Headers.Add("Title", "Performance 9x");
+      Request.HttpContext.Response.Headers.Add("Description", "Performance 9x description");
+
+      ViewBag.Page = JsonSerializer.Serialize(new
+      {
+        Title = "Meu Perfil 4D",
+        Description = "Meu Perfil 4D description",
+        IsAuthenticated = false,
+        Name = "",
+        Email = "",
+        Language = "PT",
+        Theme = "light",
+        Drawer = false,
+        Config = false
+      });
+
+      return View("Index");
+    }
+
+    [AllowAnonymous]
     [HttpGet("answer/report/{guid}/{pdf}")]
     public IActionResult Report()
     {
