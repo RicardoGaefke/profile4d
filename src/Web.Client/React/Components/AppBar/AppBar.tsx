@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link as RLink } from 'react-router-dom';
 import {
-  AppBar, Toolbar, Link, Typography,
+  AppBar, Toolbar, Typography,
 } from '@material-ui/core';
 import { useStateValue } from '../../Initial/Context/StateProvider';
 import useStyles from './Styles';
@@ -17,7 +16,7 @@ export default (): React.ReactElement<{}> => {
       <AppBar position="fixed" className={classes.bar}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            <Link
+            {/* <Link
               title="Home page"
               color="inherit"
               underline="none"
@@ -29,7 +28,11 @@ export default (): React.ReactElement<{}> => {
                 src="/img/logo.png"
                 alt="Profile4d"
               />
-            </Link>
+            </Link> */}
+            <img
+              src="/img/logo.png"
+              alt="Profile4d"
+            />
           </Typography>
           <LoginButton />
           <ConfigButton />

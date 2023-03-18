@@ -28,15 +28,15 @@ namespace Profile4d.Web.Client
     [Authorize]
     public IActionResult Index()
     {
-      ViewData["Title"] = "Performance 9x";
+      ViewData["Title"] = "Hextriade";
 
-      Request.HttpContext.Response.Headers.Add("Title", "Performance 9x");
-      Request.HttpContext.Response.Headers.Add("Description", "Performance 9x description");
+      Request.HttpContext.Response.Headers.Add("Title", "Hextriade");
+      Request.HttpContext.Response.Headers.Add("Description", "Hextriade");
 
       ViewBag.Page = JsonSerializer.Serialize(new
       {
-        Title = "Performance 9x",
-        Description = "Performance 9x description",
+        Title = "Hextriade",
+        Description = "Hextriade",
         IsAuthenticated = false,
         Name = "",
         Email = "",
@@ -53,15 +53,15 @@ namespace Profile4d.Web.Client
     [HttpGet("answer/reportSete/{guid}")]
     public IActionResult ReportSete()
     {
-      ViewData["Title"] = "Performance 9x";
+      ViewData["Title"] = "Hextriade";
 
-      Request.HttpContext.Response.Headers.Add("Title", "Performance 9x");
-      Request.HttpContext.Response.Headers.Add("Description", "Performance 9x description");
+      Request.HttpContext.Response.Headers.Add("Title", "Hextriade");
+      Request.HttpContext.Response.Headers.Add("Description", "Hextriade description");
 
       ViewBag.Page = JsonSerializer.Serialize(new
       {
-        Title = "Meu Perfil 4D",
-        Description = "Meu Perfil 4D description",
+        Title = "Hextriade",
+        Description = "Hextriade description",
         IsAuthenticated = false,
         Name = "",
         Email = "",
@@ -78,15 +78,15 @@ namespace Profile4d.Web.Client
     [HttpGet("answer/report/{guid}/{pdf}")]
     public IActionResult ReportSetePDF()
     {
-      ViewData["Title"] = "Performance 9x";
+      ViewData["Title"] = "Hextriade";
 
-      Request.HttpContext.Response.Headers.Add("Title", "Performance 9x");
-      Request.HttpContext.Response.Headers.Add("Description", "Performance 9x description");
+      Request.HttpContext.Response.Headers.Add("Title", "Hextriade");
+      Request.HttpContext.Response.Headers.Add("Description", "Hextriade description");
 
       ViewBag.Page = JsonSerializer.Serialize(new
       {
-        Title = "Meu Perfil 4D",
-        Description = "Meu Perfil 4D description",
+        Title = "Hextriade",
+        Description = "Hextriade description",
         IsAuthenticated = false,
         Name = "",
         Email = "",
@@ -103,15 +103,15 @@ namespace Profile4d.Web.Client
     [HttpGet("answer/report/{guid}/{pdf}")]
     public IActionResult Report()
     {
-      ViewData["Title"] = "Performance 9x";
+      ViewData["Title"] = "Hextriade";
 
-      Request.HttpContext.Response.Headers.Add("Title", "Performance 9x");
-      Request.HttpContext.Response.Headers.Add("Description", "Performance 9x description");
+      Request.HttpContext.Response.Headers.Add("Title", "Hextriade");
+      Request.HttpContext.Response.Headers.Add("Description", "Hextriade description");
 
       ViewBag.Page = JsonSerializer.Serialize(new
       {
-        Title = "Meu Perfil 4D",
-        Description = "Meu Perfil 4D description",
+        Title = "Hextriade",
+        Description = "Hextriade description",
         IsAuthenticated = false,
         Name = "",
         Email = "",
