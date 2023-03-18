@@ -2,7 +2,7 @@
 import { IReport } from '../../../../TypeScript/Interfaces/IReport';
 import Axios from '../../Utils/Axios';
 
-const getReport = async (guid: string): Promise<IReport> => {
+const getReportSete = async (guid: string): Promise<IReport> => {
   let reportData: IReport = {
     Success: true,
   };
@@ -28,4 +28,4 @@ const getReport = async (guid: string): Promise<IReport> => {
   return reportData;
 };
 
-export default getReport;
+export default getReportSete;

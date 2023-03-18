@@ -15,14 +15,14 @@ import { IAnswerRouterProps } from '../Answer/Router';
 import { IReport } from '../../../../TypeScript/Interfaces/IReport';
 // eslint-disable-next-line no-unused-vars
 import { IKey } from '../../../../TypeScript/Interfaces/IKey';
-import getReport from './getReport';
+import getReportSete from './getReportSete';
 import ReportContent from './ReportContent';
 import useStyles from './Styles';
 import setLanguage from './Language';
 
 export type ReportProps = WithSnackbarProps & WithTranslation;
 
-const Report = withTranslation()(
+const ReportSete = withTranslation()(
   (props: ReportProps): JSX.Element => {
     const { enqueueSnackbar } = props;
     const { guid } = useParams<IAnswerRouterProps>();
@@ -35,7 +35,7 @@ const Report = withTranslation()(
 
 
     const updateReport = (): void => {
-      getReport(guid)
+      getReportSete(guid)
         .then((dataReport): void => {
           if (dataReport.Success) {
             setData(dataReport);
@@ -102,6 +102,6 @@ const Report = withTranslation()(
   },
 );
 
-Report.displayName = 'Report';
+ReportSete.displayName = 'ReportSete';
 
-export default withSnackbar(Report);
+export default withSnackbar(ReportSete);
