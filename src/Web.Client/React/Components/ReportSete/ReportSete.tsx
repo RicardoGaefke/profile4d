@@ -88,7 +88,7 @@ const ReportSete = withTranslation()(
                   color="primary"
                   size="large"
                   onClick={(): void => {
-                    window.open(`/GetPdfFromReport/${guid}`);
+                    window.open(`/GetPdfFromReportSete/${guid}`);
                   }}
                 >
                   <PictureAsPdf />
