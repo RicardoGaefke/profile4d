@@ -144,6 +144,25 @@ namespace Profile4d.Web.Client
     }
 
     [AllowAnonymous]
+    [HttpGet("GetPdfFromReportSete/{url}")]
+    [ResponseCache(Duration = 31536000)]
+    public async Task<ActionResult<object>> GetPdfFromReportSete([FromServices] INodeServices nodeServices, string url)
+    {
+      try
+      {
+        string server = _configuration["domain"] == "localhost" ? "localhost:5080" : _configuration["domain"];
+        string report = $"https://{server}/answer/report/{url}";
+        string result = await nodeServices.InvokeAsync<string>("./React/Components/ReportSete/Pdf/pdfReportSete", report);
+        byte[] bytes = Convert.FromBase64String(result);
+        return File(bytes, "application/pdf");
+      }
+      catch (System.Exception ex)
+      {
+        return StatusCode(500, ex.Message);
+      }
+    }
+
+    [AllowAnonymous]
     [HttpGet("GetSimpleSum")]
     public async Task<ActionResult<object>> GetSimpleSum([FromServices] INodeServices nodeServices)
     {
