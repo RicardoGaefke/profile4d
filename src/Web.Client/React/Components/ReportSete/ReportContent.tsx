@@ -158,7 +158,7 @@ const ReportContent = withTranslation()(
           <ReportTitle title={staticTitle(18)} />
           <ReportText text={dynamicText(11)} />
         </div>
-        {(data.Chave?.Type as number >= 2) && (
+        {(data.Chave?.Type as number >= 1) && (
           <div id="Pessoal">
             {/* <ReportTitle title={staticTitle(19)} /> */}
 
@@ -337,7 +337,7 @@ const ReportContent = withTranslation()(
             <ReportText text={dynamicText(49)} />
           </div>
         )}
-        {(data.Chave?.Type as number === 4) && (
+        {(data.Chave?.Type as number === 3) && (
           <div id="Avancada">
             {/* parte avançada */}
 
@@ -395,7 +395,7 @@ const ReportContent = withTranslation()(
             ))}
           </div>
         )}
-        {(data.Chave?.Type as number >= 3) && (
+        {(data.Chave?.Type as number >= 2) && (
           <div id="Profissional">
             {/* análise profissional */}
 
