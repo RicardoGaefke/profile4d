@@ -76,7 +76,7 @@ namespace Profile4d.Web.Client
 
     [AllowAnonymous]
     [HttpGet("answer/report/{guid}/{pdf}")]
-    public IActionResult ReportSetePDF()
+    public IActionResult ReportPDF()
     {
       ViewData["Title"] = "Hextriade";
 
@@ -100,8 +100,8 @@ namespace Profile4d.Web.Client
     }
 
     [AllowAnonymous]
-    [HttpGet("answer/report/{guid}/{pdf}")]
-    public IActionResult Report()
+    [HttpGet("answer/reportSete/{guid}/{pdf}")]
+    public IActionResult ReportPDFSete()
     {
       ViewData["Title"] = "Hextriade";
 
@@ -151,7 +151,7 @@ namespace Profile4d.Web.Client
       try
       {
         string server = _configuration["domain"] == "localhost" ? "localhost:5080" : _configuration["domain"];
-        string report = $"https://{server}/answer/report/{url}";
+        string report = $"https://{server}/answer/reportSete/{url}";
         string result = await nodeServices.InvokeAsync<string>("./React/Components/ReportSete/Pdf/pdfReportSete", report);
         byte[] bytes = Convert.FromBase64String(result);
         return File(bytes, "application/pdf");
