@@ -74,7 +74,7 @@ const Chart15CanvasV2 = (props: Chart15CanvasProps): JSX.Element => {
           text: '15. Planejamento estratégico',
           font: {
             size: 30,
-            fontFamily: "'Roboto', sans-serif",
+            fontFamily: "'Poppins', sans-serif",
           },
           color: 'black',
         },
@@ -87,7 +87,7 @@ const Chart15CanvasV2 = (props: Chart15CanvasProps): JSX.Element => {
           ticks: {
             font: {
               size: 30,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },

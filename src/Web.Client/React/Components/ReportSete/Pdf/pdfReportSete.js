@@ -47,6 +47,8 @@ module.exports = async (callback, url) => {
   //   }
   // });
 
+  // não precisa mais do scroll
+
   // await page.evaluate(async () => {
   //   const matches = document.querySelectorAll('img');
 

@@ -72,7 +72,7 @@ const Chart14CanvasV2 = (props: Chart14CanvasProps): JSX.Element => {
           text: '14. Orientação para resultados',
           font: {
             size: 33,
-            fontFamily: "'Roboto', sans-serif",
+            fontFamily: "'Poppins', sans-serif",
           },
           color: 'black',
         },
@@ -85,7 +85,7 @@ const Chart14CanvasV2 = (props: Chart14CanvasProps): JSX.Element => {
           ticks: {
             font: {
               size: 33,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },

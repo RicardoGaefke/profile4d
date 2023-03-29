@@ -92,7 +92,7 @@ const Chart17CanvasV2 = (props: Chart17CanvasProps): JSX.Element => {
           text: '17. Energia por área de atuação',
           font: {
             size: 28,
-            fontFamily: "'Roboto', sans-serif",
+            fontFamily: "'Poppins', sans-serif",
           },
           color: 'black',
         },
@@ -106,7 +106,7 @@ const Chart17CanvasV2 = (props: Chart17CanvasProps): JSX.Element => {
           ticks: {
             font: {
               size: 28,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },
@@ -117,7 +117,7 @@ const Chart17CanvasV2 = (props: Chart17CanvasProps): JSX.Element => {
             stepSize: 5,
             font: {
               size: 28,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },
