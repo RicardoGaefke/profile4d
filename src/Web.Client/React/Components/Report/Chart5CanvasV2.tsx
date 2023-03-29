@@ -84,7 +84,7 @@ const Chart5CanvasV2 = (props: Chart5CanvasProps): JSX.Element => {
           ticks: {
             font: {
               size: 33,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },
@@ -97,7 +97,7 @@ const Chart5CanvasV2 = (props: Chart5CanvasProps): JSX.Element => {
             startAtZero: true,
             font: {
               size: 33,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },

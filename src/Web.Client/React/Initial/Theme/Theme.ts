@@ -3,7 +3,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 const MyTheme = (t: string = 'dark'): any => {
   const myThemeDark = createMuiTheme({
     typography: {
-      fontFamily: 'museo-sans, verdana',
+      fontFamily: 'Poppins, verdana',
     },
     shape: {
       borderRadius: 0,
@@ -15,7 +15,7 @@ const MyTheme = (t: string = 'dark'): any => {
 
   const myThemeLight = createMuiTheme({
     typography: {
-      fontFamily: 'museo-sans, verdana',
+      fontFamily: 'Poppins, verdana',
     },
     shape: {
       borderRadius: 0,

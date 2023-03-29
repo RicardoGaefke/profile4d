@@ -73,7 +73,7 @@ const Chart16CanvasV2 = (props: Chart16CanvasProps): JSX.Element => {
           text: '16. Visão sistêmica',
           font: {
             size: 30,
-            fontFamily: "'Roboto', sans-serif",
+            fontFamily: "'Poppins', sans-serif",
           },
           color: 'black',
         },
@@ -86,7 +86,7 @@ const Chart16CanvasV2 = (props: Chart16CanvasProps): JSX.Element => {
           ticks: {
             font: {
               size: 33,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },
@@ -99,7 +99,7 @@ const Chart16CanvasV2 = (props: Chart16CanvasProps): JSX.Element => {
             stepSize: 10,
             font: {
               size: 33,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },

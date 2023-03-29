@@ -79,7 +79,7 @@ const Chart10CanvasV2 = (props: Chart10CanvasProps): JSX.Element => {
           ticks: {
             font: {
               size: 33,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },
@@ -92,7 +92,7 @@ const Chart10CanvasV2 = (props: Chart10CanvasProps): JSX.Element => {
             stepSize: 10,
             font: {
               size: 33,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },

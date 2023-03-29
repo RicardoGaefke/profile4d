@@ -73,7 +73,7 @@ const Chart11CanvasV2 = (props: Chart11CanvasProps): JSX.Element => {
           text: '11. Desenvolvimento de pessoas',
           font: {
             size: 33,
-            fontFamily: "'Roboto', sans-serif",
+            fontFamily: "'Poppins', sans-serif",
           },
           color: 'black',
         },
@@ -86,7 +86,7 @@ const Chart11CanvasV2 = (props: Chart11CanvasProps): JSX.Element => {
           ticks: {
             font: {
               size: 33,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },
@@ -99,7 +99,7 @@ const Chart11CanvasV2 = (props: Chart11CanvasProps): JSX.Element => {
             stepSize: 10,
             font: {
               size: 33,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },
