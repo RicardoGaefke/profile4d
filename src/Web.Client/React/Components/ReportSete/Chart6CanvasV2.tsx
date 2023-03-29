@@ -73,7 +73,7 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
           text: '6. Resolução de conflitos',
           font: {
             size: 33,
-            fontFamily: "'Roboto', sans-serif",
+            fontFamily: "'Poppins', sans-serif",
           },
           color: 'black',
         },
@@ -86,7 +86,7 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
           ticks: {
             font: {
               size: 33,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },
@@ -99,7 +99,7 @@ const Chart6CanvasV2 = (props: Chart6CanvasProps): JSX.Element => {
             stepSize: 10,
             font: {
               size: 33,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },

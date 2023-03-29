@@ -80,7 +80,7 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
           color: 'black',
           font: {
             size: 20,
-            fontFamily: 'Roboto',
+            fontFamily: 'Poppins',
           },
         },
         legend: {
@@ -94,7 +94,7 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
             minRotation: 15,
             font: {
               size: 30,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },
@@ -107,7 +107,7 @@ const Chart3CanvasV2 = (props: Chart3CanvasProps): JSX.Element => {
             stepSize: 10,
             font: {
               size: 30,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },

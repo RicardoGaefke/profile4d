@@ -85,7 +85,7 @@ const Chart1CanvasV2 = (props: Chart1CanvasProps): JSX.Element => {
           position: 'top',
           font: {
             size: 20,
-            fontFamily: "'Roboto', sans-serif",
+            fontFamily: "'Poppins', sans-serif",
           },
         },
         tooltip: {
@@ -99,7 +99,7 @@ const Chart1CanvasV2 = (props: Chart1CanvasProps): JSX.Element => {
           labels: {
             font: {
               size: 24,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },

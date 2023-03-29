@@ -94,7 +94,7 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
           color: 'black',
           font: {
             size: 20,
-            fontFamily: "'Roboto', sans-serif",
+            fontFamily: "'Poppins', sans-serif",
           },
         },
         legend: {
@@ -108,7 +108,7 @@ const Chart2CanvasV2 = (props: Chart2CanvasProps): JSX.Element => {
             minRotation: 45,
             font: {
               size: 28,
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             },
             color: 'black',
           },
