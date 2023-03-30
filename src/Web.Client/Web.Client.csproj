@@ -19,6 +19,10 @@
     <Content Include="React/ssr/**/*">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+
+    <Content Include="React/Components/ReportSete/Pdf/*.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
