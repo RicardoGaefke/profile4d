@@ -37,7 +37,8 @@ const Dynamic59 = (props: IDynamic59): JSX.Element => {
 
     const perfs: IProfiles[] = [amarelo, vermelho, azul];
 
-    perfs.sort((a, b): number => b.Total - a.Total || b.InternalNumber - a.InternalNumber);
+    // TODO: consertar o sort
+    perfs.sort((a, b): number => b.Total - a.Total || (b.ExternalNumber || 1) - (a.ExternalNumber || 1));
 
     const primeiro = perfs[0];
     const segundo = perfs[1];
