@@ -42,21 +42,21 @@ const Dynamic57 = (props: IDynamic57): JSX.Element => {
   const vermelho = profiles.filter((item): boolean => item.Name === profile2)[0];
   const azul = profiles.filter((item): boolean => item.Name === profile3)[0];
 
-  const percentAmarelo = ((amarelo.Total / 165) * 100);
-  const percentVermelho = ((vermelho.Total / 165) * 100);
-  const percentAzul = ((azul.Total / 165) * 100);
+  const percentAmarelo = ((amarelo.Total / 77) * 100);
+  const percentVermelho = ((vermelho.Total / 77) * 100);
+  const percentAzul = ((azul.Total / 77) * 100);
 
   const atencao: string[] = [];
 
-  if (percentAmarelo < 16) {
+  if (percentAmarelo < 50) {
     atencao.push(amarelo.Name);
   }
 
-  if (percentVermelho < 16) {
+  if (percentVermelho < 50) {
     atencao.push(vermelho.Name);
   }
 
-  if (percentAzul < 16) {
+  if (percentAzul < 50) {
     atencao.push(azul.Name);
   }
 
