@@ -1,0 +1,76 @@
+pool:
+  vmImage: 'ubuntu-22.04'
+
+variables:
+  - name: solution
+    value: '**/*.sln'
+  - name: buildPlatform
+    value: 'Any CPU'
+  - name: buildConfiguration
+    value: 'Release'
+
+trigger:
+  branches:
+    include:
+      - staging
+  paths:
+    include:
+      - /src/Web.Client/*
+      - /src/Data/*
+      - /src/Domain/*
+    exclude:
+      - /src/WebJob*/*
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '16.16.0'
+
+  - script: |
+      npm install
+    workingDirectory: 'src/Web.Client'
+    displayName: 'npm install'
+
+  # - script: |
+  #     npm run lint-fix
+  #   workingDirectory: 'src/WebSite'
+  #   displayName: 'eslint'
+
+  - script: |
+      npm run production
+    workingDirectory: 'src/Web.Client'
+    displayName: 'npm production'
+
+  - task: NuGetToolInstaller@1
+    displayName: 'Install NuGet >=6.3.0-0'
+    inputs:
+      versionSpec: '>=6.3.0-0'
+      checkLatest: true
+
+  - task: NuGetCommand@2
+    displayName: 'Web.Client restore'
+    inputs:
+      command: 'restore'
+      restoreSolution: '**/Web.Client.csproj'
+      feedsToUse: 'select'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Web.Client build'
+    inputs:
+      command: 'build'
+      projects: '**/Web.Client.csproj'
+      arguments: '-r linux-x64 -c Release'
+
+  - task: CopyFiles@2
+    displayName: 'Copy Dockerfiles'
+    inputs:
+      Contents: |
+        docker/*.*
+      TargetFolder: '$(build.artifactstagingdirectory)'
+      OverWrite: true
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact'
+    inputs:
+      PathtoPublish: '$(build.artifactstagingdirectory)'
+    condition: succeededOrFailed()
